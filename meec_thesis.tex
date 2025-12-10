@@ -32,8 +32,8 @@
 %% Path to the figures directory
 \graphicspath{{figures/}}
 
-%% Change to the appropriate bibliography file
-\addbibresource{bibliography.bib}
+%% Use biblatex for this template
+\addbibresource{references.bib}
 
 %%========================================
 %% Start of document
@@ -43,19 +43,19 @@
 %%----------------------------------------
 %% Information about the work
 %%----------------------------------------
-\title{$<$Dissertation Title$>$}
-\author{$<$Author's Full Name$>$}
+\title{Design of an Asynchronous Flash Analog-to-Digital Converter}
+\author{Gonçalo Pinto Monteiro}
 
 %% Uncomment next line for date of submission
 %\thesisdate{July 31, 2008}
 
 %% Comment next line copyright text if not used
-\copyrightnotice{Name of the Author, 2008}
+\copyrightnotice{Gonçalo Pinto Monteiro, 2025}
 
-\supervisor{Supervisor}{Prof.\ $<$Name of the Supervisor$>$}
+\supervisor{Supervisor}{Prof.\ $<$Manuel Cândido Duarte dos Santos$>$}
 
 %% Uncomment next line if necessary
-%\supervisor{Second Supervisor}{Prof.\ $<$Name of the Supervisor$>$}
+\supervisor{Second Supervisor}{ $<$João Pedro Santos$>$}
 
 %% Uncomment committee stuff in the final version if used
 %\committeetext{Approved in oral examination by the committee:}
@@ -105,8 +105,7 @@
 
 %% TIP: use a separate file for each chapter
 \include{chapter1} 
-\include{chapter2}
-\include{chapter3}
+
 %% Uncomment to see a listing example (cp meic.cfg meec.cfg)
 %\include{chapter45-listing}
 
@@ -114,11 +113,11 @@
 %% Final materials
 %%----------------------------------------
 
-%% Bibliography
-\PrintBib
+% Include all entries from references.bib in the bibliography
+\nocite{*}
 
-%% comment next 2 commands if numbered appendices are not used
-\appendix
+% Define o estilo da bibliografia (IEEE é o padrão em Engenharia)
+%\printbibliography[title=Bibliography]
 \include{appendix1}
 
 \end{document}

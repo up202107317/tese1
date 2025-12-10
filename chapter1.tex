@@ -1,155 +1,253 @@
+% =================================================================
+% CHAPTER 1: INTRODUCTION
+% =================================================================
 \chapter{Introduction} \label{chap:intro}
 
-This document illustrates the format to be used for dissertations at FEUP.
-Examples of margins are given, headings, titles, pagination, index styles, 
-etc. are given. 
-It also gives examples of formatting citations, figures and tables, 
-equations, cross-references, reference lists and indexes. 
-This document is not intended to exemplify content to be used.
+This chapter introduces the research topic, establishing the context of analog-to-digital conversion in modern electronic systems and defining the motivation for investigating asynchronous architectures.
 
-A collection of existing standards can be found at~\cite{kn:Mat93}.
+\section{Context} \label{sec:context}
+% GUIDELINE: O Cenário "Big Picture"
+% Usa esta secção para falar da fronteira entre o mundo analógico e digital.
+% 1. IoT e Sensores: O mundo é analógico, mas o processamento é digital.
+% 2. O custo da conversão: Milhares de milhões de dispositivos a converter sinais constantemente.
+% 3. Introduz a "Sparsity": Muitos sinais (temperatura, biomédicos) mudam lentamente.
 
-This first chapter illustrates the use of citations and references.
+\section{Motivation and Problem Statement} \label{sec:motivation}
+% GUIDELINE: A "Dor" (Problem)
+% 1. Ineficiência Síncrona: Explicar que usar um clock fixo (Nyquist) para sinais lentos é um desperdício.
+%    (Menciona a equação P = f * C * V^2).
+% 2. O Problema do Flash: Embora seja rápido, gasta muita área e potência.
+% 3. O Problema do Mismatch: Transístores pequenos (para ser rápido) têm muito erro (offset), o que exige calibração.
 
-\section{Section Example} \label{sec:se1}
+\section{Objectives and Contribution} \label{sec:objectives}
+% GUIDELINE: A Solução e Metas
+% Lista os objetivos concretos baseados no teu "Plano de Trabalho":
+% 1. Design of an Asynchronous Flash ADC (Clockless).
+% 2. Implementation of an Offline Trimming mechanism (Calibration).
+% 3. Validation via Co-simulation (Analog/Digital).
+% 4. Comparison with state-of-the-art synchronous solutions.
 
-As well as giving an example of how to use a quotation, the 
-following paragraph introduces a reference that can be consulted, 
-among many other interesting bibliographical 
-references~\parencite{kn:Tha01,kn:PP05}.
+% =================================================================
+% CHAPTER 2: LITERATURE REVIEW
+% =================================================================
+\chapter{Literature Review} \label{chap:lit_review}
 
-\begin{quote}
-  ``Like the Abstract, the Introduction should be written to engage the
-  interest of the reader. It should also give the reader an idea of
-  how the dissertation is structured, and in doing so, define the
-  thread of the contents.''~\cite[chap.\ Introduction]{kn:Tha01} 
-\end{quote}
+This chapter presents the state-of-the-art in Analog-to-Digital Converters, reviewing theoretical foundations and analyzing survey data to justify the proposed architecture.
 
-Lorem ipsum~\cite{kn:Lip08} dolor sit amet, consectetuer adipiscing
-elit. 
-Sed eget nunc. Phasellus interdum, risus viverra mollis laoreet, felis
-justo iaculis ante, eget ornare purus augue non urna. Nam in magna. 
-In a est. Phasellus a tellus vitae enim vehicula imperdiet. 
-Etiam sit amet elit. In hac habitasse platea dictumst. 
-Quisque eget turpis vel felis elementum tempus. Curabitur sit 
-amet tortor id libero dapibus pretium. 
-Integer mattis eros eu lorem. Duis erat tellus, porttitor
-sed, blandit eget, fringilla et, lacus. Phasellus tristique nibh nec
-orci. Mauris sed leo. Suspendisse fringilla tempor dolor. Donec sapien
-enim, congue in, porta et, sollicitudin in, quam. Curabitur semper,
-mauris ut vestibulum eleifend, diam ipsum tincidunt quam, et
-vestibulum velit mauris ut risus. 
 
-Sed eget libero. Nulla facilisi. Proin eget tortor. Morbi
-gravida. Donec arcu risus, blandit a, rutrum at, ornare ut,
-nisl. Etiam consectetuer tortor eu odio. Etiam blandit molestie
-ligula. Nulla facilisi. Nam a augue non justo laoreet hendrerit. Nam
-aliquam, purus eu ultricies dictum, urna purus posuere neque, vel
-tempus tellus enim a arcu. 
+% GUIDELINE: Definir as Regras do Jogo
+% Antes de comparar, define como vais medir.
 
-Pellentesque congue sapien in ligula. Nulla nec mi sed augue congue
-tristique. Cras pretium. Pellentesque lobortis, libero id adipiscing
-auctor, orci massa vehicula nulla, vel ullamcorper tortor ipsum ut
-elit. Morbi rhoncus, dui sed tristique volutpat, lorem felis euismod
-lorem, vel tristique nibh arcu vel eros. Nunc tempor. Sed et erat a
-tortor fermentum consequat. Cras varius nisl accumsan libero. Aliquam
-faucibus, justo ut pharetra blandit, est nibh ultrices est, vel
-facilisis quam lectus ut enim. Aliquam convallis, nibh non bibendum
-pharetra, nisl velit lobortis orci, ac ultrices neque sem viverra
-massa. Donec malesuada. Aliquam ligula. Fusce in nisl. Etiam lacinia
-est quis velit. Maecenas massa. Maecenas sed pede. Nulla
-sodales. Etiam vitae erat. Duis tristique sem sit amet libero. Ut a
-libero nec ligula tempus mattis. 
+\section{Fundamentals of Analog-to-Digital Conversion} \label{sec:adc_fundamentals}
 
-\section{Section Example} \label{sec:ae2}
+This section provides the theoretical background required to understand the operation and performance characterization of data converters. It covers the fundamental steps of the conversion process—sampling, quantization, and coding—and details the metrics used to evaluate both static and dynamic performance, which serve as a universal baseline for any ADC architecture.
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi sit
-amet nibh. Fusce faucibus, enim vel ultrices ornare, est mauris
-ultricies velit, vitae consequat sem erat vel nunc. Nam libero eros,
-mattis eget, sagittis nec, imperdiet at, sapien. Aliquam lacus. Aenean
-adipiscing nibh in orci. Aliquam vestibulum, elit at fringilla
-dignissim, metus diam lobortis urna, a laoreet nunc odio ac ipsum. Sed
-at urna. Integer vehicula fringilla augue. Nulla lacus eros, rhoncus
-sit amet, posuere ut, vehicula ac, nibh. Ut eleifend, eros eu placerat
-vehicula, justo turpis blandit dolor, eu tincidunt felis risus at
-ante. Aenean suscipit nisl eget eros. Ut laoreet libero eget
-enim. Cras tempus pellentesque felis. Vestibulum vitae erat ac nibh
-posuere eleifend. 
+\subsection{The Data Conversion Process}
 
-Integer nec quam. Sed fermentum. Nunc vitae leo. Etiam sit amet
-quam. Nunc vestibulum massa in mauris. Duis eget nulla. Fusce
-ultricies arcu eu nibh volutpat feugiat. Maecenas urna pede, commodo
-quis, porta eu, bibendum elementum, pede. Sed eros massa, molestie
-eget, mattis non, rutrum ac, magna. Duis dui. Maecenas eget tortor ut
-dolor semper mattis. Maecenas auctor, tellus et ultricies tempor, elit
-est placerat lacus, in posuere mauris lorem et arcu. 
+\subsubsection{Ideal Data Conversion}
+The analog-to-digital conversion process acts as the bridge between the continuous physical world and the discrete digital domain. Conceptually, it involves two distinct operations: discretization in time (sampling) and discretization in amplitude (quantization). Ideally, this process should be instantaneous and lossless within the signal bandwidth of interest.
 
-Nulla nec eros et pede vehicula aliquam. Aenean sodales pede vel
-ante. Fusce sollicitudin sodales lacus. Maecenas justo mauris,
-adipiscing vitae, ornare quis, convallis nec, eros. Etiam laoreet
-venenatis ipsum. In tellus odio, eleifend ac, ultrices vel, lobortis
-sed, nibh. Fusce nunc augue, dictum non, pulvinar sed, consectetuer
-eu, ipsum. Vivamus nec pede. Pellentesque pulvinar fringilla dolor. In
-sit amet pede. Proin orci justo, semper vel, vulputate quis, convallis
-ac, nulla. Nulla at justo. Mauris feugiat dolor. Etiam posuere
-fermentum eros. Morbi nisl ipsum, tempus id, ornare quis, mattis id,
-dolor. Aenean molestie metus suscipit dolor. Aliquam id lectus sed
-nisl lobortis rhoncus. Curabitur vitae diam sed sem aliquet
-tempus. Sed scelerisque nisi nec sem. 
+\subsubsection{The Sampling Operation}
+Sampling converts a continuous-time signal $x(t)$ into a discrete-time sequence $x[n]$. Mathematically, this is modeled as the multiplication of the input signal by a periodic train of Dirac delta functions with period $T_s$.
 
-\section{Section Example} \label{sec:ae3}
 
-Integer nec quam. Sed fermentum. Nunc vitae leo. Etiam sit amet
-quam. Nunc vestibulum massa in mauris. Duis eget nulla. Fusce
-ultricies arcu eu nibh volutpat feugiat. Maecenas urna pede, commodo
-quis, porta eu, bibendum elementum, pede. Sed eros massa, molestie
-eget, mattis non, rutrum ac, magna. Duis dui. Maecenas eget tortor ut
-dolor semper mattis. Maecenas auctor, tellus et ultricies tempor, elit
-est placerat lacus, in posuere mauris lorem et arcu. 
 
-Nulla nec eros et pede vehicula aliquam. Aenean sodales pede vel
-ante. Fusce sollicitudin sodales lacus. Maecenas justo mauris,
-adipiscing vitae, ornare quis, convallis nec, eros. Etiam laoreet
-venenatis ipsum. In tellus odio, eleifend ac, ultrices vel, lobortis
-sed, nibh. Fusce nunc augue, dictum non, pulvinar sed, consectetuer
-eu, ipsum. Vivamus nec pede. Pellentesque pulvinar fringilla dolor. In
-sit amet pede. Proin orci justo, semper vel, vulputate quis, convallis
-ac, nulla. Nulla at justo. Mauris feugiat dolor. Etiam posuere
-fermentum eros. Morbi nisl ipsum, tempus id, ornare quis, mattis id,
-dolor. Aenean molestie metus suscipit dolor. Aliquam id lectus sed
-nisl lobortis rhoncus. Curabitur vitae diam sed sem aliquet
-tempus. Sed scelerisque nisi nec sem. 
+[Image of sampling theorem time frequency domain]
 
-\section{Section Example} \label{sec:ae4}
 
-Integer nec quam. Sed fermentum. Nunc vitae leo. Etiam sit amet
-quam. Nunc vestibulum massa in mauris. Duis eget nulla. Fusce
-ultricies arcu eu nibh volutpat feugiat. Maecenas urna pede, commodo
-quis, porta eu, bibendum elementum, pede. Sed eros massa, molestie
-eget, mattis non, rutrum ac, magna. Duis dui. Maecenas eget tortor ut
-dolor semper mattis. Maecenas auctor, tellus et ultricies tempor, elit
-est placerat lacus, in posuere mauris lorem et arcu. 
+\textbf{Sampling Theorem:} According to the Nyquist-Shannon sampling theorem, a band-limited signal with maximum frequency $B$ can be perfectly reconstructed if the sampling frequency $f_s$ satisfies:
+\begin{equation}
+    f_s \geq 2B
+\end{equation}
+Violating this condition results in \textit{aliasing}, where high-frequency spectral components fold back into the baseband, becoming indistinguishable from the original signal.
 
-Nulla nec eros et pede vehicula aliquam. Aenean sodales pede vel
-ante. Fusce sollicitudin sodales lacus. Maecenas justo mauris,
-adipiscing vitae, ornare quis, convallis nec, eros. Etiam laoreet
-venenatis ipsum. In tellus odio, eleifend ac, ultrices vel, lobortis
-sed, nibh. Fusce nunc augue, dictum non, pulvinar sed, consectetuer
-eu, ipsum. Vivamus nec pede. Pellentesque pulvinar fringilla dolor. In
-sit amet pede. Proin orci justo, semper vel, vulputate quis, convallis
-ac, nulla. Nulla at justo. Mauris feugiat dolor. Etiam posuere
-fermentum eros. Morbi nisl ipsum, tempus id, ornare quis, mattis id,
-dolor. Aenean molestie metus suscipit dolor. Aliquam id lectus sed
-nisl lobortis rhoncus. Curabitur vitae diam sed sem aliquet
-tempus. Sed scelerisque nisi nec sem. 
+\textbf{Sampling of Bandpass Signals:} For signals centered at a high intermediate frequency ($f_{IF}$) but with a narrow bandwidth ($B \ll f_{IF}$), direct baseband sampling is inefficient. Bandpass sampling (or undersampling) allows the use of $f_s < 2f_{IF}$, provided that $f_s > 2B$ and the spectral replicas do not overlap.
 
-\section{Dissertation Structure} \label{sec:struct}
+\subsubsection{The Reconstruction Operation}
+Reconstruction is the inverse operation, converting the digital sequence back into a continuous signal. In an ideal scenario, this corresponds to convolving the discrete samples with a sinc function (ideal low-pass filter), which perfectly removes the spectral images generated during sampling, leaving only the original baseband content.
 
-In addition to the introduction, this dissertation contains x more 
-chapters.
+\subsubsection{The Quantization Operation}
+While sampling discretizes time, quantization maps the continuous amplitude of each sample to one of a finite number of levels. An $N$-bit ADC divides the input range ($V_{ref}$) into $2^N$ discrete levels. The step size between adjacent levels is the Least Significant Bit (LSB):
+\begin{equation}
+    V_{LSB} = \frac{V_{ref}}{2^N}
+\end{equation}
+Unlike sampling, quantization is non-reversible and introduces a deterministic error. This error is typically modeled as additive white noise (\textit{quantization noise}) with a uniform probability distribution. For an ideal quantizer, the Signal-to-Quantization-Noise Ratio (SQNR) is given by the well-known formula:
+\begin{equation}
+    SQNR_{dB} \approx 6.02N + 1.76
+\end{equation}
 
-In Chapter~\ref{chap:ch2}, the state of the art is described and 
-related work is presented. 
 
-Chapter~\ref{chap:ch3}, ipsum dolor sit amet, consectetuer
-adipiscing elit.
+
+\subsubsection{Coding}
+The final stage is encoding the quantized level into a binary format. The choice of coding scheme (e.g., straight binary, two's complement, Gray code) depends on the system requirements for data processing and transmission, but does not affect the fundamental analog performance.
+
+\subsubsection{Undersampling and Oversampling}
+\begin{itemize}
+    \item \textbf{Undersampling:} Intentionally violates the Nyquist criterion for the carrier frequency to down-convert RF signals directly.
+    \item \textbf{Oversampling:} Involves sampling at a rate much higher than the Nyquist rate ($f_s \gg 2B$). This technique spreads the fixed quantization noise power over a wider frequency range. A subsequent digital filter can then remove the out-of-band noise, effectively increasing the SNR and resolution beyond the intrinsic bit-depth of the hardware.
+\end{itemize}
+
+\subsubsection{Decimation and Interpolation}
+\begin{itemize}
+    \item \textbf{Decimation:} Reduces the sampling rate of an oversampled signal by filtering and downsampling, trading speed for resolution.
+    \item \textbf{Interpolation:} Increases the effective sampling rate in the digital domain (zero-stuffing and filtering), often used in DACs to relax the requirements of the analog reconstruction filter.
+\end{itemize}
+
+\subsection{Performance Metrics}
+
+To evaluate and compare different data converters objectively, a standard set of metrics is used. These are categorized into dynamic and static parameters.
+
+\subsubsection{Resolution and Sampling Rate}
+Resolution defines the theoretical dynamic range, while the sampling rate determines the maximum signal bandwidth. However, these are nominal values; real-world performance is limited by noise and non-linearities.
+
+\subsubsection{Signal-to-Noise-and-Distortion Ratio (SNDR)}
+SNDR (or SINAD) is the primary dynamic metric. It is the ratio of the signal power to the total power of all noise and harmonic distortion components. From SNDR, the Effective Number of Bits (ENOB) is derived:
+\begin{equation}
+    ENOB = \frac{SNDR_{dB} - 1.76}{6.02}
+\end{equation}
+This value represents the true resolution of the converter at a specific input frequency.
+
+\subsubsection{Spurious-Free Dynamic Range (SFDR)}
+SFDR is defined as the ratio between the fundamental signal power and the power of the largest spurious component in the spectrum (typically a harmonic). A high SFDR is crucial in communication systems to detect small signals in the presence of strong interferers.
+
+\subsubsection{Harmonic Distortion (HD) and IMD}
+\begin{itemize}
+    \item \textbf{HD2/HD3:} The second and third harmonic distortions quantify the linearity of the transfer function. Differential signaling is commonly employed to suppress even-order harmonics (HD2).
+    \item \textbf{Inter-Modulation Distortion (IMD):} When two tones are present, system non-linearities generate sum and difference frequencies (intermodulation products). Third-order products ($2f_1 - f_2$) are particularly troublesome as they often fall near the fundamental tones.
+\end{itemize}
+
+\subsubsection{Differential and Integral Non-Linearity (DNL and INL)}
+Static linearity is characterized by measuring the deviation of code transition levels from their ideal positions.
+\begin{itemize}
+    \item \textbf{DNL:} Measures the deviation of a single step width from the ideal $1 LSB$. A DNL less than -1 LSB implies a missing code in the transfer function.
+    \item \textbf{INL:} Is the cumulative sum of DNL errors, representing the deviation of the transfer curve from a straight line. Specific INL patterns (like "S-curves" or "saw-tooth" shapes) can reveal systematic errors in the architecture, such as gain mismatch or non-linear biasing.
+\end{itemize}
+
+
+
+\subsubsection{Offset and Gain Error}
+These are linear errors. Offset is a constant shift of the transfer characteristic, while gain error is a deviation in the slope. Unlike non-linearity, these errors preserve the signal shape and can often be calibrated out simply.
+
+\subsubsection{Jitter}
+Jitter refers to the short-term variation in the sampling instants. It introduces phase noise and limits the maximum achievable SNR, especially for high-frequency input signals. The SNR limitation due to jitter is independent of resolution and is given by:
+\begin{equation}
+    SNR_{jitter} = -20 \log(2\pi f_{in} \sigma_t)
+\end{equation}
+
+\subsubsection{Bit Error Rate (BER)}
+BER quantifies the probability of the converter producing an incorrect digital code. This is often caused by metastability, a phenomenon where internal decision circuits fail to resolve a valid logic level within the allocated time when the input is extremely close to a decision threshold.
+
+
+
+
+\section{Synchronous Architectures} \label{sec:sync_arch}
+% GUIDELINE: O "Standard" (Baseado no ficheiro adc_survey_resumo.xlsx)
+% 1. Overview: Cita SAR e Pipeline brevemente.
+% 2. Flash Síncrono (Foco Principal): Explica o funcionamento (Banco de comparadores + Clock).
+% 3. Crítica com Dados: Usa o teu CSV para mostrar que "High Speed = High Power".
+%    (Ex: "Survey data shows that Synchronous Flash ADCs above 1GS/s consume >10mW...").
+
+\section{Asynchronous Architectures} \label{sec:async_arch}
+% GUIDELINE: A Alternativa (Baseado no ficheiro asynchronous.xlsx)
+% 1. Level-Crossing Sampling: Explica o conceito de amostrar por amplitude, não por tempo.
+% 2. Asynchronous Flash: Como funciona sem clock? (Comparadores contínuos).
+% 3. Vantagem: "Silence = Zero Power".
+% 4. Análise Comparativa (Gráficos):
+%    [INSERIR GRÁFICO: Power vs Sampling Rate - Sync vs Async]
+%    Discute que os Assíncronos são mais eficientes para frequências médias/baixas.
+
+\section{Calibration and Trimming Techniques} \label{sec:calibration}
+
+In high-speed Flash ADCs, the accuracy of the system is fundamentally limited by the precision of the comparators. While the architecture fundamentals were established in the previous sections, practical implementations must address the non-idealities of the fabrication process, specifically the Input Offset Voltage ($V_{os}$).
+
+\subsection{The Component Mismatch Problem}
+In deep sub-micron CMOS technologies, transistors that are drawn with identical dimensions on the layout will exhibit slight differences in their electrical parameters after fabrication. This phenomenon, known as \textbf{mismatch}, affects the threshold voltage ($V_{th}$) and the current gain factor ($\beta$) of the differential pair in a comparator.
+
+According to Pelgrom’s Law~\cite{johns_martin_analog}, the standard deviation of the threshold voltage mismatch ($\sigma_{Vth}$) is inversely proportional to the square root of the transistor area ($W \cdot L$):
+
+\begin{equation}
+    \sigma_{V_{th}} = \frac{A_{V_{th}}}{\sqrt{W \cdot L}}
+\end{equation}
+
+Where $A_{V_{th}}$ is a technology-dependent constant. This creates a critical trade-off: to minimize offset without calibration, transistors must be made very large, which increases parasitic capacitance and drastically degrades the ADC speed and power efficiency. Therefore, small transistors are used for speed, and calibration is employed to correct the resulting offset.
+
+\subsection{Calibration Classifications}
+Calibration techniques can be broadly categorized by their timing and domain:
+\begin{itemize}
+    \item \textbf{Timing:} \textit{Foreground} (Offline) calibration interrupts normal operation to measure and correct errors, while \textit{Background} (Online) calibration operates continuously but adds significant complexity.
+    \item \textbf{Domain:} \textit{Digital} calibration corrects the output code mathematically, whereas \textit{Analog} calibration adjusts the circuit biasing or load conditions to nullify the offset at the source.
+\end{itemize}
+
+For an asynchronous architecture, avoiding continuous clock activity is crucial to maintain low power during idle periods. Thus, \textbf{Analog Foreground Calibration} (Trimming) is the preferred approach.
+
+\subsection{Resistive Trimming Techniques}
+Resistive trimming aims to compensate for the imbalance in the input differential pair ($M_1, M_2$) by intentionally creating an opposing imbalance in the load resistance or the reference path.
+
+
+
+\subsubsection{Internal Resistive Loading}
+This method involves placing a variable resistive network in parallel (or series) with the output loads of the comparator's pre-amplifier stage.
+\begin{itemize}
+    \item \textbf{Mechanism:} By digitally switching small resistors (or MOS switches operating in the triode region) in parallel with the load branch, the effective resistance $R_L$ is modulated.
+    \item \textbf{Effect:} Since the gain of the pre-amplifier is $A_v = g_m R_L$, changing $R_L$ on one side adjusts the output DC level. If the differential pair has an offset $+\Delta V$, the trimming network is adjusted to introduce $-\Delta V$, effectively zeroing the error.
+    \item \textbf{Implementation:} A binary-weighted bank of PMOS transistors is typically used as the variable resistance. The digital code to control these switches is determined at startup and stored in a register.
+\end{itemize}
+
+\subsubsection{Reference Ladder Trimming}
+Alternatively, instead of modifying the comparator internally, the reference voltages ($V_{ref}$) supplied to the comparators can be adjusted.
+\begin{itemize}
+    \item \textbf{Mechanism:} The main resistive reference ladder is tapped using a local switching network that allows fine-tuning of the tap voltage connected to each comparator input.
+    \item \textbf{Context:} This technique was successfully demonstrated in asynchronous Flash ADCs, such as in the work of Chen et al.~\cite{chen_async_2006}, where the reference ladder itself acts as the calibration DAC.
+\end{itemize}
+
+\subsection{Advantages of Resistive Trimming for Asynchronous ADCs}
+Compared to dynamic techniques like Auto-Zeroing (which requires accurate clock phases $\phi_1, \phi_2$ and storage capacitors), resistive trimming offers distinct advantages for the proposed work:
+\begin{enumerate}
+    \item \textbf{Static Operation:} Once the calibration bits are set (during the offline phase), the trimming network becomes static. It does not switch and does not require a clock, preserving the "event-driven" nature of the ADC.
+    \item \textbf{No Switching Noise:} Since the calibration is constant during conversion, it introduces no injection noise or clock feedthrough.
+    \item \textbf{Speed Preservation:} It does not add significant capacitive load to the high-speed nodes of the comparator, allowing for maximum bandwidth.
+\end{enumerate}
+
+% GUIDELINE: O Teu Nicho Específico
+% 1. O Problema: Offset em comparadores dinâmicos.
+% 2. Técnicas: Auto-zeroing vs. Foreground Calibration.
+% 3. Related Works: Cita 2 ou 3 papers que usaram trimming resistivo ou de corrente.
+%    Conclui dizendo que a tua abordagem será "Offline Trimming" para simplificar o design.
+
+\section{Summary} \label{sec:lit_summary}
+% GUIDELINE: Síntese
+% Resume: Síncrono gasta demais -> Assíncrono resolve a potência -> Mas precisa de Calibração (Trimming).
+% Isto prepara o terreno para o Capítulo 3 (O teu plano).
+
+% =================================================================
+% CHAPTER 3: FUTURE WORK PLANNING
+% =================================================================
+\chapter{Future Work Planning, Methodologies and Tools} \label{chap:planning}
+
+This chapter outlines the development strategy for the dissertation, detailing the methodologies, tools, and the schedule for the remaining phases.
+
+\section{Methodologies and Tools} \label{sec:tools}
+% GUIDELINE: O "Como"
+% 1. Tools: Cadence Virtuoso (Schematic/Layout), Spectre (Simulation), Verilog-A/AMS (Modeling).
+% 2. Methodology: 
+%    - Schematic Design based on gm/Id method.
+%    - Monte Carlo Simulations (para testar o mismatch e validar o trimming).
+%    - Corner Analysis (PVT - Process, Voltage, Temperature).
+
+\section{Work Plan} \label{sec:workplan}
+% GUIDELINE: O "Quando" (Baseado no teu input inicial)
+% Descreve as tarefas da "Fase de Realização":
+% Task 1: Schematic proposal for the asynchronous flash ADC.
+% Task 2: Validation of schematic operation.
+% Task 3: Characterization in PVT corners and Monte Carlo.
+% Task 4: Proposal of offline trimming scheme (The Algorithm).
+% Task 5: HDL implementation of the trimming strategy.
+% Task 6: Full system validation and Thesis writing.
+% (Se possível, insere um Gráfico de Gantt aqui).
+
+% =================================================================
+% CHAPTER 4: CONCLUSIONS
+% =================================================================
+\chapter{Conclusions} \label{chap:conclusions}
+
+This document presented the preparatory work for the design of an Asynchronous Flash ADC with calibration. The literature review confirmed that asynchronous architectures offer superior energy efficiency for sparse signal processing, validating the research direction. The identified challenge of comparator offset will be addressed through the proposed trimming methodology, as outlined in the work plan.
