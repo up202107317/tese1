@@ -18,11 +18,51 @@ However, a fundamental characteristic of many environmental and physiological si
 
 Traditional data conversion approaches, based on uniform sampling and dictated by the Nyquist-Shannon theorem, treat these silence periods with the same computational and energetic rigor as the active periods. This creates a paradigm of inefficiency: the system dissipates power to generate redundant digital samples that carry no new information. Recognizing and exploiting this sparsity is, therefore, the key to unlocking the next generation of ultra-low-power electronic interfaces.
 \section{Motivation and Problem Statement} \label{sec:motivation}
-% GUIDELINE: A "Dor" (Problem)
-% 1. Ineficiência Síncrona: Explicar que usar um clock fixo (Nyquist) para sinais lentos é um desperdício.
-%    (Menciona a equação P = f * C * V^2).
-% 2. O Problema do Flash: Embora seja rápido, gasta muita área e potência.
-% 3. O Problema do Mismatch: Transístores pequenos (para ser rápido) têm muito erro (offset), o que exige calibração.
+
+The necessity for a new generation of data converters stems directly from the convergence of two factors: the energy crisis in massive-scale IoT deployments and the inherent inefficiency of conventional synchronous architectures when processing sparse data.
+
+\subsection{Inefficiency of Synchronous Sampling}
+
+Traditional Analog-to-Digital Converters (ADCs) operate under a fixed-rate sampling regime, dictated by a global clock signal ($f_s$). As established by the Nyquist theorem, this rate is determined by the maximum possible bandwidth of the signal, $f_s \geq 2B$. However, in many real-world applications (e.g., environmental monitoring or bio-sensing), the signal is often active for only a fraction of the time, meaning the true information content is much lower than the theoretical maximum bandwidth suggests.
+
+This leads to a massive waste of energy due to the fundamental relationship governing dynamic power consumption in CMOS circuits:
+\begin{equation}
+    P_{dynamic} = \alpha \cdot f \cdot C_{L} \cdot V_{DD}^2
+\end{equation}
+Where:
+\begin{itemize}
+    \item $P_{dynamic}$ is the dynamic power dissipated.
+    \item $\alpha$ is the activity factor (or switching factor).
+    \item $f$ is the clock frequency.
+    \item $C_L$ is the load capacitance being switched (e.g., in the clock tree).
+\end{itemize}
+In a synchronous ADC, the clock frequency ($f$) remains fixed, and a large portion of the power budget is consumed in the clock distribution network and the switching of internal circuitry, even when the input signal is near DC. \textbf{The problem} is that the system pays a high power penalty ($P$) for a speed capability ($f_s$) that is mostly unused in sparse signal environments.
+
+\subsection{Architectural Problem: Flash ADCs}
+While the Flash ADC architecture is highly attractive due to its single-cycle, high-speed conversion capability, it suffers from severe limitations regarding power and area, particularly when aiming for medium-to-high resolution:
+\begin{enumerate}
+    \item \textbf{Power and Area Scaling:} The number of required comparators scales exponentially with resolution ($2^N$). This exponential scaling leads directly to a massive increase in input capacitance ($C_{in}$) and static power dissipation.
+    \item \textbf{Comparator Power:} Even in low-power synchronous designs (like SAR), the dynamic power of the comparator switching is the dominant factor in the power budget.
+\end{enumerate}
+Therefore, combining the high speed of the Flash architecture with the high power efficiency required for IoT demands a radical shift away from the synchronous clocking scheme.
+
+\subsection{Device Limitation: The Mismatch Problem}
+
+To mitigate the power and area issues mentioned above, designers are compelled to minimize the physical dimensions of the core devices, particularly the transistors within the comparators. However, this introduces a fundamental physical constraint:
+
+\begin{quote}
+    The reduction of transistor size, while increasing speed and reducing capacitance, drastically increases random variations in parameters like the threshold voltage ($V_{th}$), leading to a significant \textbf{Input Offset Voltage ($V_{os}$)} in the comparators.
+\end{quote}
+
+This offset voltage translates directly into non-linear errors in the ADC's transfer function (DNL and INL), rendering the output unusable for medium resolutions (e.g., 6 to 8 bits).
+
+\subsection{Problem Statement}
+The main problem addressed by this work is the trade-off between **energy efficiency** and **accuracy** in data conversion for sparse signals.
+\begin{itemize}
+    \item The need for ultra-low energy requires moving towards **Asynchronous Architectures** (to remove clock waste).
+    \item Implementing fast, compact comparators in these architectures introduces a severe **Offset Voltage** due to mismatch.
+\end{itemize}
+The solution, which forms the core of this dissertation, is the design of a **Calibrated Asynchronous Flash ADC** that successfully addresses the trade-off by implementing a robust, power-efficient trimming mechanism to correct the offset, thereby achieving high linearity and superior energy efficiency simultaneously.
 Nowadays, a large number of complex systems rely on the conversion between analog (real) data to the digital world, where digital processing can take advantage of the fine lithography developments and make use of the resultant high-speed operation. However, there are cases in which such conversion deviates significantly in terms of sampling requirements, i.e. data may change slowly or sometimes quite fast, without a way to predict such a profile. As such, if the sampling frequency is not adjusted accordingly, the most probable solution is to have the fastest sampling rate possible as the solution for such cases. The resultant power dissipation is in such cases a critical drawback. If, however, an asynchronous scheme is adopted, there is no sampling, and the data is converted only based on the voltage levels, instantaneously if a parallel scheme is used, relaxing the power specifications of the ADC. This work focuses in such a solution, AD with no sampling clock in a parallel (flash) topology.
 \section{Objectives and Contribution} \label{sec:objectives}
 

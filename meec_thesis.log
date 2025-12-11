@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.11.24)  11 DEC 2025 18:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.11.24)  11 DEC 2025 18:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -697,7 +697,7 @@ Package hyperref Info: Link coloring ON on input line 41.
 \openout4 = `meec_thesis.out'.
 
 \@crestbox=\box58
-<figures/uporto-feup.pdf, id=116, 338.26375pt x 126.4725pt>
+<figures/uporto-feup.pdf, id=132, 338.26375pt x 126.4725pt>
 File: figures/uporto-feup.pdf Graphic file (type pdf)
 <use figures/uporto-feup.pdf>
 Package pdftex.def Info: figures/uporto-feup.pdf  used on input line 80.
@@ -821,32 +821,32 @@ Overfull \hbox (5.71313pt too wide) in paragraph at lines 19--20
 
 
 
-] [2] [3]
+] [2] [3] [4] [5]
 Chapter 2.
-[4
+[6
 
-] [5] [6]
+] [7] [8]
 
-LaTeX Warning: Citation 'johns_martin_analog' on page 7 undefined on input line 181.
+LaTeX Warning: Citation 'johns_martin_analog' on page 9 undefined on input line 221.
 
-[7] [8]
+[9] [10]
 
-LaTeX Warning: Citation 'chen_async_2006' on page 9 undefined on input line 215.
+LaTeX Warning: Citation 'chen_async_2006' on page 11 undefined on input line 255.
 
-[9]
+[11]
 Chapter 3.
-[10
+[12
 
 ]
 Chapter 4.
-) [11
+) [13
 
 ]
 \openout2 = `appendix1.aux'.
 
  (./appendix1.tex
 Chapter 5.
-) [12
+) [14
 
 
 
@@ -861,7 +861,7 @@ L3 programming layer <2024-01-22>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `meec_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 1567CB58F893B8D341AD5A974A6BDCAA;5301.
+(rerunfilecheck)             Checksum: D3A5440733E7C71BE2FA8CFE93532808;6339.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                meec_thesis
@@ -872,18 +872,18 @@ Package logreq Info: Writing requests to 'meec_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21119 strings out of 476182
- 375165 string characters out of 5795594
- 1933975 words of memory out of 5000000
- 42718 multiletter control sequences out of 15000+600000
+ 21134 strings out of 476182
+ 375395 string characters out of 5795594
+ 1935975 words of memory out of 5000000
+ 42724 multiletter control sequences out of 15000+600000
  616106 words of font info for 97 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 81i,11n,95p,1109b,2001s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 81i,11n,95p,1090b,2001s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on meec_thesis.pdf (21 pages, 145192 bytes).
+Output written on meec_thesis.pdf (23 pages, 151173 bytes).
 PDF statistics:
- 343 PDF objects out of 1000 (max. 8388607)
- 297 compressed objects within 3 object streams
- 85 named destinations out of 1000 (max. 500000)
- 230 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 376 PDF objects out of 1000 (max. 8388607)
+ 327 compressed objects within 4 object streams
+ 94 named destinations out of 1000 (max. 500000)
+ 262 words of extra memory for PDF output out of 10000 (max. 10000000)
 
