@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.3 $
+% $ biblatex bbl format version 3.2 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,8 +18,8 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global/global}
-    \entry{Agrawal_2023}{inproceedings}{}{}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Agrawal_2023}{inproceedings}{}
       \name{author}{12}{}{%
         {{hash=631c7a28987a8ae178b158422de2e85f}{%
            family={Agrawal},
@@ -87,12 +87,10 @@
       }
       \strng{namehash}{d0ab5e9a528b2bcead5d8a39206ddce9}
       \strng{fullhash}{e8fc878ba521ba1e31c5adbfdbcd760d}
-      \strng{fullhashraw}{e8fc878ba521ba1e31c5adbfdbcd760d}
       \strng{bibnamehash}{d0ab5e9a528b2bcead5d8a39206ddce9}
       \strng{authorbibnamehash}{d0ab5e9a528b2bcead5d8a39206ddce9}
       \strng{authornamehash}{d0ab5e9a528b2bcead5d8a39206ddce9}
       \strng{authorfullhash}{e8fc878ba521ba1e31c5adbfdbcd760d}
-      \strng{authorfullhashraw}{e8fc878ba521ba1e31c5adbfdbcd760d}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
@@ -114,7 +112,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC42615.2023.10067439
       \endverb
     \endentry
-    \entry{Balmelli}{inproceedings}{}{}
+    \entry{Balmelli}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=e2e492dfdfb5694288e5bc25dc3e1bd4}{%
            family={Balmelli},
@@ -132,12 +130,10 @@
       }
       \strng{namehash}{196867b6437ce28933f93e8152fa3500}
       \strng{fullhash}{196867b6437ce28933f93e8152fa3500}
-      \strng{fullhashraw}{196867b6437ce28933f93e8152fa3500}
       \strng{bibnamehash}{196867b6437ce28933f93e8152fa3500}
       \strng{authorbibnamehash}{196867b6437ce28933f93e8152fa3500}
       \strng{authornamehash}{196867b6437ce28933f93e8152fa3500}
       \strng{authorfullhash}{196867b6437ce28933f93e8152fa3500}
-      \strng{authorfullhashraw}{196867b6437ce28933f93e8152fa3500}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
@@ -158,7 +154,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2004.1332600
       \endverb
     \endentry
-    \entry{Bodnar_2024}{inproceedings}{}{}
+    \entry{Bodnar_2024}{inproceedings}{}
       \name{author}{11}{}{%
         {{hash=0e9d80e6f847df9c208a169b28c62acc}{%
            family={Bodnar},
@@ -221,12 +217,10 @@
       }
       \strng{namehash}{4a8b9c311407dbad44f0a20ca301a184}
       \strng{fullhash}{258b3c62383c0fc0530b17d09281af9b}
-      \strng{fullhashraw}{258b3c62383c0fc0530b17d09281af9b}
       \strng{bibnamehash}{4a8b9c311407dbad44f0a20ca301a184}
       \strng{authorbibnamehash}{4a8b9c311407dbad44f0a20ca301a184}
       \strng{authornamehash}{4a8b9c311407dbad44f0a20ca301a184}
       \strng{authorfullhash}{258b3c62383c0fc0530b17d09281af9b}
-      \strng{authorfullhashraw}{258b3c62383c0fc0530b17d09281af9b}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
@@ -248,7 +242,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49657.2024.10454329
       \endverb
     \endentry
-    \entry{Boo_2015}{inproceedings}{}{}
+    \entry{Boo_2015}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=845bf82949349d0c1d991f729dc240b5}{%
            family={Boo},
@@ -271,12 +265,10 @@
       }
       \strng{namehash}{58d50f7a026e845a4d3f1904d3bffdb9}
       \strng{fullhash}{58d50f7a026e845a4d3f1904d3bffdb9}
-      \strng{fullhashraw}{58d50f7a026e845a4d3f1904d3bffdb9}
       \strng{bibnamehash}{58d50f7a026e845a4d3f1904d3bffdb9}
       \strng{authorbibnamehash}{58d50f7a026e845a4d3f1904d3bffdb9}
       \strng{authornamehash}{58d50f7a026e845a4d3f1904d3bffdb9}
       \strng{authorfullhash}{58d50f7a026e845a4d3f1904d3bffdb9}
-      \strng{authorfullhashraw}{58d50f7a026e845a4d3f1904d3bffdb9}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
@@ -298,7 +290,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2015.7063036
       \endverb
     \endentry
-    \entry{Breems_2007}{inproceedings}{}{}
+    \entry{Breems_2007}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=62bc41cbf232e231d231f2c846a8ed86}{%
            family={Breems},
@@ -335,12 +327,10 @@
       }
       \strng{namehash}{2e960abd670c06f0bd527714416ba41d}
       \strng{fullhash}{96e1e0f594d2556d50522ab009692906}
-      \strng{fullhashraw}{96e1e0f594d2556d50522ab009692906}
       \strng{bibnamehash}{2e960abd670c06f0bd527714416ba41d}
       \strng{authorbibnamehash}{2e960abd670c06f0bd527714416ba41d}
       \strng{authornamehash}{2e960abd670c06f0bd527714416ba41d}
       \strng{authorfullhash}{96e1e0f594d2556d50522ab009692906}
-      \strng{authorfullhashraw}{96e1e0f594d2556d50522ab009692906}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
@@ -362,7 +352,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2007.373382
       \endverb
     \endentry
-    \entry{Cao_2025}{inproceedings}{}{}
+    \entry{Cao_2025}{inproceedings}{}
       \name{author}{9}{}{%
         {{hash=5fde2ec473a5900f24f02ea9a11359ed}{%
            family={Cao},
@@ -415,12 +405,10 @@
       }
       \strng{namehash}{99981f5b699ae67d73907797925b3d4a}
       \strng{fullhash}{c0d4067419a350f258abff62b9c9fc32}
-      \strng{fullhashraw}{c0d4067419a350f258abff62b9c9fc32}
       \strng{bibnamehash}{99981f5b699ae67d73907797925b3d4a}
       \strng{authorbibnamehash}{99981f5b699ae67d73907797925b3d4a}
       \strng{authornamehash}{99981f5b699ae67d73907797925b3d4a}
       \strng{authorfullhash}{c0d4067419a350f258abff62b9c9fc32}
-      \strng{authorfullhashraw}{c0d4067419a350f258abff62b9c9fc32}
       \field{extraname}{1}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
@@ -443,7 +431,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49661.2025.10904766
       \endverb
     \endentry
-    \entry{Cao_2023}{inproceedings}{}{}
+    \entry{Cao_2023}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=025b7d2d998abd33cb054332ddb91ffb}{%
            family={Cao},
@@ -476,12 +464,10 @@
       }
       \strng{namehash}{639d4be3c6a70301d2d5f319e86aa4ff}
       \strng{fullhash}{60b803e774efa5cda70281106c9dac00}
-      \strng{fullhashraw}{60b803e774efa5cda70281106c9dac00}
       \strng{bibnamehash}{639d4be3c6a70301d2d5f319e86aa4ff}
       \strng{authorbibnamehash}{639d4be3c6a70301d2d5f319e86aa4ff}
       \strng{authornamehash}{639d4be3c6a70301d2d5f319e86aa4ff}
       \strng{authorfullhash}{60b803e774efa5cda70281106c9dac00}
-      \strng{authorfullhashraw}{60b803e774efa5cda70281106c9dac00}
       \field{extraname}{2}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
@@ -502,7 +488,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC42615.2023.10067687
       \endverb
     \endentry
-    \entry{Cao_2024}{inproceedings}{}{}
+    \entry{Cao_2024}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=025b7d2d998abd33cb054332ddb91ffb}{%
            family={Cao},
@@ -535,12 +521,10 @@
       }
       \strng{namehash}{639d4be3c6a70301d2d5f319e86aa4ff}
       \strng{fullhash}{093b1b7cc94b24083d87c63bf0343891}
-      \strng{fullhashraw}{093b1b7cc94b24083d87c63bf0343891}
       \strng{bibnamehash}{639d4be3c6a70301d2d5f319e86aa4ff}
       \strng{authorbibnamehash}{639d4be3c6a70301d2d5f319e86aa4ff}
       \strng{authornamehash}{639d4be3c6a70301d2d5f319e86aa4ff}
       \strng{authorfullhash}{093b1b7cc94b24083d87c63bf0343891}
-      \strng{authorfullhashraw}{093b1b7cc94b24083d87c63bf0343891}
       \field{extraname}{3}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
@@ -563,7 +547,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49657.2024.10454350
       \endverb
     \endentry
-    \entry{Chae_2008}{inproceedings}{}{}
+    \entry{Chae_2008}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=42f0ce2357a0d0be5ec1532afef6c9cc}{%
            family={Chae},
@@ -586,12 +570,10 @@
       }
       \strng{namehash}{c89708edf91437f9a7d54582e3a98bbe}
       \strng{fullhash}{c89708edf91437f9a7d54582e3a98bbe}
-      \strng{fullhashraw}{c89708edf91437f9a7d54582e3a98bbe}
       \strng{bibnamehash}{c89708edf91437f9a7d54582e3a98bbe}
       \strng{authorbibnamehash}{c89708edf91437f9a7d54582e3a98bbe}
       \strng{authornamehash}{c89708edf91437f9a7d54582e3a98bbe}
       \strng{authorfullhash}{c89708edf91437f9a7d54582e3a98bbe}
-      \strng{authorfullhashraw}{c89708edf91437f9a7d54582e3a98bbe}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
@@ -613,7 +595,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2008.4523271
       \endverb
     \endentry
-    \entry{Chai_2012}{inproceedings}{}{}
+    \entry{Chai_2012}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=787a578642606bbc468d597061c156b7}{%
            family={Chai},
@@ -631,12 +613,10 @@
       }
       \strng{namehash}{3e813670f02733860472949835a9cf9a}
       \strng{fullhash}{3e813670f02733860472949835a9cf9a}
-      \strng{fullhashraw}{3e813670f02733860472949835a9cf9a}
       \strng{bibnamehash}{3e813670f02733860472949835a9cf9a}
       \strng{authorbibnamehash}{3e813670f02733860472949835a9cf9a}
       \strng{authornamehash}{3e813670f02733860472949835a9cf9a}
       \strng{authorfullhash}{3e813670f02733860472949835a9cf9a}
-      \strng{authorfullhashraw}{3e813670f02733860472949835a9cf9a}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
@@ -658,7 +638,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2012.6177091
       \endverb
     \endentry
-    \entry{Chan_2015}{inproceedings}{}{}
+    \entry{Chan_2015}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=27db7c815ad3922808204d03713d7640}{%
            family={Chan},
@@ -691,12 +671,10 @@
       }
       \strng{namehash}{49f1a7748573b4f683aed78915a9d582}
       \strng{fullhash}{05bc6dca81482f1fd970652247f17e7e}
-      \strng{fullhashraw}{05bc6dca81482f1fd970652247f17e7e}
       \strng{bibnamehash}{49f1a7748573b4f683aed78915a9d582}
       \strng{authorbibnamehash}{49f1a7748573b4f683aed78915a9d582}
       \strng{authornamehash}{49f1a7748573b4f683aed78915a9d582}
       \strng{authorfullhash}{05bc6dca81482f1fd970652247f17e7e}
-      \strng{authorfullhashraw}{05bc6dca81482f1fd970652247f17e7e}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
@@ -718,7 +696,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2015.7063128
       \endverb
     \endentry
-    \entry{Feng_Chen}{inproceedings}{}{}
+    \entry{Feng_Chen}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=76d2a0c3861b383bfabec56e48139137}{%
            family={Chen},
@@ -741,12 +719,10 @@
       }
       \strng{namehash}{115c0bb31027ad8d8dd9acb21ff44eb0}
       \strng{fullhash}{115c0bb31027ad8d8dd9acb21ff44eb0}
-      \strng{fullhashraw}{115c0bb31027ad8d8dd9acb21ff44eb0}
       \strng{bibnamehash}{115c0bb31027ad8d8dd9acb21ff44eb0}
       \strng{authorbibnamehash}{115c0bb31027ad8d8dd9acb21ff44eb0}
       \strng{authornamehash}{115c0bb31027ad8d8dd9acb21ff44eb0}
       \strng{authorfullhash}{115c0bb31027ad8d8dd9acb21ff44eb0}
-      \strng{authorfullhashraw}{115c0bb31027ad8d8dd9acb21ff44eb0}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
@@ -768,7 +744,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2003.1234204
       \endverb
     \endentry
-    \entry{Chen_2024}{inproceedings}{}{}
+    \entry{Chen_2024}{inproceedings}{}
       \name{author}{11}{}{%
         {{hash=1198e5b69e174e67ca2eb98c6fe552f5}{%
            family={Chen},
@@ -831,12 +807,10 @@
       }
       \strng{namehash}{253f820a43ccee1500d70a82e4ca64d7}
       \strng{fullhash}{7131cc655460fcaeed3e6391d30b2912}
-      \strng{fullhashraw}{7131cc655460fcaeed3e6391d30b2912}
       \strng{bibnamehash}{253f820a43ccee1500d70a82e4ca64d7}
       \strng{authorbibnamehash}{253f820a43ccee1500d70a82e4ca64d7}
       \strng{authornamehash}{253f820a43ccee1500d70a82e4ca64d7}
       \strng{authorfullhash}{7131cc655460fcaeed3e6391d30b2912}
-      \strng{authorfullhashraw}{7131cc655460fcaeed3e6391d30b2912}
       \field{extraname}{1}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
@@ -859,7 +833,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49657.2024.10454297
       \endverb
     \endentry
-    \entry{Chen_2025}{inproceedings}{}{}
+    \entry{Chen_2025}{inproceedings}{}
       \name{author}{9}{}{%
         {{hash=1198e5b69e174e67ca2eb98c6fe552f5}{%
            family={Chen},
@@ -912,12 +886,10 @@
       }
       \strng{namehash}{253f820a43ccee1500d70a82e4ca64d7}
       \strng{fullhash}{83b8913c8334a920da2d14eb6cdfccdf}
-      \strng{fullhashraw}{83b8913c8334a920da2d14eb6cdfccdf}
       \strng{bibnamehash}{253f820a43ccee1500d70a82e4ca64d7}
       \strng{authorbibnamehash}{253f820a43ccee1500d70a82e4ca64d7}
       \strng{authornamehash}{253f820a43ccee1500d70a82e4ca64d7}
       \strng{authorfullhash}{83b8913c8334a920da2d14eb6cdfccdf}
-      \strng{authorfullhashraw}{83b8913c8334a920da2d14eb6cdfccdf}
       \field{extraname}{2}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
@@ -940,7 +912,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49661.2025.10904526
       \endverb
     \endentry
-    \entry{Cheng_2024}{inproceedings}{}{}
+    \entry{Cheng_2024}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=55a2dde301d934da2c5959332a4a75b5}{%
            family={Cheng},
@@ -968,12 +940,10 @@
       }
       \strng{namehash}{1bb9145ce3e9924adcba3cf8dc5d9e13}
       \strng{fullhash}{f05901c6e2c81c98702c04ca8a01bd1e}
-      \strng{fullhashraw}{f05901c6e2c81c98702c04ca8a01bd1e}
       \strng{bibnamehash}{1bb9145ce3e9924adcba3cf8dc5d9e13}
       \strng{authorbibnamehash}{1bb9145ce3e9924adcba3cf8dc5d9e13}
       \strng{authornamehash}{1bb9145ce3e9924adcba3cf8dc5d9e13}
       \strng{authorfullhash}{f05901c6e2c81c98702c04ca8a01bd1e}
-      \strng{authorfullhashraw}{f05901c6e2c81c98702c04ca8a01bd1e}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
@@ -995,7 +965,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49657.2024.10454362
       \endverb
     \endentry
-    \entry{Choo_2016}{inproceedings}{}{}
+    \entry{Choo_2016}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=a7b5ae7c3b00333d7c850be419e8d799}{%
            family={Choo},
@@ -1018,12 +988,10 @@
       }
       \strng{namehash}{6b1014b3c4414231cfa6fa67a0ad6cc7}
       \strng{fullhash}{6b1014b3c4414231cfa6fa67a0ad6cc7}
-      \strng{fullhashraw}{6b1014b3c4414231cfa6fa67a0ad6cc7}
       \strng{bibnamehash}{6b1014b3c4414231cfa6fa67a0ad6cc7}
       \strng{authorbibnamehash}{6b1014b3c4414231cfa6fa67a0ad6cc7}
       \strng{authornamehash}{6b1014b3c4414231cfa6fa67a0ad6cc7}
       \strng{authorfullhash}{6b1014b3c4414231cfa6fa67a0ad6cc7}
-      \strng{authorfullhashraw}{6b1014b3c4414231cfa6fa67a0ad6cc7}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
@@ -1045,7 +1013,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2016.7418106
       \endverb
     \endentry
-    \entry{Christen_2007}{inproceedings}{}{}
+    \entry{Christen_2007}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=d885d368f7ee666e6c63cea0bbd6b3ce}{%
            family={Christen},
@@ -1068,12 +1036,10 @@
       }
       \strng{namehash}{ca9f1aaac0cb36a00dbf5d338da7abfe}
       \strng{fullhash}{ca9f1aaac0cb36a00dbf5d338da7abfe}
-      \strng{fullhashraw}{ca9f1aaac0cb36a00dbf5d338da7abfe}
       \strng{bibnamehash}{ca9f1aaac0cb36a00dbf5d338da7abfe}
       \strng{authorbibnamehash}{ca9f1aaac0cb36a00dbf5d338da7abfe}
       \strng{authornamehash}{ca9f1aaac0cb36a00dbf5d338da7abfe}
       \strng{authorfullhash}{ca9f1aaac0cb36a00dbf5d338da7abfe}
-      \strng{authorfullhashraw}{ca9f1aaac0cb36a00dbf5d338da7abfe}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
@@ -1096,7 +1062,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2007.373383
       \endverb
     \endentry
-    \entry{Coban}{inproceedings}{}{}
+    \entry{Coban}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=6a9d87670ffc2729229b0cec96e9cfa6}{%
            family={Coban},
@@ -1114,12 +1080,10 @@
       }
       \strng{namehash}{a395758c783883272d34af5653da2320}
       \strng{fullhash}{a395758c783883272d34af5653da2320}
-      \strng{fullhashraw}{a395758c783883272d34af5653da2320}
       \strng{bibnamehash}{a395758c783883272d34af5653da2320}
       \strng{authorbibnamehash}{a395758c783883272d34af5653da2320}
       \strng{authornamehash}{a395758c783883272d34af5653da2320}
       \strng{authorfullhash}{a395758c783883272d34af5653da2320}
-      \strng{authorfullhashraw}{a395758c783883272d34af5653da2320}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
@@ -1140,7 +1104,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.1999.759091
       \endverb
     \endentry
-    \entry{Devarajan_2009}{inproceedings}{}{}
+    \entry{Devarajan_2009}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=ab3fff8392ef3d1ec36b994511ea4272}{%
            family={Devarajan},
@@ -1178,12 +1142,10 @@
       }
       \strng{namehash}{b087cdf2e2724d1801a34b2a175b091c}
       \strng{fullhash}{055f5bcdb4e99142624cd1f8f805a80b}
-      \strng{fullhashraw}{055f5bcdb4e99142624cd1f8f805a80b}
       \strng{bibnamehash}{b087cdf2e2724d1801a34b2a175b091c}
       \strng{authorbibnamehash}{b087cdf2e2724d1801a34b2a175b091c}
       \strng{authornamehash}{b087cdf2e2724d1801a34b2a175b091c}
       \strng{authorfullhash}{055f5bcdb4e99142624cd1f8f805a80b}
-      \strng{authorfullhashraw}{055f5bcdb4e99142624cd1f8f805a80b}
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{labelnamesource}{author}
@@ -1205,7 +1167,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2009.4977320
       \endverb
     \endentry
-    \entry{Dezzani}{inproceedings}{}{}
+    \entry{Dezzani}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=f1b30b7ffafa7aa7de533cc371a13d72}{%
            family={Dezzani},
@@ -1223,12 +1185,10 @@
       }
       \strng{namehash}{59edb4d1f65884c013d1eae020be71d8}
       \strng{fullhash}{59edb4d1f65884c013d1eae020be71d8}
-      \strng{fullhashraw}{59edb4d1f65884c013d1eae020be71d8}
       \strng{bibnamehash}{59edb4d1f65884c013d1eae020be71d8}
       \strng{authorbibnamehash}{59edb4d1f65884c013d1eae020be71d8}
       \strng{authornamehash}{59edb4d1f65884c013d1eae020be71d8}
       \strng{authorfullhash}{59edb4d1f65884c013d1eae020be71d8}
-      \strng{authorfullhashraw}{59edb4d1f65884c013d1eae020be71d8}
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{labelnamesource}{author}
@@ -1250,7 +1210,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2003.1234206
       \endverb
     \endentry
-    \entry{Ding_2015}{inproceedings}{}{}
+    \entry{Ding_2015}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=46a3f0b5c048254bc7f6910cd7e8cd63}{%
            family={Ding},
@@ -1290,12 +1250,10 @@
       }
       \strng{namehash}{31d0a381ae53d92a05db8391034501d5}
       \strng{fullhash}{58b72b989131af6bdf39aff1c78a650c}
-      \strng{fullhashraw}{58b72b989131af6bdf39aff1c78a650c}
       \strng{bibnamehash}{31d0a381ae53d92a05db8391034501d5}
       \strng{authorbibnamehash}{31d0a381ae53d92a05db8391034501d5}
       \strng{authornamehash}{31d0a381ae53d92a05db8391034501d5}
       \strng{authorfullhash}{58b72b989131af6bdf39aff1c78a650c}
-      \strng{authorfullhashraw}{58b72b989131af6bdf39aff1c78a650c}
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{labelnamesource}{author}
@@ -1317,7 +1275,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2015.7063125
       \endverb
     \endentry
-    \entry{Dorrer}{inproceedings}{}{}
+    \entry{Dorrer}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=0ba7874b9f695e8fb2211d0e3fd78043}{%
            family={Dorrer},
@@ -1345,12 +1303,10 @@
       }
       \strng{namehash}{1ce4246beff1588bf611dda9df17dd0e}
       \strng{fullhash}{68365c02e6334347532f1658738180b6}
-      \strng{fullhashraw}{68365c02e6334347532f1658738180b6}
       \strng{bibnamehash}{1ce4246beff1588bf611dda9df17dd0e}
       \strng{authorbibnamehash}{1ce4246beff1588bf611dda9df17dd0e}
       \strng{authornamehash}{1ce4246beff1588bf611dda9df17dd0e}
       \strng{authorfullhash}{68365c02e6334347532f1658738180b6}
-      \strng{authorfullhashraw}{68365c02e6334347532f1658738180b6}
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{labelnamesource}{author}
@@ -1370,7 +1326,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2005.1494084
       \endverb
     \endentry
-    \entry{Flynn}{inproceedings}{}{}
+    \entry{Flynn}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=fee698ed7f385cc9d27e575c7aaa681d}{%
            family={Flynn},
@@ -1388,12 +1344,10 @@
       }
       \strng{namehash}{0391641654d040dea7ad65aa6faf95fd}
       \strng{fullhash}{0391641654d040dea7ad65aa6faf95fd}
-      \strng{fullhashraw}{0391641654d040dea7ad65aa6faf95fd}
       \strng{bibnamehash}{0391641654d040dea7ad65aa6faf95fd}
       \strng{authorbibnamehash}{0391641654d040dea7ad65aa6faf95fd}
       \strng{authornamehash}{0391641654d040dea7ad65aa6faf95fd}
       \strng{authorfullhash}{0391641654d040dea7ad65aa6faf95fd}
-      \strng{authorfullhashraw}{0391641654d040dea7ad65aa6faf95fd}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{labelnamesource}{author}
@@ -1414,7 +1368,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.1998.672412
       \endverb
     \endentry
-    \entry{Fontaine}{inproceedings}{}{}
+    \entry{Fontaine}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=0f29742d73c9962bf4a858f802194cfb}{%
            family={Fontaine},
@@ -1437,12 +1391,10 @@
       }
       \strng{namehash}{6d5aa52c5435de1b00c4c65cf3659f26}
       \strng{fullhash}{6d5aa52c5435de1b00c4c65cf3659f26}
-      \strng{fullhashraw}{6d5aa52c5435de1b00c4c65cf3659f26}
       \strng{bibnamehash}{6d5aa52c5435de1b00c4c65cf3659f26}
       \strng{authorbibnamehash}{6d5aa52c5435de1b00c4c65cf3659f26}
       \strng{authornamehash}{6d5aa52c5435de1b00c4c65cf3659f26}
       \strng{authorfullhash}{6d5aa52c5435de1b00c4c65cf3659f26}
-      \strng{authorfullhashraw}{6d5aa52c5435de1b00c4c65cf3659f26}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{labelnamesource}{author}
@@ -1462,7 +1414,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2005.1494087
       \endverb
     \endentry
-    \entry{Fujimoto_2006}{inproceedings}{}{}
+    \entry{Fujimoto_2006}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=bcb4c8d5a2e62a6690e5516be5f8ef13}{%
            family={Fujimoto},
@@ -1490,12 +1442,10 @@
       }
       \strng{namehash}{54d2bbe4f667438ab03d092bf53a08f8}
       \strng{fullhash}{19a6afcb36bd56d692d6df7c10bddcee}
-      \strng{fullhashraw}{19a6afcb36bd56d692d6df7c10bddcee}
       \strng{bibnamehash}{54d2bbe4f667438ab03d092bf53a08f8}
       \strng{authorbibnamehash}{54d2bbe4f667438ab03d092bf53a08f8}
       \strng{authornamehash}{54d2bbe4f667438ab03d092bf53a08f8}
       \strng{authorfullhash}{19a6afcb36bd56d692d6df7c10bddcee}
-      \strng{authorfullhashraw}{19a6afcb36bd56d692d6df7c10bddcee}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{labelnamesource}{author}
@@ -1516,7 +1466,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2006.1696049
       \endverb
     \endentry
-    \entry{Gaggl}{inproceedings}{}{}
+    \entry{Gaggl}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=9db378caf67614c1d87042929f8f75ab}{%
            family={Gaggl},
@@ -1539,12 +1489,10 @@
       }
       \strng{namehash}{b78b62a4f03f7f9ead0570b0218f3bc6}
       \strng{fullhash}{b78b62a4f03f7f9ead0570b0218f3bc6}
-      \strng{fullhashraw}{b78b62a4f03f7f9ead0570b0218f3bc6}
       \strng{bibnamehash}{b78b62a4f03f7f9ead0570b0218f3bc6}
       \strng{authorbibnamehash}{b78b62a4f03f7f9ead0570b0218f3bc6}
       \strng{authornamehash}{b78b62a4f03f7f9ead0570b0218f3bc6}
       \strng{authorfullhash}{b78b62a4f03f7f9ead0570b0218f3bc6}
-      \strng{authorfullhashraw}{b78b62a4f03f7f9ead0570b0218f3bc6}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
@@ -1565,7 +1513,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2004.1332604
       \endverb
     \endentry
-    \entry{Gao_2025}{inproceedings}{}{}
+    \entry{Gao_2025}{inproceedings}{}
       \name{author}{8}{}{%
         {{hash=99153754776a3ebd5f744f9c79e85515}{%
            family={Gao},
@@ -1613,12 +1561,10 @@
       }
       \strng{namehash}{9ea05e9a8bb7e31eed76792cc1c6f8f5}
       \strng{fullhash}{f61286260f7c7f43ccd7644dd0e55e78}
-      \strng{fullhashraw}{f61286260f7c7f43ccd7644dd0e55e78}
       \strng{bibnamehash}{9ea05e9a8bb7e31eed76792cc1c6f8f5}
       \strng{authorbibnamehash}{9ea05e9a8bb7e31eed76792cc1c6f8f5}
       \strng{authornamehash}{9ea05e9a8bb7e31eed76792cc1c6f8f5}
       \strng{authorfullhash}{f61286260f7c7f43ccd7644dd0e55e78}
-      \strng{authorfullhashraw}{f61286260f7c7f43ccd7644dd0e55e78}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
@@ -1640,7 +1586,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49661.2025.10904557
       \endverb
     \endentry
-    \entry{Geelen}{inproceedings}{}{}
+    \entry{Geelen}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=a5446bf5654b0e02b5994d92a4e75e4c}{%
            family={Geelen},
@@ -1658,12 +1604,10 @@
       }
       \strng{namehash}{c3da5ab8f0a174c93605c6ef8f41631f}
       \strng{fullhash}{c3da5ab8f0a174c93605c6ef8f41631f}
-      \strng{fullhashraw}{c3da5ab8f0a174c93605c6ef8f41631f}
       \strng{bibnamehash}{c3da5ab8f0a174c93605c6ef8f41631f}
       \strng{authorbibnamehash}{c3da5ab8f0a174c93605c6ef8f41631f}
       \strng{authornamehash}{c3da5ab8f0a174c93605c6ef8f41631f}
       \strng{authorfullhash}{c3da5ab8f0a174c93605c6ef8f41631f}
-      \strng{authorfullhashraw}{c3da5ab8f0a174c93605c6ef8f41631f}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
@@ -1684,7 +1628,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2004.1332690
       \endverb
     \endentry
-    \entry{Geelen_2006}{inproceedings}{}{}
+    \entry{Geelen_2006}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=a5446bf5654b0e02b5994d92a4e75e4c}{%
            family={Geelen},
@@ -1717,12 +1661,10 @@
       }
       \strng{namehash}{62db70548cc31394ff694691ff1abcdb}
       \strng{fullhash}{63b2f109775eee17bf01bee7b5afd2e6}
-      \strng{fullhashraw}{63b2f109775eee17bf01bee7b5afd2e6}
       \strng{bibnamehash}{62db70548cc31394ff694691ff1abcdb}
       \strng{authorbibnamehash}{62db70548cc31394ff694691ff1abcdb}
       \strng{authornamehash}{62db70548cc31394ff694691ff1abcdb}
       \strng{authorfullhash}{63b2f109775eee17bf01bee7b5afd2e6}
-      \strng{authorfullhashraw}{63b2f109775eee17bf01bee7b5afd2e6}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
@@ -1743,7 +1685,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2006.1696118
       \endverb
     \endentry
-    \entry{Goes_2006}{inproceedings}{}{}
+    \entry{Goes_2006}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=83b2a32110e9be9f98fef4e5839f63ea}{%
            family={Goes},
@@ -1771,12 +1713,10 @@
       }
       \strng{namehash}{92ba43c2ea0e3ca683c2f7c69f54b022}
       \strng{fullhash}{0d612059a6270145a0115a8ebd7e3d18}
-      \strng{fullhashraw}{0d612059a6270145a0115a8ebd7e3d18}
       \strng{bibnamehash}{92ba43c2ea0e3ca683c2f7c69f54b022}
       \strng{authorbibnamehash}{92ba43c2ea0e3ca683c2f7c69f54b022}
       \strng{authornamehash}{92ba43c2ea0e3ca683c2f7c69f54b022}
       \strng{authorfullhash}{0d612059a6270145a0115a8ebd7e3d18}
-      \strng{authorfullhashraw}{0d612059a6270145a0115a8ebd7e3d18}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
@@ -1797,7 +1737,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2006.1696048
       \endverb
     \endentry
-    \entry{Gregoire_2008}{inproceedings}{}{}
+    \entry{Gregoire_2008}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=006b1dc2bd83002eb10b55e406d4b5ec}{%
            family={Gregoire},
@@ -1815,12 +1755,10 @@
       }
       \strng{namehash}{99ce4d1f0460d828659c4b5fd7b7685e}
       \strng{fullhash}{99ce4d1f0460d828659c4b5fd7b7685e}
-      \strng{fullhashraw}{99ce4d1f0460d828659c4b5fd7b7685e}
       \strng{bibnamehash}{99ce4d1f0460d828659c4b5fd7b7685e}
       \strng{authorbibnamehash}{99ce4d1f0460d828659c4b5fd7b7685e}
       \strng{authornamehash}{99ce4d1f0460d828659c4b5fd7b7685e}
       \strng{authorfullhash}{99ce4d1f0460d828659c4b5fd7b7685e}
-      \strng{authorfullhashraw}{99ce4d1f0460d828659c4b5fd7b7685e}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
@@ -1840,7 +1778,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2008.4523296
       \endverb
     \endentry
-    \entry{Gu_2025}{inproceedings}{}{}
+    \entry{Gu_2025}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=de5004797cfc59d76bacd083e38e9b46}{%
            family={Gu},
@@ -1868,12 +1806,10 @@
       }
       \strng{namehash}{1e414d54e04b9fd64b917a4b7499ac8e}
       \strng{fullhash}{88cff44bf8e02c7e60b1fbbc3811b83e}
-      \strng{fullhashraw}{88cff44bf8e02c7e60b1fbbc3811b83e}
       \strng{bibnamehash}{1e414d54e04b9fd64b917a4b7499ac8e}
       \strng{authorbibnamehash}{1e414d54e04b9fd64b917a4b7499ac8e}
       \strng{authornamehash}{1e414d54e04b9fd64b917a4b7499ac8e}
       \strng{authorfullhash}{88cff44bf8e02c7e60b1fbbc3811b83e}
-      \strng{authorfullhashraw}{88cff44bf8e02c7e60b1fbbc3811b83e}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
@@ -1895,7 +1831,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49661.2025.10904536
       \endverb
     \endentry
-    \entry{Hammerschmied}{inproceedings}{}{}
+    \entry{Hammerschmied}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=a6c5da3aec07193534d2d362691dc455}{%
            family={Hammerschmied},
@@ -1913,12 +1849,10 @@
       }
       \strng{namehash}{2fae867f6a2186570474e7941338c17c}
       \strng{fullhash}{2fae867f6a2186570474e7941338c17c}
-      \strng{fullhashraw}{2fae867f6a2186570474e7941338c17c}
       \strng{bibnamehash}{2fae867f6a2186570474e7941338c17c}
       \strng{authorbibnamehash}{2fae867f6a2186570474e7941338c17c}
       \strng{authornamehash}{2fae867f6a2186570474e7941338c17c}
       \strng{authorfullhash}{2fae867f6a2186570474e7941338c17c}
-      \strng{authorfullhashraw}{2fae867f6a2186570474e7941338c17c}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
@@ -1939,7 +1873,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.1997.585301
       \endverb
     \endentry
-    \entry{Hao_2023}{inproceedings}{}{}
+    \entry{Hao_2023}{inproceedings}{}
       \name{author}{8}{}{%
         {{hash=d78833272a50b54b996ddea07361f112}{%
            family={Hao},
@@ -1987,12 +1921,10 @@
       }
       \strng{namehash}{15490c4cde725a3cbd40420ebb466e94}
       \strng{fullhash}{b543b6d47be5c476e792dbda7af672c5}
-      \strng{fullhashraw}{b543b6d47be5c476e792dbda7af672c5}
       \strng{bibnamehash}{15490c4cde725a3cbd40420ebb466e94}
       \strng{authorbibnamehash}{15490c4cde725a3cbd40420ebb466e94}
       \strng{authornamehash}{15490c4cde725a3cbd40420ebb466e94}
       \strng{authorfullhash}{b543b6d47be5c476e792dbda7af672c5}
-      \strng{authorfullhashraw}{b543b6d47be5c476e792dbda7af672c5}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
@@ -2014,7 +1946,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC42615.2023.10067822
       \endverb
     \endentry
-    \entry{Harpe_2014}{inproceedings}{}{}
+    \entry{Harpe_2014}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=d8d51c85bcfac1c49eb2d781f08a96b0}{%
            family={Harpe},
@@ -2039,12 +1971,10 @@
       }
       \strng{namehash}{65db674353e24e54f6725613f1b94c00}
       \strng{fullhash}{65db674353e24e54f6725613f1b94c00}
-      \strng{fullhashraw}{65db674353e24e54f6725613f1b94c00}
       \strng{bibnamehash}{65db674353e24e54f6725613f1b94c00}
       \strng{authorbibnamehash}{65db674353e24e54f6725613f1b94c00}
       \strng{authornamehash}{65db674353e24e54f6725613f1b94c00}
       \strng{authorfullhash}{65db674353e24e54f6725613f1b94c00}
-      \strng{authorfullhashraw}{65db674353e24e54f6725613f1b94c00}
       \field{extraname}{1}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
@@ -2065,7 +1995,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2014.6757396
       \endverb
     \endentry
-    \entry{Harpe_2013}{inproceedings}{}{}
+    \entry{Harpe_2013}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=d8d51c85bcfac1c49eb2d781f08a96b0}{%
            family={Harpe},
@@ -2090,12 +2020,10 @@
       }
       \strng{namehash}{65db674353e24e54f6725613f1b94c00}
       \strng{fullhash}{65db674353e24e54f6725613f1b94c00}
-      \strng{fullhashraw}{65db674353e24e54f6725613f1b94c00}
       \strng{bibnamehash}{65db674353e24e54f6725613f1b94c00}
       \strng{authorbibnamehash}{65db674353e24e54f6725613f1b94c00}
       \strng{authornamehash}{65db674353e24e54f6725613f1b94c00}
       \strng{authorfullhash}{65db674353e24e54f6725613f1b94c00}
-      \strng{authorfullhashraw}{65db674353e24e54f6725613f1b94c00}
       \field{extraname}{2}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
@@ -2118,7 +2046,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2013.6487730
       \endverb
     \endentry
-    \entry{Harpe_2015}{inproceedings}{}{}
+    \entry{Harpe_2015}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=d8d51c85bcfac1c49eb2d781f08a96b0}{%
            family={Harpe},
@@ -2155,12 +2083,10 @@
       }
       \strng{namehash}{b91ada3dfc5a3d5c9322bd5251e5ebba}
       \strng{fullhash}{7695c09f5d4440e0d58f6d5db0d124b8}
-      \strng{fullhashraw}{7695c09f5d4440e0d58f6d5db0d124b8}
       \strng{bibnamehash}{b91ada3dfc5a3d5c9322bd5251e5ebba}
       \strng{authorbibnamehash}{b91ada3dfc5a3d5c9322bd5251e5ebba}
       \strng{authornamehash}{b91ada3dfc5a3d5c9322bd5251e5ebba}
       \strng{authorfullhash}{7695c09f5d4440e0d58f6d5db0d124b8}
-      \strng{authorfullhashraw}{7695c09f5d4440e0d58f6d5db0d124b8}
       \field{extraname}{1}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
@@ -2183,7 +2109,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2015.7063086
       \endverb
     \endentry
-    \entry{Harpe_2012}{inproceedings}{}{}
+    \entry{Harpe_2012}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=d8d51c85bcfac1c49eb2d781f08a96b0}{%
            family={Harpe},
@@ -2216,12 +2142,10 @@
       }
       \strng{namehash}{b91ada3dfc5a3d5c9322bd5251e5ebba}
       \strng{fullhash}{5b993a5c9e9914ef01ad27e4dfe2b737}
-      \strng{fullhashraw}{5b993a5c9e9914ef01ad27e4dfe2b737}
       \strng{bibnamehash}{b91ada3dfc5a3d5c9322bd5251e5ebba}
       \strng{authorbibnamehash}{b91ada3dfc5a3d5c9322bd5251e5ebba}
       \strng{authornamehash}{b91ada3dfc5a3d5c9322bd5251e5ebba}
       \strng{authorfullhash}{5b993a5c9e9914ef01ad27e4dfe2b737}
-      \strng{authorfullhashraw}{5b993a5c9e9914ef01ad27e4dfe2b737}
       \field{extraname}{2}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
@@ -2244,7 +2168,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2012.6177096
       \endverb
     \endentry
-    \entry{He_2024}{inproceedings}{}{}
+    \entry{He_2024}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=ed2dc70dcda26f051679369dda509eb7}{%
            family={He},
@@ -2282,12 +2206,10 @@
       }
       \strng{namehash}{c7988b70b18e9a38c473e817be8af394}
       \strng{fullhash}{f88cb2f21ad4f2614cf8acb101c9c6e3}
-      \strng{fullhashraw}{f88cb2f21ad4f2614cf8acb101c9c6e3}
       \strng{bibnamehash}{c7988b70b18e9a38c473e817be8af394}
       \strng{authorbibnamehash}{c7988b70b18e9a38c473e817be8af394}
       \strng{authornamehash}{c7988b70b18e9a38c473e817be8af394}
       \strng{authorfullhash}{f88cb2f21ad4f2614cf8acb101c9c6e3}
-      \strng{authorfullhashraw}{f88cb2f21ad4f2614cf8acb101c9c6e3}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
@@ -2309,7 +2231,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49657.2024.10454431
       \endverb
     \endentry
-    \entry{Hernes}{inproceedings}{}{}
+    \entry{Hernes}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=f0a2c14361d74688eededf7bb5ef02e3}{%
            family={Hernes},
@@ -2347,12 +2269,10 @@
       }
       \strng{namehash}{784a964c0cdcfd5237a7ba89abe373fa}
       \strng{fullhash}{2c00941952499b0dbc1136cb7aac9041}
-      \strng{fullhashraw}{2c00941952499b0dbc1136cb7aac9041}
       \strng{bibnamehash}{784a964c0cdcfd5237a7ba89abe373fa}
       \strng{authorbibnamehash}{784a964c0cdcfd5237a7ba89abe373fa}
       \strng{authornamehash}{784a964c0cdcfd5237a7ba89abe373fa}
       \strng{authorfullhash}{2c00941952499b0dbc1136cb7aac9041}
-      \strng{authorfullhashraw}{2c00941952499b0dbc1136cb7aac9041}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
@@ -2373,7 +2293,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2004.1332691
       \endverb
     \endentry
-    \entry{Hershberg_2019}{inproceedings}{}{}
+    \entry{Hershberg_2019}{inproceedings}{}
       \name{author}{7}{}{%
         {{hash=24aac50ce70f89e0be8f3f68facf4bc8}{%
            family={Hershberg},
@@ -2416,12 +2336,10 @@
       }
       \strng{namehash}{82e68e647e9217798cfb74695f78a25a}
       \strng{fullhash}{fea0d4d0ab3923899f80dd636dd78903}
-      \strng{fullhashraw}{fea0d4d0ab3923899f80dd636dd78903}
       \strng{bibnamehash}{82e68e647e9217798cfb74695f78a25a}
       \strng{authorbibnamehash}{82e68e647e9217798cfb74695f78a25a}
       \strng{authornamehash}{82e68e647e9217798cfb74695f78a25a}
       \strng{authorfullhash}{fea0d4d0ab3923899f80dd636dd78903}
-      \strng{authorfullhashraw}{fea0d4d0ab3923899f80dd636dd78903}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
@@ -2443,7 +2361,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2019.8662290
       \endverb
     \endentry
-    \entry{Hesener_2007}{inproceedings}{}{}
+    \entry{Hesener_2007}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=863a1ca332741e004671cd1c46e35d8e}{%
            family={Hesener},
@@ -2481,12 +2399,10 @@
       }
       \strng{namehash}{d3b903482680f370c4a96a360cd105b3}
       \strng{fullhash}{137abf0fa909981a6398eb3a6feb2d33}
-      \strng{fullhashraw}{137abf0fa909981a6398eb3a6feb2d33}
       \strng{bibnamehash}{d3b903482680f370c4a96a360cd105b3}
       \strng{authorbibnamehash}{d3b903482680f370c4a96a360cd105b3}
       \strng{authornamehash}{d3b903482680f370c4a96a360cd105b3}
       \strng{authorfullhash}{137abf0fa909981a6398eb3a6feb2d33}
-      \strng{authorfullhashraw}{137abf0fa909981a6398eb3a6feb2d33}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
@@ -2508,7 +2424,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2007.373387
       \endverb
     \endentry
-    \entry{Hong_2015}{inproceedings}{}{}
+    \entry{Hong_2015}{inproceedings}{}
       \name{author}{8}{}{%
         {{hash=d43614aec3445dd81496c3f13fd95548}{%
            family={Hong},
@@ -2556,12 +2472,10 @@
       }
       \strng{namehash}{8dc5ef009439882e75b6da58e246303c}
       \strng{fullhash}{3e1c7d0cca46e2907476ec2b52d2de19}
-      \strng{fullhashraw}{3e1c7d0cca46e2907476ec2b52d2de19}
       \strng{bibnamehash}{8dc5ef009439882e75b6da58e246303c}
       \strng{authorbibnamehash}{8dc5ef009439882e75b6da58e246303c}
       \strng{authornamehash}{8dc5ef009439882e75b6da58e246303c}
       \strng{authorfullhash}{3e1c7d0cca46e2907476ec2b52d2de19}
-      \strng{authorfullhashraw}{3e1c7d0cca46e2907476ec2b52d2de19}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
@@ -2583,7 +2497,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2015.7063130
       \endverb
     \endentry
-    \entry{Hoogzaad}{inproceedings}{}{}
+    \entry{Hoogzaad}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=683ac3ce217fe9f5bb1537280ff96d9c}{%
            family={Hoogzaad},
@@ -2601,12 +2515,10 @@
       }
       \strng{namehash}{2afcda256adf05f0f8c29da186e0102f}
       \strng{fullhash}{2afcda256adf05f0f8c29da186e0102f}
-      \strng{fullhashraw}{2afcda256adf05f0f8c29da186e0102f}
       \strng{bibnamehash}{2afcda256adf05f0f8c29da186e0102f}
       \strng{authorbibnamehash}{2afcda256adf05f0f8c29da186e0102f}
       \strng{authornamehash}{2afcda256adf05f0f8c29da186e0102f}
       \strng{authorfullhash}{2afcda256adf05f0f8c29da186e0102f}
-      \strng{authorfullhashraw}{2afcda256adf05f0f8c29da186e0102f}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
@@ -2627,7 +2539,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.1999.759268
       \endverb
     \endentry
-    \entry{Hsieh_2025}{inproceedings}{}{}
+    \entry{Hsieh_2025}{inproceedings}{}
       \name{author}{14}{}{%
         {{hash=ce6c09de897b76e72d610b24d465fc75}{%
            family={Hsieh},
@@ -2705,12 +2617,10 @@
       }
       \strng{namehash}{a1c201c5add042093a1eed4f3de27323}
       \strng{fullhash}{c3f8475bb0a20a9f107b44e4fa69fe5a}
-      \strng{fullhashraw}{c3f8475bb0a20a9f107b44e4fa69fe5a}
       \strng{bibnamehash}{a1c201c5add042093a1eed4f3de27323}
       \strng{authorbibnamehash}{a1c201c5add042093a1eed4f3de27323}
       \strng{authornamehash}{a1c201c5add042093a1eed4f3de27323}
       \strng{authorfullhash}{c3f8475bb0a20a9f107b44e4fa69fe5a}
-      \strng{authorfullhashraw}{c3f8475bb0a20a9f107b44e4fa69fe5a}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
@@ -2732,7 +2642,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49661.2025.10904740
       \endverb
     \endentry
-    \entry{Hsieh_2023}{inproceedings}{}{}
+    \entry{Hsieh_2023}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=3017523d19ea19496123fbd152ba114a}{%
            family={Hsieh},
@@ -2755,12 +2665,10 @@
       }
       \strng{namehash}{518c7456b059f0e388590ee86b718d97}
       \strng{fullhash}{518c7456b059f0e388590ee86b718d97}
-      \strng{fullhashraw}{518c7456b059f0e388590ee86b718d97}
       \strng{bibnamehash}{518c7456b059f0e388590ee86b718d97}
       \strng{authorbibnamehash}{518c7456b059f0e388590ee86b718d97}
       \strng{authornamehash}{518c7456b059f0e388590ee86b718d97}
       \strng{authorfullhash}{518c7456b059f0e388590ee86b718d97}
-      \strng{authorfullhashraw}{518c7456b059f0e388590ee86b718d97}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
@@ -2782,7 +2690,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC42615.2023.10067258
       \endverb
     \endentry
-    \entry{Hsu_2007}{inproceedings}{}{}
+    \entry{Hsu_2007}{inproceedings}{}
       \name{author}{7}{}{%
         {{hash=707a22ec674428e7bdbe30814f0fa13e}{%
            family={Hsu},
@@ -2825,12 +2733,10 @@
       }
       \strng{namehash}{c13181bb5d4131dac60088b40f432b10}
       \strng{fullhash}{eb0978a1dab9f057ce27b6008ad55c20}
-      \strng{fullhashraw}{eb0978a1dab9f057ce27b6008ad55c20}
       \strng{bibnamehash}{c13181bb5d4131dac60088b40f432b10}
       \strng{authorbibnamehash}{c13181bb5d4131dac60088b40f432b10}
       \strng{authornamehash}{c13181bb5d4131dac60088b40f432b10}
       \strng{authorfullhash}{eb0978a1dab9f057ce27b6008ad55c20}
-      \strng{authorfullhashraw}{eb0978a1dab9f057ce27b6008ad55c20}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
@@ -2852,7 +2758,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2007.373495
       \endverb
     \endentry
-    \entry{Hu_2022}{inproceedings}{}{}
+    \entry{Hu_2022}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=da728bd28e70ff13d6d23b76ac7f8d96}{%
            family={Hu},
@@ -2890,12 +2796,10 @@
       }
       \strng{namehash}{8f6f42a425d821784dfbd54716237096}
       \strng{fullhash}{c7a23d8b09c9239dc330f3bc9a4c07bd}
-      \strng{fullhashraw}{c7a23d8b09c9239dc330f3bc9a4c07bd}
       \strng{bibnamehash}{8f6f42a425d821784dfbd54716237096}
       \strng{authorbibnamehash}{8f6f42a425d821784dfbd54716237096}
       \strng{authornamehash}{8f6f42a425d821784dfbd54716237096}
       \strng{authorfullhash}{c7a23d8b09c9239dc330f3bc9a4c07bd}
-      \strng{authorfullhashraw}{c7a23d8b09c9239dc330f3bc9a4c07bd}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
@@ -2915,7 +2819,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC42614.2022.9731544
       \endverb
     \endentry
-    \entry{Sheng_Jui_Huang_2009}{inproceedings}{}{}
+    \entry{Sheng_Jui_Huang_2009}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=b82046843dd531868e387582477f811e}{%
            family={Huang},
@@ -2933,12 +2837,10 @@
       }
       \strng{namehash}{588fe8a071e6e562773dfc932d003b3d}
       \strng{fullhash}{588fe8a071e6e562773dfc932d003b3d}
-      \strng{fullhashraw}{588fe8a071e6e562773dfc932d003b3d}
       \strng{bibnamehash}{588fe8a071e6e562773dfc932d003b3d}
       \strng{authorbibnamehash}{588fe8a071e6e562773dfc932d003b3d}
       \strng{authornamehash}{588fe8a071e6e562773dfc932d003b3d}
       \strng{authorfullhash}{588fe8a071e6e562773dfc932d003b3d}
-      \strng{authorfullhashraw}{588fe8a071e6e562773dfc932d003b3d}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
@@ -2960,7 +2862,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2009.4977363
       \endverb
     \endentry
-    \entry{Huang_2010}{inproceedings}{}{}
+    \entry{Huang_2010}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=6c1d09f95a31685cde0e56ea4515706e}{%
            family={Huang},
@@ -2978,12 +2880,10 @@
       }
       \strng{namehash}{602cbe13e2876b6f43a984f6d6b60051}
       \strng{fullhash}{602cbe13e2876b6f43a984f6d6b60051}
-      \strng{fullhashraw}{602cbe13e2876b6f43a984f6d6b60051}
       \strng{bibnamehash}{602cbe13e2876b6f43a984f6d6b60051}
       \strng{authorbibnamehash}{602cbe13e2876b6f43a984f6d6b60051}
       \strng{authornamehash}{602cbe13e2876b6f43a984f6d6b60051}
       \strng{authorfullhash}{602cbe13e2876b6f43a984f6d6b60051}
-      \strng{authorfullhashraw}{602cbe13e2876b6f43a984f6d6b60051}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
@@ -3005,7 +2905,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2010.5433927
       \endverb
     \endentry
-    \entry{Huber_2007}{inproceedings}{}{}
+    \entry{Huber_2007}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=82eb3ee6b34dbc70729dc0925a7c6628}{%
            family={Huber},
@@ -3028,12 +2928,10 @@
       }
       \strng{namehash}{6f919453c29d984bff3ea59d73c12a90}
       \strng{fullhash}{6f919453c29d984bff3ea59d73c12a90}
-      \strng{fullhashraw}{6f919453c29d984bff3ea59d73c12a90}
       \strng{bibnamehash}{6f919453c29d984bff3ea59d73c12a90}
       \strng{authorbibnamehash}{6f919453c29d984bff3ea59d73c12a90}
       \strng{authornamehash}{6f919453c29d984bff3ea59d73c12a90}
       \strng{authorfullhash}{6f919453c29d984bff3ea59d73c12a90}
-      \strng{authorfullhashraw}{6f919453c29d984bff3ea59d73c12a90}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
@@ -3055,7 +2953,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2007.373490
       \endverb
     \endentry
-    \entry{Ingino}{inproceedings}{}{}
+    \entry{Ingino}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=21017970817855558a13c4ba6e95ac4e}{%
            family={Ingino},
@@ -3073,12 +2971,10 @@
       }
       \strng{namehash}{5d25bc1393c8bc58e8e26465722aa331}
       \strng{fullhash}{5d25bc1393c8bc58e8e26465722aa331}
-      \strng{fullhashraw}{5d25bc1393c8bc58e8e26465722aa331}
       \strng{bibnamehash}{5d25bc1393c8bc58e8e26465722aa331}
       \strng{authorbibnamehash}{5d25bc1393c8bc58e8e26465722aa331}
       \strng{authornamehash}{5d25bc1393c8bc58e8e26465722aa331}
       \strng{authorfullhash}{5d25bc1393c8bc58e8e26465722aa331}
-      \strng{authorfullhashraw}{5d25bc1393c8bc58e8e26465722aa331}
       \field{sortinit}{I}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{labelnamesource}{author}
@@ -3099,7 +2995,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.1998.672409
       \endverb
     \endentry
-    \entry{Janssen_2013}{inproceedings}{}{}
+    \entry{Janssen_2013}{inproceedings}{}
       \name{author}{9}{}{%
         {{hash=6e9e1a2d2d766f992169df847735631d}{%
            family={Janssen},
@@ -3154,12 +3050,10 @@
       }
       \strng{namehash}{0025c7df232a5b30caedd031650a3eb2}
       \strng{fullhash}{64e810dc4e98f602e0698abb1cae0638}
-      \strng{fullhashraw}{64e810dc4e98f602e0698abb1cae0638}
       \strng{bibnamehash}{0025c7df232a5b30caedd031650a3eb2}
       \strng{authorbibnamehash}{0025c7df232a5b30caedd031650a3eb2}
       \strng{authornamehash}{0025c7df232a5b30caedd031650a3eb2}
       \strng{authorfullhash}{64e810dc4e98f602e0698abb1cae0638}
-      \strng{authorfullhashraw}{64e810dc4e98f602e0698abb1cae0638}
       \field{sortinit}{J}
       \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
       \field{labelnamesource}{author}
@@ -3181,7 +3075,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2013.6487816
       \endverb
     \endentry
-    \entry{Jeon_2007}{inproceedings}{}{}
+    \entry{Jeon_2007}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=36266cd20b79c49a76d2be800a46c5ea}{%
            family={Jeon},
@@ -3214,12 +3108,10 @@
       }
       \strng{namehash}{abe515d4c58dfc2433ca1b1ebac9f002}
       \strng{fullhash}{3b8a281c0182749e4c58667f89cb2b11}
-      \strng{fullhashraw}{3b8a281c0182749e4c58667f89cb2b11}
       \strng{bibnamehash}{abe515d4c58dfc2433ca1b1ebac9f002}
       \strng{authorbibnamehash}{abe515d4c58dfc2433ca1b1ebac9f002}
       \strng{authornamehash}{abe515d4c58dfc2433ca1b1ebac9f002}
       \strng{authorfullhash}{3b8a281c0182749e4c58667f89cb2b11}
-      \strng{authorfullhashraw}{3b8a281c0182749e4c58667f89cb2b11}
       \field{sortinit}{J}
       \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
       \field{labelnamesource}{author}
@@ -3241,7 +3133,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2007.373491
       \endverb
     \endentry
-    \entry{Jeong_2025}{inproceedings}{}{}
+    \entry{Jeong_2025}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=067f62d2a200c6ba3830a1fc5fe86ec9}{%
            family={Jeong},
@@ -3274,12 +3166,10 @@
       }
       \strng{namehash}{14e5615461e7214c6ca09cbf0c3fcfb6}
       \strng{fullhash}{27af4b94ca81b0e5f986ff18d4aa1bff}
-      \strng{fullhashraw}{27af4b94ca81b0e5f986ff18d4aa1bff}
       \strng{bibnamehash}{14e5615461e7214c6ca09cbf0c3fcfb6}
       \strng{authorbibnamehash}{14e5615461e7214c6ca09cbf0c3fcfb6}
       \strng{authornamehash}{14e5615461e7214c6ca09cbf0c3fcfb6}
       \strng{authorfullhash}{27af4b94ca81b0e5f986ff18d4aa1bff}
-      \strng{authorfullhashraw}{27af4b94ca81b0e5f986ff18d4aa1bff}
       \field{sortinit}{J}
       \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
       \field{labelnamesource}{author}
@@ -3301,7 +3191,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49661.2025.10904745
       \endverb
     \endentry
-    \entry{Kang_2022}{inproceedings}{}{}
+    \entry{Kang_2022}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=0af9e829cd68340c16c3c8822abaadeb}{%
            family={Kang},
@@ -3334,12 +3224,10 @@
       }
       \strng{namehash}{1199b644758bd8f942d8758d49142138}
       \strng{fullhash}{71d752ea45ecc8b80c07d0de016ec25f}
-      \strng{fullhashraw}{71d752ea45ecc8b80c07d0de016ec25f}
       \strng{bibnamehash}{1199b644758bd8f942d8758d49142138}
       \strng{authorbibnamehash}{1199b644758bd8f942d8758d49142138}
       \strng{authornamehash}{1199b644758bd8f942d8758d49142138}
       \strng{authorfullhash}{71d752ea45ecc8b80c07d0de016ec25f}
-      \strng{authorfullhashraw}{71d752ea45ecc8b80c07d0de016ec25f}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
@@ -3361,7 +3249,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC42614.2022.9731571
       \endverb
     \endentry
-    \entry{Kapusta_2013}{inproceedings}{}{}
+    \entry{Kapusta_2013}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=27f576f7dfc4f60f0de078d7bcc6ff12}{%
            family={Kapusta},
@@ -3394,12 +3282,10 @@
       }
       \strng{namehash}{4338d488a71a4196aea4845ae7d013cb}
       \strng{fullhash}{9f38285a9f00ddb23bbc61a891d236ff}
-      \strng{fullhashraw}{9f38285a9f00ddb23bbc61a891d236ff}
       \strng{bibnamehash}{4338d488a71a4196aea4845ae7d013cb}
       \strng{authorbibnamehash}{4338d488a71a4196aea4845ae7d013cb}
       \strng{authornamehash}{4338d488a71a4196aea4845ae7d013cb}
       \strng{authorfullhash}{9f38285a9f00ddb23bbc61a891d236ff}
-      \strng{authorfullhashraw}{9f38285a9f00ddb23bbc61a891d236ff}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
@@ -3421,7 +3307,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2013.6487820
       \endverb
     \endentry
-    \entry{Kelly}{inproceedings}{}{}
+    \entry{Kelly}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=887bdcd0dc6901a24f30b41cff267176}{%
            family={Kelly},
@@ -3454,12 +3340,10 @@
       }
       \strng{namehash}{2942d432377021fa77e5bc3a4e3c2e7b}
       \strng{fullhash}{ae5ae920f13d14bbbae58125c0ff4647}
-      \strng{fullhashraw}{ae5ae920f13d14bbbae58125c0ff4647}
       \strng{bibnamehash}{2942d432377021fa77e5bc3a4e3c2e7b}
       \strng{authorbibnamehash}{2942d432377021fa77e5bc3a4e3c2e7b}
       \strng{authornamehash}{2942d432377021fa77e5bc3a4e3c2e7b}
       \strng{authorfullhash}{ae5ae920f13d14bbbae58125c0ff4647}
-      \strng{authorfullhashraw}{ae5ae920f13d14bbbae58125c0ff4647}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
@@ -3480,7 +3364,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2001.912575
       \endverb
     \endentry
-    \entry{Kim_2023}{inproceedings}{}{}
+    \entry{Kim_2023}{inproceedings}{}
       \name{author}{9}{}{%
         {{hash=998d1267ecdd05dd72203de539c9f7f1}{%
            family={Kim},
@@ -3533,12 +3417,10 @@
       }
       \strng{namehash}{6092b5973e367f696bbd8f46140cdd3e}
       \strng{fullhash}{3fdf96394bcf69a79e049ef768802861}
-      \strng{fullhashraw}{3fdf96394bcf69a79e049ef768802861}
       \strng{bibnamehash}{6092b5973e367f696bbd8f46140cdd3e}
       \strng{authorbibnamehash}{6092b5973e367f696bbd8f46140cdd3e}
       \strng{authornamehash}{6092b5973e367f696bbd8f46140cdd3e}
       \strng{authorfullhash}{3fdf96394bcf69a79e049ef768802861}
-      \strng{authorfullhashraw}{3fdf96394bcf69a79e049ef768802861}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
@@ -3560,7 +3442,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC42615.2023.10067844
       \endverb
     \endentry
-    \entry{Hwi_Cheol_Kim}{inproceedings}{}{}
+    \entry{Hwi_Cheol_Kim}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=dded847dd94be0c35ee31398bd280234}{%
            family={Kim},
@@ -3583,12 +3465,10 @@
       }
       \strng{namehash}{ec75b5cf189df8f6fe71212c0b7bd883}
       \strng{fullhash}{ec75b5cf189df8f6fe71212c0b7bd883}
-      \strng{fullhashraw}{ec75b5cf189df8f6fe71212c0b7bd883}
       \strng{bibnamehash}{ec75b5cf189df8f6fe71212c0b7bd883}
       \strng{authorbibnamehash}{ec75b5cf189df8f6fe71212c0b7bd883}
       \strng{authornamehash}{ec75b5cf189df8f6fe71212c0b7bd883}
       \strng{authorfullhash}{ec75b5cf189df8f6fe71212c0b7bd883}
-      \strng{authorfullhashraw}{ec75b5cf189df8f6fe71212c0b7bd883}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
@@ -3608,7 +3488,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2005.1493980
       \endverb
     \endentry
-    \entry{Jinseok_Koh}{inproceedings}{}{}
+    \entry{Jinseok_Koh}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=e5a1c623512b6c97ea3616701a4ec192}{%
            family={Koh},
@@ -3631,12 +3511,10 @@
       }
       \strng{namehash}{2b336a05b2d7c84f9a65d544be78c772}
       \strng{fullhash}{2b336a05b2d7c84f9a65d544be78c772}
-      \strng{fullhashraw}{2b336a05b2d7c84f9a65d544be78c772}
       \strng{bibnamehash}{2b336a05b2d7c84f9a65d544be78c772}
       \strng{authorbibnamehash}{2b336a05b2d7c84f9a65d544be78c772}
       \strng{authornamehash}{2b336a05b2d7c84f9a65d544be78c772}
       \strng{authorfullhash}{2b336a05b2d7c84f9a65d544be78c772}
-      \strng{authorfullhashraw}{2b336a05b2d7c84f9a65d544be78c772}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
@@ -3656,7 +3534,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2005.1493923
       \endverb
     \endentry
-    \entry{Kumar_2023}{inproceedings}{}{}
+    \entry{Kumar_2023}{inproceedings}{}
       \name{author}{9}{}{%
         {{hash=a6c8c74590daa999d48e8b509fad0dbd}{%
            family={Kumar},
@@ -3709,12 +3587,10 @@
       }
       \strng{namehash}{ca3f22a9766d8f06237bdf223c4ebcdd}
       \strng{fullhash}{d55f2846f8d2a029888d7e53f6729f7c}
-      \strng{fullhashraw}{d55f2846f8d2a029888d7e53f6729f7c}
       \strng{bibnamehash}{ca3f22a9766d8f06237bdf223c4ebcdd}
       \strng{authorbibnamehash}{ca3f22a9766d8f06237bdf223c4ebcdd}
       \strng{authornamehash}{ca3f22a9766d8f06237bdf223c4ebcdd}
       \strng{authorfullhash}{d55f2846f8d2a029888d7e53f6729f7c}
-      \strng{authorfullhashraw}{d55f2846f8d2a029888d7e53f6729f7c}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
@@ -3734,7 +3610,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC42615.2023.10067793
       \endverb
     \endentry
-    \entry{Sung_Ung_Kwak}{inproceedings}{}{}
+    \entry{Sung_Ung_Kwak}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=dd59d02c434307400e8c7111a7e63418}{%
            family={Kwak},
@@ -3757,12 +3633,10 @@
       }
       \strng{namehash}{de94454a5e01f5a9a965666118c3763f}
       \strng{fullhash}{de94454a5e01f5a9a965666118c3763f}
-      \strng{fullhashraw}{de94454a5e01f5a9a965666118c3763f}
       \strng{bibnamehash}{de94454a5e01f5a9a965666118c3763f}
       \strng{authorbibnamehash}{de94454a5e01f5a9a965666118c3763f}
       \strng{authornamehash}{de94454a5e01f5a9a965666118c3763f}
       \strng{authorfullhash}{de94454a5e01f5a9a965666118c3763f}
-      \strng{authorfullhashraw}{de94454a5e01f5a9a965666118c3763f}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
@@ -3783,7 +3657,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.1997.585309
       \endverb
     \endentry
-    \entry{Lee_2022}{inproceedings}{}{}
+    \entry{Lee_2022}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=97360d4a23fbf2867fabd87cfffce7cb}{%
            family={Lee},
@@ -3801,12 +3675,10 @@
       }
       \strng{namehash}{955dddf140f1e74d992e4b1ff6982158}
       \strng{fullhash}{955dddf140f1e74d992e4b1ff6982158}
-      \strng{fullhashraw}{955dddf140f1e74d992e4b1ff6982158}
       \strng{bibnamehash}{955dddf140f1e74d992e4b1ff6982158}
       \strng{authorbibnamehash}{955dddf140f1e74d992e4b1ff6982158}
       \strng{authornamehash}{955dddf140f1e74d992e4b1ff6982158}
       \strng{authorfullhash}{955dddf140f1e74d992e4b1ff6982158}
-      \strng{authorfullhashraw}{955dddf140f1e74d992e4b1ff6982158}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -3828,7 +3700,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC42614.2022.9731606
       \endverb
     \endentry
-    \entry{Lee_2025}{inproceedings}{}{}
+    \entry{Lee_2025}{inproceedings}{}
       \name{author}{7}{}{%
         {{hash=fad5846abebb04ef9424a83e9c98be58}{%
            family={Lee},
@@ -3871,12 +3743,10 @@
       }
       \strng{namehash}{daf1f986b913b9cd548cd86841259389}
       \strng{fullhash}{e2e44e58564f5d0a9cf97bde3fbc703a}
-      \strng{fullhashraw}{e2e44e58564f5d0a9cf97bde3fbc703a}
       \strng{bibnamehash}{daf1f986b913b9cd548cd86841259389}
       \strng{authorbibnamehash}{daf1f986b913b9cd548cd86841259389}
       \strng{authornamehash}{daf1f986b913b9cd548cd86841259389}
       \strng{authorfullhash}{e2e44e58564f5d0a9cf97bde3fbc703a}
-      \strng{authorfullhashraw}{e2e44e58564f5d0a9cf97bde3fbc703a}
       \field{extraname}{1}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
@@ -3899,7 +3769,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49661.2025.10904707
       \endverb
     \endentry
-    \entry{Lee_2024}{inproceedings}{}{}
+    \entry{Lee_2024}{inproceedings}{}
       \name{author}{8}{}{%
         {{hash=4f83cdab4970a2b76375bf16adb5da05}{%
            family={Lee},
@@ -3947,12 +3817,10 @@
       }
       \strng{namehash}{040e64e946ca75a417e156ec31e0e2bc}
       \strng{fullhash}{672545ac5b5f952f3efd02d176075f42}
-      \strng{fullhashraw}{672545ac5b5f952f3efd02d176075f42}
       \strng{bibnamehash}{040e64e946ca75a417e156ec31e0e2bc}
       \strng{authorbibnamehash}{040e64e946ca75a417e156ec31e0e2bc}
       \strng{authornamehash}{040e64e946ca75a417e156ec31e0e2bc}
       \strng{authorfullhash}{672545ac5b5f952f3efd02d176075f42}
-      \strng{authorfullhashraw}{672545ac5b5f952f3efd02d176075f42}
       \field{extraname}{2}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
@@ -3975,7 +3843,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49657.2024.10454351
       \endverb
     \endentry
-    \entry{Lee_2007}{inproceedings}{}{}
+    \entry{Lee_2007}{inproceedings}{}
       \name{author}{7}{}{%
         {{hash=8b9f29b8081f68942f825a888256f3c7}{%
            family={Lee},
@@ -4018,12 +3886,10 @@
       }
       \strng{namehash}{d6e1d16216324ec3c15da54e1443d91e}
       \strng{fullhash}{7150d208f267d6baa315bcd681a4c600}
-      \strng{fullhashraw}{7150d208f267d6baa315bcd681a4c600}
       \strng{bibnamehash}{d6e1d16216324ec3c15da54e1443d91e}
       \strng{authorbibnamehash}{d6e1d16216324ec3c15da54e1443d91e}
       \strng{authornamehash}{d6e1d16216324ec3c15da54e1443d91e}
       \strng{authorfullhash}{7150d208f267d6baa315bcd681a4c600}
-      \strng{authorfullhashraw}{7150d208f267d6baa315bcd681a4c600}
       \field{extraname}{3}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
@@ -4046,7 +3912,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2007.373492
       \endverb
     \endentry
-    \entry{Li_2023}{inproceedings}{}{}
+    \entry{Li_2023}{inproceedings}{}
       \name{author}{7}{}{%
         {{hash=b4acfeb9cf5d6f7280e031720a715b62}{%
            family={Li},
@@ -4089,12 +3955,10 @@
       }
       \strng{namehash}{c4f4e8281452def325c6b5108a1de91a}
       \strng{fullhash}{0f92251bfbcec06c702668f0dea07a0e}
-      \strng{fullhashraw}{0f92251bfbcec06c702668f0dea07a0e}
       \strng{bibnamehash}{c4f4e8281452def325c6b5108a1de91a}
       \strng{authorbibnamehash}{c4f4e8281452def325c6b5108a1de91a}
       \strng{authornamehash}{c4f4e8281452def325c6b5108a1de91a}
       \strng{authorfullhash}{0f92251bfbcec06c702668f0dea07a0e}
-      \strng{authorfullhashraw}{0f92251bfbcec06c702668f0dea07a0e}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -4114,7 +3978,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC42615.2023.10067703
       \endverb
     \endentry
-    \entry{Lim_2024}{inproceedings}{}{}
+    \entry{Lim_2024}{inproceedings}{}
       \name{author}{7}{}{%
         {{hash=1bae07cfeb5b536b8d37321ba85a792d}{%
            family={Lim},
@@ -4157,12 +4021,10 @@
       }
       \strng{namehash}{7361b3dbde5c05026b368d9d02113439}
       \strng{fullhash}{177e69f42a4c0931de540d9fec1b05de}
-      \strng{fullhashraw}{177e69f42a4c0931de540d9fec1b05de}
       \strng{bibnamehash}{7361b3dbde5c05026b368d9d02113439}
       \strng{authorbibnamehash}{7361b3dbde5c05026b368d9d02113439}
       \strng{authornamehash}{7361b3dbde5c05026b368d9d02113439}
       \strng{authorfullhash}{177e69f42a4c0931de540d9fec1b05de}
-      \strng{authorfullhashraw}{177e69f42a4c0931de540d9fec1b05de}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -4184,7 +4046,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49657.2024.10454422
       \endverb
     \endentry
-    \entry{Limotyrakis}{inproceedings}{}{}
+    \entry{Limotyrakis}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=45ca508d60acd2008d59909494ac5db5}{%
            family={Limotyrakis},
@@ -4212,12 +4074,10 @@
       }
       \strng{namehash}{916ad607133a5d58c9ef0efa152a934d}
       \strng{fullhash}{915f16e9f15b23bac2fb3ef7229fb20b}
-      \strng{fullhashraw}{915f16e9f15b23bac2fb3ef7229fb20b}
       \strng{bibnamehash}{916ad607133a5d58c9ef0efa152a934d}
       \strng{authorbibnamehash}{916ad607133a5d58c9ef0efa152a934d}
       \strng{authornamehash}{916ad607133a5d58c9ef0efa152a934d}
       \strng{authorfullhash}{915f16e9f15b23bac2fb3ef7229fb20b}
-      \strng{authorfullhashraw}{915f16e9f15b23bac2fb3ef7229fb20b}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -4238,7 +4098,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2004.1332692
       \endverb
     \endentry
-    \entry{Lin_2016}{inproceedings}{}{}
+    \entry{Lin_2016}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=ff64d5569d8dc9bc9d5ba092e9f36830}{%
            family={Lin},
@@ -4261,12 +4121,10 @@
       }
       \strng{namehash}{6a3a6f673011b695128d10c4fb3979c6}
       \strng{fullhash}{6a3a6f673011b695128d10c4fb3979c6}
-      \strng{fullhashraw}{6a3a6f673011b695128d10c4fb3979c6}
       \strng{bibnamehash}{6a3a6f673011b695128d10c4fb3979c6}
       \strng{authorbibnamehash}{6a3a6f673011b695128d10c4fb3979c6}
       \strng{authornamehash}{6a3a6f673011b695128d10c4fb3979c6}
       \strng{authorfullhash}{6a3a6f673011b695128d10c4fb3979c6}
-      \strng{authorfullhashraw}{6a3a6f673011b695128d10c4fb3979c6}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -4288,7 +4146,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2016.7418110
       \endverb
     \endentry
-    \entry{Lin_2019}{inproceedings}{}{}
+    \entry{Lin_2019}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=c36d19681a0017101e758c7d614af964}{%
            family={Lin},
@@ -4321,12 +4179,10 @@
       }
       \strng{namehash}{3e7b0afef7b6827fe24a2aaa48ebd5c3}
       \strng{fullhash}{d71080737317aed4fc24a111526e80e5}
-      \strng{fullhashraw}{d71080737317aed4fc24a111526e80e5}
       \strng{bibnamehash}{3e7b0afef7b6827fe24a2aaa48ebd5c3}
       \strng{authorbibnamehash}{3e7b0afef7b6827fe24a2aaa48ebd5c3}
       \strng{authornamehash}{3e7b0afef7b6827fe24a2aaa48ebd5c3}
       \strng{authorfullhash}{d71080737317aed4fc24a111526e80e5}
-      \strng{authorfullhashraw}{d71080737317aed4fc24a111526e80e5}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -4346,7 +4202,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2019.8662299
       \endverb
     \endentry
-    \entry{Chang_Yuan_Liou_2013}{inproceedings}{}{}
+    \entry{Chang_Yuan_Liou_2013}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=70f7033e642f4a397ed5bb09dc0d0ab5}{%
            family={Liou},
@@ -4364,12 +4220,10 @@
       }
       \strng{namehash}{de4b3252e4d018637504ced4f905ad2a}
       \strng{fullhash}{de4b3252e4d018637504ced4f905ad2a}
-      \strng{fullhashraw}{de4b3252e4d018637504ced4f905ad2a}
       \strng{bibnamehash}{de4b3252e4d018637504ced4f905ad2a}
       \strng{authorbibnamehash}{de4b3252e4d018637504ced4f905ad2a}
       \strng{authornamehash}{de4b3252e4d018637504ced4f905ad2a}
       \strng{authorfullhash}{de4b3252e4d018637504ced4f905ad2a}
-      \strng{authorfullhashraw}{de4b3252e4d018637504ced4f905ad2a}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -4391,7 +4245,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2013.6487735
       \endverb
     \endentry
-    \entry{Liu_2016}{inproceedings}{}{}
+    \entry{Liu_2016}{inproceedings}{}
       \name{author}{1}{}{%
         {{hash=f90b786b6a825fcd0280924b7417e91c}{%
            family={Liu},
@@ -4404,12 +4258,10 @@
       }
       \strng{namehash}{f90b786b6a825fcd0280924b7417e91c}
       \strng{fullhash}{f90b786b6a825fcd0280924b7417e91c}
-      \strng{fullhashraw}{f90b786b6a825fcd0280924b7417e91c}
       \strng{bibnamehash}{f90b786b6a825fcd0280924b7417e91c}
       \strng{authorbibnamehash}{f90b786b6a825fcd0280924b7417e91c}
       \strng{authornamehash}{f90b786b6a825fcd0280924b7417e91c}
       \strng{authorfullhash}{f90b786b6a825fcd0280924b7417e91c}
-      \strng{authorfullhashraw}{f90b786b6a825fcd0280924b7417e91c}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -4431,7 +4283,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2016.7418107
       \endverb
     \endentry
-    \entry{Liu_2022}{inproceedings}{}{}
+    \entry{Liu_2022}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=13c5110196d54fbf1b392cce3b6ff1b1}{%
            family={Liu},
@@ -4454,12 +4306,10 @@
       }
       \strng{namehash}{55c6cbcb8621706f595ffb2448685995}
       \strng{fullhash}{55c6cbcb8621706f595ffb2448685995}
-      \strng{fullhashraw}{55c6cbcb8621706f595ffb2448685995}
       \strng{bibnamehash}{55c6cbcb8621706f595ffb2448685995}
       \strng{authorbibnamehash}{55c6cbcb8621706f595ffb2448685995}
       \strng{authornamehash}{55c6cbcb8621706f595ffb2448685995}
       \strng{authorfullhash}{55c6cbcb8621706f595ffb2448685995}
-      \strng{authorfullhashraw}{55c6cbcb8621706f595ffb2448685995}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -4481,7 +4331,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC42614.2022.9731625
       \endverb
     \endentry
-    \entry{Liu_2010}{inproceedings}{}{}
+    \entry{Liu_2010}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=2818e977076e13c66a9577ffef15e3fb}{%
            family={Liu},
@@ -4504,12 +4354,10 @@
       }
       \strng{namehash}{7afb6ec6f914d46584920d0a6d2fb000}
       \strng{fullhash}{7afb6ec6f914d46584920d0a6d2fb000}
-      \strng{fullhashraw}{7afb6ec6f914d46584920d0a6d2fb000}
       \strng{bibnamehash}{7afb6ec6f914d46584920d0a6d2fb000}
       \strng{authorbibnamehash}{7afb6ec6f914d46584920d0a6d2fb000}
       \strng{authornamehash}{7afb6ec6f914d46584920d0a6d2fb000}
       \strng{authorfullhash}{7afb6ec6f914d46584920d0a6d2fb000}
-      \strng{authorfullhashraw}{7afb6ec6f914d46584920d0a6d2fb000}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -4531,7 +4379,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2010.5433830
       \endverb
     \endentry
-    \entry{Liu_2025}{inproceedings}{}{}
+    \entry{Liu_2025}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=13b32b71d588e00dc68d622bcbd20add}{%
            family={Liu},
@@ -4569,12 +4417,10 @@
       }
       \strng{namehash}{037a14fd3137fa6c7f377414fadec370}
       \strng{fullhash}{8edec43b3a74199f7262b562ef7a1c56}
-      \strng{fullhashraw}{8edec43b3a74199f7262b562ef7a1c56}
       \strng{bibnamehash}{037a14fd3137fa6c7f377414fadec370}
       \strng{authorbibnamehash}{037a14fd3137fa6c7f377414fadec370}
       \strng{authornamehash}{037a14fd3137fa6c7f377414fadec370}
       \strng{authorfullhash}{8edec43b3a74199f7262b562ef7a1c56}
-      \strng{authorfullhashraw}{8edec43b3a74199f7262b562ef7a1c56}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -4596,7 +4442,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49661.2025.10904818
       \endverb
     \endentry
-    \entry{Lo_2019}{inproceedings}{}{}
+    \entry{Lo_2019}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=5eeaa383f25c32db1faed2d34d1f9ee0}{%
            family={Lo},
@@ -4629,12 +4475,10 @@
       }
       \strng{namehash}{596529e72ff3016ae086174ccfd4e8d2}
       \strng{fullhash}{858ee76e54a31395415643b6c7bac83b}
-      \strng{fullhashraw}{858ee76e54a31395415643b6c7bac83b}
       \strng{bibnamehash}{596529e72ff3016ae086174ccfd4e8d2}
       \strng{authorbibnamehash}{596529e72ff3016ae086174ccfd4e8d2}
       \strng{authornamehash}{596529e72ff3016ae086174ccfd4e8d2}
       \strng{authorfullhash}{858ee76e54a31395415643b6c7bac83b}
-      \strng{authorfullhashraw}{858ee76e54a31395415643b6c7bac83b}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -4654,7 +4498,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2019.8662371
       \endverb
     \endentry
-    \entry{Luan_2025}{inproceedings}{}{}
+    \entry{Luan_2025}{inproceedings}{}
       \name{author}{8}{}{%
         {{hash=94191eafb7039931d85218989e282e9b}{%
            family={Luan},
@@ -4702,12 +4546,10 @@
       }
       \strng{namehash}{1c4641f5e66d4732413557887adcf094}
       \strng{fullhash}{b7d591ce1c8fe9a3e95395a086187263}
-      \strng{fullhashraw}{b7d591ce1c8fe9a3e95395a086187263}
       \strng{bibnamehash}{1c4641f5e66d4732413557887adcf094}
       \strng{authorbibnamehash}{1c4641f5e66d4732413557887adcf094}
       \strng{authornamehash}{1c4641f5e66d4732413557887adcf094}
       \strng{authorfullhash}{b7d591ce1c8fe9a3e95395a086187263}
-      \strng{authorfullhashraw}{b7d591ce1c8fe9a3e95395a086187263}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -4729,7 +4571,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49661.2025.10904732
       \endverb
     \endentry
-    \entry{Malki_2012}{inproceedings}{}{}
+    \entry{Malki_2012}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=aa2a3e4bca18c20e8581090960bbab29}{%
            family={Malki},
@@ -4762,12 +4604,10 @@
       }
       \strng{namehash}{d1f2747ea82cbec977a449aa907cbb7a}
       \strng{fullhash}{7f3103ff929fb2f35fb2b1b8ae940953}
-      \strng{fullhashraw}{7f3103ff929fb2f35fb2b1b8ae940953}
       \strng{bibnamehash}{d1f2747ea82cbec977a449aa907cbb7a}
       \strng{authorbibnamehash}{d1f2747ea82cbec977a449aa907cbb7a}
       \strng{authornamehash}{d1f2747ea82cbec977a449aa907cbb7a}
       \strng{authorfullhash}{7f3103ff929fb2f35fb2b1b8ae940953}
-      \strng{authorfullhashraw}{7f3103ff929fb2f35fb2b1b8ae940953}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
@@ -4789,7 +4629,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2012.6177095
       \endverb
     \endentry
-    \entry{Martens_2024}{inproceedings}{}{}
+    \entry{Martens_2024}{inproceedings}{}
       \name{author}{8}{}{%
         {{hash=596572f43f43a60c4a817c88164efbdb}{%
            family={Martens},
@@ -4837,12 +4677,10 @@
       }
       \strng{namehash}{fdcbf7132f3d53ef1f24274cca143c72}
       \strng{fullhash}{bee8dd0d5c712d75d2f00bf1137e8ed7}
-      \strng{fullhashraw}{bee8dd0d5c712d75d2f00bf1137e8ed7}
       \strng{bibnamehash}{fdcbf7132f3d53ef1f24274cca143c72}
       \strng{authorbibnamehash}{fdcbf7132f3d53ef1f24274cca143c72}
       \strng{authornamehash}{fdcbf7132f3d53ef1f24274cca143c72}
       \strng{authorfullhash}{bee8dd0d5c712d75d2f00bf1137e8ed7}
-      \strng{authorfullhashraw}{bee8dd0d5c712d75d2f00bf1137e8ed7}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
@@ -4864,7 +4702,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49657.2024.10454361
       \endverb
     \endentry
-    \entry{Michel_2011}{inproceedings}{}{}
+    \entry{Michel_2011}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=287740b646a17cf69e0727af7634a754}{%
            family={Michel},
@@ -4882,12 +4720,10 @@
       }
       \strng{namehash}{4effd6902a4e35c018039fba18dcc3b2}
       \strng{fullhash}{4effd6902a4e35c018039fba18dcc3b2}
-      \strng{fullhashraw}{4effd6902a4e35c018039fba18dcc3b2}
       \strng{bibnamehash}{4effd6902a4e35c018039fba18dcc3b2}
       \strng{authorbibnamehash}{4effd6902a4e35c018039fba18dcc3b2}
       \strng{authornamehash}{4effd6902a4e35c018039fba18dcc3b2}
       \strng{authorfullhash}{4effd6902a4e35c018039fba18dcc3b2}
-      \strng{authorfullhashraw}{4effd6902a4e35c018039fba18dcc3b2}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
@@ -4909,7 +4745,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2011.5746404
       \endverb
     \endentry
-    \entry{Mitteregger_2006}{inproceedings}{}{}
+    \entry{Mitteregger_2006}{inproceedings}{}
       \name{author}{8}{}{%
         {{hash=443b3603dc9de078b129f3360a0487ad}{%
            family={Mitteregger},
@@ -4957,12 +4793,10 @@
       }
       \strng{namehash}{1e2a24d6b2c287aacd5a5e429888b99b}
       \strng{fullhash}{a3bcd20eb4aea0d5601171305de46fd5}
-      \strng{fullhashraw}{a3bcd20eb4aea0d5601171305de46fd5}
       \strng{bibnamehash}{1e2a24d6b2c287aacd5a5e429888b99b}
       \strng{authorbibnamehash}{1e2a24d6b2c287aacd5a5e429888b99b}
       \strng{authornamehash}{1e2a24d6b2c287aacd5a5e429888b99b}
       \strng{authorfullhash}{a3bcd20eb4aea0d5601171305de46fd5}
-      \strng{authorfullhashraw}{a3bcd20eb4aea0d5601171305de46fd5}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
@@ -4981,7 +4815,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2006.1696042
       \endverb
     \endentry
-    \entry{Ong}{inproceedings}{}{}
+    \entry{Ong}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=f2e6cec9c75cb09b65a4639831a80fef}{%
            family={Ong},
@@ -4999,12 +4833,10 @@
       }
       \strng{namehash}{1ebb9bf27d9f4900d9dcbf96795f18a8}
       \strng{fullhash}{1ebb9bf27d9f4900d9dcbf96795f18a8}
-      \strng{fullhashraw}{1ebb9bf27d9f4900d9dcbf96795f18a8}
       \strng{bibnamehash}{1ebb9bf27d9f4900d9dcbf96795f18a8}
       \strng{authorbibnamehash}{1ebb9bf27d9f4900d9dcbf96795f18a8}
       \strng{authornamehash}{1ebb9bf27d9f4900d9dcbf96795f18a8}
       \strng{authorfullhash}{1ebb9bf27d9f4900d9dcbf96795f18a8}
-      \strng{authorfullhashraw}{1ebb9bf27d9f4900d9dcbf96795f18a8}
       \field{sortinit}{O}
       \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
       \field{labelnamesource}{author}
@@ -5025,7 +4857,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.1997.585337
       \endverb
     \endentry
-    \entry{Yong_In_Park}{inproceedings}{}{}
+    \entry{Yong_In_Park}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=b761866ac4af648234a3c64641142839}{%
            family={Park},
@@ -5053,12 +4885,10 @@
       }
       \strng{namehash}{c1dfd976598a7c12dbca853d1de58362}
       \strng{fullhash}{99221ca296ad3763fa52a7332b3476f4}
-      \strng{fullhashraw}{99221ca296ad3763fa52a7332b3476f4}
       \strng{bibnamehash}{c1dfd976598a7c12dbca853d1de58362}
       \strng{authorbibnamehash}{c1dfd976598a7c12dbca853d1de58362}
       \strng{authornamehash}{c1dfd976598a7c12dbca853d1de58362}
       \strng{authorfullhash}{99221ca296ad3763fa52a7332b3476f4}
-      \strng{authorfullhashraw}{99221ca296ad3763fa52a7332b3476f4}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{labelnamesource}{author}
@@ -5079,7 +4909,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2001.912573
       \endverb
     \endentry
-    \entry{Patil_2024}{inproceedings}{}{}
+    \entry{Patil_2024}{inproceedings}{}
       \name{author}{13}{}{%
         {{hash=cf896e17609448cbcbd46296eba11f5f}{%
            family={Patil},
@@ -5152,12 +4982,10 @@
       }
       \strng{namehash}{5ca975ddb40245ad39f6d7fa214acfdc}
       \strng{fullhash}{dde6dc51c9fab23f23244c150c8cfeab}
-      \strng{fullhashraw}{dde6dc51c9fab23f23244c150c8cfeab}
       \strng{bibnamehash}{5ca975ddb40245ad39f6d7fa214acfdc}
       \strng{authorbibnamehash}{5ca975ddb40245ad39f6d7fa214acfdc}
       \strng{authornamehash}{5ca975ddb40245ad39f6d7fa214acfdc}
       \strng{authorfullhash}{dde6dc51c9fab23f23244c150c8cfeab}
-      \strng{authorfullhashraw}{dde6dc51c9fab23f23244c150c8cfeab}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{labelnamesource}{author}
@@ -5177,7 +5005,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49657.2024.10454477
       \endverb
     \endentry
-    \entry{van_der_Ploeg}{inproceedings}{}{}
+    \entry{van_der_Ploeg}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=4831a0c2e1abf1e628f8a10c850aa214}{%
            family={Ploeg},
@@ -5197,12 +5025,10 @@
       }
       \strng{namehash}{c3139c09ecc79753b0d9e273393be012}
       \strng{fullhash}{c3139c09ecc79753b0d9e273393be012}
-      \strng{fullhashraw}{c3139c09ecc79753b0d9e273393be012}
       \strng{bibnamehash}{c3139c09ecc79753b0d9e273393be012}
       \strng{authorbibnamehash}{c3139c09ecc79753b0d9e273393be012}
       \strng{authornamehash}{c3139c09ecc79753b0d9e273393be012}
       \strng{authorfullhash}{c3139c09ecc79753b0d9e273393be012}
-      \strng{authorfullhashraw}{c3139c09ecc79753b0d9e273393be012}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{labelnamesource}{author}
@@ -5223,7 +5049,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.1999.759267
       \endverb
     \endentry
-    \entry{Pochet_2022}{inproceedings}{}{}
+    \entry{Pochet_2022}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=08517d131c0386f7c465b21b392700cf}{%
            family={Pochet},
@@ -5241,12 +5067,10 @@
       }
       \strng{namehash}{b8efdcb2a9145efceab7fe4b8856b503}
       \strng{fullhash}{b8efdcb2a9145efceab7fe4b8856b503}
-      \strng{fullhashraw}{b8efdcb2a9145efceab7fe4b8856b503}
       \strng{bibnamehash}{b8efdcb2a9145efceab7fe4b8856b503}
       \strng{authorbibnamehash}{b8efdcb2a9145efceab7fe4b8856b503}
       \strng{authornamehash}{b8efdcb2a9145efceab7fe4b8856b503}
       \strng{authorfullhash}{b8efdcb2a9145efceab7fe4b8856b503}
-      \strng{authorfullhashraw}{b8efdcb2a9145efceab7fe4b8856b503}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{labelnamesource}{author}
@@ -5268,7 +5092,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC42614.2022.9731549
       \endverb
     \endentry
-    \entry{Qi_2019}{inproceedings}{}{}
+    \entry{Qi_2019}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=3c4cd4239c893043aed8a41e5e5016bf}{%
            family={Qi},
@@ -5306,12 +5130,10 @@
       }
       \strng{namehash}{9aad34ef0f3319e8891d3c68d191f0bf}
       \strng{fullhash}{3682287063d6bd9ef79c2f04fdb556c9}
-      \strng{fullhashraw}{3682287063d6bd9ef79c2f04fdb556c9}
       \strng{bibnamehash}{9aad34ef0f3319e8891d3c68d191f0bf}
       \strng{authorbibnamehash}{9aad34ef0f3319e8891d3c68d191f0bf}
       \strng{authornamehash}{9aad34ef0f3319e8891d3c68d191f0bf}
       \strng{authorfullhash}{3682287063d6bd9ef79c2f04fdb556c9}
-      \strng{authorfullhashraw}{3682287063d6bd9ef79c2f04fdb556c9}
       \field{sortinit}{Q}
       \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
       \field{labelnamesource}{author}
@@ -5333,7 +5155,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2019.8662529
       \endverb
     \endentry
-    \entry{Ray_2006}{inproceedings}{}{}
+    \entry{Ray_2006}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=08587e1a170d1e9a05267c9851536c1b}{%
            family={Ray},
@@ -5351,12 +5173,10 @@
       }
       \strng{namehash}{2ccf4a3b07f8a8baf4a9184e0a4a156d}
       \strng{fullhash}{2ccf4a3b07f8a8baf4a9184e0a4a156d}
-      \strng{fullhashraw}{2ccf4a3b07f8a8baf4a9184e0a4a156d}
       \strng{bibnamehash}{2ccf4a3b07f8a8baf4a9184e0a4a156d}
       \strng{authorbibnamehash}{2ccf4a3b07f8a8baf4a9184e0a4a156d}
       \strng{authornamehash}{2ccf4a3b07f8a8baf4a9184e0a4a156d}
       \strng{authorfullhash}{2ccf4a3b07f8a8baf4a9184e0a4a156d}
-      \strng{authorfullhashraw}{2ccf4a3b07f8a8baf4a9184e0a4a156d}
       \field{sortinit}{R}
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{labelnamesource}{author}
@@ -5377,7 +5197,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2006.1696125
       \endverb
     \endentry
-    \entry{Schvan_2006}{inproceedings}{}{}
+    \entry{Schvan_2006}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=8eab1c87d889b3eb8274402555490ef9}{%
            family={Schvan},
@@ -5410,12 +5230,10 @@
       }
       \strng{namehash}{5e6cd56e5c190e1ca48880cd85589028}
       \strng{fullhash}{10e7179401d424449f284e51e00e72ec}
-      \strng{fullhashraw}{10e7179401d424449f284e51e00e72ec}
       \strng{bibnamehash}{5e6cd56e5c190e1ca48880cd85589028}
       \strng{authorbibnamehash}{5e6cd56e5c190e1ca48880cd85589028}
       \strng{authornamehash}{5e6cd56e5c190e1ca48880cd85589028}
       \strng{authorfullhash}{10e7179401d424449f284e51e00e72ec}
-      \strng{authorfullhashraw}{10e7179401d424449f284e51e00e72ec}
       \field{extraname}{1}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
@@ -5437,7 +5255,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2006.1696297
       \endverb
     \endentry
-    \entry{Schvan_2008}{inproceedings}{}{}
+    \entry{Schvan_2008}{inproceedings}{}
       \name{author}{11}{}{%
         {{hash=8e844f8524eea2b48ea738411a71d245}{%
            family={Schvan},
@@ -5500,12 +5318,10 @@
       }
       \strng{namehash}{94eacb22a7d7180e4b0074c416dd45b5}
       \strng{fullhash}{5fda1e0560bb5986ecb62c97ce9cb47b}
-      \strng{fullhashraw}{5fda1e0560bb5986ecb62c97ce9cb47b}
       \strng{bibnamehash}{94eacb22a7d7180e4b0074c416dd45b5}
       \strng{authorbibnamehash}{94eacb22a7d7180e4b0074c416dd45b5}
       \strng{authornamehash}{94eacb22a7d7180e4b0074c416dd45b5}
       \strng{authorfullhash}{5fda1e0560bb5986ecb62c97ce9cb47b}
-      \strng{authorfullhashraw}{5fda1e0560bb5986ecb62c97ce9cb47b}
       \field{extraname}{2}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
@@ -5528,7 +5344,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2008.4523298
       \endverb
     \endentry
-    \entry{Segal_2022}{inproceedings}{}{}
+    \entry{Segal_2022}{inproceedings}{}
       \name{author}{20}{}{%
         {{hash=1fe7e82c0ef739c5c1776518452230e2}{%
            family={Segal},
@@ -5636,12 +5452,10 @@
       }
       \strng{namehash}{33a49cfa2b891841c3bd42638dfebc9c}
       \strng{fullhash}{d58fdbfd96a4ef626b2d7b4d6eccd88f}
-      \strng{fullhashraw}{d58fdbfd96a4ef626b2d7b4d6eccd88f}
       \strng{bibnamehash}{33a49cfa2b891841c3bd42638dfebc9c}
       \strng{authorbibnamehash}{33a49cfa2b891841c3bd42638dfebc9c}
       \strng{authornamehash}{33a49cfa2b891841c3bd42638dfebc9c}
       \strng{authorfullhash}{d58fdbfd96a4ef626b2d7b4d6eccd88f}
-      \strng{authorfullhashraw}{d58fdbfd96a4ef626b2d7b4d6eccd88f}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
@@ -5661,7 +5475,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC42614.2022.9731794
       \endverb
     \endentry
-    \entry{Senderowicz}{inproceedings}{}{}
+    \entry{Senderowicz}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=63caa11902726aec869228981aaf34fa}{%
            family={Senderowicz},
@@ -5699,12 +5513,10 @@
       }
       \strng{namehash}{bacdcc2aae049973681ed9596db3d704}
       \strng{fullhash}{5779d0f89e348ab06c5e21911c62c136}
-      \strng{fullhashraw}{5779d0f89e348ab06c5e21911c62c136}
       \strng{bibnamehash}{bacdcc2aae049973681ed9596db3d704}
       \strng{authorbibnamehash}{bacdcc2aae049973681ed9596db3d704}
       \strng{authornamehash}{bacdcc2aae049973681ed9596db3d704}
       \strng{authorfullhash}{5779d0f89e348ab06c5e21911c62c136}
-      \strng{authorfullhashraw}{5779d0f89e348ab06c5e21911c62c136}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
@@ -5725,7 +5537,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.1997.585336
       \endverb
     \endentry
-    \entry{Shen_2025}{inproceedings}{}{}
+    \entry{Shen_2025}{inproceedings}{}
       \name{author}{20}{}{%
         {{hash=ea93782ed07b76e8ae08980c4edfd22c}{%
            family={Shen},
@@ -5833,12 +5645,10 @@
       }
       \strng{namehash}{ce6d198618e0a3b106c308bfc28938b2}
       \strng{fullhash}{26f4d5adc4ca7a1abdb5b4c51897ac15}
-      \strng{fullhashraw}{26f4d5adc4ca7a1abdb5b4c51897ac15}
       \strng{bibnamehash}{ce6d198618e0a3b106c308bfc28938b2}
       \strng{authorbibnamehash}{ce6d198618e0a3b106c308bfc28938b2}
       \strng{authornamehash}{ce6d198618e0a3b106c308bfc28938b2}
       \strng{authorfullhash}{26f4d5adc4ca7a1abdb5b4c51897ac15}
-      \strng{authorfullhashraw}{26f4d5adc4ca7a1abdb5b4c51897ac15}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
@@ -5860,7 +5670,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49661.2025.10904660
       \endverb
     \endentry
-    \entry{Shimizu_2006}{inproceedings}{}{}
+    \entry{Shimizu_2006}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=7c5038d88dbe2335271d8faad89269b0}{%
            family={Shimizu},
@@ -5893,12 +5703,10 @@
       }
       \strng{namehash}{f3d3358e7fb3d3deae459283407752c4}
       \strng{fullhash}{d781535ba2addad24dce3cb1d56785d1}
-      \strng{fullhashraw}{d781535ba2addad24dce3cb1d56785d1}
       \strng{bibnamehash}{f3d3358e7fb3d3deae459283407752c4}
       \strng{authorbibnamehash}{f3d3358e7fb3d3deae459283407752c4}
       \strng{authornamehash}{f3d3358e7fb3d3deae459283407752c4}
       \strng{authorfullhash}{d781535ba2addad24dce3cb1d56785d1}
-      \strng{authorfullhashraw}{d781535ba2addad24dce3cb1d56785d1}
       \field{extraname}{1}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
@@ -5920,7 +5728,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2006.1696120
       \endverb
     \endentry
-    \entry{Shimizu_2008}{inproceedings}{}{}
+    \entry{Shimizu_2008}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=c81daae58ac5db9080ff4035f345a119}{%
            family={Shimizu},
@@ -5948,12 +5756,10 @@
       }
       \strng{namehash}{250e2535e4c4e9015b3c00ca21721b47}
       \strng{fullhash}{b736c3951bfd665bf50061ccebf30fe4}
-      \strng{fullhashraw}{b736c3951bfd665bf50061ccebf30fe4}
       \strng{bibnamehash}{250e2535e4c4e9015b3c00ca21721b47}
       \strng{authorbibnamehash}{250e2535e4c4e9015b3c00ca21721b47}
       \strng{authornamehash}{250e2535e4c4e9015b3c00ca21721b47}
       \strng{authorfullhash}{b736c3951bfd665bf50061ccebf30fe4}
-      \strng{authorfullhashraw}{b736c3951bfd665bf50061ccebf30fe4}
       \field{extraname}{2}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
@@ -5976,7 +5782,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2008.4523302
       \endverb
     \endentry
-    \entry{Silva_2006}{inproceedings}{}{}
+    \entry{Silva_2006}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=10226e7f584a4bf1730ffb06f2663cc5}{%
            family={Silva},
@@ -6009,12 +5815,10 @@
       }
       \strng{namehash}{f0feaaeb96dfba35f34bb6b8527b0015}
       \strng{fullhash}{787021f0a1b8693b994bbb152e3f7678}
-      \strng{fullhashraw}{787021f0a1b8693b994bbb152e3f7678}
       \strng{bibnamehash}{f0feaaeb96dfba35f34bb6b8527b0015}
       \strng{authorbibnamehash}{f0feaaeb96dfba35f34bb6b8527b0015}
       \strng{authornamehash}{f0feaaeb96dfba35f34bb6b8527b0015}
       \strng{authorfullhash}{787021f0a1b8693b994bbb152e3f7678}
-      \strng{authorfullhashraw}{787021f0a1b8693b994bbb152e3f7678}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
@@ -6035,7 +5839,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2006.1696044
       \endverb
     \endentry
-    \entry{Subramanian_2024}{inproceedings}{}{}
+    \entry{Subramanian_2024}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=010571c164ca89ae5a13d1d2878d0afa}{%
            family={Subramanian},
@@ -6063,12 +5867,10 @@
       }
       \strng{namehash}{3403b146d76853b12528714665046759}
       \strng{fullhash}{eb1bc26646fa520a4a9234d553347b3c}
-      \strng{fullhashraw}{eb1bc26646fa520a4a9234d553347b3c}
       \strng{bibnamehash}{3403b146d76853b12528714665046759}
       \strng{authorbibnamehash}{3403b146d76853b12528714665046759}
       \strng{authornamehash}{3403b146d76853b12528714665046759}
       \strng{authorfullhash}{eb1bc26646fa520a4a9234d553347b3c}
-      \strng{authorfullhashraw}{eb1bc26646fa520a4a9234d553347b3c}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
@@ -6090,7 +5892,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49657.2024.10454526
       \endverb
     \endentry
-    \entry{Tabatabaei}{inproceedings}{}{}
+    \entry{Tabatabaei}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=3060097a0d1b080b4a31ee878827b664}{%
            family={Tabatabaei},
@@ -6123,12 +5925,10 @@
       }
       \strng{namehash}{9301024ad2bd17f68c43a127ce003ea1}
       \strng{fullhash}{0b16c9aa6d684f13930cdd5af709c02b}
-      \strng{fullhashraw}{0b16c9aa6d684f13930cdd5af709c02b}
       \strng{bibnamehash}{9301024ad2bd17f68c43a127ce003ea1}
       \strng{authorbibnamehash}{9301024ad2bd17f68c43a127ce003ea1}
       \strng{authornamehash}{9301024ad2bd17f68c43a127ce003ea1}
       \strng{authorfullhash}{0b16c9aa6d684f13930cdd5af709c02b}
-      \strng{authorfullhashraw}{0b16c9aa6d684f13930cdd5af709c02b}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{labelnamesource}{author}
@@ -6150,7 +5950,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2003.1234210
       \endverb
     \endentry
-    \entry{Tamba}{inproceedings}{}{}
+    \entry{Tamba}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=9e4394c98984347b5377eeb0c42bb934}{%
            family={Tamba},
@@ -6168,12 +5968,10 @@
       }
       \strng{namehash}{26be881230b2259720e679cc2e77352f}
       \strng{fullhash}{26be881230b2259720e679cc2e77352f}
-      \strng{fullhashraw}{26be881230b2259720e679cc2e77352f}
       \strng{bibnamehash}{26be881230b2259720e679cc2e77352f}
       \strng{authorbibnamehash}{26be881230b2259720e679cc2e77352f}
       \strng{authornamehash}{26be881230b2259720e679cc2e77352f}
       \strng{authorfullhash}{26be881230b2259720e679cc2e77352f}
-      \strng{authorfullhashraw}{26be881230b2259720e679cc2e77352f}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{labelnamesource}{author}
@@ -6194,7 +5992,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.1999.759272
       \endverb
     \endentry
-    \entry{Tao_2024}{inproceedings}{}{}
+    \entry{Tao_2024}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=b9d93bd388d4d495758685d801ed7021}{%
            family={Tao},
@@ -6232,12 +6030,10 @@
       }
       \strng{namehash}{5157ad0d6739ea7839a8a406961cdfbb}
       \strng{fullhash}{fc03d58a7eb266ebf31e39dda284e697}
-      \strng{fullhashraw}{fc03d58a7eb266ebf31e39dda284e697}
       \strng{bibnamehash}{5157ad0d6739ea7839a8a406961cdfbb}
       \strng{authorbibnamehash}{5157ad0d6739ea7839a8a406961cdfbb}
       \strng{authornamehash}{5157ad0d6739ea7839a8a406961cdfbb}
       \strng{authorfullhash}{fc03d58a7eb266ebf31e39dda284e697}
-      \strng{authorfullhashraw}{fc03d58a7eb266ebf31e39dda284e697}
       \field{extraname}{1}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
@@ -6260,7 +6056,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49657.2024.10454299
       \endverb
     \endentry
-    \entry{Tao_2025}{inproceedings}{}{}
+    \entry{Tao_2025}{inproceedings}{}
       \name{author}{9}{}{%
         {{hash=b9d93bd388d4d495758685d801ed7021}{%
            family={Tao},
@@ -6313,12 +6109,10 @@
       }
       \strng{namehash}{5157ad0d6739ea7839a8a406961cdfbb}
       \strng{fullhash}{51727e3533503d4c8f004e2058cfd02a}
-      \strng{fullhashraw}{51727e3533503d4c8f004e2058cfd02a}
       \strng{bibnamehash}{5157ad0d6739ea7839a8a406961cdfbb}
       \strng{authorbibnamehash}{5157ad0d6739ea7839a8a406961cdfbb}
       \strng{authornamehash}{5157ad0d6739ea7839a8a406961cdfbb}
       \strng{authorfullhash}{51727e3533503d4c8f004e2058cfd02a}
-      \strng{authorfullhashraw}{51727e3533503d4c8f004e2058cfd02a}
       \field{extraname}{2}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
@@ -6341,7 +6135,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49661.2025.10904751
       \endverb
     \endentry
-    \entry{Van_Der_Ploeg}{inproceedings}{}{}
+    \entry{Van_Der_Ploeg}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=a362eb0648d37951154b0c8ea24ba0d3}{%
            family={Van\bibnamedelimb Der\bibnamedelima Ploeg},
@@ -6374,12 +6168,10 @@
       }
       \strng{namehash}{881af2ba3cdcf5a363a3eff0b8ab0106}
       \strng{fullhash}{21abe8290ef1792cc920c4563a4b38f6}
-      \strng{fullhashraw}{21abe8290ef1792cc920c4563a4b38f6}
       \strng{bibnamehash}{881af2ba3cdcf5a363a3eff0b8ab0106}
       \strng{authorbibnamehash}{881af2ba3cdcf5a363a3eff0b8ab0106}
       \strng{authornamehash}{881af2ba3cdcf5a363a3eff0b8ab0106}
       \strng{authorfullhash}{21abe8290ef1792cc920c4563a4b38f6}
-      \strng{authorfullhashraw}{21abe8290ef1792cc920c4563a4b38f6}
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{labelnamesource}{author}
@@ -6400,7 +6192,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2001.912574
       \endverb
     \endentry
-    \entry{Veraverbeke_2025}{inproceedings}{}{}
+    \entry{Veraverbeke_2025}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=000008a0d78a194abaa81058a7385f1c}{%
            family={Veraverbeke},
@@ -6418,12 +6210,10 @@
       }
       \strng{namehash}{15d22ed8139e2eae6e4c20a574dd6b49}
       \strng{fullhash}{15d22ed8139e2eae6e4c20a574dd6b49}
-      \strng{fullhashraw}{15d22ed8139e2eae6e4c20a574dd6b49}
       \strng{bibnamehash}{15d22ed8139e2eae6e4c20a574dd6b49}
       \strng{authorbibnamehash}{15d22ed8139e2eae6e4c20a574dd6b49}
       \strng{authornamehash}{15d22ed8139e2eae6e4c20a574dd6b49}
       \strng{authorfullhash}{15d22ed8139e2eae6e4c20a574dd6b49}
-      \strng{authorfullhashraw}{15d22ed8139e2eae6e4c20a574dd6b49}
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{labelnamesource}{author}
@@ -6445,7 +6235,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49661.2025.10904533
       \endverb
     \endentry
-    \entry{Verma_2006}{inproceedings}{}{}
+    \entry{Verma_2006}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=20e577ea7e0c25a02373285c93a4ba98}{%
            family={Verma},
@@ -6463,12 +6253,10 @@
       }
       \strng{namehash}{6f56675b6aff71df20b967d3874f7b3b}
       \strng{fullhash}{6f56675b6aff71df20b967d3874f7b3b}
-      \strng{fullhashraw}{6f56675b6aff71df20b967d3874f7b3b}
       \strng{bibnamehash}{6f56675b6aff71df20b967d3874f7b3b}
       \strng{authorbibnamehash}{6f56675b6aff71df20b967d3874f7b3b}
       \strng{authornamehash}{6f56675b6aff71df20b967d3874f7b3b}
       \strng{authorfullhash}{6f56675b6aff71df20b967d3874f7b3b}
-      \strng{authorfullhashraw}{6f56675b6aff71df20b967d3874f7b3b}
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{labelnamesource}{author}
@@ -6489,7 +6277,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2006.1696122
       \endverb
     \endentry
-    \entry{Vleugels}{inproceedings}{}{}
+    \entry{Vleugels}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=fc882f7937c523a8c79b15969a168ced}{%
            family={Vleugels},
@@ -6512,12 +6300,10 @@
       }
       \strng{namehash}{0f24b11e24f5e9304e1ee2080f99e905}
       \strng{fullhash}{0f24b11e24f5e9304e1ee2080f99e905}
-      \strng{fullhashraw}{0f24b11e24f5e9304e1ee2080f99e905}
       \strng{bibnamehash}{0f24b11e24f5e9304e1ee2080f99e905}
       \strng{authorbibnamehash}{0f24b11e24f5e9304e1ee2080f99e905}
       \strng{authornamehash}{0f24b11e24f5e9304e1ee2080f99e905}
       \strng{authorfullhash}{0f24b11e24f5e9304e1ee2080f99e905}
-      \strng{authorfullhashraw}{0f24b11e24f5e9304e1ee2080f99e905}
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{labelnamesource}{author}
@@ -6538,7 +6324,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2001.912541
       \endverb
     \endentry
-    \entry{Vogelmann_2018}{inproceedings}{}{}
+    \entry{Vogelmann_2018}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=65ae21d790e3948458bc0fbbf2ed8e82}{%
            family={Vogelmann},
@@ -6561,12 +6347,10 @@
       }
       \strng{namehash}{a5156770d222d05b3c1c49858ee16726}
       \strng{fullhash}{a5156770d222d05b3c1c49858ee16726}
-      \strng{fullhashraw}{a5156770d222d05b3c1c49858ee16726}
       \strng{bibnamehash}{a5156770d222d05b3c1c49858ee16726}
       \strng{authorbibnamehash}{a5156770d222d05b3c1c49858ee16726}
       \strng{authornamehash}{a5156770d222d05b3c1c49858ee16726}
       \strng{authorfullhash}{a5156770d222d05b3c1c49858ee16726}
-      \strng{authorfullhashraw}{a5156770d222d05b3c1c49858ee16726}
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{labelnamesource}{author}
@@ -6588,7 +6372,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2018.8310271
       \endverb
     \endentry
-    \entry{Vorenkamp}{inproceedings}{}{}
+    \entry{Vorenkamp}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=18284dd189507f84a0c9366e64c8b7fa}{%
            family={Vorenkamp},
@@ -6606,12 +6390,10 @@
       }
       \strng{namehash}{3dee2431d01584fcaad3ba375d5fac49}
       \strng{fullhash}{3dee2431d01584fcaad3ba375d5fac49}
-      \strng{fullhashraw}{3dee2431d01584fcaad3ba375d5fac49}
       \strng{bibnamehash}{3dee2431d01584fcaad3ba375d5fac49}
       \strng{authorbibnamehash}{3dee2431d01584fcaad3ba375d5fac49}
       \strng{authornamehash}{3dee2431d01584fcaad3ba375d5fac49}
       \strng{authorfullhash}{3dee2431d01584fcaad3ba375d5fac49}
-      \strng{authorfullhashraw}{3dee2431d01584fcaad3ba375d5fac49}
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{labelnamesource}{author}
@@ -6632,7 +6414,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.1997.585303
       \endverb
     \endentry
-    \entry{Waltari}{inproceedings}{}{}
+    \entry{Waltari}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=a1d5da7321723961e3aeedae188b1a3e}{%
            family={Waltari},
@@ -6660,12 +6442,10 @@
       }
       \strng{namehash}{9c70c5cd2c413f1213d9ce61e1953632}
       \strng{fullhash}{7154a11154581bd3d721c3a26c231e9f}
-      \strng{fullhashraw}{7154a11154581bd3d721c3a26c231e9f}
       \strng{bibnamehash}{9c70c5cd2c413f1213d9ce61e1953632}
       \strng{authorbibnamehash}{9c70c5cd2c413f1213d9ce61e1953632}
       \strng{authornamehash}{9c70c5cd2c413f1213d9ce61e1953632}
       \strng{authorfullhash}{7154a11154581bd3d721c3a26c231e9f}
-      \strng{authorfullhashraw}{7154a11154581bd3d721c3a26c231e9f}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
@@ -6687,7 +6467,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2002.993058
       \endverb
     \endentry
-    \entry{Wang_2019}{inproceedings}{}{}
+    \entry{Wang_2019}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=774f9a0b4a90015420de2fb853296a64}{%
            family={Wang},
@@ -6725,12 +6505,10 @@
       }
       \strng{namehash}{920b024852bd0ae0ab91c316a3934b85}
       \strng{fullhash}{7549fe56e3a385493de7547173f4a654}
-      \strng{fullhashraw}{7549fe56e3a385493de7547173f4a654}
       \strng{bibnamehash}{920b024852bd0ae0ab91c316a3934b85}
       \strng{authorbibnamehash}{920b024852bd0ae0ab91c316a3934b85}
       \strng{authornamehash}{920b024852bd0ae0ab91c316a3934b85}
       \strng{authorfullhash}{7549fe56e3a385493de7547173f4a654}
-      \strng{authorfullhashraw}{7549fe56e3a385493de7547173f4a654}
       \field{extraname}{1}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
@@ -6753,7 +6531,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2019.8662416
       \endverb
     \endentry
-    \entry{Wang_2023}{inproceedings}{}{}
+    \entry{Wang_2023}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=17603dbf96f9fed1b94efc9780dc7768}{%
            family={Wang},
@@ -6771,12 +6549,10 @@
       }
       \strng{namehash}{fbb78eff78e410608ad5397048690b47}
       \strng{fullhash}{fbb78eff78e410608ad5397048690b47}
-      \strng{fullhashraw}{fbb78eff78e410608ad5397048690b47}
       \strng{bibnamehash}{fbb78eff78e410608ad5397048690b47}
       \strng{authorbibnamehash}{fbb78eff78e410608ad5397048690b47}
       \strng{authornamehash}{fbb78eff78e410608ad5397048690b47}
       \strng{authorfullhash}{fbb78eff78e410608ad5397048690b47}
-      \strng{authorfullhashraw}{fbb78eff78e410608ad5397048690b47}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
@@ -6796,7 +6572,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC42615.2023.10067573
       \endverb
     \endentry
-    \entry{Wang_2022}{inproceedings}{}{}
+    \entry{Wang_2022}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=25488ea3b52ff4b26bca7a09a12a40a6}{%
            family={Wang},
@@ -6814,12 +6590,10 @@
       }
       \strng{namehash}{f28d5605728439bbfcbf0a4ce79e6838}
       \strng{fullhash}{f28d5605728439bbfcbf0a4ce79e6838}
-      \strng{fullhashraw}{f28d5605728439bbfcbf0a4ce79e6838}
       \strng{bibnamehash}{f28d5605728439bbfcbf0a4ce79e6838}
       \strng{authorbibnamehash}{f28d5605728439bbfcbf0a4ce79e6838}
       \strng{authornamehash}{f28d5605728439bbfcbf0a4ce79e6838}
       \strng{authorfullhash}{f28d5605728439bbfcbf0a4ce79e6838}
-      \strng{authorfullhashraw}{f28d5605728439bbfcbf0a4ce79e6838}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
@@ -6841,7 +6615,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC42614.2022.9731546
       \endverb
     \endentry
-    \entry{Wang}{inproceedings}{}{}
+    \entry{Wang}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=95c40ddfdd2cb0ac5a1ef74bb71692f3}{%
            family={Wang},
@@ -6869,12 +6643,10 @@
       }
       \strng{namehash}{acee365e23c90eaaf346361ce8596e59}
       \strng{fullhash}{1b0b68a908f1d640358d5b38161a2fb8}
-      \strng{fullhashraw}{1b0b68a908f1d640358d5b38161a2fb8}
       \strng{bibnamehash}{acee365e23c90eaaf346361ce8596e59}
       \strng{authorbibnamehash}{acee365e23c90eaaf346361ce8596e59}
       \strng{authornamehash}{acee365e23c90eaaf346361ce8596e59}
       \strng{authorfullhash}{1b0b68a908f1d640358d5b38161a2fb8}
-      \strng{authorfullhashraw}{1b0b68a908f1d640358d5b38161a2fb8}
       \field{extraname}{2}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
@@ -6895,7 +6667,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2005.1493977
       \endverb
     \endentry
-    \entry{Wei_2011}{inproceedings}{}{}
+    \entry{Wei_2011}{inproceedings}{}
       \name{author}{7}{}{%
         {{hash=0e15cc8b69ae9a87eec961dfdd2dbe9e}{%
            family={Wei},
@@ -6938,12 +6710,10 @@
       }
       \strng{namehash}{ea42f850731a57ac2cf05db351b284c1}
       \strng{fullhash}{fdd3fa60be89e72575369a46b5a301f1}
-      \strng{fullhashraw}{fdd3fa60be89e72575369a46b5a301f1}
       \strng{bibnamehash}{ea42f850731a57ac2cf05db351b284c1}
       \strng{authorbibnamehash}{ea42f850731a57ac2cf05db351b284c1}
       \strng{authornamehash}{ea42f850731a57ac2cf05db351b284c1}
       \strng{authorfullhash}{fdd3fa60be89e72575369a46b5a301f1}
-      \strng{authorfullhashraw}{fdd3fa60be89e72575369a46b5a301f1}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
@@ -6965,7 +6735,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2011.5746276
       \endverb
     \endentry
-    \entry{Whitcombe_2024}{inproceedings}{}{}
+    \entry{Whitcombe_2024}{inproceedings}{}
       \name{author}{8}{}{%
         {{hash=a97168f6ca4db3a4fd84ed418fc3d43f}{%
            family={Whitcombe},
@@ -7013,12 +6783,10 @@
       }
       \strng{namehash}{07824b40c1c9f70a9ef2e02904eea704}
       \strng{fullhash}{9297b5b8c4b0ccf9f9a0c0ab292dea2f}
-      \strng{fullhashraw}{9297b5b8c4b0ccf9f9a0c0ab292dea2f}
       \strng{bibnamehash}{07824b40c1c9f70a9ef2e02904eea704}
       \strng{authorbibnamehash}{07824b40c1c9f70a9ef2e02904eea704}
       \strng{authornamehash}{07824b40c1c9f70a9ef2e02904eea704}
       \strng{authorfullhash}{9297b5b8c4b0ccf9f9a0c0ab292dea2f}
-      \strng{authorfullhashraw}{9297b5b8c4b0ccf9f9a0c0ab292dea2f}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
@@ -7038,7 +6806,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49657.2024.10454355
       \endverb
     \endentry
-    \entry{Xu_2025}{inproceedings}{}{}
+    \entry{Xu_2025}{inproceedings}{}
       \name{author}{22}{}{%
         {{hash=7134fc96f02d6e6c40c2e17689208b55}{%
            family={Xu},
@@ -7156,12 +6924,10 @@
       }
       \strng{namehash}{80162b1618a78216089e7366fbf633fc}
       \strng{fullhash}{16008547907ecb744bc75d338978bd91}
-      \strng{fullhashraw}{16008547907ecb744bc75d338978bd91}
       \strng{bibnamehash}{80162b1618a78216089e7366fbf633fc}
       \strng{authorbibnamehash}{80162b1618a78216089e7366fbf633fc}
       \strng{authornamehash}{80162b1618a78216089e7366fbf633fc}
       \strng{authorfullhash}{16008547907ecb744bc75d338978bd91}
-      \strng{authorfullhashraw}{16008547907ecb744bc75d338978bd91}
       \field{sortinit}{X}
       \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
       \field{labelnamesource}{author}
@@ -7183,7 +6949,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49661.2025.10904733
       \endverb
     \endentry
-    \entry{Yan}{inproceedings}{}{}
+    \entry{Yan}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=1aa98d7f38330735e741f8047c33882f}{%
            family={Yan},
@@ -7201,12 +6967,10 @@
       }
       \strng{namehash}{9953218506aa634c4df5cb9bd96f918c}
       \strng{fullhash}{9953218506aa634c4df5cb9bd96f918c}
-      \strng{fullhashraw}{9953218506aa634c4df5cb9bd96f918c}
       \strng{bibnamehash}{9953218506aa634c4df5cb9bd96f918c}
       \strng{authorbibnamehash}{9953218506aa634c4df5cb9bd96f918c}
       \strng{authornamehash}{9953218506aa634c4df5cb9bd96f918c}
       \strng{authorfullhash}{9953218506aa634c4df5cb9bd96f918c}
-      \strng{authorfullhashraw}{9953218506aa634c4df5cb9bd96f918c}
       \field{sortinit}{Y}
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
       \field{labelnamesource}{author}
@@ -7228,7 +6992,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2003.1234208
       \endverb
     \endentry
-    \entry{Yao}{inproceedings}{}{}
+    \entry{Yao}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=02f71913ccb0d9f1e99d70ec64b68c46}{%
            family={Yao},
@@ -7251,12 +7015,10 @@
       }
       \strng{namehash}{35ad7609225c824d2d9096dbada84b6a}
       \strng{fullhash}{35ad7609225c824d2d9096dbada84b6a}
-      \strng{fullhashraw}{35ad7609225c824d2d9096dbada84b6a}
       \strng{bibnamehash}{35ad7609225c824d2d9096dbada84b6a}
       \strng{authorbibnamehash}{35ad7609225c824d2d9096dbada84b6a}
       \strng{authornamehash}{35ad7609225c824d2d9096dbada84b6a}
       \strng{authorfullhash}{35ad7609225c824d2d9096dbada84b6a}
-      \strng{authorfullhashraw}{35ad7609225c824d2d9096dbada84b6a}
       \field{sortinit}{Y}
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
       \field{labelnamesource}{author}
@@ -7277,7 +7039,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2004.1332603
       \endverb
     \endentry
-    \entry{Yaul_2014}{inproceedings}{}{}
+    \entry{Yaul_2014}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=3d2e103aabd045654179cee1211f63fc}{%
            family={Yaul},
@@ -7295,12 +7057,10 @@
       }
       \strng{namehash}{59c5498d43af56f0f067af0e1d4f8b86}
       \strng{fullhash}{59c5498d43af56f0f067af0e1d4f8b86}
-      \strng{fullhashraw}{59c5498d43af56f0f067af0e1d4f8b86}
       \strng{bibnamehash}{59c5498d43af56f0f067af0e1d4f8b86}
       \strng{authorbibnamehash}{59c5498d43af56f0f067af0e1d4f8b86}
       \strng{authornamehash}{59c5498d43af56f0f067af0e1d4f8b86}
       \strng{authorfullhash}{59c5498d43af56f0f067af0e1d4f8b86}
-      \strng{authorfullhashraw}{59c5498d43af56f0f067af0e1d4f8b86}
       \field{sortinit}{Y}
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
       \field{labelnamesource}{author}
@@ -7322,7 +7082,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2014.6757398
       \endverb
     \endentry
-    \entry{Ye_2025}{inproceedings}{}{}
+    \entry{Ye_2025}{inproceedings}{}
       \name{author}{7}{}{%
         {{hash=6918a10b5a4e4d593f7448814189ba23}{%
            family={Ye},
@@ -7365,12 +7125,10 @@
       }
       \strng{namehash}{52dfd4fc48abab005520fa7db47c0981}
       \strng{fullhash}{20e484865bfaece9e0814bc3fa16f994}
-      \strng{fullhashraw}{20e484865bfaece9e0814bc3fa16f994}
       \strng{bibnamehash}{52dfd4fc48abab005520fa7db47c0981}
       \strng{authorbibnamehash}{52dfd4fc48abab005520fa7db47c0981}
       \strng{authornamehash}{52dfd4fc48abab005520fa7db47c0981}
       \strng{authorfullhash}{20e484865bfaece9e0814bc3fa16f994}
-      \strng{authorfullhashraw}{20e484865bfaece9e0814bc3fa16f994}
       \field{extraname}{1}
       \field{sortinit}{Y}
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
@@ -7393,7 +7151,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49661.2025.10904773
       \endverb
     \endentry
-    \entry{Ye_2024}{inproceedings}{}{}
+    \entry{Ye_2024}{inproceedings}{}
       \name{author}{11}{}{%
         {{hash=6918a10b5a4e4d593f7448814189ba23}{%
            family={Ye},
@@ -7456,12 +7214,10 @@
       }
       \strng{namehash}{52dfd4fc48abab005520fa7db47c0981}
       \strng{fullhash}{5a847fe27626033126e9785aa8ed323c}
-      \strng{fullhashraw}{5a847fe27626033126e9785aa8ed323c}
       \strng{bibnamehash}{52dfd4fc48abab005520fa7db47c0981}
       \strng{authorbibnamehash}{52dfd4fc48abab005520fa7db47c0981}
       \strng{authornamehash}{52dfd4fc48abab005520fa7db47c0981}
       \strng{authorfullhash}{5a847fe27626033126e9785aa8ed323c}
-      \strng{authorfullhashraw}{5a847fe27626033126e9785aa8ed323c}
       \field{extraname}{2}
       \field{sortinit}{Y}
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
@@ -7484,7 +7240,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49657.2024.10454412
       \endverb
     \endentry
-    \entry{Yonar_2023}{inproceedings}{}{}
+    \entry{Yonar_2023}{inproceedings}{}
       \name{author}{8}{}{%
         {{hash=cc506d2f47caa2ff9b57e69b6bd8b5d9}{%
            family={Yonar},
@@ -7532,12 +7288,10 @@
       }
       \strng{namehash}{b859ea071fb0f197a4ca2194c8246e07}
       \strng{fullhash}{48016690cf921db6645f7c6a08aff069}
-      \strng{fullhashraw}{48016690cf921db6645f7c6a08aff069}
       \strng{bibnamehash}{b859ea071fb0f197a4ca2194c8246e07}
       \strng{authorbibnamehash}{b859ea071fb0f197a4ca2194c8246e07}
       \strng{authornamehash}{b859ea071fb0f197a4ca2194c8246e07}
       \strng{authorfullhash}{48016690cf921db6645f7c6a08aff069}
-      \strng{authorfullhashraw}{48016690cf921db6645f7c6a08aff069}
       \field{sortinit}{Y}
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
       \field{labelnamesource}{author}
@@ -7559,7 +7313,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC42615.2023.10067745
       \endverb
     \endentry
-    \entry{Sang_Min_Yoo}{inproceedings}{}{}
+    \entry{Sang_Min_Yoo}{inproceedings}{}
       \name{author}{8}{}{%
         {{hash=317441e4cbc41013e30f755230e1e315}{%
            family={Yoo},
@@ -7607,12 +7361,10 @@
       }
       \strng{namehash}{7432e019ca4814e1d00ce736c10f011c}
       \strng{fullhash}{6f5a48f149c242754b7bcb54ad939a96}
-      \strng{fullhashraw}{6f5a48f149c242754b7bcb54ad939a96}
       \strng{bibnamehash}{7432e019ca4814e1d00ce736c10f011c}
       \strng{authorbibnamehash}{7432e019ca4814e1d00ce736c10f011c}
       \strng{authornamehash}{7432e019ca4814e1d00ce736c10f011c}
       \strng{authorfullhash}{6f5a48f149c242754b7bcb54ad939a96}
-      \strng{authorfullhashraw}{6f5a48f149c242754b7bcb54ad939a96}
       \field{sortinit}{Y}
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
       \field{labelnamesource}{author}
@@ -7634,7 +7386,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2003.1234319
       \endverb
     \endentry
-    \entry{Yoshioka_2017}{inproceedings}{}{}
+    \entry{Yoshioka_2017}{inproceedings}{}
       \name{author}{9}{}{%
         {{hash=654e99800802c06d04af78170bcf6bb6}{%
            family={Yoshioka},
@@ -7687,12 +7439,10 @@
       }
       \strng{namehash}{a47200cd1c30eb9a5543f2b3dc801421}
       \strng{fullhash}{251776a2cde895c23f9107bc1e2c2547}
-      \strng{fullhashraw}{251776a2cde895c23f9107bc1e2c2547}
       \strng{bibnamehash}{a47200cd1c30eb9a5543f2b3dc801421}
       \strng{authorbibnamehash}{a47200cd1c30eb9a5543f2b3dc801421}
       \strng{authornamehash}{a47200cd1c30eb9a5543f2b3dc801421}
       \strng{authorfullhash}{251776a2cde895c23f9107bc1e2c2547}
-      \strng{authorfullhashraw}{251776a2cde895c23f9107bc1e2c2547}
       \field{extraname}{1}
       \field{sortinit}{Y}
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
@@ -7715,7 +7465,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2017.7870469
       \endverb
     \endentry
-    \entry{Yoshioka}{inproceedings}{}{}
+    \entry{Yoshioka}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=ac9b2c5e731df6d652f49a53d674bcfe}{%
            family={Yoshioka},
@@ -7743,12 +7493,10 @@
       }
       \strng{namehash}{3772e2a6b3a7670439723d81d23c13a8}
       \strng{fullhash}{ea044a3081600e21ac0813524d7925e3}
-      \strng{fullhashraw}{ea044a3081600e21ac0813524d7925e3}
       \strng{bibnamehash}{3772e2a6b3a7670439723d81d23c13a8}
       \strng{authorbibnamehash}{3772e2a6b3a7670439723d81d23c13a8}
       \strng{authornamehash}{3772e2a6b3a7670439723d81d23c13a8}
       \strng{authorfullhash}{ea044a3081600e21ac0813524d7925e3}
-      \strng{authorfullhashraw}{ea044a3081600e21ac0813524d7925e3}
       \field{extraname}{2}
       \field{sortinit}{Y}
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
@@ -7769,7 +7517,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2005.1493979
       \endverb
     \endentry
-    \entry{Yoshioka_2010}{inproceedings}{}{}
+    \entry{Yoshioka_2010}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=3732d1a9988ed078900fb4c401fe4775}{%
            family={Yoshioka},
@@ -7797,12 +7545,10 @@
       }
       \strng{namehash}{962ac1bcf2f6ac9740c5b094273f9945}
       \strng{fullhash}{f6d7613798c00e44c52f61f2b76731cd}
-      \strng{fullhashraw}{f6d7613798c00e44c52f61f2b76731cd}
       \strng{bibnamehash}{962ac1bcf2f6ac9740c5b094273f9945}
       \strng{authorbibnamehash}{962ac1bcf2f6ac9740c5b094273f9945}
       \strng{authornamehash}{962ac1bcf2f6ac9740c5b094273f9945}
       \strng{authorfullhash}{f6d7613798c00e44c52f61f2b76731cd}
-      \strng{authorfullhashraw}{f6d7613798c00e44c52f61f2b76731cd}
       \field{extraname}{3}
       \field{sortinit}{Y}
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
@@ -7825,7 +7571,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2010.5433965
       \endverb
     \endentry
-    \entry{Yoshioka_2007}{inproceedings}{}{}
+    \entry{Yoshioka_2007}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=3732d1a9988ed078900fb4c401fe4775}{%
            family={Yoshioka},
@@ -7853,12 +7599,10 @@
       }
       \strng{namehash}{962ac1bcf2f6ac9740c5b094273f9945}
       \strng{fullhash}{05e4e040bd2203007fbea5549bd32d98}
-      \strng{fullhashraw}{05e4e040bd2203007fbea5549bd32d98}
       \strng{bibnamehash}{962ac1bcf2f6ac9740c5b094273f9945}
       \strng{authorbibnamehash}{962ac1bcf2f6ac9740c5b094273f9945}
       \strng{authornamehash}{962ac1bcf2f6ac9740c5b094273f9945}
       \strng{authorfullhash}{05e4e040bd2203007fbea5549bd32d98}
-      \strng{authorfullhashraw}{05e4e040bd2203007fbea5549bd32d98}
       \field{extraname}{4}
       \field{sortinit}{Y}
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
@@ -7881,7 +7625,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2007.373489
       \endverb
     \endentry
-    \entry{Jiang_Yu}{inproceedings}{}{}
+    \entry{Jiang_Yu}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=5dd7c8993b06043e5e989fa37f5c637f}{%
            family={Yu},
@@ -7899,12 +7643,10 @@
       }
       \strng{namehash}{cb783c6bfe8edd3fb147ba5e10869af6}
       \strng{fullhash}{cb783c6bfe8edd3fb147ba5e10869af6}
-      \strng{fullhashraw}{cb783c6bfe8edd3fb147ba5e10869af6}
       \strng{bibnamehash}{cb783c6bfe8edd3fb147ba5e10869af6}
       \strng{authorbibnamehash}{cb783c6bfe8edd3fb147ba5e10869af6}
       \strng{authornamehash}{cb783c6bfe8edd3fb147ba5e10869af6}
       \strng{authorfullhash}{cb783c6bfe8edd3fb147ba5e10869af6}
-      \strng{authorfullhashraw}{cb783c6bfe8edd3fb147ba5e10869af6}
       \field{sortinit}{Y}
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
       \field{labelnamesource}{author}
@@ -7924,7 +7666,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2005.1493922
       \endverb
     \endentry
-    \entry{Zhan_2023}{inproceedings}{}{}
+    \entry{Zhan_2023}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=045e70646fbbe1965555fde181b9924c}{%
            family={Zhan},
@@ -7947,12 +7689,10 @@
       }
       \strng{namehash}{2e4decf20f84ec6abc0d91beb09c656b}
       \strng{fullhash}{2e4decf20f84ec6abc0d91beb09c656b}
-      \strng{fullhashraw}{2e4decf20f84ec6abc0d91beb09c656b}
       \strng{bibnamehash}{2e4decf20f84ec6abc0d91beb09c656b}
       \strng{authorbibnamehash}{2e4decf20f84ec6abc0d91beb09c656b}
       \strng{authornamehash}{2e4decf20f84ec6abc0d91beb09c656b}
       \strng{authorfullhash}{2e4decf20f84ec6abc0d91beb09c656b}
-      \strng{authorfullhashraw}{2e4decf20f84ec6abc0d91beb09c656b}
       \field{sortinit}{Z}
       \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
       \field{labelnamesource}{author}
@@ -7974,7 +7714,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC42615.2023.10067475
       \endverb
     \endentry
-    \entry{Zhan_2022}{inproceedings}{}{}
+    \entry{Zhan_2022}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=045e70646fbbe1965555fde181b9924c}{%
            family={Zhan},
@@ -8002,12 +7742,10 @@
       }
       \strng{namehash}{7a92113769c4b17719349af5fc346a5f}
       \strng{fullhash}{96ca4a2d567f3b02ced31e84c9cf8df2}
-      \strng{fullhashraw}{96ca4a2d567f3b02ced31e84c9cf8df2}
       \strng{bibnamehash}{7a92113769c4b17719349af5fc346a5f}
       \strng{authorbibnamehash}{7a92113769c4b17719349af5fc346a5f}
       \strng{authornamehash}{7a92113769c4b17719349af5fc346a5f}
       \strng{authorfullhash}{96ca4a2d567f3b02ced31e84c9cf8df2}
-      \strng{authorfullhashraw}{96ca4a2d567f3b02ced31e84c9cf8df2}
       \field{sortinit}{Z}
       \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
       \field{labelnamesource}{author}
@@ -8029,7 +7767,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC42614.2022.9731599
       \endverb
     \endentry
-    \entry{Zhang_2023}{inproceedings}{}{}
+    \entry{Zhang_2023}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=49871ceacd449b44d6ca6e18eacee46f}{%
            family={Zhang},
@@ -8057,12 +7795,10 @@
       }
       \strng{namehash}{71364536cbaa852502fe4fae67a7be8f}
       \strng{fullhash}{fe82cf9d11a8d4ab7b0c0441db21f75b}
-      \strng{fullhashraw}{fe82cf9d11a8d4ab7b0c0441db21f75b}
       \strng{bibnamehash}{71364536cbaa852502fe4fae67a7be8f}
       \strng{authorbibnamehash}{71364536cbaa852502fe4fae67a7be8f}
       \strng{authornamehash}{71364536cbaa852502fe4fae67a7be8f}
       \strng{authorfullhash}{fe82cf9d11a8d4ab7b0c0441db21f75b}
-      \strng{authorfullhashraw}{fe82cf9d11a8d4ab7b0c0441db21f75b}
       \field{extraname}{1}
       \field{sortinit}{Z}
       \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
@@ -8085,7 +7821,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC42615.2023.10067438
       \endverb
     \endentry
-    \entry{Zhang_2019}{inproceedings}{}{}
+    \entry{Zhang_2019}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=f6b2c3e8314effecd561a646b1e51ed5}{%
            family={Zhang},
@@ -8113,12 +7849,10 @@
       }
       \strng{namehash}{8102f0432a19364dcaec11a8bcc2c4e8}
       \strng{fullhash}{e4a07778469bf23245b7098d504e3eaa}
-      \strng{fullhashraw}{e4a07778469bf23245b7098d504e3eaa}
       \strng{bibnamehash}{8102f0432a19364dcaec11a8bcc2c4e8}
       \strng{authorbibnamehash}{8102f0432a19364dcaec11a8bcc2c4e8}
       \strng{authornamehash}{8102f0432a19364dcaec11a8bcc2c4e8}
       \strng{authorfullhash}{e4a07778469bf23245b7098d504e3eaa}
-      \strng{authorfullhashraw}{e4a07778469bf23245b7098d504e3eaa}
       \field{extraname}{2}
       \field{sortinit}{Z}
       \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
@@ -8141,7 +7875,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC.2019.8662350
       \endverb
     \endentry
-    \entry{Zhang_2025}{inproceedings}{}{}
+    \entry{Zhang_2025}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=4c6cc0668d6bdbc08b2eb03d41402b6e}{%
            family={Zhang},
@@ -8179,12 +7913,10 @@
       }
       \strng{namehash}{ec3e396a2edff97712bd0fd0bcfe75d2}
       \strng{fullhash}{337717541366636fc17c3da025f0a8ac}
-      \strng{fullhashraw}{337717541366636fc17c3da025f0a8ac}
       \strng{bibnamehash}{ec3e396a2edff97712bd0fd0bcfe75d2}
       \strng{authorbibnamehash}{ec3e396a2edff97712bd0fd0bcfe75d2}
       \strng{authornamehash}{ec3e396a2edff97712bd0fd0bcfe75d2}
       \strng{authorfullhash}{337717541366636fc17c3da025f0a8ac}
-      \strng{authorfullhashraw}{337717541366636fc17c3da025f0a8ac}
       \field{extraname}{3}
       \field{sortinit}{Z}
       \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
@@ -8207,7 +7939,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49661.2025.10904672
       \endverb
     \endentry
-    \entry{Zhao_2025}{inproceedings}{}{}
+    \entry{Zhao_2025}{inproceedings}{}
       \name{author}{7}{}{%
         {{hash=3ae56fc12cdd80a44d5991bea22e3070}{%
            family={Zhao},
@@ -8250,12 +7982,10 @@
       }
       \strng{namehash}{2f58c3b4d5b044deba0aa1c205ee9078}
       \strng{fullhash}{8c094f8f615af0174253d0b26985a64e}
-      \strng{fullhashraw}{8c094f8f615af0174253d0b26985a64e}
       \strng{bibnamehash}{2f58c3b4d5b044deba0aa1c205ee9078}
       \strng{authorbibnamehash}{2f58c3b4d5b044deba0aa1c205ee9078}
       \strng{authornamehash}{2f58c3b4d5b044deba0aa1c205ee9078}
       \strng{authorfullhash}{8c094f8f615af0174253d0b26985a64e}
-      \strng{authorfullhashraw}{8c094f8f615af0174253d0b26985a64e}
       \field{extraname}{1}
       \field{sortinit}{Z}
       \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
@@ -8278,7 +8008,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC49661.2025.10904778
       \endverb
     \endentry
-    \entry{Zhao_2022}{inproceedings}{}{}
+    \entry{Zhao_2022}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=67a2c84e0414023108760885015fc8d4}{%
            family={Zhao},
@@ -8296,12 +8026,10 @@
       }
       \strng{namehash}{48692b80c746c721c17942b567b96c82}
       \strng{fullhash}{48692b80c746c721c17942b567b96c82}
-      \strng{fullhashraw}{48692b80c746c721c17942b567b96c82}
       \strng{bibnamehash}{48692b80c746c721c17942b567b96c82}
       \strng{authorbibnamehash}{48692b80c746c721c17942b567b96c82}
       \strng{authornamehash}{48692b80c746c721c17942b567b96c82}
       \strng{authorfullhash}{48692b80c746c721c17942b567b96c82}
-      \strng{authorfullhashraw}{48692b80c746c721c17942b567b96c82}
       \field{sortinit}{Z}
       \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
       \field{labelnamesource}{author}
@@ -8321,7 +8049,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC42614.2022.9731702
       \endverb
     \endentry
-    \entry{Zhao_2023}{inproceedings}{}{}
+    \entry{Zhao_2023}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=eb7eec0412bcb54eb56e7637f2437a79}{%
            family={Zhao},
@@ -8354,12 +8082,10 @@
       }
       \strng{namehash}{c77a1d1de687b6d927923453c6c4977a}
       \strng{fullhash}{fa9946350f2fd6a69762737605a089ca}
-      \strng{fullhashraw}{fa9946350f2fd6a69762737605a089ca}
       \strng{bibnamehash}{c77a1d1de687b6d927923453c6c4977a}
       \strng{authorbibnamehash}{c77a1d1de687b6d927923453c6c4977a}
       \strng{authornamehash}{c77a1d1de687b6d927923453c6c4977a}
       \strng{authorfullhash}{fa9946350f2fd6a69762737605a089ca}
-      \strng{authorfullhashraw}{fa9946350f2fd6a69762737605a089ca}
       \field{extraname}{2}
       \field{sortinit}{Z}
       \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
@@ -8380,7 +8106,7 @@
       \verb http://dx.doi.org/10.1109/ISSCC42615.2023.10067627
       \endverb
     \endentry
-    \entry{Zhong_2025}{inproceedings}{}{}
+    \entry{Zhong_2025}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=b542f2548e2dceee53c74fb0ede09089}{%
            family={Zhong},
@@ -8413,12 +8139,10 @@
       }
       \strng{namehash}{503e1706b67eba191ddbc844d4b9f088}
       \strng{fullhash}{5dde5b2d817c96935a862dcbab2a9f7a}
-      \strng{fullhashraw}{5dde5b2d817c96935a862dcbab2a9f7a}
       \strng{bibnamehash}{503e1706b67eba191ddbc844d4b9f088}
       \strng{authorbibnamehash}{503e1706b67eba191ddbc844d4b9f088}
       \strng{authornamehash}{503e1706b67eba191ddbc844d4b9f088}
       \strng{authorfullhash}{5dde5b2d817c96935a862dcbab2a9f7a}
-      \strng{authorfullhashraw}{5dde5b2d817c96935a862dcbab2a9f7a}
       \field{sortinit}{Z}
       \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
       \field{labelnamesource}{author}
