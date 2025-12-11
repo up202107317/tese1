@@ -3,22 +3,27 @@
 % =================================================================
 \chapter{Introduction} \label{chap:intro}
 
-This chapter introduces the research topic, establishing the context of analog-to-digital conversion in modern electronic systems and defining the motivation for investigating asynchronous architectures.
-
+This chapter provides a brief introduction to the topic associated with the work carried out during the dissertation period. Firstly, a contextualization is given, followed by a presentation of the research question and the main motivations for carrying out this study. The main objectives of this dissertation will also be outlined, as well as the methodology used to achieve them. Finally, the structure of the dissertation is presented.
 \section{Context} \label{sec:context}
-% GUIDELINE: O Cenário "Big Picture"
-% Usa esta secção para falar da fronteira entre o mundo analógico e digital.
-% 1. IoT e Sensores: O mundo é analógico, mas o processamento é digital.
-% 2. O custo da conversão: Milhares de milhões de dispositivos a converter sinais constantemente.
-% 3. Introduz a "Sparsity": Muitos sinais (temperatura, biomédicos) mudam lentamente.
 
+We live in an era defined by the massive proliferation of smart devices, commonly categorized under the Internet of Things (IoT) and biomedical wearables. While the processing and storage of information are inherently digital, benefiting from the aggressive scaling of Moore's Law, the physical world remains fundamentally analog. Physical phenomena such as temperature, pressure, sound, and biological potentials are continuous in both time and amplitude. Consequently, the Analog-to-Digital Converter (ADC) serves as the critical interface bridging these two domains, enabling digital systems to interact with the real world.
+
+
+
+The scale of this interface is unprecedented. With billions of sensor nodes deployed globally, energy efficiency has shifted from being a secondary performance metric to a primary design constraint. Many of these edge devices operate on limited battery budgets or rely on energy harvesting, where every micro-joule of power dissipation directly impacts the system's autonomy and lifespan. In this landscape, the data conversion block often dominates the power budget, especially in sensor interfaces where the digital transmission is duty-cycled.
+
+However, a fundamental characteristic of many environmental and physiological signals is their \textit{sparsity}. Signals such as electrocardiograms (ECG), voice activity, or environmental monitoring data are "bursty" in nature: they contain short periods of high information content followed by long intervals of inactivity or negligible variation. 
+
+
+
+Traditional data conversion approaches, based on uniform sampling (dictated by the Nyquist-Shannon theorem), treat these silence periods with the same computational and energetic rigor as the active periods. This creates a paradigm of inefficiency: the system dissipates power to generate redundant digital samples that carry no new information. Recognizing and exploiting this sparsity is, therefore, the key to unlocking the next generation of ultra-low-power electronic interfaces.
 \section{Motivation and Problem Statement} \label{sec:motivation}
 % GUIDELINE: A "Dor" (Problem)
 % 1. Ineficiência Síncrona: Explicar que usar um clock fixo (Nyquist) para sinais lentos é um desperdício.
 %    (Menciona a equação P = f * C * V^2).
 % 2. O Problema do Flash: Embora seja rápido, gasta muita área e potência.
 % 3. O Problema do Mismatch: Transístores pequenos (para ser rápido) têm muito erro (offset), o que exige calibração.
-
+Nowadays, a large number of complex systems rely on the conversion between analog (real) data to the digital world, where digital processing can take advantage of the fine lithography developments and make use of the resultant high-speed operation. However, there are cases in which such conversion deviates significantly in terms of sampling requirements, i.e. data may change slowly or sometimes quite fast, without a way to predict such a profile. As such, if the sampling frequency is not adjusted accordingly, the most probable solution is to have the fastest sampling rate possible as the solution for such cases. The resultant power dissipation is in such cases a critical drawback. If, however, an asynchronous scheme is adopted, there is no sampling, and the data is converted only based on the voltage levels, instantaneously if a parallel scheme is used, relaxing the power specifications of the ADC. This work focuses in such a solution, AD with no sampling clock in a parallel (flash) topology.
 \section{Objectives and Contribution} \label{sec:objectives}
 % GUIDELINE: A Solução e Metas
 % Lista os objetivos concretos baseados no teu "Plano de Trabalho":
@@ -40,15 +45,14 @@ This chapter presents the state-of-the-art in Analog-to-Digital Converters, revi
 
 \section{Fundamentals of Analog-to-Digital Conversion} \label{sec:adc_fundamentals}
 
-This section provides the theoretical background required to understand the operation and performance characterization of data converters. It covers the fundamental steps of the conversion process—sampling, quantization, and coding—and details the metrics used to evaluate both static and dynamic performance, which serve as a universal baseline for any ADC architecture.
-
+This section provides the theoretical background required to understand the operation and performance characterization of data converters. It covers the fundamental steps of the conversion process such as sampling, quantization, and coding.
 \subsection{The Data Conversion Process}
 
 \subsubsection{Ideal Data Conversion}
-The analog-to-digital conversion process acts as the bridge between the continuous physical world and the discrete digital domain. Conceptually, it involves two distinct operations: discretization in time (sampling) and discretization in amplitude (quantization). Ideally, this process should be instantaneous and lossless within the signal bandwidth of interest.
+The analog-to-digital conversion process acts as the bridge between the continuous physical world and the discrete digital domain. Conceptually, it involves two distinct operations: discretization in time, sampling, and discretization in amplitude, quantization. Ideally, this process should be instantaneous and lossless within the signal bandwidth of interest.
 
 \subsubsection{The Sampling Operation}
-Sampling converts a continuous-time signal $x(t)$ into a discrete-time sequence $x[n]$. Mathematically, this is modeled as the multiplication of the input signal by a periodic train of Dirac delta functions with period $T_s$.
+Sampling converts a continuous-time signal $x(t)$ into a discrete-time sequence $x[n]$. Mathematically, this is modeled as the multiplication of the input signal by a periodic train of Dirac delta functions with period $T_s$(VER ESTA EXPLICAÇÃO MELHOR).
 
 
 
@@ -83,7 +87,7 @@ The final stage is encoding the quantized level into a binary format. The choice
 
 \subsubsection{Undersampling and Oversampling}
 \begin{itemize}
-    \item \textbf{Undersampling:} Intentionally violates the Nyquist criterion for the carrier frequency to down-convert RF signals directly.
+    \item \textbf{Undersampling:} Intentionally violates the Nyquist criterion for the carrier frequency to down-convert Radio-frequency signals directly.
     \item \textbf{Oversampling:} Involves sampling at a rate much higher than the Nyquist rate ($f_s \gg 2B$). This technique spreads the fixed quantization noise power over a wider frequency range. A subsequent digital filter can then remove the out-of-band noise, effectively increasing the SNR and resolution beyond the intrinsic bit-depth of the hardware.
 \end{itemize}
 
@@ -101,7 +105,7 @@ To evaluate and compare different data converters objectively, a standard set of
 Resolution defines the theoretical dynamic range, while the sampling rate determines the maximum signal bandwidth. However, these are nominal values; real-world performance is limited by noise and non-linearities.
 
 \subsubsection{Signal-to-Noise-and-Distortion Ratio (SNDR)}
-SNDR (or SINAD) is the primary dynamic metric. It is the ratio of the signal power to the total power of all noise and harmonic distortion components. From SNDR, the Effective Number of Bits (ENOB) is derived:
+Signal to noise ratio or SNDR  is the primary dynamic metric. It is the ratio of the signal power to the total power of all noise and harmonic distortion components. From SNDR, the Effective Number of Bits, ENOB, is derived:
 \begin{equation}
     ENOB = \frac{SNDR_{dB} - 1.76}{6.02}
 \end{equation}
@@ -109,12 +113,6 @@ This value represents the true resolution of the converter at a specific input f
 
 \subsubsection{Spurious-Free Dynamic Range (SFDR)}
 SFDR is defined as the ratio between the fundamental signal power and the power of the largest spurious component in the spectrum (typically a harmonic). A high SFDR is crucial in communication systems to detect small signals in the presence of strong interferers.
-
-\subsubsection{Harmonic Distortion (HD) and IMD}
-\begin{itemize}
-    \item \textbf{HD2/HD3:} The second and third harmonic distortions quantify the linearity of the transfer function. Differential signaling is commonly employed to suppress even-order harmonics (HD2).
-    \item \textbf{Inter-Modulation Distortion (IMD):} When two tones are present, system non-linearities generate sum and difference frequencies (intermodulation products). Third-order products ($2f_1 - f_2$) are particularly troublesome as they often fall near the fundamental tones.
-\end{itemize}
 
 \subsubsection{Differential and Integral Non-Linearity (DNL and INL)}
 Static linearity is characterized by measuring the deviation of code transition levels from their ideal positions.
@@ -213,7 +211,7 @@ Compared to dynamic techniques like Auto-Zeroing (which requires accurate clock 
 % 2. Técnicas: Auto-zeroing vs. Foreground Calibration.
 % 3. Related Works: Cita 2 ou 3 papers que usaram trimming resistivo ou de corrente.
 %    Conclui dizendo que a tua abordagem será "Offline Trimming" para simplificar o design.
-
+\section{Related Works} \label{sec:related_works}
 \section{Summary} \label{sec:lit_summary}
 % GUIDELINE: Síntese
 % Resume: Síncrono gasta demais -> Assíncrono resolve a potência -> Mas precisa de Calibração (Trimming).
@@ -244,6 +242,8 @@ This chapter outlines the development strategy for the dissertation, detailing t
 % Task 5: HDL implementation of the trimming strategy.
 % Task 6: Full system validation and Thesis writing.
 % (Se possível, insere um Gráfico de Gantt aqui).
+As the work done so far was related to the first and second chapters of the dissertation, future work planning will focus on the three remaining sections. Chapter 3 will be about the mathematical formulation of the problem while Chapter 4 will involve simulation and discussion of results. Finally, in Chapter 5 are mentioned the conclusions and possible future works. To successfully complete the dissertation with respect to both time and quality, a Gantt Chart presented in Figure 3.1 was built considering the main tasks involved in the process and the expected number of days needed to conclude the tasks.
+
 
 % =================================================================
 % CHAPTER 4: CONCLUSIONS
