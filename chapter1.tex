@@ -25,12 +25,29 @@ Traditional data conversion approaches, based on uniform sampling (dictated by t
 % 3. O Problema do Mismatch: Transístores pequenos (para ser rápido) têm muito erro (offset), o que exige calibração.
 Nowadays, a large number of complex systems rely on the conversion between analog (real) data to the digital world, where digital processing can take advantage of the fine lithography developments and make use of the resultant high-speed operation. However, there are cases in which such conversion deviates significantly in terms of sampling requirements, i.e. data may change slowly or sometimes quite fast, without a way to predict such a profile. As such, if the sampling frequency is not adjusted accordingly, the most probable solution is to have the fastest sampling rate possible as the solution for such cases. The resultant power dissipation is in such cases a critical drawback. If, however, an asynchronous scheme is adopted, there is no sampling, and the data is converted only based on the voltage levels, instantaneously if a parallel scheme is used, relaxing the power specifications of the ADC. This work focuses in such a solution, AD with no sampling clock in a parallel (flash) topology.
 \section{Objectives and Contribution} \label{sec:objectives}
-% GUIDELINE: A Solução e Metas
-% Lista os objetivos concretos baseados no teu "Plano de Trabalho":
-% 1. Design of an Asynchronous Flash ADC (Clockless).
-% 2. Implementation of an Offline Trimming mechanism (Calibration).
-% 3. Validation via Co-simulation (Analog/Digital).
-% 4. Comparison with state-of-the-art synchronous solutions.
+
+Based on the limitations identified in traditional synchronous data conversion when dealing with sparse sensor signals, the primary objective of this work is to design and implement an energy-efficient Analog-to-Digital Converter (ADC) architecture. This ADC must exploit signal inactivity to achieve a significant reduction in power consumption, thereby improving the Figure of Merit (FoM) for IoT and biomedical applications.
+
+\subsection{Specific Objectives}
+To achieve the overall goal of developing a highly efficient ADC, the following specific objectives are defined for this dissertation:
+
+\begin{enumerate}
+    \item \textbf{Asynchronous Architecture Design:} To develop the circuit-level design of a \textit{fully asynchronous} (clockless) Flash ADC core, focusing on minimizing dynamic power consumption by ensuring that power is only dissipated when an input signal event occurs.
+    
+    \item \textbf{Offline Trimming Implementation:} To implement a robust \textit{Offline Trimming} mechanism capable of detecting and compensating for the input offset voltage ($V_{os}$) of the comparators, thereby guaranteeing the required linearity (INL/DNL) despite manufacturing process variations.
+    
+    \item \textbf{Mixed-Signal Validation:} To validate the complete system through comprehensive Analog and Digital co-simulation in a modern CMOS technology node (e.g., 65nm/40nm). This validation must confirm the functionality and accuracy of both the asynchronous core and the trimming logic.
+    
+    \item \textbf{Performance Benchmarking:} To quantify the energy efficiency of the proposed design using established Figures of Merit (FoM). The results must be rigorously compared against the current state-of-the-art synchronous ADCs and relevant asynchronous solutions published in major solid-state circuits conferences (ISSCC, JSSC, etc.).
+\end{enumerate}
+
+\subsection{Main Contribution}
+The main contribution of this dissertation lies in the successful integration and optimization of two crucial elements for ultra-low-power sensor interfaces:
+
+\begin{itemize}
+    \item \textbf{Synergistic Design:} The realization of a full mixed-signal architecture that effectively merges the inherent power savings of the \textit{Asynchronous Flash} topology with the practical necessity of a \textit{Static Calibration} scheme.
+    \item \textbf{Demonstrated Efficiency:} Demonstrating a significant improvement in the Walden FoM for low-to-medium sampling rates, proving the viability of event-driven ADCs as the superior solution for power-constrained environments with sparse data activity.
+\end{itemize}
 
 % =================================================================
 % CHAPTER 2: LITERATURE REVIEW

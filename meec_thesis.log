@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.20)  11 DEC 2025 13:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.20)  11 DEC 2025 13:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -729,7 +729,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
 \@crestbox=\box59
-<figures/uporto-feup.pdf, id=107, 338.26375pt x 126.4725pt>
+<figures/uporto-feup.pdf, id=115, 338.26375pt x 126.4725pt>
 File: figures/uporto-feup.pdf Graphic file (type pdf)
 <use figures/uporto-feup.pdf>
 Package pdftex.def Info: figures/uporto-feup.pdf  used on input line 80.
@@ -859,40 +859,44 @@ Chapter 1.
 
 
 ]
+
+[2]
+
+[3]
 Chapter 2.
 
 
-[2
+[4
 
 ]
-
-[3]
-
-[4]
-
-LaTeX Warning: Citation 'johns_martin_analog' on page 5 undefined on input line 158.
-
-
 
 [5]
 
 [6]
 
-LaTeX Warning: Citation 'chen_async_2006' on page 7 undefined on input line 192.
+LaTeX Warning: Citation 'johns_martin_analog' on page 7 undefined on input line 181.
 
 
 
 [7]
+
+[8]
+
+LaTeX Warning: Citation 'chen_async_2006' on page 9 undefined on input line 215.
+
+
+
+[9]
 Chapter 3.
 
 
-[8
+[10
 
 ]
 Chapter 4.
 )
 
-[9
+[11
 
 ]
 \openout2 = `appendix1.aux'.
@@ -901,7 +905,7 @@ Chapter 4.
 Chapter 5.
 )
 
-[10
+[12
 
 
 
@@ -916,7 +920,7 @@ L3 programming layer <2025-08-13>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `meec_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 74785E45091CF18278ADE88096F01708;4925.
+(rerunfilecheck)             Checksum: 1567CB58F893B8D341AD5A974A6BDCAA;5301.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                meec_thesis
@@ -927,17 +931,17 @@ Package logreq Info: Writing requests to 'meec_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21636 strings out of 468133
- 391210 string characters out of 5430711
- 1249547 words of memory out of 5000000
- 49846 multiletter control sequences out of 15000+600000
+ 21646 strings out of 468133
+ 391316 string characters out of 5430711
+ 1249551 words of memory out of 5000000
+ 49848 multiletter control sequences out of 15000+600000
  694856 words of font info for 122 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,11n,81p,1126b,2033s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on meec_thesis.pdf (20 pages, 171996 bytes).
+Output written on meec_thesis.pdf (22 pages, 181029 bytes).
 PDF statistics:
- 321 PDF objects out of 1000 (max. 8388607)
- 79 named destinations out of 1000 (max. 500000)
- 214 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 344 PDF objects out of 1000 (max. 8388607)
+ 87 named destinations out of 1000 (max. 500000)
+ 230 words of extra memory for PDF output out of 10000 (max. 10000000)
 
