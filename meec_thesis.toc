@@ -3,12 +3,11 @@
 \contentsline {section}{\numberline {1.1}Context}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Motivation and Problem Statement}{2}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Inefficiency of Synchronous Sampling}{2}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Architectural Problem: Flash ADCs}{2}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.2}Architectural Problem: Flash ADCs}{3}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}Device Limitation: The Mismatch Problem}{3}{subsection.1.2.3}%
 \contentsline {subsection}{\numberline {1.2.4}Problem Statement}{3}{subsection.1.2.4}%
 \contentsline {section}{\numberline {1.3}Objectives and Contribution}{4}{section.1.3}%
 \contentsline {subsection}{\numberline {1.3.1}Specific Objectives}{4}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Main Contribution}{4}{subsection.1.3.2}%
 \contentsline {chapter}{\numberline {2}Literature Review}{6}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Fundamentals of Analog-to-Digital Conversion}{6}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}The Data Conversion Process}{6}{subsection.2.1.1}%
@@ -21,25 +20,37 @@
 \contentsline {subsubsection}{\numberline {2.1.1.7}Decimation and Interpolation}{8}{subsubsection.2.1.1.7}%
 \contentsline {subsection}{\numberline {2.1.2}Performance Metrics}{8}{subsection.2.1.2}%
 \contentsline {subsubsection}{\numberline {2.1.2.1}Resolution and Sampling Rate}{8}{subsubsection.2.1.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.2.2}Signal-to-Noise-and-Distortion Ratio (SNDR)}{8}{subsubsection.2.1.2.2}%
-\contentsline {subsubsection}{\numberline {2.1.2.3}Spurious-Free Dynamic Range (SFDR)}{8}{subsubsection.2.1.2.3}%
-\contentsline {subsubsection}{\numberline {2.1.2.4}Differential and Integral Non-Linearity (DNL and INL)}{8}{subsubsection.2.1.2.4}%
+\contentsline {subsubsection}{\numberline {2.1.2.2}Signal-to-Noise-and-Distortion Ratio (SNDR)}{9}{subsubsection.2.1.2.2}%
+\contentsline {subsubsection}{\numberline {2.1.2.3}Spurious-Free Dynamic Range (SFDR)}{9}{subsubsection.2.1.2.3}%
+\contentsline {subsubsection}{\numberline {2.1.2.4}Differential and Integral Non-Linearity (DNL and INL)}{9}{subsubsection.2.1.2.4}%
 \contentsline {subsubsection}{\numberline {2.1.2.5}Offset and Gain Error}{9}{subsubsection.2.1.2.5}%
-\contentsline {subsubsection}{\numberline {2.1.2.6}Jitter}{9}{subsubsection.2.1.2.6}%
-\contentsline {subsubsection}{\numberline {2.1.2.7}Bit Error Rate (BER)}{9}{subsubsection.2.1.2.7}%
-\contentsline {section}{\numberline {2.2}Synchronous Architectures}{9}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Asynchronous Architectures}{9}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Calibration and Trimming Techniques}{9}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}The Component Mismatch Problem}{9}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Calibration Classifications}{10}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Resistive Trimming Techniques}{10}{subsection.2.4.3}%
-\contentsline {subsubsection}{\numberline {2.4.3.1}Internal Resistive Loading}{10}{subsubsection.2.4.3.1}%
-\contentsline {subsubsection}{\numberline {2.4.3.2}Reference Ladder Trimming}{10}{subsubsection.2.4.3.2}%
-\contentsline {subsection}{\numberline {2.4.4}Advantages of Resistive Trimming for Asynchronous ADCs}{11}{subsection.2.4.4}%
-\contentsline {section}{\numberline {2.5}Related Works}{11}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Summary}{11}{section.2.6}%
-\contentsline {chapter}{\numberline {3}Future Work Planning, Methodologies and Tools}{12}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Methodologies and Tools}{12}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Work Plan}{12}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Conclusions}{13}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Apendix}{14}{chapter.5}%
+\contentsline {subsubsection}{\numberline {2.1.2.6}Bit Error Rate (BER)}{10}{subsubsection.2.1.2.6}%
+\contentsline {section}{\numberline {2.2}Synchronous Architectures}{10}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Overview}{10}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Synchronous Flash (Main Focus)}{10}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Data Criticism: The Power Bottleneck}{11}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}SAR (Successive Approximation Register)}{11}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Pipeline}{11}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}Sigma-Delta ($\Delta \Sigma $)}{12}{subsection.2.2.6}%
+\contentsline {subsection}{\numberline {2.2.7}Dual-slope}{12}{subsection.2.2.7}%
+\contentsline {section}{\numberline {2.3}Asynchronous Architectures}{13}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Level-Crossing Sampling (LCS)}{13}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Asynchronous Flash ADC}{13}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Advantage}{13}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Comparative Analysis}{14}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}Figures of Merit for ADCs}{14}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Walden Figure of Merit ($FoM_W$)}{14}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Schreier Figure of Merit ($FoM_S$)}{14}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}Calibration and Trimming Techniques}{15}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}The Component Mismatch Problem}{15}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Calibration Classifications}{15}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Resistive Trimming Techniques}{16}{subsection.2.5.3}%
+\contentsline {subsubsection}{\numberline {2.5.3.1}Internal Resistive Loading}{16}{subsubsection.2.5.3.1}%
+\contentsline {subsubsection}{\numberline {2.5.3.2}Reference Ladder Trimming}{16}{subsubsection.2.5.3.2}%
+\contentsline {subsection}{\numberline {2.5.4}Advantages of Resistive Trimming for Asynchronous ADCs}{16}{subsection.2.5.4}%
+\contentsline {section}{\numberline {2.6}Related Works}{17}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Summary}{17}{section.2.7}%
+\contentsline {chapter}{\numberline {3}Future Work Planning, Methodologies and Tools}{18}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Methodologies and Tools}{18}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Work Plan}{18}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Conclusions}{19}{chapter.4}%

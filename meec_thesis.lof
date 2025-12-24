@@ -1,6 +1,18 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces A descriptive caption for your figure goes here.}}{2}{figure.caption.6}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Mismatch Problem.}}{3}{figure.caption.7}%
 \addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Image of sampling theorem time frequency domain}}{6}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Undersampling and Oversampling}}{8}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Decimation and Interpolation}}{8}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces DNL and INL}}{9}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Offset and Gain Error}}{10}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Bit Error Rate}}{10}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Flash ADC Architecture: A parallel bank of comparators driven by a global clock.}}{11}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces SAR ADC Architecture: Sequential bit-estimation using a single comparator.}}{11}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Pipeline ADC Architecture: Concurrent processing of multiple samples across stages.}}{12}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Sigma-Delta ADC Architecture: High-resolution through oversampling and noise-shaping.}}{12}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Dual-slope ADC Architecture: High precision via time-based integration.}}{12}{figure.caption.18}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
