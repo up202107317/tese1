@@ -3,14 +3,14 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Figure adapted from Jixuan Mou (a) Time-sparse signal example. (b) Continuous-time event-driven sampling and conversion, (c) Conventional uniform sampling and (d) Discrete-time sampling and event-driven conversion}}{2}{figure.caption.6}%
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Figure adapted from [Mohammed Abdulmahdi Mohammedali / New and Accurate Self-Test Methods for Offset Error of 10-Bit SAR-ADC] show how mismatch cause offset error in ADCs.}}{3}{figure.caption.7}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Undersampling and Oversampling}}{7}{figure.caption.8}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Decimation and Interpolation}}{7}{figure.caption.9}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces DNL and INL}}{8}{figure.caption.10}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Offset and Gain Error}}{8}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Flash ADC Architecture: A parallel bank of comparators driven by a global clock.}}{9}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces SAR ADC Architecture: Sequential bit-estimation using a single comparator.}}{10}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Pipeline ADC Architecture: Concurrent processing of multiple samples across stages.}}{10}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Sigma-Delta ADC Architecture: High-resolution through oversampling and noise-modulation.}}{10}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Dual-slope ADC Architecture: High precision via time-based integration.}}{11}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces DNL and INL}}{7}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Offset and Gain Error}}{8}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Flash ADC Architecture}}{9}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Power consuption Flash ADC}}{10}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces SAR ADC Architecture.}}{11}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Pipeline ADC Architecture}}{12}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Sigma-Delta ADC Architecture}}{13}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Dual-slope ADC Architecture.}}{14}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Difference in power between Synchronous and Asynchronous Flash ADCs.}}{16}{figure.caption.16}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

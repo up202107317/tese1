@@ -75,18 +75,18 @@ The reduction of transistor size, while increasing speed and reducing capacitanc
 
 \section{Objectives and Contribution} \label{sec:objectives}
 
-Based on the limitations identified in traditional synchronous data conversion when dealing with sparse sensor signals, the primary objective of this work is to design and implement an energy-efficient Analog-to-Digital Converter (ADC) architecture. This ADC must exploit signal inactivity to achieve a significant reduction in power consumption.
+Based on the limitations identified in traditional synchronous data conversion when dealing with sparse sensor signals, the primary objective of this work is to design and implement an energy-efficient ADC architecture, so this ADC must exploit signal inactivity to achieve a significant reduction in power consumption.
 
 \subsection{Specific Objectives}
-To achieve the overall goal of developing a highly efficient ADC, the following specific objectives are defined for this dissertation:
+To achieve the overall goal of developing an efficient ADC, the following specific objectives are defined for this dissertation:
 
 \begin{enumerate}
-  \item Asynchronous Architecture Design: To develop the circuit-level design of an asynchronous Flash ADC, focusing on minimizing dynamic power consumption by ensuring that power is only dissipated when an input signal event occurs.
+  \item Asynchronous Architecture Design: To develop the circuit-level design of an asynchronous Flash ADC, minimizing dynamic power consumption by ensuring that power is only dissipated when an input signal event occurs.
   
-  \item Offline Trimming Implementation: To implement a robust Offline Trimming mechanism capable of detecting and compensating for the input offset voltage of the comparators.
-  \item Mixed-Signal Validation: To validate the complete system through comprehensive Analog and Digital co-simulation. This validation must confirm the functionality and accuracy of both the asynchronous core and the trimming logic.
+  \item Offline Trimming Implementation: To implement an offline trimming mechanism capable of detecting and compensating for the input offset voltage of the comparators.
+  \item Mixed-Signal Validation: To validate the complete system through analog and digital co-simulation. This validation must confirm the functionality and accuracy of both the asynchronous core and the trimming logic.
   
-  \item Performance Benchmarking: To quantify the energy efficiency of the proposed design using established Figures of Merit (FoM). The results must be rigorously compared against the current state-of-the-art synchronous ADCs and relevant asynchronous solutions.
+  \item Performance Benchmarking: To quantify the energy efficiency of the proposed design using well known figures of merit. The results must be compared against the current state of the art synchronous ADCs and relevant asynchronous solutions.
 \end{enumerate}
 
 
@@ -111,24 +111,20 @@ This section provides the theoretical background required to understand the oper
 The analog-to-digital conversion process acts as the bridge between the continuous physical world and the discrete digital domain. Conceptually, it involves two distinct operations: discretization in time, sampling, and discretization in amplitude, quantization. Ideally, this process should be instantaneous and lossless within the signal bandwidth of interest.
 
 \subsubsection{The Sampling Operation}
-Sampling converts a continuous-time signal $x(t)$ into a discrete-time sequence $x[n]$. Mathematically, this is modeled as the multiplication of the input signal by a periodic train of Dirac delta functions with period $T_s$(VER ESTA EXPLICAÇÃO MELHOR).
+Sampling converts a continuous-time signal $x(t)$ into a discrete-time sequence $x[n]$. 
 
-
-Sampling Theorem: According to the Nyquist-Shannon sampling theorem, a band-limited signal with maximum frequency $B$ can be perfectly reconstructed if the sampling frequency $f_s$ satisfies:
+According to the Nyquist-Shannon sampling theorem, a band-limited signal with maximum frequency $B$ can be perfectly reconstructed if the sampling frequency $f_s$ satisfies:
 \begin{equation}
   f_s \geq 2B
 \end{equation}
 Violating this condition results in aliasing, where high-frequency spectral components mixes into the baseband, becoming indistinguishable from the original signal.
 
-\subsubsection{The Reconstruction Operation}
-Reconstruction is the inverse operation, converting the digital sequence back into a continuous signal. In an ideal scenario, this corresponds to convolving the discrete samples with a sinc function, which removes the spectral images generated during sampling, leaving only the original baseband content.
-
 \subsubsection{The Quantization Operation}
-While sampling discretizes time, quantization maps the continuous amplitude of each sample to one of a finite number of levels. An $N$-bit ADC divides the input range ($V_{ref}$) into $2^N$ discrete levels. The step size between adjacent levels is the Least Significant Bit (LSB):
+While sampling transforms continuous time in discrete values, quantization maps the continuous amplitude of each sample to one of a finite number of levels. An $N$-bit ADC divides the input range ($V_{ref}$) into $2^N$ discrete levels. The step size between adjacent levels is the Least Significant Bit (LSB):
 \begin{equation}
   V_{LSB} = \frac{V_{ref}}{2^N}
 \end{equation}
-Unlike sampling, quantization is non-reversible and introduces a deterministic error. This error is typically modeled as additive white noise (\textit{quantization noise}) with a uniform probability distribution. For an ideal quantizer, the Signal-to-Quantization-Noise Ratio (SQNR) is given by the formula:
+Unlike sampling quantization is non-reversible and introduces a deterministic error. This error is typically modeled as white noise added, the quantization noise with a uniform probability distribution. For an ideal quantizer, the Signal-to-Quantization-Noise Ratio (SQNR) is given by the formula:
 \begin{equation}
   SQNR_{dB} \approx 6.02N + 1.76
 \end{equation}
@@ -136,59 +132,28 @@ Unlike sampling, quantization is non-reversible and introduces a deterministic e
 
 
 \subsubsection{Coding}
-The final stage is encoding the quantized level into a binary format. The choice of coding scheme (e.g., straight binary, two's complement, Gray code) depends on the system requirements for data processing and transmission, but does not affect the fundamental analog performance.
+The final stage is encoding the quantized level into a binary format. The choice of coding scheme being the most common straight binary and gray code which depends on the system requirements for data processing and transmission, but does not affect the fundamental analog performance.
 
-\subsubsection{Undersampling and Oversampling}
-\begin{itemize}
-  \item Undersampling: Intentionally violates the Nyquist criterion for the carrier frequency to down-convert Radio-frequency signals directly.
-  \item Oversampling: Involves sampling at a rate much higher than the Nyquist rate ($f_s \gg 2B$). This technique spreads the fixed quantization noise power over a wider frequency range. A subsequent digital filter can then remove the out-of-band noise, effectively increasing the SNR and resolution beyond the intrinsic bit-depth of the hardware.
-\end{itemize}
-\begin{figure}[htbp]
-  % Since \graphicspath{{figures/}} is already defined in your preamble,
-  % you just need the filename, not the full path.
-  \centering
-  \includegraphics[width=0.8\textwidth]{figures/uporto.pdf} 
-  \caption{Undersampling and Oversampling}
-  \label{fig:myfigure}
-\end{figure}
 
-\subsubsection{Decimation and Interpolation}
-\begin{itemize}
-  \item Decimation: Reduces the sampling rate of an oversampled signal by filtering and downsampling, trading speed for resolution.
-  \item Interpolation: Increases the effective sampling rate in the digital domain (zero-stuffing and filtering), often used in DACs to relax the requirements of the analog reconstruction filter.
-\end{itemize}
-\begin{figure}[htbp]
-  % Since \graphicspath{{figures/}} is already defined in your preamble,
-  % you just need the filename, not the full path.
-  \centering
-  \includegraphics[width=0.8\textwidth]{figures/uporto.pdf} 
-  \caption{Decimation and Interpolation}
-  \label{fig:myfigure}
-\end{figure}
 
 \subsection{Performance Metrics}
 
 To evaluate and compare different data converters objectively, a standard set of metrics is used. These are categorized into dynamic and static parameters.
 
 \subsubsection{Resolution and Sampling Rate}
-Resolution defines the theoretical dynamic range, while the sampling rate determines the maximum signal bandwidth. However, these are nominal values; real-world performance is limited by noise and non-linearities.
+Resolution defines the theoretical dynamic range, while the sampling rate determines the maximum signal bandwidth. However, these are nominal values the actual performance is limited by noise and non-linearities.
 
-\subsubsection{Signal-to-Noise-and-Distortion Ratio (SNDR)}
-Signal to noise ratio or SNDR is the primary dynamic metric. It is the ratio of the signal power to the total power of all noise and harmonic distortion components. From SNDR, the Effective Number of Bits, ENOB, is derived:
+\subsubsection{Signal-to-Noise-Distortion Ratio (SNDR)}
+Signal to noise ratio adding distortion ratio or SNDR is the primary dynamic metric. It is the ratio of the signal power to the total power of all noise and harmonic distortion components. From SNDR, the Effective Number of Bits, ENOB, is derived:
 \begin{equation}
   ENOB = \frac{SNDR_{dB} - 1.76}{6.02}
 \end{equation}
 This value represents the true resolution of the converter at a specific input frequency.
 
-\subsubsection{Spurious-Free Dynamic Range (SFDR)}
-SFDR is defined as the ratio between the fundamental signal power and the power of the largest spurious component in the spectrum (typically a harmonic). A high SFDR is crucial in communication systems to detect small signals in the presence of strong interferers.
-
 \subsubsection{Differential and Integral Non-Linearity (DNL and INL)}
-Static linearity is characterized by measuring the deviation of code transition levels from their ideal positions.
-\begin{itemize}
-  \item DNL: Measures the deviation of a single step width from the ideal $1 LSB$. A DNL less than -1 LSB implies a missing code in the transfer function.
-  \item INL: Is the cumulative sum of DNL errors, representing the deviation of the transfer curve from a straight line. Specific INL patterns (like "S-curves" or "saw-tooth" shapes) can reveal systematic errors in the architecture, such as gain mismatch or non-linear biasing.
-\end{itemize}
+Static linearity is characterized by measuring the deviation of code transition levels from their ideal positions. The DNL measures the deviation of a single step width from the ideal 1 LSB. A DNL less than -1 LSB implies a missing code in the transfer function.
+The INL is the cumulative sum of DNL errors, representing the deviation of the transfer curve from a straight line. Specific INL patterns like saw-tooth shapes can reveal systematic errors in the architecture, such as gain mismatch or non-linear biasing.
+
 \begin{figure}[htbp]
   % Since \graphicspath{{figures/}} is already defined in your preamble,
   % you just need the filename, not the full path.
@@ -201,12 +166,12 @@ Static linearity is characterized by measuring the deviation of code transition 
 
 
 \subsubsection{Offset and Gain Error}
-These are linear errors. Offset is a constant shift of the transfer characteristic, while gain error is a deviation in the slope. Unlike non-linearity, these errors preserve the signal shape and can often be calibrated out simply.
+These are linear errors, offset is a constant shift of the transfer characteristic as seen before in section ``1.2.3 Device Limitation: The Mismatch Problem``, while gain error is a deviation in the slope. Unlike non-linearity, these errors preserve the signal shape and can often be calibrated out simply.
 \begin{figure}[htbp]
   % Since \graphicspath{{figures/}} is already defined in your preamble,
   % you just need the filename, not the full path.
   \centering
-  \includegraphics[width=0.8\textwidth]{figures/uporto.pdf} 
+  \includegraphics[width=0.8\textwidth]{figures/offset_error.png} 
   \caption{Offset and Gain Error}
   \label{fig:myfigure}
 \end{figure}
@@ -222,76 +187,84 @@ BER quantifies the probability of the converter producing an incorrect digital c
 
 \section{Synchronous Architectures} \label{sec:sync_arch}
 
-Synchronous ADCs have a global clock signal that dictates sampling instances and synchronizes internal operations. While these architectures are highly mature and widely used, they face fundamental power-efficiency trade-offs, particularly when operating at high frequencies or processing sparse data.
+To address asynchronous ADCs we first need to address synchronous ADCs, they have a global clock signal that dictates sampling instances and synchronizes internal operations. While these architectures are highly mature and widely used, they face fundamental power efficiency trade-offs, particularly when operating at high frequencies or processing sparse data.
 
 \subsection{Synchronous Flash ADC}
-The Flash ADC is conceptually the simplest and fastest architecture, performing a complete conversion in a single clock cycle. It utilizes a resistive ladder to generate $2^N-1$ reference voltages, which are compared simultaneously to the input signal by a large bank of comparators. This parallel comparison produces a "thermometer code" that a digital logic block then converts into a standard binary output. Its primary limitation is the exponential increase in hardware complexity, area, and power consumption as resolution increases.
+The Flash ADC is conceptually the simplest and fastest architecture, performing a complete conversion in a single clock cycle. It utilizes a resistive ladder to generate $2^N-1$ reference voltages, which are compared simultaneously to the input signal by a large bank of comparators. This parallel comparison produces a ``thermometer code``, that a digital logic block then converts into a standard binary output. Its primary limitation is the exponential increase in hardware complexity, area, and power consumption as resolution increases.
+The thermometer term refers to the parallel output from the Flash ADC comparators, where '1's run up to the input voltage level like mercury in a thermometer, indicating signal strength before being converted to standard binary by an encoder
 
 
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.8\textwidth]{figures/uporto.pdf} 
-  \caption{Flash ADC Architecture: A parallel bank of comparators driven by a global clock.}
+  \includegraphics[width=0.8\textwidth]{figures/Flash.png} 
+  \caption{Flash ADC Architecture}
   \label{fig:flash_arch}
 \end{figure}
 
-\subsection{Data Criticism: The Power Bottleneck}
-The primary drawback of the synchronous Flash architecture is its exponential scaling. Survey data clearly illustrates that "High Speed = High Power" in these designs. For example, a 6-bit 500 MS/s CMOS Flash ADC reported in 1999 already consumed 400 mW. More extreme cases, such as a 22 GS/s 5-bit design, can consume up to 3 W.
+\subsection{The Power Bottleneck}
+The primary drawback of the synchronous Flash architecture is its exponential scaling. Survey data clearly illustrates that high speed translates into high power in these designs, as mentioned in ``A/D converter trends: Power dissipation, scaling and digitally assisted architectures``. For example, a 6-bit 500 MS/s CMOS Flash ADC reported in 1999 already consumed 400 mW \cite{Tamba}. More extreme cases, such as a 22 GS/s 5-bit design, can consume up to 3 W \cite{Schvan_2006}.
 
-The continuous clocking of a massive comparator bank creates a significant "power floor," where energy is dissipated even when the input signal is static. This lack of adaptivity makes synchronous Flash architectures increasingly unsuitable for battery-powered or energy-harvesting applications.
+The continuous clocking of a massive comparator bank creates a significant energy dissipation even when the input signal is static. This lack of adaptivity makes synchronous Flash architectures increasingly unsuitable for battery-powered or energy-harvesting applications.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/Flash.png} 
+  \caption{Power consuption Flash ADC}
+  \label{fig:flash_arch}
+\end{figure}
 
 \subsection{SAR (Successive Approximation Register)}
-The SAR ADC operates using a binary search algorithm. For each sample, the internal logic tests one bit at a time, starting from the Most Significant Bit (MSB). A single comparator compares the input to the output of an internal Digital-to-Analog Converter (DAC). If the input is higher, the bit is set to '1'; otherwise, it is set to '0'. This process repeats for $N$ cycles. Because it uses very few active components, it is the most energy-efficient choice for low-to-medium speeds.
+The SAR ADC operates using a binary search algorithm, for each sample the internal logic tests one bit at a time, starting from the most significant bit (MSB). A single comparator compares the input to the output of an internal digital to analog converter (DAC), if the input is higher, the bit is set to '1' otherwise, it is set to '0'. This process repeats for $N$ cycles. Because it uses very few active components, it is the most energy efficient choice for low speeds.
 
 
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.8\textwidth]{figures/uporto.pdf} 
-  \caption{SAR ADC Architecture: Sequential bit-estimation using a single comparator.}
+  \includegraphics[width=0.8\textwidth]{figures/SAR.png} 
+  \caption{SAR ADC Architecture.}
   \label{fig:sar_arch}
 \end{figure}
 
 \subsection{Pipeline}
-The Pipeline ADC breaks the conversion into several sequential stages. Each stage resolves a few bits of information, quantizes them, and passes the remaining error (the residue) to the next stage after amplification. This "assembly line" approach allows the ADC to work on multiple samples concurrently, obtaining very high throughput and high resolution, albeit with an inherent processing latency.
+The Pipeline ADC breaks the conversion into several sequential stages, each stage resolves a few bits of information, quantizes them, and passes the remaining error,the residue, to the next stage after amplification. This approach allows the ADC to work on multiple samples concurrently, obtaining very high throughput and high resolution, the problem relies in the inherent processing latency.
 
 
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.8\textwidth]{figures/uporto.pdf} 
-  \caption{Pipeline ADC Architecture: Concurrent processing of multiple samples across stages.}
+  \includegraphics[width=0.8\textwidth]{figures/Pipeline.png} 
+  \caption{Pipeline ADC Architecture}
   \label{fig:pipeline_arch}
 \end{figure}
 
-\subsection{Sigma-Delta ($\Delta\Sigma$)}
-The $\Delta\Sigma$ architecture relies on oversampling (sampling much faster than the Nyquist rate) and noise-modulation. A modulator integrates the difference between the input signal and a fed-back version of the quantized output. This process pushes the quantization noise into higher frequencies, outside the signal band of interest. A subsequent digital filter then removes the high-frequency noise, resulting in extremely high resolution and precision.
+\subsection{Sigma-Delta ($\Sigma\Delta$)}
+The $\Sigma\Delta$ architecture relies on oversampling, sampling much faster than the Nyquist rate, and noise-modulation. A modulator integrates the difference between the input signal and a feedback version of the quantized output. This process pushes the quantization noise into higher frequencies, outside the signal band of interest, a digital filter then removes the high-frequency noise, resulting in high resolution and precision.
 
 
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.8\textwidth]{figures/uporto.pdf} 
-  \caption{Sigma-Delta ADC Architecture: High-resolution through oversampling and noise-modulation.}
+  \includegraphics[width=0.8\textwidth]{figures/SigmaDelta.png} 
+  \caption{Sigma-Delta ADC Architecture}
   \label{fig:sd_arch}
 \end{figure}
 
 \subsection{Dual-slope}
-This integrating architecture measures the time required for a capacitor to charge and discharge. In the first phase, the capacitor is charged by the input voltage for a fixed period. In the second phase, it is discharged by a known reference voltage. The time it takes to return to zero is proportional to the average value of the input signal. It is highly accurate and immune to high-frequency noise but is much slower than other architectures.
+This integrating architecture measures the time required for a capacitor to charge and discharge, in the first phase, the capacitor is charged by the input voltage for a fixed period then for the second phase, it is discharged by a known reference voltage. The time it takes to return to zero is proportional to the average value of the input signal it´s highly accurate and immune to high-frequency noise but is much slower than other architectures.
 
 
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.8\textwidth]{figures/uporto.pdf} 
-  \caption{Dual-slope ADC Architecture: High precision via time-based integration.}
+  \includegraphics[width=0.8\textwidth]{figures/DualSlope.png} 
+  \caption{Dual-slope ADC Architecture.}
   \label{fig:dual_slope_arch}
 \end{figure}
 
 \section{Asynchronous Architectures} \label{sec:async_arch}
 
-Asynchronous, or event-driven, architectures represent a fundamental paradigm shift in data conversion. Unlike synchronous ADCs, which are bound by a global cloock and the Nyquist-Shannon sampling theorem, asynchronous ADCs operate based on the signal's activity. This approach offers a more efficient alternative for processing sparse signals.
+Asynchronous, or event-driven, architectures represent a fundamental paradigm shift in data conversion, unlike synchronous ADCs, which are bound by a global cloock and the Nyquist-Shannon sampling theorem, asynchronous ADCs operate based on the signal's activity. This approach offers a more efficient alternative for processing sparse signals.
 
 \subsection{Level-Crossing Sampling (LCS)}
 The core principle behind many asynchronous ADCs is Level-Crossing Sampling (LCS). In traditional uniform sampling, the signal is captured at fixed time intervals ($T_s$), and the amplitude is quantized. In LCS, the process is inverted: the amplitude levels are fixed (quantization thresholds), and the ADC records the exact time at which the input signal crosses these thresholds.
@@ -301,26 +274,24 @@ The core principle behind many asynchronous ADCs is Level-Crossing Sampling (LCS
 This method is particularly powerful for signals that remain constant or change slowly over long periods. Instead of generating redundant samples that capture no new information, the LCS ADC remains idle, only producing a digital event when the signal effectively changes by more than the defined threshold.
 
 \subsection{Asynchronous Flash ADC}
-The Asynchronous Flash ADC adapts the parallel structure of a standard Flash ADC but removes the sampling clock entirely. 
-\begin{itemize}
-  \item Continuous-Time Comparators: In this architecture, the comparators are not latched or gated by a clock. They operate in continuous time, constantly monitoring the input voltage $V_{in}$ against the reference ladder.
-  \item Event Generation: When the input signal crosses a threshold, the corresponding comparator changes its output state immediately. This transition triggers an asynchronous logic to generate a digital output pulse.
-\end{itemize}
+The Asynchronous Flash ADC adapts the parallel structure of a standard Flash ADC but removes the sampling clock entirely. In this architecture, the comparators are not latched by a clock, they operate in continuous time, constantly monitoring the input voltage $V_{in}$ against the reference ladder.
+The event generation happens when the input signal crosses a threshold, the corresponding comparator changes it´s output state immediately, this transition triggers an asynchronous logic to generate a digital output pulse.
+
 
 
 
 \subsection{Advantage}
 The primary motivation for adopting asynchronous architectures is the direct relationship between signal activity and power consumption. 
-In a synchronous system, the clock tree and the comparators switch at every clock cycle, regardless of whether the input is changing. The power consumption is dominated by the fixed clock frequency:
+In a synchronous system, the clock tree and the comparators switch at every clock cycle, regardless of whether the input is changing, the power consumption is dominated by the fixed clock frequency:
 \begin{equation}
   P_{sync} \approx f_{clk} \cdot C_{total} \cdot V_{DD}^2
 \end{equation}
 
-In an asynchronous ADC, the switching frequency is replaced by the \textit{event rate}. If the signal is "silent" (constant or slowly varying), the comparators and digital logic remain static, leading to the following proportionality:
+In an asynchronous ADC, the switching frequency is replaced by the event rate. If the signal is constant or slowly varying, the comparators and digital logic remain static, leading to the following proportionality:
 \begin{equation}
   P_{async} \propto \mathrm{Activity} \times V_{DD}^2
 \end{equation}
-This property ensures that the energy consumed is always proportional to the information content of the signal. This makes these ADCs significantly more efficient for sparse signal environments, where they can achieve near-zero power during periods of inactivity.
+This property ensures that the energy consumed is always proportional to the information content of the signal which makes these ADCs significantly more efficient for sparse signal environments, where they can achieve near-zero power during periods of inactivity.
 
 \subsection{Comparitive Evaluation}
 An analysis of state-of-the-art converters shows that asynchronous ADCs excel in energy efficiency across a wide range of sampling rates, particularly for low-to-medium bandwidths.
@@ -328,7 +299,12 @@ An analysis of state-of-the-art converters shows that asynchronous ADCs excel in
 
 
 While Synchronous Flash ADCs are designed for peak performance at a specific frequency and suffer from a much higher power consuption caused by the continuous clocking, asynchronous designs scale their power consumption linearly with the input activity.
-
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/Power_comparison.png} 
+  \caption{Difference in power between Synchronous and Asynchronous Flash ADCs.}
+  \label{fig:power_comparison}
+\end{figure}
 
 \section{Figures of Merit for ADCs} \label{sec:fom_adc}
 
@@ -336,13 +312,13 @@ To evaluate and compare the performance of various Analog-to-Digital Converter (
 
 
 \subsection{Walden Figure of Merit ($FoM_W$)}
-The Walden FoM is the most prevalent metric for evaluating low-to-medium resolution ADCs, such as the Flash and SAR architectures. It measures the energy consumed per conversion step and is defined as:
+The Walden FoM is the most prevalent metric for evaluating low resolution ADCs, such as the Flash and SAR architectures. It measures the energy consumed per conversion step and is defined as:
 
 \begin{equation}
     FoM_W = \frac{P}{2^{ENOB} \cdot f_s}
 \end{equation}
 
-where $P$ is the power dissipation and $f_s$ is the sampling frequency. Expressed in femtojoules per conversion-step ($fJ/\mathrm{conv-step}$), a lower Walden value indicates a more energy-efficient design. This metric is particularly useful for this dissertation to demonstrate how an asynchronous architecture can reduce the numerator ($P$) by eliminating clock-related overhead.
+Where $P$ is the power dissipation and $f_s$ is the sampling frequency. A lower Walden value indicates a more energy efficient design. This metric is particularly useful for this dissertation to demonstrate how an asynchronous architecture can reduce the numerator ($P$) by eliminating clock-related overhead.
 
 \subsection{Schreier Figure of Merit ($FoM_S$)}
 While Walden focuses on energy per step, the Schreier FoM is typically used for high-resolution ADCs where performance is limited by thermal noise ($kT/C$). It accounts for the dynamic range and bandwidth ($BW$):
@@ -351,7 +327,7 @@ While Walden focuses on energy per step, the Schreier FoM is typically used for 
     FoM_S = SNDR_{dB} + 10 \log_{10} \left( \frac{BW}{P} \right)
 \end{equation}
 
-A higher Schreier value indicates better performance. Although this work focuses on a Flash architecture (where Walden is the standard), the Schreier FoM provides a broader context regarding the physical limits of analog design.
+A higher Schreier value indicates better performance. Although this work focuses on a Flash architecture, where Walden is the standard, the Schreier FoM provides a broader context regarding the physical limits of analog design.
 
 
 
@@ -414,10 +390,6 @@ Compared to dynamic techniques like Auto-Zeroing (which requires accurate clock 
 % 3. Related Works: Cita 2 ou 3 papers que usaram trimming resistivo ou de corrente.
 %  Conclui dizendo que a tua abordagem será "Offline Trimming" para simplificar o design.
 \section{Related Works} \label{sec:related_works}
-\section{Summary} \label{sec:lit_summary}
-% GUIDELINE: Síntese
-% Resume: Síncrono gasta demais -> Assíncrono resolve a potência -> Mas precisa de Calibração (Trimming).
-% Isto prepara o terreno para o Capítulo 3 (O teu plano).
 
 % =================================================================
 % CHAPTER 3: FUTURE WORK PLANNING

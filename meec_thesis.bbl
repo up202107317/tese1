@@ -5424,7 +5424,6 @@
       \field{booktitle}{{{2006 IEEE International Solid State Circuits Conference - Digest of Technical Papers}}}
       \field{title}{{{A$$22\ \mathrm{GS/s}$$5\ \mathrm{b}$adc in 0.13/spl mu/m SiGe BiCMOS}}}
       \field{year}{2006}
-      \true{nocite}
       \field{pages}{2340â€“2349}
       \range{pages}{-1}
       \verb{doi}
