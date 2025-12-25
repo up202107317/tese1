@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.20)  24 DEC 2025 12:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.20)  25 DEC 2025 00:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -612,18 +612,6 @@ LaTeX Warning: Label `fig:myfigure' multiply defined.
 
 LaTeX Warning: Label `fig:myfigure' multiply defined.
 
-
-LaTeX Warning: Label `fig:myfigure' multiply defined.
-
-
-LaTeX Warning: Label `fig:myfigure' multiply defined.
-
-
-LaTeX Warning: Label `fig:myfigure' multiply defined.
-
-
-LaTeX Warning: Label `fig:myfigure' multiply defined.
-
 ))
 \openout1 = `meec_thesis.aux'.
 
@@ -725,7 +713,7 @@ Package hyperref Info: Link coloring ON on input line 41.
 \openout4 = `meec_thesis.out'.
 
 \@crestbox=\box59
-<figures/uporto-feup.pdf, id=179, 338.26375pt x 126.4725pt>
+<figures/uporto-feup.pdf, id=171, 338.26375pt x 126.4725pt>
 File: figures/uporto-feup.pdf Graphic file (type pdf)
 <use figures/uporto-feup.pdf>
 Package pdftex.def Info: figures/uporto-feup.pdf  used on input line 80.
@@ -824,8 +812,13 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 
  (chapter1.tex
 Chapter 1.
+<figures/time-sparse.png, id=283, 475.7775pt x 281.55188pt>
+File: figures/time-sparse.png Graphic file (type png)
+<use figures/time-sparse.png>
+Package pdftex.def Info: figures/time-sparse.png  used on input line 23.
+(pdftex.def)             Requested size: 426.79135pt x 252.57378pt.
 
-Overfull \hbox (5.71313pt too wide) in paragraph at lines 19--20
+Overfull \hbox (5.71313pt too wide) in paragraph at lines 18--29
 []\T1/ptm/m/n/10.95 Traditional data con-ver-sion ap-proaches, based on uni-form sam-pling and dic-tated by the Nyquist-
  []
 
@@ -838,168 +831,152 @@ Overfull \hbox (5.71313pt too wide) in paragraph at lines 19--20
 
 
 ]
-<figures/uporto.pdf, id=301, 2405.98875pt x 522.95375pt>
-File: figures/uporto.pdf Graphic file (type pdf)
-<use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 30.
-(pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
+
+[2 <./figures/time-sparse.png>]
+<figures/offset_error.png, id=298, 425.33907pt x 396.7322pt>
+File: figures/offset_error.png Graphic file (type png)
+<use figures/offset_error.png>
+Package pdftex.def Info: figures/offset_error.png  used on input line 65.
+(pdftex.def)             Requested size: 256.07741pt x 238.86444pt.
 
 
-[2 <./figures/uporto.pdf>]
-File: figures/uporto.pdf Graphic file (type pdf)
-<use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 66.
-(pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
-
-
-[3]
+[3 <./figures/offset_error.png>]
 
 [4]
-
-[5]
 Chapter 2.
-File: figures/uporto.pdf Graphic file (type pdf)
-<use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 131.
-(pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
 
 
-[6
+[5
 
 ]
-
-[7]
+<figures/uporto.pdf, id=320, 2405.98875pt x 522.95375pt>
 File: figures/uporto.pdf Graphic file (type pdf)
 <use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 173.
+Package pdftex.def Info: figures/uporto.pdf  used on input line 150.
 (pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
 File: figures/uporto.pdf Graphic file (type pdf)
 <use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 187.
+Package pdftex.def Info: figures/uporto.pdf  used on input line 164.
+(pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
+
+
+[6]
+
+[7 <./figures/uporto.pdf>]
+File: figures/uporto.pdf Graphic file (type pdf)
+<use figures/uporto.pdf>
+Package pdftex.def Info: figures/uporto.pdf  used on input line 196.
+(pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
+File: figures/uporto.pdf Graphic file (type pdf)
+<use figures/uporto.pdf>
+Package pdftex.def Info: figures/uporto.pdf  used on input line 209.
 (pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
 
 
 [8]
 File: figures/uporto.pdf Graphic file (type pdf)
 <use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 219.
+Package pdftex.def Info: figures/uporto.pdf  used on input line 234.
 (pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
 File: figures/uporto.pdf Graphic file (type pdf)
 <use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 232.
-(pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
-File: figures/uporto.pdf Graphic file (type pdf)
-<use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 245.
+Package pdftex.def Info: figures/uporto.pdf  used on input line 251.
 (pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
 
 
 [9]
 File: figures/uporto.pdf Graphic file (type pdf)
 <use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 267.
+Package pdftex.def Info: figures/uporto.pdf  used on input line 263.
+(pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 268.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 268.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 268.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 268.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Delta' on input line 268.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Sigma' on input line 268.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 268.
+
+File: figures/uporto.pdf Graphic file (type pdf)
+<use figures/uporto.pdf>
+Package pdftex.def Info: figures/uporto.pdf  used on input line 275.
 (pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
 
 
 [10]
 File: figures/uporto.pdf Graphic file (type pdf)
 <use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 284.
+Package pdftex.def Info: figures/uporto.pdf  used on input line 287.
 (pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
 
 
 [11]
-File: figures/uporto.pdf Graphic file (type pdf)
-<use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 296.
-(pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 301.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 301.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 301.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 338.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 301.
+(hyperref)                removing `subscript' on input line 338.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Delta' on input line 301.
+(hyperref)                removing `math shift' on input line 338.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Sigma' on input line 301.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 301.
-
-File: figures/uporto.pdf Graphic file (type pdf)
-<use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 308.
-(pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
-File: figures/uporto.pdf Graphic file (type pdf)
-<use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 320.
-(pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
 
 
 [12]
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 347.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 347.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 347.
+
+
+LaTeX Warning: Citation 'johns_martin_analog' on page 13 undefined on input line 366.
+
+
+
 [13]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 371.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 371.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 371.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 380.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 380.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 380.
+LaTeX Warning: Citation 'chen_async_2006' on page 14 undefined on input line 400.
 
 
 
 [14]
 
-LaTeX Warning: Citation 'johns_martin_analog' on page 15 undefined on input line 399.
-
-
-
 [15]
-
-LaTeX Warning: Citation 'chen_async_2006' on page 16 undefined on input line 433.
-
-
-
-[16]
-
-[17]
 Chapter 3.
 
 
-[18
+[16
 
 ]
 Chapter 4.
 )
 
-[19
+[17
 
 ] (meec_thesis.aux (abstract.aux) (abbrevs.aux) (chapter1.aux))
  ***********
@@ -1014,7 +991,7 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `meec_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 2855B32886A88153A058819FC55FC9F3;9047.
+(rerunfilecheck)             Checksum: 8858A644FD10C2D8413AC3B8E48CF8E3;8685.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                meec_thesis
@@ -1025,17 +1002,17 @@ Package logreq Info: Writing requests to 'meec_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21628 strings out of 468133
- 389708 string characters out of 5430711
- 1245842 words of memory out of 5000000
- 49812 multiletter control sequences out of 15000+600000
+ 21632 strings out of 468133
+ 389998 string characters out of 5430711
+ 1245294 words of memory out of 5000000
+ 49824 multiletter control sequences out of 15000+600000
  698128 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,12n,81p,1107b,2452s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 78i,12n,81p,763b,2414s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on meec_thesis.pdf (27 pages, 304632 bytes).
+Output written on meec_thesis.pdf (25 pages, 511395 bytes).
 PDF statistics:
- 494 PDF objects out of 1000 (max. 8388607)
- 124 named destinations out of 1000 (max. 500000)
- 363 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 474 PDF objects out of 1000 (max. 8388607)
+ 116 named destinations out of 1000 (max. 500000)
+ 357 words of extra memory for PDF output out of 10000 (max. 10000000)
 
