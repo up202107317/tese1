@@ -25,25 +25,42 @@
 \contentsline {subsection}{\numberline {2.2.2}The Power Bottleneck}{9}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}SAR (Successive Approximation Register)}{11}{subsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.2.4}Pipeline}{11}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Sigma-Delta ($\Sigma \Delta $)}{11}{subsection.2.2.5}%
-\contentsline {subsection}{\numberline {2.2.6}Dual-slope}{14}{subsection.2.2.6}%
-\contentsline {section}{\numberline {2.3}Asynchronous Architectures}{14}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Level-Crossing Sampling (LCS)}{15}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Asynchronous Flash ADC}{15}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Advantage}{15}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Comparitive Evaluation}{15}{subsection.2.3.4}%
-\contentsline {section}{\numberline {2.4}Figures of Merit for ADCs}{16}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Walden Figure of Merit ($FoM_W$)}{16}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Schreier Figure of Merit ($FoM_S$)}{17}{subsection.2.4.2}%
-\contentsline {section}{\numberline {2.5}Calibration and Trimming Techniques}{17}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}The Component Mismatch Problem}{17}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Calibration Classifications}{18}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Resistive Trimming Techniques}{18}{subsection.2.5.3}%
-\contentsline {subsubsection}{\numberline {2.5.3.1}Internal Resistive Loading}{18}{subsubsection.2.5.3.1}%
-\contentsline {subsubsection}{\numberline {2.5.3.2}Reference Ladder Trimming}{18}{subsubsection.2.5.3.2}%
-\contentsline {subsection}{\numberline {2.5.4}Advantages of Resistive Trimming for Asynchronous ADCs}{19}{subsection.2.5.4}%
-\contentsline {section}{\numberline {2.6}Related Works}{19}{section.2.6}%
-\contentsline {chapter}{\numberline {3}Future Work Planning, Methodologies and Tools}{20}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Methodologies and Tools}{20}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Work Plan}{20}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Conclusions}{21}{chapter.4}%
+\contentsline {paragraph}{}{11}{section*.14}%
+\contentsline {paragraph}{}{11}{section*.15}%
+\contentsline {paragraph}{}{11}{section*.16}%
+\contentsline {paragraph}{}{11}{section*.17}%
+\contentsline {subsection}{\numberline {2.2.5}Sigma-Delta ($\Sigma \Delta $)}{12}{subsection.2.2.5}%
+\contentsline {paragraph}{}{13}{section*.19}%
+\contentsline {paragraph}{}{13}{section*.20}%
+\contentsline {paragraph}{}{13}{section*.21}%
+\contentsline {paragraph}{}{13}{section*.22}%
+\contentsline {subsection}{\numberline {2.2.6}Dual-slope}{13}{subsection.2.2.6}%
+\contentsline {paragraph}{}{13}{section*.24}%
+\contentsline {paragraph}{}{13}{section*.25}%
+\contentsline {paragraph}{}{13}{section*.26}%
+\contentsline {paragraph}{}{13}{section*.27}%
+\contentsline {section}{\numberline {2.3}Asynchronous Architectures}{13}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Level-Crossing Sampling (LCS)}{14}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Asynchronous Flash ADC}{14}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Advantage}{14}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Comparitive Evaluation}{14}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}Figures of Merit for ADCs}{15}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Walden Figure of Merit ($FoM_W$)}{15}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Schreier Figure of Merit ($FoM_S$)}{15}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}Calibration and Trimming Techniques}{16}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}The Component Mismatch Problem}{16}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Calibration Classifications}{16}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Resistive Trimming Techniques}{17}{subsection.2.5.3}%
+\contentsline {subsubsection}{\numberline {2.5.3.1}Internal Resistive Loading}{17}{subsubsection.2.5.3.1}%
+\contentsline {subsubsection}{\numberline {2.5.3.2}Resistive Reference Ladder Trimming}{17}{subsubsection.2.5.3.2}%
+\contentsline {paragraph}{}{17}{section*.30}%
+\contentsline {paragraph}{}{17}{section*.31}%
+\contentsline {paragraph}{}{17}{section*.32}%
+\contentsline {paragraph}{}{17}{section*.33}%
+\contentsline {paragraph}{}{17}{section*.34}%
+\contentsline {subsection}{\numberline {2.5.4}Advantages of Resistive Trimming for Asynchronous ADCs}{18}{subsection.2.5.4}%
+\contentsline {section}{\numberline {2.6}Related Works}{18}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Future Work Planning, Methodologies and Tools}{19}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Methodologies and Tools}{19}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Work Plan}{19}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Conclusions}{20}{chapter.4}%

@@ -563,6 +563,46 @@
       \verb http://dx.doi.org/10.1109/ISSCC49657.2024.10454350
       \endverb
     \endentry
+    \entry{johns_martin_2012}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=d5911f4bd922d5eeb7abffcafc7857e0}{%
+           family={Carusone},
+           familyi={C\bibinitperiod},
+           given={Tony\bibnamedelima Chan},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=773d7aa2afcaf1a992be7d3ed71528a9}{%
+           family={Johns},
+           familyi={J\bibinitperiod},
+           given={David\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=b2f9b1a74a5ca3e5ce92f376b303ba11}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={Kenneth},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ, USA}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{c9977182f93a04a809373fd8419c71ec}
+      \strng{fullhash}{c9977182f93a04a809373fd8419c71ec}
+      \strng{fullhashraw}{c9977182f93a04a809373fd8419c71ec}
+      \strng{bibnamehash}{c9977182f93a04a809373fd8419c71ec}
+      \strng{authorbibnamehash}{c9977182f93a04a809373fd8419c71ec}
+      \strng{authornamehash}{c9977182f93a04a809373fd8419c71ec}
+      \strng{authorfullhash}{c9977182f93a04a809373fd8419c71ec}
+      \strng{authorfullhashraw}{c9977182f93a04a809373fd8419c71ec}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2nd}
+      \field{title}{Analog Integrated Circuit Design}
+      \field{year}{2012}
+    \endentry
     \entry{Chae_2008}{inproceedings}{}{}
       \name{author}{3}{}{%
         {{hash=42f0ce2357a0d0be5ec1532afef6c9cc}{%
@@ -6180,7 +6220,6 @@
       \field{booktitle}{{{1999 IEEE International Solid-State Circuits Conference. Digest of Technical Papers. ISSCC. First Edition (Cat. No.99CH36278)}}}
       \field{series}{ISSCC-99}
       \field{title}{{{A CMOS$6\ \mathrm{b}$500 MSample/s ADC for a hard disk drive read channel}}}
-      \true{nocite}
       \field{pages}{324â€“325}
       \range{pages}{-1}
       \verb{doi}
@@ -7225,6 +7264,47 @@
       \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1109/ISSCC.2003.1234208
+      \endverb
+    \endentry
+    \entry{yao_bulk_2011}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=456c69390beec1cfe6e8aa5eb7dfd789}{%
+           family={Yao},
+           familyi={Y\bibinitperiod},
+           given={Junjie},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c6bb304455e203802559e27fad5b248d}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Jin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=041562abb3c4e18beaecc84d8b7450cc}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Hoi},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{ec83848d34abf85a1d019404420f5abc}
+      \strng{fullhash}{ec83848d34abf85a1d019404420f5abc}
+      \strng{fullhashraw}{ec83848d34abf85a1d019404420f5abc}
+      \strng{bibnamehash}{ec83848d34abf85a1d019404420f5abc}
+      \strng{authorbibnamehash}{ec83848d34abf85a1d019404420f5abc}
+      \strng{authornamehash}{ec83848d34abf85a1d019404420f5abc}
+      \strng{authorfullhash}{ec83848d34abf85a1d019404420f5abc}
+      \strng{authorfullhashraw}{ec83848d34abf85a1d019404420f5abc}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Circuits and Systems II: Express Briefs}
+      \field{number}{2}
+      \field{title}{Bulk Voltage Trimming Offset Calibration for High-Speed Flash ADCs}
+      \field{volume}{58}
+      \field{year}{2011}
+      \field{pages}{65\bibrangedash 69}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/TCSII.2010.2104020
       \endverb
     \endentry
     \entry{Yao}{inproceedings}{}{}

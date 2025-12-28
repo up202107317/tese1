@@ -8,9 +8,10 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Flash ADC Architecture}}{9}{figure.caption.10}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Power consuption Flash ADC}}{10}{figure.caption.11}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces SAR ADC Architecture.}}{11}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Pipeline ADC Architecture}}{12}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Sigma-Delta ADC Architecture}}{13}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Dual-slope ADC Architecture.}}{14}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Difference in power between Synchronous and Asynchronous Flash ADCs.}}{16}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Figure adapted from MPScholar: 12-bit Pipeline ADC Architecture}}{12}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Figure adapted from MPScholar: 1st order Sigma-Delta ADC Architecture}}{12}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Figure adapted from MPScholar: Dual-slope ADC Architecture.}}{13}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Difference in power between Synchronous and Asynchronous Flash ADCs.}}{15}{figure.caption.28}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Threshold voltage ($|V_t|$) variation of M1,2 and M3,4 as a function of the ladder tap voltage ($LT$) \blx@tocontentsinit {0}\cite {yao_bulk_2011}.}}{18}{figure.caption.29}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

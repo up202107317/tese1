@@ -234,9 +234,13 @@ The Pipeline ADC breaks the conversion into several sequential stages, each stag
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{figures/Pipeline.png} 
-  \caption{Pipeline ADC Architecture}
+  \caption{Figure adapted from MPScholar: 12-bit Pipeline ADC Architecture}
   \label{fig:pipeline_arch}
 \end{figure}
+\paragraph{}
+\paragraph{}
+\paragraph{}
+\paragraph{}
 
 \subsection{Sigma-Delta ($\Sigma\Delta$)}
 The $\Sigma\Delta$ architecture relies on oversampling, sampling much faster than the Nyquist rate, and noise-modulation. A modulator integrates the difference between the input signal and a feedback version of the quantized output. This process pushes the quantization noise into higher frequencies, outside the signal band of interest, a digital filter then removes the high-frequency noise, resulting in high resolution and precision.
@@ -245,10 +249,14 @@ The $\Sigma\Delta$ architecture relies on oversampling, sampling much faster tha
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.8\textwidth]{figures/SigmaDelta.png} 
-  \caption{Sigma-Delta ADC Architecture}
+  \includegraphics[width=0.8\textwidth]{Delta-sigma 1st order.png} 
+  \caption{Figure adapted from MPScholar: 1st order Sigma-Delta ADC Architecture}
   \label{fig:sd_arch}
 \end{figure}
+\paragraph{}
+\paragraph{}
+\paragraph{}
+\paragraph{}
 
 \subsection{Dual-slope}
 This integrating architecture measures the time required for a capacitor to charge and discharge, in the first phase, the capacitor is charged by the input voltage for a fixed period then for the second phase, it is discharged by a known reference voltage. The time it takes to return to zero is proportional to the average value of the input signal it´s highly accurate and immune to high-frequency noise but is much slower than other architectures.
@@ -257,10 +265,14 @@ This integrating architecture measures the time required for a capacitor to char
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.8\textwidth]{figures/DualSlope.png} 
-  \caption{Dual-slope ADC Architecture.}
+  \includegraphics[width=0.8\textwidth]{figures/dual slope.png} 
+  \caption{Figure adapted from MPScholar: Dual-slope ADC Architecture.}
   \label{fig:dual_slope_arch}
 \end{figure}
+\paragraph{}
+\paragraph{}
+\paragraph{}
+\paragraph{}
 
 \section{Asynchronous Architectures} \label{sec:async_arch}
 
@@ -301,7 +313,7 @@ An analysis of state-of-the-art converters shows that asynchronous ADCs excel in
 While Synchronous Flash ADCs are designed for peak performance at a specific frequency and suffer from a much higher power consuption caused by the continuous clocking, asynchronous designs scale their power consumption linearly with the input activity.
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.8\textwidth]{figures/Power_comparison.png} 
+  \includegraphics[width=0.8\textwidth]{uporto-feup.pdf} 
   \caption{Difference in power between Synchronous and Asynchronous Flash ADCs.}
   \label{fig:power_comparison}
 \end{figure}
@@ -339,22 +351,20 @@ In high-speed Flash ADCs, the accuracy of the system is fundamentally limited by
 \subsection{The Component Mismatch Problem}
 In deep sub-micron CMOS technologies, transistors that are drawn with identical dimensions on the layout will exhibit slight differences in their electrical parameters after fabrication. This phenomenon, known as mismatch, affects the threshold voltage ($V_{th}$) and the current gain factor ($\beta$) of the differential pair in a comparator.
 
-According to Pelgrom’s Law\cite{johns_martin_analog}, the standard deviation of the threshold voltage mismatch ($\sigma_{Vth}$) is inversely proportional to the square root of the transistor area ($W \cdot L$):
+According to Pelgrom’s Law cited in section 2.3.3 of \cite{johns_martin_2012}, the standard deviation of the threshold voltage mismatch ($\sigma_{Vth}$) is inversely proportional to the square root of the transistor area ($W \cdot L$):
 
 \begin{equation}
   \sigma_{V_{th}} = \frac{A_{V_{th}}}{\sqrt{W \cdot L}}
 \end{equation}
 
-Where $A_{V_{th}}$ is a technology-dependent constant. This creates a critical trade-off: to minimize offset without calibration, transistors must be made very large, which increases parasitic capacitance and drastically degrades the ADC speed and power efficiency. Therefore, small transistors are used for speed, and calibration is employed to correct the resulting offset.
+Where $A_{V_{th}}$ is a technology-dependent constant. This creates a critical trade-off, to minimize offset without calibration, transistors must be made large, which increases parasitic capacitance and degrades the ADC speed and power efficiency. Therefore, small transistors are used for speed, and calibration is needed to correct the resulting offset.
 
 \subsection{Calibration Classifications}
-Calibration techniques can be broadly categorized by their timing and domain:
-\begin{itemize}
-  \item Timing: \textit{Foreground} (Offline) calibration interrupts normal operation to measure and correct errors, while \textit{Background} (Online) calibration operates continuously but adds significant complexity.
-  \item Domain: \textit{Digital} calibration corrects the output code mathematically, whereas \textit{Analog} calibration adjusts the circuit biasing or load conditions to nullify the offset at the source.
-\end{itemize}
+Calibration techniques can be broadly categorized by their timing and domain, in terms of timing there can be derived two types foreground calibration which interrupts normal operation to measure and correct errors and background calibration which operates continuously but adds significant complexity.
+In terms of domain there is digital calibration that corrects the output code mathematically, whereas analog calibration adjusts the circuit biasing or load conditions to nullify the offset at the source.
 
-For an asynchronous architecture, avoiding continuous clock activity is crucial to maintain low power during idle periods. Thus, Analog Foreground Calibration (Trimming) is the preferred approach.
+
+For an asynchronous architecture, avoiding continuous clock activity is crucial to maintain low power during idle periods. Thus, Analog Foreground Calibration is the preferred approach.
 
 \subsection{Resistive Trimming Techniques}
 Resistive trimming aims to compensate for the imbalance in the input differential pair ($M_1, M_2$) by intentionally creating an opposing imbalance in the load resistance or the reference path.
@@ -362,33 +372,35 @@ Resistive trimming aims to compensate for the imbalance in the input differentia
 
 
 \subsubsection{Internal Resistive Loading}
-This method involves placing a variable resistive network in parallel (or series) with the output loads of the comparator's pre-amplifier stage.
-\begin{itemize}
-  \item Mechanism: By digitally switching small resistors (or MOS switches operating in the triode region) in parallel with the load branch, the effective resistance $R_L$ is modulated.
-  \item Effect: Since the gain of the pre-amplifier is $A_v = g_m R_L$, changing $R_L$ on one side adjusts the output DC level. If the differential pair has an offset $+\Delta V$, the trimming network is adjusted to introduce $-\Delta V$, effectively zeroing the error.
-  \item Implementation: A binary-weighted bank of PMOS transistors is typically used as the variable resistance. The digital code to control these switches is determined at startup and stored in a register.
-\end{itemize}
+The internal resistive loading method involves placing a variable resistive network in parallel or series with the output loads of the comparator pre-amplifier stage. By digitally switching small resistors or MOS switches operating in the triode region in parallel with the load branch, the effective resistance $R_L$ is modulated. Since the gain of the pre-amplifier is defined as $A_v = g_m R_L$, changing $R_L$ on one side of the differential pair adjusts the output DC level. If the differential pair has an offset, the trimming network is adjusted to introduce an equal and opposite value to effectively zero the error. This technique is typically implemented using a binary-weighted bank of PMOS transistors as the variable resistance, where the digital control code is determined at startup and stored in a register.
 
-\subsubsection{Reference Ladder Trimming}
-Alternatively, instead of modifying the comparator internally, the reference voltages ($V_{ref}$) supplied to the comparators can be adjusted.
-\begin{itemize}
-  \item Mechanism: The main resistive reference ladder is tapped using a local switching network that allows fine-tuning of the tap voltage connected to each comparator input.
-  \item Context: This technique was successfully demonstrated in asynchronous Flash ADCs, such as in the work of Chen et al.~\cite{chen_async_2006}, where the reference ladder itself acts as the calibration DAC.
-\end{itemize}
+\subsubsection{Resistive Reference Ladder Trimming}
 
+The resistive reference ladder trimming technique corrects comparator offset by utilizing the main reference ladder as a calibration source \cite{yao_bulk_2011}. In this architecture, a switching network selects specific voltage taps from the resistor ladder and applies them to the bulk terminals of the input transistors M1 and M2. This approach leverages the body effect to shift the threshold voltage ($V_{th}$) of the differential pair, thereby nullifying the input-referred offset caused by process mismatch. 
+
+As demonstrated in the simulation results of the threshold voltage ($|V_t|$) versus the ladder tap voltage ($LT$), the threshold voltage of transistors M1 and M2 increases linearly from approximately 356.5~mV to 372~mV as the calibration voltage is adjusted. In contrast, the threshold voltage of transistors M3 and M4 remains constant at approximately 356.5~mV because their bulk terminals are not connected to the tuning network. This targeted adjustment of the bulk potential for the input differential pair provides a tuning range sufficient to compensate for random process variations and ensure the accuracy of the comparator trip points.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{VT bulk.png}
+    \caption{Threshold voltage ($|V_t|$) variation of M1,2 and M3,4 as a function of the ladder tap voltage ($LT$) \cite{yao_bulk_2011}.}
+    \label{fig:mismatch_correction}
+\end{figure}
+\paragraph{}
+\paragraph{}
+\paragraph{}
+
+\paragraph{}
+\paragraph{}
 \subsection{Advantages of Resistive Trimming for Asynchronous ADCs}
-Compared to dynamic techniques like Auto-Zeroing (which requires accurate clock phases $\phi_1, \phi_2$ and storage capacitors), resistive trimming offers distinct advantages for the proposed work:
+Compared to dynamic techniques like Auto-Zeroing which requires accurate clock phases $\phi_1, \phi_2$ and storage capacitors, resistive trimming offers distinct advantages for the proposed work:
 \begin{enumerate}
   \item Static Operation: Once the calibration bits are set (during the offline phase), the trimming network becomes static. It does not switch and does not require a clock, preserving the "event-driven" nature of the ADC.
-  \item No Switching Noise: Since the calibration is constant during conversion, it introduces no injection noise or clock feedthrough.
   \item Speed Preservation: It does not add significant capacitive load to the high-speed nodes of the comparator, allowing for maximum bandwidth.
 \end{enumerate}
 
-% GUIDELINE: O Teu Nicho Específico
-% 1. O Problema: Offset em comparadores dinâmicos.
-% 2. Técnicas: Auto-zeroing vs. Foreground Calibration.
-% 3. Related Works: Cita 2 ou 3 papers que usaram trimming resistivo ou de corrente.
-%  Conclui dizendo que a tua abordagem será "Offline Trimming" para simplificar o design.
+
+
 \section{Related Works} \label{sec:related_works}
 
 % =================================================================
