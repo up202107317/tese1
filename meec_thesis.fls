@@ -626,13 +626,16 @@ INPUT .\figures\Energy evo.png
 INPUT .\figures\Energy evo.png
 INPUT .\figures\Energy evo.png
 INPUT .\figures\Energy evo.png
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8t.tfm
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmri8t.vf
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmrc8t.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex\latex\courier-scaled\t1pcrs.fd
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex\latex\courier-scaled\t1pcrs.fd
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex\latex\courier-scaled\t1pcrs.fd
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\courier\pcrr8t.tfm
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmri8t.vf
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmrc8t.vf
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\courier\pcrr8t.vf

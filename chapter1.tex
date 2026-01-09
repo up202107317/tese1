@@ -432,3 +432,58 @@ The impact of this architectural difference on long-term technology trends is il
 % =================================================================
 % FIM DO DOCUMENTO
 % =================================================================
+\section{Work Plan} \label{sec:work_plan}
+
+% O texto acima deve ser inserido aqui.
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{ % Garante o alinhamento correto com as margens da página
+\begin{ganttchart}[
+    hgrid,
+    vgrid,
+    x unit=0.5cm,
+    y unit title=0.7cm,
+    title height=1,
+    progress label text={},
+    group right shift=0,
+    group top shift=0.7,
+    group height=.3,
+    group peaks tip position=0,
+    newline shortcut=true,
+    bar/.append style={fill=blue!20},
+    milestone/.append style={fill=black}
+]{1}{24} % Representa as semanas de fevereiro a julho
+    \gantttitle{2026}{24} \\
+    \gantttitle{Feb}{2} 
+    \gantttitle{Mar}{4} 
+    \gantttitle{Apr}{4} 
+    \gantttitle{May}{5} 
+    \gantttitle{Jun}{4} 
+    \gantttitle{Jul}{5} \\
+    
+    % Atribuição de nomes (name=...) para evitar erros de compilação nos links
+    \ganttbar[name=T1]{Mathematical Formulation (Ch. 3)}{1}{4} \\
+    \ganttbar[name=T2]{ADC Design \& Simulation}{4}{12} \\
+    \ganttbar[name=T3]{Results Analysis (Ch. 4)}{12}{18} \\
+    \ganttbar[name=T4]{Scientific Article Preparation}{14}{20} \\
+    \ganttbar[name=T5]{Dissertation Final Writing}{16}{19} \\
+    \ganttmilestone[name=M1]{Provisional Delivery (Jun 30)}{19} \\
+    \ganttbar[name=T6]{Defense Preparation}{20}{22} \\
+    \ganttmilestone[name=M2]{Thesis Defense (Jul 24)}{23} \\
+    \ganttmilestone[name=M3]{Final Submission (Jul 31)}{24}
+
+    % Links utilizando os nomes definidos
+    \ganttlink{T1}{T2}
+    \ganttlink{T2}{T3}
+    \ganttlink{T5}{M1}
+\end{ganttchart}
+}
+\caption{Work plan for the second semester of the dissertation.}
+\label{fig:gantt_chart}
+\end{figure}
+
+\section{Methodologies and Tools}
+The execution of this dissertation follows a methodology focused on academic rigor and effective project management to ensure all objectives are met. A primary practice involves the use of project management tools such as the Gantt chart presented in Figure \ref{fig:gantt_chart} to establish clear milestones and monitor progress. By defining specific tasks and deadlines, it is possible to maintain a structured timeline and ensure that the research and design phases stay on schedule. Another fundamental practice consists of holding biweekly meetings with supervisors to review the work carried out and receive technical feedback. These sessions are essential for validating the circuit design choices and avoiding potential errors in the implementation of the asynchronous logic. Continuous documentation of the findings and simulation results is also prioritized to maintain transparency and facilitate the transition from the research phase to the final writing of the document.
+
+For the development and verification of the proposed asynchronous Flash ADC, the Synopsys software suite will be used as the primary tool for circuit-level design and simulation. This professional toolset allows for precise transistor-level modeling and the verification of the offset trimming mechanism through comprehensive analog and mixed-signal simulations. Specifically, Synopsys tools will be utilized to model the threshold voltage variations in the differential pair and to perform Monte Carlo analysis to assess the impact of process mismatches. The simulations and data processing will be conducted on a personal computer equipped with an Intel Core i7 processor and 16GB of RAM, which provides the computational capacity required for these tasks. Since the university provides access to the necessary Synopsys licenses, no additional costs are anticipated for the institution or the author during the development of this work.

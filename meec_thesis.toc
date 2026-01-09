@@ -41,3 +41,5 @@
 \contentsline {section}{\numberline {2.6}Asynchronous vs. Synchronous}{18}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1}Advantage}{18}{subsection.2.6.1}%
 \contentsline {subsection}{\numberline {2.6.2}Comparative Evaluation}{19}{subsection.2.6.2}%
+\contentsline {section}{\numberline {2.7}Work Plan}{20}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Methodologies and Tools}{20}{section.2.8}%
