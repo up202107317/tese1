@@ -165,10 +165,7 @@ BER quantifies the probability of the converter producing an incorrect digital c
 
 \subsection{State-of-the-Art Comparative Analysis} \label{sec:sota_analysis}
 
-The performance benchmarks and comparative trends presented in this section were derived from a comprehensive survey of the IEEE International Solid-State Circuits Conference (ISSCC) data from 1997 to 2022. The ISSCC was chosen as the primary data source because it is widely regarded as the premier forum for solid-state circuit design, requiring experimental silicon-measured results for every publication. This ensures that the comparison is based on proven hardware rather than theoretical simulations.
-
-The analytical plots and tables presented below incorporate data from an exhaustive list of state-of-the-art works. The comparative baseline for Flash architectures is established by \cite{Chen_2006, Lukas_2014, Draxelmayr_2014}. The boundaries for energy efficiency and high-resolution performance (the "survey envelopes") are defined by the record-holders described in \cite{Jiang_2018, Veldhoven_2021, Ginsburg_2014, Kim_2018, Jang_2018, De_Cano_Garcia_2019, Muller_2015} for power efficiency, and \cite{Delic-Ibus_2013, Jang_2018_2, Abe_2016, Geelen_1997} for high resolution and dynamic range. Collectively, these references \cite{Geelen_1997, Chen_2006, Delic-Ibus_2013, Ginsburg_2014, Lukas_2014, Draxelmayr_2014, Muller_2015, Abe_2016, Kim_2018, Jang_2018, Jang_2018_2, Jiang_2018, De_Cano_Garcia_2019, Veldhoven_2021} represent the performance frontier across all major ADC architectures.
-
+The analytical plots and tables presented below incorporate data from an exhaustive set of 140 state-of-the-art works. To ensure transparency and reproducibility, the complete list of references used to generate these performance envelopes covering Flash, SAR, Pipeline, and Sigma-Delta architectures is provided in \cite{ALCoban_1999_113,AbhishekAgrawal_2023_100,AmyWhitcombe_2024_101,AnandSubramanian_2024_143,BGregoire_2008_25,BMalkietal_2012_47,Balmelli_2004_119,BenjaminHershberg_2019_30,BramVeraverbeke_2025_91,Breems_2007_130,CCLiu_2010_45,CHChan_2015_57,CHammerschmied_1997_39,CPochet_2022_110,CYLee_2022_140,CYLiouetal_2013_50,ChengChungHsu_2007_24,ChengEnHsieh_2025_93,ChiYunStanleyWang_2019_138,ChinYuLin_2016_61,Christen_2007_131,ChunChengLiu_2016_60,Dezzani_2003_116,Dorrer_2005_124,EJanssenetal_2013_51,EwoutMartens_2024_96,FMYaul_2014_54,FMichel_2011_134,FengChen_2003_115,Fontaine_2005_125,Fujimoto_2006_129,Gaggl_2004_121,Geelen_2006_19,GeunhaKim_2023_77,GianHoogzaadandRafRoovers_1999_6,Goes_2006_128,GovertGeelenandEdwardPaulus_2004_7,HHBoo_2015_29,HKHong_2015_58,HWei_2011_46,HZhao_2022_68,HanZhao_2025_87,HendrikvanderPloegandRobertRemmers_1999_105,Hesener_2007_41,HongshuaiZhang_2023_71,HongzhiZhao_2023_73,Huber_2007_108,HwiCheolKim_2005_18,JCWang_2022_66,JLiu_2022_98,JaewonLee_2025_102,JiaChingWang_2023_97,JiangYu_2005_122,JianxiongXu_2025_1,JihangGao_2025_88,JinseokKoh_2005_123,JongmiLee_2024_144,JosephInginoJrandBruceWooley_1998_9,JunhuaShen_2025_94,JunlinZhong_2025_103,JunyanHao_2023_32,KBult_1997_4,KaiChengCheng_2024_82,KentaroYoshioka_2017_62,KyeongwonJeong_2025_86,KyojinDChoo_2016_59,LiangQi_2019_137,MDing_2015_56,MFlynn_1998_5,MYoshioka_2010_44,MZhan_2022_67,ManxinLi_2023_70,MingleiZhang_2019_63,MingtaoZhan_2023_75,MingyangGu_2025_36,Mitteregger_2006_126,Ong_1997_112,PHarpe_2014_53,PHarpe_2015_55,PHarpeetal_2012_48,PHarpeetal_2013_49,PSchvan_2006_3,PSchvan_2008_42,PatrickVogelmann_2018_135,QLiu_2022_141,RKapustaetal_2013_52,RaresBodnar_2024_83,Ray_2006_20,SUKwak_1997_8,SandeepSanthoshKumar_2023_74,SangheonLee_2024_78,Senderowicz_1997_111,SerdarAbdullahYonar_2023_99,SeungChulLee_2007_23,SewonLee_2024_84,SharvilPatil_2024_35,ShengJuiHuang_2009_133,Shimizu_2006_107,SiddharthDevarajan_2009_26,Silva_2006_127,SiyuanYe_2024_95,SiyuanYe_2025_89,SungEnHsieh_2023_31,TKang_2022_142,TWang_2022_69,Tabatabaei_2003_118,Verma_2006_40,Vleugels_2001_114,WLiu_2010_43,Waltari_2002_12,Wang_2005_16,XiyuHe_2024_80,YCHuang_2010_27,YChae_2008_132,YChaietal_2012_28,YHu_2022_139,YSegal_2022_65,YShimizu_2008_109,Yan_2003_117,YanboZhang_2023_72,YannanZhang_2025_92,Yao_2004_120,YaohuiLuan_2025_145,YiHuWang_2023_76,YingZuLin_2019_64,YongLim_2024_79,Yoshioka_2005_17,Yoshioka_2007_21,YoungDeukJeon_2007_22,YueCao_2025_37,YuefengCao_2023_33,YuefengCao_2024_34,YukoTambaandKazuoYamakido_1999_2,YunsongTao_2024_85,YunsongTao_2025_38,ZhuoyiChen_2024_81,ZhuoyiChen_2025_90,ZijianLiu_2025_104}. Collectively, these works represent the proven performance frontier across all major ADC architectures.
 \par\vspace{1.5em}
 \par\vspace{1.5em}
 \par\vspace{1.5em}
@@ -432,17 +429,19 @@ The impact of this architectural difference on long-term technology trends is il
 % =================================================================
 % FIM DO DOCUMENTO
 % =================================================================
-\section{Work Plan} \label{sec:work_plan}
+\chapter{Future Work Planning, Methodologies and Tools} \label{chap:planning}
 
-% O texto acima deve ser inserido aqui.
+This chapter outlines the development strategy for the dissertation, detailing the methodologies, tools, and the schedule for the remaining phases.
 
+\section{Work Plan} \label{sec:workplan}
+Since the work completed this far covers the introduction and the literature review, future planning focuses on the three remaining sections. Chapter 3 will detail the mathematical formulation of the asynchronous level-crossing sampling and the bulk voltage trimming mechanism. Chapter 4 will involve the implementation, simulation, and discussion of the results, while Chapter 5 will present the final conclusions and suggestions for future work. To complete the dissertation according to the established timeline and quality standards, a Gantt Chart is presented in Figure \ref{fig:gantt_chart}.
 \begin{figure}[htbp]
 \centering
-\resizebox{\textwidth}{!}{ % Garante o alinhamento correto com as margens da página
+\resizebox{\textwidth}{!}{ % Forces alignment to page width
 \begin{ganttchart}[
     hgrid,
     vgrid,
-    x unit=0.5cm,
+    x unit=0.55cm,
     y unit title=0.7cm,
     title height=1,
     progress label text={},
@@ -453,7 +452,7 @@ The impact of this architectural difference on long-term technology trends is il
     newline shortcut=true,
     bar/.append style={fill=blue!20},
     milestone/.append style={fill=black}
-]{1}{24} % Representa as semanas de fevereiro a julho
+]{1}{24} % Weeks from Feb 18 to July 31
     \gantttitle{2026}{24} \\
     \gantttitle{Feb}{2} 
     \gantttitle{Mar}{4} 
@@ -462,28 +461,37 @@ The impact of this architectural difference on long-term technology trends is il
     \gantttitle{Jun}{4} 
     \gantttitle{Jul}{5} \\
     
-    % Atribuição de nomes (name=...) para evitar erros de compilação nos links
-    \ganttbar[name=T1]{Mathematical Formulation (Ch. 3)}{1}{4} \\
+    \ganttbar[name=T1]{Mathematical Formulation}{1}{4} \\
     \ganttbar[name=T2]{ADC Design \& Simulation}{4}{12} \\
     \ganttbar[name=T3]{Results Analysis (Ch. 4)}{12}{18} \\
-    \ganttbar[name=T4]{Scientific Article Preparation}{14}{20} \\
-    \ganttbar[name=T5]{Dissertation Final Writing}{16}{19} \\
+    
+    \ganttbar[name=T4]{Dissertation Final Writing}{16}{19} \\
     \ganttmilestone[name=M1]{Provisional Delivery (Jun 30)}{19} \\
-    \ganttbar[name=T6]{Defense Preparation}{20}{22} \\
-    \ganttmilestone[name=M2]{Thesis Defense (Jul 24)}{23} \\
+    \ganttbar[name=T5]{Defense Preparation}{20}{22} \\
+    \ganttmilestone[name=M2]{Dissertation Defense (Jul 24)}{23} \\
     \ganttmilestone[name=M3]{Final Submission (Jul 31)}{24}
 
-    % Links utilizando os nomes definidos
+    % Links using explicit names to avoid PGF errors
     \ganttlink{T1}{T2}
     \ganttlink{T2}{T3}
-    \ganttlink{T5}{M1}
+    \ganttlink{T4}{M1}
 \end{ganttchart}
 }
-\caption{Work plan for the second semester of the dissertation.}
+\caption{Dissertation work plan for the second semester of 2026.}
 \label{fig:gantt_chart}
 \end{figure}
-
-\section{Methodologies and Tools}
+The second semester will begin on February 18, 2026, with the development of the mathematical model for bulk-driven offset compensation, specifically focusing on the threshold voltage modulation via the body effect as discussed in the literature. This will be followed by the design and simulation of the asynchronous Flash ADC core and the resistive trimming network in the Cadence Virtuoso environment. Once the circuit achieves basic functionality, Monte Carlo simulations will be performed to evaluate the robustness of the trimming algorithm against random process mismatches. The results will then be analyzed to quantify improvements in linearity and energy efficiency. After the first version of the dissertation is finalized, a scientific research article will be prepared for submission. Regular meetings with the supervisors will be held throughout the process to ensure technical consistency. The provisional document will be delivered by June 30, 2026, with the defense scheduled for July 24, and the final document submission by July 31, 2026.
+\section{Methodologies and Tools} \label{sec:tools}
 The execution of this dissertation follows a methodology focused on academic rigor and effective project management to ensure all objectives are met. A primary practice involves the use of project management tools such as the Gantt chart presented in Figure \ref{fig:gantt_chart} to establish clear milestones and monitor progress. By defining specific tasks and deadlines, it is possible to maintain a structured timeline and ensure that the research and design phases stay on schedule. Another fundamental practice consists of holding biweekly meetings with supervisors to review the work carried out and receive technical feedback. These sessions are essential for validating the circuit design choices and avoiding potential errors in the implementation of the asynchronous logic. Continuous documentation of the findings and simulation results is also prioritized to maintain transparency and facilitate the transition from the research phase to the final writing of the document.
 
-For the development and verification of the proposed asynchronous Flash ADC, the Synopsys software suite will be used as the primary tool for circuit-level design and simulation. This professional toolset allows for precise transistor-level modeling and the verification of the offset trimming mechanism through comprehensive analog and mixed-signal simulations. Specifically, Synopsys tools will be utilized to model the threshold voltage variations in the differential pair and to perform Monte Carlo analysis to assess the impact of process mismatches. The simulations and data processing will be conducted on a personal computer equipped with an Intel Core i7 processor and 16GB of RAM, which provides the computational capacity required for these tasks. Since the university provides access to the necessary Synopsys licenses, no additional costs are anticipated for the institution or the author during the development of this work.
+For the development and verification of the proposed asynchronous Flash ADC, the Synopsys software will be used as the primary tool for circuit-level design and simulation. This professional toolset allows for precise transistor-level modeling and the verification of the offset trimming mechanism through analog and mixed-signal simulations. 
+
+% =================================================================
+% CHAPTER 4: CONCLUSIONS
+% =================================================================
+\chapter{Conclusions} \label{chap:conclusions}
+The work conducted during the first semester has been essential for establishing the technical and theoretical foundations of this dissertation. The increasing demand for high-speed, low-power ADCs in modern system on chip applications drives the need for innovative architectures that can overcome the limitations of traditional designs. In this context, the research into an asynchronous level-crossing sampling Flash ADC with bulk-driven offset trimming can significantly contribute to the development of more efficient data conversion systems for high-bandwidth applications.
+
+A variety of ADC architectures and comparator topologies have been deeply studied to understand their performance trade-offs. The Flash architecture is recognized for its parallel processing capabilities, but its accuracy is often limited by transistor mismatch, which necessitates effective calibration or trimming techniques. Current-mode techniques have been explored as a means to achieve higher speeds and lower power consumption compared to traditional voltage-mode designs. Furthermore, the study of dynamic latch comparators and current conveyors has provided insights into optimizing the delay profile and power dissipation of the conversion core. This research has highlighted that asynchronous level-crossing sampling can reduce the power overhead associated with global clocks, especially during periods of signal inactivity. To address the mismatch inherent in these high-speed comparators, a bulk-driven trimming mechanism utilizing the body effect is proposed, allowing for precise threshold voltage modulation without adding significant parasitic capacitance.
+
+An extensive investigation of existing studies in this field was conducted to ensure the acquisition of the knowledge necessary to develop the mathematical formulation of the proposed system. The bibliographic review confirmed that while current-mode and inverter-based comparators offer high performance, there is a clear opportunity to integrate them into an asynchronous framework with localized trimming. Once the mathematical model for the bulk potential adjustment is finalized, the main challenge ahead will be to prove the effectiveness and robustness of the proposed approach using Synopsys simulation tools. A rigorous analysis through Monte Carlo simulations will be pursued to validate the trimming algorithm against process variations, ensuring a successful trade-off between conversion speed, power efficiency, and linearity.
