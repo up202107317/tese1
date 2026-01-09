@@ -195,11 +195,16 @@ with the `report' document style}{}}{}
 %% avoid widows and orphans
 \clubpenalty=6000
 \widowpenalty=6000
-
+\RequirePackage{booktabs}
 \RequirePackage{mathptmx}	       % font times
 \RequirePackage[scaled]{couriers}  % font courier
 \RequirePackage[scaled]{helvet}    % font helvetica
-\RequirePackage[pdftex]{graphicx}  % direct creation of PDF
+\usepackage{booktabs}
+\RequirePackage{tikz}
+\RequirePackage{circuitikz}
+\usepackage{svg}
+\RequirePackage{pgfgantt}  
+
 \RequirePackage{url}               % URL-sensitive line breaks
 \RequirePackage{graphicx}          
 \RequirePackage{setspace}          % set space between lines

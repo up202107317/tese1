@@ -13,10 +13,13 @@
 %% For two-sided printing (for dead-tree output) comment previous line
 %% and uncomment the next line
 %\documentclass[11pt,a4paper,twoside,openright]{report}
-
+\usepackage{booktabs}
 %% Source text uses in UTF-8 encoding
 \usepackage[utf8]{inputenc}
-
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{svg}
+\usetikzlibrary{positioning, arrows.meta, calc, shapes.geometric}
 %% MEEC options
 \usepackage[meec]{feupteses}              % working version
 %\usepackage[meec,juri]{feupteses}        % juri version
@@ -114,7 +117,9 @@
 %%----------------------------------------
 
 % Include all entries from references.bib in the bibliography
-\nocite{*}
+
+% Include all entries from references.bib in the bibliography
+\printbibliography[title=Bibliography]
 
 % Define o estilo da bibliografia (IEEE é o padrão em Engenharia)
 %\printbibliography[title=Bibliography]

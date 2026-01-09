@@ -2376,13 +2376,125 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="2" intorder="1">Tamba</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">Schvan_2006</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">johns_martin_2012</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">yao_bulk_2011</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">yao_bulk_2011</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">yao_bulk_2011</bcf:citekey>
-    <bcf:citekey order="8" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">shannon_1949</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">lim_2013</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">lim_2013</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">shannon_1949</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">baker_cmos_2010</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">baker_cmos_2010</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">shannon_1949</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">baker_cmos_2010</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">van_de_plassche_1994</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">baker_cmos_2010</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">Chen_2006</bcf:citekey>
+    <bcf:citekey order="37" intorder="2">Lukas_2014</bcf:citekey>
+    <bcf:citekey order="37" intorder="3">Draxelmayr_2014</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">Jiang_2018</bcf:citekey>
+    <bcf:citekey order="38" intorder="2">Veldhoven_2021</bcf:citekey>
+    <bcf:citekey order="38" intorder="3">Ginsburg_2014</bcf:citekey>
+    <bcf:citekey order="38" intorder="4">Kim_2018</bcf:citekey>
+    <bcf:citekey order="38" intorder="5">Jang_2018</bcf:citekey>
+    <bcf:citekey order="38" intorder="6">De_Cano_Garcia_2019</bcf:citekey>
+    <bcf:citekey order="38" intorder="7">Muller_2015</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">Delic-Ibus_2013</bcf:citekey>
+    <bcf:citekey order="39" intorder="2">Jang_2018_2</bcf:citekey>
+    <bcf:citekey order="39" intorder="3">Abe_2016</bcf:citekey>
+    <bcf:citekey order="39" intorder="4">Geelen_1997</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">Geelen_1997</bcf:citekey>
+    <bcf:citekey order="40" intorder="2">Chen_2006</bcf:citekey>
+    <bcf:citekey order="40" intorder="3">Delic-Ibus_2013</bcf:citekey>
+    <bcf:citekey order="40" intorder="4">Ginsburg_2014</bcf:citekey>
+    <bcf:citekey order="40" intorder="5">Lukas_2014</bcf:citekey>
+    <bcf:citekey order="40" intorder="6">Draxelmayr_2014</bcf:citekey>
+    <bcf:citekey order="40" intorder="7">Muller_2015</bcf:citekey>
+    <bcf:citekey order="40" intorder="8">Abe_2016</bcf:citekey>
+    <bcf:citekey order="40" intorder="9">Kim_2018</bcf:citekey>
+    <bcf:citekey order="40" intorder="10">Jang_2018</bcf:citekey>
+    <bcf:citekey order="40" intorder="11">Jang_2018_2</bcf:citekey>
+    <bcf:citekey order="40" intorder="12">Jiang_2018</bcf:citekey>
+    <bcf:citekey order="40" intorder="13">De_Cano_Garcia_2019</bcf:citekey>
+    <bcf:citekey order="40" intorder="14">Veldhoven_2021</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">Chen_2006</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">Jiang_2018</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">Veldhoven_2021</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">Ginsburg_2014</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">Kim_2018</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">Lukas_2014</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">Jang_2018</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">Ginsburg_2014</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">De_Cano_Garcia_2019</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">Muller_2015</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">Draxelmayr_2014</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">Delic-Ibus_2013</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">Jang_2018_2</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">Abe_2016</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">Geelen_1997</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">baker_cmos_2010</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">Tamba</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">Schvan_2006</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">van_de_plassche_1994</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">van_de_plassche_1994</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">van_de_plassche_1994</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">candy_1985</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">schreier_2005</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">candy_1985</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">candy_1985</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">microelectronics_1998</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">microelectronics_1998</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">microelectronics_1998</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">lim_2013</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">lim_2013</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">baker_cmos_2010</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">johns_martin_2012</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">baker_cmos_2010</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">baker_cmos_2010</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">yao_bulk_2011</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">yao_bulk_2011</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">yao_bulk_2011</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">baker_cmos_2010</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">yao_bulk_2011</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">lim_2013</bcf:citekey>
+    <bcf:citekey order="85" intorder="1">baker_cmos_2010</bcf:citekey>
+    <bcf:citekey order="86" intorder="1">lim_2013</bcf:citekey>
+    <bcf:citekey order="87" intorder="1">lim_2013</bcf:citekey>
+    <bcf:citekey order="87" intorder="2">Tamba</bcf:citekey>
+    <bcf:citekey order="87" intorder="3">Schvan_2006</bcf:citekey>
+    <bcf:citekey order="87" intorder="4">Hammerschmied</bcf:citekey>
+    <bcf:citekey order="87" intorder="5">Vorenkamp</bcf:citekey>
+    <bcf:citekey order="87" intorder="6">Yong_In_Park</bcf:citekey>
+    <bcf:citekey order="87" intorder="7">Ingino</bcf:citekey>
+    <bcf:citekey order="87" intorder="8">Yoshioka_2010</bcf:citekey>
+    <bcf:citekey order="87" intorder="9">Liu_2010</bcf:citekey>
+    <bcf:citekey order="88" intorder="1">lim_2013</bcf:citekey>
+    <bcf:citekey order="88" intorder="2">Tamba</bcf:citekey>
+    <bcf:citekey order="88" intorder="3">Schvan_2006</bcf:citekey>
+    <bcf:citekey order="88" intorder="4">Hammerschmied</bcf:citekey>
+    <bcf:citekey order="88" intorder="5">Vorenkamp</bcf:citekey>
+    <bcf:citekey order="88" intorder="6">Yong_In_Park</bcf:citekey>
+    <bcf:citekey order="88" intorder="7">Ingino</bcf:citekey>
+    <bcf:citekey order="88" intorder="8">Yoshioka_2010</bcf:citekey>
+    <bcf:citekey order="88" intorder="9">Liu_2010</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
@@ -2414,4 +2526,14 @@
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="nty/global//global/global/global"
+                type="entry"
+                sortingtemplatename="nty"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global"
+                namehashtemplatename="global">
+  </bcf:datalist>
 </bcf:controlfile>
