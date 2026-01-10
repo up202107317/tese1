@@ -524,13 +524,13 @@ INPUT .\figures\time-sparse.png
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
-INPUT .\figures\offset_error.png
-INPUT .\figures\offset_error.png
-INPUT .\figures\offset_error.png
-INPUT .\figures\offset_error.png
-INPUT .\figures\offset_error.png
-INPUT .\figures\offset_error.png
-INPUT .\figures\offset_error.png
+INPUT .\figures\Mismatch error.png
+INPUT .\figures\Mismatch error.png
+INPUT .\figures\Mismatch error.png
+INPUT .\figures\Mismatch error.png
+INPUT .\figures\Mismatch error.png
+INPUT .\figures\Mismatch error.png
+INPUT .\figures\Mismatch error.png
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7t.vf
@@ -541,12 +541,9 @@ INPUT .\figures\offset_error.png
 INPUT .\figures\offset_error.png
 INPUT .\figures\offset_error.png
 INPUT .\figures\offset_error.png
-INPUT .\figures\energy_year.png
-INPUT .\figures\energy_year.png
-INPUT .\figures\energy_year.png
-INPUT .\figures\energy_year.png
-INPUT .\figures\energy_year.png
-INPUT .\figures\energy_year.png
+INPUT .\figures\offset_error.png
+INPUT .\figures\offset_error.png
+INPUT .\figures\offset_error.png
 INPUT .\figures\fom_fs.png
 INPUT .\figures\fom_fs.png
 INPUT .\figures\fom_fs.png
@@ -598,16 +595,16 @@ INPUT .\figures\Delta-sigma 1st order.png
 INPUT .\figures\Delta-sigma 1st order.png
 INPUT .\figures\Delta-sigma 1st order.png
 INPUT .\figures\Delta-sigma 1st order.png
-INPUT .\figures\dual slope.png
-INPUT .\figures\dual slope.png
-INPUT .\figures\dual slope.png
-INPUT .\figures\dual slope.png
-INPUT .\figures\dual slope.png
-INPUT .\figures\dual slope.png
-INPUT .\figures\dual slope.png
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7t.vf
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\symbol\psyr.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
+INPUT .\figures\dual slope.png
+INPUT .\figures\dual slope.png
+INPUT .\figures\dual slope.png
+INPUT .\figures\dual slope.png
+INPUT .\figures\dual slope.png
+INPUT .\figures\dual slope.png
+INPUT .\figures\dual slope.png
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7m.vf
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\psyro.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
@@ -619,13 +616,12 @@ INPUT .\figures\VT bulk.png
 INPUT .\figures\VT bulk.png
 INPUT .\figures\VT bulk.png
 INPUT .\figures\VT bulk.png
-INPUT .\figures\Energy evo.png
-INPUT .\figures\Energy evo.png
-INPUT .\figures\Energy evo.png
-INPUT .\figures\Energy evo.png
-INPUT .\figures\Energy evo.png
-INPUT .\figures\Energy evo.png
-INPUT .\figures\Energy evo.png
+INPUT .\figures\energy_year.png
+INPUT .\figures\energy_year.png
+INPUT .\figures\energy_year.png
+INPUT .\figures\energy_year.png
+INPUT .\figures\energy_year.png
+INPUT .\figures\energy_year.png
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8t.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf

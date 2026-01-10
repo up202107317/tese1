@@ -70,13 +70,13 @@ To mitigate the power and area issues mentioned above, designers are compelled t
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.6\textwidth]{figures/offset_error.png}
-  \caption{Input offset voltage ($V_{os}$) generation in CMOS comparators due to transistor mismatch. The figure illustrates how random variations in threshold voltage ($V_{th}$) and gain factor ($\beta$) in the differential input pair result in an offset voltage that shifts the trip point of the comparator \cite{johns_martin_2012}. This mismatch-induced offset becomes the primary limitation for converter accuracy in deep-submicron technologies.}
+  \includegraphics[width=0.6\textwidth]{figures/Mismatch error.png}
+  \caption{Adapted from \cite{MPScholar}. ADC transfer function illustrating Differential Non-Linearity (DNL) errors. The graph compares the ideal staircase response (blue) with the actual response (red), highlighting varying step widths and a missing code.}
   \label{fig:Offset-error}
 \end{figure}
 
 The reduction of transistor size, while increasing speed and reducing capacitance, drastically increases random variations in parameters like the threshold voltage ($V_{th}$), leading to a significant Input Offset Voltage ($V_{os}$) in the comparators \cite{baker_cmos_2010}.
-
+Linearity errors arise from several factors, starting with component mismatches where dnl and inl faults are caused by discrepancies in resistor values within ladders or capacitors in arrays. nonlinearities in analog components such as amplifiers and other parts of the adc also influence these mistakes \cite{MPScholar}. Furthermore, variations in temperature and supply voltage can cause component values to drift, thereby contributing to linearity problems. Finally, fluctuations in the clock signal known as clock jitter cause sampling instances to vary, resulting in linearity issues that are particularly noticeable at higher frequencies.
 \section{Objectives and Contribution} \label{sec:objectives}
 
 Based on the limitations identified in traditional synchronous data conversion when dealing with sparse sensor signals, the primary objective of this work is to design and implement an energy-efficient ADC architecture, so this ADC must exploit signal inactivity to achieve a significant reduction in power consumption.
@@ -166,35 +166,6 @@ BER quantifies the probability of the converter producing an incorrect digital c
 \subsection{State-of-the-Art Comparative Analysis} \label{sec:sota_analysis}
 
 The analytical plots and tables presented below incorporate data from an exhaustive set of 140 state-of-the-art works. To ensure transparency and reproducibility, the complete list of references used to generate these performance envelopes covering Flash, SAR, Pipeline, and Sigma-Delta architectures is provided in \cite{ALCoban_1999_113,AbhishekAgrawal_2023_100,AmyWhitcombe_2024_101,AnandSubramanian_2024_143,BGregoire_2008_25,BMalkietal_2012_47,Balmelli_2004_119,BenjaminHershberg_2019_30,BramVeraverbeke_2025_91,Breems_2007_130,CCLiu_2010_45,CHChan_2015_57,CHammerschmied_1997_39,CPochet_2022_110,CYLee_2022_140,CYLiouetal_2013_50,ChengChungHsu_2007_24,ChengEnHsieh_2025_93,ChiYunStanleyWang_2019_138,ChinYuLin_2016_61,Christen_2007_131,ChunChengLiu_2016_60,Dezzani_2003_116,Dorrer_2005_124,EJanssenetal_2013_51,EwoutMartens_2024_96,FMYaul_2014_54,FMichel_2011_134,FengChen_2003_115,Fontaine_2005_125,Fujimoto_2006_129,Gaggl_2004_121,Geelen_2006_19,GeunhaKim_2023_77,GianHoogzaadandRafRoovers_1999_6,Goes_2006_128,GovertGeelenandEdwardPaulus_2004_7,HHBoo_2015_29,HKHong_2015_58,HWei_2011_46,HZhao_2022_68,HanZhao_2025_87,HendrikvanderPloegandRobertRemmers_1999_105,Hesener_2007_41,HongshuaiZhang_2023_71,HongzhiZhao_2023_73,Huber_2007_108,HwiCheolKim_2005_18,JCWang_2022_66,JLiu_2022_98,JaewonLee_2025_102,JiaChingWang_2023_97,JiangYu_2005_122,JianxiongXu_2025_1,JihangGao_2025_88,JinseokKoh_2005_123,JongmiLee_2024_144,JosephInginoJrandBruceWooley_1998_9,JunhuaShen_2025_94,JunlinZhong_2025_103,JunyanHao_2023_32,KBult_1997_4,KaiChengCheng_2024_82,KentaroYoshioka_2017_62,KyeongwonJeong_2025_86,KyojinDChoo_2016_59,LiangQi_2019_137,MDing_2015_56,MFlynn_1998_5,MYoshioka_2010_44,MZhan_2022_67,ManxinLi_2023_70,MingleiZhang_2019_63,MingtaoZhan_2023_75,MingyangGu_2025_36,Mitteregger_2006_126,Ong_1997_112,PHarpe_2014_53,PHarpe_2015_55,PHarpeetal_2012_48,PHarpeetal_2013_49,PSchvan_2006_3,PSchvan_2008_42,PatrickVogelmann_2018_135,QLiu_2022_141,RKapustaetal_2013_52,RaresBodnar_2024_83,Ray_2006_20,SUKwak_1997_8,SandeepSanthoshKumar_2023_74,SangheonLee_2024_78,Senderowicz_1997_111,SerdarAbdullahYonar_2023_99,SeungChulLee_2007_23,SewonLee_2024_84,SharvilPatil_2024_35,ShengJuiHuang_2009_133,Shimizu_2006_107,SiddharthDevarajan_2009_26,Silva_2006_127,SiyuanYe_2024_95,SiyuanYe_2025_89,SungEnHsieh_2023_31,TKang_2022_142,TWang_2022_69,Tabatabaei_2003_118,Verma_2006_40,Vleugels_2001_114,WLiu_2010_43,Waltari_2002_12,Wang_2005_16,XiyuHe_2024_80,YCHuang_2010_27,YChae_2008_132,YChaietal_2012_28,YHu_2022_139,YSegal_2022_65,YShimizu_2008_109,Yan_2003_117,YanboZhang_2023_72,YannanZhang_2025_92,Yao_2004_120,YaohuiLuan_2025_145,YiHuWang_2023_76,YingZuLin_2019_64,YongLim_2024_79,Yoshioka_2005_17,Yoshioka_2007_21,YoungDeukJeon_2007_22,YueCao_2025_37,YuefengCao_2023_33,YuefengCao_2024_34,YukoTambaandKazuoYamakido_1999_2,YunsongTao_2024_85,YunsongTao_2025_38,ZhuoyiChen_2024_81,ZhuoyiChen_2025_90,ZijianLiu_2025_104}. Collectively, these works represent the proven performance frontier across all major ADC architectures.
-\par\vspace{1.5em}
-\par\vspace{1.5em}
-\par\vspace{1.5em}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.85\textwidth]{energy_year.png}
-    \caption{Energy per conversion step vs. Year of publication (ISSCC dataset).}
-    \label{fig:energy_year}
-\end{figure}
-
-\par\vspace{1.5em}
-\par\vspace{1.5em}
-\par\vspace{1.5em}
-
-\begin{table}[htbp]
-\centering
-\caption{Energy per Conversion vs. Year (Flash reference [1] highlighted)}
-\label{tab:energy_year}
-\begin{tabular}{lllc}
-\toprule
-\textbf{Ref.} & \textbf{Architecture} & \textbf{Publication} & \textbf{Energy [pJ]} \\ \midrule
-\textbf{[1]}  & \textbf{Flash}       & \textbf{Chen \cite{Chen_2006}} & \textbf{2.02} \\
-{} [2]        & Sigma-Delta          & Jiang \cite{Jiang_2018}        & 0.059 \\
-{} [3]        & Sigma-Delta          & Veldhoven \cite{Veldhoven_2021}& 0.070 \\
-{} [4]        & SAR                  & Ginsburg \cite{Ginsburg_2014}  & 0.420 \\
-{} [5]        & Sigma-Delta          & Kim \cite{Kim_2018}            & 0.703 \\ \bottomrule
-\end{tabular}
-\end{table}
 
 \par\vspace{1.5em}
 \par\vspace{1.5em}
@@ -358,6 +329,9 @@ The internal resistive loading method involves placing a variable resistive netw
 The resistive reference ladder trimming technique corrects comparator offset by utilizing the main reference ladder as a calibration source \cite{yao_bulk_2011}. In this architecture, a switching network selects specific voltage taps from the resistor ladder and applies them to the bulk terminals of the input transistors M1 and M2. This approach leverages the body effect to shift the threshold voltage ($V_{th}$) of the differential pair, thereby nullifying the input-referred offset caused by process mismatch. 
 
 As demonstrated in the simulation results of the threshold voltage ($|V_t|$) versus the ladder tap voltage ($LT$), the threshold voltage of transistors M1 and M2 increases linearly from approximately 356.5~mV to 372~mV as the calibration voltage is adjusted. In contrast, the threshold voltage of transistors M3 and M4 remains constant at approximately 356.5~mV because their bulk terminals are not connected to the tuning network. This targeted adjustment of the bulk potential for the input differential pair provides a tuning range sufficient to compensate for random process variations and ensure the accuracy of the comparator trip points.
+\paragraph{}
+\paragraph{}
+\paragraph{}
 
 \begin{figure}[htbp]
   \centering
@@ -365,6 +339,9 @@ As demonstrated in the simulation results of the threshold voltage ($|V_t|$) ver
   \caption{Threshold voltage ($|V_t|$) variation of input differential pair transistors (M1, M2) and load transistors (M3, M4) as a function of the resistive ladder tap voltage ($LT$). The graph demonstrates the body effect: as the bulk potential of M1 and M2 is modulated via the reference ladder, their threshold voltage increases linearly, providing a calibration range to compensate for process-induced mismatch. In contrast, M3 and M4 maintain constant $V_{th}$ since their bulk terminals are connected to fixed substrate potential. This selective tuning is the basis of the proposed resistive ladder trimming mechanism \cite{yao_bulk_2011}.}
   \label{fig:mismatch_correction}
 \end{figure}
+\paragraph{}
+\paragraph{}
+\paragraph{}
 
 \subsection{Advantages of Resistive Trimming for Asynchronous ADCs}
 Compared to dynamic techniques like Auto-Zeroing which requires accurate clock phases $\phi_1, \phi_2$ and storage capacitors \cite{baker_cmos_2010}, resistive trimming offers distinct advantages for the proposed work:
@@ -375,8 +352,7 @@ Compared to dynamic techniques like Auto-Zeroing which requires accurate clock p
 
 \section{Related Works} \label{sec:related_works}
 
-% [ATENÇÃO]: As seguintes referências NÃO estão no references.bib
-% Opções: (1) Adicionar ao .bib, (2) Remover citações, (3) Substituir por refs equivalentes
+
 
 As high-speed and low-power Analog-to-Digital Converters become increasingly critical for modern integrated systems, the Flash architecture remains a preferred choice due to its parallel operation and low latency. However, at high resolutions and speeds, transistor mismatch in the comparator array poses a significant challenge, leading to increased offset voltages. To address these limitations, various research efforts have focused on current-mode techniques and optimized comparator structures.
 
@@ -417,12 +393,36 @@ Asynchronous         & 0.0314                            & 23                   
 
 The impact of this architectural difference on long-term technology trends is illustrated in Figure \ref{fig:energy_evol}. The plot depicts the energy per conversion ($P/f_s$) over the last two decades. While both paradigms show a downward trend due to process node scaling, asynchronous designs (indicated by triangular markers) consistently occupy the lower bound of the energy envelope. This suggests that eliminating the global clock is a key enabler for breaking the power efficiency barriers in modern designs.
 
+\par\vspace{1.5em}
+\par\vspace{1.5em}
+\par\vspace{1.5em}
+
 \begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.8\textwidth]{figures/Energy evo.png} 
-  \caption{Energy per conversion evolution ($P/f_s$) over the years, highlighting the lower energy floor achieved by asynchronous designs. The triangular markers represent asynchronous ADC implementations, while circular markers represent synchronous designs. The plot demonstrates that asynchronous architectures consistently achieve lower energy consumption across multiple technology nodes compared to their synchronous counterparts, validating the energy efficiency advantage of event-driven operation. Data compiled from ISSCC publications (1997-2025) \cite{lim_2013,Tamba,Schvan_2006,Hammerschmied,Vorenkamp,Yong_In_Park,Ingino,Yoshioka_2010,Liu_2010}.}
-  \label{fig:energy_evol}
+    \centering
+    \includegraphics[width=0.85\textwidth]{energy_year.png}
+    \caption{Energy per conversion step vs. Year of publication (ISSCC dataset).}
+    \label{fig:energy_year}
 \end{figure}
+
+\par\vspace{1.5em}
+\par\vspace{1.5em}
+\par\vspace{1.5em}
+
+\begin{table}[htbp]
+\centering
+\caption{Energy per Conversion vs. Year (Flash reference [1] highlighted)}
+\label{tab:energy_year}
+\begin{tabular}{lllc}
+\toprule
+\textbf{Ref.} & \textbf{Architecture} & \textbf{Publication} & \textbf{Energy [pJ]} \\ \midrule
+\textbf{[1]}  & \textbf{Flash}       & \textbf{Chen \cite{Chen_2006}} & \textbf{2.02} \\
+{} [2]        & Sigma-Delta          & Jiang \cite{Jiang_2018}        & 0.059 \\
+{} [3]        & Sigma-Delta          & Veldhoven \cite{Veldhoven_2021}& 0.070 \\
+{} [4]        & SAR                  & Ginsburg \cite{Ginsburg_2014}  & 0.420 \\
+{} [5]        & Sigma-Delta          & Kim \cite{Kim_2018}            & 0.703 \\ \bottomrule
+\end{tabular}
+\end{table}
+
 
 
 

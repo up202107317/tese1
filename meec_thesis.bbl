@@ -19,6 +19,32 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
+    \entry{Abe_2016}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=582c2c0c3dae9aec037541682692183b}{%
+           family={Abe},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{a4c0988e3171c3752518fdd5d92a5181}
+      \strng{fullhash}{a4c0988e3171c3752518fdd5d92a5181}
+      \strng{fullhashraw}{a4c0988e3171c3752518fdd5d92a5181}
+      \strng{bibnamehash}{a4c0988e3171c3752518fdd5d92a5181}
+      \strng{authorbibnamehash}{a4c0988e3171c3752518fdd5d92a5181}
+      \strng{authornamehash}{a4c0988e3171c3752518fdd5d92a5181}
+      \strng{authorfullhash}{a4c0988e3171c3752518fdd5d92a5181}
+      \strng{authorfullhashraw}{a4c0988e3171c3752518fdd5d92a5181}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Solid-State Circuits Conference (ISSCC)}
+      \field{title}{A 22.3b 1kHz 12.7mW Switched-Capacitor Delta-Sigma Modulator}
+      \field{year}{2016}
+    \endentry
     \entry{AbhishekAgrawal_2023_100}{inproceedings}{}{}
       \name{author}{12}{}{%
         {{hash=631c7a28987a8ae178b158422de2e85f}{%
@@ -311,6 +337,33 @@
       \verb 10.1109/ISSCC.2012.6177091
       \endverb
     \endentry
+    \entry{baker_cmos_2010}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=1ed1b7f2179f8fa0a502cd2c7fdf2a16}{%
+           family={Baker},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi Jacob},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{1ed1b7f2179f8fa0a502cd2c7fdf2a16}
+      \strng{fullhash}{1ed1b7f2179f8fa0a502cd2c7fdf2a16}
+      \strng{fullhashraw}{1ed1b7f2179f8fa0a502cd2c7fdf2a16}
+      \strng{bibnamehash}{1ed1b7f2179f8fa0a502cd2c7fdf2a16}
+      \strng{authorbibnamehash}{1ed1b7f2179f8fa0a502cd2c7fdf2a16}
+      \strng{authornamehash}{1ed1b7f2179f8fa0a502cd2c7fdf2a16}
+      \strng{authorfullhash}{1ed1b7f2179f8fa0a502cd2c7fdf2a16}
+      \strng{authorfullhashraw}{1ed1b7f2179f8fa0a502cd2c7fdf2a16}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{title}{CMOS: Circuit Design, Layout, and Simulation}
+      \field{year}{2010}
+    \endentry
     \entry{Balmelli_2004_119}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=e2e492dfdfb5694288e5bc25dc3e1bd4}{%
@@ -544,6 +597,39 @@
       \verb{doi}
       \verb 10.1109/ISSCC.1997.585303
       \endverb
+    \endentry
+    \entry{candy_1985}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=3e96d01e2791b38b0d243dfda1bf488c}{%
+           family={Candy},
+           familyi={C\bibinitperiod},
+           given={J.\bibnamedelimi C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=368635ce81970322161017a87db78ac2}{%
+           family={Temes},
+           familyi={T\bibinitperiod},
+           given={G.\bibnamedelimi C.},
+           giveni={G\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{3ed9139a1091f8601bd256ffccf3ab69}
+      \strng{fullhash}{3ed9139a1091f8601bd256ffccf3ab69}
+      \strng{fullhashraw}{3ed9139a1091f8601bd256ffccf3ab69}
+      \strng{bibnamehash}{3ed9139a1091f8601bd256ffccf3ab69}
+      \strng{authorbibnamehash}{3ed9139a1091f8601bd256ffccf3ab69}
+      \strng{authornamehash}{3ed9139a1091f8601bd256ffccf3ab69}
+      \strng{authorfullhash}{3ed9139a1091f8601bd256ffccf3ab69}
+      \strng{authorfullhashraw}{3ed9139a1091f8601bd256ffccf3ab69}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Circuits and Systems}
+      \field{number}{12}
+      \field{title}{Oversampling Delta-Sigma Data Converters: Theory, Design, and Simulation}
+      \field{volume}{CAS-32}
+      \field{year}{1985}
+      \field{pages}{1306\bibrangedash 1318}
+      \range{pages}{13}
     \endentry
     \entry{YueCao_2025_37}{inproceedings}{}{}
       \name{author}{9}{}{%
@@ -828,6 +914,40 @@
       \field{year}{2003}
       \verb{doi}
       \verb 10.1109/ISSCC.2003.1234204
+      \endverb
+    \endentry
+    \entry{Chen_2006}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=b082ca2d52c54e827960bd6f40b5b7ab}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={S.-W.},
+           giveni={S\bibinithyphendelim W\bibinitperiod}}}%
+        {{hash=ee3145ac3afe5475637c6ed05921cf86}{%
+           family={Brodersen},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi W.},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{cbae82f204dbfd5cafde3f8093db9b98}
+      \strng{fullhash}{cbae82f204dbfd5cafde3f8093db9b98}
+      \strng{fullhashraw}{cbae82f204dbfd5cafde3f8093db9b98}
+      \strng{bibnamehash}{cbae82f204dbfd5cafde3f8093db9b98}
+      \strng{authorbibnamehash}{cbae82f204dbfd5cafde3f8093db9b98}
+      \strng{authornamehash}{cbae82f204dbfd5cafde3f8093db9b98}
+      \strng{authorfullhash}{cbae82f204dbfd5cafde3f8093db9b98}
+      \strng{authorfullhashraw}{cbae82f204dbfd5cafde3f8093db9b98}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Solid-State Circuits Conference (ISSCC)}
+      \field{title}{A 6-bit 600-MS/s 5.3-mW Asynchronous ADC in 0.13-um CMOS}
+      \field{year}{2006}
+      \field{pages}{574\bibrangedash 583}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/ISSCC.2006.1695276
       \endverb
     \endentry
     \entry{ZhuoyiChen_2024_81}{inproceedings}{}{}
@@ -1124,6 +1244,58 @@
       \verb 10.1109/ISSCC.1999.759091
       \endverb
     \endentry
+    \entry{De_Cano_Garcia_2019}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=fcf4857939b58c152751c39aa5d050cd}{%
+           family={De\bibnamedelima Cano-Garcia},
+           familyi={D\bibinitperiod\bibinitdelim C\bibinithyphendelim G\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{8ec7dae8c518ef2b422c9d4ed0e89773}
+      \strng{fullhash}{8ec7dae8c518ef2b422c9d4ed0e89773}
+      \strng{fullhashraw}{8ec7dae8c518ef2b422c9d4ed0e89773}
+      \strng{bibnamehash}{8ec7dae8c518ef2b422c9d4ed0e89773}
+      \strng{authorbibnamehash}{8ec7dae8c518ef2b422c9d4ed0e89773}
+      \strng{authornamehash}{8ec7dae8c518ef2b422c9d4ed0e89773}
+      \strng{authorfullhash}{8ec7dae8c518ef2b422c9d4ed0e89773}
+      \strng{authorfullhashraw}{8ec7dae8c518ef2b422c9d4ed0e89773}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Solid-State Circuits Conference (ISSCC)}
+      \field{title}{A 1.41fJ/conv-step 20MS/s SAR ADC in 14nm CMOS}
+      \field{year}{2019}
+    \endentry
+    \entry{Delic-Ibus_2013}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=cabb639d9d909ab2c24fac332159e9eb}{%
+           family={Delic-Ibuspachic},
+           familyi={D\bibinithyphendelim I\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{a008b8690e58ee224fa4439f712975a0}
+      \strng{fullhash}{a008b8690e58ee224fa4439f712975a0}
+      \strng{fullhashraw}{a008b8690e58ee224fa4439f712975a0}
+      \strng{bibnamehash}{a008b8690e58ee224fa4439f712975a0}
+      \strng{authorbibnamehash}{a008b8690e58ee224fa4439f712975a0}
+      \strng{authornamehash}{a008b8690e58ee224fa4439f712975a0}
+      \strng{authorfullhash}{a008b8690e58ee224fa4439f712975a0}
+      \strng{authorfullhashraw}{a008b8690e58ee224fa4439f712975a0}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Solid-State Circuits Conference (ISSCC)}
+      \field{title}{A 120dB SNDR Audio Sigma-Delta Modulator}
+      \field{year}{2013}
+    \endentry
     \entry{SiddharthDevarajan_2009_26}{inproceedings}{}{}
       \name{author}{6}{}{%
         {{hash=7cff948b7948f468dbd15db08cb87cf6}{%
@@ -1302,6 +1474,35 @@
       \field{year}{2005}
       \verb{doi}
       \verb 10.1109/ISSCC.2005.1494084
+      \endverb
+    \endentry
+    \entry{Draxelmayr_2014}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=9d87593cb115979ad1fb88258ff53f2b}{%
+           family={Draxelmayr},
+           familyi={D\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0378264c08d45c106c98422fdf69013e}
+      \strng{fullhash}{0378264c08d45c106c98422fdf69013e}
+      \strng{fullhashraw}{0378264c08d45c106c98422fdf69013e}
+      \strng{bibnamehash}{0378264c08d45c106c98422fdf69013e}
+      \strng{authorbibnamehash}{0378264c08d45c106c98422fdf69013e}
+      \strng{authornamehash}{0378264c08d45c106c98422fdf69013e}
+      \strng{authorfullhash}{0378264c08d45c106c98422fdf69013e}
+      \strng{authorfullhashraw}{0378264c08d45c106c98422fdf69013e}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Solid-State Circuits Conference (ISSCC)}
+      \field{title}{A 2.2-GS/s 7-bit ADC with 37.4 dB SNDR}
+      \field{year}{2014}
+      \verb{doi}
+      \verb 10.1109/ISSCC.2014.6757514
       \endverb
     \endentry
     \entry{MFlynn_1998_5}{inproceedings}{}{}
@@ -1514,6 +1715,30 @@
       \verb 10.1109/ISSCC49661.2025.10904557
       \endverb
     \endentry
+    \entry{Geelen_1997}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=a5446bf5654b0e02b5994d92a4e75e4c}{%
+           family={Geelen},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{a5446bf5654b0e02b5994d92a4e75e4c}
+      \strng{fullhash}{a5446bf5654b0e02b5994d92a4e75e4c}
+      \strng{fullhashraw}{a5446bf5654b0e02b5994d92a4e75e4c}
+      \strng{bibnamehash}{a5446bf5654b0e02b5994d92a4e75e4c}
+      \strng{authorbibnamehash}{a5446bf5654b0e02b5994d92a4e75e4c}
+      \strng{authornamehash}{a5446bf5654b0e02b5994d92a4e75e4c}
+      \strng{authorfullhash}{a5446bf5654b0e02b5994d92a4e75e4c}
+      \strng{authorfullhashraw}{a5446bf5654b0e02b5994d92a4e75e4c}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Solid-State Circuits Conference (ISSCC)}
+      \field{title}{A 5V, 118dB Delta-Sigma ADC for Wideband Digital Audio}
+      \field{year}{1997}
+    \endentry
     \entry{GovertGeelenandEdwardPaulus_2004_7}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=83dddf5df3258c174ceac489a9e51a31}{%
@@ -1592,6 +1817,32 @@
       \verb{doi}
       \verb 10.1109/ISSCC.2006.1696118
       \endverb
+    \endentry
+    \entry{Ginsburg_2014}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=676b51525f2f62715e61685c66a5a51d}{%
+           family={Ginsburg},
+           familyi={G\bibinitperiod},
+           given={B.\bibnamedelimi P.},
+           giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{a70cddd93ea50316dc6284c2e345cdda}
+      \strng{fullhash}{a70cddd93ea50316dc6284c2e345cdda}
+      \strng{fullhashraw}{a70cddd93ea50316dc6284c2e345cdda}
+      \strng{bibnamehash}{a70cddd93ea50316dc6284c2e345cdda}
+      \strng{authorbibnamehash}{a70cddd93ea50316dc6284c2e345cdda}
+      \strng{authornamehash}{a70cddd93ea50316dc6284c2e345cdda}
+      \strng{authorfullhash}{a70cddd93ea50316dc6284c2e345cdda}
+      \strng{authorfullhashraw}{a70cddd93ea50316dc6284c2e345cdda}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Solid-State Circuits Conference (ISSCC)}
+      \field{title}{A 0.42-pJ/step SAR ADC in 28nm CMOS}
+      \field{year}{2014}
     \endentry
     \entry{Goes_2006_128}{inproceedings}{}{}
       \name{author}{4}{}{%
@@ -2489,6 +2740,63 @@
       \verb 10.1109/ISSCC.2007.373490
       \endverb
     \endentry
+    \entry{Jang_2018}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=fa634ef586a791e283493cc22b401c53}{%
+           family={Jang},
+           familyi={J\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{f48b01574c5c1e8f454a109a13b397ec}
+      \strng{fullhash}{f48b01574c5c1e8f454a109a13b397ec}
+      \strng{fullhashraw}{f48b01574c5c1e8f454a109a13b397ec}
+      \strng{bibnamehash}{f48b01574c5c1e8f454a109a13b397ec}
+      \strng{authorbibnamehash}{f48b01574c5c1e8f454a109a13b397ec}
+      \strng{authornamehash}{f48b01574c5c1e8f454a109a13b397ec}
+      \strng{authorfullhash}{f48b01574c5c1e8f454a109a13b397ec}
+      \strng{authorfullhashraw}{f48b01574c5c1e8f454a109a13b397ec}
+      \field{extraname}{1}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Solid-State Circuits Conference (ISSCC)}
+      \field{title}{A 0.61fJ/conv-step 270kS/s SAR ADC with Charge-Average-Loop-Preset Technique}
+      \field{year}{2018}
+      \verb{doi}
+      \verb 10.1109/ISSCC.2018.8310276
+      \endverb
+    \endentry
+    \entry{Jang_2018_2}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=fa634ef586a791e283493cc22b401c53}{%
+           family={Jang},
+           familyi={J\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{f48b01574c5c1e8f454a109a13b397ec}
+      \strng{fullhash}{f48b01574c5c1e8f454a109a13b397ec}
+      \strng{fullhashraw}{f48b01574c5c1e8f454a109a13b397ec}
+      \strng{bibnamehash}{f48b01574c5c1e8f454a109a13b397ec}
+      \strng{authorbibnamehash}{f48b01574c5c1e8f454a109a13b397ec}
+      \strng{authornamehash}{f48b01574c5c1e8f454a109a13b397ec}
+      \strng{authorfullhash}{f48b01574c5c1e8f454a109a13b397ec}
+      \strng{authorfullhashraw}{f48b01574c5c1e8f454a109a13b397ec}
+      \field{extraname}{2}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Solid-State Circuits Conference (ISSCC)}
+      \field{title}{A 118dB DR Delta-Sigma Modulator for Audio Applications}
+      \field{year}{2018}
+    \endentry
     \entry{YoungDeukJeon_2007_22}{inproceedings}{}{}
       \name{author}{5}{}{%
         {{hash=36266cd20b79c49a76d2be800a46c5ea}{%
@@ -2583,6 +2891,64 @@
       \verb 10.1109/ISSCC49661.2025.10904745
       \endverb
     \endentry
+    \entry{Jiang_2018}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=199bb51203651a61c1509f581bb23169}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{4814bd7cb0a56c36b12654d0311d76ef}
+      \strng{fullhash}{4814bd7cb0a56c36b12654d0311d76ef}
+      \strng{fullhashraw}{4814bd7cb0a56c36b12654d0311d76ef}
+      \strng{bibnamehash}{4814bd7cb0a56c36b12654d0311d76ef}
+      \strng{authorbibnamehash}{4814bd7cb0a56c36b12654d0311d76ef}
+      \strng{authornamehash}{4814bd7cb0a56c36b12654d0311d76ef}
+      \strng{authorfullhash}{4814bd7cb0a56c36b12654d0311d76ef}
+      \strng{authorfullhashraw}{4814bd7cb0a56c36b12654d0311d76ef}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Solid-State Circuits Conference (ISSCC)}
+      \field{title}{A 0.059-pJ/conv-step Sigma-Delta ADC}
+      \field{year}{2018}
+    \endentry
+    \entry{johns_martin_2012}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=773d7aa2afcaf1a992be7d3ed71528a9}{%
+           family={Johns},
+           familyi={J\bibinitperiod},
+           given={David\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=417386cd55d38dbbe1bbebccbbc8e8ed}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={Ken},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{a35b8bcd4a6ffc8d40632b062db71c60}
+      \strng{fullhash}{a35b8bcd4a6ffc8d40632b062db71c60}
+      \strng{fullhashraw}{a35b8bcd4a6ffc8d40632b062db71c60}
+      \strng{bibnamehash}{a35b8bcd4a6ffc8d40632b062db71c60}
+      \strng{authorbibnamehash}{a35b8bcd4a6ffc8d40632b062db71c60}
+      \strng{authornamehash}{a35b8bcd4a6ffc8d40632b062db71c60}
+      \strng{authorfullhash}{a35b8bcd4a6ffc8d40632b062db71c60}
+      \strng{authorfullhashraw}{a35b8bcd4a6ffc8d40632b062db71c60}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2nd}
+      \field{title}{Analog Integrated Circuit Design}
+      \field{year}{2012}
+    \endentry
     \entry{JosephInginoJrandBruceWooley_1998_9}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=2c04c506ab36a7ad14c17dc36f251b20}{%
@@ -2662,6 +3028,36 @@
       \verb 10.1109/ISSCC42614.2022.9731571
       \endverb
     \endentry
+    \entry{Kim_2018}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=87b519a00b2eae1a40d639131cfc3c13}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8abf4783ca4cf8230f51a971aea26dff}
+      \strng{fullhash}{8abf4783ca4cf8230f51a971aea26dff}
+      \strng{fullhashraw}{8abf4783ca4cf8230f51a971aea26dff}
+      \strng{bibnamehash}{8abf4783ca4cf8230f51a971aea26dff}
+      \strng{authorbibnamehash}{8abf4783ca4cf8230f51a971aea26dff}
+      \strng{authornamehash}{8abf4783ca4cf8230f51a971aea26dff}
+      \strng{authorfullhash}{8abf4783ca4cf8230f51a971aea26dff}
+      \strng{authorfullhashraw}{8abf4783ca4cf8230f51a971aea26dff}
+      \field{extraname}{1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Solid-State Circuits Conference (ISSCC)}
+      \field{title}{A 0.3V Biofuel-Cell-Powered Glucose/Lactate Biosensing System Integrating a 142nW ADC}
+      \field{year}{2018}
+      \verb{doi}
+      \verb 10.1109/ISSCC.2018.8310240
+      \endverb
+    \endentry
     \entry{GeunhaKim_2023_77}{inproceedings}{}{}
       \name{author}{9}{}{%
         {{hash=998d1267ecdd05dd72203de539c9f7f1}{%
@@ -2718,6 +3114,7 @@
       \strng{authornamehash}{6092b5973e367f696bbd8f46140cdd3e}
       \strng{authorfullhash}{3fdf96394bcf69a79e049ef768802861}
       \strng{authorfullhashraw}{3fdf96394bcf69a79e049ef768802861}
+      \field{extraname}{2}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
@@ -3265,6 +3662,39 @@
       \verb 10.1109/ISSCC42615.2023.10067703
       \endverb
     \endentry
+    \entry{lim_2013}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{2}{}{%
+        {{hash=89dda28cac79a47adf9134d5598c4f12}{%
+           family={Lim},
+           familyi={L\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=9243e77cb0508214bab00db3b2daaf8c}{%
+           family={Salehi},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{d513685186b71284c00bfb268554ad16}
+      \strng{fullhash}{d513685186b71284c00bfb268554ad16}
+      \strng{fullhashraw}{d513685186b71284c00bfb268554ad16}
+      \strng{bibnamehash}{d513685186b71284c00bfb268554ad16}
+      \strng{authorbibnamehash}{d513685186b71284c00bfb268554ad16}
+      \strng{authornamehash}{d513685186b71284c00bfb268554ad16}
+      \strng{authorfullhash}{d513685186b71284c00bfb268554ad16}
+      \strng{authorfullhashraw}{d513685186b71284c00bfb268554ad16}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Biomedical Circuits and Systems}
+      \field{number}{3}
+      \field{title}{Asynchronous Level-Crossing Sampling ADC for Bio-Signals}
+      \field{volume}{7}
+      \field{year}{2013}
+    \endentry
     \entry{YongLim_2024_79}{inproceedings}{}{}
       \name{author}{7}{}{%
         {{hash=1bae07cfeb5b536b8d37321ba85a792d}{%
@@ -3743,6 +4173,35 @@
       \verb 10.1109/ISSCC49661.2025.10904732
       \endverb
     \endentry
+    \entry{Lukas_2014}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=7e0e4849a495be78196e89f261832f80}{%
+           family={Lukas},
+           familyi={L\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{b31caae2fc83fcbf31dd1008d4e5af57}
+      \strng{fullhash}{b31caae2fc83fcbf31dd1008d4e5af57}
+      \strng{fullhashraw}{b31caae2fc83fcbf31dd1008d4e5af57}
+      \strng{bibnamehash}{b31caae2fc83fcbf31dd1008d4e5af57}
+      \strng{authorbibnamehash}{b31caae2fc83fcbf31dd1008d4e5af57}
+      \strng{authornamehash}{b31caae2fc83fcbf31dd1008d4e5af57}
+      \strng{authorfullhash}{b31caae2fc83fcbf31dd1008d4e5af57}
+      \strng{authorfullhashraw}{b31caae2fc83fcbf31dd1008d4e5af57}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Solid-State Circuits Conference (ISSCC)}
+      \field{title}{A 20-GS/s 6-bit Interleaved ADC with 1.2-V Supply}
+      \field{year}{2014}
+      \verb{doi}
+      \verb 10.1109/ISSCC.2014.6757512
+      \endverb
+    \endentry
     \entry{EwoutMartens_2024_96}{inproceedings}{}{}
       \name{author}{8}{}{%
         {{hash=596572f43f43a60c4a817c88164efbdb}{%
@@ -3899,6 +4358,32 @@
       \verb 10.1109/ISSCC.2006.1696042
       \endverb
     \endentry
+    \entry{Muller_2015}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=ed30eac30434db247eecdc865e014103}{%
+           family={Muller},
+           familyi={M\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{b1e95ab7eabd3a09e4d9f7c7b77842cc}
+      \strng{fullhash}{b1e95ab7eabd3a09e4d9f7c7b77842cc}
+      \strng{fullhashraw}{b1e95ab7eabd3a09e4d9f7c7b77842cc}
+      \strng{bibnamehash}{b1e95ab7eabd3a09e4d9f7c7b77842cc}
+      \strng{authorbibnamehash}{b1e95ab7eabd3a09e4d9f7c7b77842cc}
+      \strng{authornamehash}{b1e95ab7eabd3a09e4d9f7c7b77842cc}
+      \strng{authorfullhash}{b1e95ab7eabd3a09e4d9f7c7b77842cc}
+      \strng{authorfullhashraw}{b1e95ab7eabd3a09e4d9f7c7b77842cc}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Solid-State Circuits Conference (ISSCC)}
+      \field{title}{A 3nW Signal-Acquisition IC Integrating an Amplifier and a 1.5fJ/conv-step ADC}
+      \field{year}{2015}
+    \endentry
     \entry{Ong_1997_112}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=f2e6cec9c75cb09b65a4639831a80fef}{%
@@ -4017,6 +4502,34 @@
       \verb{doi}
       \verb 10.1109/ISSCC49657.2024.10454477
       \endverb
+    \endentry
+    \entry{van_de_plassche_1994}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=fc7a58c0cd86a958a563b88fbf39e14c}{%
+           family={Plassche},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+           prefix={van\bibnamedelima de},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Kluwer Academic Publishers}%
+      }
+      \strng{namehash}{fc7a58c0cd86a958a563b88fbf39e14c}
+      \strng{fullhash}{fc7a58c0cd86a958a563b88fbf39e14c}
+      \strng{fullhashraw}{fc7a58c0cd86a958a563b88fbf39e14c}
+      \strng{bibnamehash}{fc7a58c0cd86a958a563b88fbf39e14c}
+      \strng{authorbibnamehash}{fc7a58c0cd86a958a563b88fbf39e14c}
+      \strng{authornamehash}{fc7a58c0cd86a958a563b88fbf39e14c}
+      \strng{authorfullhash}{fc7a58c0cd86a958a563b88fbf39e14c}
+      \strng{authorfullhashraw}{fc7a58c0cd86a958a563b88fbf39e14c}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Integrated Analog-to-Digital and Digital-to-Analog Converters}
+      \field{year}{1994}
     \endentry
     \entry{HendrikvanderPloegandRobertRemmers_1999_105}{inproceedings}{}{}
       \name{author}{2}{}{%
@@ -4168,6 +4681,122 @@
       \verb 10.1109/ISSCC.2006.1696125
       \endverb
     \endentry
+    \entry{microelectronics_1998}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=c7a8cbdc611fb566c84f257674d0a44f}{%
+           family={Razavi},
+           familyi={R\bibinitperiod},
+           given={Behzad},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall}%
+      }
+      \strng{namehash}{c7a8cbdc611fb566c84f257674d0a44f}
+      \strng{fullhash}{c7a8cbdc611fb566c84f257674d0a44f}
+      \strng{fullhashraw}{c7a8cbdc611fb566c84f257674d0a44f}
+      \strng{bibnamehash}{c7a8cbdc611fb566c84f257674d0a44f}
+      \strng{authorbibnamehash}{c7a8cbdc611fb566c84f257674d0a44f}
+      \strng{authornamehash}{c7a8cbdc611fb566c84f257674d0a44f}
+      \strng{authorfullhash}{c7a8cbdc611fb566c84f257674d0a44f}
+      \strng{authorfullhashraw}{c7a8cbdc611fb566c84f257674d0a44f}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Microelectronics}
+      \field{year}{1998}
+    \endentry
+    \entry{schreier_2005}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=c60d55220de9901bc5951a1fe080b01a}{%
+           family={Schreier},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=368635ce81970322161017a87db78ac2}{%
+           family={Temes},
+           familyi={T\bibinitperiod},
+           given={G.\bibnamedelimi C.},
+           giveni={G\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE Press}%
+      }
+      \strng{namehash}{5d81ad2f2f3562b9621240c78071dae5}
+      \strng{fullhash}{5d81ad2f2f3562b9621240c78071dae5}
+      \strng{fullhashraw}{5d81ad2f2f3562b9621240c78071dae5}
+      \strng{bibnamehash}{5d81ad2f2f3562b9621240c78071dae5}
+      \strng{authorbibnamehash}{5d81ad2f2f3562b9621240c78071dae5}
+      \strng{authornamehash}{5d81ad2f2f3562b9621240c78071dae5}
+      \strng{authorfullhash}{5d81ad2f2f3562b9621240c78071dae5}
+      \strng{authorfullhashraw}{5d81ad2f2f3562b9621240c78071dae5}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Understanding Delta-Sigma Data Converters}
+      \field{year}{2005}
+    \endentry
+    \entry{Schvan_2006}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{hash=8eab1c87d889b3eb8274402555490ef9}{%
+           family={Schvan},
+           familyi={S\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=1ec1f026ef08da5cbb1beb65205e0306}{%
+           family={Pollex},
+           familyi={P\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=958e43199a5bd1a8ab484d67cc3f4f94}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Shing-Chi},
+           giveni={S\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=d59284687a3e93d58c4f2e4600a9a172}{%
+           family={Falt},
+           familyi={F\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=53862d40cfac5945e3ae413027c3a349}{%
+           family={Ben-Hamida},
+           familyi={B\bibinithyphendelim H\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{5e6cd56e5c190e1ca48880cd85589028}
+      \strng{fullhash}{10e7179401d424449f284e51e00e72ec}
+      \strng{fullhashraw}{10e7179401d424449f284e51e00e72ec}
+      \strng{bibnamehash}{5e6cd56e5c190e1ca48880cd85589028}
+      \strng{authorbibnamehash}{5e6cd56e5c190e1ca48880cd85589028}
+      \strng{authornamehash}{5e6cd56e5c190e1ca48880cd85589028}
+      \strng{authorfullhash}{10e7179401d424449f284e51e00e72ec}
+      \strng{authorfullhashraw}{10e7179401d424449f284e51e00e72ec}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2006 IEEE International Solid State Circuits Conference - Digest of Technical Papers}
+      \field{title}{A 22GS/s 5b adc in 0.13/spl mu/m SiGe BiCMOS}
+      \field{year}{2006}
+      \field{pages}{2340â€“2349}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1109/isscc.2006.1696297
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1109/ISSCC.2006.1696297
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1109/ISSCC.2006.1696297
+      \endverb
+    \endentry
     \entry{PSchvan_2006_3}{inproceedings}{}{}
       \name{author}{5}{}{%
         {{hash=8eab1c87d889b3eb8274402555490ef9}{%
@@ -4204,7 +4833,7 @@
       \strng{authornamehash}{5e6cd56e5c190e1ca48880cd85589028}
       \strng{authorfullhash}{fd2e8c8e06a360228b714e596d7db091}
       \strng{authorfullhashraw}{fd2e8c8e06a360228b714e596d7db091}
-      \field{extraname}{1}
+      \field{extraname}{2}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
@@ -4282,7 +4911,7 @@
       \strng{authornamehash}{5e6cd56e5c190e1ca48880cd85589028}
       \strng{authorfullhash}{3b7dc744f41551d613ae029e26ddfd97}
       \strng{authorfullhashraw}{3b7dc744f41551d613ae029e26ddfd97}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
@@ -4467,6 +5096,34 @@
       \verb{doi}
       \verb 10.1109/ISSCC.1997.585336
       \endverb
+    \endentry
+    \entry{shannon_1949}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=22e2130b8d96f93daba648ff62af869b}{%
+           family={Shannon},
+           familyi={S\bibinitperiod},
+           given={C.\bibnamedelimi E.},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{22e2130b8d96f93daba648ff62af869b}
+      \strng{fullhash}{22e2130b8d96f93daba648ff62af869b}
+      \strng{fullhashraw}{22e2130b8d96f93daba648ff62af869b}
+      \strng{bibnamehash}{22e2130b8d96f93daba648ff62af869b}
+      \strng{authorbibnamehash}{22e2130b8d96f93daba648ff62af869b}
+      \strng{authornamehash}{22e2130b8d96f93daba648ff62af869b}
+      \strng{authorfullhash}{22e2130b8d96f93daba648ff62af869b}
+      \strng{authorfullhashraw}{22e2130b8d96f93daba648ff62af869b}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the IRE}
+      \field{number}{1}
+      \field{title}{Communication in the Presence of Noise}
+      \field{volume}{37}
+      \field{year}{1949}
+      \field{pages}{10\bibrangedash 21}
+      \range{pages}{12}
     \endentry
     \entry{JunhuaShen_2025_94}{inproceedings}{}{}
       \name{author}{6}{}{%
@@ -4747,6 +5404,50 @@
       \verb 10.1109/ISSCC.2003.1234210
       \endverb
     \endentry
+    \entry{Tamba}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=9e4394c98984347b5377eeb0c42bb934}{%
+           family={Tamba},
+           familyi={T\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=2b4841a6ad39b816bdca0adc1c1d384f}{%
+           family={Yamakido},
+           familyi={Y\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{26be881230b2259720e679cc2e77352f}
+      \strng{fullhash}{26be881230b2259720e679cc2e77352f}
+      \strng{fullhashraw}{26be881230b2259720e679cc2e77352f}
+      \strng{bibnamehash}{26be881230b2259720e679cc2e77352f}
+      \strng{authorbibnamehash}{26be881230b2259720e679cc2e77352f}
+      \strng{authornamehash}{26be881230b2259720e679cc2e77352f}
+      \strng{authorfullhash}{26be881230b2259720e679cc2e77352f}
+      \strng{authorfullhashraw}{26be881230b2259720e679cc2e77352f}
+      \field{extraname}{1}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{1999 IEEE International Solid-State Circuits Conference. Digest of Technical Papers. ISSCC. First Edition (Cat. No.99CH36278)}
+      \field{series}{ISSCC-99}
+      \field{title}{A CMOS 6 b 500 MSample/s ADC for a hard disk drive read channel}
+      \field{pages}{324â€“325}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1109/isscc.1999.759272
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1109/ISSCC.1999.759272
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1109/ISSCC.1999.759272
+      \endverb
+    \endentry
     \entry{YukoTambaandKazuoYamakido_1999_2}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=949a03ac54e6cead891dd4458a431db2}{%
@@ -4768,6 +5469,7 @@
       \strng{authornamehash}{aefb74bb5af276fa001c973bc646212e}
       \strng{authorfullhash}{aefb74bb5af276fa001c973bc646212e}
       \strng{authorfullhashraw}{aefb74bb5af276fa001c973bc646212e}
+      \field{extraname}{2}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{labelnamesource}{author}
@@ -4899,6 +5601,32 @@
       \verb{doi}
       \verb 10.1109/ISSCC49661.2025.10904751
       \endverb
+    \endentry
+    \entry{Veldhoven_2021}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=81ac68d2677de61487c213d25cf642b2}{%
+           family={Van\bibnamedelima Veldhoven},
+           familyi={V\bibinitperiod\bibinitdelim V\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{c5e59e0e314dabbe48fb9b571c578dc2}
+      \strng{fullhash}{c5e59e0e314dabbe48fb9b571c578dc2}
+      \strng{fullhashraw}{c5e59e0e314dabbe48fb9b571c578dc2}
+      \strng{bibnamehash}{c5e59e0e314dabbe48fb9b571c578dc2}
+      \strng{authorbibnamehash}{c5e59e0e314dabbe48fb9b571c578dc2}
+      \strng{authornamehash}{c5e59e0e314dabbe48fb9b571c578dc2}
+      \strng{authorfullhash}{c5e59e0e314dabbe48fb9b571c578dc2}
+      \strng{authorfullhashraw}{c5e59e0e314dabbe48fb9b571c578dc2}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Solid-State Circuits Conference (ISSCC)}
+      \field{title}{A Sub-pJ Energy-Efficient ADC for IoT}
+      \field{year}{2021}
     \endentry
     \entry{BramVeraverbeke_2025_91}{inproceedings}{}{}
       \name{author}{2}{}{%
@@ -5519,6 +6247,32 @@
       \verb{doi}
       \verb 10.1109/ISSCC.2003.1234208
       \endverb
+    \endentry
+    \entry{yao_bulk_2011}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=02f71913ccb0d9f1e99d70ec64b68c46}{%
+           family={Yao},
+           familyi={Y\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{02f71913ccb0d9f1e99d70ec64b68c46}
+      \strng{fullhash}{02f71913ccb0d9f1e99d70ec64b68c46}
+      \strng{fullhashraw}{02f71913ccb0d9f1e99d70ec64b68c46}
+      \strng{bibnamehash}{02f71913ccb0d9f1e99d70ec64b68c46}
+      \strng{authorbibnamehash}{02f71913ccb0d9f1e99d70ec64b68c46}
+      \strng{authornamehash}{02f71913ccb0d9f1e99d70ec64b68c46}
+      \strng{authorfullhash}{02f71913ccb0d9f1e99d70ec64b68c46}
+      \strng{authorfullhashraw}{02f71913ccb0d9f1e99d70ec64b68c46}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Journal of Solid-State Circuits}
+      \field{number}{10}
+      \field{title}{Bulk-Driven Switched-Opamp Integrator for Low-Voltage Low-Power Data Converters}
+      \field{volume}{46}
+      \field{year}{2011}
     \endentry
     \entry{Yao_2004_120}{inproceedings}{}{}
       \name{author}{3}{}{%
@@ -6476,37 +7230,7 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{Abe_2016}
-  \missing{Chen_2006}
-  \missing{De_Cano_Garcia_2019}
-  \missing{Delic-Ibus_2013}
-  \missing{Draxelmayr_2014}
-  \missing{Geelen_1997}
-  \missing{Ginsburg_2014}
-  \missing{Hammerschmied}
-  \missing{Ingino}
-  \missing{Jang_2018}
-  \missing{Jang_2018_2}
-  \missing{Jiang_2018}
-  \missing{Kim_2018}
-  \missing{Liu_2010}
-  \missing{Lukas_2014}
-  \missing{Muller_2015}
-  \missing{Schvan_2006}
-  \missing{Tamba}
-  \missing{Veldhoven_2021}
-  \missing{Vorenkamp}
-  \missing{Yong_In_Park}
-  \missing{Yoshioka_2010}
-  \missing{baker_cmos_2010}
-  \missing{candy_1985}
-  \missing{johns_martin_2012}
-  \missing{lim_2013}
-  \missing{microelectronics_1998}
-  \missing{schreier_2005}
-  \missing{shannon_1949}
-  \missing{van_de_plassche_1994}
-  \missing{yao_bulk_2011}
+  \missing{MPScholar}
 \endrefsection
 \endinput
 

@@ -1,47 +1,18 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
-[1] Config.pm:331> INFO - Logfile is 'meec_thesis.blg'
-[118] biber-MSWIN64:342> INFO - === 
-[157] Biber.pm:421> INFO - Reading 'meec_thesis.bcf'
-[320] Biber.pm:1002> INFO - Found 169 citekeys in bib section 0
-[335] Biber.pm:4487> INFO - Processing section 0
-[347] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
-[415] bibtex.pm:1713> INFO - LaTeX decoding ...
-[539] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[1603] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1603] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1603] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[1603] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
-[1738] bbl.pm:676> INFO - Writing 'meec_thesis.bbl' with encoding 'UTF-8'
-[1852] bbl.pm:779> INFO - Output to meec_thesis.bbl
-[1853] Biber.pm:132> WARN - I didn't find a database entry for 'johns_martin_2012' (section 0)
-[1853] Biber.pm:132> WARN - I didn't find a database entry for 'shannon_1949' (section 0)
-[1853] Biber.pm:132> WARN - I didn't find a database entry for 'lim_2013' (section 0)
-[1853] Biber.pm:132> WARN - I didn't find a database entry for 'baker_cmos_2010' (section 0)
-[1853] Biber.pm:132> WARN - I didn't find a database entry for 'van_de_plassche_1994' (section 0)
-[1853] Biber.pm:132> WARN - I didn't find a database entry for 'Chen_2006' (section 0)
-[1853] Biber.pm:132> WARN - I didn't find a database entry for 'Jiang_2018' (section 0)
-[1853] Biber.pm:132> WARN - I didn't find a database entry for 'Veldhoven_2021' (section 0)
-[1853] Biber.pm:132> WARN - I didn't find a database entry for 'Ginsburg_2014' (section 0)
-[1853] Biber.pm:132> WARN - I didn't find a database entry for 'Kim_2018' (section 0)
-[1854] Biber.pm:132> WARN - I didn't find a database entry for 'Lukas_2014' (section 0)
-[1854] Biber.pm:132> WARN - I didn't find a database entry for 'Jang_2018' (section 0)
-[1854] Biber.pm:132> WARN - I didn't find a database entry for 'De_Cano_Garcia_2019' (section 0)
-[1854] Biber.pm:132> WARN - I didn't find a database entry for 'Muller_2015' (section 0)
-[1854] Biber.pm:132> WARN - I didn't find a database entry for 'Draxelmayr_2014' (section 0)
-[1854] Biber.pm:132> WARN - I didn't find a database entry for 'Delic-Ibus_2013' (section 0)
-[1854] Biber.pm:132> WARN - I didn't find a database entry for 'Jang_2018_2' (section 0)
-[1854] Biber.pm:132> WARN - I didn't find a database entry for 'Abe_2016' (section 0)
-[1854] Biber.pm:132> WARN - I didn't find a database entry for 'Geelen_1997' (section 0)
-[1854] Biber.pm:132> WARN - I didn't find a database entry for 'Tamba' (section 0)
-[1854] Biber.pm:132> WARN - I didn't find a database entry for 'Schvan_2006' (section 0)
-[1854] Biber.pm:132> WARN - I didn't find a database entry for 'candy_1985' (section 0)
-[1854] Biber.pm:132> WARN - I didn't find a database entry for 'schreier_2005' (section 0)
-[1854] Biber.pm:132> WARN - I didn't find a database entry for 'microelectronics_1998' (section 0)
-[1854] Biber.pm:132> WARN - I didn't find a database entry for 'yao_bulk_2011' (section 0)
-[1854] Biber.pm:132> WARN - I didn't find a database entry for 'Hammerschmied' (section 0)
-[1854] Biber.pm:132> WARN - I didn't find a database entry for 'Vorenkamp' (section 0)
-[1854] Biber.pm:132> WARN - I didn't find a database entry for 'Yong_In_Park' (section 0)
-[1854] Biber.pm:132> WARN - I didn't find a database entry for 'Ingino' (section 0)
-[1854] Biber.pm:132> WARN - I didn't find a database entry for 'Yoshioka_2010' (section 0)
-[1854] Biber.pm:132> WARN - I didn't find a database entry for 'Liu_2010' (section 0)
-[1854] Biber.pm:134> INFO - WARNINGS: 31
+[0] Config.pm:331> INFO - Logfile is 'meec_thesis.blg'
+[126] biber-MSWIN64:342> INFO - === 
+[172] Biber.pm:421> INFO - Reading 'meec_thesis.bcf'
+[352] Biber.pm:1002> INFO - Found 164 citekeys in bib section 0
+[369] Biber.pm:4487> INFO - Processing section 0
+[381] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
+[481] bibtex.pm:1713> INFO - LaTeX decoding ...
+[811] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[2028] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2028] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2028] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[2028] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[2191] bbl.pm:676> INFO - Writing 'meec_thesis.bbl' with encoding 'UTF-8'
+[2322] bbl.pm:779> INFO - Output to meec_thesis.bbl
+[2322] Biber.pm:132> WARN - Possible typo (case mismatch) between datasource keys: 'Van_Der_Ploeg' and 'van_der_Ploeg' in file 'references.bib'
+[2322] Biber.pm:132> WARN - I didn't find a database entry for 'MPScholar' (section 0)
+[2322] Biber.pm:134> INFO - WARNINGS: 2
