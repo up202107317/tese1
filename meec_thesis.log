@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.20)  9 JAN 2026 17:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.20)  11 JAN 2026 18:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1142,7 +1142,7 @@ Overfull \hbox (5.71313pt too wide) in paragraph at lines 31--32
 []\T1/ptm/m/n/10.95 Traditional data con-ver-sion ap-proaches, based on uni-form sam-pling and dic-tated by the Nyquist-
  []
 
-<figures/time-sparse.png, id=297, 475.7775pt x 281.55188pt>
+<figures/time-sparse.png, id=295, 475.7775pt x 281.55188pt>
 File: figures/time-sparse.png Graphic file (type png)
 <use figures/time-sparse.png>
 Package pdftex.def Info: figures/time-sparse.png  used on input line 35.
@@ -1158,7 +1158,7 @@ Package pdftex.def Info: figures/time-sparse.png  used on input line 35.
 ]
 
 [2 <./figures/time-sparse.png>]
-<figures/Mismatch error.png, id=314, 963.6pt x 777.90625pt>
+<figures/Mismatch error.png, id=312, 963.6pt x 777.90625pt>
 File: figures/Mismatch error.png Graphic file (type png)
 <use figures/Mismatch error.png>
 Package pdftex.def Info: figures/Mismatch error.png  used on input line 73.
@@ -1188,7 +1188,7 @@ Chapter 2.
 ]
 
 [7]
-<figures/offset_error.png, id=370, 425.33907pt x 396.7322pt>
+<figures/offset_error.png, id=368, 425.33907pt x 396.7322pt>
 File: figures/offset_error.png Graphic file (type png)
 <use figures/offset_error.png>
 Package pdftex.def Info: figures/offset_error.png  used on input line 158.
@@ -1196,12 +1196,12 @@ Package pdftex.def Info: figures/offset_error.png  used on input line 158.
 
 
 [8 <./figures/offset_error.png>]
-<figures/fom_fs.png, id=421, 867.24pt x 505.89pt>
+<figures/fom_fs.png, id=419, 867.24pt x 505.89pt>
 File: figures/fom_fs.png Graphic file (type png)
 <use figures/fom_fs.png>
 Package pdftex.def Info: figures/fom_fs.png  used on input line 176.
 (pdftex.def)             Requested size: 362.77525pt x 211.62323pt.
-<figures/snr_fs.png, id=427, 867.24pt x 505.89pt>
+<figures/snr_fs.png, id=425, 867.24pt x 505.89pt>
 File: figures/snr_fs.png Graphic file (type png)
 <use figures/snr_fs.png>
 Package pdftex.def Info: figures/snr_fs.png  used on input line 206.
@@ -1213,81 +1213,108 @@ Package pdftex.def Info: figures/snr_fs.png  used on input line 206.
 [10 <./figures/snr_fs.png>]
 
 [11]
-<figures/SAR.png, id=506, 257.763pt x 155.3805pt>
-File: figures/SAR.png Graphic file (type png)
-<use figures/SAR.png>
-Package pdftex.def Info: figures/SAR.png  used on input line 252.
-(pdftex.def)             Requested size: 341.43437pt x 205.82599pt.
-<figures/Pipeline.png, id=510, 697.8572pt x 456.95718pt>
-File: figures/Pipeline.png Graphic file (type png)
-<use figures/Pipeline.png>
-Package pdftex.def Info: figures/Pipeline.png  used on input line 262.
-(pdftex.def)             Requested size: 341.43437pt x 223.5693pt.
+Overfull \hbox (20.53398pt too wide) in paragraph at lines 284--284
+[][]\T1/ptm/m/n/10.95 SHA  
+ []
+
+
+Overfull \hbox (17.55829pt too wide) in paragraph at lines 284--284
+[][]\T1/ptm/m/n/10.95 Output  
+ []
+
+
+Overfull \hbox (10.99428pt too wide) in paragraph at lines 284--284
+[][]\T1/ptm/m/n/10.95 Comparator  
+ []
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 267.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 359.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 267.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 359.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 267.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 359.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 359.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 267.
+(hyperref)                removing `\Sigma' on input line 359.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Sigma' on input line 267.
+(hyperref)                removing `\Delta' on input line 359.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Delta' on input line 267.
+(hyperref)                removing `math shift' on input line 359.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 267.
 
-<figures/Delta-sigma 1st order.png, id=515, 713.66624pt x 465.23813pt>
-File: figures/Delta-sigma 1st order.png Graphic file (type png)
-<use figures/Delta-sigma 1st order.png>
-Package pdftex.def Info: figures/Delta-sigma 1st order.png  used on input line 272.
-(pdftex.def)             Requested size: 341.43437pt x 222.58057pt.
+[12]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 466.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 466.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 466.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 466.
+ (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 10.40245pt on input line 466.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 10.40245pt on input line 466.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 7.59998pt on input line 466.
 
 
-[12 <./figures/SAR.png>]
-
-[13 <./figures/Pipeline.png> <./figures/Delta-sigma 1st order.png>]
-<figures/dual slope.png, id=531, 721.94719pt x 263.48438pt>
-File: figures/dual slope.png Graphic file (type png)
-<use figures/dual slope.png>
-Package pdftex.def Info: figures/dual slope.png  used on input line 282.
-(pdftex.def)             Requested size: 341.43437pt x 124.60959pt.
+Package mathptmx Warning: There are no bold math fonts on input line 521.
 
 
-[14 <./figures/dual slope.png>]
+Overfull \hbox (9.74214pt too wide) in paragraph at lines 521--521
+[][]\T1/ptm/m/n/10.95 Clock  
+ []
+
+
+Overfull \hbox (10.44482pt too wide) in paragraph at lines 521--521
+[][]\T1/ptm/m/n/10.95 Digital 
+ []
+
+
+Overfull \hbox (12.865pt too wide) in paragraph at lines 521--521
+\T1/ptm/m/n/10.95 counter  
+ []
+
+
+
+[13]
+
+[14]
 
 [15]
-<figures/VT bulk.png, id=551, 287.57437pt x 147.55125pt>
+<figures/VT bulk.png, id=546, 287.57437pt x 147.55125pt>
 File: figures/VT bulk.png Graphic file (type png)
 <use figures/VT bulk.png>
-Package pdftex.def Info: figures/VT bulk.png  used on input line 338.
+Package pdftex.def Info: figures/VT bulk.png  used on input line 578.
 (pdftex.def)             Requested size: 298.75264pt x 153.29205pt.
 
 
-[16]
+[16 <./figures/VT bulk.png>]
 
-[17 <./figures/VT bulk.png>]
+[17]
 
-LaTeX Warning: Reference `fig:energy_evol' on page 18 undefined on input line 394.
+LaTeX Warning: Reference `fig:energy_evol' on page 18 undefined on input line 634.
 
+<figures/energy_year.png, id=573, 867.24pt x 505.89pt>
+File: figures/energy_year.png Graphic file (type png)
+<use figures/energy_year.png>
+Package pdftex.def Info: figures/energy_year.png  used on input line 642.
+(pdftex.def)             Requested size: 362.77525pt x 211.62323pt.
 
 
 [18]
-<figures/energy_year.png, id=585, 867.24pt x 505.89pt>
-File: figures/energy_year.png Graphic file (type png)
-<use figures/energy_year.png>
-Package pdftex.def Info: figures/energy_year.png  used on input line 402.
-(pdftex.def)             Requested size: 362.77525pt x 211.62323pt.
-
 
 [19 <./figures/energy_year.png>]
 Chapter 3.
@@ -1298,10 +1325,12 @@ Chapter 3.
 ]
 
 [21]
+
+[22]
 Chapter 4.
 )
 
-[22
+[23
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+pcrs on input line 120.
@@ -1312,7 +1341,7 @@ LaTeX Font Info:    Font shape `T1/pcrs/m/n' will be
 (Font)              scaled to size 10.40245pt on input line 120.
 
 
-[23
+[24
 
 
 
@@ -1323,7 +1352,7 @@ Overfull \hbox (13.80038pt too wide) in paragraph at lines 120--120
 
 
 
-[24]
+[25]
 Overfull \hbox (6.83562pt too wide) in paragraph at lines 120--120
 \T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2024. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC49657 .
  []
@@ -1340,14 +1369,14 @@ Overfull \hbox (13.80038pt too wide) in paragraph at lines 120--120
 
 
 
-[25]
+[26]
 Overfull \hbox (22.84404pt too wide) in paragraph at lines 120--120
 \T1/ptm/m/n/10.95 Pipelined-SAR ADC with Cross-Stage Gain-Mismatch-Error-Shaping Tech-nique and Negative-
  []
 
 
 
-[26]
+[27]
 Overfull \hbox (6.83562pt too wide) in paragraph at lines 120--120
 \T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2023. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC42615 .
  []
@@ -1369,9 +1398,9 @@ Overfull \hbox (2.51082pt too wide) in paragraph at lines 120--120
 
 
 
-[27]
-
 [28]
+
+[29]
 Overfull \hbox (7.55891pt too wide) in paragraph at lines 120--120
 \T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2022. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC42614 . 2022 . 9731571$[][]\T1/ptm/m/n/10.95 . 
  []
@@ -1388,21 +1417,21 @@ Overfull \hbox (1.57942pt too wide) in paragraph at lines 120--120
 
 
 
-[29]
+[30]
 Overfull \hbox (5.09041pt too wide) in paragraph at lines 120--120
 \OT1/ztmcm/m/n/10.95 ^^A$$^^F$ \T1/ptm/m/n/10.95 ADC in 40nm CMOS^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 .
  []
 
 
 
-[30]
+[31]
 Overfull \hbox (6.08362pt too wide) in paragraph at lines 120--120
 []\T1/ptm/m/n/10.95 Sharvil Patil et al. ^^P  A 700MHz-BW ^^U164dBFS/Hz-Small-Signal-NSD 703mW Continuous-
  []
 
 
 
-[31]
+[32]
 Overfull \hbox (10.29994pt too wide) in paragraph at lines 120--120
 []\T1/ptm/m/n/10.95 Sourja Ray and Bang-Sup Song. ^^P  A 13b Lin-ear 40MS/s Pipelined ADC with Self-Configured
  []
@@ -1419,7 +1448,7 @@ Overfull \hbox (2.51082pt too wide) in paragraph at lines 120--120
 
 
 
-[32]
+[33]
 Overfull \hbox (1.82037pt too wide) in paragraph at lines 120--120
 \T1/ptm/m/n/10.95 drive read chan-nel^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 1999.
  []
@@ -1431,16 +1460,16 @@ Overfull \hbox (14.23299pt too wide) in paragraph at lines 120--120
 
 
 
-[33]
+[34]
 Overfull \hbox (1.96727pt too wide) in paragraph at lines 120--120
 []\T1/ptm/m/n/10.95 Jia-Ching Wang and Tai-Haur Kuo. ^^P  A 3-mW 2.7-GS/s 8b Sub-rang-ing ADC with Multiple-
  []
 
 
 
-[34]
-
 [35]
+
+[36]
 Overfull \hbox (6.0335pt too wide) in paragraph at lines 120--120
 []\T1/ptm/m/n/10.95 Mingtao Zhan, Lu Jie, and Nan Sun. ^^P  A 10mW 10-ENoB 1GS/s Ring-Amp-Based Pipelined
  []
@@ -1462,9 +1491,9 @@ Overfull \hbox (24.90707pt too wide) in paragraph at lines 120--120
 
 
 
-[36]
+[37]
 
-[37] (meec_thesis.aux (abstract.aux) (abbrevs.aux) (chapter1.aux))
+[38] (meec_thesis.aux (abstract.aux) (abbrevs.aux) (chapter1.aux))
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
@@ -1480,17 +1509,17 @@ Package logreq Info: Writing requests to 'meec_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53908 strings out of 468133
- 1272554 string characters out of 5430711
- 2366800 words of memory out of 5000000
- 81571 multiletter control sequences out of 15000+600000
- 702181 words of font info for 127 fonts, out of 8000000 for 9000
+ 54462 strings out of 468133
+ 1286151 string characters out of 5430711
+ 2377417 words of memory out of 5000000
+ 82098 multiletter control sequences out of 15000+600000
+ 726892 words of font info for 168 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,12n,107p,3207b,3153s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on meec_thesis.pdf (45 pages, 2472139 bytes).
+ 102i,13n,107p,3207b,3153s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on meec_thesis.pdf (46 pages, 2327752 bytes).
 PDF statistics:
- 1091 PDF objects out of 1200 (max. 8388607)
- 301 named destinations out of 1000 (max. 500000)
- 385 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1097 PDF objects out of 1200 (max. 8388607)
+ 305 named destinations out of 1000 (max. 500000)
+ 365 words of extra memory for PDF output out of 10000 (max. 10000000)
 
