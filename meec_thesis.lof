@@ -3,19 +3,19 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Time-sparse signal and sampling strategies}}{2}{figure.caption.6}%
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Effect of DNL on ADC transfer characteristic}}{4}{figure.caption.7}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Offset and gain errors in ADC transfer function}}{8}{figure.caption.9}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Walden FoM versus sampling frequency for representative ADCs}}{9}{figure.caption.10}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces SNDR versus sampling frequency for representative ADCs}}{10}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces SAR ADC architecture}}{12}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Pipeline ADC architecture}}{13}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces First-order sigma-delta ADC architecture}}{14}{figure.caption.19}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Dual-slope integrating ADC architecture}}{15}{figure.caption.23}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Digital logic for level-crossing asynchronous ADC}}{16}{figure.caption.27}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Bulk-driven resistive ladder trimming for comparator offset calibration}}{19}{figure.caption.34}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Bulk-driven trimming effect on input pair threshold voltage}}{19}{figure.caption.35}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Current-conveyor-based comparator used in \blx@tocontentsinit {0}\cite {nijhawan_design_2022}}}{22}{figure.caption.39}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces CC-II-based current comparator used in \blx@tocontentsinit {0}\cite {panchal_design_nodate}}}{22}{figure.caption.40}%
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Energy per conversion versus publication year for representative ADCs}}{24}{figure.caption.42}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Offset and gain errors in ADC transfer function}}{9}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Walden FoM versus sampling frequency for representative ADCs}}{10}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces SNR versus sampling frequency for representative ADCs}}{11}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces SAR ADC architecture}}{13}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Pipeline ADC architecture}}{13}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces First-order sigma-delta ADC architecture}}{14}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Dual-slope integrating ADC architecture}}{15}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Digital logic for level-crossing asynchronous ADC}}{16}{figure.caption.29}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Bulk-driven resistive ladder trimming for comparator offset calibration}}{19}{figure.caption.36}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Bulk-driven trimming effect on input pair threshold voltage}}{20}{figure.caption.37}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Current-conveyor-based comparator used in \blx@tocontentsinit {0}\cite {nijhawan_design_2022}}}{22}{figure.caption.41}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces CC-II-based current comparator used in \blx@tocontentsinit {0}\cite {panchal_design_nodate}}}{22}{figure.caption.42}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Energy per conversion versus publication year for representative ADCs}}{24}{figure.caption.44}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Gantt chart of dissertation work plan}}{27}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Gantt chart of dissertation work plan}}{27}{figure.caption.46}%
 \addvspace {10\p@ }

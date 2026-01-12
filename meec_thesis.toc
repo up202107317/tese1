@@ -2,58 +2,60 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivation and Problem Statement}{3}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Inefficiency of Synchronous Sampling}{3}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Architectural Problem: Flash ADCs}{3}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.2}Architectural Problem: Flash ADCs}{4}{subsection.1.1.2}%
 \contentsline {subsection}{\numberline {1.1.3}Device Limitation: The Mismatch Problem}{4}{subsection.1.1.3}%
-\contentsline {section}{\numberline {1.2}Objectives}{4}{section.1.2}%
-\contentsline {chapter}{\numberline {2}Literature Review}{6}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Fundamentals of Analog-to-Digital Conversion}{6}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}The Data Conversion Process}{6}{subsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.1.1}Ideal Data Conversion}{6}{subsubsection.2.1.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.1.2}The Sampling Operation}{6}{subsubsection.2.1.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.1.3}The Quantization Operation}{7}{subsubsection.2.1.1.3}%
-\contentsline {subsubsection}{\numberline {2.1.1.4}Coding}{7}{subsubsection.2.1.1.4}%
-\contentsline {subsection}{\numberline {2.1.2}Performance Metrics}{7}{subsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.2.1}Resolution and Sampling Rate}{7}{subsubsection.2.1.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.2.2}Signal-to-Noise-Distortion Ratio (SNDR)}{7}{subsubsection.2.1.2.2}%
-\contentsline {subsubsection}{\numberline {2.1.2.3}Differential and Integral Non-Linearity (DNL and INL)}{8}{subsubsection.2.1.2.3}%
-\contentsline {subsubsection}{\numberline {2.1.2.4}Offset and Gain Error}{8}{subsubsection.2.1.2.4}%
-\contentsline {paragraph}{}{8}{figure.caption.9}%
-\contentsline {subsubsection}{\numberline {2.1.2.5}Bit Error Rate (BER)}{9}{subsubsection.2.1.2.5}%
-\contentsline {subsection}{\numberline {2.1.3}State-of-the-Art Comparative Analysis}{9}{subsection.2.1.3}%
-\contentsline {section}{\numberline {2.2}Synchronous Architectures}{11}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Synchronous Flash ADC}{11}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}The Power Bottleneck}{11}{subsection.2.2.2}%
+\contentsline {paragraph}{}{5}{section*.8}%
+\contentsline {section}{\numberline {1.2}Objectives}{5}{section.1.2}%
+\contentsline {paragraph}{}{5}{section*.9}%
+\contentsline {chapter}{\numberline {2}Literature Review}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Fundamentals of Analog-to-Digital Conversion}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}The Data Conversion Process}{7}{subsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.1.1}Ideal Data Conversion}{7}{subsubsection.2.1.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.1.2}The Sampling Operation}{7}{subsubsection.2.1.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.1.3}The Quantization Operation}{8}{subsubsection.2.1.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.1.4}Coding}{8}{subsubsection.2.1.1.4}%
+\contentsline {subsection}{\numberline {2.1.2}Performance Metrics}{8}{subsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.2.1}Resolution and Sampling Rate}{8}{subsubsection.2.1.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.2.2}Signal-to-Noise-Distortion Ratio (SNDR)}{8}{subsubsection.2.1.2.2}%
+\contentsline {subsubsection}{\numberline {2.1.2.3}Differential and Integral Non-Linearity (DNL and INL)}{9}{subsubsection.2.1.2.3}%
+\contentsline {subsubsection}{\numberline {2.1.2.4}Offset and Gain Error}{9}{subsubsection.2.1.2.4}%
+\contentsline {paragraph}{}{9}{figure.caption.11}%
+\contentsline {subsubsection}{\numberline {2.1.2.5}Bit Error Rate (BER)}{10}{subsubsection.2.1.2.5}%
+\contentsline {subsection}{\numberline {2.1.3}State-of-the-Art Comparative Analysis}{10}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Synchronous Architectures}{12}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Synchronous Flash ADC}{12}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}The Power Bottleneck}{12}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}SAR (Successive Approximation Register)}{12}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Pipeline}{12}{subsection.2.2.4}%
-\contentsline {paragraph}{}{12}{section*.16}%
-\contentsline {paragraph}{}{13}{section*.17}%
+\contentsline {subsection}{\numberline {2.2.4}Pipeline}{13}{subsection.2.2.4}%
 \contentsline {paragraph}{}{13}{section*.18}%
-\contentsline {subsection}{\numberline {2.2.5}Sigma-Delta ($\Sigma \Delta $)}{13}{subsection.2.2.5}%
+\contentsline {paragraph}{}{13}{section*.19}%
 \contentsline {paragraph}{}{13}{section*.20}%
-\contentsline {paragraph}{}{13}{section*.21}%
-\contentsline {paragraph}{}{13}{section*.22}%
-\contentsline {subsection}{\numberline {2.2.6}Dual-slope}{13}{subsection.2.2.6}%
+\contentsline {subsection}{\numberline {2.2.5}Sigma-Delta ($\Sigma \Delta $)}{14}{subsection.2.2.5}%
+\contentsline {paragraph}{}{14}{section*.22}%
+\contentsline {paragraph}{}{14}{section*.23}%
 \contentsline {paragraph}{}{14}{section*.24}%
-\contentsline {paragraph}{}{14}{section*.25}%
-\contentsline {paragraph}{}{14}{section*.26}%
-\contentsline {section}{\numberline {2.3}Asynchronous Architectures}{15}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Level-Crossing Sampling (LCS)}{15}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.2.6}Dual-slope}{14}{subsection.2.2.6}%
+\contentsline {paragraph}{}{15}{section*.26}%
+\contentsline {paragraph}{}{15}{section*.27}%
 \contentsline {paragraph}{}{15}{section*.28}%
-\contentsline {paragraph}{}{15}{section*.29}%
-\contentsline {paragraph}{}{15}{section*.30}%
-\contentsline {subsection}{\numberline {2.3.2}Asynchronous Flash ADC}{16}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.3}Asynchronous Architectures}{16}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Level-Crossing Sampling (LCS)}{16}{subsection.2.3.1}%
+\contentsline {paragraph}{}{16}{section*.30}%
+\contentsline {paragraph}{}{16}{section*.31}%
+\contentsline {paragraph}{}{17}{section*.32}%
+\contentsline {subsection}{\numberline {2.3.2}Asynchronous Flash ADC}{17}{subsection.2.3.2}%
 \contentsline {section}{\numberline {2.4}Calibration and Trimming Techniques}{17}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}The Component Mismatch Problem}{17}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Calibration Classifications}{17}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Resistive Trimming Techniques}{17}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.2}Calibration Classifications}{18}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Resistive Trimming Techniques}{18}{subsection.2.4.3}%
 \contentsline {subsubsection}{\numberline {2.4.3.1}Internal Resistive Loading}{18}{subsubsection.2.4.3.1}%
 \contentsline {subsubsection}{\numberline {2.4.3.2}Resistive Reference Ladder Trimming}{18}{subsubsection.2.4.3.2}%
-\contentsline {paragraph}{}{18}{section*.31}%
-\contentsline {paragraph}{}{18}{section*.32}%
-\contentsline {paragraph}{}{18}{figure.caption.35}%
-\contentsline {paragraph}{}{18}{section*.36}%
-\contentsline {paragraph}{}{18}{section*.37}%
-\contentsline {paragraph}{}{18}{section*.38}%
+\contentsline {paragraph}{}{19}{section*.33}%
+\contentsline {paragraph}{}{19}{section*.34}%
+\contentsline {paragraph}{}{19}{figure.caption.37}%
+\contentsline {paragraph}{}{19}{section*.38}%
+\contentsline {paragraph}{}{19}{section*.39}%
+\contentsline {paragraph}{}{20}{section*.40}%
 \contentsline {subsection}{\numberline {2.4.4}Advantages of Resistive Trimming for Asynchronous ADCs}{20}{subsection.2.4.4}%
 \contentsline {section}{\numberline {2.5}Related Works}{21}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Asynchronous vs. Synchronous}{23}{section.2.6}%
@@ -61,8 +63,8 @@
 \contentsline {subsection}{\numberline {2.6.2}Comparative Evaluation}{23}{subsection.2.6.2}%
 \contentsline {chapter}{\numberline {3}Future Work Planning, Methodologies and Tools}{26}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Work Plan}{26}{section.3.1}%
-\contentsline {paragraph}{}{27}{section*.45}%
-\contentsline {paragraph}{}{27}{section*.46}%
 \contentsline {paragraph}{}{27}{section*.47}%
+\contentsline {paragraph}{}{27}{section*.48}%
+\contentsline {paragraph}{}{27}{section*.49}%
 \contentsline {section}{\numberline {3.2}Methodologies and Tools}{28}{section.3.2}%
 \contentsline {chapter}{\numberline {4}Conclusions}{29}{chapter.4}%

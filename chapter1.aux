@@ -11,109 +11,111 @@
 \@writefile{toc}{\contentsline {section}{\numberline {1.1}Motivation and Problem Statement}{3}{section.1.1}\protected@file@percent }
 \newlabel{sec:motivation}{{1.1}{3}{Motivation and Problem Statement}{section.1.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1.1}Inefficiency of Synchronous Sampling}{3}{subsection.1.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}Architectural Problem: Flash ADCs}{3}{subsection.1.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}Architectural Problem: Flash ADCs}{4}{subsection.1.1.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1.3}Device Limitation: The Mismatch Problem}{4}{subsection.1.1.3}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Effect of DNL on ADC transfer characteristic}}{4}{figure.caption.7}\protected@file@percent }
 \newlabel{fig:Offset-error}{{1.2}{4}{Effect of DNL on ADC transfer characteristic}{figure.caption.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.2}Objectives}{4}{section.1.2}\protected@file@percent }
-\newlabel{sec:objectives}{{1.2}{4}{Objectives}{section.1.2}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {2}Literature Review}{6}{chapter.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{5}{section*.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Objectives}{5}{section.1.2}\protected@file@percent }
+\newlabel{sec:objectives}{{1.2}{5}{Objectives}{section.1.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{}{5}{section*.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Literature Review}{7}{chapter.2}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap:lit_review}{{2}{6}{Literature Review}{chapter.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.1}Fundamentals of Analog-to-Digital Conversion}{6}{section.2.1}\protected@file@percent }
-\newlabel{sec:adc_fundamentals}{{2.1}{6}{Fundamentals of Analog-to-Digital Conversion}{section.2.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}The Data Conversion Process}{6}{subsection.2.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1.1}Ideal Data Conversion}{6}{subsubsection.2.1.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1.2}The Sampling Operation}{6}{subsubsection.2.1.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1.3}The Quantization Operation}{7}{subsubsection.2.1.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1.4}Coding}{7}{subsubsection.2.1.1.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}Performance Metrics}{7}{subsection.2.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.1}Resolution and Sampling Rate}{7}{subsubsection.2.1.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.2}Signal-to-Noise-Distortion Ratio (SNDR)}{7}{subsubsection.2.1.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.3}Differential and Integral Non-Linearity (DNL and INL)}{8}{subsubsection.2.1.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.4}Offset and Gain Error}{8}{subsubsection.2.1.2.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Offset and gain errors in ADC transfer function}}{8}{figure.caption.9}\protected@file@percent }
-\newlabel{fig:offset_gain_error}{{2.1}{8}{Offset and gain errors in ADC transfer function}{figure.caption.9}{}}
-\@writefile{toc}{\contentsline {paragraph}{}{8}{figure.caption.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.5}Bit Error Rate (BER)}{9}{subsubsection.2.1.2.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.3}State-of-the-Art Comparative Analysis}{9}{subsection.2.1.3}\protected@file@percent }
-\newlabel{sec:sota_analysis}{{2.1.3}{9}{State-of-the-Art Comparative Analysis}{subsection.2.1.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Walden FoM versus sampling frequency for representative ADCs}}{9}{figure.caption.10}\protected@file@percent }
-\newlabel{fig:fom_fs}{{2.2}{9}{Walden FoM versus sampling frequency for representative ADCs}{figure.caption.10}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Walden FoM vs. Sampling Frequency (Flash reference [1] highlighted)}}{10}{table.caption.11}\protected@file@percent }
-\newlabel{tab:fom_fs}{{2.1}{10}{Walden FoM vs. Sampling Frequency (Flash reference [1] highlighted)}{table.caption.11}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces SNDR versus sampling frequency for representative ADCs}}{10}{figure.caption.12}\protected@file@percent }
-\newlabel{fig:snr_fs}{{2.3}{10}{SNDR versus sampling frequency for representative ADCs}{figure.caption.12}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces SNDR vs. Sampling Frequency (Flash reference [1] highlighted)}}{11}{table.caption.13}\protected@file@percent }
-\newlabel{tab:snr_fs}{{2.2}{11}{SNDR vs. Sampling Frequency (Flash reference [1] highlighted)}{table.caption.13}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Synchronous Architectures}{11}{section.2.2}\protected@file@percent }
-\newlabel{sec:sync_arch}{{2.2}{11}{Synchronous Architectures}{section.2.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Synchronous Flash ADC}{11}{subsection.2.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}The Power Bottleneck}{11}{subsection.2.2.2}\protected@file@percent }
+\newlabel{chap:lit_review}{{2}{7}{Literature Review}{chapter.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Fundamentals of Analog-to-Digital Conversion}{7}{section.2.1}\protected@file@percent }
+\newlabel{sec:ADC_fundamentals}{{2.1}{7}{Fundamentals of Analog-to-Digital Conversion}{section.2.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}The Data Conversion Process}{7}{subsection.2.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1.1}Ideal Data Conversion}{7}{subsubsection.2.1.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1.2}The Sampling Operation}{7}{subsubsection.2.1.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1.3}The Quantization Operation}{8}{subsubsection.2.1.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1.4}Coding}{8}{subsubsection.2.1.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}Performance Metrics}{8}{subsection.2.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.1}Resolution and Sampling Rate}{8}{subsubsection.2.1.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.2}Signal-to-Noise-Distortion Ratio (SNDR)}{8}{subsubsection.2.1.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.3}Differential and Integral Non-Linearity (DNL and INL)}{9}{subsubsection.2.1.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.4}Offset and Gain Error}{9}{subsubsection.2.1.2.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces  Offset and gain errors in ADC transfer function}}{9}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:offset_gain_error}{{2.1}{9}{Offset and gain errors in ADC transfer function}{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {paragraph}{}{9}{figure.caption.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2.5}Bit Error Rate (BER)}{10}{subsubsection.2.1.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.3}State-of-the-Art Comparative Analysis}{10}{subsection.2.1.3}\protected@file@percent }
+\newlabel{sec:sota_analysis}{{2.1.3}{10}{State-of-the-Art Comparative Analysis}{subsection.2.1.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Walden FoM versus sampling frequency for representative ADCs}}{10}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:fom_fs}{{2.2}{10}{Walden FoM versus sampling frequency for representative ADCs}{figure.caption.12}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Walden FoM vs. Sampling Frequency (Flash reference [1] highlighted)}}{11}{table.caption.13}\protected@file@percent }
+\newlabel{tab:fom_fs}{{2.1}{11}{Walden FoM vs. Sampling Frequency (Flash reference [1] highlighted)}{table.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces SNR versus sampling frequency for representative ADCs}}{11}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:snr_fs}{{2.3}{11}{SNR versus sampling frequency for representative ADCs}{figure.caption.14}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces SNR vs. Sampling Frequency (Flash reference [1] highlighted)}}{11}{table.caption.15}\protected@file@percent }
+\newlabel{tab:snr_fs}{{2.2}{11}{SNR vs. Sampling Frequency (Flash reference [1] highlighted)}{table.caption.15}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Synchronous Architectures}{12}{section.2.2}\protected@file@percent }
+\newlabel{sec:sync_arch}{{2.2}{12}{Synchronous Architectures}{section.2.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Synchronous Flash ADC}{12}{subsection.2.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}The Power Bottleneck}{12}{subsection.2.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}SAR (Successive Approximation Register)}{12}{subsection.2.2.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces SAR ADC architecture}}{12}{figure.caption.14}\protected@file@percent }
-\newlabel{fig:sar_arch}{{2.4}{12}{SAR ADC architecture}{figure.caption.14}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}Pipeline}{12}{subsection.2.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{12}{section*.16}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Pipeline ADC architecture}}{13}{figure.caption.15}\protected@file@percent }
-\newlabel{fig:pipeline_arch}{{2.5}{13}{Pipeline ADC architecture}{figure.caption.15}{}}
-\@writefile{toc}{\contentsline {paragraph}{}{13}{section*.17}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces SAR ADC architecture}}{13}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:sar_arch}{{2.4}{13}{SAR ADC architecture}{figure.caption.16}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}Pipeline}{13}{subsection.2.2.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Pipeline ADC architecture}}{13}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:pipeline_arch}{{2.5}{13}{Pipeline ADC architecture}{figure.caption.17}{}}
 \@writefile{toc}{\contentsline {paragraph}{}{13}{section*.18}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.5}Sigma-Delta ($\Sigma \Delta $)}{13}{subsection.2.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{13}{section*.19}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{}{13}{section*.20}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{13}{section*.21}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{13}{section*.22}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.6}Dual-slope}{13}{subsection.2.2.6}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces First-order sigma-delta ADC architecture}}{14}{figure.caption.19}\protected@file@percent }
-\newlabel{fig:sigma_delta_arch}{{2.6}{14}{First-order sigma-delta ADC architecture}{figure.caption.19}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.5}Sigma-Delta ($\Sigma \Delta $)}{14}{subsection.2.2.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces First-order sigma-delta ADC architecture}}{14}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:sigma_delta_arch}{{2.6}{14}{First-order sigma-delta ADC architecture}{figure.caption.21}{}}
+\@writefile{toc}{\contentsline {paragraph}{}{14}{section*.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{14}{section*.23}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{}{14}{section*.24}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{14}{section*.25}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{14}{section*.26}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Dual-slope integrating ADC architecture}}{15}{figure.caption.23}\protected@file@percent }
-\newlabel{fig:dual_slope_arch}{{2.7}{15}{Dual-slope integrating ADC architecture}{figure.caption.23}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Asynchronous Architectures}{15}{section.2.3}\protected@file@percent }
-\newlabel{sec:async_arch}{{2.3}{15}{Asynchronous Architectures}{section.2.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Level-Crossing Sampling (LCS)}{15}{subsection.2.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.6}Dual-slope}{14}{subsection.2.2.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Dual-slope integrating ADC architecture}}{15}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:dual_slope_arch}{{2.7}{15}{Dual-slope integrating ADC architecture}{figure.caption.25}{}}
+\@writefile{toc}{\contentsline {paragraph}{}{15}{section*.26}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{15}{section*.27}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{}{15}{section*.28}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{15}{section*.29}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{15}{section*.30}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Digital logic for level-crossing asynchronous ADC}}{16}{figure.caption.27}\protected@file@percent }
-\newlabel{fig:LC_digital_logic}{{2.8}{16}{Digital logic for level-crossing asynchronous ADC}{figure.caption.27}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Asynchronous Flash ADC}{16}{subsection.2.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Asynchronous Architectures}{16}{section.2.3}\protected@file@percent }
+\newlabel{sec:async_arch}{{2.3}{16}{Asynchronous Architectures}{section.2.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Level-Crossing Sampling (LCS)}{16}{subsection.2.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Digital logic for level-crossing asynchronous ADC}}{16}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:LC_digital_logic}{{2.8}{16}{Digital logic for level-crossing asynchronous ADC}{figure.caption.29}{}}
+\@writefile{toc}{\contentsline {paragraph}{}{16}{section*.30}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{16}{section*.31}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{17}{section*.32}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Asynchronous Flash ADC}{17}{subsection.2.3.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2.4}Calibration and Trimming Techniques}{17}{section.2.4}\protected@file@percent }
 \newlabel{sec:calibration}{{2.4}{17}{Calibration and Trimming Techniques}{section.2.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}The Component Mismatch Problem}{17}{subsection.2.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Calibration Classifications}{17}{subsection.2.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}Resistive Trimming Techniques}{17}{subsection.2.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Calibration Classifications}{18}{subsection.2.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}Resistive Trimming Techniques}{18}{subsection.2.4.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.3.1}Internal Resistive Loading}{18}{subsubsection.2.4.3.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.3.2}Resistive Reference Ladder Trimming}{18}{subsubsection.2.4.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{18}{section*.31}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{18}{section*.32}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{18}{figure.caption.35}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{18}{section*.36}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{18}{section*.37}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{18}{section*.38}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Bulk-driven resistive ladder trimming for comparator offset calibration}}{19}{figure.caption.34}\protected@file@percent }
-\newlabel{fig:resistive_ladder}{{2.9}{19}{Bulk-driven resistive ladder trimming for comparator offset calibration}{figure.caption.34}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Bulk-driven trimming effect on input pair threshold voltage}}{19}{figure.caption.35}\protected@file@percent }
-\newlabel{fig:mismatch_correction}{{2.10}{19}{Bulk-driven trimming effect on input pair threshold voltage}{figure.caption.35}{}}
+\@writefile{toc}{\contentsline {paragraph}{}{19}{section*.33}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{19}{section*.34}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Bulk-driven resistive ladder trimming for comparator offset calibration}}{19}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:resistive_ladder}{{2.9}{19}{Bulk-driven resistive ladder trimming for comparator offset calibration}{figure.caption.36}{}}
+\@writefile{toc}{\contentsline {paragraph}{}{19}{figure.caption.37}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{19}{section*.38}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{19}{section*.39}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Bulk-driven trimming effect on input pair threshold voltage}}{20}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:mismatch_correction}{{2.10}{20}{Bulk-driven trimming effect on input pair threshold voltage}{figure.caption.37}{}}
+\@writefile{toc}{\contentsline {paragraph}{}{20}{section*.40}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4.4}Advantages of Resistive Trimming for Asynchronous ADCs}{20}{subsection.2.4.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2.5}Related Works}{21}{section.2.5}\protected@file@percent }
 \newlabel{sec:related_works}{{2.5}{21}{Related Works}{section.2.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces Current-conveyor-based comparator used in \blx@tocontentsinit {0}\cite {nijhawan_design_2022}}}{22}{figure.caption.39}\protected@file@percent }
-\newlabel{fig:nijhawan_comp}{{2.11}{22}{Current-conveyor-based comparator used in \cite {nijhawan_design_2022}}{figure.caption.39}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces CC-II-based current comparator used in \blx@tocontentsinit {0}\cite {panchal_design_nodate}}}{22}{figure.caption.40}\protected@file@percent }
-\newlabel{fig:panchal_comp}{{2.12}{22}{CC-II-based current comparator used in \cite {panchal_design_nodate}}{figure.caption.40}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces Current-conveyor-based comparator used in \blx@tocontentsinit {0}\cite {nijhawan_design_2022}}}{22}{figure.caption.41}\protected@file@percent }
+\newlabel{fig:nijhawan_comp}{{2.11}{22}{Current-conveyor-based comparator used in \cite {nijhawan_design_2022}}{figure.caption.41}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces CC-II-based current comparator used in \blx@tocontentsinit {0}\cite {panchal_design_nodate}}}{22}{figure.caption.42}\protected@file@percent }
+\newlabel{fig:panchal_comp}{{2.12}{22}{CC-II-based current comparator used in \cite {panchal_design_nodate}}{figure.caption.42}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.6}Asynchronous vs. Synchronous}{23}{section.2.6}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.6.1}Advantage}{23}{subsection.2.6.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.6.2}Comparative Evaluation}{23}{subsection.2.6.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {2.3}{\ignorespaces Comparison of Power Consumption between Synchronous and Asynchronous Flash ADCs. Simulation results from this work showing the power advantage of asynchronous operation for sparse signals.}}{24}{table.caption.41}\protected@file@percent }
-\newlabel{tab:adc_power_comparison}{{2.3}{24}{Comparison of Power Consumption between Synchronous and Asynchronous Flash ADCs. Simulation results from this work showing the power advantage of asynchronous operation for sparse signals}{table.caption.41}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.13}{\ignorespaces Energy per conversion versus publication year for representative ADCs}}{24}{figure.caption.42}\protected@file@percent }
-\newlabel{fig:energy_year}{{2.13}{24}{Energy per conversion versus publication year for representative ADCs}{figure.caption.42}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.4}{\ignorespaces Energy per Conversion vs. Year (Flash reference [1] highlighted)}}{25}{table.caption.43}\protected@file@percent }
-\newlabel{tab:energy_year}{{2.4}{25}{Energy per Conversion vs. Year (Flash reference [1] highlighted)}{table.caption.43}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.3}{\ignorespaces Comparison of Power Consumption between Synchronous and Asynchronous Flash ADCs. Simulation results from this work showing the power advantage of asynchronous operation for sparse signals.}}{24}{table.caption.43}\protected@file@percent }
+\newlabel{tab:ADC_power_comparison}{{2.3}{24}{Comparison of Power Consumption between Synchronous and Asynchronous Flash ADCs. Simulation results from this work showing the power advantage of asynchronous operation for sparse signals}{table.caption.43}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.13}{\ignorespaces Energy per conversion versus publication year for representative ADCs}}{24}{figure.caption.44}\protected@file@percent }
+\newlabel{fig:energy_year}{{2.13}{24}{Energy per conversion versus publication year for representative ADCs}{figure.caption.44}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.4}{\ignorespaces Energy per Conversion vs. Year (Flash reference [1] highlighted)}}{25}{table.caption.45}\protected@file@percent }
+\newlabel{tab:energy_year}{{2.4}{25}{Energy per Conversion vs. Year (Flash reference [1] highlighted)}{table.caption.45}{}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Future Work Planning, Methodologies and Tools}{26}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -121,11 +123,11 @@
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Work Plan}{26}{section.3.1}\protected@file@percent }
 \newlabel{sec:workplan}{{3.1}{26}{Work Plan}{section.3.1}{}}
 \gtt@chartextrasize{0}{137.78363pt}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Gantt chart of dissertation work plan}}{27}{figure.caption.44}\protected@file@percent }
-\newlabel{fig:gantt_chart}{{3.1}{27}{Gantt chart of dissertation work plan}{figure.caption.44}{}}
-\@writefile{toc}{\contentsline {paragraph}{}{27}{section*.45}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{27}{section*.46}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Gantt chart of dissertation work plan}}{27}{figure.caption.46}\protected@file@percent }
+\newlabel{fig:gantt_chart}{{3.1}{27}{Gantt chart of dissertation work plan}{figure.caption.46}{}}
 \@writefile{toc}{\contentsline {paragraph}{}{27}{section*.47}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{27}{section*.48}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{27}{section*.49}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Methodologies and Tools}{28}{section.3.2}\protected@file@percent }
 \newlabel{sec:tools}{{3.2}{28}{Methodologies and Tools}{section.3.2}{}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {4}Conclusions}{29}{chapter.4}\protected@file@percent }
@@ -166,7 +168,7 @@
 \setcounter{citetotal}{0}
 \setcounter{multicitecount}{0}
 \setcounter{multicitetotal}{0}
-\setcounter{instcount}{235}
+\setcounter{instcount}{223}
 \setcounter{maxnames}{3}
 \setcounter{minnames}{1}
 \setcounter{maxitems}{3}

@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber meec_thesis"] 1768181895.38895 "meec_thesis.bcf" "meec_thesis.bbl" "meec_thesis" 1768181906.18078 0
-  "meec_thesis.bcf" 1768181905 125796 593043ab622dffa159cb2fff3a3cc85e "pdflatex"
+["biber meec_thesis"] 1768232537.16027 "meec_thesis.bcf" "meec_thesis.bbl" "meec_thesis" 1768232570.64995 0
+  "meec_thesis.bcf" 1768232570 124954 e12bc4806cbcb560d8a037d08a8cd66b "pdflatex"
   "references.bib" 1768181303 136715 b8a404d41c8bb402d6c5e10fe1e28665 ""
   (generated)
   "meec_thesis.bbl"
   "meec_thesis.blg"
   (rewritten before read)
-["pdflatex"] 1768181899.38922 "c:/Users/gonca/Downloads/meec-distrib-v2024 (2)/meec-distrib/meec_thesis.tex" "meec_thesis.pdf" "meec_thesis" 1768181906.18162 0
+["pdflatex"] 1768232563.93994 "c:/Users/gonca/Downloads/meec-distrib-v2024 (2)/meec-distrib/meec_thesis.tex" "meec_thesis.pdf" "meec_thesis" 1768232570.6507 0
   "C:/Users/gonca/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1767959803 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/gonca/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1758028829 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/gonca/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1763661887 13257344 92e34b5292c949194aee5bb4c2555597 ""
@@ -260,13 +260,13 @@
   "C:/Users/gonca/AppData/Local/Programs/MiKTeX/tex/latex/trimspaces/trimspaces.sty" 1253169183 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/gonca/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/gonca/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "abbrevs.aux" 1768181901 4200 f1045beb7de08df5661f0dd7a23b2373 "pdflatex"
+  "abbrevs.aux" 1768232565 4200 b4d446a3404872c8a3a4a8910a9c816f "pdflatex"
   "abbrevs.tex" 1768179952 1329 4c9c3fb5e24331e63e1f097ca0b221b5 ""
-  "abstract.aux" 1768181901 4198 bb3cf5e6db7a53e96e28acde9b655a52 "pdflatex"
+  "abstract.aux" 1768232565 4198 bb3cf5e6db7a53e96e28acde9b655a52 "pdflatex"
   "abstract.tex" 1767978071 2216 89e484f5e9c9cbc79eb5e15ec1fa54aa ""
   "c:/Users/gonca/Downloads/meec-distrib-v2024 (2)/meec-distrib/meec_thesis.tex" 1768153205 4267 a639308035650a2a628973074b3c517f ""
-  "chapter1.aux" 1768181904 19838 def9228de1e220df40ce0d99b9e3758d "pdflatex"
-  "chapter1.tex" 1768181876 80407 0239bb44d3ca42c8c48b17d05acafea4 ""
+  "chapter1.aux" 1768232569 20013 b0c74a2a93e42b4f7c0c36004be39144 "pdflatex"
+  "chapter1.tex" 1768232557 80597 775fcdce441250b11301d551e1079ba8 ""
   "feupteses.sty" 1767980039 15029 f19ecc8d2506b1e979e5f74bb587d401 ""
   "figures/LC_digital_logic.png" 1768179518 26159 a49ba6832404cdeac7d4b1801a75d6e7 ""
   "figures/Mismatch error.png" 1767979684 71899 51fd522977ca1c50430019e93bf688f7 ""
@@ -281,14 +281,14 @@
   "figures/time-sparse.png" 1766598123 44529 5ad5d45032d32e5fe9b2d2266e8d59ed ""
   "figures/uporto-feup.pdf" 1764551188 12740 0bd34fcc2c83189d41299a9453e17a77 ""
   "meec.cfg" 1764551188 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "meec_thesis.aux" 1768181905 31793 bf0900b5b13f1f491d609f55a455c743 "pdflatex"
-  "meec_thesis.bbl" 1768181899 328246 5d2064fe5f742b0a8627b8743a0c5803 "biber meec_thesis"
-  "meec_thesis.lof" 1768181905 2259 0d35a28a9cc8720aa74b8997f2480dde "pdflatex"
-  "meec_thesis.lot" 1768181905 810 0884631960a80c4a4bc1c45f16b65b78 "pdflatex"
-  "meec_thesis.out" 1768181905 7858 a04d1a063b9bec3990df27185f9451e8 "pdflatex"
-  "meec_thesis.run.xml" 1768181905 2395 18669c81bfa4cb821496274809dea348 "pdflatex"
+  "meec_thesis.aux" 1768232570 30950 76634a6af6bb78446c5049fd7eb989bc "pdflatex"
+  "meec_thesis.bbl" 1768232541 329522 65af47618393ba9ad57d1705eaa6b37f "biber meec_thesis"
+  "meec_thesis.lof" 1768232570 2260 48a07bf5589abbc49e1cadcf408e58a6 "pdflatex"
+  "meec_thesis.lot" 1768232570 809 6ec8927c389295b2d6eb05e9b530a07b "pdflatex"
+  "meec_thesis.out" 1768232570 7858 a04d1a063b9bec3990df27185f9451e8 "pdflatex"
+  "meec_thesis.run.xml" 1768232570 2395 18669c81bfa4cb821496274809dea348 "pdflatex"
   "meec_thesis.tex" 1768153205 4267 a639308035650a2a628973074b3c517f ""
-  "meec_thesis.toc" 1768181905 5349 0408cc2ba77908ab8ca1e47472936f74 "pdflatex"
+  "meec_thesis.toc" 1768232570 5440 99fc27925b71dfd3261ce62692347142 "pdflatex"
   (generated)
   "abbrevs.aux"
   "abstract.aux"

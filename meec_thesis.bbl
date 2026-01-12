@@ -4264,6 +4264,34 @@
       \verb 10.1109/ISSCC49657.2024.10454361
       \endverb
     \endentry
+    \entry{matlab}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=2d2b0d998977e6379aad61f1b56ac3c1}{%
+           family={MathWorks},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{fullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{fullhashraw}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{bibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorbibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authornamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorfullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorfullhashraw}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: Jan. 12, 2026}
+      \field{title}{Measuring Offset and Gain Errors in ADC}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.mathworks.com/help/msblks/ug/offset-error-and-gain-error.html
+      \endverb
+      \verb{url}
+      \verb https://www.mathworks.com/help/msblks/ug/offset-error-and-gain-error.html
+      \endverb
+    \endentry
     \entry{FMichel_2011_134}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=3b6f1d1847e03e7222eda832a5758cee}{%
@@ -7498,6 +7526,7 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{<ref148>}
 \endrefsection
 \endinput
 
