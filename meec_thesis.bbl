@@ -4358,6 +4358,28 @@
       \verb 10.1109/ISSCC.2006.1696042
       \endverb
     \endentry
+    \entry{MPScholar}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=4e8e970606abedd72af71dccbf0e9c85}{%
+           family={{Monolithic Power Systems}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{4e8e970606abedd72af71dccbf0e9c85}
+      \strng{fullhash}{4e8e970606abedd72af71dccbf0e9c85}
+      \strng{fullhashraw}{4e8e970606abedd72af71dccbf0e9c85}
+      \strng{bibnamehash}{4e8e970606abedd72af71dccbf0e9c85}
+      \strng{authorbibnamehash}{4e8e970606abedd72af71dccbf0e9c85}
+      \strng{authornamehash}{4e8e970606abedd72af71dccbf0e9c85}
+      \strng{authorfullhash}{4e8e970606abedd72af71dccbf0e9c85}
+      \strng{authorfullhashraw}{4e8e970606abedd72af71dccbf0e9c85}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.monolithicpower.com/en/learning/mpscholar/analog-to-digital-converters/adc-errors-and-compensation/sources-of-errors-in-adcs}}
+      \field{note}{Accessed: Jan. 9, 2026}
+      \field{title}{MPScholar}
+    \endentry
     \entry{Muller_2015}{inproceedings}{}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -4383,6 +4405,68 @@
       \field{booktitle}{IEEE International Solid-State Circuits Conference (ISSCC)}
       \field{title}{A 3nW Signal-Acquisition IC Integrating an Amplifier and a 1.5fJ/conv-step ADC}
       \field{year}{2015}
+    \endentry
+    \entry{nijhawan_design_2022}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=72bb03fdd6cded58c3592ce59045b701}{%
+           family={Nijhawan},
+           familyi={N\bibinitperiod},
+           given={Vaibhav},
+           giveni={V\bibinitperiod}}}%
+        {{hash=2aa66527eda8111d69a38ce86fb7b870}{%
+           family={Miglani},
+           familyi={M\bibinitperiod},
+           given={Davinder},
+           giveni={D\bibinitperiod}}}%
+        {{hash=9512462c60ec0bfd71f3a9fe169bc76d}{%
+           family={Arora},
+           familyi={A\bibinitperiod},
+           given={Karan},
+           giveni={K\bibinitperiod}}}%
+        {{hash=0684aa6c8b6be042529df046b846db55}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={Shivam},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{3b300f8c75de2d12903b5bafc623c6ad}
+      \strng{fullhash}{127c4cd4b5d7664ba80d3c36c7ade2c1}
+      \strng{fullhashraw}{127c4cd4b5d7664ba80d3c36c7ade2c1}
+      \strng{bibnamehash}{3b300f8c75de2d12903b5bafc623c6ad}
+      \strng{authorbibnamehash}{3b300f8c75de2d12903b5bafc623c6ad}
+      \strng{authornamehash}{3b300f8c75de2d12903b5bafc623c6ad}
+      \strng{authorfullhash}{127c4cd4b5d7664ba80d3c36c7ade2c1}
+      \strng{authorfullhashraw}{127c4cd4b5d7664ba80d3c36c7ade2c1}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A low-power high-speed current comparator-based analog to digital converter design is proposed in this paper. We have analyzed the response of the current comparator circuit that uses the current conveyor as an integral part. The circuit resulted in low power consumption of the 158 micro Watt at 0.1 milli Amperes current and a very less propagation delay of 0.4 nanoseconds. During the analysis, we have also found the overall response of the {ADC} having a low power dissipation and a high accuracy system. Simulations are done using P-spice on 0.18 µm technology with 1.8 Volts supply voltage.}
+      \field{booktitle}{2022 9th International Conference on Computing for Sustainable Global Development ({INDIACom})}
+      \field{eventtitle}{2022 9th International Conference on Computing for Sustainable Global Development ({INDIACom})}
+      \field{month}{3}
+      \field{title}{Design of Current Mode Low Power Flash {ADC} Structure for High Speed Circuits}
+      \field{urlday}{11}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{255\bibrangedash 260}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.23919/INDIACom54597.2022.9763285
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\gonca\\Zotero\\storage\\7K2MT6BW\\Nijhawan et al. - 2022 - Design of Current Mode Low Power Flash ADC Structure for High Speed Circuits.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/9763285/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/9763285/
+      \endverb
+      \keyw{Bandwidth,Power demand,Low voltage,Mirrors,Power dissipation,Voltage,Current Comparator,Current Conveyor,Current Mirror,Dynamic range,Flash {ADC}}
     \endentry
     \entry{Ong_1997_112}{inproceedings}{}{}
       \name{author}{2}{}{%
@@ -4414,6 +4498,89 @@
       \field{year}{1997}
       \verb{doi}
       \verb 10.1109/ISSCC.1997.585337
+      \endverb
+    \endentry
+    \entry{pae2022_lcadc}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=55d0f61dca53038b83d5fbafab155fe8}{%
+           family={Pae},
+           familyi={P\bibinitperiod},
+           given={Kieren},
+           giveni={K\bibinitperiod}}}%
+        {{hash=409e515ffd4ed81dec0df73249783ab2}{%
+           family={Mahbub},
+           familyi={M\bibinitperiod},
+           given={Ifana},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{b03aa7ee26f6747493edd433102feddd}
+      \strng{fullhash}{b03aa7ee26f6747493edd433102feddd}
+      \strng{fullhashraw}{b03aa7ee26f6747493edd433102feddd}
+      \strng{bibnamehash}{b03aa7ee26f6747493edd433102feddd}
+      \strng{authorbibnamehash}{b03aa7ee26f6747493edd433102feddd}
+      \strng{authornamehash}{b03aa7ee26f6747493edd433102feddd}
+      \strng{authorfullhash}{b03aa7ee26f6747493edd433102feddd}
+      \strng{authorfullhashraw}{b03aa7ee26f6747493edd433102feddd}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2022 {IEEE} 15th Dallas Circuits and Systems Conference (DCAS)}
+      \field{title}{A Low-Power Asynchronous Level Crossing {ADC} Designed in 180 nm {CMOS} Process for Electrophysiological Signal Recording Applications}
+      \field{year}{2022}
+      \field{pages}{1\bibrangedash 4}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/DCAS53974.2022.9845498
+      \endverb
+    \endentry
+    \entry{panchal_design_nodate}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=4377733942c99df96dce919f9fe95b5a}{%
+           family={Panchal},
+           familyi={P\bibinitperiod},
+           given={Divya},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d3c590eb13cd903361cbb62c15504864}{%
+           family={Shah},
+           familyi={S\bibinitperiod},
+           given={Payal},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e4f7b1028400fae79080f80df224f167}{%
+           family={Mendhe},
+           familyi={M\bibinitperiod},
+           given={S\bibnamedelima E},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=19989d66d8b137b2e4d05b57e8dc1637}{%
+           family={Patel},
+           familyi={P\bibinitperiod},
+           given={Dilip},
+           giveni={D\bibinitperiod}}}%
+        {{hash=2e3f646a65999a7350def95003d52a83}{%
+           family={Vania},
+           familyi={V\bibinitperiod},
+           given={Purvik},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{aacc7e1dc1e72dd6c5d1afbf098f8ef4}
+      \strng{fullhash}{3cb443ad349ed47b8d7d4a1462e21463}
+      \strng{fullhashraw}{3cb443ad349ed47b8d7d4a1462e21463}
+      \strng{bibnamehash}{aacc7e1dc1e72dd6c5d1afbf098f8ef4}
+      \strng{authorbibnamehash}{aacc7e1dc1e72dd6c5d1afbf098f8ef4}
+      \strng{authornamehash}{aacc7e1dc1e72dd6c5d1afbf098f8ef4}
+      \strng{authorfullhash}{3cb443ad349ed47b8d7d4a1462e21463}
+      \strng{authorfullhashraw}{3cb443ad349ed47b8d7d4a1462e21463}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper a novel design for a current mode 2-bit flash {ADC} is proposed, which utilizes the concept of positive feedback in its current comparator circuit. The innovative design aims to improve the outcome of the {ADC} by lessen the errors and enhancing the precision of the conversion process. In this design, the use of positive feedback helps to achieve faster switching within the comparator, which is crucial for accurate high-speed conversions. To further optimize the design and reduce unnecessary power consumption caused by switching activity, the proposed circuit incorporates an encoder. This encoder is responsible for transforming the thermometer code resulted by the comparators into Gray code. The conversion to Gray code ensures that only one bit changes at a time during transitions, effectively minimizing the switching noise. Additionally, the performance of the proposed design has been thoroughly evaluated through simulations conducted on {LTspice}, using a 0.13um {CMOS} technology process with a 1.2V supply voltage. Simulations demonstrate the potential of the design in terms of both functionality and efficiency, showing that it is capable of providing accurate conversion while maintaining low power consumption and reduced switching activity. The overall power dissipation is 140{µW} at input current range of 5{µA}-20{µA}.{INL} and {DNL} values of this design is 0.005LSB and 0.006LSB respectively.}
+      \field{langid}{english}
+      \field{number}{1}
+      \field{title}{{DESIGN} {OF} 2-{BIT} {FLASH} {ADC} {BASED} {ON} {CC}-{II}}
+      \field{volume}{2}
+      \verb{file}
+      \verb PDF:C\:\\Users\\gonca\\Zotero\\storage\\QFXV285J\\Panchal et al. - DESIGN OF 2-BIT FLASH ADC BASED ON CC-II.pdf:application/pdf
       \endverb
     \endentry
     \entry{SharvilPatil_2024_35}{inproceedings}{}{}
@@ -5124,6 +5291,66 @@
       \field{year}{1949}
       \field{pages}{10\bibrangedash 21}
       \range{pages}{12}
+    \endentry
+    \entry{sharma_design_2018}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=89bc735ebb4e3d7d8ae356b517755465}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Jyoti},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e21e98feeff3f9f384935ba7a6979d3e}{%
+           family={Bansal},
+           familyi={B\bibinitperiod},
+           given={Pallavi},
+           giveni={P\bibinitperiod}}}%
+        {{hash=7f0bf7778c84c28f59cb2a4f6227e0d5}{%
+           family={{Ayushi}},
+           familyi={A\bibinitperiod}}}%
+        {{hash=340266905eb333d3167296e1ffeeb280}{%
+           family={Bhatia},
+           familyi={B\bibinitperiod},
+           given={Veepsa},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{7fd16dbe7ce7c5bead632029dc0b6fcf}
+      \strng{fullhash}{e92ee2ab64a989020ecd45e0227f11b5}
+      \strng{fullhashraw}{e92ee2ab64a989020ecd45e0227f11b5}
+      \strng{bibnamehash}{7fd16dbe7ce7c5bead632029dc0b6fcf}
+      \strng{authorbibnamehash}{7fd16dbe7ce7c5bead632029dc0b6fcf}
+      \strng{authornamehash}{7fd16dbe7ce7c5bead632029dc0b6fcf}
+      \strng{authorfullhash}{e92ee2ab64a989020ecd45e0227f11b5}
+      \strng{authorfullhashraw}{e92ee2ab64a989020ecd45e0227f11b5}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Analog to digital converters ({ADC}) consists of various components namely, resistor ladder, comparator array, thermometer-to-binary encoder, etc. An error free and highspeed comparator is an important component in {ADCs} with high resolution and good speed. The choice of comparator as well as thermometer-to-binary encoder has a significant impact on {ADC} operation. There are various popular architectures of high speed comparators; dynamic latch being the most commonly used. This paper provides a comprehensive study about various dynamic latched comparator circuits, by comparing their performance, power dissipation characteristics and delay profile. The comparator circuits that are analyzed in this paper are: Preamplifier Latch Comparator, Dynamic latch with inverter buffer and Differential pair dynamic latch comparator. Their design is simulated using 180nm technology in {CADENCE} {VIRTUOSO} platform. Simulation results are tabulated, and analysis has been done with graphical representation. Based on comparison between the three simulated comparators, a 3- bit flash {ADC} with optimum comparator characteristics has been simulated using the same platform. Further, its design is analyzed, and results are tabulated.}
+      \field{booktitle}{2018 3rd {IEEE} International Conference on Recent Trends in Electronics, Information \& Communication Technology ({RTEICT})}
+      \field{eventtitle}{2018 3rd {IEEE} International Conference on Recent Trends in Electronics, Information \& Communication Technology ({RTEICT})}
+      \field{month}{5}
+      \field{title}{Design of 3-bit Current Mode Flash {ADC}}
+      \field{urlday}{11}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{652\bibrangedash 657}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/RTEICT42901.2018.9012379
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\gonca\\Zotero\\storage\\GDB6TQPL\\Sharma et al. - 2018 - Design of 3-bit Current Mode Flash ADC.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/9012379/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/9012379/
+      \endverb
+      \keyw{Resistors,Delays,Mirrors,Power dissipation,Latches,Flash {ADC},Preamplifiers,Current mode,Dynamic Latch Comparator,Inverters,Wallace Tree Encoder}
     \endentry
     \entry{JunhuaShen_2025_94}{inproceedings}{}{}
       \name{author}{6}{}{%
@@ -6248,6 +6475,47 @@
       \verb 10.1109/ISSCC.2003.1234208
       \endverb
     \endentry
+    \entry{yaobulk2011}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=980c2c7790aacddf7dd446301649793d}{%
+           family={Yao},
+           familyi={Y\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7bb074c37d04e2fb30a473aa12102ae1}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5b7ae85b03c5b187088b01846c0a6d48}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{fdcd899d1354c8711077b548c0360cf0}
+      \strng{fullhash}{fdcd899d1354c8711077b548c0360cf0}
+      \strng{fullhashraw}{fdcd899d1354c8711077b548c0360cf0}
+      \strng{bibnamehash}{fdcd899d1354c8711077b548c0360cf0}
+      \strng{authorbibnamehash}{fdcd899d1354c8711077b548c0360cf0}
+      \strng{authornamehash}{fdcd899d1354c8711077b548c0360cf0}
+      \strng{authorfullhash}{fdcd899d1354c8711077b548c0360cf0}
+      \strng{authorfullhashraw}{fdcd899d1354c8711077b548c0360cf0}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Circuits and Systems II: Express Briefs}
+      \field{number}{2}
+      \field{title}{Bulk Voltage Trimming Offset Calibration for High-Speed Flash {ADCs}}
+      \field{volume}{57}
+      \field{year}{2010}
+      \field{pages}{110\bibrangedash 114}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/TCSII.2010.2040317
+      \endverb
+    \endentry
     \entry{yao_bulk_2011}{article}{}{}
       \name{author}{1}{}{%
         {{hash=02f71913ccb0d9f1e99d70ec64b68c46}{%
@@ -7230,7 +7498,6 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{MPScholar}
 \endrefsection
 \endinput
 

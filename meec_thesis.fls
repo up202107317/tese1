@@ -481,21 +481,7 @@ INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\symbol\psyr.t
 INPUT .\meec_thesis.lof
 INPUT .\meec_thesis.lof
 INPUT meec_thesis.lof
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7m.vf
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\psyro.tfm
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7m.vf
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\psyro.tfm
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
 OUTPUT meec_thesis.lof
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmro8t.tfm
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmro8t.vf
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmro8r.tfm
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7y.vf
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\gonca\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT .\meec_thesis.lot
 INPUT .\meec_thesis.lot
 INPUT meec_thesis.lot
@@ -506,6 +492,14 @@ OUTPUT abbrevs.aux
 INPUT .\abbrevs.tex
 INPUT .\abbrevs.tex
 INPUT abbrevs.tex
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7m.vf
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\psyro.tfm
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7t.vf
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\symbol\psyr.tfm
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT .\chapter1.tex
 INPUT .\chapter1.tex
 OUTPUT chapter1.aux
@@ -523,27 +517,33 @@ INPUT .\figures\time-sparse.png
 INPUT .\figures\time-sparse.png
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmro8t.tfm
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmro8t.vf
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmro8r.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
-INPUT .\figures\Mismatch error.png
-INPUT .\figures\Mismatch error.png
-INPUT .\figures\Mismatch error.png
-INPUT .\figures\Mismatch error.png
-INPUT .\figures\Mismatch error.png
-INPUT .\figures\Mismatch error.png
-INPUT .\figures\Mismatch error.png
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7t.vf
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\symbol\psyr.tfm
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
-INPUT .\figures\offset_error.png
-INPUT .\figures\offset_error.png
-INPUT .\figures\offset_error.png
-INPUT .\figures\offset_error.png
-INPUT .\figures\offset_error.png
-INPUT .\figures\offset_error.png
-INPUT .\figures\offset_error.png
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7m.vf
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\psyro.tfm
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7y.vf
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\gonca\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
+INPUT .\figures\Mismatch error.png
+INPUT .\figures\Mismatch error.png
+INPUT .\figures\Mismatch error.png
+INPUT .\figures\Mismatch error.png
+INPUT .\figures\Mismatch error.png
+INPUT .\figures\Mismatch error.png
+INPUT .\figures\Mismatch error.png
+INPUT .\figures\OffsetErrorAndGainErrorExample_01.png
+INPUT .\figures\OffsetErrorAndGainErrorExample_01.png
+INPUT .\figures\OffsetErrorAndGainErrorExample_01.png
+INPUT .\figures\OffsetErrorAndGainErrorExample_01.png
+INPUT .\figures\OffsetErrorAndGainErrorExample_01.png
+INPUT .\figures\OffsetErrorAndGainErrorExample_01.png
+INPUT .\figures\OffsetErrorAndGainErrorExample_01.png
 INPUT .\figures\fom_fs.png
 INPUT .\figures\fom_fs.png
 INPUT .\figures\fom_fs.png
@@ -634,10 +634,24 @@ INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tf
 INPUT C:\Users\gonca\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
+INPUT .\figures\LC_digital_logic.png
+INPUT .\figures\LC_digital_logic.png
+INPUT .\figures\LC_digital_logic.png
+INPUT .\figures\LC_digital_logic.png
+INPUT .\figures\LC_digital_logic.png
+INPUT .\figures\LC_digital_logic.png
+INPUT .\figures\LC_digital_logic.png
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7y.vf
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\symbol\psyr.tfm
 INPUT C:\Users\gonca\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7t.vf
+INPUT .\figures\resistive_ladder.png
+INPUT .\figures\resistive_ladder.png
+INPUT .\figures\resistive_ladder.png
+INPUT .\figures\resistive_ladder.png
+INPUT .\figures\resistive_ladder.png
+INPUT .\figures\resistive_ladder.png
+INPUT .\figures\resistive_ladder.png
 INPUT .\figures\VT bulk.png
 INPUT .\figures\VT bulk.png
 INPUT .\figures\VT bulk.png
@@ -645,6 +659,20 @@ INPUT .\figures\VT bulk.png
 INPUT .\figures\VT bulk.png
 INPUT .\figures\VT bulk.png
 INPUT .\figures\VT bulk.png
+INPUT .\figures\nijhawan_comp.png
+INPUT .\figures\nijhawan_comp.png
+INPUT .\figures\nijhawan_comp.png
+INPUT .\figures\nijhawan_comp.png
+INPUT .\figures\nijhawan_comp.png
+INPUT .\figures\nijhawan_comp.png
+INPUT .\figures\nijhawan_comp.png
+INPUT .\figures\panchal_comp.png
+INPUT .\figures\panchal_comp.png
+INPUT .\figures\panchal_comp.png
+INPUT .\figures\panchal_comp.png
+INPUT .\figures\panchal_comp.png
+INPUT .\figures\panchal_comp.png
+INPUT .\figures\panchal_comp.png
 INPUT .\figures\energy_year.png
 INPUT .\figures\energy_year.png
 INPUT .\figures\energy_year.png
