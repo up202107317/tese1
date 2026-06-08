@@ -1,0 +1,210 @@
+\section{Implementation}
+\label{sec:implementation}
+
+The design of the voltage comparator responsible for generating the digital
+output code of the analog-to-digital converter was not arrived at directly.
+It evolved through a sequence of candidate topologies, each evaluated against
+the constraints imposed by the target supply voltage, the required conversion
+accuracy, the effective input dynamic range, and the overall demands on circuit
+compactness. The following subsections document this progression, presenting
+each topology that was considered and explaining the physical reasoning that
+either led to its adoption or prompted its replacement by a subsequent
+candidate.
+
+
+\subsection{First Candidate: Current-Mirror Flash Analog-to-Digital Converter}
+
+The first topology investigated for the comparator core was the current-mirror
+flash ADC (CMF-ADC) introduced by Lee~\textit{et al.}~\cite{lee2017},
+originally proposed as the sensing front end of a coarse-fine dual-loop digital
+low-dropout regulator. Although the application context of that work differs
+substantially from the present design, the operating principle of the CMF-ADC
+constitutes a direct voltage-to-thermometer-code conversion mechanism that is
+directly applicable in the context of multi-bit comparison, making it a natural
+starting point for the architectural exploration.
+
+The circuit is divided into two cascaded functional stages: a transconductance
+cell and a current-to-code converter. The transconductance cell is implemented
+as a differential pair biased by a tail current of $2I_B$. Its function is to
+translate the voltage difference between the input voltage, $V_\mathrm{in}$,
+and an adjustable reference voltage, $V_\mathrm{ref,c}$, into an error
+current $I_\mathrm{err}$, yielding branch currents
+$I_1 = I_B - I_\mathrm{err}$ and $I_2 = I_B + I_\mathrm{err}$, where a
+positive $I_\mathrm{err}$ corresponds to $V_\mathrm{in}$ exceeding
+$V_\mathrm{ref,c}$. A third current, $I_3$, replicates $I_1$ through a
+current mirror and is subsequently distributed to the conversion stage.
+
+The current-to-code converter generates a multi-bit thermometer output by
+replicating $I_2$ and $I_3$ at each comparison node through PMOS and NMOS
+current mirrors, respectively, sized with deliberately asymmetric
+multiplication factors. In the five-bit implementation described
+in~\cite{lee2017}, the PMOS mirror ratios decrease monotonically from
+$\times 14$ to $\times 6$ across the five output nodes specifically
+$\times 14$, $\times 12$, $\times 10$, $\times 8$, and $\times 6$ for
+bits $C_\mathrm{LPT}[4]$ through $C_\mathrm{LPT}[0]$ while the NMOS
+mirror ratios increase correspondingly from $\times 6$ to $\times 14$.
+At each comparison node, the output logic level is determined by whichever
+mirrored current dominates: when the PMOS contribution exceeds the NMOS
+contribution, the node is driven to a logic high; otherwise, the NMOS
+pull-down prevails and the output settles to a logic low.
+
+To explain the operating principle clearly, it is most instructive to consider
+a configuration with an odd number of output bits, of which the five-bit case
+is the natural choice. An odd bit count provides a well-defined, symmetric
+midpoint whose comparison threshold aligns exactly with the condition
+$V_\mathrm{in} = V_\mathrm{ref,c}$, making the midpoint of the thermometer
+code unambiguous and facilitating a direct account of the circuit behaviour at
+the reference voltage. When $V_\mathrm{in}$ lies substantially below
+$V_\mathrm{ref,c}$, the error current $I_\mathrm{err}$ is strongly negative,
+meaning $I_2 < I_B$ while $I_3 > I_B$. Since the NMOS mirrors replicate
+$I_3$ with larger multiplication factors than the PMOS mirrors replicate $I_2$
+at every node, the NMOS current dominates throughout and the output code
+resolves to $00000$.
+
+As $V_\mathrm{in}$ rises toward $V_\mathrm{ref,c}$, the magnitude of
+$I_\mathrm{err}$ decreases and the comparison nodes with the highest
+PMOS-to-NMOS mirror ratio are the first to transition. The node
+$C_\mathrm{LPT}[4]$, carrying a PMOS mirror of ratio $\times 14$ against an
+NMOS mirror of only $\times 6$, presents the most favourable balance in favour
+of the PMOS side and therefore requires only a modest positive shift in $I_2$
+relative to $I_3$ before its output transitions high. Node $C_\mathrm{LPT}[3]$
+($\times 12$ PMOS, $\times 8$ NMOS) follows at a moderately larger error
+current, while the least significant nodes, $C_\mathrm{LPT}[1]$ and
+$C_\mathrm{LPT}[0]$, carry progressively more dominant NMOS mirrors and
+require a correspondingly larger current excess before their outputs transition.
+
+At the exact condition $V_\mathrm{in} = V_\mathrm{ref,c}$, the error current
+vanishes and both $I_2$ and $I_3$ are equal to $I_B$. Nodes
+$C_\mathrm{LPT}[4]$ and $C_\mathrm{LPT}[3]$ deliver PMOS currents of
+$14 I_B$ and $12 I_B$, respectively, against NMOS contributions of $6 I_B$
+and $8 I_B$, so both outputs are high. Nodes $C_\mathrm{LPT}[1]$ and
+$C_\mathrm{LPT}[0]$ exhibit the reverse relationship and remain low. The
+central node $C_\mathrm{LPT}[2]$ carries equal PMOS and NMOS currents of
+$10 I_B$ and is therefore in an exactly balanced. The resulting thermometer code
+at $V_\mathrm{in} = V_\mathrm{ref,c}$ is consequently $11{?}00$, where the
+question mark denotes the indeterminate state of the central bit, fully
+consistent with the expected behaviour of a comparator operating precisely at
+its decision threshold.
+
+The thresholds governing the transition of each bit are fully determined by
+the mirror ratios, as established analytically in~\cite{lee2017}, and result
+in a monotonic, symmetric thermometer-coded response across the input voltage
+range. This architecture combines inherently fast conversion speed stemming
+from the absence of a conventional error amplifier, whose finite bandwidth
+would otherwise limit the response time of the control
+loop~\cite{lee2017} with a straightforward, hardware-efficient structure and
+an explicitly quantifiable input-output characteristic. It was therefore
+adopted as the first candidate for the present comparator design, and its
+operating principle informed all subsequent topological choices.
+
+
+\subsection{Second Candidate: Complementary Dual-Input Architecture}
+
+A notable limitation of the CMF-ADC topology, as configured, is that its
+input common-mode range is restricted by the headroom requirements of the
+differential pair and tail current source. In order to extend the effective
+operating range of the comparator toward full rail-to-rail input coverage, a
+complementary dual-input architecture was developed and evaluated as a second
+candidate.
+
+This topology employs two parallel transconductance stages operating
+simultaneously: one based on an NMOS differential input pair and a second
+based on a PMOS differential input pair. The motivation for this arrangement
+is well established in the context of rail-to-rail input
+amplifiers~\cite{razavi}: an NMOS-input stage operates correctly when the
+common-mode input voltage is in the vicinity of the negative supply rail,
+where the gate overdrive of the input transistors is sufficient to maintain
+saturation, while a PMOS-input stage provides coverage near the positive
+supply rail. Operated jointly, the two stages guarantee that at least one
+transconductor remains fully functional across the complete supply voltage
+span.
+
+In the implementation explored here, the two transconductors were not combined
+through a simple parallel superposition of their output currents. Rather, one
+output branch of each OTA was directed toward the PMOS current mirrors
+responsible for generating the individual bits of the thermometer code,
+following the same current-comparison principle established in the CMF-ADC.
+The remaining output branch of each OTA was cross-coupled to the complementary
+transconductor: the residual output current from one stage was used to modulate
+the output node of the other, and the same arrangement was applied
+symmetrically in the reverse direction. This bidirectional cross-coupling was
+intended to exploit the complementary transconductance to extend the effective
+dynamic range of the conversion, allowing each stage to reinforce the other at
+input voltages near the boundary of its individual valid operating region.
+
+Despite the functional merit of this scheme, its practical realisation proved
+incompatible with the target supply voltage of $V_\mathrm{DD} = 0.8$~V.
+A standard five-transistor OTA requires a minimum headroom that accommodates
+the gate-to-source voltage drop of the differential pair, the saturation
+voltage of the tail current source, and the voltage drop across the active
+load. At $0.8$~V, this budget is already severely constrained. The
+cross-coupled dynamic range extension mechanism required one additional
+transistor in the critical signal path beyond the five-transistor baseline,
+and this single additional device was sufficient to push the cumulative
+headroom demand beyond the available supply, preventing the circuit from
+maintaining all active elements in saturation over the intended input range
+and thus rendering the architecture non-functional in practice.
+
+In an effort to recover the lost headroom margin, the conventional current
+mirror structures within the OTA branches were replaced by the low-voltage
+current mirror topology described by Razavi~\cite{razavi}. This configuration
+reduces the minimum voltage required across the mirror branch by eliminating
+one stacked gate-to-source drop from the critical headroom path, at the cost
+of a moderate increase in circuit complexity. However, even with this
+substitution, the cumulative voltage demand of the complete circuit 
+encompassing the differential input pair, the tail current source, the
+low-voltage mirror, and the cross-coupled output branch remained in excess
+of $0.8$~V. No viable bias point could be identified that simultaneously
+maintained all transistors in their correct operating region, and the
+architecture was consequently abandoned.
+
+
+\subsection{Adopted Architecture: Five-Transistor OTA with Feedback}
+
+Following the rejection of the complementary dual-input approach, the design
+converged on a classical five-transistor operational transconductance amplifier
+as the foundation for the comparator. In this topology, the differential pair
+is loaded by an active current mirror formed by two PMOS transistors: one
+connected in diode configuration, with its gate tied directly to its own
+drain, and a second transistor whose gate is driven by that same node. This
+arrangement, in which the diode-connected device sets the mirror reference and
+the second transistor replicates the resulting current to the complementary
+output branch, constitutes the standard active load of a differential pair
+and is the defining structural element of the five-transistor
+OTA~\cite{razavi}. By dispensing with the additional stacked elements required
+by the previous candidate, this topology fits within the available headroom at
+$V_\mathrm{DD} = 0.8$~V and operates correctly across the intended input
+range.
+
+This topology also differs fundamentally from the current-mirror flash ADC in
+the mechanism by which the comparison is realised. Rather than relying on a
+separate current-to-code converter with asymmetrically ratioed mirror branches,
+the five-transistor OTA performs a direct high-gain differential-to-single-ended
+conversion, producing an output voltage that responds strongly to the sign and
+magnitude of the differential input. To maximise the sensitivity of the
+comparator to small input voltage differences, the OTA was designed to achieve
+a high open-loop voltage gain.
+
+% [TO BE COMPLETED: sizing or bias strategy -- W/L ratios, gm target, etc.]
+
+This high gain, however, introduced a significant practical difficulty that
+became apparent during circuit evaluation. Even a small unintended differential
+voltage at the input arising from device offset, thermal noise, or a marginal
+overdrive condition was sufficient to drive the output rapidly into hard
+saturation before the circuit could respond to the intended comparison signal.
+Once the output reached the supply rail or ground, recovery was limited by the
+ability of the bias current to discharge or charge the high-impedance output
+node, and this prolonged saturation degraded both the effective comparison
+speed and the accuracy of successive conversions.
+
+To resolve this behaviour, a feedback mechanism was incorporated around the
+OTA.
+
+% [TO BE COMPLETED: describe the specific feedback topology -- resistive,
+% capacitive, regulated bias, or other -- including its effect on the
+% closed-loop gain and the improvement in dynamic behaviour.]
+
+The role of the feedback is to confine the output operating point to a
+controlled linear regime, limiting the maximum output voltage excursion and
+thereby preventing premature saturation, while preserving sufficient
+differential gain for accurate comparison at the target conversion resolution.
