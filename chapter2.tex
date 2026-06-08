@@ -1,4 +1,4 @@
-\section{Implementation}
+\chapter{Implementation}
 \label{sec:implementation}
 
 The design of the voltage comparator responsible for generating the digital
@@ -6,13 +6,13 @@ output code of the analog-to-digital converter was not arrived at directly.
 It evolved through a sequence of candidate topologies, each evaluated against
 the constraints imposed by the target supply voltage, the required conversion
 accuracy, the effective input dynamic range, and the overall demands on circuit
-compactness. The following subsections document this progression, presenting
+compactness. The following sections document this progression, presenting
 each topology that was considered and explaining the physical reasoning that
 either led to its adoption or prompted its replacement by a subsequent
 candidate.
 
 
-\subsection{First Candidate: Current-Mirror Flash Analog-to-Digital Converter}
+\section{First Candidate: Current-Mirror Flash Analog-to-Digital Converter}
 
 The first topology investigated for the comparator core was the current-mirror
 flash ADC (CMF-ADC) introduced by Lee~\textit{et al.}~\cite{lee2017},
@@ -98,7 +98,7 @@ adopted as the first candidate for the present comparator design, and its
 operating principle informed all subsequent topological choices.
 
 
-\subsection{Second Candidate: Complementary Dual-Input Architecture}
+\section{Second Candidate: Complementary Dual-Input Architecture}
 
 A notable limitation of the CMF-ADC topology, as configured, is that its
 input common-mode range is restricted by the headroom requirements of the
@@ -159,52 +159,96 @@ maintained all transistors in their correct operating region, and the
 architecture was consequently abandoned.
 
 
-\subsection{Adopted Architecture: Five-Transistor OTA with Feedback}
-
+\section{Adopted Architecture: Five-Transistor OTA Configured as Voltage Follower
+with Ratioed Output Slicers}
+ 
 Following the rejection of the complementary dual-input approach, the design
 converged on a classical five-transistor operational transconductance amplifier
 as the foundation for the comparator. In this topology, the differential pair
 is loaded by an active current mirror formed by two PMOS transistors: one
 connected in diode configuration, with its gate tied directly to its own
 drain, and a second transistor whose gate is driven by that same node. This
-arrangement, in which the diode-connected device sets the mirror reference and
-the second transistor replicates the resulting current to the complementary
-output branch, constitutes the standard active load of a differential pair
-and is the defining structural element of the five-transistor
-OTA~\cite{razavi}. By dispensing with the additional stacked elements required
-by the previous candidate, this topology fits within the available headroom at
+arrangement constitutes the standard active load of a differential pair and is
+the defining structural element of the five-transistor OTA~\cite{razavi}. By
+dispensing with the additional stacked elements that were required by the
+previous candidate, this topology fits within the available headroom at
 $V_\mathrm{DD} = 0.8$~V and operates correctly across the intended input
 range.
-
-This topology also differs fundamentally from the current-mirror flash ADC in
-the mechanism by which the comparison is realised. Rather than relying on a
-separate current-to-code converter with asymmetrically ratioed mirror branches,
-the five-transistor OTA performs a direct high-gain differential-to-single-ended
-conversion, producing an output voltage that responds strongly to the sign and
-magnitude of the differential input. To maximise the sensitivity of the
-comparator to small input voltage differences, the OTA was designed to achieve
-a high open-loop voltage gain.
-
-% [TO BE COMPLETED: sizing or bias strategy -- W/L ratios, gm target, etc.]
-
-This high gain, however, introduced a significant practical difficulty that
-became apparent during circuit evaluation. Even a small unintended differential
-voltage at the input arising from device offset, thermal noise, or a marginal
-overdrive condition was sufficient to drive the output rapidly into hard
-saturation before the circuit could respond to the intended comparison signal.
-Once the output reached the supply rail or ground, recovery was limited by the
-ability of the bias current to discharge or charge the high-impedance output
-node, and this prolonged saturation degraded both the effective comparison
-speed and the accuracy of successive conversions.
-
-To resolve this behaviour, a feedback mechanism was incorporated around the
-OTA.
-
-% [TO BE COMPLETED: describe the specific feedback topology -- resistive,
-% capacitive, regulated bias, or other -- including its effect on the
-% closed-loop gain and the improvement in dynamic behaviour.]
-
-The role of the feedback is to confine the output operating point to a
-controlled linear regime, limiting the maximum output voltage excursion and
-thereby preventing premature saturation, while preserving sufficient
-differential gain for accurate comparison at the target conversion resolution.
+ 
+To maximise the sensitivity of the comparator to small input voltage
+differences, the OTA was initially evaluated in open-loop configuration, where
+a high voltage gain could be obtained through appropriate transistor sizing.
+This open-loop approach, however, introduced a significant practical difficulty:
+even a small unintended differential voltage at the input---arising from device
+offset, thermal noise, or a marginal overdrive condition---was sufficient to
+drive the single-ended output rapidly into hard saturation before the circuit
+could resolve the intended comparison. Once the output reached the supply rail
+or ground, the recovery time was limited by the bias current available to
+discharge or charge the high-impedance output node, and this prolonged
+saturation state degraded both the effective comparison speed and the
+consistency of successive conversions.
+ 
+To resolve this behaviour, the OTA was reconfigured as a unity-gain voltage
+follower by connecting the output directly to the inverting input, forming a
+100\% negative feedback loop. In this configuration, the feedback action drives
+the differential input of the OTA to near zero in steady state, which
+constrains the output to track $V_\mathrm{in}$ closely and keeps the amplifier
+permanently within its linear operating region, thereby preventing the
+saturation that had affected the open-loop scheme. The voltage follower thus
+acts as a low-impedance replica of the input signal, reproducing $V_\mathrm{in}$
+at its output with the accuracy determined by the open-loop gain and the
+input-referred offset of the OTA.
+ 
+The actual digitisation of $V_\mathrm{in}$ is delegated to a bank of CMOS
+slicer inverters, each driven directly by the follower output. Rather than
+relying on asymmetric current mirror ratios to encode the decision levels---as
+in the CMF-ADC---the present architecture encodes each comparison threshold
+through the PMOS-to-NMOS width ratio of the corresponding inverter, which
+determines its switching trip point $V_M$. For a CMOS inverter in which the
+relative transistor strengths are set by the ratio $r = (W/L)_p\,/\,(W/L)_n$,
+the trip point is given approximately by
+ 
+\begin{equation}
+    V_M \approx \frac{V_\mathrm{DD}\,\sqrt{r}}{1 + \sqrt{r}},
+    \label{eq:trip_point}
+\end{equation}
+ 
+\noindent
+so that an inverter with a larger $r$ exhibits a higher trip point, while a
+smaller $r$ shifts $V_M$ below $V_\mathrm{DD}/2$. By assigning a distinct
+ratio to each output bit, the trip points of the slicer bank are distributed
+across the voltage axis, and the thermometer-coded output word is formed by the
+set of inverters whose input---the follower output---has or has not yet reached
+their respective thresholds.
+ 
+In the implemented five-bit configuration, the most significant output bit,
+out$_4$, is formed by an inverter with a PMOS-to-NMOS ratio of $r = 1.5$,
+yielding a trip point above $V_\mathrm{DD}/2 = 0.4$~V. Conversely, the least
+significant bit, out$_0$, uses a ratio of $r = 0.5$, placing its trip point
+below $0.4$~V. The three intermediate bits are assigned ratios distributed
+between these extremes, so that the five trip points bracket the reference
+level of $0.4$~V symmetrically. The operating principle is directly analogous
+to that of the CMF-ADC described in the first candidate: as $V_\mathrm{in}$
+increases from zero toward $V_\mathrm{DD}$, each slicer transitions from
+logic high to logic low in sequence, beginning with the inverter whose trip
+point is lowest---that is, the one whose threshold is crossed first---and
+ending with the inverter whose higher ratio causes it to hold its output high
+until a larger input voltage is reached. At $V_\mathrm{in} = 0.4$~V, the
+slicers with $r > 1$ still output logic high while those with $r < 1$ have
+already transitioned to logic low, and the central slicer at $r = 1$ sits
+precisely at its trip point in a metastable condition. The resulting
+thermometer code at the reference level is consequently $11{?}00$, in
+complete correspondence with the code produced by the CMF-ADC under the same
+input condition.
+ 
+The principal advantage of this approach over the current-mirror architecture
+is its decoupling of the input buffering function from the threshold-setting
+function. The voltage follower provides a clean, low-impedance replica of
+$V_\mathrm{in}$ to all slicers simultaneously, while the trip-point
+distribution is controlled entirely through transistor sizing, which is a
+well-defined, lithographically precise parameter. This separation also
+simplifies the headroom analysis: the five-transistor OTA operates under
+unity-gain feedback at a common-mode level close to $V_\mathrm{in}$, with no
+additional stacking requirements, while the slicer inverters are single-stage
+structures that impose no additional headroom constraint beyond the supply
+rails.

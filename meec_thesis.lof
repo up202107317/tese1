@@ -14,7 +14,8 @@
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Bulk-driven trimming effect on input pair threshold voltage}}{18}{figure.caption.37}%
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Energy per conversion versus publication year for representative ADCs}}{21}{figure.caption.42}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Top-level block diagram of the synchronous 4-bit Flash ADC \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{31}{figure.caption.44}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Schematic of the StrongARM latch comparator \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{32}{figure.caption.45}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Top-level block diagram of the synchronous 4-bit Flash ADC \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{32}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Schematic of the StrongARM latch comparator \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{33}{figure.caption.45}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
