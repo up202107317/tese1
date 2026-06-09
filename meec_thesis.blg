@@ -1,21 +1,23 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'meec_thesis.blg'
-[129] biber-MSWIN64:342> INFO - === 
-[176] Biber.pm:421> INFO - Reading 'meec_thesis.bcf'
-[375] Biber.pm:1002> INFO - Found 165 citekeys in bib section 0
-[390] Biber.pm:4487> INFO - Processing section 0
-[407] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
-[489] bibtex.pm:1713> INFO - LaTeX decoding ...
-[883] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[2455] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[2455] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[2455] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[2455] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
-[2660] bbl.pm:676> INFO - Writing 'meec_thesis.bbl' with encoding 'UTF-8'
-[2834] bbl.pm:779> INFO - Output to meec_thesis.bbl
-[2835] Biber.pm:132> WARN - Possible typo (case mismatch) between datasource keys: 'Van_Der_Ploeg' and 'van_der_Ploeg' in file 'references.bib'
-[2835] Biber.pm:132> WARN - I didn't find a database entry for 'lee2017' (section 0)
-[2835] Biber.pm:132> WARN - I didn't find a database entry for 'razavi' (section 0)
-[2835] Biber.pm:132> WARN - I didn't find a database entry for 'flashadc_ref' (section 0)
-[2835] Biber.pm:132> WARN - I didn't find a database entry for 'razavi_strongarm' (section 0)
-[2835] Biber.pm:134> INFO - WARNINGS: 5
+[234] biber-MSWIN64:342> INFO - === 
+[324] Biber.pm:421> INFO - Reading 'meec_thesis.bcf'
+[481] Biber.pm:1002> INFO - Found 167 citekeys in bib section 0
+[495] Biber.pm:4487> INFO - Processing section 0
+[516] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
+[578] bibtex.pm:1713> INFO - LaTeX decoding ...
+[899] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[2179] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2180] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2180] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[2180] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[2414] bbl.pm:676> INFO - Writing 'meec_thesis.bbl' with encoding 'UTF-8'
+[2544] bbl.pm:779> INFO - Output to meec_thesis.bbl
+[2545] Biber.pm:132> WARN - Possible typo (case mismatch) between datasource keys: 'Van_Der_Ploeg' and 'van_der_Ploeg' in file 'references.bib'
+[2545] Biber.pm:132> WARN - I didn't find a database entry for 'weltin2013' (section 0)
+[2545] Biber.pm:132> WARN - I didn't find a database entry for 'mou2026' (section 0)
+[2545] Biber.pm:132> WARN - I didn't find a database entry for 'lee2017' (section 0)
+[2545] Biber.pm:132> WARN - I didn't find a database entry for 'razavi' (section 0)
+[2545] Biber.pm:132> WARN - I didn't find a database entry for 'flashadc_ref' (section 0)
+[2545] Biber.pm:132> WARN - I didn't find a database entry for 'razavi_strongarm' (section 0)
+[2545] Biber.pm:134> INFO - WARNINGS: 7
