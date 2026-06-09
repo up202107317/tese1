@@ -4253,28 +4253,6 @@
       \verb 10.1109/ISSCC.2006.1696042
       \endverb
     \endentry
-    \entry{MPScholar}{misc}{}{}
-      \name{author}{1}{}{%
-        {{hash=4e8e970606abedd72af71dccbf0e9c85}{%
-           family={{Monolithic Power Systems}},
-           familyi={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{4e8e970606abedd72af71dccbf0e9c85}
-      \strng{fullhash}{4e8e970606abedd72af71dccbf0e9c85}
-      \strng{fullhashraw}{4e8e970606abedd72af71dccbf0e9c85}
-      \strng{bibnamehash}{4e8e970606abedd72af71dccbf0e9c85}
-      \strng{authorbibnamehash}{4e8e970606abedd72af71dccbf0e9c85}
-      \strng{authornamehash}{4e8e970606abedd72af71dccbf0e9c85}
-      \strng{authorfullhash}{4e8e970606abedd72af71dccbf0e9c85}
-      \strng{authorfullhashraw}{4e8e970606abedd72af71dccbf0e9c85}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.monolithicpower.com/en/learning/mpscholar/analog-to-digital-converters/adc-errors-and-compensation/sources-of-errors-in-adcs}}
-      \field{note}{Accessed: Jan. 9, 2026}
-      \field{title}{MPScholar}
-    \endentry
     \entry{Muller_2015}{inproceedings}{}{}
       \true{moreauthor}
       \true{morelabelname}

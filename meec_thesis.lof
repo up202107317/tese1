@@ -1,21 +1,21 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Time-sparse signal and sampling strategies}}{2}{figure.caption.8}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Effect of DNL on ADC transfer characteristic}}{3}{figure.caption.9}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Time-sparse signal and sampling strategies}}{2}{figure.caption.9}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Offset and gain errors in ADC transfer function}}{8}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Walden FoM versus sampling frequency for representative ADCs}}{10}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces SAR ADC architecture}}{12}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Pipeline ADC architecture}}{12}{figure.caption.17}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces First-order sigma-delta ADC architecture}}{13}{figure.caption.21}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Dual-slope integrating ADC architecture}}{14}{figure.caption.25}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Digital logic for level-crossing asynchronous ADC}}{15}{figure.caption.29}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Bulk-driven resistive ladder trimming for comparator offset calibration}}{18}{figure.caption.36}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Bulk-driven trimming effect on input pair threshold voltage}}{18}{figure.caption.37}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Energy per conversion versus publication year for representative ADCs}}{21}{figure.caption.42}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Offset and gain errors in ADC transfer function}}{7}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Walden FoM versus sampling frequency for representative ADCs}}{9}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces SAR ADC architecture}}{11}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Pipeline ADC architecture}}{11}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces First-order sigma-delta ADC architecture}}{12}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Dual-slope integrating ADC architecture}}{13}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Digital logic for level-crossing asynchronous ADC}}{14}{figure.caption.28}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Bulk-driven resistive ladder trimming for comparator offset calibration}}{20}{figure.caption.35}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Bulk-driven trimming effect on input pair threshold voltage}}{20}{figure.caption.36}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Energy per conversion versus publication year for representative ADCs}}{23}{figure.caption.41}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Top-level block diagram of the synchronous 4-bit Flash ADC \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{32}{figure.caption.44}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Schematic of the StrongARM latch comparator \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{33}{figure.caption.45}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Top-level block diagram of the synchronous 4-bit Flash ADC \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{32}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Schematic of the StrongARM latch comparator \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{33}{figure.caption.44}%
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

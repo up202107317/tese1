@@ -1,273 +1,271 @@
-\chapter{Synchronous Reference Flash ADC} \label{chap:synchronous}
+
+\chapter{Proposed Asynchronous Flash ADC Design}
+\section{Architectural Evolution and Methodology}
+The design of the voltage comparator responsible for generating the digital
+output code of the analog-to-digital converter was not arrived at directly.
+It evolved through a sequence of candidate topologies, each evaluated against
+the constraints imposed by the target supply voltage, the required conversion
+accuracy, the effective input dynamic range, and the overall demands on circuit
+compactness. The following sections document this progression, presenting
+each topology that was considered and explaining the physical reasoning that
+either led to its adoption or prompted its replacement by a subsequent
+candidate.
+
+
+\section{Phase I: The Baseline Current-Mirror OTA Flash Configuration}
+\subsection{Operating Principle and Core Topology}
+\subsection{Current Comparator Topology Exploration and Characterization}
+The first topology investigated for the comparator core was the current-mirror
+flash ADC (CMF-ADC) introduced by Lee~\textit{et al.}~\cite{lee2017},
+originally proposed as the sensing front end of a coarse-fine dual-loop digital
+low-dropout regulator. Although the application context of that work differs
+substantially from the present design, the operating principle of the CMF-ADC
+constitutes a direct voltage-to-thermometer-code conversion mechanism that is
+directly applicable in the context of multi-bit comparison, making it a natural
+starting point for the architectural exploration.
+
+The circuit is divided into two cascaded functional stages: a transconductance
+cell and a current-to-code converter. The transconductance cell is implemented
+as a differential pair biased by a tail current of $2I_B$. Its function is to
+translate the voltage difference between the input voltage, $V_\mathrm{in}$,
+and an adjustable reference voltage, $V_\mathrm{ref,c}$, into an error
+current $I_\mathrm{err}$, yielding branch currents
+$I_1 = I_B - I_\mathrm{err}$ and $I_2 = I_B + I_\mathrm{err}$, where a
+positive $I_\mathrm{err}$ corresponds to $V_\mathrm{in}$ exceeding
+$V_\mathrm{ref,c}$. A third current, $I_3$, replicates $I_1$ through a
+current mirror and is subsequently distributed to the conversion stage.
+
+The current-to-code converter generates a multi-bit thermometer output by
+replicating $I_2$ and $I_3$ at each comparison node through PMOS and NMOS
+current mirrors, respectively, sized with deliberately asymmetric
+multiplication factors. In the five-bit implementation described
+in~\cite{lee2017}, the PMOS mirror ratios decrease monotonically from
+$\times 14$ to $\times 6$ across the five output nodes specifically
+$\times 14$, $\times 12$, $\times 10$, $\times 8$, and $\times 6$ for
+bits $C_\mathrm{LPT}[4]$ through $C_\mathrm{LPT}[0]$ while the NMOS
+mirror ratios increase correspondingly from $\times 6$ to $\times 14$.
+At each comparison node, the output logic level is determined by whichever
+mirrored current dominates: when the PMOS contribution exceeds the NMOS
+contribution, the node is driven to a logic high; otherwise, the NMOS
+pull-down prevails and the output settles to a logic low.
+
+To explain the operating principle clearly, it is most instructive to consider
+a configuration with an odd number of output bits, of which the five-bit case
+is the natural choice. An odd bit count provides a well-defined, symmetric
+midpoint whose comparison threshold aligns exactly with the condition
+$V_\mathrm{in} = V_\mathrm{ref,c}$, making the midpoint of the thermometer
+code unambiguous and facilitating a direct account of the circuit behaviour at
+the reference voltage. When $V_\mathrm{in}$ lies substantially below
+$V_\mathrm{ref,c}$, the error current $I_\mathrm{err}$ is strongly negative,
+meaning $I_2 < I_B$ while $I_3 > I_B$. Since the NMOS mirrors replicate
+$I_3$ with larger multiplication factors than the PMOS mirrors replicate $I_2$
+at every node, the NMOS current dominates throughout and the output code
+resolves to $00000$.
+
+As $V_\mathrm{in}$ rises toward $V_\mathrm{ref,c}$, the magnitude of
+$I_\mathrm{err}$ decreases and the comparison nodes with the highest
+PMOS-to-NMOS mirror ratio are the first to transition. The node
+$C_\mathrm{LPT}[4]$, carrying a PMOS mirror of ratio $\times 14$ against an
+NMOS mirror of only $\times 6$, presents the most favourable balance in favour
+of the PMOS side and therefore requires only a modest positive shift in $I_2$
+relative to $I_3$ before its output transitions high. Node $C_\mathrm{LPT}[3]$
+($\times 12$ PMOS, $\times 8$ NMOS) follows at a moderately larger error
+current, while the least significant nodes, $C_\mathrm{LPT}[1]$ and
+$C_\mathrm{LPT}[0]$, carry progressively more dominant NMOS mirrors and
+require a correspondingly larger current excess before their outputs transition.
+
+At the exact condition $V_\mathrm{in} = V_\mathrm{ref,c}$, the error current
+vanishes and both $I_2$ and $I_3$ are equal to $I_B$. Nodes
+$C_\mathrm{LPT}[4]$ and $C_\mathrm{LPT}[3]$ deliver PMOS currents of
+$14 I_B$ and $12 I_B$, respectively, against NMOS contributions of $6 I_B$
+and $8 I_B$, so both outputs are high. Nodes $C_\mathrm{LPT}[1]$ and
+$C_\mathrm{LPT}[0]$ exhibit the reverse relationship and remain low. The
+central node $C_\mathrm{LPT}[2]$ carries equal PMOS and NMOS currents of
+$10 I_B$ and is therefore in an exactly balanced. The resulting thermometer code
+at $V_\mathrm{in} = V_\mathrm{ref,c}$ is consequently $11{?}00$, where the
+question mark denotes the indeterminate state of the central bit, fully
+consistent with the expected behaviour of a comparator operating precisely at
+its decision threshold.
+
+The thresholds governing the transition of each bit are fully determined by
+the mirror ratios, as established analytically in~\cite{lee2017}, and result
+in a monotonic, symmetric thermometer-coded response across the input voltage
+range. This architecture combines inherently fast conversion speed stemming
+from the absence of a conventional error amplifier, whose finite bandwidth
+would otherwise limit the response time of the control
+loop~\cite{lee2017} with a straightforward, hardware-efficient structure and
+an explicitly quantifiable input-output characteristic. It was therefore
+adopted as the first candidate for the present comparator design, and its
+operating principle informed all subsequent topological choices.
+
+
+\section{Phase II: The Complementary Dual-Input Flash Configuration}
+\subsection{Motivation for Wide Input Common-Mode Range Extension}
+\subsection{Voltage Headroom Limitations and Performance Degradation in Low-Voltage Nodes}
+A notable limitation of the CMF-ADC topology, as configured, is that its
+input common-mode range is restricted by the headroom requirements of the
+differential pair and tail current source. In order to extend the effective
+operating range of the comparator toward full rail-to-rail input coverage, a
+complementary dual-input architecture was developed and evaluated as a second
+candidate.
+
+This topology employs two parallel transconductance stages operating
+simultaneously: one based on an NMOS differential input pair and a second
+based on a PMOS differential input pair. The motivation for this arrangement
+is well established in the context of rail-to-rail input
+amplifiers~\cite{razavi}: an NMOS-input stage operates correctly when the
+common-mode input voltage is in the vicinity of the negative supply rail,
+where the gate overdrive of the input transistors is sufficient to maintain
+saturation, while a PMOS-input stage provides coverage near the positive
+supply rail. Operated jointly, the two stages guarantee that at least one
+transconductor remains fully functional across the complete supply voltage
+span.
+
+In the implementation explored here, the two transconductors were not combined
+through a simple parallel superposition of their output currents. Rather, one
+output branch of each OTA was directed toward the PMOS current mirrors
+responsible for generating the individual bits of the thermometer code,
+following the same current-comparison principle established in the CMF-ADC.
+The remaining output branch of each OTA was cross-coupled to the complementary
+transconductor: the residual output current from one stage was used to modulate
+the output node of the other, and the same arrangement was applied
+symmetrically in the reverse direction. This bidirectional cross-coupling was
+intended to exploit the complementary transconductance to extend the effective
+dynamic range of the conversion, allowing each stage to reinforce the other at
+input voltages near the boundary of its individual valid operating region.
+
+Despite the functional merit of this scheme, its practical realisation proved
+incompatible with the target supply voltage of $V_\mathrm{DD} = 0.8$~V.
+A standard five-transistor OTA requires a minimum headroom that accommodates
+the gate-to-source voltage drop of the differential pair, the saturation
+voltage of the tail current source, and the voltage drop across the active
+load. At $0.8$~V, this budget is already severely constrained. The
+cross-coupled dynamic range extension mechanism required one additional
+transistor in the critical signal path beyond the five-transistor baseline,
+and this single additional device was sufficient to push the cumulative
+headroom demand beyond the available supply, preventing the circuit from
+maintaining all active elements in saturation over the intended input range
+and thus rendering the architecture non-functional in practice.
+
+In an effort to recover the lost headroom margin, the conventional current
+mirror structures within the OTA branches were replaced by the low-voltage
+current mirror topology described by Razavi~\cite{razavi}. This configuration
+reduces the minimum voltage required across the mirror branch by eliminating
+one stacked gate-to-source drop from the critical headroom path, at the cost
+of a moderate increase in circuit complexity. However, even with this
+substitution, the cumulative voltage demand of the complete circuit 
+encompassing the differential input pair, the tail current source, the
+low-voltage mirror, and the cross-coupled output branch remained in excess
+of $0.8$~V. No viable bias point could be identified that simultaneously
+maintained all transistors in their correct operating region, and the
+architecture was consequently abandoned.
+
+
+\section{Phase III: The Final Adopted Architecture}
+\subsection{Five-Transistor OTA Core and Optimized Transistor Sizing}
+\subsection{Ratioed Output Slicers Design}
+\subsection{Asynchronous Control Logic and Clockless Event Generation Network}
+Following the rejection of the complementary dual-input approach, the design
+converged on a classical five-transistor operational transconductance amplifier
+as the foundation for the comparator. In this topology, the differential pair
+is loaded by an active current mirror formed by two PMOS transistors: one
+connected in diode configuration, with its gate tied directly to its own
+drain, and a second transistor whose gate is driven by that same node. This
+arrangement constitutes the standard active load of a differential pair and is
+the defining structural element of the five-transistor OTA~\cite{razavi}. By
+dispensing with the additional stacked elements that were required by the
+previous candidate, this topology fits within the available headroom at
+$V_\mathrm{DD} = 0.8$~V and operates correctly across the intended input
+range.
  
+To maximise the sensitivity of the comparator to small input voltage
+differences, the OTA was initially evaluated in open-loop configuration, where
+a high voltage gain could be obtained through appropriate transistor sizing.
+This open-loop approach, however, introduced a significant practical difficulty:
+even a small unintended differential voltage at the input---arising from device
+offset, thermal noise, or a marginal overdrive condition---was sufficient to
+drive the single-ended output rapidly into hard saturation before the circuit
+could resolve the intended comparison. Once the output reached the supply rail
+or ground, the recovery time was limited by the bias current available to
+discharge or charge the high-impedance output node, and this prolonged
+saturation state degraded both the effective comparison speed and the
+consistency of successive conversions.
  
-%                      -
-\section{Motivation for Architectural Selection}
-%                      -
+To resolve this behaviour, the OTA was reconfigured as a unity-gain voltage
+follower by connecting the output directly to the inverting input, forming a
+100\% negative feedback loop. In this configuration, the feedback action drives
+the differential input of the OTA to near zero in steady state, which
+constrains the output to track $V_\mathrm{in}$ closely and keeps the amplifier
+permanently within its linear operating region, thereby preventing the
+saturation that had affected the open-loop scheme. The voltage follower thus
+acts as a low-impedance replica of the input signal, reproducing $V_\mathrm{in}$
+at its output with the accuracy determined by the open-loop gain and the
+input-referred offset of the OTA.
  
-Benchmarking a novel converter architecture requires a reference point that is close enough structurally to make the comparison genuinely informative. The synchronous reference used in this work is a 4-bit Flash ADC with rail-to-rail comparators, originally presented in \cite{flashadc_ref} and designed in a 65-nm CMOS process. For the purpose of this comparison, the architecture was re-implemented and simulated in a 16-nm technology node, under the same conditions applied to the proposed asynchronous converter throughout this dissertation.
- 
-The choice of this particular design was not arbitrary. Several properties directly align with those of the asynchronous architecture described in Chapter~\ref{sec:implementation}, and it is precisely this alignment that makes the comparison meaningful. Both converters use the Flash topology, so the number of comparators and the fundamental conversion principle are shared. Both are designed for 4-bit resolution, keeping the complexity of the comparison logic identical. Both feature rail-to-rail input comparators, ensuring that the input voltage swing does not introduce any asymmetry between the two designs. Finally, both architectures are explicitly oriented towards low-power operation, which is the design space where the asynchronous approach is expected to have the most significant impact.
- 
-The fundamental difference, and the one this comparison is intended to illuminate, is the presence of a global clock. The synchronous reference depends on a periodic clock to coordinate its comparators and define valid output instants, while the asynchronous architecture eliminates the clock entirely. Removing the clock distribution network is one of the primary motivations for adopting asynchronous operation, since the clock tree contributes a non-trivial fraction of total power in high-speed designs. By holding all other parameters constant and changing only this aspect, the comparison provides a direct and controlled view of what asynchronous operation actually costs  or saves  in power and performance.
- 
- 
-%                      -
-\section{Architecture Overview}
-%                      -
- 
-A Flash ADC resolves an analogue input voltage in a single conversion step by comparing it simultaneously against $2^N - 1$ evenly spaced reference levels, where $N$ is the number of output bits. For a 4-bit converter, this means 15 comparators operate in parallel at every active clock edge, each producing a binary decision about whether the input exceeds its assigned threshold. The outputs of all 15 comparators form a thermometer code  a sequence of ones followed by zeros with no transitions other than the boundary between them  which is then passed to an encoder that maps it to the final 4-bit binary word.
- 
-\begin{figure}[htbp]
-    \centering
-    %  - Replace the placeholder box below with your actual figure  -
-    \fbox{\parbox{0.80\textwidth}{%
-        \centering\vspace{3.5cm}%
-        \textit{[Insert: top-level block diagram of the synchronous Flash ADC]}%
-        \vspace{3.5cm}}}
-    %                       
-    \caption{Top-level block diagram of the synchronous 4-bit Flash ADC \cite{flashadc_ref}.}
-    \label{fig:flash_arch}
-\end{figure}
- 
-The reference voltages fed to each comparator are generated by a resistor ladder connected between $V_{REF+}$ and $V_{REF-}$, which in this rail-to-rail implementation are tied directly to the supply rails $V_{DD}$ and $V_{SS}$. The ladder divides the full input range into 15 equally spaced steps of one LSB each, so the $k$-th comparator from the bottom receives a reference of
+The actual digitisation of $V_\mathrm{in}$ is delegated to a bank of CMOS
+slicer inverters, each driven directly by the follower output. Rather than
+relying on asymmetric current mirror ratios to encode the decision levels---as
+in the CMF-ADC---the present architecture encodes each comparison threshold
+through the PMOS-to-NMOS width ratio of the corresponding inverter, which
+determines its switching trip point $V_M$. For a CMOS inverter in which the
+relative transistor strengths are set by the ratio $r = (W/L)_p\,/\,(W/L)_n$,
+the trip point is given approximately by
  
 \begin{equation}
-    V_{REF,k} = V_{SS} + k \cdot \frac{V_{DD} - V_{SS}}{2^N},
-    \qquad k = 1, 2, \ldots, 2^N - 1.
-    \label{eq:ladder}
-\end{equation}
- 
-Since all comparators are driven by the same clock, every decision is made within a single clock period and the output is valid only at well-defined time instants. This is the defining characteristic of a synchronous converter and stands in direct contrast to the asynchronous operation discussed in Chapter~\ref{chap:async}.
- 
- 
-%                      -
-\section{The StrongARM Latch Comparator}
-%                      -
- 
-\subsection{Circuit Description and Operating Principle}
- 
-The comparator used in this architecture is the StrongARM latch, a dynamic comparator topology that has become something of a standard reference in both high-speed receiver design and data converter circuits \cite{razavi_strongarm}. Its widespread adoption reflects a genuinely attractive combination of characteristics: high regeneration speed, good noise performance, and essentially zero static power dissipation  all of which matter in a Flash ADC where 15 comparators must operate in parallel.
- 
-\begin{figure}[htbp]
-    \centering
-    %  - Replace the placeholder box below with your actual figure  -
-    \fbox{\parbox{0.75\textwidth}{%
-        \centering\vspace{3.5cm}%
-        \textit{[Insert: StrongARM latch schematic]}%
-        \vspace{3.5cm}}}
-    %                       
-    \caption{Schematic of the StrongARM latch comparator \cite{flashadc_ref}.}
-    \label{fig:strongarm}
-\end{figure}
- 
-The circuit operates in two alternating phases controlled by the clock signal a reset phase and an evaluation phase.
- 
-
-The reset phase occurs when the clock is low, the tail transistor is turned off and a pair of reset switches pull both output nodes up to $V_{DD}$. This precharges the outputs to a known state before every comparison, so that each evaluation begins from the same initial condition regardless of the previous result. Because the tail transistor is off and no current path exists through the core of the circuit, static power dissipation is identically zero during this phase.
- 
-The evaluation phase occurs when the clock rises, the tail transistor turns on and current begins to flow through the differential input pair. The input transistors steer this current according to the voltage difference $\Delta V = V_{INP} - V_{INN}$: the side with the higher input voltage conducts more, causing that output node to discharge faster than the other. Once a sufficient imbalance develops across the internal nodes, the cross-coupled inverter pair at the output enters regeneration  a positive feedback mechanism that amplifies the initial imbalance exponentially until the outputs settle at valid logic levels \cite{razavi_strongarm}. The time needed to complete the regeneration is inversely related to the input overdrive: larger differences between the input voltage and the reference threshold resolve faster, while inputs very close to the threshold require more time. This input-dependent latency is a fundamental property of dynamic comparators and is one of the key differences exploited by the asynchronous architecture discussed later.
- 
-Since current only flows during the evaluation phase, and only briefly at that, the average power consumption is directly proportional to the clock frequency. This makes the StrongARM latch well suited to low-power converter design: reducing the sampling rate reduces the power linearly.
- 
-\subsection{Rail-to-Rail Input Range}
- 
-A key property of this comparator implementation is its ability to correctly resolve input voltages across the full supply range, from $V_{SS}$ to $V_{DD}$. In a Flash ADC, the comparators assigned to the top and bottom reference levels must operate very close to the supply rails, and a comparator that loses sensitivity or gain in those regions would introduce nonlinearity at the extremes of the transfer characteristic, degrading the integral linearity of the converter. The rail-to-rail design ensures this does not happen, maintaining consistent performance across the entire input range.
- 
-This property is shared by the asynchronous architecture presented in this work, so it does not introduce any asymmetry into the comparison between the two designs.
- 
- 
-%                      -
-\section{Clock Generation}
-%                      -
- 
-Since the architecture is synchronous, a stable clock signal must drive the comparator array and determine the conversion instants. For simulation purposes, the clock was generated using a ring oscillator, which provides a compact and realistic on-chip clock source without requiring an ideal external generator.
- 
-Rather than driving the comparators directly from the oscillator output, the signal was routed through a tapered inverter buffer chain designed to model the loading and parasitics of a realistic clock distribution network. The chain consists of a sequence of inverters with progressively increasing drive strength, with each stage sized at approximately twice the fanout of the previous one. The final stage of the chain is a $\times$24 fanout inverter, whose size reflects the capacitive load that a clock signal would encounter when distributed through the metal routing to the ADC core  the interconnect wires, vias, and comparator gate inputs that the clock must charge and discharge on every cycle.
- 
-A $\times$24 final buffer is a reasonable and representative choice for modelling the routing from a clock source to the ADC, as it captures the kind of loading one would expect in a physically compact but realistic clock distribution. Neglecting this stage would result in a power estimate that is overly optimistic: in a real implementation, the clock tree is rarely a negligible contributor to total power, and any fair assessment of the synchronous architecture must account for it.
- 
-The complete clock path used in simulation is therefore: ring oscillator  buffer chain ($\times$2 fanout per stage)   $\times$24 output buffer   comparator array.
- 
- 
-%                      -
-\section{Power Measurement Methodology}
-%                      -
- 
-To ensure the fairest possible comparison with the proposed asynchronous architecture, the power figures reported in this chapter cover only the core analogue conversion path. Specifically, the encoder  the digital logic that translates the 15-bit thermometer code output of the comparators into the final 4-bit binary word  was excluded from all power measurements.
- 
-The reasoning is straightforward, the asynchronous architecture presented in this work also does not include encoder power in its reported figures. Including it on one side of the comparison but not the other would artificially inflate the synchronous power budget and lead to a conclusion that does not fairly reflect the underlying architectural trade-off. Since both designs require some form of thermometer-to-binary conversion at their outputs, and since this encoding logic is largely independent of whether the preceding conversion is synchronous or asynchronous, the most defensible approach is to exclude it from both and compare only the converter cores.
- 
-The power reported in Table~\ref{tab:sync_results} therefore includes the resistor ladder, the 15 StrongARM latch comparators, the ring oscillator, and the tapered clock buffer chain described in the previous section.
- 
- 
-%                      -
-\section{Simulation Results}
-%                      -
- 
-
-\begin{table}[htbp]
-    \centering
-    \caption{Simulated performance summary of the synchronous reference Flash ADC in 16-nm CMOS.}
-    \label{tab:sync_results}
-    \renewcommand{\arraystretch}{1.4}
-    \begin{tabular}{lcc}
-        \toprule
-        \textbf{Parameter}                       & \textbf{Value} & \textbf{Unit}         \\
-        \midrule
-        Supply Voltage                           &                & V                     \\
-        Resolution                               &                & bit                   \\
-        Sampling Frequency                       &                & MS/s                  \\
-        SNDR                                     &                & dB                    \\
-        ENOB                                     &                & bit                   \\
-        Power Consumption                        &                & $\mu$W                \\
-        Rail-to-Rail Input                       &                & Yes                  \\
-        $\mathrm{FoM}_{W}$ (Walden)               &                & fJ/conv.-step         \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-\chapter{Trimming}
-\label{chap:trimming}
- 
-\section{Body Biasing Trimming}
- 
-\subsection{Function of NMOS and PMOS Transistors Under Different Body Bias}
- 
-The threshold voltage of a MOSFET is not solely determined by the device
-geometry and doping profile but is also a function of the potential applied
-to its body terminal relative to the source. This dependence, commonly referred
-to as the body effect or substrate bias effect, is described for an NMOS
-transistor by
- 
-\begin{equation}
-    V_{tn} = V_{tn0} + \gamma_n
-    \left( \sqrt{2\phi_{F,n} + V_{SB}} - \sqrt{2\phi_{F,n}} \right),
-    \label{eq:body_effect_nmos} 
+    V_M \approx \frac{V_\mathrm{DD}\,\sqrt{r}}{1 + \sqrt{r}},
+    \label{eq:trip_point}
 \end{equation}
  
 \noindent
-where $V_{tn0}$ is the zero-bias threshold voltage, $\gamma_n$ is the body
-effect coefficient, $\phi_{F,n}$ is the Fermi potential, and $V_{SB}$ is the
-source-to-body voltage. The analogous expression for a PMOS transistor,
-accounting for the sign conventions appropriate to a p-channel device,
-takes the form
+so that an inverter with a larger $r$ exhibits a higher trip point, while a
+smaller $r$ shifts $V_M$ below $V_\mathrm{DD}/2$. By assigning a distinct
+ratio to each output bit, the trip points of the slicer bank are distributed
+across the voltage axis, and the thermometer-coded output word is formed by the
+set of inverters whose input---the follower output---has or has not yet reached
+their respective thresholds.
  
-\begin{equation}
-    |V_{tp}| = |V_{tp0}| + \gamma_p
-    \left( \sqrt{2\phi_{F,p} + |V_{SB}|} - \sqrt{2\phi_{F,p}} \right),
-    \label{eq:body_effect_pmos}
-\end{equation}
+In the implemented five-bit configuration, the most significant output bit,
+out$_4$, is formed by an inverter with a PMOS-to-NMOS ratio of $r = 1.5$,
+yielding a trip point above $V_\mathrm{DD}/2 = 0.4$~V. Conversely, the least
+significant bit, out$_0$, uses a ratio of $r = 0.5$, placing its trip point
+below $0.4$~V. The three intermediate bits are assigned ratios distributed
+between these extremes, so that the five trip points bracket the reference
+level of $0.4$~V symmetrically. The operating principle is directly analogous
+to that of the CMF-ADC described in the first candidate: as $V_\mathrm{in}$
+increases from zero toward $V_\mathrm{DD}$, each slicer transitions from
+logic high to logic low in sequence, beginning with the inverter whose trip
+point is lowest---that is, the one whose threshold is crossed first---and
+ending with the inverter whose higher ratio causes it to hold its output high
+until a larger input voltage is reached. At $V_\mathrm{in} = 0.4$~V, the
+slicers with $r > 1$ still output logic high while those with $r < 1$ have
+already transitioned to logic low, and the central slicer at $r = 1$ sits
+precisely at its trip point in a metastable condition. The resulting
+thermometer code at the reference level is consequently $11{?}00$, in
+complete correspondence with the code produced by the CMF-ADC under the same
+input condition.
  
-\noindent
-where the relevant source-to-body voltage for the PMOS is determined by the
-potential difference between the source and the N-well. In both cases, an
-increase in $|V_{SB}|$ raises the magnitude of the threshold voltage, a
-condition referred to as reverse body biasing (RBB); conversely, reducing
-$|V_{SB}|$ below its nominal value or, in technologies that permit it,
-forward-biasing the body junction lowers $|V_t|$, a condition known as
-forward body biasing (FBB).
- 
-A direct consequence for the slicer inverters in the proposed architecture is 
-that each cell's trip point, given by equation~(\ref{eq:trip_point}),
-depends on the threshold voltages of both transistors composing the inverter.
-By substituting the body-bias-dependent expressions for $V_{tn}$ and $|V_{tp}|$
-into the inverter threshold equation and expanding to first order, it is
-apparent that a positive shift in $V_{tn}$ achieved by applying RBB to the
-NMOS weakens the pull-down network relative to the pull-up network and
-therefore raises $V_M$, while an equivalent increase in $|V_{tp}|$ weakens
-the pull-up network and lowers $V_M$. This asymmetry between the NMOS and
-PMOS body bias responses provides two independent degrees of freedom for
-adjusting the trip point of each slicer: the NMOS bulk voltage controls the
-effective strength of the pull-down path, while the PMOS bulk voltage
-(equivalently, the N-well potential) controls the pull-up path. Applying
-corrections simultaneously to both body terminals therefore allows independent
-tuning of the trip point magnitude and of the symmetry of the transition
-characteristic, providing a richer correction space than either terminal alone
-could offer.
- 
-\subsection{Process Corner Dependence and Motivation for Trimming}
- 
-In a deep-submicron CMOS process, fabrication variability causes the threshold
-voltages and carrier mobilities of the NMOS and PMOS devices to deviate from
-their nominal (typical-typical, TT) values. The standard process corners used
-to bound this variability slow-slow (SS), fast-fast (FF), fast-NMOS
-slow-PMOS (FS), and slow-NMOS fast-PMOS (SF) capture the four extreme
-combinations of NMOS and PMOS behaviour and represent the conditions under
-which circuit performance is most likely to degrade.
- 
-For the slicer-based thermometer coder described in the previous chapter, the
-impact of process variation is particularly significant because the thermometer
-code relies on the precise relative ordering of the inverter trip points across
-the output bit bank. At the typical corner, the ratios $r_k$ assigned to each
-slicer place the trip points at the intended positions relative to the
-reference level of $0.4$~V, and the resulting differential non-linearity (DNL)
-and integral non-linearity (INL) of the converter remain within specification.
-At non-typical corners, however, the effective transistor strengths deviate
-from their nominal values in a manner that is not uniform across bits:
-since the PMOS and NMOS devices within each slicer are affected differently
-depending on the corner, the trip point of each inverter shifts by a
-bit-dependent amount, breaking the intended monotonic spacing and introducing
-non-linearities that manifest as elevated DNL and INL.
- 
-At the SS corner, both NMOS and PMOS threshold voltages increase, reducing the
-drive strength of both pull-down and pull-up networks. Although the symmetric
-nature of this degradation might suggest a self-compensating effect on the
-trip point, the body effect coefficients $\gamma_n$ and $\gamma_p$ and the
-nominal threshold values are in general not matched between the two device
-types, so the net shift in $V_M$ is non-zero and, more importantly,
-bit-dependent due to the different sizing ratios across the slicer bank. The
-FF corner produces the complementary effect: reduced threshold voltages
-increase the drive strength of both device types, again shifting the trip
-points by amounts that vary across the bit cells. The FS and SF corners are
-qualitatively different in that they introduce an asymmetric perturbation:
-at FS, the NMOS is faster than nominal while the PMOS is slower, biasing all
-slicers toward a lower trip point and compressing the effective decision levels
-toward the bottom of the input range; at SF, the complementary imbalance
-expands the decision levels toward the top. In all four non-typical corners,
-the degradation in linearity was found to cause DNL excursions in excess of
-$0.5$~LSB, rendering the converter non-monotonic under these conditions.
- 
-\subsection{Offline Trimming Strategy via Body Bias Adjustment}
- 
-To restore the linearity of the thermometer coder across process corners
-without modifying the core circuit topology, an offline trimming strategy
-based on body bias adjustment was adopted. The principle of the approach is
-to apply distinct bulk voltages to the NMOS and PMOS transistors of the output
-slicer stage independently for each device type in a manner calibrated to
-shift the trip points back toward their nominal positions. Since both the NMOS
-bulk voltage $V_{BN}$ and the PMOS bulk voltage $V_{BP}$ contribute
-independently to the trip point through equations (\ref{eq:body_effect_nmos})
-and (\ref{eq:body_effect_pmos}), respectively, adjusting both simultaneously
-allows correction of both the common-mode shift in trip point which affects
-DNL and the differential imbalance between NMOS-dominated and
-PMOS-dominated corners which affects INL. The trimming is defined as
-offline in the sense that the bulk voltages are determined once, based on
-the identified process corner, and held constant during normal operation;
-no continuous adaptive feedback is involved.
- 
-For each of the four non-typical corners, a specific pair of values
-$(V_{BN},\, V_{BP})$ was determined such that the DNL of the converted
-thermometer code falls below $0.5$~LSB across the full input range. At the SS
-corner, where both device types exhibit elevated threshold voltages and
-therefore reduced drive strength, forward body biasing is applied to both the
-NMOS and PMOS, reducing $V_{tn}$ and $|V_{tp}|$ toward their nominal values
-and thereby restoring the intended trip point positions. At the FF corner,
-reverse body biasing is applied to both types to counteract the excessive
-drive strength resulting from the low threshold voltages. The FS and SF
-corners require asymmetric corrections: at FS, a stronger reverse bias is
-applied to the NMOS bulk, weakening the pull-down network to compensate for
-the fast-NMOS tendency, while the PMOS bulk is forward-biased to partially
-recover the reduced pull-up strength; the SF corner is handled symmetrically,
-with the dominant correction applied to the PMOS bulk.
- 
-The trimming was implemented in simulation using a Verilog-A behavioural
-model. The model monitors the process corner identifier and, based on the
-detected corner, drives $V_{BN}$ and $V_{BP}$ to the pre-computed correction
-values. This approach allows the trimming to be evaluated across all corners
-within the same simulation framework as the nominal design, without requiring
-modifications to the transistor-level netlist. The Verilog-A abstraction also
-provides a clean interface for extending the trimming table to intermediate
-corner points or to temperature-corner combinations should a finer correction
-granularity be required in future iterations. The effect of the body bias
-corrections on the DNL and INL of the converter is presented in
-Chapter~\ref{chap:results}.
+The principal advantage of this approach over the current-mirror architecture
+is its decoupling of the input buffering function from the threshold-setting
+function. The voltage follower provides a clean, low-impedance replica of
+$V_\mathrm{in}$ to all slicers simultaneously, while the trip-point
+distribution is controlled entirely through transistor sizing, which is a
+well-defined, lithographically precise parameter. This separation also
+simplifies the headroom analysis: the five-transistor OTA operates under
+unity-gain feedback at a common-mode level close to $V_\mathrm{in}$, with no
+additional stacking requirements, while the slicer inverters are single-stage
+structures that impose no additional headroom constraint beyond the supply
+rails.
+
+
+
+
+\section{Analytical Modeling and Design Constraints}
+\subsection{Maximum Input Wave Frequency and Slope Overload}
+
+\subsection{Propagation Delay and Slicer Response Time Modeling}
+%confirmar a necessidade desta secção
+\subsection{Resolution, Power Dissipation, and Voltage Headroom Trade-offs}
+%confirmar a necessidade desta secção
+
+\section{Chapter Summary}
+
