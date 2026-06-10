@@ -2,11 +2,11 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {2.1}{\ignorespaces Walden FoM vs. Sampling Frequency (Flash reference [1] highlighted)}}{9}{table.caption.14}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces Comparison of Power Consumption between Synchronous and Asynchronous Flash ADCs. Simulation results from this work showing the power advantage of asynchronous operation for sparse signals.}}{25}{table.caption.40}%
-\contentsline {table}{\numberline {2.3}{\ignorespaces Energy per Conversion vs. Year (Flash reference [1] highlighted)}}{26}{table.caption.42}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Comparison of Power Consumption between Synchronous and Asynchronous Flash ADCs. Simulation results from ISSCC conference showing the power advantage of asynchronous operation for sparse signals.}}{26}{table.caption.40}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Energy per Conversion vs. Year (Flash reference [1] highlighted)}}{27}{table.caption.42}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Simulated performance summary of the synchronous reference Flash ADC in 16-nm CMOS.}}{38}{table.caption.45}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Simulated performance summary of the synchronous reference Flash ADC in 16-nm CMOS.}}{40}{table.caption.45}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

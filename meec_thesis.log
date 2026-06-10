@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.20)  9 JUN 2026 17:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.20)  10 JUN 2026 17:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1179,12 +1179,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
 
 
-]
-Overfull \hbox (13.25282pt too wide) in paragraph at lines 84--84
- [][] []\T1/ptm/m/n/10.95 Voltage Head-room Lim-i-ta-tions and Per-for-mance Degra-da-tion in Low-Voltage 
- []
-
-)
+])
 \tf@toc=\write6
 \openout6 = `meec_thesis.toc'.
 
@@ -1282,40 +1277,45 @@ Package pdftex.def Info: figures/fom_fs.png  used on input line 95.
 [8]
 
 [9 <./figures/fom_fs.png>]
+Overfull \hbox (2.56471pt too wide) in paragraph at lines 127--128
+\T1/ptm/m/n/10.95 invariant sam-pling fre-quency. How-ever, as demon-strated by Weltin-Wu and Tsi-vidis, level-crossing
+ []
+
+
 
 [10]
 
-LaTeX Warning: Citation 'weltin2013' on page 11 undefined on input line 135.
+LaTeX Warning: Citation 'weltin2013' on page 11 undefined on input line 143.
 
 
-LaTeX Warning: Citation 'weltin2013' on page 11 undefined on input line 135.
+LaTeX Warning: Citation 'weltin2013' on page 11 undefined on input line 143.
 
 
-LaTeX Warning: Citation 'mou2026' on page 11 undefined on input line 135.
+LaTeX Warning: Citation 'mou2026' on page 11 undefined on input line 143.
 
 
 
 [11]
 
-LaTeX Warning: Citation 'weltin2013' on page 12 undefined on input line 141.
+LaTeX Warning: Citation 'weltin2013' on page 12 undefined on input line 149.
 
 
-LaTeX Warning: Citation 'mou2026' on page 12 undefined on input line 141.
+LaTeX Warning: Citation 'mou2026' on page 12 undefined on input line 149.
 
 
 
 [12]
-Overfull \hbox (20.53398pt too wide) in paragraph at lines 201--201
+Overfull \hbox (20.53398pt too wide) in paragraph at lines 209--209
 [][]\T1/ptm/m/n/10.95 SHA  
  []
 
 
-Overfull \hbox (17.55829pt too wide) in paragraph at lines 201--201
+Overfull \hbox (17.55829pt too wide) in paragraph at lines 209--209
 [][]\T1/ptm/m/n/10.95 Output  
  []
 
 
-Overfull \hbox (10.99428pt too wide) in paragraph at lines 201--201
+Overfull \hbox (10.99428pt too wide) in paragraph at lines 209--209
 [][]\T1/ptm/m/n/10.95 Comparator  
  []
 
@@ -1323,62 +1323,62 @@ Overfull \hbox (10.99428pt too wide) in paragraph at lines 201--201
 
 [13]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 277.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 285.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 277.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 285.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 277.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 285.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 277.
+(hyperref)                removing `math shift' on input line 285.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Sigma' on input line 277.
+(hyperref)                removing `\Sigma' on input line 285.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Delta' on input line 277.
+(hyperref)                removing `\Delta' on input line 285.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 277.
+(hyperref)                removing `math shift' on input line 285.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 382.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 390.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 382.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 390.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 382.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 382.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 390.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 390.
 (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 382.
+(Font)              scaled to size 10.40245pt on input line 390.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.40245pt on input line 382.
+(Font)              scaled to size 10.40245pt on input line 390.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 7.59998pt on input line 382.
+(Font)              scaled to size 7.59998pt on input line 390.
 
 
 [14]
 
-Package mathptmx Warning: There are no bold math fonts on input line 440.
+Package mathptmx Warning: There are no bold math fonts on input line 448.
 
 
-Overfull \hbox (9.74214pt too wide) in paragraph at lines 440--440
+Overfull \hbox (9.74214pt too wide) in paragraph at lines 448--448
 [][]\T1/ptm/m/n/10.95 Clock  
  []
 
 
-Overfull \hbox (10.44482pt too wide) in paragraph at lines 440--440
+Overfull \hbox (10.44482pt too wide) in paragraph at lines 448--448
 [][]\T1/ptm/m/n/10.95 Digital 
  []
 
 
-Overfull \hbox (12.865pt too wide) in paragraph at lines 440--440
+Overfull \hbox (12.865pt too wide) in paragraph at lines 448--448
 \T1/ptm/m/n/10.95 counter  
  []
 
@@ -1389,171 +1389,181 @@ Overfull \hbox (12.865pt too wide) in paragraph at lines 440--440
 [16]
 File: figures/uporto.pdf Graphic file (type pdf)
 <use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 460.
+Package pdftex.def Info: figures/uporto.pdf  used on input line 468.
 (pdftex.def)             Requested size: 256.07741pt x 55.65785pt.
 
 
 [17]
 
 [18]
+Overfull \hbox (2.84885pt too wide) in paragraph at lines 499--500
+\T1/ptm/m/n/10.95 nodes un-til a volt-age thresh-old is reached, cur-rent com-para-tors pro-cess in-for-ma-tion di-rectly through
+ []
+
+
+Overfull \hbox (2.65178pt too wide) in paragraph at lines 515--516
+\T1/ptm/m/n/10.95 pro-posed in con-tin-u-ous time cur-rent com-para-tor ar-chi-tec-tures. By re-duc-ing in-ter-nal volt-age swings,
+ []
+
+
 
 [19]
-Overfull \hbox (11.66904pt too wide) in paragraph at lines 503--504
+
+[20]
+Overfull \hbox (11.66904pt too wide) in paragraph at lines 545--546
 []\T1/ptm/m/n/10.95 This non-linear feed-back mech-a-nism cre-ates an ef-fec-tive hys-tere-sis, once the out-put has switched,
  []
 
 
 
-[20]
-
 [21]
-File: figures/uporto.pdf Graphic file (type pdf)
-<use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 562.
-(pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
-File: figures/uporto.pdf Graphic file (type pdf)
-<use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 569.
-(pdftex.def)             Requested size: 298.75264pt x 64.93018pt.
-
 
 [22]
 
 [23]
+File: figures/uporto.pdf Graphic file (type pdf)
+<use figures/uporto.pdf>
+Package pdftex.def Info: figures/uporto.pdf  used on input line 604.
+(pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
+File: figures/uporto.pdf Graphic file (type pdf)
+<use figures/uporto.pdf>
+Package pdftex.def Info: figures/uporto.pdf  used on input line 611.
+(pdftex.def)             Requested size: 298.75264pt x 64.93018pt.
+
 
 [24]
-<figures/energy_year.png, id=830, 867.24pt x 505.89pt>
+
+[25]
+<figures/energy_year.png, id=835, 867.24pt x 505.89pt>
 File: figures/energy_year.png Graphic file (type png)
 <use figures/energy_year.png>
-Package pdftex.def Info: figures/energy_year.png  used on input line 657.
+Package pdftex.def Info: figures/energy_year.png  used on input line 699.
 (pdftex.def)             Requested size: 362.77525pt x 211.62323pt.
 
 
-[25]
+[26]
 
-[26 <./figures/energy_year.png>])
+[27 <./figures/energy_year.png>])
 
-[27]
+[28]
 \openout2 = `chapter3.aux'.
 
  (chapter3.tex
 Chapter 3.
 
-LaTeX Warning: Citation 'lee2017' on page 28 undefined on input line 19.
+LaTeX Warning: Citation 'lee2017' on page 29 undefined on input line 19.
 
 
 
-[28
+[29
 
 
 
 
 ]
 
-LaTeX Warning: Citation 'lee2017' on page 29 undefined on input line 42.
+LaTeX Warning: Citation 'lee2017' on page 30 undefined on input line 42.
 
 
-LaTeX Warning: Citation 'lee2017' on page 29 undefined on input line 91.
+LaTeX Warning: Citation 'lee2017' on page 30 undefined on input line 91.
 
 
-LaTeX Warning: Citation 'lee2017' on page 29 undefined on input line 96.
-
-
-
-[29]
-Overfull \hbox (1.18561pt too wide) in paragraph at lines 104--104
-[]\T1/ptm/b/n/12 Voltage Head-room Lim-i-ta-tions and Per-for-mance Degra-da-tion in Low-Voltage
- []
-
-
-LaTeX Warning: Citation 'razavi' on page 30 undefined on input line 116.
+LaTeX Warning: Citation 'lee2017' on page 30 undefined on input line 96.
 
 
 
 [30]
 
-LaTeX Warning: Citation 'razavi' on page 31 undefined on input line 152.
+[31]
+
+LaTeX Warning: Citation 'razavi' on page 32 undefined on input line 146.
 
 
-LaTeX Warning: Citation 'razavi' on page 31 undefined on input line 175.
-
-
-
-[31])
 
 [32]
 
+LaTeX Warning: Citation 'razavi' on page 33 undefined on input line 189.
+
+
+LaTeX Warning: Citation 'razavi' on page 33 undefined on input line 213.
+
+
+
 [33]
+
+[34])
+
+[35]
 \openout2 = `chapter4.aux'.
 
  (chapter4.tex
 Chapter 4.
 
-LaTeX Warning: Citation 'flashadc_ref' on page 34 undefined on input line 10.
+LaTeX Warning: Citation 'flashadc_ref' on page 36 undefined on input line 10.
 
 
-LaTeX Warning: Reference `sec:implementation' on page 34 undefined on input line 12.
+LaTeX Warning: Reference `sec:implementation' on page 36 undefined on input line 12.
 
 
 
-[34
+[36
 
 
 
 
 ]
 
-LaTeX Warning: Citation 'flashadc_ref' on page 35 undefined on input line 31.
+LaTeX Warning: Citation 'flashadc_ref' on page 37 undefined on input line 31.
 
 
-LaTeX Warning: Citation 'flashadc_ref' on page 35 undefined on input line 31.
+LaTeX Warning: Citation 'flashadc_ref' on page 37 undefined on input line 31.
 
 
-LaTeX Warning: Reference `chap:async' on page 35 undefined on input line 43.
+LaTeX Warning: Reference `chap:async' on page 37 undefined on input line 43.
 
 
-LaTeX Warning: Citation 'razavi_strongarm' on page 35 undefined on input line 52.
+LaTeX Warning: Citation 'razavi_strongarm' on page 37 undefined on input line 52.
 
 
-
-[35]
-
-LaTeX Warning: Citation 'flashadc_ref' on page 36 undefined on input line 62.
-
-
-LaTeX Warning: Citation 'flashadc_ref' on page 36 undefined on input line 62.
-
-
-LaTeX Warning: Citation 'razavi_strongarm' on page 36 undefined on input line 71.
-
-
-
-[36]
 
 [37]
 
+LaTeX Warning: Citation 'flashadc_ref' on page 38 undefined on input line 62.
+
+
+LaTeX Warning: Citation 'flashadc_ref' on page 38 undefined on input line 62.
+
+
+LaTeX Warning: Citation 'razavi_strongarm' on page 38 undefined on input line 71.
+
+
+
 [38]
+
+[39]
+
+[40]
 Chapter 5.
 
 
-[39
+[41
 
 ]
 
-[40]
+[42]
 
-LaTeX Warning: Reference `chap:results' on page 41 undefined on input line 275.
+LaTeX Warning: Reference `chap:results' on page 43 undefined on input line 275.
 
 )
 
-[41]
+[43]
 \openout2 = `chapter5.aux'.
 
  (chapter5.tex
 Chapter 6.
 )
 
-[42
+[44
 
 
 
@@ -1565,171 +1575,12 @@ Chapter 6.
 Chapter 7.
 )
 
-[43
+[45
 
 
 
 
-]
-LaTeX Font Info:    Trying to load font information for T1+pcrs on input line 124.
- (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/courier-scaled\t1pcrs.fd
-File: t1pcrs.fd 2004/07/09 scalable font definitions for T1/pcrs.
-)
-LaTeX Font Info:    Font shape `T1/pcrs/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 124.
-
-
-[44
-
-
-
-]
-Overfull \hbox (13.80038pt too wide) in paragraph at lines 124--124
-\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2025. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC49661 . 2025 . 10904766$[][]\T1/ptm/m/n/10.95 . 
- []
-
-
-Overfull \hbox (6.83562pt too wide) in paragraph at lines 124--124
-\T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2024. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC49657 .
- []
-
-
-
-[45]
-Overfull \hbox (6.42601pt too wide) in paragraph at lines 124--124
-\T1/ptm/m/n/10.95 ADC with Dynamic-Amplifier-Assisted Cas-caded In-te-gra-tor^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-
- []
-
-
-Overfull \hbox (13.80038pt too wide) in paragraph at lines 124--124
-\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2024. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC49657 . 2024 . 10454362$[][]\T1/ptm/m/n/10.95 . 
- []
-
-
-
-[46]
-Overfull \hbox (22.84404pt too wide) in paragraph at lines 124--124
-\T1/ptm/m/n/10.95 Pipelined-SAR ADC with Cross-Stage Gain-Mismatch-Error-Shaping Tech-nique and Negative-
- []
-
-
-Overfull \hbox (6.83562pt too wide) in paragraph at lines 124--124
-\T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2023. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC42615 .
- []
-
-
-
-[47]
-Overfull \hbox (13.80038pt too wide) in paragraph at lines 124--124
-\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2024. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC49657 . 2024 . 10454431$[][]\T1/ptm/m/n/10.95 . 
- []
-
-
-Overfull \hbox (10.60767pt too wide) in paragraph at lines 124--124
-[]\T1/ptm/m/n/10.95 H-K. Hong et al. ^^P  A 2.6b/cycle-architecture-based 10b 1.7GS/s 15.4mW 4x Time-interleaved
- []
-
-
-Overfull \hbox (2.51082pt too wide) in paragraph at lines 124--124
-\T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2015. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC . 2015 . 7063130$[][]\T1/ptm/m/n/10.95 . 
- []
-
-
-
-[48]
-Overfull \hbox (7.55891pt too wide) in paragraph at lines 124--124
-\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2022. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC42614 . 2022 . 9731571$[][]\T1/ptm/m/n/10.95 . 
- []
-
-
-Overfull \hbox (5.33601pt too wide) in paragraph at lines 124--124
-\T1/ptm/m/n/10.95 179.4dB-FOMSNDR 2nd-Order Noise-Shaping SARADC with En-hanced In-put Impedance
- []
-
-
-Overfull \hbox (1.57942pt too wide) in paragraph at lines 124--124
-\T1/ptm/m/n/10.95 in 0.18$\OML/ztmcm/m/it/10.95 ^^V$\T1/ptm/m/n/10.95 m CMOS^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2023.
- []
-
-
-
-[49]
-
-[50]
-Overfull \hbox (5.09041pt too wide) in paragraph at lines 124--124
-\OT1/ztmcm/m/n/10.95 ^^A$$^^F$ \T1/ptm/m/n/10.95 ADC in 40nm CMOS^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 .
- []
-
-
-
-[51]
-Overfull \hbox (6.08362pt too wide) in paragraph at lines 124--124
-[]\T1/ptm/m/n/10.95 Sharvil Patil et al. ^^P  A 700MHz-BW ^^U164dBFS/Hz-Small-Signal-NSD 703mW Continuous-
- []
-
-
-Overfull \hbox (10.29994pt too wide) in paragraph at lines 124--124
-[]\T1/ptm/m/n/10.95 Sourja Ray and Bang-Sup Song. ^^P  A 13b Lin-ear 40MS/s Pipelined ADC with Self-Configured
- []
-
-
-
-[52]
-Overfull \hbox (2.51082pt too wide) in paragraph at lines 124--124
-\T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2006. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC . 2006 . 1696297$[][]\T1/ptm/m/n/10.95 . 
- []
-
-
-Overfull \hbox (2.51082pt too wide) in paragraph at lines 124--124
-\T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2006. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC . 2006 . 1696120$[][]\T1/ptm/m/n/10.95 . 
- []
-
-
-
-[53]
-Overfull \hbox (1.82037pt too wide) in paragraph at lines 124--124
-\T1/ptm/m/n/10.95 drive read chan-nel^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 1999.
- []
-
-
-Overfull \hbox (14.23299pt too wide) in paragraph at lines 124--124
-\T1/ptm/m/n/10.95 Micro-Sensor Ap-pli-ca-tions^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 .
- []
-
-
-
-[54]
-Overfull \hbox (1.96727pt too wide) in paragraph at lines 124--124
-[]\T1/ptm/m/n/10.95 Jia-Ching Wang and Tai-Haur Kuo. ^^P  A 3-mW 2.7-GS/s 8b Sub-rang-ing ADC with Multiple-
- []
-
-
-
-[55]
-Overfull \hbox (6.0335pt too wide) in paragraph at lines 124--124
-[]\T1/ptm/m/n/10.95 Mingtao Zhan, Lu Jie, and Nan Sun. ^^P  A 10mW 10-ENoB 1GS/s Ring-Amp-Based Pipelined
- []
-
-
-
-[56]
-Overfull \hbox (4.73744pt too wide) in paragraph at lines 124--124
-[]\T1/ptm/m/n/10.95 Yanbo Zhang et al. ^^P  A Single-channel 70dB-SNDR 100MHz-BW 4th-Order Noise-Shaping
- []
-
-
-Overfull \hbox (13.80038pt too wide) in paragraph at lines 124--124
-\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2023. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC42615 . 2023 . 10067687$[][]\T1/ptm/m/n/10.95 . 
- []
-
-
-Overfull \hbox (24.90707pt too wide) in paragraph at lines 124--124
-[]\T1/ptm/m/n/10.95 Yannan Zhang et al. ^^P  A 72GS/s 9b Time-Interleaved Pipeline-SAR ADC Achiev-ing 55.3/49.3dB
- []
-
-
-
-[57] (meec_thesis.aux (resumo.aux) (abstract.aux) (un-sdg.aux) (acknows.aux) (quote.aux) (abbrevs.aux) (chapter1.aux) (chapter2.aux) (chapter3.aux) (chapter4.aux) (chapter5.aux) (chapter6.aux))
+] (meec_thesis.aux (resumo.aux) (abstract.aux) (un-sdg.aux) (acknows.aux) (quote.aux) (abbrevs.aux) (chapter1.aux) (chapter2.aux) (chapter3.aux) (chapter4.aux) (chapter5.aux) (chapter6.aux))
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
@@ -1739,23 +1590,203 @@ L3 programming layer <2025-08-13>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `meec_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A6AD842B7D05A8478E17296A78D3E2D7;20259.
+(rerunfilecheck)             Checksum: 999110A09C61B00B6457B1D1C637E4B2;20063.
 Package logreq Info: Writing requests to 'meec_thesis.run.xml'.
 \openout1 = `meec_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54487 strings out of 468133
- 1286633 string characters out of 5430711
- 2396190 words of memory out of 5000000
- 81971 multiletter control sequences out of 15000+600000
- 725514 words of font info for 169 fonts, out of 8000000 for 9000
+ 54018 strings out of 468133
+ 1268410 string characters out of 5430711
+ 2390687 words of memory out of 5000000
+ 81622 multiletter control sequences out of 15000+600000
+ 719677 words of font info for 165 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,13n,107p,4597b,3184s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on meec_thesis.pdf (69 pages, 1656553 bytes).
+ 102i,13n,107p,3545b,3184s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{cite.0@Kim_2018} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@Veldhoven_2021} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@Jiang_2018} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@Chen_2006} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@yaobulk2011} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@yao_bulk_2011} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@pae2022_lcadc} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@microelectronics_1998} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@schreier_2005} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@candy_1985} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@Schvan_2006} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@Tamba} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@Muller_2015} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@De_Cano_Garcia_2019} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@Ginsburg_2014} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@Jang_2018} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@Lukas_2014} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@JunlinZhong_2025_103} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@Yao_2004_120} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@Yan_2003_117} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@BramVeraverbeke_2025_91} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@YunsongTao_2025_38} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@YukoTambaandKazuoYamakido_1999_2} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@Tabatabaei_2003_118} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@JunhuaShen_2025_94} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@Senderowicz_1997_111} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@PSchvan_2006_3} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@Ray_2006_20} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@HendrikvanderPloegandRobertRemmers_1999_105} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@SharvilPatil_2024_35} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@Ong_1997_112} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@Mitteregger_2006_126} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@FMichel_2011_134} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@EwoutMartens_2024_96} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@YaohuiLuan_2025_145} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@YongLim_2024_79} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@ManxinLi_2023_70} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@GeunhaKim_2023_77} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@TKang_2022_142} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@JosephInginoJrandBruceWooley_1998_9} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@KyeongwonJeong_2025_86} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@YoungDeukJeon_2007_22} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@Huber_2007_108} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@Goes_2006_128} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@Geelen_2006_19} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@SiddharthDevarajan_2009_26} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@ALCoban_1999_113} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@ZhuoyiChen_2024_81} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@FengChen_2003_115} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@YueCao_2025_37} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@KBult_1997_4} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@Balmelli_2004_119} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@YChaietal_2012_28} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@AbhishekAgrawal_2023_100} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@matlab} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@van_de_plassche_1994} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@baker_cmos_2010} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@lim_2013} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@shannon_1949} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@johns_martin_2012} has been referenced but does not exist, replaced by a fixed one
+
+<C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on meec_thesis.pdf (57 pages, 1547444 bytes).
 PDF statistics:
- 1434 PDF objects out of 1440 (max. 8388607)
- 394 named destinations out of 1000 (max. 500000)
+ 1049 PDF objects out of 1200 (max. 8388607)
+ 280 named destinations out of 1000 (max. 500000)
  657 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,3 +1,44 @@
 \chapter*{Resumo} \label{chap:Resumo}
+A proliferação de dispositivos para a Internet das Coisas e de sensores 
+biomédicos tem gerado uma crescente procura por interfaces de processamento 
+de sinal de baixo consumo energético. Em muitas destas aplicações, os sinais 
+de interesse são esparsos, caracterizando-se por longos períodos de 
+inatividade. Os conversores analógico-digitais síncronos clássicos são 
+inerentemente ineficientes nestes cenários, uma vez que dissipam potência 
+dinâmica de forma contínua devido ao relógio global, independentemente da 
+atividade do sinal de entrada.
 
-Mudar para português o abstract
+Idealmente, a taxa de amostragem deveria ser adaptada dinamicamente às 
+propriedades do sinal, por forma a minimizar o consumo energético associado 
+à atividade do relógio. Contudo, a implementação de uma taxa de amostragem 
+adaptativa não é direta. Neste contexto, a utilização de um conversor 
+analógico-digital assíncrono surge como uma abordagem natural para processar 
+sinais não uniformes. Os conversores assíncronos requerem alterações 
+arquiteturais que permitam o seu funcionamento correto na ausência de um 
+relógio global.
+
+A adoção de controlo assíncrono em arquiteturas Flash é motivada, em 
+primeiro lugar, pela necessidade de eliminar o consumo energético associado 
+às redes de distribuição de relógio de alta velocidade, melhorando assim a 
+eficiência energética do sistema. Para além disso, o funcionamento assíncrono 
+oferece benefícios intrínsecos no tratamento da metaestabilidade dos 
+comparadores e na redução da latência, tornando esta abordagem 
+particularmente atrativa para aplicações orientadas a eventos, em que a 
+atividade do sinal varia significativamente ao longo do tempo.
+
+Esta dissertação propõe o projeto e a implementação de um conversor 
+analógico-digital Flash assíncrono. Ao eliminar o relógio global, a 
+arquitetura proposta alinha o consumo de potência com a atividade do sinal 
+de entrada, atingindo teoricamente um consumo energético significativamente 
+mais reduzido face às soluções síncronas convencionais.
+
+Para dar resposta a este desafio, é proposta uma estratégia de calibração 
+offline destinada a corrigir os desvios de offset dos comparadores, sem 
+comprometer o funcionamento de alta velocidade característico da topologia 
+Flash. O trabalho engloba a análise teórica, o projeto ao nível de 
+esquemático e a validação do sistema através de co-simulação analógica e de 
+sinal misto. O resultado é uma arquitetura de conversor sem relógio, robusta 
+e eficiente em termos energéticos, que apresenta uma figura de mérito 
+superior à das arquiteturas síncronas convencionais no contexto de aplicações 
+com sinais esparsos.
+

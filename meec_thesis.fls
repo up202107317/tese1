@@ -597,6 +597,8 @@ INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7v
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\symbol\psyr.tfm
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8t.tfm
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmri8t.vf
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\zptmcm7t.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\zptmcm7t.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\zptmcm7t.tfm
@@ -703,8 +705,6 @@ OUTPUT chapter3.aux
 INPUT .\chapter3.tex
 INPUT .\chapter3.tex
 INPUT chapter3.tex
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8t.tfm
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmri8t.vf
 INPUT .\chapter4.tex
 INPUT .\chapter4.tex
 OUTPUT chapter4.aux
@@ -723,15 +723,6 @@ OUTPUT chapter6.aux
 INPUT .\chapter6.tex
 INPUT .\chapter6.tex
 INPUT chapter6.tex
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmrc8t.tfm
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex\latex\courier-scaled\t1pcrs.fd
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex\latex\courier-scaled\t1pcrs.fd
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex\latex\courier-scaled\t1pcrs.fd
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\courier\pcrr8t.tfm
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmrc8t.vf
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\courier\pcrr8t.vf
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\courier\pcrr8r.tfm
 INPUT meec_thesis.aux
 INPUT .\resumo.aux
 INPUT .\resumo.aux
@@ -781,8 +772,6 @@ INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\type1\urw\courier\ucrr8a.pfb
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\type1\urw\courier\ucrr8a.pfb
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\type1\urw\helvetic\uhvb8a.pfb
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\type1\urw\helvetic\uhvb8a.pfb
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\type1\urw\symbol\usyr.pfb

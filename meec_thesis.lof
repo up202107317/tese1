@@ -9,13 +9,13 @@
 \contentsline {figure}{\numberline {2.5}{\ignorespaces First-order sigma-delta ADC architecture}}{15}{figure.caption.20}%
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Dual-slope integrating ADC architecture}}{16}{figure.caption.24}%
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Digital logic for level-crossing asynchronous ADC}}{17}{figure.caption.28}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Bulk-driven resistive ladder trimming for comparator offset calibration}}{23}{figure.caption.35}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Bulk-driven trimming effect on input pair threshold voltage}}{23}{figure.caption.36}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Energy per conversion versus publication year for representative ADCs}}{26}{figure.caption.41}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Bulk-driven resistive ladder trimming for comparator offset calibration}}{24}{figure.caption.35}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Bulk-driven trimming effect on input pair threshold voltage}}{25}{figure.caption.36}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Energy per conversion versus publication year for representative ADCs}}{27}{figure.caption.41}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Top-level block diagram of the synchronous 4-bit Flash ADC \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{35}{figure.caption.43}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Schematic of the StrongARM latch comparator \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{36}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Top-level block diagram of the synchronous 4-bit Flash ADC \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{37}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Schematic of the StrongARM latch comparator \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{38}{figure.caption.44}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

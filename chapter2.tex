@@ -47,7 +47,7 @@ Resolution defines the theoretical dynamic range, while the sampling rate determ
 
 \subsubsection{Signal-to-Noise-Distortion Ratio (SNDR)}
 Signal to noise ratio adding distortion ratio or SNDR is the primary dynamic metric. It is the ratio of the signal power to the total power of all noise and harmonic distortion components. From SNDR, the Effective Number of Bits, ENOB, is derived \cite{johns_martin_2012}:
-\begin{equation} 
+\begin{equation}
   ENOB = \frac{SNDR_{dB} - 1.76}{6.02}
 \end{equation}
 This value represents the true resolution of the converter at a specific input frequency.
@@ -121,10 +121,18 @@ The evolution of the Walden Figure of Merit as a function of sampling rate for d
 \par\vspace{1.5em}
 
 \subsection{Metrics Adaptation for Asynchronous Systems}
-ALTERAR PARA INGLES
 
-A caracterização rigorosa do desempenho em sistemas de conversão analógico-digital assíncronos e orientados a eventos (event-driven) exige uma reformulação profunda das métricas de mérito classicamente aplicadas a conversores síncronos de amostragem uniforme. Em arquiteturas baseadas em cruzamento de níveis (Level-Crossing ADCs — LCADCs), tanto em tempo contínuo (CT) como em tempo discreto (DT), a taxa de amostragem não é uma constante estática nem um parâmetro predeterminado de projeto; em vez disso, ela é ditada de forma dinâmica e contínua pela própria atividade, declividade e taxa de variação do sinal analógico de entrada. Consequentemente, o uso direto de formulações convencionais baseadas estritamente na frequência de amostragem de Nyquist ($f_s$) torna-se matematicamente inadequado, falhando em descrever com precisão a verdadeira eficiência destas topologias.Nos conversores síncronos convencionais, a Figura de Mérito de Walden ($FoM_W$) assume uma frequência de amostragem linear e invariante no tempo. Contudo, como demonstrado por Weltin-Wu e Tsividis, os quantizadores por cruzamento de níveis prescindem de um relógio global fixo, gerando novas amostras apenas quando o estímulo analógico cruza limiares de quantização discretos. Esta amostragem dependente da atividade do sinal mitiga de forma drástica a produção de amostras redundantes em janelas de tempo onde o sinal se comporta de forma esparsa, estendendo a poupança energética a toda a cadeia de processamento digital subsequente. Além disso, a ausência de um relógio de amostragem uniforme altera a distribuição do ruído no espetro de frequência, resultando numa saída livre de aliasing e sem o patamar tradicional de ruído de quantização, o que permite alcançar valores de relação sinal-ruído mais distorção (SNDR) que chegam a superar os limites teóricos de conversores convencionais com o mesmo número de bits nominais.Para modelar e avaliar de forma justa estes sistemas assíncronos, torna-se imperativo adaptar a equação de Walden, substituindo a frequência fixa $f_s$ por uma métrica de taxa média de eventos reais gerados por unidade de tempo ($f_{avg}$ ou passos de conversão efetivos por segundo). No trabalho desenvolvido por Mou et al., esta necessidade de adaptação metodológica é evidente ao caracterizar o desempenho de um DT-LCADC robusto a variações de processo, tensão e temperatura (PVT). Dado que o consumo de potência do circuito flutua de modo substancial com a dinâmica do sinal — oscilando entre 95 nW para estímulos altamente esparsos no tempo (como sinais neurais) e 250 nW para sinais genéricos —, a eficiência do dispositivo não pode ser quantificada por meio de uma métrica estática unidimensional.Por este motivo, a Figura de Mérito de Walden adaptada é expressa em função da taxa de atividade real do sinal, adotando formalmente a unidade de femtojoules por passo de conversão dinâmico (fJ/c.s.). Sob esta metodologia adaptada, a eficiência energética deixa de ser um número fixo e passa a ser reportada como um intervalo dinâmico, o qual assume valores entre 5.3 e 14.2 fJ/c.s. no protótipo de Mou et al., dependendo estritamente do padrão de transições induzido pelo estímulo de entrada.A fundamentação física para esta variação de mérito reside no facto de a amplitude de variação do sinal entre amostras sucessivas ($\Delta V_{in}$) determinar o esforço operacional interno do conversor. Em transições lentas (slow events), a variação situa-se entre 1 e 2 LSB, exigindo apenas uma atualização linear elementar de $\pm1$ LSB na malha de realimentação e minimizando o número de comparações na fase ativa ($\phi_2$). Pelo contrário, variações abruptas (fast events) que excedem os 2 LSB ativam rotinas adaptativas de busca binária completa (SAR), o que eleva localmente o número de comparações por amostra e a energia consumida por evento.Em suma, a correta validação académica e a blindagem metodológica de arquiteturas assíncronas baseadas em cruzamento de níveis requerem o abandono de pressupostos síncronos rígidos. A indexação do cálculo de mérito à taxa média de atividade efetiva ($f_{avg}$) garante que a esparsidade do sinal seja devidamente contabilizada como um fator de ganho de eficiência energética e não mascarada por suposições de amostragem uniformes.
+The rigorous performance characterisation of asynchronous, event-driven analog-to-digital conversion systems requires a fundamental reassessment of the figures of merit that are conventionally applied to synchronous, uniformly sampled converters. In architectures based on level-crossing sampling, whether operating in continuous time or discrete time, the sampling rate is neither a static constant nor a predetermined design parameter. Instead, it is governed dynamically by the activity, slope, and rate of change of the analog input signal itself. As a direct consequence, the straightforward application of conventional formulations rooted in a fixed Nyquist sampling frequency, $f_s$, becomes mathematically inappropriate and fails to accurately capture the true efficiency of these topologies.
 
+In conventional synchronous converters, the Walden Figure of Merit assumes a linear, time-invariant sampling frequency. However, as demonstrated by Weltin-Wu and Tsividis, level-crossing quantisers operate without a fixed global clock, generating new samples only when the analog stimulus crosses one of the discrete quantisation thresholds. This signal-activity-dependent sampling drastically reduces the production of redundant samples during intervals where the input behaves sparsely, extending the energy savings throughout the entire downstream digital processing chain. Furthermore, the absence of a uniform sampling clock alters the noise distribution across the frequency spectrum, yielding an output that is free from aliasing and from the conventional quantisation noise floor. This property allows level-crossing converters to achieve Signal-to-Noise-and-Distortion Ratios (SNDR) that can, under certain signal conditions, exceed the theoretical limits of conventional converters with the same nominal number of bits.
+
+To model and fairly evaluate these asynchronous systems, it becomes necessary to adapt the Walden equation by replacing the fixed sampling frequency, $f_s$, with a metric based on the average rate of actual conversion events generated per unit time, denoted as $f_{\mathrm{avg}}$, and expressed in effective conversion steps per second. The need for this methodological adaptation is clearly evident in the work of Mou \textit{et al.}, which characterises the performance of a process-, voltage-, and temperature-robust discrete-time level-crossing ADC. Since the power consumption of the circuit fluctuates substantially with the dynamics of the input signal, ranging from $95\,\mathrm{nW}$ for highly time-sparse stimuli such as neural signals to $250\,\mathrm{nW}$ for generic waveforms, the efficiency of the device cannot be meaningfully quantified by means of a single static metric.
+
+For this reason, the adapted Walden Figure of Merit is expressed as a function of the actual signal activity rate, formally adopting the unit of femtojoules per dynamic conversion step. Under this adapted methodology, energy efficiency is no longer reported as a fixed number but rather as a dynamic range, which, in the prototype of Mou \textit{et al.}, spans values between $5.3$ and $14.2\,\mathrm{fJ}$ per conversion step, depending strictly on the transition pattern induced by the input stimulus.
+
+The physical basis for this variation in the Figure of Merit lies in the fact that the amplitude of signal change between successive samples, $\Delta V_{\mathrm{in}}$, determines the internal computational effort demanded from the converter. For slow events, where the variation falls between one and two LSB, only a simple linear update of $\pm1\,\mathrm{LSB}$ is required in the feedback loop, minimising the number of comparisons performed during the active phase. Conversely, abrupt variations exceeding two LSB trigger adaptive full binary-search routines analogous to those employed in SAR converters, which locally increase both the number of comparisons per sample and the energy consumed per event.
+
+In summary, the correct academic validation of asynchronous level-crossing architectures requires moving beyond the rigid assumptions of synchronous design. Indexing the Figure of Merit to the effective average activity rate, $f_{\mathrm{avg}}$, ensures that signal sparsity is properly accounted for as a genuine factor of energy-efficiency gain, rather than being obscured by uniform sampling assumptions that do not reflect the actual operating conditions of event-driven converters.
 
 
 
@@ -474,9 +482,43 @@ The event generation happens when the input signal crosses a threshold, the corr
 
 \section{Clockless Event Generation}
 
-\subsection{The Voltage-to-Current Conversion Concept in Event Detection}
+\subsection{The Voltage to Current Conversion Concept in Event Detection}
+
+A central challenge in the implementation of asynchronous Analog to Digital Converters is the generation of conversion events without relying on a global clock. Unlike synchronous architectures, where temporal discretization is externally imposed by periodic sampling, asynchronous systems require a mechanism capable of detecting meaningful changes in the input signal directly from its analog behavior. One efficient approach to achieve this objective is through voltage to current conversion.
+
+The main idea behind voltage to current conversion is to translate variations of the input voltage into proportional current variations that can be continuously monitored by current domain circuits. Since current based processing often allows faster operation , this approach becomes particularly attractive for event driven architectures where response time and energy efficiency are critical.
+
+In this context, the analog input signal is applied to a transconductance stage that converts the input voltage into a current proportional to its amplitude. This generated current is then compared against a reference current or a set of threshold currents that represent predefined quantization levels. Whenever the difference exceeds a decision threshold, an event is generated and propagated to the digital control logic.
+
+This mechanism effectively transforms changes in signal amplitude into discrete temporal events. As a result, the converter remains inactive during periods of low signal variation and activates only when relevant transitions occur. Such behavior establishes a direct relationship between input activity and power consumption, making voltage to current conversion a fundamental building block for asynchronous data conversion systems.
+
 \subsection{Current Comparator Operating Principles}
+
+Current comparators are the fundamental decision elements used in event driven architectures operating in the current domain. Their purpose is to determine whether an input current is greater or smaller than a reference current and to generate a corresponding digital output that signals the occurrence of an event.
+
+Unlike conventional voltage comparators, which rely on charging and discharging internal nodes until a voltage threshold is reached, current comparators process information directly through current differences. This characteristic enables reduced voltage excursions, lower parasitic charging requirements, and potentially faster response times.
+
+In a typical implementation, two input branches receive the signal current and a reference current. The comparator evaluates the difference between these currents and amplifies the resulting imbalance until one of the output states becomes dominant. Depending on the adopted topology, this amplification may occur through current mirrors, regenerative feedback structures, resistive loads, or current conveyor stages.
+
+The performance of a current comparator is usually evaluated according to several parameters including propagation delay, resolution, sensitivity, power consumption, and input impedance. In asynchronous event generation applications, propagation delay becomes particularly relevant since it directly determines the temporal precision of the generated conversion events.
+
+An ideal current comparator should therefore combine low input impedance, fast regeneration, low static power consumption, and robust operation under process and temperature variations.
+
 \subsection{Topologies for Event Detection in the Literature}
+
+Several event detection topologies have been proposed in the literature to enable continuous monitoring of analog signals and asynchronous generation of digital events. These approaches mainly differ in the method used to compare currents and regenerate the output transition.
+
+Current mirror based comparators represent one of the simplest solutions. Their operation relies on mirroring the input and reference currents and converting the resulting difference into a voltage decision. These structures offer reduced area and low implementation complexity but are generally limited by slower response due to large internal impedance nodes.
+
+To overcome these limitations, regenerative comparators such as the Traff architecture introduce positive feedback mechanisms that accelerate the decision process and reduce propagation delay. These solutions improve speed but may introduce dead zones and increased sensitivity to operating conditions.
+
+Alternative approaches employ complementary amplifier stages with resistive feedback, as proposed in continuous time current comparator architectures. By reducing internal voltage swings, these designs achieve a favorable compromise between power consumption and operating speed.
+
+Other implementations incorporate hysteresis mechanisms to improve noise immunity and suppress unwanted switching around the decision threshold. Although this increases robustness, excessive hysteresis can degrade conversion accuracy.
+
+More advanced solutions based on current conveyors and feedback enhanced amplifiers further improve sensitivity and dynamic response at the expense of increased circuit complexity.
+
+The selection of an event detection topology therefore depends on the target trade off between speed, power consumption, implementation complexity, and robustness. For asynchronous Flash Analog to Digital Converters, the preferred solution should preserve continuous operation while minimizing propagation delay and avoiding unnecessary static power dissipation.
 
 
 
@@ -636,7 +678,7 @@ While Synchronous Flash ADCs are designed for peak performance at a specific fre
 
 \begin{table}[h!]
 \centering
-\caption{Comparison of Power Consumption between Synchronous and Asynchronous Flash ADCs. Simulation results from this work showing the power advantage of asynchronous operation for sparse signals.}
+\caption{Comparison of Power Consumption between Synchronous and Asynchronous Flash ADCs. Simulation results from ISSCC conference showing the power advantage of asynchronous operation for sparse signals.}
 \label{tab:ADC_power_comparison}
 \begin{tabular}{|l|c|c|}
 \hline
@@ -646,7 +688,7 @@ Asynchronous         & 0.0314                                                  \
 \end{tabular}
 \end{table}
 
-The impact of this architectural difference on long-term technology trends is illustrated in Figure \ref{fig:energy_year}. The plot depicts the energy per conversion ($P/f_s$) over the last two decades. While both paradigms show a downward trend due to process node scaling, asynchronous designs (indicated by triangular markers) consistently occupy the lower bound of the energy envelope. This suggests that eliminating the global clock is a key enabler for breaking the power efficiency barriers in modern designs.
+The impact of this architectural difference on long-term technology trends is illustrated in Figure \ref{fig:energy_year}. The plot depicts the energy per conversion ($P/f_s$) over the last two decades. While both paradigms show a downward trend due to process node scaling, asynchronous designs consistently occupy the lower bound of the energy envelope. This suggests that eliminating the global clock is a key enabler for breaking the power efficiency barriers in modern designs.
 
 \par\vspace{1.5em}
 \par\vspace{1.5em}
