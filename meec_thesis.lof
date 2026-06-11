@@ -1,21 +1,25 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Time-sparse signal and sampling strategies}}{2}{figure.caption.9}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Time-sparse signal and sampling strategies}}{2}{figure.caption.8}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Offset and gain errors in ADC transfer function}}{7}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Walden FoM versus sampling frequency for representative ADCs}}{9}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces SAR ADC architecture}}{13}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Pipeline ADC architecture}}{14}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces First-order sigma-delta ADC architecture}}{15}{figure.caption.20}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Dual-slope integrating ADC architecture}}{16}{figure.caption.24}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Digital logic for level-crossing asynchronous ADC}}{17}{figure.caption.28}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Bulk-driven resistive ladder trimming for comparator offset calibration}}{24}{figure.caption.35}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Bulk-driven trimming effect on input pair threshold voltage}}{25}{figure.caption.36}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Energy per conversion versus publication year for representative ADCs}}{27}{figure.caption.41}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Top-level block diagram of the synchronous 4-bit Flash ADC \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{37}{figure.caption.43}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Schematic of the StrongARM latch comparator \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{38}{figure.caption.44}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Offset and gain errors in ADC transfer function}}{7}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Walden FoM versus sampling frequency for representative ADCs}}{9}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces SAR ADC architecture}}{14}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Pipeline ADC architecture}}{14}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces First-order sigma-delta ADC architecture}}{15}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Dual-slope integrating ADC architecture}}{16}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Digital logic for level-crossing asynchronous ADC}}{17}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Bulk-driven resistive ladder trimming for comparator offset calibration}}{24}{figure.caption.34}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Bulk-driven trimming effect on input pair threshold voltage}}{25}{figure.caption.35}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Energy per conversion versus publication year for representative ADCs}}{27}{figure.caption.40}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Top-level block diagram of the synchronous 4-bit Flash ADC \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{42}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Schematic of the StrongARM latch comparator \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{43}{figure.caption.45}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces FFT spectrum of the reconstructed asynchronous Flash ADC output signal.}}{51}{figure.caption.47}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces SNDR and ENOB as a function of the input signal frequency and amplitude.}}{51}{figure.caption.48}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Measured DNL and INL error profiles before (top) and after (bottom) the application of the body bias trimming calibration.}}{52}{figure.caption.49}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Total and dynamic power consumption as a function of the input signal frequency ($f_{in}$).}}{53}{figure.caption.51}%
 \addvspace {10\p@ }

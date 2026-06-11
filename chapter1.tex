@@ -56,6 +56,7 @@ where:
   \item $\alpha$ is the activity factor (or switching factor).
   \item $f$ is the clock frequency.
   \item $C_L$ is the load capacitance being switched (e.g., in the clock tree).
+  \item $V_{DD}$ is the supply voltage.
 \end{itemize}
  In a uniformly clocked ADC, $f$ is fixed by the Nyquist criterion and the clock network toggles every cycle, so $\alpha$ remains high even when the input signal is almost static. As a result, the converter continues to charge and discharge large clock and comparator capacitances at every period, dissipating dynamic power to generate redundant samples that do not carry new information. For example, if a sensor signal is active only 10\% of the time but the ADC samples continuously, 90\% of the switching events are spent tracking intervals where the input is essentially constant, directly illustrating how synchronous operation leads to massive energy waste for non synchronous signals.
 % \subsection{Architectural Problem: Flash ADCs}

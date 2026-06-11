@@ -13,7 +13,136 @@ candidate.
 
 
 \section{Phase I: The Baseline Current-Mirror OTA Flash Configuration}
+% ─────────────────────────────────────────────────────────────────────────────
+%  Section 3.2.1 — Operating Principle and Core Topology
+%  Dissertation: Design of an Asynchronous Flash ADC
+% ─────────────────────────────────────────────────────────────────────────────
+
 \subsection{Operating Principle and Core Topology}
+
+The current-mirror flash ADC (CMF-ADC) topology investigated in this phase is structured
+around two cascaded functional stages: a \emph{transconductance cell}, which converts a
+differential input voltage into a proportional error current, and a
+\emph{current-to-code converter}, which maps that current into a parallel thermometer-coded
+output without requiring a sampling clock. The complete circuit, annotated with the
+current-flow conventions used throughout this analysis, is shown in
+Figure~\ref{fig:cmf_adc_op}.
+
+% ─── Transconductance cell ───────────────────────────────────────────────────
+\subsubsection{Transconductance Cell}
+
+The transconductance cell is a differential pair formed by transistors M$_1$ and M$_2$,
+both biased by a common tail current source of magnitude $I_B$. The non-inverting input of
+the pair receives the analog signal $V_{in}$, while the inverting input is driven by an
+adjustable reference voltage $V_{ref,c}$. An active current mirror, composed of
+diode-connected M$_3$ and mirroring transistor M$_4$, constitutes the load of the
+differential pair and steers the drain current of M$_1$ toward the output. An additional
+NMOS mirror generates a third current branch $I_3$ as a replica of $I_1$, which is then
+distributed to the conversion stage.
+
+\paragraph{Equilibrium operation.}
+See Figure~\ref{fig:cmf_adc_op}(a) for the operation at equilibrium. When
+$V_{in} = V_{ref,c}$, M$_1$ and M$_2$ conduct equal quiescent currents of magnitude
+$I_B/2$. Because M$_3$ is diode-connected, its gate-to-source voltage adjusts to carry
+exactly $I_B/2$, and M$_4$, sharing this gate voltage, mirrors the same current to the
+output branch. The mirrored current from M$_4$ and the drain current of M$_2$ are
+therefore equal in magnitude, so their contributions cancel at the output node of the
+transconductance cell and the net error current is zero: $I_{err} = 0$.
+Under this condition, as indicated in Figure~\ref{fig:cmf_adc_op}(a), both branches carry
+identical currents in the same direction, resulting in no differential current available to
+drive the downstream converter.
+
+\paragraph{Signal operation.}
+See Figure~\ref{fig:cmf_adc_op}(b) for the differential signal analysis.
+When a differential voltage $v_{id} = V_{in} - V_{ref,c}$ is applied at the input, the
+symmetry of the pair is broken. Assuming matched transconductances $g_m = g_{m1} = g_{m2}$,
+the two transistors steer the tail current unequally, producing branch currents:
+%
+\begin{equation}
+    I_1 = \frac{I_B}{2} - I_{err}, \qquad I_2 = \frac{I_B}{2} + I_{err},
+    \label{eq:branch_currents}
+\end{equation}
+%
+where $I_{err} = g_m \cdot v_{id} / 2$ is the error current. As annotated in
+Figure~\ref{fig:cmf_adc_op}(b), when $V_{in} > V_{ref,c}$, M$_1$ carries the excess
+current (indicated by the thickened arrow on the M$_1$ branch), while the current in the
+M$_2$ branch is correspondingly reduced (indicated by the crossed symbol). The mirror
+formed by M$_3$ and M$_4$ copies $I_1$ toward the output, and the resulting imbalance
+between this mirrored current and $I_2$ constitutes the differential output signal
+$2I_{err}$ that drives the code converter. The effective transconductance of the cell is
+therefore:
+%
+\begin{equation}
+    G_m = g_{m1} = g_{m2} = g_m.
+    \label{eq:Gm_cmf}
+\end{equation}
+
+% ─── Current-to-code converter ───────────────────────────────────────────────
+\subsubsection{Current-to-Code Converter and Threshold Generation}
+
+Rather than producing a single differential output voltage, the current-to-code converter
+distributes $I_2$ and $I_3$ across $N$ parallel comparison nodes — one per thermometer
+output bit. Each node is loaded simultaneously by a PMOS current mirror, which replicates
+$I_2$ with a multiplication factor $\alpha_k$, and an NMOS current mirror, which
+replicates $I_3$ with a complementary factor $\beta_k$. The two factors are chosen such
+that $\alpha_k$ decreases monotonically with the node index $k$ while $\beta_k$ increases
+correspondingly, as illustrated schematically in Figure~\ref{fig:cmf_adc_op}(c).
+
+The binary output at node $k$ is resolved by a simple current competition: if the PMOS
+sourcing current $\alpha_k I_2$ exceeds the NMOS sinking current $\beta_k I_3$, the node
+is pulled to a logic high, otherwise the NMOS pull-down dominates and the node settles
+to logic low. The quantisation threshold associated with node $k$ is the specific input
+voltage at which the two competing currents are in equilibrium:
+%
+\begin{equation}
+    \alpha_k \, I_2 = \beta_k \, I_3 \Rightarrow
+    v_{id}^{(k)} = \frac{I_B}{g_m} \cdot \frac{\alpha_k - \beta_k}{\alpha_k + \beta_k}.
+    \label{eq:vth_cmf}
+\end{equation}
+%
+Because the PMOS ratio $\alpha_k$ decreases monotonically with $k$, the
+thresholds $v_{id}^{(k)}$ also decrease monotonically, guaranteeing a valid thermometer
+code by construction. Nodes with a dominant PMOS mirror transition to high first as
+$V_{in}$ rises above $V_{ref,c}$, followed progressively by nodes with higher NMOS ratios
+as the input continues to increase.
+
+At the reference condition $V_{in} = V_{ref,c}$, the error current vanishes, $I_2 = I_3 = I_B/2$,
+and the state of each node reduces to comparing $\alpha_k$ against $\beta_k$ directly.
+For an odd number of output bits with symmetric, evenly spaced ratio assignments, the
+central node satisfies $\alpha_k = \beta_k$ and is therefore at its decision boundary,
+producing the thermometer pattern $\mathtt{11{\cdots}1\,?\,0{\cdots}00}$ that is
+characteristic of a comparator array operating precisely at its reference level.
+
+% ─── ADC adaptation ──────────────────────────────────────────────────────────
+\subsubsection{Adaptation to an Asynchronous Flash ADC}
+
+The circuit as described operates entirely in continuous time: no clock is needed to
+trigger a comparison, and the thermometer output updates immediately whenever $V_{in}$
+crosses one of the thresholds defined by Equation~\eqref{eq:vth_cmf}. This property is
+the primary motivation for adopting the CMF-ADC topology as the comparator front-end
+of an asynchronous Flash ADC.
+
+In this context, each crossing event of $V_{in}$ through a threshold level generates a
+spontaneous transition on the corresponding output bit without the intervention of any
+external timing reference. The ensemble of $N$ output bits forms a thermometer code that
+tracks the input amplitude in real time: as $V_{in}$ increases past each threshold, one
+additional bit transitions from low to high, and the reverse process occurs as $V_{in}$
+decreases. The asynchronous control logic described in Section~\ref{sec:async_logic} then
+detects these transitions and encodes them into the final binary output.
+
+A further advantage in the ADC context is that monotonicity of the thermometer code is
+enforced at the topology level by the ordered mirror ratios, rather than relying on
+post-processing error correction. Bubble errors — isolated low codes within an otherwise
+high thermometer sequence — cannot arise as long as the PMOS ratios are strictly
+decreasing and the NMOS ratios are strictly increasing across the output nodes, since any
+such ordering guarantees that the threshold voltages $v_{id}^{(k)}$ form a strictly
+monotone sequence as required by~\eqref{eq:vth_cmf}.
+
+The main design parameters that control the ADC's resolution and input range are the
+mirror ratios $\{\alpha_k, \beta_k\}$, the tail current $I_B$, and the transconductance
+$g_m$ of the input pair. These relationships, along with the specific ratio assignments
+used in the implementation explored in this work, are discussed in
+Section~\ref{sec:cmf_characterization}.
 \subsection{Current Comparator Topology Exploration and Characterization}
 The first topology investigated was the current-mirror
 flash ADC (CMF-ADC) introduced by Lee~\textit{et al.}~\cite{lee2017},
@@ -46,7 +175,7 @@ bits $C_\mathrm{LPT}[4]$ through $C_\mathrm{LPT}[0]$ while the NMOS
 mirror ratios increase correspondingly from $\times 6$ to $\times 14$.
 At each comparison node, the output logic level is determined by whichever
 mirrored current dominates: when the PMOS contribution exceeds the NMOS
-contribution, the node is driven to a logic high; otherwise, the NMOS
+contribution, the node is driven to a logic high, otherwise, the NMOS
 pull-down prevails and the output settles to a logic low.
 
 To explain the operating principle clearly, it is easier to consider
@@ -270,14 +399,88 @@ This separation simplifies the design procedure, improves robustness against sat
 
 
 
-
 \section{Analytical Modeling and Design Constraints}
+\label{sec:analytical_modeling}
+
+In this section, the core theoretical boundaries and design trade-offs governing the asynchronous Flash Analog-to-Digital Converter (ADC) are established. Unlike conventional synchronous architectures, where performance limits are rigidly bound to a global clock frequency, the constraints of an asynchronous level-crossing or tracking framework are deeply intertwined with the instantaneous dynamics of the input signal, circuit propagation delays, and noise statistics.
+
 \subsection{Maximum Input Wave Frequency and Slope Overload}
+\label{subsec:slope_overload}
 
-\subsection{Propagation Delay and Slicer Response Time Modeling}
-%confirmar a necessidade desta secção
+In synchronous ADCs, the maximum input signal frequency is strictly governed by the Nyquist-Shannon sampling theorem ($f_{in} < f_s / 2$). In contrast, an asynchronous Flash or level-crossing ADC operates without a uniform sampling grid, its primary limitation is dictated by the maximum tracking velocity of its internal loops, commonly characterized as the Slew Rate (SR) constraint. A failure to track rapid signal variations leads to a severe distortion phenomenon known as slope overload.
+
+To model this constraint analytically, let us consider a full-scale sinusoidal input voltage $V_{in}(t)$ defined as:
+\begin{equation}
+    V_{in}(t) = \frac{V_{FS}}{2} \sin(2\pi f_{in} t)
+\end{equation}
+where $V_{FS}$ represents the full-scale voltage range of the converter and $f_{in}$ is the input frequency. The time derivative of this signal yields its instantaneous slope, which achieves its maximum absolute value at the zero-crossing points:
+\begin{equation}
+    SR_{max} = \left. \frac{dV_{in}(t)}{dt} \right|_{max} = \pi f_{in} V_{FS}
+\end{equation}
+
+The asynchronous Flash ADC resolves the input signal by triggering a new state or quantization conversion whenever the input crosses a discrete threshold voltage step $\Delta$, corresponding to the nominal resolution of $N$ bits:
+\begin{equation}
+    \Delta = \frac{V_{FS}}{2^N}
+\end{equation}
+
+In an ideal, noiseless scenario, the asynchronous control logic and comparator array require a finite minimum processing time to complete a single conversion cycle—encompassing tracking, comparison, latching, and resetting. This aggregate time window is denoted as the total conversion propagation delay $\tau_{conv}$. Consequently, the maximum rate at which the ADC can track voltage transitions (the converter's intrinsic Slew Rate, $SR_{ADC}$) is bounded by:
+\begin{equation}
+    SR_{ADC} = \frac{\Delta}{\tau_{conv}} = \frac{V_{FS}}{2^N \tau_{conv}}
+\end{equation}
+
+To circumvent slope overload distortion, the maximum slope of the input signal must never exceed the tracking capability of the asynchronous circuitry ($SR_{max} \le SR_{ADC}$):
+\begin{equation}
+    \pi f_{in} V_{FS} \le \frac{V_{FS}}{2^N \tau_{conv}}
+\end{equation}
+
+Rearranging this inequality yields the absolute maximum input frequency $f_{in,max}$ that the converter can faithfully digitize without undergoing slope overload under ideal conditions:
+\begin{equation}
+    f_{in,max} = \frac{1}{\pi 2^N \tau_{conv}}
+\end{equation}
+
+When transient noise is introduced into the simulation framework, the maximum operational Slew Rate undergoes significant degradation. Superimposed thermal and substrate noise creates rapid, localized voltage fluctuations ($dV_{noise}/dt$). This high-frequency noise contribution artificially inflates the effective local slope of the signal, causing the voltage to bounce back and forth across a quantization threshold. This rapidly consumes the available processing window $\tau_{conv}$ and manifests as thermometer-code meta-stability or \textit{bubble errors}. Consequently, the practical maximum Slew Rate under transient noise conditions is substantially lower than the ideal nominal value, causing slope overload to manifest at lower input frequencies and increasing the measured bubble rate.
+
 \subsection{Resolution and Power Dissipation}
-%confirmar a necessidade desta secção
+\label{subsec:resolution_power}
 
-\section{Chapter Summary}
+One of the most compelling advantages of asynchronous data converters is their signal-dependent power profile. In a standard synchronous Flash ADC, the power consumption remains largely constant because the entire comparator bank ($2^N - 1$ devices) and the clock distribution network are continuously toggled at the sampling frequency $f_s$, irrespective of the input signal activity. In an asynchronous implementation, power dissipation scales dynamically with the input signal's rate of change.
+
+When the input signal is entirely static ($f_{in} = 0$), no quantization thresholds are crossed. Under this condition, the dynamic switching power ideally drops to zero, and the system only dissipates static power ($P_{static}$), which originates from the continuous bias currents in the analog references, pre-amplifiers, and comparators:
+\begin{equation}
+    P_{total} = P_{static} + P_{dynamic}
+\end{equation}
+
+For a dynamic input signal, such as the full-scale sinusoid at frequency $f_{in}$, the signal traverses the entire full-scale range $V_{FS}$ twice within a single period $T = 1/f_{in}$ (two upward excursions and two downward excursions across the $2^N$ levels). Thus, the average number of quantization level crossings per second—which can be interpreted as an effective average sampling frequency $f_{s,avg}$—is proportional to both the frequency and the resolution:
+\begin{equation}
+    f_{s,avg} = 2 \cdot 2^N \cdot f_{in} = 2^{N+1} f_{in}
+\end{equation}
+
+Assuming that each individual asynchronous conversion cycle draws an average switching energy $E_{conv}$ from the power supply $V_{DD}$, the dynamic power consumption $P_{dynamic}$ can be modeled analytically as:
+\begin{equation}
+    P_{dynamic} = E_{conv} \cdot f_{s,avg} = E_{conv} \cdot 2^{N+1} f_{in}
+\end{equation}
+
+Substituting this back into the total power equation yields:
+\begin{equation}
+    P_{total} = P_{static} + E_{conv} \cdot 2^{N+1} f_{in}
+    \label{eq:p_total_model}
+\end{equation}
+
+Equation~(\ref{eq:p_total_model}) explicitly demonstrates that while $P_{dynamic}$ retains a beneficial linear relationship with the signal frequency $f_{in}$, it scales exponentially with the nominal resolution $N$. 
+
+In practical circuit implementations, the physical performance is constrained by noise, which splits the design analysis into nominal resolution ($N$) and Effective Number of Bits ($ENOB$). The $ENOB$ is derived directly from the Signal-to-Noise-and-Distortion Ratio ($SNDR$ or $SINAD$):
+\begin{equation}
+    ENOB = \frac{SNDR_{dB} - 1.76}{6.02}
+\end{equation}
+
+When transient noise is factored in, the Signal-to-Noise Ratio ($SNR$) and $SNDR$ degrade, lowering the $ENOB$. Crucially, the presence of transient noise introduces spurious, non-monotonic threshold crossings (chatter or bounces). These noise-driven crossings trigger redundant asynchronous processing cycles that do not encode useful signal information. This increases the effective bubble rate and inflates $P_{dynamic}$ well beyond the ideal theoretical prediction. This simultaneous increase in power consumption and reduction in $ENOB$ leads to a severe degradation of the Walden Figure of Merit ($FoM_W$), highlighting why minimizing noise-induced bubble rates is a critical design constraint for maintaining energy efficiency.
+
+\subsection{Chapter Summary}
+\label{subsec:chapter_summary}
+
+This chapter established the theoretical and architectural foundations of the proposed asynchronous Flash ADC, highlighting the paradigm shift from rigid, clock-bound sampling to signal-dependent, data-driven quantization. By eliminating the global clock, the converter addresses the inherent energy inefficiencies typically observed in synchronous architectures when processing sparse or bursty real-world signals.
+
+The structural development began with the adaptation of the comparator array, where continuous-time latched comparators were analyzed to ensure robust operation without synchronous clock phases. The core of the architecture—the asynchronous control logic—was modeled to manage the handshaking, threshold crossing detection, and localized timing generation required to guarantee hazard-free state transitions and mitigate metastability.
+
+Finally, the design space was mathematically bounded through analytical modeling of key physical constraints. It was demonstrated that the maximum input frequency is governed not by Nyquist boundaries, but by a strict Slew Rate constraint ($SR_{ADC}$), where circuit propagation delays ($\tau_{conv}$) set the limit to prevent slope overload. Furthermore, the power analysis verified that while dynamic power consumption scales exponentially with nominal resolution ($N$), it retains a highly beneficial linear dependency on the input signal frequency ($f_{in}$). This analytical framework also illuminated the critical impact of transient noise, which degrades the $SNR$/$SNDR$, introduces unwanted bubble errors, and triggers redundant conversion cycles that inflate power consumption—ultimately compromising the converter's effective resolution ($ENOB$) and overall energy efficiency ($FoM_W$). These mathematical insights serve as the direct baseline for the simulation setup and performance evaluation presented in the subsequent chapters.
 

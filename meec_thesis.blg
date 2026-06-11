@@ -1,23 +1,5 @@
-[0] Config.pm:328> INFO - This is Biber 2.21
-[0] Config.pm:331> INFO - Logfile is 'meec_thesis.blg'
-[251] biber-MSWIN64:342> INFO - === 
-[345] Biber.pm:421> INFO - Reading 'meec_thesis.bcf'
-[548] Biber.pm:1002> INFO - Found 167 citekeys in bib section 0
-[566] Biber.pm:4487> INFO - Processing section 0
-[596] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
-[674] bibtex.pm:1713> INFO - LaTeX decoding ...
-[1006] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[2228] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[2228] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[2228] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[2228] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
-[2432] bbl.pm:676> INFO - Writing 'meec_thesis.bbl' with encoding 'UTF-8'
-[2562] bbl.pm:779> INFO - Output to meec_thesis.bbl
-[2563] Biber.pm:132> WARN - Possible typo (case mismatch) between datasource keys: 'Van_Der_Ploeg' and 'van_der_Ploeg' in file 'references.bib'
-[2563] Biber.pm:132> WARN - I didn't find a database entry for 'weltin2013' (section 0)
-[2563] Biber.pm:132> WARN - I didn't find a database entry for 'mou2026' (section 0)
-[2563] Biber.pm:132> WARN - I didn't find a database entry for 'lee2017' (section 0)
-[2563] Biber.pm:132> WARN - I didn't find a database entry for 'razavi' (section 0)
-[2563] Biber.pm:132> WARN - I didn't find a database entry for 'flashadc_ref' (section 0)
-[2564] Biber.pm:132> WARN - I didn't find a database entry for 'razavi_strongarm' (section 0)
-[2564] Biber.pm:134> INFO - WARNINGS: 7
+[1] Config.pm:328> INFO - This is Biber 2.21
+[1] Config.pm:331> INFO - Logfile is 'meec_thesis.blg'
+[145] biber-MSWIN64:342> INFO - === 
+[589] Utils.pm:479> ERROR - Cannot find control file 'meec_thesis.bcf'! - Did latex run successfully on your .tex file before you ran biber?
+[589] Biber.pm:137> INFO - ERRORS: 1

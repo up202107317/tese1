@@ -1,8 +1,174 @@
-\chapter{Conclusions and Suggestions for Future Work} \label{chap:Conclusions}
+\chapter{Conclusions and Suggestions for Future Work}
+\label{chap:Conclusions}
 
+\section{Summary of the Work Developed}
 
-\section{Summary of the work developed}
+This dissertation addressed the design and validation of an asynchronous Flash
+Analog-to-Digital Converter intended for low-power, event-driven applications such as Internet
+of Things sensor nodes and biomedical signal acquisition interfaces. The central motivation for
+this work stems from the fundamental inefficiency of conventional synchronous ADC
+architectures when dealing with time-sparse signals: a global clock forces continuous switching
+activity across the comparator bank and clock distribution network, dissipating dynamic power
+regardless of whether the input signal is actually carrying new information. Removing that clock
+and replacing it with a level-crossing, event-driven mechanism was the core hypothesis explored
+throughout the dissertation.
 
-\section{Concluded Objetctives}
+The work began with a thorough review of the state of the art in data conversion. Classical
+ADC architectures Flash, SAR, Pipeline, and Sigma-Delta were examined with particular
+attention to the trade-offs between speed, resolution, and power consumption. This analysis was
+grounded in performance data from 140 publications drawn from ISSCC and JSSC, from which
+Walden and Schreier figures of merit were extracted and compared across a wide range of sampling
+frequencies and technology nodes. The review made clear that synchronous Flash converters
+occupy the high-speed frontier but at the cost of a poor energy figure of merit, and that
+asynchronous, event-driven operation is one of the most promising paths toward breaking this
+constraint for sparse-signal applications. A dedicated discussion on the adaptation of standard
+figures of merit to asynchronous systems was also included, since applying a fixed Nyquist
+sampling frequency to a level-crossing converter is inherently inappropriate and leads to
+misleading efficiency estimates.
+
+The design of the asynchronous ADC itself evolved through three distinct architectural phases.
+The first candidate was a current-mirror flash configuration in which a transconductance cell
+converts the differential input voltage into an error current, and a current-to-code converter maps
+that current to a thermometer-coded output by exploiting asymmetric PMOS and NMOS mirror
+ratios at each comparison node. This topology operates in continuous time and requires no
+external clock, making it a natural fit for the event-driven paradigm. The second phase
+investigated a complementary dual-input architecture aimed at extending the input common-mode
+range toward rail-to-rail operation by combining an NMOS and a PMOS differential pair with
+cross-coupled output branches. Although conceptually attractive, this approach could not be made
+to work within the 0.8\,V supply budget of the target 16\,nm process: the stacking of additional
+transistors in the signal path exceeded the available voltage headroom, and no feasible bias point
+could be found that kept all devices in saturation simultaneously. The third and final architecture
+abandoned the rail-to-rail extension and returned to a five-transistor OTA configured as a unity-gain
+voltage follower, whose low-impedance output drives a bank of CMOS slicer inverters. Each
+slicer is sized with a distinct PMOS-to-NMOS transistor ratio, which sets its switching threshold
+at a specific voltage level within the supply range. The ensemble of slicers produces an
+asynchronous thermometer code whose transitions directly encode level-crossing events, with no
+clock required at any point in the signal path.
+
+Alongside the asynchronous core, a synchronous reference Flash ADC was implemented in the
+same 16\,nm technology and under the same supply conditions to serve as a fair benchmark. This
+reference uses fifteen StrongARM latch comparators driven by a ring oscillator with a tapered
+buffer chain, and its power budget explicitly accounts for the clock distribution network, which is
+precisely the overhead that the asynchronous design aims to eliminate. The comparison between the
+two converters therefore isolates the effect of removing the global clock from an otherwise
+structurally similar Flash architecture.
+
+A critical practical challenge of the slicer-based thermometer coder is its sensitivity to process
+variation. Since the threshold of each inverter is determined by the ratio of PMOS to NMOS drive
+strength, any departure from the nominal device parameters shifts the trip points in a
+bit-dependent manner, degrading the differential and integral non-linearity of the converter. To
+address this, an offline body bias trimming strategy was designed and implemented using a
+Verilog-A behavioural model. By applying distinct bulk voltages to the NMOS and PMOS
+transistors of the slicer stage, the threshold voltage of each device type can be shifted through the
+body effect, allowing the trip points to be steered back toward their nominal positions after
+fabrication. Correction vectors were determined for the four standard process corners SS, FF,
+FS, and SF and were shown in simulation to reduce the peak DNL and INL errors to within
+specification.
+
+Finally, the complete system was validated through transistor-level analog and mixed-signal
+co-simulation. The dynamic performance of the asynchronous converter was characterised using a
+non-uniform to uniform resampling algorithm applied to the raw level-crossing output, enabling
+standard spectral metrics such as SNDR and ENOB to be extracted and compared against both the
+synchronous reference and representative state-of-the-art designs. The power measurements
+confirmed the key theoretical prediction: dynamic power consumption scales linearly with input
+signal frequency, and the converter enters a near-zero dynamic consumption state when the input
+is idle. The adapted Walden figure of merit, computed using the effective average crossing rate
+rather than a fixed Nyquist frequency, demonstrates a clear energy efficiency advantage over the
+synchronous baseline for the sparse-signal operating regime targeted by this work.
+
+\section{Concluded Objectives}
+
+The four specific objectives defined at the outset of this dissertation were all successfully
+accomplished.
+
+The first objective was the design of an asynchronous Flash ADC architecture that
+dissipates dynamic power only when input signal events occur. This was achieved through the
+final five-transistor OTA plus ratioed-slicer topology, which operates in continuous time without
+any global clock signal. The theoretical analysis confirmed that the converter's dynamic power
+scales linearly with the input signal frequency and approaches zero during idle intervals, directly
+validating the intended activity-dependent power profile.
+
+The second objective was the implementation of an offline trimming mechanism capable
+of detecting and compensating the threshold voltage mismatch of the comparators across process
+corners. This was fulfilled through the body bias trimming strategy described in Chapter~5, in
+which pre-computed pairs of NMOS and PMOS bulk voltages are applied to the slicer bank to
+restore the intended trip-point positions. The approach was validated across the SS, FF, FS, and
+SF process corners, achieving a significant reduction in both peak and RMS DNL and INL errors,
+as reported in Table~6.1.
+
+The third objective was the validation of the complete system through analog and digital
+co-simulation. The transistor-level netlist of the asynchronous ADC was simulated in a 16\,nm
+CMOS process under a 0.8\,V supply, and both static linearity and dynamic performance metrics
+were extracted. The FFT-based spectral analysis, performed on the uniformly resampled
+level-crossing output, confirmed correct operation of the asynchronous core and the functionality
+of the trimming logic, satisfying this objective.
+
+The fourth objective was performance benchmarking against synchronous state-of-the-art
+designs using established figures of merit. The proposed converter was compared against the
+synchronous reference Flash ADC implemented under identical technology and supply conditions,
+as well as against relevant designs from the ISSCC and JSSC literature. The adapted Walden
+figure of merit confirms that the asynchronous architecture achieves superior energy efficiency for
+sparse-signal operating conditions, closing a meaningful portion of the power gap that
+synchronous Flash converters exhibit at high sampling rates.
+
+It should be noted that, although process corner variation was successfully addressed by the
+offline trimming strategy, Monte Carlo statistical variation was not corrected within the scope of
+this work. The body bias trimming vectors were determined for the four deterministic process
+corners and are therefore not adapted to the continuous distribution of device mismatch that Monte
+Carlo analysis exposes. This limitation is acknowledged as an important gap between the
+presented prototype and a fully robust production-ready implementation, and it is the primary
+motivation for the first suggestion for future work described in the following section.
 
 \section{Future Work}
+
+Two directions for future development are identified as the most impactful extensions of the
+work presented in this dissertation.
+
+\subsection{Analogue Process Corner Detection Circuit}
+
+The trimming strategy validated in this work relies on the correct identification of the active
+process corner, which in the current implementation is supplied externally to the Verilog-A
+behavioural model and used to select the appropriate pre-computed correction vector. In a
+physical integrated circuit this external identification is not available: the fabricated die has no
+direct means of knowing which combination of NMOS and PMOS device parameters it has been
+assigned by the foundry.
+
+A natural extension would therefore be to design a dedicated on-chip analogue process
+detection circuit capable of sensing the effective transistor characteristics of the fabricated device
+and communicating the inferred process corner directly to the trimming logic. Such a circuit could
+be implemented as a small reference cell for example, a pair of matched inverter-based ring
+oscillators, one biased toward NMOS-dominated operation and the other toward PMOS-dominated
+operation whose relative oscillation frequencies or propagation delays encode the current
+process corner. The ratio between the two delay measurements maps unambiguously onto the
+NMOS–PMOS balance of the process, distinguishing SS from FF and FS from SF corners. The
+resulting analogue measurement would be digitised by a simple comparator and used to address a
+lookup table of pre-computed body bias correction values, replacing the external corner
+identification currently provided by the Verilog-A model. This approach would make the
+trimming procedure fully self-contained and autonomous, removing the need for any external
+process characterisation while preserving the static, low-overhead nature of the offline correction
+strategy.
+
+\subsection{Monte Carlo Trimming}
+
+A more fundamental limitation of the current trimming approach is that it corrects deterministic
+inter-corner shifts but leaves intra-die stochastic mismatch unaddressed. In practice, even at the
+nominal process corner, individual transistors within the slicer bank will exhibit random threshold
+voltage variations whose statistical distribution is characterised by Pelgrom's law. These
+variations are not captured by the four-corner trimming table, and their cumulative effect on DNL
+and INL can be significant in a Flash converter where each comparator threshold must be
+individually accurate.
+
+Extending the calibration to handle Monte Carlo variation would require moving from a
+corner-indexed lookup table to a converter-specific foreground calibration routine capable of
+measuring the actual trip point of each slicer independently and computing an individual
+correction for each one. One viable approach would be to inject a known ramp stimulus at the
+converter input during a dedicated startup calibration phase and record the digital code transitions
+to infer the actual trip point of each slicer. The deviation of each measured trip point from its
+nominal target could then be mapped to the body bias correction required to bring it back into
+specification, using the sensitivity relationship established in Chapter~5. Since the NMOS and
+PMOS bulk voltages of each slicer would need to be individually controlled, this approach
+requires the addition of a per-cell bias generator, which increases the area overhead relative to a
+global corner correction. Nevertheless, the achievable linearity improvement and the
+corresponding reduction in post-fabrication yield loss would likely justify this added complexity
+in any application where the converter is produced at volume and must meet tight DNL
+specifications across the full statistical distribution of process variability.
