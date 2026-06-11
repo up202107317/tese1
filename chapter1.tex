@@ -88,11 +88,10 @@ Given the limitations of synchronous data conversion for time-sparse sensor sign
 This overall goal breaks down into four specific objectives:
 
 \begin{enumerate}
-  \item Asynchronous Architecture Design: To develop the circuit-level design of an asynchronous Flash ADC in which power is dissipated only when an input signal event occurs.
+  \item Asynchronous Architecture Design: To develop the circuit-level design of an asynchronous Flash ADC.
   
   \item Offline Trimming Implementation: To implement an offline trimming mechanism capable of compensating the deterministic trip-point deviations of the comparison stage across process corners.
-  \item Mixed-Signal Validation: To validate the complete system through analog and digital co-simulation. This validation must confirm the functionality and accuracy of both the asynchronous core and the trimming logic.
-  
+ 
   \item Performance Benchmarking: To quantify the energy efficiency of the proposed design using well known figures of merit. The results must be compared against the current state of the art synchronous ADCs and relevant asynchronous solutions.
 \end{enumerate}
 \section{Document Structure} \label{sec:document_structure}

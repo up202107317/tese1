@@ -5,11 +5,11 @@
 \section{Simulation Setup and Input Test Signals}
 \label{sec:simulation_setup}
 
-To validate the theoretical framework established in Chapter~\ref{chap:async} and evaluate the physical performance of the proposed asynchronous Flash ADC, extensive transistor-level simulations were conducted using a 16-nm CMOS process node under a 0.8~V nominal supply voltage. This section details the simulation environment, the specialized reconstruction methodology required for non-uniform asynchronous data, and the characteristics of the input test stimuli.
+To validate the theoretical framework of Chapter~\ref{chap:async} and evaluate the physical performance of the proposed asynchronous Flash ADC, transistor-level simulations were run in a 16-nm CMOS process at a nominal supply of 0.8~V. This section describes the simulation environment, the reconstruction methodology required for non-uniform asynchronous data, and the input test stimuli.
 
-Unlike conventional synchronous data converters where output samples are bound to a periodic clock grid, the asynchronous level-crossing Flash ADC generates discrete output tokens only when a quantisation threshold is traversed. Consequently, traditional Fast Fourier Transform (FFT) algorithms, which strictly require uniformly sampled time-domain records, cannot be directly applied to the raw asynchronous output. To accurately characterise the dynamic performance metrics such as Signal-to-Noise Ratio (SNR), Signal-to-Noise-and-Distortion Ratio (SNDR), and Effective Number of Bits (ENOB) a non-uniform to uniform time-domain resampling and mathematical reconstruction algorithm was implemented.
+In a synchronous converter the output samples sit on a periodic clock grid. The asynchronous level-crossing Flash ADC instead produces output tokens only when a quantisation threshold is crossed, so a standard Fast Fourier Transform (FFT), which requires uniformly sampled records, cannot be applied directly to the raw output. To extract the dynamic performance metrics, namely the Signal-to-Noise Ratio (SNR), the Signal-to-Noise-and-Distortion Ratio (SNDR) and the Effective Number of Bits (ENOB), a non-uniform to uniform resampling and reconstruction algorithm was implemented.
 
-The primary input test signal employed for dynamic characterisation is a full-scale sinusoidal waveform near the Nyquist limit, superimposed with transient thermal noise to model realistic operating conditions. The spectrum of the reconstructed asynchronous output, showcasing the fundamental signal bin, the noise floor, and harmonic distortion components, is illustrated in the FFT spectrum below.
+The primary test signal for dynamic characterisation is a full-scale sinusoid near the Nyquist limit, with transient thermal noise superimposed to model realistic operating conditions. Figure~\ref{fig:fft_spectrum} shows the spectrum of the reconstructed asynchronous output, with the fundamental signal bin, the noise floor and the harmonic distortion components.
 
 \begin{figure}[htbp]
     \centering
@@ -19,7 +19,7 @@ The primary input test signal employed for dynamic characterisation is a full-sc
     \label{fig:fft_spectrum}
 \end{figure}
 
-The dynamic performance curves, mapping the behaviour of both SNDR and ENOB across a broad range of input frequencies and amplitudes, are provided in Figure~\ref{fig:dynamic_curves}. These curves contrast the ideal noiseless performance against the degraded parameters under transient noise conditions, tracking the incidence of noise-induced threshold chatter.
+Figure~\ref{fig:dynamic_curves} maps the SNDR and the ENOB over a broad range of input frequencies and amplitudes. The curves contrast the ideal noiseless performance with the degraded values under transient noise, and record the incidence of noise-induced threshold chatter.
 
 \begin{figure}[htbp]
     \centering
@@ -34,11 +34,11 @@ The dynamic performance curves, mapping the behaviour of both SNDR and ENOB acro
 \section{Static Linearity Results}
 \label{sec:static_linearity}
 
-Static linearity metrics, specifically Differential Non-Linearity (DNL) and Integral Non-Linearity (INL), were evaluated to quantify the architectural and circuit-level deterministic mismatches. In the proposed asynchronous Flash ADC, which contains no reference ladder, DNL and INL are determined by the deviations of the slicer trip points from their nominal sizing-defined positions — both the deterministic, corner-dependent shifts analysed in Chapter~\ref{chap:trimming} and the random threshold variations of the slicer bank.
+The static linearity metrics, Differential Non-Linearity (DNL) and Integral Non-Linearity (INL), quantify the deterministic mismatches of the architecture and the circuit. The proposed asynchronous Flash ADC contains no reference ladder, so its DNL and INL are set by the deviations of the slicer trip points from their nominal sizing-defined positions: the deterministic, corner-dependent shifts analysed in Chapter~\ref{chap:trimming}, plus the random threshold variations of the slicer bank.
 
-To counteract these non-idealities, a body bias trimming technique was proposed and implemented via a Verilog-A behavioural framework, as described in Chapter~\ref{chap:trimming}. To demonstrate the efficacy of this calibration mechanism, the static error profiles were extracted before and after the application of the optimal trimming vectors across multiple process corners. 
+These non-idealities are corrected by the body bias trimming technique implemented through the Verilog-A behavioural framework of Chapter~\ref{chap:trimming}. To measure its effect, the static error profiles were extracted before and after applying the trimming vectors at each process corner.
 
-Figure~\ref{fig:dnl_inl_comparison} illustrates the untrimmed versus trimmed DNL and INL profiles across the converter's full-scale digital codes, highlighting the reduction in peak errors and the elimination of potential missing codes.
+Figure~\ref{fig:dnl_inl_comparison} compares the untrimmed and trimmed DNL and INL profiles across the converter's full-scale digital codes. The trimming reduces the peak errors and removes the missing codes.
 
 \begin{figure}[htbp]
     \centering
@@ -77,15 +77,15 @@ A defining feature of the asynchronous Flash ADC is its signal-dependent power p
 \subsection{Power Measurement Methodology}
 \label{sec:power_methodology}
 
-To ensure the fairest possible comparison between the two converters characterised in this chapter, the power figures reported here cover only the core conversion path of each design. Specifically, the encoder — the digital logic that translates the thermometer code produced by the comparison stage into the final binary word — was excluded from all power measurements, on both sides of the comparison.
+To keep the comparison between the two converters fair, the power figures reported here cover only the core conversion path of each design. The encoder, that is, the digital logic that translates the thermometer code into the final binary word, was excluded from all power measurements on both sides of the comparison.
 
 The reasoning is straightforward: both designs require some form of thermometer-to-binary conversion at their outputs, and this encoding logic is largely independent of whether the preceding conversion is synchronous or asynchronous. Including it on one side of the comparison but not the other would artificially inflate one power budget and lead to a conclusion that does not fairly reflect the underlying architectural trade-off. The most defensible approach is therefore to exclude it from both and compare only the converter cores.
 
-Under this methodology, the power reported for the synchronous reference in Table~\ref{tab:sync_results} includes the resistor ladder, the 15 StrongARM latch comparators, the ring oscillator, and the tapered clock buffer chain described in Chapter~\ref{chap:synchronous} — the clock distribution path being precisely the overhead that the asynchronous design eliminates. The power reported for the proposed asynchronous converter includes the voltage follower, the slicer bank, and the event-generation logic described in Chapter~\ref{chap:async}.
+Under this methodology, the power reported for the synchronous reference in Table~\ref{tab:sync_results} includes the resistor ladder, the 15 StrongARM latch comparators, the ring oscillator and the tapered clock buffer chain described in Chapter~\ref{chap:synchronous}. The clock distribution path is precisely the overhead that the asynchronous design eliminates. The power reported for the proposed asynchronous converter includes the voltage follower, the slicer bank and the event-generation logic of Chapter~\ref{chap:async}.
 
 \subsection{Signal-Dependent Power Scaling}
 
-To empirically validate this adaptive scaling behaviour, the total power consumption was monitored across an input signal frequency sweep spanning from DC ($f_{in} = 0$) up to the maximum tracking bandwidth limit. Figure~\ref{fig:power_scaling} explicitly demonstrates this linear dependency, proving that the system enters a near-zero dynamic consumption state when the input stimulus exhibits low activity or becomes idle.
+To verify this scaling in practice, the total power consumption was measured over an input frequency sweep from DC ($f_{in} = 0$) up to the maximum tracking bandwidth. Figure~\ref{fig:power_scaling} shows the expected linear dependency: when the input is idle or barely active, the dynamic consumption approaches zero.
 
 \begin{figure}[htbp]
     \centering
@@ -95,10 +95,12 @@ To empirically validate this adaptive scaling behaviour, the total power consump
     \label{fig:power_scaling}
 \end{figure}
 
-To provide a mathematically rigorous assessment of energy efficiency in this non-uniform context, an adapted Walden Figure of Merit ($FoM_{W,adapted}$) was utilised. This metric incorporates the effective average sampling rate ($f_{s,avg}$) dictated by the crossing density, ensuring a fair benchmark against synchronous designs:
+Energy efficiency in this non-uniform context is assessed with the adapted Walden Figure of Merit ($FoM_{W,adapted}$) introduced in Chapter~\ref{chap:lit_review}, which uses the effective average sampling rate ($f_{s,avg}$) set by the crossing density and therefore allows a fair benchmark against synchronous designs:
 \begin{equation}
     \mathrm{FoM}_{W,adapted} = \frac{P_{total}}{2^{\mathrm{ENOB}} \cdot f_{s,avg}}
 \end{equation}
+
+In this work, $f_{s,avg}$ is obtained directly from the simulation record: the conversion events generated over the observation window are counted and divided by the window duration. The value entering each figure of merit is reported together with it in Table~\ref{tab:state_of_the_art}.
 
 The extracted power breakdown and the resulting energy efficiency figures under both ideal and transient noise conditions are tabulated in Table~\ref{tab:power_metrics_empty}.
 
@@ -167,7 +169,7 @@ The synchronous reference converter described in Chapter~\ref{chap:synchronous} 
 \section{Comparative Analysis and Discussion}
 \label{sec:comparative_analysis}
 
-To contextualize the performance of the developed design, a comprehensive comparative analysis is carried out. Table~\ref{tab:state_of_the_art} contrasts the core performance metrics of the baseline Synchronous Reference Flash ADC detailed in Chapter~\ref{chap:synchronous}, the proposed Asynchronous Flash ADC developed in this work, and recent state-of-the-art architectures compiled from the literature.
+Table~\ref{tab:state_of_the_art} puts the developed design in context. It compares the core performance metrics of the synchronous reference Flash ADC of Chapter~\ref{chap:synchronous}, the proposed asynchronous Flash ADC, and recent state-of-the-art architectures from the literature.
 
 \begin{table}[htbp]
     \centering
@@ -193,5 +195,7 @@ To contextualize the performance of the developed design, a comprehensive compar
     \end{tabular}
 \end{table}
 
-The comparative data underscores the trade-offs inherent to the asynchronous paradigm. While the synchronous baseline maintains a lower circuit complexity in its control block, it suffers from a rigid power envelope that compromises efficiency during periods of low input activity. In contrast, the proposed asynchronous implementation achieves superior energy scaling and a highly competitive Walden Figure of Merit, particularly after the activation of the body bias trimming network which successfully recovers the design's effective resolution under process variations.
+The comparison makes the trade-off concrete. The synchronous baseline has the simpler control block, but its power envelope is rigid and its efficiency collapses when the input is barely active. The asynchronous implementation scales its energy with the input activity and reaches a competitive Walden Figure of Merit, particularly once the body bias trimming network restores the effective resolution under process variations.
+
+A note on the fairness of this comparison is warranted, since an activity-indexed figure of merit could be suspected of favouring the asynchronous design by construction. Three observations bound that concern. First, both converters have the same 4-bit resolution and their cores are measured under the same exclusions (Section~\ref{sec:power_methodology}), so the structural terms of the comparison are symmetric. Second, the advantage predicted by the activity-dependent model is conditional, and the condition is stated by the model itself (Section~\ref{subsec:resolution_power}): as input activity rises, $f_{s,avg}$ approaches $2^{N+1} f_{in}$ and the dynamic power of the asynchronous core grows linearly, until near the slope-overload limit the activity advantage disappears altogether. The asynchronous architecture is expected to win for sparse inputs and to lose its margin for continuously active inputs near full bandwidth; this comparison targets the former regime because that is the application space defined in Chapter~\ref{chap:intro}. Third, the one structural asymmetry that remains, the restricted effective input range of the complementary follower, runs against the asynchronous design rather than in its favour.
 

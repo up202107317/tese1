@@ -4,92 +4,92 @@
 \contentsline {subsection}{\numberline {1.1.1}Inefficiency of Synchronous Sampling}{2}{subsection.1.1.1}%
 \contentsline {section}{\numberline {1.2}Objectives and Scope of the Dissertation}{3}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Document Structure}{3}{section.1.3}%
-\contentsline {chapter}{\numberline {2}Literature Review}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Fundamentals of Analog-to-Digital Conversion}{5}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}The Data Conversion Process}{5}{subsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.1.1}Ideal Data Conversion}{5}{subsubsection.2.1.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.1.2}The Sampling Operation}{5}{subsubsection.2.1.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.1.3}The Quantisation Operation}{6}{subsubsection.2.1.1.3}%
-\contentsline {subsubsection}{\numberline {2.1.1.4}Coding}{6}{subsubsection.2.1.1.4}%
-\contentsline {subsection}{\numberline {2.1.2}Classical Performance Metrics}{6}{subsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.2.1}Resolution and Sampling Rate}{6}{subsubsection.2.1.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.2.2}Signal-to-Noise-Distortion Ratio (SNDR)}{6}{subsubsection.2.1.2.2}%
-\contentsline {subsubsection}{\numberline {2.1.2.3}Differential and Integral Non-Linearity (DNL and INL)}{7}{subsubsection.2.1.2.3}%
-\contentsline {subsubsection}{\numberline {2.1.2.4}Offset and Gain Error}{7}{subsubsection.2.1.2.4}%
-\contentsline {paragraph}{}{7}{figure.caption.9}%
-\contentsline {subsubsection}{\numberline {2.1.2.5}Figures of Merit}{8}{subsubsection.2.1.2.5}%
-\contentsline {subsection}{\numberline {2.1.3}Metrics Adaptation for Asynchronous Systems}{8}{subsection.2.1.3}%
-\contentsline {section}{\numberline {2.2}Sampling Paradigms: Synchronous and Asynchronous}{9}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Uniform Sampling and Nyquist Rate Systems}{9}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Non Uniform Sampling and Event Driven Systems}{9}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Signal Sparsity and Theoretical Energy Efficiency Benefits}{9}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}Synchronous Architectures}{10}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Synchronous Flash ADC}{10}{subsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.1.1}The Power Bottleneck}{10}{subsubsection.2.3.1.1}%
-\contentsline {subsection}{\numberline {2.3.2}SAR (Successive Approximation Register)}{10}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Pipeline}{11}{subsection.2.3.3}%
-\contentsline {paragraph}{}{11}{section*.12}%
-\contentsline {paragraph}{}{11}{section*.13}%
-\contentsline {paragraph}{}{11}{section*.14}%
-\contentsline {subsection}{\numberline {2.3.4}Sigma-Delta ($\Sigma \Delta $)}{12}{subsection.2.3.4}%
-\contentsline {paragraph}{}{12}{section*.16}%
-\contentsline {paragraph}{}{12}{section*.17}%
-\contentsline {paragraph}{}{12}{section*.18}%
-\contentsline {subsection}{\numberline {2.3.5}Dual-slope}{12}{subsection.2.3.5}%
-\contentsline {paragraph}{}{13}{section*.20}%
-\contentsline {paragraph}{}{13}{section*.21}%
-\contentsline {paragraph}{}{13}{section*.22}%
-\contentsline {section}{\numberline {2.4}Asynchronous Architectures}{14}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Level-Crossing Sampling (LCS)}{14}{subsection.2.4.1}%
-\contentsline {paragraph}{}{14}{section*.24}%
-\contentsline {paragraph}{}{14}{section*.25}%
-\contentsline {paragraph}{}{14}{section*.26}%
-\contentsline {subsection}{\numberline {2.4.2}Flash ADC}{15}{subsection.2.4.2}%
-\contentsline {section}{\numberline {2.5}Clockless Event Generation}{15}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}The Voltage to Current Conversion Concept in Event Detection}{15}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Current Comparator Operating Principles}{16}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Topologies for Event Detection in the Literature}{16}{subsection.2.5.3}%
-\contentsline {subsubsection}{\numberline {2.5.3.1}Current-Mirror-Based Current Comparator}{16}{subsubsection.2.5.3.1}%
-\contentsline {subsubsection}{\numberline {2.5.3.2}Traff Current Comparator}{17}{subsubsection.2.5.3.2}%
-\contentsline {subsubsection}{\numberline {2.5.3.3}Lu Chen Current Comparator}{17}{subsubsection.2.5.3.3}%
-\contentsline {subsubsection}{\numberline {2.5.3.4}Hysteresis Current Comparator}{18}{subsubsection.2.5.3.4}%
-\contentsline {subsubsection}{\numberline {2.5.3.5}Min and Kim Current Comparator}{18}{subsubsection.2.5.3.5}%
-\contentsline {subsubsection}{\numberline {2.5.3.6}CC-II-Based Current Comparator}{19}{subsubsection.2.5.3.6}%
-\contentsline {section}{\numberline {2.6}Calibration and Trimming Techniques}{19}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}The Component Mismatch Problem}{20}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Calibration Classifications}{20}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}Trimming Techniques}{20}{subsection.2.6.3}%
-\contentsline {subsubsection}{\numberline {2.6.3.1}Internal Loading}{20}{subsubsection.2.6.3.1}%
-\contentsline {subsubsection}{\numberline {2.6.3.2}Reference Ladder Trimming}{20}{subsubsection.2.6.3.2}%
-\contentsline {paragraph}{}{21}{section*.27}%
-\contentsline {paragraph}{}{21}{section*.28}%
-\contentsline {paragraph}{}{21}{figure.caption.31}%
-\contentsline {paragraph}{}{21}{section*.32}%
-\contentsline {paragraph}{}{22}{section*.33}%
-\contentsline {paragraph}{}{22}{section*.34}%
-\contentsline {subsection}{\numberline {2.6.4}Advantages of Static Bulk-Driven Trimming for Asynchronous ADCs}{22}{subsection.2.6.4}%
-\contentsline {section}{\numberline {2.7}Asynchronous vs. Synchronous}{23}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Advantage}{23}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}Comparative Evaluation}{23}{subsection.2.7.2}%
-\contentsline {subsection}{\numberline {2.7.3}Chapter Summary and Design Directives}{26}{subsection.2.7.3}%
-\contentsline {chapter}{\numberline {3}Proposed Asynchronous Flash ADC Design}{27}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Design Specifications and Terminology}{27}{section.3.1}%
+\contentsline {chapter}{\numberline {2}Literature Review}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Fundamentals of Analog-to-Digital Conversion}{4}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}The Data Conversion Process}{4}{subsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.1.1}Ideal Data Conversion}{4}{subsubsection.2.1.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.1.2}The Sampling Operation}{4}{subsubsection.2.1.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.1.3}The Quantisation Operation}{5}{subsubsection.2.1.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.1.4}Coding}{5}{subsubsection.2.1.1.4}%
+\contentsline {subsection}{\numberline {2.1.2}Classical Performance Metrics}{5}{subsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.2.1}Resolution and Sampling Rate}{5}{subsubsection.2.1.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.2.2}Signal-to-Noise-Distortion Ratio (SNDR)}{5}{subsubsection.2.1.2.2}%
+\contentsline {subsubsection}{\numberline {2.1.2.3}Differential and Integral Non-Linearity (DNL and INL)}{6}{subsubsection.2.1.2.3}%
+\contentsline {subsubsection}{\numberline {2.1.2.4}Offset and Gain Error}{6}{subsubsection.2.1.2.4}%
+\contentsline {paragraph}{}{6}{figure.caption.9}%
+\contentsline {subsubsection}{\numberline {2.1.2.5}Figures of Merit}{7}{subsubsection.2.1.2.5}%
+\contentsline {subsection}{\numberline {2.1.3}Metrics Adaptation for Asynchronous Systems}{7}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Sampling Paradigms: Synchronous and Asynchronous}{8}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Uniform Sampling and Nyquist Rate Systems}{8}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Non Uniform Sampling and Event Driven Systems}{8}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Signal Sparsity and Theoretical Energy Efficiency Benefits}{8}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Synchronous Architectures}{9}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Synchronous Flash ADC}{9}{subsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.1.1}The Power Bottleneck}{9}{subsubsection.2.3.1.1}%
+\contentsline {subsection}{\numberline {2.3.2}SAR (Successive Approximation Register)}{9}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Pipeline}{10}{subsection.2.3.3}%
+\contentsline {paragraph}{}{10}{section*.12}%
+\contentsline {paragraph}{}{10}{section*.13}%
+\contentsline {paragraph}{}{10}{section*.14}%
+\contentsline {subsection}{\numberline {2.3.4}Sigma-Delta ($\Sigma \Delta $)}{11}{subsection.2.3.4}%
+\contentsline {paragraph}{}{11}{section*.16}%
+\contentsline {paragraph}{}{11}{section*.17}%
+\contentsline {paragraph}{}{11}{section*.18}%
+\contentsline {subsection}{\numberline {2.3.5}Dual-slope}{11}{subsection.2.3.5}%
+\contentsline {paragraph}{}{12}{section*.20}%
+\contentsline {paragraph}{}{12}{section*.21}%
+\contentsline {paragraph}{}{12}{section*.22}%
+\contentsline {section}{\numberline {2.4}Asynchronous Architectures}{13}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Level-Crossing Sampling (LCS)}{13}{subsection.2.4.1}%
+\contentsline {paragraph}{}{13}{section*.24}%
+\contentsline {paragraph}{}{13}{section*.25}%
+\contentsline {paragraph}{}{13}{section*.26}%
+\contentsline {subsection}{\numberline {2.4.2}Flash ADC}{14}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}Clockless Event Generation}{14}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}The Voltage to Current Conversion Concept in Event Detection}{14}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Current Comparator Operating Principles}{15}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Topologies for Event Detection in the Literature}{15}{subsection.2.5.3}%
+\contentsline {subsubsection}{\numberline {2.5.3.1}Current-Mirror-Based Current Comparator}{15}{subsubsection.2.5.3.1}%
+\contentsline {subsubsection}{\numberline {2.5.3.2}Traff Current Comparator}{16}{subsubsection.2.5.3.2}%
+\contentsline {subsubsection}{\numberline {2.5.3.3}Lu Chen Current Comparator}{16}{subsubsection.2.5.3.3}%
+\contentsline {subsubsection}{\numberline {2.5.3.4}Hysteresis Current Comparator}{17}{subsubsection.2.5.3.4}%
+\contentsline {subsubsection}{\numberline {2.5.3.5}Min and Kim Current Comparator}{17}{subsubsection.2.5.3.5}%
+\contentsline {subsubsection}{\numberline {2.5.3.6}CC-II-Based Current Comparator}{18}{subsubsection.2.5.3.6}%
+\contentsline {section}{\numberline {2.6}Calibration and Trimming Techniques}{18}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}The Component Mismatch Problem}{19}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Calibration Classifications}{19}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Trimming Techniques}{19}{subsection.2.6.3}%
+\contentsline {subsubsection}{\numberline {2.6.3.1}Internal Loading}{19}{subsubsection.2.6.3.1}%
+\contentsline {subsubsection}{\numberline {2.6.3.2}Reference Ladder Trimming}{19}{subsubsection.2.6.3.2}%
+\contentsline {paragraph}{}{20}{section*.27}%
+\contentsline {paragraph}{}{20}{section*.28}%
+\contentsline {paragraph}{}{20}{figure.caption.31}%
+\contentsline {paragraph}{}{20}{section*.32}%
+\contentsline {paragraph}{}{20}{section*.33}%
+\contentsline {paragraph}{}{21}{section*.34}%
+\contentsline {subsection}{\numberline {2.6.4}Advantages of Static Bulk-Driven Trimming for Asynchronous ADCs}{21}{subsection.2.6.4}%
+\contentsline {section}{\numberline {2.7}Asynchronous vs. Synchronous}{22}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Advantage}{22}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Comparative Evaluation}{22}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}Chapter Summary and Design Directives}{25}{subsection.2.7.3}%
+\contentsline {chapter}{\numberline {3}Proposed Asynchronous Flash ADC Design}{26}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Design Specifications and Terminology}{26}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Architectural Evolution and Methodology}{27}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Phase I: The Baseline Current-Mirror OTA Flash Configuration}{28}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Operating Principle and Core Topology}{28}{subsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.1.1}Transconductance Cell}{29}{subsubsection.3.3.1.1}%
-\contentsline {paragraph}{Equilibrium operation.}{29}{section*.41}%
-\contentsline {paragraph}{Signal operation.}{29}{section*.42}%
+\contentsline {section}{\numberline {3.3}Phase I: The Baseline Current-Mirror OTA Flash Configuration}{27}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Operating Principle and Core Topology}{27}{subsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.1.1}Transconductance Cell}{27}{subsubsection.3.3.1.1}%
+\contentsline {paragraph}{Equilibrium operation.}{27}{section*.41}%
+\contentsline {paragraph}{Signal operation.}{28}{section*.42}%
 \contentsline {subsubsection}{\numberline {3.3.1.2}Current-to-Code Converter and Threshold Generation}{29}{subsubsection.3.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.3.1.3}Adaptation to an Asynchronous Flash ADC}{30}{subsubsection.3.3.1.3}%
-\contentsline {subsection}{\numberline {3.3.2}Reference Implementation and Mirror Ratio Assignment}{31}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Phase II: The Complementary Dual-Input Flash Configuration}{31}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Motivation for Wide Input Common-Mode Range Extension}{31}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Rail-to-Rail Architecture Evaluation and Voltage Headroom Limitations}{32}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Phase III: The Final Adopted Architecture}{33}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Five Transistor OTA Core and Optimised Transistor Sizing}{33}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Ratioed Output Slicers Design}{34}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Asynchronous Control Logic and Clockless Event Generation Network}{35}{subsection.3.5.3}%
+\contentsline {subsubsection}{\numberline {3.3.1.3}Adaptation to an Asynchronous Flash ADC}{29}{subsubsection.3.3.1.3}%
+\contentsline {subsection}{\numberline {3.3.2}Reference Implementation and Mirror Ratio Assignment}{30}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Phase II: The Complementary Dual-Input Flash Configuration}{30}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Motivation for Wide Input Common-Mode Range Extension}{30}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Rail-to-Rail Architecture Evaluation and Voltage Headroom Limitations}{31}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Phase III: The Final Adopted Architecture}{32}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{32}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Ratioed Output Slicers Design}{33}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Asynchronous Control Logic and Clockless Event Generation Network}{34}{subsection.3.5.3}%
 \contentsline {section}{\numberline {3.6}Analytical Modelling and Design Constraints}{36}{section.3.6}%
 \contentsline {subsection}{\numberline {3.6.1}Maximum Input Wave Frequency and Slope Overload}{36}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3.6.2}Resolution and Power Dissipation}{37}{subsection.3.6.2}%
@@ -110,8 +110,8 @@
 \contentsline {section}{\numberline {5.4}Clock Generation}{48}{section.5.4}%
 \contentsline {chapter}{\numberline {6}Simulation Results and Performance Benchmarking}{50}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Simulation Setup and Input Test Signals}{50}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Static Linearity Results}{52}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Power Dissipation and Energy Efficiency}{53}{section.6.3}%
+\contentsline {section}{\numberline {6.2}Static Linearity Results}{50}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Power Dissipation and Energy Efficiency}{52}{section.6.3}%
 \contentsline {subsection}{\numberline {6.3.1}Power Measurement Methodology}{53}{subsection.6.3.1}%
 \contentsline {subsection}{\numberline {6.3.2}Signal-Dependent Power Scaling}{53}{subsection.6.3.2}%
 \contentsline {section}{\numberline {6.4}Synchronous Reference Flash ADC Results}{54}{section.6.4}%

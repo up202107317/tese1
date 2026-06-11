@@ -15,10 +15,10 @@ the same spirit as the bulk-driven reference-ladder trimming of
 Yao~\cite{yao_bulk_2011} discussed in Section~\ref{subsec:ladder_trimming},
 but applied here to the bulk terminals of the slicer bank and indexed by the
 identified process corner rather than by a per-comparator offset measurement.
-It should be noted from the outset that the scope of this correction is
-deterministic inter-corner variation: random intra-die mismatch, governed by
-Pelgrom's law~\cite{pelgrom_1989}, is not addressed by the corner-indexed
-table and is discussed as future work in Chapter~\ref{chap:Conclusions}.
+The scope of this correction is deterministic inter-corner variation only:
+random intra-die mismatch, governed by Pelgrom's
+law~\cite{pelgrom_1989}, is not addressed by the corner-indexed table and is
+discussed as future work in Chapter~\ref{chap:Conclusions}.
 
 \section{Choice of Body Biasing Among the Reviewed Techniques}
 
@@ -78,7 +78,7 @@ takes the form
 where the relevant source-to-body voltage for the PMOS is determined by the
 potential difference between the source and the N-well. In both cases, an
 increase in $|V_{SB}|$ raises the magnitude of the threshold voltage, a
-condition referred to as reverse body biasing (RBB)  conversely, reducing
+condition referred to as reverse body biasing (RBB). Conversely, reducing
 $|V_{SB}|$ below its nominal value or, in technologies that permit it,
 forward-biasing the body junction lowers $|V_t|$, a condition known as
 forward body biasing (FBB).
@@ -107,8 +107,8 @@ could offer.
 In a deep-submicron CMOS process, fabrication variability causes the threshold
 voltages and carrier mobilities of the NMOS and PMOS devices to deviate from
 their nominal (typical-typical, TT) values. The standard process corners used
-to bound this variability slow-slow (SS), fast-fast (FF), fast-NMOS
-slow-PMOS (FS), and slow-NMOS fast-PMOS (SF) capture the four extreme
+to bound this variability, namely slow-slow (SS), fast-fast (FF), fast-NMOS
+slow-PMOS (FS) and slow-NMOS fast-PMOS (SF), capture the four extreme
 combinations of NMOS and PMOS behaviour and represent the conditions under
 which circuit performance is most likely to degrade.
 
@@ -136,13 +136,13 @@ cell-dependent due to the different sizing ratios across the slicer bank. The
 FF corner produces the complementary effect: reduced threshold voltages
 increase the drive strength of both device types, again shifting the trip
 points by amounts that vary across the bank. The FS and SF corners are
-qualitatively different in that they introduce an asymmetric perturbation:
-at FS, the NMOS is faster than nominal while the PMOS is slower, biasing all
-slicers toward a lower trip point and compressing the effective decision levels
-toward the bottom of the input range  at SF, the complementary imbalance
+qualitatively different in that they introduce an asymmetric perturbation.
+At FS the NMOS is faster than nominal while the PMOS is slower, which biases
+all slicers toward a lower trip point and compresses the effective decision
+levels toward the bottom of the input range; at SF the complementary imbalance
 expands the decision levels toward the top. In all four non-typical corners,
-the degradation in linearity was found to cause DNL excursions in excess of
-$0.5$~LSB, rendering the converter non-monotonic under these conditions.
+the loss of linearity was found to cause DNL excursions beyond $0.5$~LSB,
+which makes the converter non-monotonic under these conditions.
 
 \section{Offline Trimming Strategy via Body Bias Adjustment}
 
@@ -155,12 +155,12 @@ shift the trip points back toward their nominal positions. Since both the NMOS
 bulk voltage $V_{BN}$ and the PMOS bulk voltage $V_{BP}$ contribute
 independently to the trip point through equations (\ref{eq:body_effect_nmos})
 and (\ref{eq:body_effect_pmos}), respectively, adjusting both simultaneously
-allows correction of both the common-mode shift in trip point which affects
-DNL and the differential imbalance between NMOS-dominated and
-PMOS-dominated corners which affects INL. The trimming is defined as
-offline in the sense that the bulk voltages are determined once, based on
-the identified process corner, and held constant during normal operation
-no continuous adaptive feedback is involved.
+corrects both the common-mode shift of the trip points, which affects the
+DNL, and the differential imbalance between NMOS-dominated and PMOS-dominated
+corners, which affects the INL. The trimming is offline in the sense that the
+bulk voltages are determined once, from the identified process corner, and
+held constant during normal operation; no continuous adaptive feedback is
+involved.
 
 \subsection{Determination of the Correction Pairs}
 
@@ -177,11 +177,11 @@ NMOS and PMOS, reducing $V_{tn}$ and $|V_{tp}|$ toward their nominal values
 and thereby restoring the intended trip point positions. At the FF corner,
 reverse body biasing is applied to both types to counteract the excessive
 drive strength resulting from the low threshold voltages. The FS and SF
-corners require asymmetric corrections: at FS, a stronger reverse bias is
-applied to the NMOS bulk, weakening the pull-down network to compensate for
-the fast-NMOS tendency, while the PMOS bulk is forward-biased to partially
-recover the reduced pull-up strength  the SF corner is handled symmetrically,
-with the dominant correction applied to the PMOS bulk. The resulting
+corners require asymmetric corrections. At FS, a stronger reverse bias on the
+NMOS bulk weakens the pull-down network to compensate for the fast-NMOS
+tendency, while the PMOS bulk is forward-biased to recover part of the lost
+pull-up strength; the SF corner is handled symmetrically, with the dominant
+correction applied to the PMOS bulk. The resulting
 correction table is summarised in Table~\ref{tab:trimming_vectors}.
 
 \begin{table}[htbp]

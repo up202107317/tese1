@@ -13,9 +13,9 @@ regardless of whether the input signal is actually carrying new information. Rem
 and replacing it with a level-crossing, event-driven mechanism was the core hypothesis explored
 throughout the dissertation.
 
-The work began with a thorough review of the state of the art in data conversion. Classical
-ADC architectures Flash, SAR, Pipeline, and Sigma-Delta were examined with particular
-attention to the trade-offs between speed, resolution, and power consumption. This analysis was
+The work began with a review of the state of the art in data conversion. The classical
+ADC architectures (Flash, SAR, Pipeline and Sigma-Delta) were examined with particular
+attention to the trade-offs between speed, resolution and power consumption. This analysis was
 grounded in performance data from 140 publications drawn from ISSCC and JSSC, from which
 Walden and Schreier figures of merit were extracted and compared across a wide range of sampling
 frequencies and technology nodes. The review made clear that synchronous Flash converters
@@ -31,15 +31,19 @@ The first candidate was a current-mirror flash configuration in which a transcon
 converts the differential input voltage into an error current, and a current-to-code converter maps
 that current to a thermometer-coded output by exploiting asymmetric PMOS and NMOS mirror
 ratios at each comparison node. This topology operates in continuous time and requires no
-external clock, making it a natural fit for the event-driven paradigm. The second phase
+external clock, which made it a natural fit for the event-driven approach. The second phase
 investigated a complementary dual-input architecture aimed at extending the input common-mode
 range toward rail-to-rail operation by combining an NMOS and a PMOS differential pair with
-cross-coupled output branches. Although conceptually attractive, this approach could not be made
-to work within the 0.8\,V supply budget of the target 16\,nm process: the stacking of additional
-transistors in the signal path exceeded the available voltage headroom, and no feasible bias point
-could be found that kept all devices in saturation simultaneously. The third and final architecture
-abandoned the rail-to-rail extension and returned to a five-transistor OTA configured as a unity-gain
-voltage follower, whose low-impedance output drives a bank of CMOS slicer inverters. Each
+cross-coupled output branches. Although conceptually attractive, this implementation could not be made
+to work within the 0.8\,V supply budget of the target 16\,nm process: the mirror loads and the
+cross-coupling stacked additional transistors in every signal path, the accumulated overdrive
+requirements exceeded the available voltage headroom, and no feasible bias point could be found
+that kept all devices in saturation simultaneously. The third and final architecture kept the
+complementary rail-to-rail input but rebuilt it with two five-transistor OTAs, one with an NMOS
+and one with a PMOS input pair, each loaded by a single active current mirror and biased through
+the low-voltage tail mirror retained from the second phase. With far fewer stacked devices, this
+arrangement fits the available headroom, and the complementary OTA, configured as a unity-gain
+voltage follower, drives a bank of CMOS slicer inverters through its low-impedance output. Each
 slicer is sized with a distinct PMOS-to-NMOS transistor ratio, which sets its switching threshold
 at a specific voltage level within the supply range. The ensemble of slicers produces an
 asynchronous thermometer code whose transitions directly encode level-crossing events, with no
@@ -60,9 +64,9 @@ bit-dependent manner, degrading the differential and integral non-linearity of t
 address this, an offline body bias trimming strategy was designed and implemented using a
 Verilog-A behavioural model. By applying distinct bulk voltages to the NMOS and PMOS
 transistors of the slicer stage, the threshold voltage of each device type can be shifted through the
-body effect, allowing the trip points to be steered back toward their nominal positions after
-fabrication. Correction vectors were determined for the four standard process corners SS, FF,
-FS, and SF and were shown in simulation to reduce the peak DNL and INL errors to within
+body effect, so the trip points can be steered back toward their nominal positions after
+fabrication. Correction vectors were determined for the four standard process corners (SS, FF,
+FS and SF) and were shown in simulation to reduce the peak DNL and INL errors to within
 specification.
 
 Finally, the complete system was validated through transistor-level analog and mixed-signal
@@ -76,6 +80,11 @@ is idle. The adapted Walden figure of merit, computed using the effective averag
 rather than a fixed Nyquist frequency, demonstrates a clear energy efficiency advantage over the
 synchronous baseline for the sparse-signal operating regime targeted by this work.
 
+The contribution of this work lies less in any single block than in their combination:
+ratioed-slicer quantisation, corner-indexed body bias trimming and clockless event generation,
+brought together at $0.8$~V in a 16~nm process and benchmarked against a synchronous reference
+of equal resolution and technology.
+
 \section{Concluded Objectives}
 
 The four specific objectives defined at the outset of this dissertation were all successfully
@@ -83,8 +92,8 @@ accomplished.
 
 The first objective was the design of an asynchronous Flash ADC architecture that
 dissipates dynamic power only when input signal events occur. This was achieved through the
-final five-transistor OTA plus ratioed-slicer topology, which operates in continuous time without
-any global clock signal. The theoretical analysis confirmed that the converter's dynamic power
+final topology, a complementary five-transistor OTA driving the ratioed-slicer bank, which
+operates in continuous time without any global clock signal. The theoretical analysis confirmed that the converter's dynamic power
 scales linearly with the input signal frequency and approaches zero during idle intervals, directly
 validating the intended activity-dependent power profile.
 
@@ -134,14 +143,14 @@ physical integrated circuit this external identification is not available: the f
 direct means of knowing which combination of NMOS and PMOS device parameters it has been
 assigned by the foundry.
 
-A natural extension would therefore be to design a dedicated on-chip analogue process
-detection circuit capable of sensing the effective transistor characteristics of the fabricated device
-and communicating the inferred process corner directly to the trimming logic. Such a circuit could
-be implemented as a small reference cell for example, a pair of matched inverter-based ring
+A natural extension would therefore be a dedicated on-chip analogue process
+detection circuit that senses the effective transistor characteristics of the fabricated device
+and communicates the inferred process corner directly to the trimming logic. Such a circuit could
+be implemented as a small reference cell: for example, a pair of matched inverter-based ring
 oscillators, one biased toward NMOS-dominated operation and the other toward PMOS-dominated
-operation whose relative oscillation frequencies or propagation delays encode the current
+operation, whose relative oscillation frequencies or propagation delays encode the current
 process corner. The ratio between the two delay measurements maps unambiguously onto the
-NMOS–PMOS balance of the process, distinguishing SS from FF and FS from SF corners. The
+NMOS/PMOS balance of the process and distinguishes SS from FF and FS from SF corners. The
 resulting analogue measurement would be digitised by a simple comparator and used to address a
 lookup table of pre-computed body bias correction values, replacing the external corner
 identification currently provided by the Verilog-A model. This approach would make the
