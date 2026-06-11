@@ -1,41 +1,48 @@
 \relax 
 \providecommand{\transparent@use}[1]{}
 \providecommand\hyper@newdestlabel[2]{}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Proposed Asynchronous Flash ADC Design}{29}{chapter.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Proposed Asynchronous Flash ADC Design}{27}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Architectural Evolution and Methodology}{29}{section.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Phase I: The Baseline Current-Mirror OTA Flash Configuration}{29}{section.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Operating Principle and Core Topology}{29}{subsection.3.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1.1}Transconductance Cell}{29}{subsubsection.3.2.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Equilibrium operation.}{30}{section*.42}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Signal operation.}{30}{section*.43}\protected@file@percent }
-\newlabel{eq:branch_currents}{{3.1}{30}{Signal operation}{equation.3.1}{}}
-\newlabel{eq:Gm_cmf}{{3.2}{30}{Signal operation}{equation.3.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1.2}Current-to-Code Converter and Threshold Generation}{30}{subsubsection.3.2.1.2}\protected@file@percent }
+\newlabel{chap:async}{{3}{27}{Proposed Asynchronous Flash ADC Design}{chapter.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Design Specifications and Terminology}{27}{section.3.1}\protected@file@percent }
+\newlabel{sec:design_specs}{{3.1}{27}{Design Specifications and Terminology}{section.3.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Architectural Evolution and Methodology}{27}{section.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Phase I: The Baseline Current-Mirror OTA Flash Configuration}{28}{section.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Operating Principle and Core Topology}{28}{subsection.3.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Operating principle of the current-mirror Flash ADC (CMF-ADC): (a) equilibrium operation, (b) signal operation, and (c) current-to-code conversion with asymmetric mirror ratios.}}{28}{figure.caption.40}\protected@file@percent }
+\newlabel{fig:cmf_adc_op}{{3.1}{28}{Operating principle of the current-mirror Flash ADC (CMF-ADC): (a) equilibrium operation, (b) signal operation, and (c) current-to-code conversion with asymmetric mirror ratios}{figure.caption.40}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1.1}Transconductance Cell}{29}{subsubsection.3.3.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Equilibrium operation.}{29}{section*.41}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Signal operation.}{29}{section*.42}\protected@file@percent }
+\newlabel{eq:branch_currents}{{3.1}{29}{Signal operation}{equation.3.1}{}}
+\newlabel{eq:Gm_cmf}{{3.2}{29}{Signal operation}{equation.3.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1.2}Current-to-Code Converter and Threshold Generation}{29}{subsubsection.3.3.1.2}\protected@file@percent }
 \newlabel{eq:vth_cmf}{{3.3}{30}{Current-to-Code Converter and Threshold Generation}{equation.3.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1.3}Adaptation to an Asynchronous Flash ADC}{31}{subsubsection.3.2.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Current Comparator Topology Exploration and Characterization}{31}{subsection.3.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Phase II: The Complementary Dual-Input Flash Configuration}{33}{section.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Motivation for Wide Input Common-Mode Range Extension}{33}{subsection.3.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Rail-to-Rail Architecture Evaluation and Voltage Headroom Limitations}{33}{subsection.3.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Phase III: The Final Adopted Architecture}{35}{section.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Five Transistor OTA Core and Optimized Transistor Sizing}{35}{subsection.3.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Ratioed Output Slicers Design}{36}{subsection.3.4.2}\protected@file@percent }
-\newlabel{eq:trip_point}{{3.4}{36}{Ratioed Output Slicers Design}{equation.3.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Asynchronous Control Logic and Clockless Event Generation Network}{37}{subsection.3.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Analytical Modeling and Design Constraints}{37}{section.3.5}\protected@file@percent }
-\newlabel{sec:analytical_modeling}{{3.5}{37}{Analytical Modeling and Design Constraints}{section.3.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Maximum Input Wave Frequency and Slope Overload}{38}{subsection.3.5.1}\protected@file@percent }
-\newlabel{subsec:slope_overload}{{3.5.1}{38}{Maximum Input Wave Frequency and Slope Overload}{subsection.3.5.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Resolution and Power Dissipation}{39}{subsection.3.5.2}\protected@file@percent }
-\newlabel{subsec:resolution_power}{{3.5.2}{39}{Resolution and Power Dissipation}{subsection.3.5.2}{}}
-\newlabel{eq:p_total_model}{{3.14}{39}{Resolution and Power Dissipation}{equation.3.14}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Chapter Summary}{40}{subsection.3.5.3}\protected@file@percent }
-\newlabel{subsec:chapter_summary}{{3.5.3}{40}{Chapter Summary}{subsection.3.5.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1.3}Adaptation to an Asynchronous Flash ADC}{30}{subsubsection.3.3.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Reference Implementation and Mirror Ratio Assignment}{31}{subsection.3.3.2}\protected@file@percent }
+\newlabel{sec:cmf_characterisation}{{3.3.2}{31}{Reference Implementation and Mirror Ratio Assignment}{subsection.3.3.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Phase II: The Complementary Dual-Input Flash Configuration}{31}{section.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Motivation for Wide Input Common-Mode Range Extension}{31}{subsection.3.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Rail-to-Rail Architecture Evaluation and Voltage Headroom Limitations}{32}{subsection.3.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Phase III: The Final Adopted Architecture}{33}{section.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Five Transistor OTA Core and Optimised Transistor Sizing}{33}{subsection.3.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Ratioed Output Slicers Design}{34}{subsection.3.5.2}\protected@file@percent }
+\newlabel{eq:trip_point}{{3.4}{34}{Ratioed Output Slicers Design}{equation.3.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Asynchronous Control Logic and Clockless Event Generation Network}{35}{subsection.3.5.3}\protected@file@percent }
+\newlabel{sec:async_logic}{{3.5.3}{35}{Asynchronous Control Logic and Clockless Event Generation Network}{subsection.3.5.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Analytical Modelling and Design Constraints}{36}{section.3.6}\protected@file@percent }
+\newlabel{sec:analytical_modeling}{{3.6}{36}{Analytical Modelling and Design Constraints}{section.3.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.1}Maximum Input Wave Frequency and Slope Overload}{36}{subsection.3.6.1}\protected@file@percent }
+\newlabel{subsec:slope_overload}{{3.6.1}{36}{Maximum Input Wave Frequency and Slope Overload}{subsection.3.6.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.2}Resolution and Power Dissipation}{37}{subsection.3.6.2}\protected@file@percent }
+\newlabel{subsec:resolution_power}{{3.6.2}{37}{Resolution and Power Dissipation}{subsection.3.6.2}{}}
+\newlabel{eq:p_total_model}{{3.14}{38}{Resolution and Power Dissipation}{equation.3.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.3}Chapter Summary}{38}{subsection.3.6.3}\protected@file@percent }
+\newlabel{subsec:chapter_summary}{{3.6.3}{38}{Chapter Summary}{subsection.3.6.3}{}}
 \@setckpt{chapter3}{
-\setcounter{page}{41}
-\setcounter{equation}{15}
+\setcounter{page}{40}
+\setcounter{equation}{14}
 \setcounter{enumi}{4}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
@@ -44,12 +51,12 @@
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
 \setcounter{chapter}{3}
-\setcounter{section}{5}
+\setcounter{section}{6}
 \setcounter{subsection}{3}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{0}
+\setcounter{figure}{1}
 \setcounter{table}{0}
 \setcounter{svg@param@lastpage}{0}
 \setcounter{svg@param@currpage}{-1}
@@ -58,7 +65,7 @@
 \setcounter{continuedfloat}{0}
 \setcounter{float@type}{4}
 \setcounter{linenumber}{0}
-\setcounter{LN@truepage}{51}
+\setcounter{LN@truepage}{48}
 \setcounter{tabx@nest}{0}
 \setcounter{listtotal}{0}
 \setcounter{listcount}{0}
@@ -68,7 +75,7 @@
 \setcounter{citetotal}{0}
 \setcounter{multicitecount}{0}
 \setcounter{multicitetotal}{0}
-\setcounter{instcount}{0}
+\setcounter{instcount}{209}
 \setcounter{maxnames}{3}
 \setcounter{minnames}{1}
 \setcounter{maxitems}{3}
@@ -82,7 +89,7 @@
 \setcounter{refsegment}{0}
 \setcounter{maxextratitle}{0}
 \setcounter{maxextratitleyear}{0}
-\setcounter{maxextraname}{0}
+\setcounter{maxextraname}{7}
 \setcounter{maxextradate}{0}
 \setcounter{maxextraalpha}{0}
 \setcounter{abbrvpenalty}{50}
@@ -174,9 +181,9 @@
 \setcounter{bbx:relatedcount}{0}
 \setcounter{bbx:relatedtotal}{0}
 \setcounter{cbx@tempcnta}{0}
-\setcounter{cbx@tempcntb}{0}
+\setcounter{cbx@tempcntb}{107}
 \setcounter{cbx@tempcntc}{0}
-\setcounter{cbx@tempcntd}{0}
+\setcounter{cbx@tempcntd}{-1}
 \setcounter{section@level}{2}
 \setcounter{Item}{4}
 \setcounter{Hfootnote}{0}

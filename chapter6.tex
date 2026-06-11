@@ -89,12 +89,13 @@ scales linearly with the input signal frequency and approaches zero during idle 
 validating the intended activity-dependent power profile.
 
 The second objective was the implementation of an offline trimming mechanism capable
-of detecting and compensating the threshold voltage mismatch of the comparators across process
-corners. This was fulfilled through the body bias trimming strategy described in Chapter~5, in
+of compensating the deterministic trip-point deviations of the comparison stage across process
+corners. This was fulfilled through the body bias trimming strategy described in
+Chapter~\ref{chap:trimming}, in
 which pre-computed pairs of NMOS and PMOS bulk voltages are applied to the slicer bank to
 restore the intended trip-point positions. The approach was validated across the SS, FF, FS, and
 SF process corners, achieving a significant reduction in both peak and RMS DNL and INL errors,
-as reported in Table~6.1.
+as reported in Table~\ref{tab:static_linearity_summary}.
 
 The third objective was the validation of the complete system through analog and digital
 co-simulation. The transistor-level netlist of the asynchronous ADC was simulated in a 16\,nm
@@ -153,7 +154,7 @@ strategy.
 A more fundamental limitation of the current trimming approach is that it corrects deterministic
 inter-corner shifts but leaves intra-die stochastic mismatch unaddressed. In practice, even at the
 nominal process corner, individual transistors within the slicer bank will exhibit random threshold
-voltage variations whose statistical distribution is characterised by Pelgrom's law. These
+voltage variations whose statistical distribution is characterised by Pelgrom's law \cite{pelgrom_1989}. These
 variations are not captured by the four-corner trimming table, and their cumulative effect on DNL
 and INL can be significant in a Flash converter where each comparator threshold must be
 individually accurate.
@@ -165,7 +166,7 @@ correction for each one. One viable approach would be to inject a known ramp sti
 converter input during a dedicated startup calibration phase and record the digital code transitions
 to infer the actual trip point of each slicer. The deviation of each measured trip point from its
 nominal target could then be mapped to the body bias correction required to bring it back into
-specification, using the sensitivity relationship established in Chapter~5. Since the NMOS and
+specification, using the sensitivity relationship established in Chapter~\ref{chap:trimming}. Since the NMOS and
 PMOS bulk voltages of each slicer would need to be individually controlled, this approach
 requires the addition of a per-cell bias generator, which increases the area overhead relative to a
 global corner correction. Nevertheless, the achievable linearity improvement and the

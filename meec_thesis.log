@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.20)  11 JUN 2026 12:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.20)  11 JUN 2026 14:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -990,7 +990,7 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 45.
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-) (meec_thesis.aux (resumo.aux) (abstract.aux) (un-sdg.aux) (quote.aux) (abbrevs.aux) (chapter1.aux) (chapter2.aux) (chapter3.aux) (chapter4.aux) (chapter5.aux) (chapter6.aux))
+) (meec_thesis.aux (abstract.aux) (un-sdg.aux) (abbrevs.aux) (chapter1.aux) (chapter2.aux) (chapter3.aux) (trimming.aux) (chapter4.aux) (chapter5.aux) (chapter6.aux))
 \openout1 = `meec_thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
@@ -1080,7 +1080,29 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'meec_thesis.bbl' found.
- (meec_thesis.bbl)
+ (meec_thesis.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                flashadc_ref
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                lee2017
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                mou2026
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
 Package biblatex Info: Reference section=0 on input line 45.
 Package biblatex Info: Reference segment=0 on input line 45.
 Package hyperref Info: Link coloring ON on input line 45.
@@ -1089,7 +1111,7 @@ Package hyperref Info: Link coloring ON on input line 45.
 \openout5 = `meec_thesis.out'.
 
 \@crestbox=\box76
-<figures/uporto-feup.pdf, id=334, 338.26375pt x 126.4725pt>
+<figures/uporto-feup.pdf, id=346, 338.26375pt x 126.4725pt>
 File: figures/uporto-feup.pdf Graphic file (type pdf)
 <use figures/uporto-feup.pdf>
 Package pdftex.def Info: figures/uporto-feup.pdf  used on input line 83.
@@ -1108,21 +1130,11 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 [-2
 
 ]
-\openout2 = `resumo.aux'.
-
- (resumo.tex)
-
-[1
-
-
-
-
-]
 \openout2 = `abstract.aux'.
 
  (abstract.tex)
 
-[2
+[1
 
 
 
@@ -1168,24 +1180,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
 )
 
-[3
-
-
-
-
-]
-\openout2 = `quote.aux'.
-
- (quote.tex)
-
-[4
+[2
 
 
 
 
 ] (meec_thesis.toc
 
-[5
+[3
 
 
 
@@ -1196,13 +1198,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
 
 
-[6] (meec_thesis.lof)
+[4] (meec_thesis.lof)
 \tf@lof=\write7
 \openout7 = `meec_thesis.lof'.
 
 
 
-[7
+[5
 
 
 ] (meec_thesis.lot
@@ -1216,7 +1218,7 @@ Overfull \hbox (5.22673pt too wide) in paragraph at lines 5--5
 
 
 
-[8
+[6
 
 
 ]
@@ -1224,7 +1226,7 @@ Overfull \hbox (5.22673pt too wide) in paragraph at lines 5--5
 
  (abbrevs.tex)
 
-[9
+[7
 
 
 ]
@@ -1232,28 +1234,11 @@ Overfull \hbox (5.22673pt too wide) in paragraph at lines 5--5
 
  (chapter1.tex
 Chapter 1.
-
-LaTeX Warning: Citation 'johns_martin_2012' on page 1 undefined on input line 25.
-
-
-LaTeX Warning: Citation 'shannon_1949' on page 1 undefined on input line 31.
-
-
-Overfull \hbox (5.71313pt too wide) in paragraph at lines 31--32
-[]\T1/ptm/m/n/10.95 Traditional data con-ver-sion ap-proaches, based on uni-form sam-pling and dic-tated by the Nyquist-
- []
-
-<figures/uporto.pdf, id=526, 2405.98875pt x 522.95375pt>
+<figures/uporto.pdf, id=538, 2405.98875pt x 522.95375pt>
 File: figures/uporto.pdf Graphic file (type pdf)
 <use figures/uporto.pdf>
 Package pdftex.def Info: figures/uporto.pdf  used on input line 35.
 (pdftex.def)             Requested size: 384.1096pt x 83.48279pt.
-
-LaTeX Warning: Citation 'lim_2013' on page 1 undefined on input line 36.
-
-
-LaTeX Warning: Citation 'lim_2013' on page 1 undefined on input line 36.
-
 
 
 [1
@@ -1263,18 +1248,6 @@ LaTeX Warning: Citation 'lim_2013' on page 1 undefined on input line 36.
 
 
 ]
-
-LaTeX Warning: Citation 'shannon_1949' on page 2 undefined on input line 47.
-
-
-Overfull \hbox (7.85165pt too wide) in paragraph at lines 47--48
-\T1/ptm/m/n/10.95 global clock sig-nal ($\OML/ztmcm/m/it/10.95 f[]$\T1/ptm/m/n/10.95 ). As es-tab-lished by the Nyquist-Shannon sam-pling the-o-rem [[]],
- []
-
-
-LaTeX Warning: Citation 'baker_cmos_2010' on page 2 undefined on input line 49.
-
-
 
 [2 <./figures/uporto.pdf>]
 
@@ -1286,20 +1259,6 @@ LaTeX Warning: Citation 'baker_cmos_2010' on page 2 undefined on input line 49.
  (chapter2.tex
 Chapter 2.
 
-LaTeX Warning: Citation 'johns_martin_2012' on page 5 undefined on input line 17.
-
-
-LaTeX Warning: Citation 'johns_martin_2012' on page 5 undefined on input line 20.
-
-
-Overfull \hbox (29.98193pt too wide) in paragraph at lines 20--21
-\T1/ptm/m/n/10.95 Sampling con-verts a continuous-time sig-nal $\OML/ztmcm/m/it/10.95 x\OT1/ztmcm/m/n/10.95 (\OML/ztmcm/m/it/10.95 t\OT1/ztmcm/m/n/10.95 )$ \T1/ptm/m/n/10.95 into a discrete-time se-quence $\OML/ztmcm/m/it/10.95 x\OT1/ztmcm/m/n/10.95 [\OML/ztmcm/m/it/10.95 n\OT1/ztmcm/m/n/10.95 ]$ \T1/ptm/m/n/10.95 [[]]. 
- []
-
-
-LaTeX Warning: Citation 'shannon_1949' on page 5 undefined on input line 22.
-
-
 
 [5
 
@@ -1308,1099 +1267,290 @@ LaTeX Warning: Citation 'shannon_1949' on page 5 undefined on input line 22.
 
 ]
 
-LaTeX Warning: Citation 'johns_martin_2012' on page 6 undefined on input line 29.
-
-
-LaTeX Warning: Citation 'baker_cmos_2010' on page 6 undefined on input line 39.
-
-
-LaTeX Warning: Citation 'johns_martin_2012' on page 6 undefined on input line 46.
-
-
-LaTeX Warning: Citation 'johns_martin_2012' on page 6 undefined on input line 49.
-
-
-LaTeX Warning: Citation 'johns_martin_2012' on page 6 undefined on input line 56.
-
-
-
 [6]
-
-LaTeX Warning: Citation 'van_de_plassche_1994' on page 7 undefined on input line 58.
-
-
-LaTeX Warning: Citation 'johns_martin_2012' on page 7 undefined on input line 61.
-
 File: figures/uporto.pdf Graphic file (type pdf)
 <use figures/uporto.pdf>
 Package pdftex.def Info: figures/uporto.pdf  used on input line 66.
 (pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
 
-LaTeX Warning: Citation 'matlab' on page 7 undefined on input line 67.
-
-
-LaTeX Warning: Citation 'johns_martin_2012' on page 7 undefined on input line 67.
-
-
-LaTeX Warning: Citation 'matlab' on page 7 undefined on input line 67.
-
-
-LaTeX Warning: Citation 'johns_martin_2012' on page 7 undefined on input line 67.
-
-
 
 [7]
 
-LaTeX Warning: Citation 'ALCoban_1999_113' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'AbhishekAgrawal_2023_100' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'AmyWhitcombe_2024_101' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'AnandSubramanian_2024_143' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'BGregoire_2008_25' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'BMalkietal_2012_47' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Balmelli_2004_119' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'BenjaminHershberg_2019_30' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'BramVeraverbeke_2025_91' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Breems_2007_130' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'CCLiu_2010_45' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'CHChan_2015_57' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'CHammerschmied_1997_39' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'CPochet_2022_110' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'CYLee_2022_140' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'CYLiouetal_2013_50' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'ChengChungHsu_2007_24' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'ChengEnHsieh_2025_93' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'ChiYunStanleyWang_2019_138' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'ChinYuLin_2016_61' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Christen_2007_131' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'ChunChengLiu_2016_60' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Dezzani_2003_116' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Dorrer_2005_124' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'EJanssenetal_2013_51' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'EwoutMartens_2024_96' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'FMYaul_2014_54' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'FMichel_2011_134' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'FengChen_2003_115' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Fontaine_2005_125' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Fujimoto_2006_129' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Gaggl_2004_121' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Geelen_2006_19' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'GeunhaKim_2023_77' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'GianHoogzaadandRafRoovers_1999_6' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Goes_2006_128' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'GovertGeelenandEdwardPaulus_2004_7' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'HHBoo_2015_29' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'HKHong_2015_58' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'HWei_2011_46' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'HZhao_2022_68' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'HanZhao_2025_87' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'HendrikvanderPloegandRobertRemmers_1999_105' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Hesener_2007_41' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'HongshuaiZhang_2023_71' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'HongzhiZhao_2023_73' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Huber_2007_108' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'HwiCheolKim_2005_18' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'JCWang_2022_66' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'JLiu_2022_98' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'JaewonLee_2025_102' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'JiaChingWang_2023_97' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'JiangYu_2005_122' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'JianxiongXu_2025_1' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'JihangGao_2025_88' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'JinseokKoh_2005_123' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'JongmiLee_2024_144' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'JosephInginoJrandBruceWooley_1998_9' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'JunhuaShen_2025_94' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'JunlinZhong_2025_103' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'JunyanHao_2023_32' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'KBult_1997_4' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'KaiChengCheng_2024_82' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'KentaroYoshioka_2017_62' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'KyeongwonJeong_2025_86' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'KyojinDChoo_2016_59' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'LiangQi_2019_137' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'MDing_2015_56' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'MFlynn_1998_5' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'MYoshioka_2010_44' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'MZhan_2022_67' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'ManxinLi_2023_70' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'MingleiZhang_2019_63' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'MingtaoZhan_2023_75' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'MingyangGu_2025_36' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Mitteregger_2006_126' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Ong_1997_112' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'PHarpe_2014_53' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'PHarpe_2015_55' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'PHarpeetal_2012_48' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'PHarpeetal_2013_49' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'PSchvan_2006_3' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'PSchvan_2008_42' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'PatrickVogelmann_2018_135' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'QLiu_2022_141' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'RKapustaetal_2013_52' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'RaresBodnar_2024_83' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Ray_2006_20' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'SUKwak_1997_8' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'SandeepSanthoshKumar_2023_74' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'SangheonLee_2024_78' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Senderowicz_1997_111' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'SerdarAbdullahYonar_2023_99' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'SeungChulLee_2007_23' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'SewonLee_2024_84' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'SharvilPatil_2024_35' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'ShengJuiHuang_2009_133' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Shimizu_2006_107' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'SiddharthDevarajan_2009_26' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Silva_2006_127' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'SiyuanYe_2024_95' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'SiyuanYe_2025_89' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'SungEnHsieh_2023_31' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'TKang_2022_142' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'TWang_2022_69' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Tabatabaei_2003_118' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Verma_2006_40' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Vleugels_2001_114' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'WLiu_2010_43' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Waltari_2002_12' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Wang_2005_16' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'XiyuHe_2024_80' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'YCHuang_2010_27' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'YChae_2008_132' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'YChaietal_2012_28' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'YHu_2022_139' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'YSegal_2022_65' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'YShimizu_2008_109' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Yan_2003_117' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'YanboZhang_2023_72' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'YannanZhang_2025_92' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Yao_2004_120' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'YaohuiLuan_2025_145' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'YiHuWang_2023_76' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'YingZuLin_2019_64' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'YongLim_2024_79' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Yoshioka_2005_17' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Yoshioka_2007_21' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'YoungDeukJeon_2007_22' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'YueCao_2025_37' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'YuefengCao_2023_33' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'YuefengCao_2024_34' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'YukoTambaandKazuoYamakido_1999_2' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'YunsongTao_2024_85' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'YunsongTao_2025_38' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'ZhuoyiChen_2024_81' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'ZhuoyiChen_2025_90' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'ZijianLiu_2025_104' on page 8 undefined on input line 89.
-
-
-Overfull \hbox (88.03046pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [],
- []
-
-
-Overfull \hbox (43.49641pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [],
- []
-
-
-Overfull \hbox (62.49559pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [], [],
- []
-
-
-Overfull \hbox (10.5704pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [],
- []
-
-
-Overfull \hbox (41.3398pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [],
- []
-
-
-Overfull \hbox (64.54315pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [], [],
- []
-
-
-Overfull \hbox (41.09966pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [], [],
- []
-
-
-Overfull \hbox (21.89276pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [],
- []
-
-
-Overfull \hbox (16.66971pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [],
- []
-
-
-Overfull \hbox (80.38698pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [],
- []
-
-
-Overfull \hbox (14.24959pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [],
- []
-
-
-Overfull \hbox (48.71057pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [], [],
- []
-
-
-Overfull \hbox (185.06873pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [], [],
- []
-
-
-Overfull \hbox (93.5714pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [], [],
- []
-
-
-Overfull \hbox (37.66121pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [],
- []
-
-
-Overfull \hbox (14.91823pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [], [],
- []
-
-
-Overfull \hbox (20.08618pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [],
- []
-
-
-Overfull \hbox (19.90044pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [], [],
- []
-
-
-Overfull \hbox (77.96771pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [], [],
- []
-
-
-Overfull \hbox (0.47508pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [],
- []
-
-
-Overfull \hbox (66.22862pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [],
- []
-
-
-Overfull \hbox (91.21681pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [], [],
- []
-
-
-Overfull \hbox (21.20386pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [], [],
- []
-
-
-Overfull \hbox (12.45456pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [], [],
- []
-
-
-Overfull \hbox (52.88213pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [], [],
- []
-
-
-Overfull \hbox (47.49419pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [], [],
- []
-
-
-Overfull \hbox (86.82658pt too wide) in paragraph at lines 89--90
-[]\T1/ptm/m/n/10.95 , [], [], [],
- []
+LaTeX Warning: Citation 'mou2026' on page 8 undefined on input line 93.
 
 
 
 [8]
-<figures/fom_fs.png, id=598, 867.24pt x 505.89pt>
-File: figures/fom_fs.png Graphic file (type png)
-<use figures/fom_fs.png>
-Package pdftex.def Info: figures/fom_fs.png  used on input line 95.
-(pdftex.def)             Requested size: 362.77525pt x 211.62323pt.
+
+LaTeX Warning: Citation 'mou2026' on page 9 undefined on input line 110.
 
 
-LaTeX Warning: Citation 'Lukas_2014' on page 9 undefined on input line 111.
-
-
-LaTeX Warning: Citation 'Jang_2018' on page 9 undefined on input line 112.
-
-
-LaTeX Warning: Citation 'Ginsburg_2014' on page 9 undefined on input line 113.
-
-
-LaTeX Warning: Citation 'De_Cano_Garcia_2019' on page 9 undefined on input line 114.
-
-
-LaTeX Warning: Citation 'Muller_2015' on page 9 undefined on input line 115.
+LaTeX Warning: Citation 'mou2026' on page 9 undefined on input line 113.
 
 
 
-[9 <./figures/fom_fs.png>]
-Overfull \hbox (2.56471pt too wide) in paragraph at lines 127--128
-\T1/ptm/m/n/10.95 invariant sam-pling fre-quency. How-ever, as demon-strated by Weltin-Wu and Tsi-vidis, level-crossing
+[9]
+Overfull \hbox (20.53398pt too wide) in paragraph at lines 173--173
+[][]\T1/ptm/m/n/10.95 SHA  
+ []
+
+
+Overfull \hbox (17.55829pt too wide) in paragraph at lines 173--173
+[][]\T1/ptm/m/n/10.95 Output  
+ []
+
+
+Overfull \hbox (10.99428pt too wide) in paragraph at lines 173--173
+[][]\T1/ptm/m/n/10.95 Comparator  
  []
 
 
 
 [10]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 249.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 249.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 249.
 
-LaTeX Warning: Citation 'weltin2013' on page 11 undefined on input line 143.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 249.
 
 
-LaTeX Warning: Citation 'weltin2013' on page 11 undefined on input line 143.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Sigma' on input line 249.
 
 
-LaTeX Warning: Citation 'mou2026' on page 11 undefined on input line 143.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Delta' on input line 249.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 249.
 
 
 
 [11]
-
-LaTeX Warning: Citation 'weltin2013' on page 12 undefined on input line 149.
-
-
-LaTeX Warning: Citation 'mou2026' on page 12 undefined on input line 149.
-
-
-LaTeX Warning: Citation 'johns_martin_2012' on page 12 undefined on input line 157.
-
-
-LaTeX Warning: Citation 'baker_cmos_2010' on page 12 undefined on input line 160.
-
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 354.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 354.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 354.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 354.
+ (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 10.40245pt on input line 354.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 10.40245pt on input line 354.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 7.59998pt on input line 354.
 
 
 [12]
 
-LaTeX Warning: Citation 'Tamba' on page 13 undefined on input line 165.
+Package mathptmx Warning: There are no bold math fonts on input line 412.
 
 
-LaTeX Warning: Citation 'Schvan_2006' on page 13 undefined on input line 168.
-
-
-LaTeX Warning: Citation 'van_de_plassche_1994' on page 13 undefined on input line 173.
-
-
-Overfull \hbox (20.53398pt too wide) in paragraph at lines 209--209
-[][]\T1/ptm/m/n/10.95 SHA  
- []
-
-
-Overfull \hbox (17.55829pt too wide) in paragraph at lines 209--209
-[][]\T1/ptm/m/n/10.95 Output  
- []
-
-
-Overfull \hbox (10.99428pt too wide) in paragraph at lines 209--209
-[][]\T1/ptm/m/n/10.95 Comparator  
- []
-
-
-LaTeX Warning: Citation 'van_de_plassche_1994' on page 13 undefined on input line 210.
-
-
-LaTeX Warning: Citation 'van_de_plassche_1994' on page 13 undefined on input line 210.
-
-
-LaTeX Warning: Citation 'johns_martin_2012' on page 13 undefined on input line 215.
-
-
-
-[13]
-
-[14]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 285.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 285.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 285.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 285.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Sigma' on input line 285.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Delta' on input line 285.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 285.
-
-
-LaTeX Warning: Citation 'candy_1985' on page 15 undefined on input line 286.
-
-
-LaTeX Warning: Citation 'schreier_2005' on page 15 undefined on input line 286.
-
-
-Overfull \hbox (16.38322pt too wide) in paragraph at lines 286--287
-\T1/ptm/m/n/10.95 The $\OT1/ztmcm/m/n/10.95 ^^F^^A$ \T1/ptm/m/n/10.95 ar-chi-tec-ture re-lies on over-sam-pling, sam-pling much faster than the Nyquist rate [[]],
- []
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 390.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 390.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 390.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 390.
-(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
-File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
-)
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 390.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.40245pt on input line 390.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 7.59998pt on input line 390.
-
-
-LaTeX Warning: Citation 'candy_1985' on page 15 undefined on input line 391.
-
-
-LaTeX Warning: Citation 'schreier_2005' on page 15 undefined on input line 391.
-
-
-LaTeX Warning: Citation 'candy_1985' on page 15 undefined on input line 391.
-
-
-LaTeX Warning: Citation 'schreier_2005' on page 15 undefined on input line 391.
-
-
-
-[15]
-
-LaTeX Warning: Citation 'microelectronics_1998' on page 16 undefined on input line 399.
-
-
-Package mathptmx Warning: There are no bold math fonts on input line 448.
-
-
-Overfull \hbox (9.74214pt too wide) in paragraph at lines 448--448
+Overfull \hbox (9.74214pt too wide) in paragraph at lines 412--412
 [][]\T1/ptm/m/n/10.95 Clock  
  []
 
 
-Overfull \hbox (10.44482pt too wide) in paragraph at lines 448--448
+Overfull \hbox (10.44482pt too wide) in paragraph at lines 412--412
 [][]\T1/ptm/m/n/10.95 Digital 
  []
 
 
-Overfull \hbox (12.865pt too wide) in paragraph at lines 448--448
+Overfull \hbox (12.865pt too wide) in paragraph at lines 412--412
 \T1/ptm/m/n/10.95 counter  
+ []
+
+
+
+[13]
+File: figures/uporto.pdf Graphic file (type pdf)
+<use figures/uporto.pdf>
+Package pdftex.def Info: figures/uporto.pdf  used on input line 432.
+(pdftex.def)             Requested size: 256.07741pt x 55.65785pt.
+
+
+[14]
+
+[15]
+Overfull \hbox (2.84885pt too wide) in paragraph at lines 466--467
+\T1/ptm/m/n/10.95 nodes un-til a volt-age thresh-old is reached, cur-rent com-para-tors pro-cess in-for-ma-tion di-rectly through
  []
 
 
 
 [16]
 
-LaTeX Warning: Citation 'lim_2013' on page 17 undefined on input line 460.
-
-
-Overfull \hbox (1.94136pt too wide) in paragraph at lines 460--461
-\T1/ptm/m/n/10.95 ver-sion [[]], un-like syn-chronous ADCs, which are bound by a global clock and the Nyquist-
- []
-
-
-LaTeX Warning: Citation 'lim_2013' on page 17 undefined on input line 463.
-
-
-Overfull \hbox (8.80577pt too wide) in paragraph at lines 463--464
-\T1/ptm/m/n/10.95 The core prin-ci-ple be-hind many asyn-chronous ADCs is Level-Crossing Sam-pling (LCS) [[]].
- []
-
-File: figures/uporto.pdf Graphic file (type pdf)
-<use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 468.
-(pdftex.def)             Requested size: 256.07741pt x 55.65785pt.
-
-LaTeX Warning: Citation 'pae2022_lcadc' on page 17 undefined on input line 470.
-
-
-LaTeX Warning: Citation 'pae2022_lcadc' on page 17 undefined on input line 470.
-
-
-
 [17]
-
-[18]
-Overfull \hbox (2.84885pt too wide) in paragraph at lines 499--500
-\T1/ptm/m/n/10.95 nodes un-til a volt-age thresh-old is reached, cur-rent com-para-tors pro-cess in-for-ma-tion di-rectly through
- []
-
-
-Overfull \hbox (2.65178pt too wide) in paragraph at lines 515--516
-\T1/ptm/m/n/10.95 pro-posed in con-tin-u-ous time cur-rent com-para-tor ar-chi-tec-tures. By re-duc-ing in-ter-nal volt-age swings,
- []
-
-
-
-[19]
-
-[20]
-Overfull \hbox (11.66904pt too wide) in paragraph at lines 545--546
+Overfull \hbox (11.66904pt too wide) in paragraph at lines 500--501
 []\T1/ptm/m/n/10.95 This non-linear feed-back mech-a-nism cre-ates an ef-fec-tive hys-tere-sis, once the out-put has switched,
  []
 
 
 
+[18]
+
+[19]
+
+[20]
+File: figures/uporto.pdf Graphic file (type pdf)
+<use figures/uporto.pdf>
+Package pdftex.def Info: figures/uporto.pdf  used on input line 560.
+(pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
+File: figures/uporto.pdf Graphic file (type pdf)
+<use figures/uporto.pdf>
+Package pdftex.def Info: figures/uporto.pdf  used on input line 567.
+(pdftex.def)             Requested size: 298.75264pt x 64.93018pt.
+
+
 [21]
 
 [22]
-
-LaTeX Warning: Citation 'baker_cmos_2010' on page 23 undefined on input line 575.
-
-
-LaTeX Warning: Citation 'johns_martin_2012' on page 23 undefined on input line 577.
-
-
-LaTeX Warning: Citation 'baker_cmos_2010' on page 23 undefined on input line 586.
-
-
-Overfull \hbox (3.63785pt too wide) in paragraph at lines 586--588
-\T1/ptm/m/n/10.95 Calibration tech-niques can be broadly cat-e-go-rized by their tim-ing and do-main [[]].
- []
-
+<figures/fom_fs.png, id=813, 867.24pt x 505.89pt>
+File: figures/fom_fs.png Graphic file (type png)
+<use figures/fom_fs.png>
+Package pdftex.def Info: figures/fom_fs.png  used on input line 641.
+(pdftex.def)             Requested size: 362.77525pt x 211.62323pt.
 
 
 [23]
 
-LaTeX Warning: Citation 'yao_bulk_2011' on page 24 undefined on input line 596.
-
-File: figures/uporto.pdf Graphic file (type pdf)
-<use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 604.
-(pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
-
-LaTeX Warning: Citation 'yaobulk2011' on page 24 undefined on input line 606.
-
-
-LaTeX Warning: Citation 'yaobulk2011' on page 24 undefined on input line 606.
-
-File: figures/uporto.pdf Graphic file (type pdf)
-<use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 611.
-(pdftex.def)             Requested size: 298.75264pt x 64.93018pt.
-
-LaTeX Warning: Citation 'yaobulk2011' on page 24 undefined on input line 612.
-
-
-LaTeX Warning: Citation 'yaobulk2011' on page 24 undefined on input line 612.
-
-
-
-[24]
-
-LaTeX Warning: Citation 'yaobulk2011' on page 25 undefined on input line 622.
-
-
-LaTeX Warning: Citation 'baker_cmos_2010' on page 25 undefined on input line 624.
-
-
-LaTeX Warning: Citation 'baker_cmos_2010' on page 25 undefined on input line 626.
-
-
-
-[25]
-
-LaTeX Warning: Citation 'lim_2013' on page 26 undefined on input line 661.
-
-
-LaTeX Warning: Citation 'baker_cmos_2010' on page 26 undefined on input line 663.
-
-
-LaTeX Warning: Citation 'lim_2013' on page 26 undefined on input line 675.
-
-
-Overfull \hbox (11.44469pt too wide) in paragraph at lines 675--676
-\T1/ptm/m/n/10.95 ciency across a wide range of sam-pling rates, par-tic-u-larly for low-to-medium band-widths [[]]. 
- []
-
-<figures/energy_year.png, id=709, 867.24pt x 505.89pt>
+[24 <./figures/fom_fs.png>]
+<figures/energy_year.png, id=875, 867.24pt x 505.89pt>
 File: figures/energy_year.png Graphic file (type png)
 <use figures/energy_year.png>
-Package pdftex.def Info: figures/energy_year.png  used on input line 699.
+Package pdftex.def Info: figures/energy_year.png  used on input line 692.
 (pdftex.def)             Requested size: 362.77525pt x 211.62323pt.
 
 
+[25 <./figures/energy_year.png>]
+Overfull \hbox (18.8027pt too wide) in paragraph at lines 733--734
+\T1/ptm/m/n/10.95 bank of com-par-i-son el-e-ments ob-serves dif-fer-ent de-ci-sion lev-els in par-al-lel and pro-duces a thermometer-
+ []
+
+)
+
 [26]
-
-LaTeX Warning: Citation 'Chen_2006' on page 27 undefined on input line 716.
-
-
-LaTeX Warning: Citation 'Jiang_2018' on page 27 undefined on input line 717.
-
-
-LaTeX Warning: Citation 'Veldhoven_2021' on page 27 undefined on input line 718.
-
-
-LaTeX Warning: Citation 'Ginsburg_2014' on page 27 undefined on input line 719.
-
-
-LaTeX Warning: Citation 'Kim_2018' on page 27 undefined on input line 720.
-
-
-
-[27 <./figures/energy_year.png>])
-
-[28]
 \openout2 = `chapter3.aux'.
 
  (chapter3.tex
 Chapter 3.
 
-LaTeX Warning: Reference `fig:cmf_adc_op' on page 29 undefined on input line 29.
 
-
-Overfull \hbox (0.78937pt too wide) in paragraph at lines 23--30
-\T1/ptm/m/n/10.95 The current-mirror flash ADC (CMF-ADC) topol-ogy in-ves-ti-gated in this phase is struc-tured around
- []
-
-
-
-[29
+[27
 
 
 
 
 ]
 
-LaTeX Warning: Reference `fig:cmf_adc_op' on page 30 undefined on input line 44.
+LaTeX Warning: Citation 'lee2017' on page 28 undefined on input line 27.
 
 
-LaTeX Warning: Reference `fig:cmf_adc_op' on page 30 undefined on input line 51.
 
+[28]
 
-LaTeX Warning: Reference `fig:cmf_adc_op' on page 30 undefined on input line 56.
+[29]
 
-
-LaTeX Warning: Reference `fig:cmf_adc_op' on page 30 undefined on input line 67.
-
-
-LaTeX Warning: Reference `fig:cmf_adc_op' on page 30 undefined on input line 89.
+LaTeX Warning: Citation 'lee2017' on page 30 undefined on input line 182.
 
 
 
 [30]
 
-LaTeX Warning: Reference `sec:async_logic' on page 31 undefined on input line 130.
+LaTeX Warning: Citation 'lee2017' on page 31 undefined on input line 205.
 
 
-LaTeX Warning: Reference `sec:cmf_characterization' on page 31 undefined on input line 145.
-
-
-LaTeX Warning: Citation 'lee2017' on page 31 undefined on input line 148.
+LaTeX Warning: Citation 'lee2017' on page 31 undefined on input line 210.
 
 
 
 [31]
 
-LaTeX Warning: Citation 'lee2017' on page 32 undefined on input line 171.
-
-
-LaTeX Warning: Citation 'lee2017' on page 32 undefined on input line 220.
-
-
-LaTeX Warning: Citation 'lee2017' on page 32 undefined on input line 225.
-
-
-
 [32]
 
 [33]
 
-LaTeX Warning: Citation 'razavi' on page 34 undefined on input line 275.
-
-
-
 [34]
-
-LaTeX Warning: Citation 'razavi' on page 35 undefined on input line 318.
-
-
-LaTeX Warning: Citation 'razavi' on page 35 undefined on input line 342.
-
-
 
 [35]
 
 [36]
 
 [37]
-
-[38]
-
-[39]
-Overfull \hbox (1.15155pt too wide) in paragraph at lines 481--482
+Overfull \hbox (1.15155pt too wide) in paragraph at lines 453--454
 \T1/ptm/m/n/10.95 This chap-ter es-tab-lished the the-o-ret-i-cal and ar-chi-tec-tural foun-da-tions of the pro-posed asyn-chronous
  []
 
 
-Overfull \hbox (9.55669pt too wide) in paragraph at lines 483--484
-[]\T1/ptm/m/n/10.95 The struc-tural de-vel-op-ment be-gan with the adap-ta-tion of the com-para-tor ar-ray, where continuous-
- []
 
-)
+[38])
 
-[40]
-\openout2 = `chapter4.aux'.
+[39]
+\openout2 = `trimming.aux'.
 
- (chapter4.tex
+ (trimming.tex
 Chapter 4.
 
-LaTeX Warning: Citation 'flashadc_ref' on page 41 undefined on input line 10.
 
-
-LaTeX Warning: Reference `sec:implementation' on page 41 undefined on input line 12.
-
-
-
-[41
+[40
 
 
 
 
 ]
 
-LaTeX Warning: Citation 'flashadc_ref' on page 42 undefined on input line 31.
+[41]
 
-
-LaTeX Warning: Citation 'flashadc_ref' on page 42 undefined on input line 31.
-
-
-LaTeX Warning: Reference `chap:async' on page 42 undefined on input line 43.
-
-
-LaTeX Warning: Citation 'razavi_strongarm' on page 42 undefined on input line 52.
-
-
-
-[42]
-
-LaTeX Warning: Citation 'flashadc_ref' on page 43 undefined on input line 62.
-
-
-LaTeX Warning: Citation 'flashadc_ref' on page 43 undefined on input line 62.
-
-
-LaTeX Warning: Citation 'razavi_strongarm' on page 43 undefined on input line 71.
-
-
+[42])
 
 [43]
 
 [44]
+\openout2 = `chapter4.aux'.
 
-[45]
-
-[46]
+ (chapter4.tex
 Chapter 5.
 
+LaTeX Warning: Citation 'flashadc_ref' on page 45 undefined on input line 10.
 
-[47
+
+
+[45
+
+
+
 
 ]
 
-[48]
+LaTeX Warning: Citation 'flashadc_ref' on page 46 undefined on input line 34.
 
-LaTeX Warning: Reference `chap:results' on page 49 undefined on input line 286.
 
-)
+LaTeX Warning: Citation 'flashadc_ref' on page 46 undefined on input line 34.
+
+
+
+[46]
+
+LaTeX Warning: Citation 'flashadc_ref' on page 47 undefined on input line 65.
+
+
+LaTeX Warning: Citation 'flashadc_ref' on page 47 undefined on input line 65.
+
+
+
+[47]
+
+[48])
 
 [49]
 \openout2 = `chapter5.aux'.
@@ -2419,72 +1569,220 @@ Chapter 6.
 [51]
 
 [52]
-Overfull \hbox (0.59584pt too wide) in paragraph at lines 127--143
+
+[53]
+Overfull \hbox (0.59584pt too wide) in paragraph at lines 178--194
  [][] 
  []
 
 
 
-[53]
+[54]
 
-[54])
+[55])
 
-[55]
+[56]
 \openout2 = `chapter6.aux'.
 
  (chapter6.tex
 Chapter 7.
 
 
-[56
+[57
 
 
 
 
 ]
 
-[57]
+[58]
 
-[58])
-
-[59]
+[59])
 
 [60]
 
-LaTeX Warning: Empty bibliography on input line 125.
+[61]
+LaTeX Font Info:    Trying to load font information for T1+pcrs on input line 126.
+ (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/courier-scaled\t1pcrs.fd
+File: t1pcrs.fd 2004/07/09 scalable font definitions for T1/pcrs.
+)
+LaTeX Font Info:    Font shape `T1/pcrs/m/n' will be
+(Font)              scaled to size 10.40245pt on input line 126.
 
-(meec_thesis.aux (resumo.aux) (abstract.aux) (un-sdg.aux) (quote.aux) (abbrevs.aux) (chapter1.aux) (chapter2.aux) (chapter3.aux) (chapter4.aux) (chapter5.aux) (chapter6.aux))
+
+[62
+
+
+
+]
+Overfull \hbox (13.80038pt too wide) in paragraph at lines 126--126
+\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2025. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC49661 . 2025 . 10904766$[][]\T1/ptm/m/n/10.95 . 
+ []
+
+
+Overfull \hbox (6.83562pt too wide) in paragraph at lines 126--126
+\T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2024. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC49657 .
+ []
+
+
+
+[63]
+Overfull \hbox (6.42601pt too wide) in paragraph at lines 126--126
+\T1/ptm/m/n/10.95 ADC with Dynamic-Amplifier-Assisted Cas-caded In-te-gra-tor^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-
+ []
+
+
+Overfull \hbox (13.80038pt too wide) in paragraph at lines 126--126
+\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2024. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC49657 . 2024 . 10454362$[][]\T1/ptm/m/n/10.95 . 
+ []
+
+
+
+[64]
+Overfull \hbox (22.84404pt too wide) in paragraph at lines 126--126
+\T1/ptm/m/n/10.95 Pipelined-SAR ADC with Cross-Stage Gain-Mismatch-Error-Shaping Tech-nique and Negative-
+ []
+
+
+Overfull \hbox (6.83562pt too wide) in paragraph at lines 126--126
+\T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2023. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC42615 .
+ []
+
+
+
+[65]
+Overfull \hbox (13.80038pt too wide) in paragraph at lines 126--126
+\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2024. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC49657 . 2024 . 10454431$[][]\T1/ptm/m/n/10.95 . 
+ []
+
+
+Overfull \hbox (10.60767pt too wide) in paragraph at lines 126--126
+[]\T1/ptm/m/n/10.95 H-K. Hong et al. ^^P  A 2.6b/cycle-architecture-based 10b 1.7GS/s 15.4mW 4x Time-interleaved
+ []
+
+
+Overfull \hbox (2.51082pt too wide) in paragraph at lines 126--126
+\T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2015. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC . 2015 . 7063130$[][]\T1/ptm/m/n/10.95 . 
+ []
+
+
+
+[66]
+Overfull \hbox (7.55891pt too wide) in paragraph at lines 126--126
+\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2022. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC42614 . 2022 . 9731571$[][]\T1/ptm/m/n/10.95 . 
+ []
+
+
+Overfull \hbox (5.33601pt too wide) in paragraph at lines 126--126
+\T1/ptm/m/n/10.95 179.4dB-FOMSNDR 2nd-Order Noise-Shaping SARADC with En-hanced In-put Impedance
+ []
+
+
+Overfull \hbox (1.57942pt too wide) in paragraph at lines 126--126
+\T1/ptm/m/n/10.95 in 0.18$\OML/ztmcm/m/it/10.95 ^^V$\T1/ptm/m/n/10.95 m CMOS^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2023.
+ []
+
+
+
+[67]
+
+[68]
+Overfull \hbox (5.09041pt too wide) in paragraph at lines 126--126
+\OT1/ztmcm/m/n/10.95 ^^A$$^^F$ \T1/ptm/m/n/10.95 ADC in 40nm CMOS^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 .
+ []
+
+
+
+[69]
+Overfull \hbox (6.08362pt too wide) in paragraph at lines 126--126
+[]\T1/ptm/m/n/10.95 Sharvil Patil et al. ^^P  A 700MHz-BW ^^U164dBFS/Hz-Small-Signal-NSD 703mW Continuous-
+ []
+
+
+Overfull \hbox (10.29994pt too wide) in paragraph at lines 126--126
+[]\T1/ptm/m/n/10.95 Sourja Ray and Bang-Sup Song. ^^P  A 13b Lin-ear 40MS/s Pipelined ADC with Self-Configured
+ []
+
+
+
+[70]
+Overfull \hbox (2.51082pt too wide) in paragraph at lines 126--126
+\T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2006. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC . 2006 . 1696297$[][]\T1/ptm/m/n/10.95 . 
+ []
+
+
+Overfull \hbox (2.51082pt too wide) in paragraph at lines 126--126
+\T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2006. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC . 2006 . 1696120$[][]\T1/ptm/m/n/10.95 . 
+ []
+
+
+
+[71]
+Overfull \hbox (1.82037pt too wide) in paragraph at lines 126--126
+\T1/ptm/m/n/10.95 drive read chan-nel^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 1999.
+ []
+
+
+Overfull \hbox (14.23299pt too wide) in paragraph at lines 126--126
+\T1/ptm/m/n/10.95 Micro-Sensor Ap-pli-ca-tions^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 .
+ []
+
+
+
+[72]
+Overfull \hbox (1.96727pt too wide) in paragraph at lines 126--126
+[]\T1/ptm/m/n/10.95 Jia-Ching Wang and Tai-Haur Kuo. ^^P  A 3-mW 2.7-GS/s 8b Sub-rang-ing ADC with Multiple-
+ []
+
+
+
+[73]
+Overfull \hbox (6.0335pt too wide) in paragraph at lines 126--126
+[]\T1/ptm/m/n/10.95 Mingtao Zhan, Lu Jie, and Nan Sun. ^^P  A 10mW 10-ENoB 1GS/s Ring-Amp-Based Pipelined
+ []
+
+
+
+[74]
+Overfull \hbox (4.73744pt too wide) in paragraph at lines 126--126
+[]\T1/ptm/m/n/10.95 Yanbo Zhang et al. ^^P  A Single-channel 70dB-SNDR 100MHz-BW 4th-Order Noise-Shaping
+ []
+
+
+Overfull \hbox (13.80038pt too wide) in paragraph at lines 126--126
+\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2023. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC42615 . 2023 . 10067687$[][]\T1/ptm/m/n/10.95 . 
+ []
+
+
+Overfull \hbox (24.90707pt too wide) in paragraph at lines 126--126
+[]\T1/ptm/m/n/10.95 Yannan Zhang et al. ^^P  A 72GS/s 9b Time-Interleaved Pipeline-SAR ADC Achiev-ing 55.3/49.3dB
+ []
+
+
+
+[75] (meec_thesis.aux (abstract.aux) (un-sdg.aux) (abbrevs.aux) (chapter1.aux) (chapter2.aux) (chapter3.aux) (trimming.aux) (chapter4.aux) (chapter5.aux) (chapter6.aux))
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `meec_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 6E6306D57AAEECEAE8D8F6264251D6A2;21276.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                meec_thesis
-(biblatex)                and rerun LaTeX afterwards.
-
+(rerunfilecheck)             Checksum: A2706F304B154592C20709EE99E1E333;22453.
 Package logreq Info: Writing requests to 'meec_thesis.run.xml'.
 \openout1 = `meec_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54500 strings out of 468133
- 1265898 string characters out of 5430711
- 2399730 words of memory out of 5000000
- 82111 multiletter control sequences out of 15000+600000
- 723320 words of font info for 172 fonts, out of 8000000 for 9000
+ 55216 strings out of 468133
+ 1295924 string characters out of 5430711
+ 2405667 words of memory out of 5000000
+ 82648 multiletter control sequences out of 15000+600000
+ 729157 words of font info for 176 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,13n,107p,3545b,3166s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on meec_thesis.pdf (71 pages, 1587702 bytes).
+ 102i,13n,107p,3545b,3129s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on meec_thesis.pdf (84 pages, 1743386 bytes).
 PDF statistics:
- 1008 PDF objects out of 1200 (max. 8388607)
- 261 named destinations out of 1000 (max. 500000)
- 689 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1658 PDF objects out of 1728 (max. 8388607)
+ 440 named destinations out of 1000 (max. 500000)
+ 713 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -81,11 +81,11 @@
 
 % remove unnecessary \include{} commands
 \begin{Prolog}
-  \include{resumo}
+  %\include{resumo}
   \include{abstract} % the abstract
   \include{un-sdg}   % United Nations Sustainable Development Goals (SGD)
   %\include{acknows}  % the acknowledgments
-  \include{quote}    % initial quotation if desired
+  %\include{quote}    % initial quotation if desired
   \cleardoublepage
   %% Uncomment next line for PT
   %\renewcommand{\contentsname}{Índice}
@@ -108,12 +108,13 @@
 \StartBody
 %%\include{un-sdg}   % United Nations Sustainable Development Goals (SGD)
 %% TIP: use a separate file for each chapter
-\include{chapter1} 
+\include{chapter1}
 \include{chapter2}
 \include{chapter3}
-\include{chapter4}
-\include{chapter5}
-\include{chapter6}
+\include{trimming}  % Chapter 4: Body Bias Trimming (continuação direta do Cap. 3)
+\include{chapter4}  % Chapter 5: Synchronous Reference Flash ADC
+\include{chapter5}  % Chapter 6: Simulation Results and Performance Benchmarking
+\include{chapter6}  % Chapter 7: Conclusions
 %% Uncomment to see a listing example (cp meic.cfg meec.cfg)
 %\include{chapter45-listing}
 

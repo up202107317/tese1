@@ -1,5 +1,14 @@
 
 \chapter{Proposed Asynchronous Flash ADC Design}
+\label{chap:async}
+
+\section{Design Specifications and Terminology}
+\label{sec:design_specs}
+
+Before describing the architectural exploration, the specifications that constrained every design decision in this chapter are stated explicitly. The converter is designed in a 16~nm CMOS technology node, operating from a nominal supply voltage of $V_{DD} = 0.8$~V. The target application is the acquisition of time-sparse signals, as motivated in Chapter~\ref{chap:intro}, which dictates the central architectural requirement: fully clockless, event-driven operation, with dynamic power dissipated only when the input crosses a decision level.
+
+A point of terminology must also be fixed, since it is a recurring source of ambiguity in Flash converter descriptions. A Flash quantiser with a binary resolution of $N$ bits requires $2^N - 1$ parallel comparison elements, whose collective outputs form a \emph{thermometer code} of $2^N - 1$ levels; the number of thermometer outputs is therefore always distinct from, and larger than, the number of binary resolution bits. Throughout this chapter, the term \emph{thermometer outputs} refers to the individual comparator or slicer outputs (denoted out$_4$ to out$_0$ in the implemented design), while \emph{resolution bits} refers exclusively to the binary word produced after encoding. The prototype implemented in this work uses a bank of five slicers, producing five thermometer outputs that resolve six quantisation levels — a deliberately compact configuration adopted to validate the asynchronous conversion principle, the event-generation mechanism, and the trimming strategy at transistor level. The synchronous reference converter used for benchmarking (Chapter~\ref{chap:synchronous}) is a full 4-bit design with fifteen comparators; the implications of this difference for the fairness of the comparison are addressed there and in Chapter~\ref{chap:Benchmarking}.
+
 \section{Architectural Evolution and Methodology}
 The design of the voltage comparator responsible for generating the digital
 output code of the analog-to-digital converter was not arrived at directly.
@@ -13,6 +22,18 @@ candidate.
 
 
 \section{Phase I: The Baseline Current-Mirror OTA Flash Configuration}
+
+The first topology investigated was the current-mirror flash ADC (CMF-ADC)
+introduced by Lee~\textit{et al.}~\cite{lee2017}, originally proposed as the
+sensing front end of a coarse-fine dual-loop digital low-dropout regulator.
+Although the application context of that work differs substantially from the
+present design, the operating principle of the CMF-ADC constitutes a direct
+voltage-to-thermometer-code conversion mechanism that is directly applicable
+in the context of multi-bit comparison, making it a natural starting point
+for the architectural exploration. It is also the design phase that directly
+embodies the current-mode event-detection concepts reviewed in
+Section~\ref{sec:clockless_event}.
+
 % ─────────────────────────────────────────────────────────────────────────────
 %  Section 3.2.1 — Operating Principle and Core Topology
 %  Dissertation: Design of an Asynchronous Flash ADC
@@ -20,13 +41,25 @@ candidate.
 
 \subsection{Operating Principle and Core Topology}
 
-The current-mirror flash ADC (CMF-ADC) topology investigated in this phase is structured
+The CMF-ADC topology is structured
 around two cascaded functional stages: a \emph{transconductance cell}, which converts a
 differential input voltage into a proportional error current, and a
 \emph{current-to-code converter}, which maps that current into a parallel thermometer-coded
 output without requiring a sampling clock. The complete circuit, annotated with the
 current-flow conventions used throughout this analysis, is shown in
 Figure~\ref{fig:cmf_adc_op}.
+
+\begin{figure}[htbp]
+    \centering
+    %  - Replace the placeholder box below with the actual figure  -
+    \fbox{\parbox{0.85\textwidth}{%
+        \centering\vspace{3.5cm}%
+        \textit{[Insert: CMF-ADC schematic with current-flow annotations: (a) equilibrium operation, (b) differential signal operation, (c) current-to-code converter ratio assignment]}%
+        \vspace{3.5cm}}}
+    %
+    \caption{Operating principle of the current-mirror Flash ADC (CMF-ADC): (a) equilibrium operation, (b) signal operation, and (c) current-to-code conversion with asymmetric mirror ratios.}
+    \label{fig:cmf_adc_op}
+\end{figure}
 
 % ─── Transconductance cell ───────────────────────────────────────────────────
 \subsubsection{Transconductance Cell}
@@ -142,81 +175,33 @@ The main design parameters that control the ADC's resolution and input range are
 mirror ratios $\{\alpha_k, \beta_k\}$, the tail current $I_B$, and the transconductance
 $g_m$ of the input pair. These relationships, along with the specific ratio assignments
 used in the implementation explored in this work, are discussed in
-Section~\ref{sec:cmf_characterization}.
-\subsection{Current Comparator Topology Exploration and Characterization}
-The first topology investigated was the current-mirror
-flash ADC (CMF-ADC) introduced by Lee~\textit{et al.}~\cite{lee2017},
-originally proposed as the sensing front end of a coarse-fine dual-loop digital
-low-dropout regulator. Although the application context of that work differs
-substantially from the present design, the operating principle of the CMF-ADC
-constitutes a direct voltage-to-thermometer-code conversion mechanism that is
-directly applicable in the context of multi-bit comparison, making it a natural
-starting point for the architectural exploration.
+Section~\ref{sec:cmf_characterisation}.
+\subsection{Reference Implementation and Mirror Ratio Assignment}
+\label{sec:cmf_characterisation}
 
-The circuit is divided into two cascaded functional stages: a transconductance
-cell and a current-to-code converter. The transconductance cell is implemented
-as a differential pair. Its function is to
-translate the voltage difference between the input voltage, $V_\mathrm{in}$,
-and an adjustable reference voltage, $V_\mathrm{ref,c}$, into an error
-current $I_\mathrm{err}$, yielding branch currents
-$I_1 = I_B - I_\mathrm{err}$ and $I_2 = I_B + I_\mathrm{err}$, where a
-positive $I_\mathrm{err}$ corresponds to $V_\mathrm{in}$ exceeding
-$V_\mathrm{ref,c}$. A third current, $I_3$, replicates $I_1$ through a
-current mirror and is subsequently distributed to the conversion stage.
+The reference implementation described in~\cite{lee2017} instantiates the
+operating principle of the previous section with five comparison nodes, i.e.,
+five thermometer outputs (not five bits of binary resolution; see
+Section~\ref{sec:design_specs}). The PMOS mirror ratios decrease monotonically
+across the five output nodes — specifically $\times 14$, $\times 12$,
+$\times 10$, $\times 8$, and $\times 6$ for thermometer outputs
+$C_\mathrm{LPT}[4]$ through $C_\mathrm{LPT}[0]$ — while the NMOS mirror
+ratios increase correspondingly from $\times 6$ to $\times 14$. The odd
+number of output nodes provides a well-defined, symmetric midpoint: the
+central node $C_\mathrm{LPT}[2]$ carries equal PMOS and NMOS ratios
+($\times 10$), so its decision threshold aligns exactly with the condition
+$V_\mathrm{in} = V_\mathrm{ref,c}$.
 
-The current-to-code converter generates a multi-bit thermometer output by
-replicating $I_2$ and $I_3$ at each comparison node through PMOS and NMOS
-current mirrors, respectively, sized with deliberately asymmetric
-multiplication factors. In the five-bit implementation described
-in~\cite{lee2017}, the PMOS mirror ratios decrease monotonically from
-$\times 14$ to $\times 6$ across the five output nodes specifically
-$\times 14$, $\times 12$, $\times 10$, $\times 8$, and $\times 6$ for
-bits $C_\mathrm{LPT}[4]$ through $C_\mathrm{LPT}[0]$ while the NMOS
-mirror ratios increase correspondingly from $\times 6$ to $\times 14$.
-At each comparison node, the output logic level is determined by whichever
-mirrored current dominates: when the PMOS contribution exceeds the NMOS
-contribution, the node is driven to a logic high, otherwise, the NMOS
-pull-down prevails and the output settles to a logic low.
+Applying Equation~\eqref{eq:vth_cmf} to these ratio assignments confirms the
+expected behaviour at the reference condition: with
+$V_\mathrm{in} = V_\mathrm{ref,c}$, the two outermost node pairs resolve to
+high ($C_\mathrm{LPT}[4]$, $C_\mathrm{LPT}[3]$) and low
+($C_\mathrm{LPT}[1]$, $C_\mathrm{LPT}[0]$) respectively, while the balanced
+central node sits at its decision boundary, yielding the thermometer code
+$11{?}00$, where the question mark denotes the indeterminate state of a
+comparator operating precisely at its decision threshold.
 
-To explain the operating principle clearly, it is easier to consider
-a configuration with an odd number of output bits, of which the five-bit case
-was the chosen one. An odd bit count provides a well-defined, symmetric
-midpoint whose comparison threshold aligns exactly with the condition
-$V_\mathrm{in} = V_\mathrm{ref}$, making the midpoint of the thermometer
-code unambiguous and facilitating a direct account of the circuit behaviour at
-the reference voltage. When $V_\mathrm{in}$ lies substantially below
-$V_\mathrm{ref}$, the error current $I_\mathrm{err}$ is strongly negative,
-meaning $I_2 < I_B$ while $I_3 > I_B$. Since the NMOS mirrors replicate
-$I_3$ with larger multiplication factors than the PMOS mirrors replicate $I_2$
-at every node, the NMOS current dominates throughout and the output code
-resolves to $00000$.
-
-As $V_\mathrm{in}$ rises toward $V_\mathrm{ref}$, the magnitude of
-$I_\mathrm{err}$ decreases and the comparison nodes with the highest
-PMOS-to-NMOS mirror ratio are the first to transition. The node
-$C_\mathrm{LPT}[4]$, carrying a PMOS mirror of ratio $\times 14$ against an
-NMOS mirror of only $\times 6$, presents the most favourable balance in favour
-of the PMOS side and therefore requires only a modest positive shift in $I_2$
-relative to $I_3$ before its output transitions high. Node $C_\mathrm{LPT}[3]$
-($\times 12$ PMOS, $\times 8$ NMOS) follows at a moderately larger error
-current, while the least significant nodes, $C_\mathrm{LPT}[1]$ and
-$C_\mathrm{LPT}[0]$, carry progressively more dominant NMOS mirrors and
-require a correspondingly larger current excess before their outputs transition.
-
-At the exact condition $V_\mathrm{in} = V_\mathrm{ref}$, the error current
-vanishes and both $I_2$ and $I_3$ are equal to $I_B$. Nodes
-$C_\mathrm{LPT}[4]$ and $C_\mathrm{LPT}[3]$ deliver PMOS currents of
-$14 I_B$ and $12 I_B$, respectively, against NMOS contributions of $6 I_B$
-and $8 I_B$, so both outputs are high. Nodes $C_\mathrm{LPT}[1]$ and
-$C_\mathrm{LPT}[0]$ exhibit the reverse relationship and remain low. The
-central node $C_\mathrm{LPT}[2]$ carries equal PMOS and NMOS currents of
-$10 I_B$ and is therefore in an exactly balanced. The resulting thermometer code
-at $V_\mathrm{in} = V_\mathrm{ref,c}$ is consequently $11{?}00$, where the
-question mark denotes the indeterminate state of the central bit, fully
-consistent with the expected behaviour of a comparator operating precisely at
-its decision threshold.
-
-The thresholds governing the transition of each bit are fully determined by
+The thresholds governing the transition of each output are fully determined by
 the mirror ratios, as established analytically in~\cite{lee2017}, and result
 in a monotonic, symmetric thermometer-coded response across the input voltage
 range. This architecture combines inherently fast conversion speed stemming
@@ -236,9 +221,9 @@ One of the primary objectives during the development of the proposed comparator 
 
 This characteristic is particularly important in mixed-signal sensor interfaces, where the output voltage of the sensing element is often determined by the physical phenomenon being measured rather than by the requirements of the analog front-end. Restricting the admissible common-mode voltage consequently reduces the effective operating range of the converter and may require additional conditioning stages, increasing both power consumption and circuit complexity.
 
-Furthermore, maximizing the input common-mode range enables better utilization of the available voltage swing. Since the signal occupies a larger fraction of the supply voltage, the effective dynamic range and signal-to-noise ratio can be improved without increasing the supply voltage itself. This consideration becomes especially relevant in modern low-voltage CMOS technologies, where the continuous reduction of $V_{DD}$ inherently limits the available analog headroom.
+Furthermore, maximising the input common-mode range enables better utilisation of the available voltage swing. Since the signal occupies a larger fraction of the supply voltage, the effective dynamic range and signal-to-noise ratio can be improved without increasing the supply voltage itself. This consideration becomes especially relevant in modern low-voltage CMOS technologies, where the continuous reduction of $V_{DD}$ inherently limits the available analog headroom.
 
-A wide common-mode operating range also improves the robustness of the system against process, voltage, and temperature (PVT) variations. Small shifts in the input common-mode voltage caused by fabrication mismatch or supply fluctuations are less likely to drive the input transistors out of their intended operating region, thereby preserving the transconductance and ensuring predictable comparator behavior.
+A wide common-mode operating range also improves the robustness of the system against process, voltage, and temperature (PVT) variations. Small shifts in the input common-mode voltage caused by fabrication mismatch or supply fluctuations are less likely to drive the input transistors out of their intended operating region, thereby preserving the transconductance and ensuring predictable comparator behaviour.
 
 For these reasons, a complementary dual-input architecture capable of providing rail-to-rail operation was investigated as a second design candidate.
 
@@ -255,22 +240,9 @@ consequence, input signals whose common-mode voltage approaches either supply
 rail may drive the transconductance stage outside its intended operating
 region, degrading both linearity and sensitivity.
 
-Extending the input common-mode range toward rail-to-rail operation is
-therefore highly desirable. Such capability allows the converter to process
-analog signals over the entire available supply range without requiring
-additional level-shifting or biasing circuitry, increasing compatibility with
-a wider variety of sensors and analog front-ends. Furthermore, maximizing the
-usable input voltage range improves the utilization of the available dynamic
-range, potentially leading to higher signal-to-noise ratio while maintaining
-the same supply voltage. It also increases robustness against process,
-voltage, and temperature (PVT) variations, since moderate shifts in the input
-common-mode voltage are less likely to move the input devices out of
-saturation.
-
-Motivated by these considerations, a complementary dual-input architecture was
-investigated as a second design candidate. The topology employs two
-transconductance stages operating simultaneously: one based on an NMOS
-differential input pair and another based on a PMOS differential input pair.
+The complementary dual-input topology evaluated to overcome this limitation
+employs two transconductance stages operating simultaneously: one based on an
+NMOS differential input pair and another based on a PMOS differential input pair.
 The rationale behind this arrangement is well established in rail-to-rail
 input amplifiers~\cite{razavi}. An NMOS differential pair operates efficiently
 when the common-mode voltage is close to the negative supply rail, where
@@ -329,7 +301,7 @@ desired dynamic-range extension mechanism. Consequently, although the proposed
 rail-to-rail architecture was conceptually attractive, the stringent headroom
 constraints imposed by a $0.8~\mathrm{V}$ supply rendered its practical
 implementation unfeasible. For this reason, the architecture was abandoned in
-favor of the simpler five-transistor OTA presented in the following section,
+favour of the simpler five-transistor OTA presented in the following section,
 which provided a significantly better compromise between functionality,
 voltage headroom, implementation complexity, and overall robustness.
 
@@ -337,13 +309,13 @@ voltage headroom, implementation complexity, and overall robustness.
 
 \section{Phase III: The Final Adopted Architecture}
 
-\subsection{Five Transistor OTA Core and Optimized Transistor Sizing}
+\subsection{Five Transistor OTA Core and Optimised Transistor Sizing}
 
 Following the rejection of the complementary dual input approach, the design converged toward a classical five transistor operational transconductance amplifier as the comparator front end. This topology consists of a differential input pair loaded by an active current mirror implemented with two PMOS transistors, where one device operates in diode connection and sets the gate voltage of the mirrored branch. This structure forms the conventional active load of a differential pair and constitutes the defining element of the five transistor OTA architecture~\cite{razavi}.
 
 By eliminating the additional stacked devices required by the previous architecture, this solution satisfies the voltage headroom constraints imposed by the selected supply voltage of $V_\mathrm{DD}=0.8$~V while maintaining correct operation over the intended input range.
 
-The initial implementation evaluated the OTA under open loop conditions in order to maximize gain and improve sensitivity to small differential input voltages. Through transistor sizing optimization, high voltage gain could be achieved and therefore increase comparison sensitivity. However, practical simulations revealed a critical limitation of this approach. Small unintended differential inputs originating from offset, thermal noise, or marginal overdrive conditions caused the output node to rapidly saturate at one of the supply rails before the intended comparison could be completed.
+The initial implementation evaluated the OTA under open loop conditions in order to maximise gain and improve sensitivity to small differential input voltages. Through transistor sizing optimisation, high voltage gain could be achieved and therefore increase comparison sensitivity. However, practical simulations revealed a critical limitation of this approach. Small unintended differential inputs originating from offset, thermal noise, or marginal overdrive conditions caused the output node to rapidly saturate at one of the supply rails before the intended comparison could be completed.
 
 Once saturation occurred, the recovery process became limited by the available bias current responsible for charging or discharging the high impedance output node. This significantly increased settling time and introduced variability in consecutive conversion cycles.
 
@@ -353,7 +325,7 @@ As a consequence, the OTA acts as a low impedance replica of the input signal, r
 
 \subsection{Ratioed Output Slicers Design}
 
-The quantization stage of the converter is implemented through a bank of CMOS slicer inverters directly connected to the output of the voltage follower. Unlike the previously explored current mirror based architecture, where threshold positioning was determined by current scaling, the present design defines each comparison level through the PMOS to NMOS sizing ratio of each inverter.
+The quantisation stage of the converter is implemented through a bank of CMOS slicer inverters directly connected to the output of the voltage follower. Unlike the previously explored current mirror based architecture, where threshold positioning was determined by current scaling, the present design defines each comparison level through the PMOS to NMOS sizing ratio of each inverter.
 
 The switching threshold of a CMOS inverter is determined by the relative strengths of the pull up and pull down networks and can be approximated by
 
@@ -376,19 +348,22 @@ An increase in $r$ shifts the switching threshold toward higher voltages, wherea
 
 Each slicer therefore acts as an independent comparator operating at a predefined threshold voltage. Collectively, the outputs generate a thermometer coded representation of the input signal.
 
-For the implemented five bit configuration, the most significant output bit, out$_4$, uses a transistor ratio of $r=1.5$, producing a switching threshold above $0.4$~V. In contrast, the least significant bit, out$_0$, adopts $r=0.5$, resulting in a lower threshold. The intermediate slicers are distributed between these limits to generate approximately symmetric threshold spacing around the reference level.
+For the implemented five-slicer configuration — five thermometer outputs, as defined in Section~\ref{sec:design_specs} — the topmost thermometer output, out$_4$, uses a transistor ratio of $r=1.5$, producing a switching threshold above $0.4$~V. In contrast, the bottommost output, out$_0$, adopts $r=0.5$, resulting in a lower threshold. The intermediate slicers are distributed between these limits to generate approximately symmetric threshold spacing around the reference level.
 
 As the input voltage increases from ground toward $V_\mathrm{DD}$, each inverter switches sequentially according to its assigned threshold. At $V_\mathrm{in}=0.4$~V, slicers with $r>1$ remain in logic high state while slicers with $r<1$ have already transitioned to logic low. The inverter designed with $r=1$ operates exactly at its switching point and therefore enters a metastable region.
 
-The resulting thermometer code becomes $11?00$, reproducing the same behavior previously observed in the CMF ADC architecture.
+The resulting thermometer code becomes $11?00$, reproducing the same behaviour previously observed in the CMF ADC architecture.
 
 \subsection{Asynchronous Control Logic and Clockless Event Generation Network}
+\label{sec:async_logic}
 
 A key characteristic of the proposed architecture is the complete removal of the global clock from the conversion process. Instead of forcing periodic operation, event generation occurs exclusively as a consequence of changes in the analog input signal.
 
 The OTA configured as a voltage follower continuously tracks the input signal and distributes this low impedance representation to all slicers simultaneously. Each slicer independently evaluates whether the input has crossed its corresponding threshold and immediately updates its output state.
 
 The collection of slicer outputs forms an asynchronous thermometer code whose transitions directly represent input activity. Whenever one or more thresholds are crossed, a digital event is naturally generated without requiring any external timing reference.
+
+The digital backend that converts these transitions into a usable output code consists of three simple functions, all of them purely combinational or edge-triggered by the slicer outputs themselves, so that no timing reference is ever required. First, a per-slicer transition detector monitors each thermometer output and produces a short strobe whenever that output changes state in either direction. Second, the strobes of all slicers are merged by an OR network into a single conversion-event signal, which flags that the thermometer code has changed and that a new output word is available; this event signal also carries the timing information of the conversion, since in level-crossing operation the instant of the event is part of the encoded information. Third, a thermometer-to-binary encoder maps the current state of the slicer bank into the output binary word; because the slicer thresholds are monotonically ordered by construction, this mapping reduces to counting the number of asserted thermometer outputs. In the simulation framework of this work, the transition detection and encoding functions were modelled behaviourally for the mixed-signal co-simulation, and — as discussed in Chapter~\ref{chap:Benchmarking} — the encoder power is excluded from the reported figures of both the asynchronous and the synchronous converters, since an equivalent encoder is required in both.
 
 This event driven operation establishes a direct relationship between signal activity and switching activity inside the converter. During intervals where the input remains constant, the slicers remain static and dynamic power consumption approaches zero. Conversely, periods of rapid input variation automatically increase event generation frequency and conversion activity.
 
@@ -399,7 +374,7 @@ This separation simplifies the design procedure, improves robustness against sat
 
 
 
-\section{Analytical Modeling and Design Constraints}
+\section{Analytical Modelling and Design Constraints}
 \label{sec:analytical_modeling}
 
 In this section, the core theoretical boundaries and design trade-offs governing the asynchronous Flash Analog-to-Digital Converter (ADC) are established. Unlike conventional synchronous architectures, where performance limits are rigidly bound to a global clock frequency, the constraints of an asynchronous level-crossing or tracking framework are deeply intertwined with the instantaneous dynamics of the input signal, circuit propagation delays, and noise statistics.
@@ -407,7 +382,7 @@ In this section, the core theoretical boundaries and design trade-offs governing
 \subsection{Maximum Input Wave Frequency and Slope Overload}
 \label{subsec:slope_overload}
 
-In synchronous ADCs, the maximum input signal frequency is strictly governed by the Nyquist-Shannon sampling theorem ($f_{in} < f_s / 2$). In contrast, an asynchronous Flash or level-crossing ADC operates without a uniform sampling grid, its primary limitation is dictated by the maximum tracking velocity of its internal loops, commonly characterized as the Slew Rate (SR) constraint. A failure to track rapid signal variations leads to a severe distortion phenomenon known as slope overload.
+In synchronous ADCs, the maximum input signal frequency is strictly governed by the Nyquist-Shannon sampling theorem ($f_{in} < f_s / 2$). In contrast, an asynchronous Flash or level-crossing ADC operates without a uniform sampling grid, its primary limitation is dictated by the maximum tracking velocity of its internal loops, commonly characterised as the Slew Rate (SR) constraint. A failure to track rapid signal variations leads to a severe distortion phenomenon known as slope overload.
 
 To model this constraint analytically, let us consider a full-scale sinusoidal input voltage $V_{in}(t)$ defined as:
 \begin{equation}
@@ -418,12 +393,12 @@ where $V_{FS}$ represents the full-scale voltage range of the converter and $f_{
     SR_{max} = \left. \frac{dV_{in}(t)}{dt} \right|_{max} = \pi f_{in} V_{FS}
 \end{equation}
 
-The asynchronous Flash ADC resolves the input signal by triggering a new state or quantization conversion whenever the input crosses a discrete threshold voltage step $\Delta$, corresponding to the nominal resolution of $N$ bits:
+The asynchronous Flash ADC resolves the input signal by triggering a new state or quantisation conversion whenever the input crosses a discrete threshold voltage step $\Delta$, corresponding to the nominal resolution of $N$ bits:
 \begin{equation}
     \Delta = \frac{V_{FS}}{2^N}
 \end{equation}
 
-In an ideal, noiseless scenario, the asynchronous control logic and comparator array require a finite minimum processing time to complete a single conversion cycle—encompassing tracking, comparison, latching, and resetting. This aggregate time window is denoted as the total conversion propagation delay $\tau_{conv}$. Consequently, the maximum rate at which the ADC can track voltage transitions (the converter's intrinsic Slew Rate, $SR_{ADC}$) is bounded by:
+In an ideal, noiseless scenario, the conversion chain requires a finite minimum processing time to complete a single conversion cycle—encompassing the settling of the input voltage follower, the switching of the slicer associated with the crossed threshold, and the propagation delay of the event-generation logic. This aggregate time window is denoted as the total conversion propagation delay $\tau_{conv}$. Consequently, the maximum rate at which the ADC can track voltage transitions (the converter's intrinsic Slew Rate, $SR_{ADC}$) is bounded by:
 \begin{equation}
     SR_{ADC} = \frac{\Delta}{\tau_{conv}} = \frac{V_{FS}}{2^N \tau_{conv}}
 \end{equation}
@@ -433,29 +408,29 @@ To circumvent slope overload distortion, the maximum slope of the input signal m
     \pi f_{in} V_{FS} \le \frac{V_{FS}}{2^N \tau_{conv}}
 \end{equation}
 
-Rearranging this inequality yields the absolute maximum input frequency $f_{in,max}$ that the converter can faithfully digitize without undergoing slope overload under ideal conditions:
+Rearranging this inequality yields the absolute maximum input frequency $f_{in,max}$ that the converter can faithfully digitise without undergoing slope overload under ideal conditions:
 \begin{equation}
     f_{in,max} = \frac{1}{\pi 2^N \tau_{conv}}
 \end{equation}
 
-When transient noise is introduced into the simulation framework, the maximum operational Slew Rate undergoes significant degradation. Superimposed thermal and substrate noise creates rapid, localized voltage fluctuations ($dV_{noise}/dt$). This high-frequency noise contribution artificially inflates the effective local slope of the signal, causing the voltage to bounce back and forth across a quantization threshold. This rapidly consumes the available processing window $\tau_{conv}$ and manifests as thermometer-code meta-stability or \textit{bubble errors}. Consequently, the practical maximum Slew Rate under transient noise conditions is substantially lower than the ideal nominal value, causing slope overload to manifest at lower input frequencies and increasing the measured bubble rate.
+When transient noise is introduced into the simulation framework, the maximum operational Slew Rate undergoes significant degradation. Superimposed thermal and substrate noise creates rapid, localized voltage fluctuations ($dV_{noise}/dt$). This high-frequency noise contribution artificially inflates the effective local slope of the signal, causing the voltage to bounce back and forth across a quantisation threshold. This rapidly consumes the available processing window $\tau_{conv}$ and manifests as thermometer-code meta-stability or \textit{bubble errors}. Consequently, the practical maximum Slew Rate under transient noise conditions is substantially lower than the ideal nominal value, causing slope overload to manifest at lower input frequencies and increasing the measured bubble rate.
 
 \subsection{Resolution and Power Dissipation}
 \label{subsec:resolution_power}
 
 One of the most compelling advantages of asynchronous data converters is their signal-dependent power profile. In a standard synchronous Flash ADC, the power consumption remains largely constant because the entire comparator bank ($2^N - 1$ devices) and the clock distribution network are continuously toggled at the sampling frequency $f_s$, irrespective of the input signal activity. In an asynchronous implementation, power dissipation scales dynamically with the input signal's rate of change.
 
-When the input signal is entirely static ($f_{in} = 0$), no quantization thresholds are crossed. Under this condition, the dynamic switching power ideally drops to zero, and the system only dissipates static power ($P_{static}$), which originates from the continuous bias currents in the analog references, pre-amplifiers, and comparators:
+When the input signal is entirely static ($f_{in} = 0$), no quantisation thresholds are crossed. Under this condition, the dynamic switching power ideally drops to zero, and the system only dissipates static power ($P_{static}$), which originates from the continuous bias currents in the analog references, pre-amplifiers, and comparators:
 \begin{equation}
     P_{total} = P_{static} + P_{dynamic}
 \end{equation}
 
-For a dynamic input signal, such as the full-scale sinusoid at frequency $f_{in}$, the signal traverses the entire full-scale range $V_{FS}$ twice within a single period $T = 1/f_{in}$ (two upward excursions and two downward excursions across the $2^N$ levels). Thus, the average number of quantization level crossings per second—which can be interpreted as an effective average sampling frequency $f_{s,avg}$—is proportional to both the frequency and the resolution:
+For a dynamic input signal, such as the full-scale sinusoid at frequency $f_{in}$, the signal traverses the entire full-scale range $V_{FS}$ twice within a single period $T = 1/f_{in}$ (two upward excursions and two downward excursions across the $2^N$ levels). Thus, the average number of quantisation level crossings per second—which can be interpreted as an effective average sampling frequency $f_{s,avg}$—is proportional to both the frequency and the resolution:
 \begin{equation}
     f_{s,avg} = 2 \cdot 2^N \cdot f_{in} = 2^{N+1} f_{in}
 \end{equation}
 
-Assuming that each individual asynchronous conversion cycle draws an average switching energy $E_{conv}$ from the power supply $V_{DD}$, the dynamic power consumption $P_{dynamic}$ can be modeled analytically as:
+Assuming that each individual asynchronous conversion cycle draws an average switching energy $E_{conv}$ from the power supply $V_{DD}$, the dynamic power consumption $P_{dynamic}$ can be modelled analytically as:
 \begin{equation}
     P_{dynamic} = E_{conv} \cdot f_{s,avg} = E_{conv} \cdot 2^{N+1} f_{in}
 \end{equation}
@@ -468,19 +443,16 @@ Substituting this back into the total power equation yields:
 
 Equation~(\ref{eq:p_total_model}) explicitly demonstrates that while $P_{dynamic}$ retains a beneficial linear relationship with the signal frequency $f_{in}$, it scales exponentially with the nominal resolution $N$. 
 
-In practical circuit implementations, the physical performance is constrained by noise, which splits the design analysis into nominal resolution ($N$) and Effective Number of Bits ($ENOB$). The $ENOB$ is derived directly from the Signal-to-Noise-and-Distortion Ratio ($SNDR$ or $SINAD$):
-\begin{equation}
-    ENOB = \frac{SNDR_{dB} - 1.76}{6.02}
-\end{equation}
+In practical circuit implementations, the physical performance is constrained by noise, which splits the design analysis into nominal resolution ($N$) and Effective Number of Bits ($ENOB$), the latter derived directly from the Signal-to-Noise-and-Distortion Ratio ($SNDR$ or $SINAD$) as defined in Chapter~\ref{chap:lit_review}.
 
-When transient noise is factored in, the Signal-to-Noise Ratio ($SNR$) and $SNDR$ degrade, lowering the $ENOB$. Crucially, the presence of transient noise introduces spurious, non-monotonic threshold crossings (chatter or bounces). These noise-driven crossings trigger redundant asynchronous processing cycles that do not encode useful signal information. This increases the effective bubble rate and inflates $P_{dynamic}$ well beyond the ideal theoretical prediction. This simultaneous increase in power consumption and reduction in $ENOB$ leads to a severe degradation of the Walden Figure of Merit ($FoM_W$), highlighting why minimizing noise-induced bubble rates is a critical design constraint for maintaining energy efficiency.
+When transient noise is factored in, the Signal-to-Noise Ratio ($SNR$) and $SNDR$ degrade, lowering the $ENOB$. Crucially, the presence of transient noise introduces spurious, non-monotonic threshold crossings (chatter or bounces). These noise-driven crossings trigger redundant asynchronous processing cycles that do not encode useful signal information. This increases the effective bubble rate and inflates $P_{dynamic}$ well beyond the ideal theoretical prediction. This simultaneous increase in power consumption and reduction in $ENOB$ leads to a severe degradation of the Walden Figure of Merit ($FoM_W$), highlighting why minimising noise-induced bubble rates is a critical design constraint for maintaining energy efficiency.
 
 \subsection{Chapter Summary}
 \label{subsec:chapter_summary}
 
-This chapter established the theoretical and architectural foundations of the proposed asynchronous Flash ADC, highlighting the paradigm shift from rigid, clock-bound sampling to signal-dependent, data-driven quantization. By eliminating the global clock, the converter addresses the inherent energy inefficiencies typically observed in synchronous architectures when processing sparse or bursty real-world signals.
+This chapter established the theoretical and architectural foundations of the proposed asynchronous Flash ADC, highlighting the paradigm shift from rigid, clock-bound sampling to signal-dependent, data-driven quantisation. By eliminating the global clock, the converter addresses the inherent energy inefficiencies typically observed in synchronous architectures when processing sparse or bursty real-world signals.
 
-The structural development began with the adaptation of the comparator array, where continuous-time latched comparators were analyzed to ensure robust operation without synchronous clock phases. The core of the architecture—the asynchronous control logic—was modeled to manage the handshaking, threshold crossing detection, and localized timing generation required to guarantee hazard-free state transitions and mitigate metastability.
+The structural development progressed through three architectural phases: a current-mirror Flash configuration adopted from the literature, a complementary dual-input extension rejected for exceeding the voltage headroom available at $0.8$~V, and the final voltage-mode solution, in which a five-transistor OTA configured as a unity-gain follower drives a bank of ratioed CMOS slicers whose switching thresholds are set purely by transistor sizing. The event-generation network described in Section~\ref{sec:async_logic} completes the conversion chain, detecting the transitions of the thermometer outputs and encoding them combinationally into the binary output word, with no clock involved at any point in the signal path.
 
-Finally, the design space was mathematically bounded through analytical modeling of key physical constraints. It was demonstrated that the maximum input frequency is governed not by Nyquist boundaries, but by a strict Slew Rate constraint ($SR_{ADC}$), where circuit propagation delays ($\tau_{conv}$) set the limit to prevent slope overload. Furthermore, the power analysis verified that while dynamic power consumption scales exponentially with nominal resolution ($N$), it retains a highly beneficial linear dependency on the input signal frequency ($f_{in}$). This analytical framework also illuminated the critical impact of transient noise, which degrades the $SNR$/$SNDR$, introduces unwanted bubble errors, and triggers redundant conversion cycles that inflate power consumption—ultimately compromising the converter's effective resolution ($ENOB$) and overall energy efficiency ($FoM_W$). These mathematical insights serve as the direct baseline for the simulation setup and performance evaluation presented in the subsequent chapters.
+Finally, the design space was mathematically bounded through analytical modelling of key physical constraints. It was demonstrated that the maximum input frequency is governed not by Nyquist boundaries, but by a strict Slew Rate constraint ($SR_{ADC}$), where circuit propagation delays ($\tau_{conv}$) set the limit to prevent slope overload. Furthermore, the power analysis verified that while dynamic power consumption scales exponentially with nominal resolution ($N$), it retains a highly beneficial linear dependency on the input signal frequency ($f_{in}$). This analytical framework also illuminated the critical impact of transient noise, which degrades the $SNR$/$SNDR$, introduces unwanted bubble errors, and triggers redundant conversion cycles that inflate power consumption—ultimately compromising the converter's effective resolution ($ENOB$) and overall energy efficiency ($FoM_W$). These mathematical insights serve as the direct baseline for the simulation setup and performance evaluation presented in the subsequent chapters.
 

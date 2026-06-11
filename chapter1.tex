@@ -20,15 +20,15 @@
 % =================================================================
 \chapter{Introduction} \label{chap:intro}
 
-This chapter provides a brief introduction to the topic associated with the work carried out during the dissertation period. A contextualization is given, followed by a presentation of the research question and the main motivations for carrying out this study. The main objectives of this dissertation will also be outlined, as well as the methodology used to achieve them. Finally, the structure of the dissertation is presented.
+This chapter introduces the topic of the dissertation. It presents the context, the research question and the motivation for the work, states the objectives and the scope, and ends with the structure of the document.
 
-We live in an era where smart devices are everywhere, known as the Internet of Things, IoT. While the processing and storage of information are inherently digital, benefiting from the scaling of Moore's Law, the physical world remains fundamentally analog. Physical variables such as temperature, sound and biological potentials are continuous in both time and amplitude. Consequently, the Analog-to-Digital Converter, ADC, serves as the critical interface bridging these two domains, enabling digital systems to interact with the real world \cite{johns_martin_2012}.
+Smart devices are now everywhere, a development usually grouped under the name Internet of Things (IoT). The processing and storage of information are digital and have benefited from the scaling described by Moore's law, but the physical world is analog: temperature, sound and biological potentials are continuous in both time and amplitude. The Analog-to-Digital Converter (ADC) is the interface between the two domains, and every digital system that measures the real world depends on one \cite{johns_martin_2012}.
 
-Energy efficiency has shifted from being a secondary performance metric to a primary design constraint, many of the sensors operate on limited battery or rely on energy harvesting, where every Joule of power dissipation has a direct effect on the system's autonomy. In this landscape, the data conversion block almost always takes place as the most spender in this field, especially in sensor interfaces where the digital transmission is duty-cycled.
+Energy efficiency has moved from a secondary performance metric to a primary design constraint. Many sensors run on small batteries or on harvested energy, so every joule dissipated shortens the autonomy of the system. The data conversion block is frequently the largest consumer in these interfaces, particularly when the digital transmission is duty-cycled and the radio spends most of its time off.
 
-However, a fundamental characteristic of many environmental and physiological signals is sparsity in between pulses. Signals such as electrocardiograms, voice activity, or environmental monitoring data are spread in bursts, they contain short periods of high information content followed by long intervals of inactivity. 
+Many environmental and physiological signals are also sparse. Electrocardiograms, voice activity and environmental monitoring data arrive in bursts: short periods of high information content followed by long intervals in which nothing changes.
 
-Traditional data conversion approaches, based on uniform sampling and dictated by the Nyquist-Shannon theorem \cite{shannon_1949}, treat these silence periods with the same computational power and energetic waste as the active periods. This creates a paradigm of inefficiency, the system dissipates power to generate redundant digital samples that carry no new information. Recognizing and exploiting this sparsity is the key to unlocking ultra-low-power electronic interfaces.
+Traditional data conversion, based on uniform sampling at the rate dictated by the Nyquist-Shannon theorem \cite{shannon_1949}, treats these silent periods exactly like the active ones. The system dissipates power to generate redundant samples that carry no new information. Exploiting this sparsity is the most direct route to ultra-low-power conversion interfaces.
 
 \begin{figure}[htbp]
   \centering
@@ -37,16 +37,16 @@ Traditional data conversion approaches, based on uniform sampling and dictated b
 \label{fig:Sparse-time}
 \end{figure}
 \newpage
-The time-sparse nature of many signals can be observed in the burst waveform where information is concentrated in short intervals separated by long idle periods, as was demonstrated in~\ref{fig:Sparse-time}. In particular, subfigures (b) and (d) highlight how continuous-time and discrete-time event-driven strategies avoid generating samples during inactivity, in contrast with conventional uniform sampling which keeps operating at a fixed Nyquist rate regardless of the signal content.
+Figure~\ref{fig:Sparse-time} shows this behaviour: the information in the burst waveform is concentrated in short intervals separated by long idle periods. Subfigures (b) and (d) show that continuous-time and discrete-time event-driven strategies generate no samples during inactivity, whereas conventional uniform sampling keeps running at a fixed Nyquist rate regardless of the signal content.
 \section{Motivation and Problem Statement} \label{sec:motivation}
 
-The energy waste in massive-scale IoT deployments and the inefficiency of conventional synchronous architectures when processing sparse data shows the need for a fundamental shift toward architectures that activate only when meaningful data events occur.
+The energy wasted in large IoT deployments, together with the poor match between synchronous architectures and sparse data, motivates converters that activate only when the input actually produces an event.
 
 \subsection{Inefficiency of Synchronous Sampling}
 
-Traditional Analog-to-Digital Converters operate under a fixed-rate sampling rate, dictated by a global clock signal ($f_s$). As established by the Nyquist-Shannon sampling theorem \cite{shannon_1949}, this rate is determined by the maximum possible bandwidth of the signal, $f_s \geq~2B$. However, in many real-world applications, the signal is often active for only a fraction of the time, meaning the true information content is much lower than the theoretical maximum bandwidth suggests.
+Traditional Analog-to-Digital Converters sample at a fixed rate set by a global clock ($f_s$). The Nyquist-Shannon sampling theorem \cite{shannon_1949} ties this rate to the maximum bandwidth of the signal, $f_s \geq~2B$. In many real applications, however, the signal is active for only a fraction of the time, so its true information content is far below what the bandwidth alone suggests.
 
-This leads to a massive waste of energy due to the fundamental relationship governing dynamic power consumption in CMOS circuits \cite{baker_cmos_2010}:
+The cost of this mismatch follows from the expression for dynamic power consumption in CMOS circuits \cite{baker_cmos_2010}:
 \begin{equation}
   P_{dynamic} = \alpha \cdot f \cdot C_{L} \cdot V_{DD}^2
 \end{equation}
@@ -58,7 +58,7 @@ where:
   \item $C_L$ is the load capacitance being switched (e.g., in the clock tree).
   \item $V_{DD}$ is the supply voltage.
 \end{itemize}
- In a uniformly clocked ADC, $f$ is fixed by the Nyquist criterion and the clock network toggles every cycle, so $\alpha$ remains high even when the input signal is almost static. As a result, the converter continues to charge and discharge large clock and comparator capacitances at every period, dissipating dynamic power to generate redundant samples that do not carry new information. For example, if a sensor signal is active only 10\% of the time but the ADC samples continuously, 90\% of the switching events are spent tracking intervals where the input is essentially constant, directly illustrating how synchronous operation leads to massive energy waste for non synchronous signals.
+ In a uniformly clocked ADC, $f$ is fixed by the Nyquist criterion and the clock network toggles every cycle, so $\alpha$ stays high even when the input is almost static. The converter keeps charging and discharging the clock and comparator capacitances at every period to produce samples that carry no new information. If a sensor signal is active only 10\% of the time and the ADC samples continuously, 90\% of the switching events are spent on intervals where the input is essentially constant.
 % \subsection{Architectural Problem: Flash ADCs}
 % While the Flash ADC architecture is highly attractive due to its single-cycle, high-speed conversion capability \cite{johns_martin_2012}, it suffers from severe limitations regarding power and area, particularly when reaching higher resolutions. The number of required comparators scales exponentially with resolution ($2^N$). This exponential scaling leads directly to an increase in input capacitance and static power dissipation.
 
@@ -68,7 +68,7 @@ where:
 
 % \subsection{Device Limitation: The Mismatch Problem}
 
-% To mitigate the power and area issues mentioned above, designers are compelled to minimize the physical dimensions of the core devices, particularly the transistors within the comparators. However, this introduces a fundamental physical constraint:
+% To mitigate the power and area issues mentioned above, designers are compelled to minimise the physical dimensions of the core devices, particularly the transistors within the comparators. However, this introduces a fundamental physical constraint:
 
 % \begin{figure}[htbp]
 %   \centering
@@ -82,24 +82,22 @@ where:
 % Linearity errors arise from several factors, starting with component mismatches where DNL and INL faults are caused by discrepancies in resistor values within ladders or capacitors in arrays. Nonlinearities in analog components such as amplifiers and other parts of the ADC also influence these mistakes \cite{MPScholar}. Furthermore, variations in temperature and supply voltage can cause component values to drift, thereby contributing to linearity problems. 
 \section{Objectives and Scope of the Dissertation} \label{sec:objectives}
 
-Based on the limitations identified in traditional synchronous data conversion when dealing with asynchronous sensor signals, the primary objective of this work is to design and implement an energy-efficient ADC architecture, so this ADC must exploit signal inactivity to achieve a significant reduction in power consumption.
+Given the limitations of synchronous data conversion for time-sparse sensor signals, the primary objective of this work is to design and implement an ADC that exploits signal inactivity to reduce power consumption.
 
 
-To achieve the overall goal of developing an efficient ADC, the following specific objectives are defined for this dissertation:
+This overall goal breaks down into four specific objectives:
 
 \begin{enumerate}
-  \item Asynchronous Architecture Design: To develop the circuit-level design of an asynchronous Flash ADC, minimizing dynamic power consumption by ensuring that power is only dissipated when an input signal event occurs.
+  \item Asynchronous Architecture Design: To develop the circuit-level design of an asynchronous Flash ADC in which power is dissipated only when an input signal event occurs.
   
-  \item Offline Trimming Implementation: To implement an offline trimming mechanism capable of detecting and compensating for the input offset voltage of the comparators.
+  \item Offline Trimming Implementation: To implement an offline trimming mechanism capable of compensating the deterministic trip-point deviations of the comparison stage across process corners.
   \item Mixed-Signal Validation: To validate the complete system through analog and digital co-simulation. This validation must confirm the functionality and accuracy of both the asynchronous core and the trimming logic.
   
   \item Performance Benchmarking: To quantify the energy efficiency of the proposed design using well known figures of merit. The results must be compared against the current state of the art synchronous ADCs and relevant asynchronous solutions.
 \end{enumerate}
-In order to support these objectives, the state-of-the-art review is structured to progressively narrow the focus from general data-conversion theory to the specific asynchronous Flash architecture and trimming techniques addressed in this work. Chapter~\ref{chap:lit_review} begins by revisiting the fundamentals of sampling, quantization, and performance metrics for data converters, establishing the theoretical background required to interpret figures of merit such as SNDR, ENOB, and Walden FoM. It then surveys the main synchronous ADC architectures (Flash, SAR, Pipeline, and Sigma-Delta), highlighting their inherent power, speed and resolution trade-offs and identifying why conventional clocked Flash converters become inefficient when dealing with sparse signals.
-\paragraph{}
 \section{Document Structure} \label{sec:document_structure}
 
-This dissertation is organized into seven chapters. Chapter 1 introduces the topic, presents the motivation, problem statement, defines the objectives and scope of the work. Chapter 2 reviews the relevant background on analog to digital conversion, sampling paradigms, synchronous and asynchronous architectures, clockless event generation, calibration and trimming techniques, providing the basis for the proposed approach. Chapter 3 describes the design of the asynchronous Flash ADC, including the successive architectural choices and the final adopted solution. Chapter 4 presents the synchronous reference Flash ADC used for comparison. Chapter 5 discusses the trimming strategy adopted to correct comparator offset. Chapter 6 presents the simulation results and the performance evaluation of the proposed design. Finally, Chapter 7 summarizes the main conclusions and outlines directions for future work.
+This dissertation is organised into seven chapters. Chapter 1 introduces the topic, presents the motivation, problem statement, defines the objectives and scope of the work. Chapter 2 reviews the relevant background on analog to digital conversion, sampling paradigms, synchronous and asynchronous architectures, clockless event generation, calibration and trimming techniques, providing the basis for the proposed approach. Chapter 3 describes the design of the asynchronous Flash ADC, including the design specifications, the successive architectural choices and the final adopted solution. Chapter 4 presents the body bias trimming strategy adopted to correct the trip-point deviations of the comparison stage across process corners, building directly on the design of Chapter 3. Chapter 5 presents the synchronous reference Flash ADC used for comparison. Chapter 6 presents the simulation results and the performance evaluation of both converters, including the power measurement methodology used in the comparison. Finally, Chapter 7 summarises the main conclusions and outlines directions for future work.
 
 
 
