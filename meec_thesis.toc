@@ -45,7 +45,7 @@
 \contentsline {paragraph}{}{13}{section*.25}%
 \contentsline {paragraph}{}{13}{section*.26}%
 \contentsline {subsection}{\numberline {2.4.2}Flash ADC}{14}{subsection.2.4.2}%
-\contentsline {section}{\numberline {2.5}Clockless Event Generation}{14}{section.2.5}%
+\contentsline {section}{\numberline {2.5}Clockless Event Conversion}{14}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}The Voltage to Current Conversion Concept in Event Detection}{14}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}Current Comparator Operating Principles}{15}{subsection.2.5.2}%
 \contentsline {subsection}{\numberline {2.5.3}Topologies for Event Detection in the Literature}{15}{subsection.2.5.3}%
@@ -110,15 +110,18 @@
 \contentsline {section}{\numberline {5.4}Clock Generation}{48}{section.5.4}%
 \contentsline {chapter}{\numberline {6}Simulation Results and Performance Benchmarking}{50}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Simulation Setup and Input Test Signals}{50}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Static Linearity Results}{50}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Power Dissipation and Energy Efficiency}{52}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Power Measurement Methodology}{53}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Signal-Dependent Power Scaling}{53}{subsection.6.3.2}%
-\contentsline {section}{\numberline {6.4}Synchronous Reference Flash ADC Results}{54}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Comparative Analysis and Discussion}{54}{section.6.5}%
-\contentsline {chapter}{\numberline {7}Conclusions and Suggestions for Future Work}{57}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Summary of the Work Developed}{57}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Concluded Objectives}{59}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Future Work}{60}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Analogue Process Corner Detection Circuit}{60}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}Monte Carlo Trimming}{60}{subsection.7.3.2}%
+\contentsline {section}{\numberline {6.2}Static Linearity Results}{52}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Threshold Extraction and Linearity Versus Conversion Rate}{53}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Linearity Across Process Corners and Trimming}{54}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}Random Mismatch: Monte Carlo Analysis}{55}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Power Dissipation and Energy Efficiency}{56}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Power Measurement Methodology}{56}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Signal-Dependent Power Scaling}{57}{subsection.6.4.2}%
+\contentsline {section}{\numberline {6.5}Synchronous Reference Flash ADC Results}{57}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Comparative Analysis and Discussion}{59}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Conclusions and Suggestions for Future Work}{62}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Summary of the Work Developed}{62}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Concluded Objectives}{64}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Future Work}{65}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Analogue Process Corner Detection Circuit}{65}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Monte Carlo Trimming}{66}{subsection.7.3.2}%

@@ -444,7 +444,7 @@ Upon each level-crossing event, the digital logic block updates the encoded ampl
 The Asynchronous Flash ADC adapts the parallel structure of a standard Flash ADC but removes the sampling clock entirely. In this architecture, the comparators are not latched by a clock, they operate in continuous time, constantly monitoring the input voltage $V_{in}$ against the reference ladder.
 The event generation happens when the input signal crosses a threshold, the corresponding comparator changes its output state immediately, this transition triggers an asynchronous logic to generate a digital output pulse.
 
-\section{Clockless Event Generation}
+\section{Clockless Event Conversion}
 \label{sec:clockless_event}
 
 This section reviews current-mode techniques for generating conversion events without a clock: voltage-to-current conversion and current comparator topologies. A caveat applies to all of this material. These techniques are the conceptual basis of the first design phase in Chapter~\ref{chap:async}, the current-mirror Flash configuration, which the final architecture later abandoned because the voltage headroom demanded by current-mode structures did not fit within the $0.8$~V supply. The review therefore documents the starting point of the architectural exploration and the criteria by which the current-mode candidates were judged and, in the end, rejected.
@@ -548,7 +548,7 @@ The internal resistive loading method involves placing a variable resistive netw
 \subsubsection{Reference Ladder Trimming}
 \label{subsec:ladder_trimming}
 
-The reference ladder trimming technique corrects comparator offset by utilising the main reference ladder as a calibration source \cite{yao_bulk_2011}. In this architecture, a switching network selects specific voltages from the resistor ladder and applies them to the bulk terminals of the input transistors M1 and M2. This approach leverages the body effect to shift the threshold voltage ($V_{th}$) of the differential pair, thereby nullifying the input-referred offset caused by process mismatch. 
+The reference ladder trimming technique corrects comparator offset by using the main reference ladder as a calibration source \cite{yao_bulk_2011}. In this architecture, a switching network selects specific voltages from the resistor ladder and applies them to the bulk terminals of the input transistors M1 and M2. The body effect then shifts the threshold voltage ($V_{th}$) of the differential pair and cancels the input-referred offset caused by process mismatch.
 
 As demonstrated in the simulation results of the threshold voltage ($|V_t|$) versus the ladder tap voltage ($LT$), the threshold voltage of transistors M1 and M2 increases linearly from approximately 356.5~mV to 372~mV as the calibration voltage is adjusted. In contrast, the threshold voltage of transistors M3 and M4 remains constant at approximately 356.5~mV because their bulk terminals are not connected to the tuning network. This targeted adjustment of the bulk potential for the input differential pair provides a tuning range sufficient to compensate for random process variations and ensure the accuracy of the comparator trip points.
 \paragraph{}
@@ -714,7 +714,7 @@ Each point in Fig.~\ref{fig:energy_year} corresponds to a published design, so t
 \end{table}
 The conclusion of this analysis is straightforward. Synchronous architectures waste power on time-sparse signals because the global clock keeps the switching activity, and hence the dynamic power, tied to the clock frequency even when the input carries nothing new. Event-driven schemes tie power to the rate of relevant signal transitions instead. The survey data adds the second half of the argument: Flash ADCs define the speed frontier but pay for it with a poor Walden FoM, while the more efficient SAR and sigma-delta architectures are confined to lower bandwidths. An asynchronous Flash topology sits at the intersection of the two observations. By removing the sampling clock and letting the comparators operate in a level-crossing manner, it keeps the low latency of the Flash architecture and uses signal sparsity to close the efficiency gap with the best synchronous designs in the targeted operating region.
 
-Event-driven operation is not exclusive to Flash. The discrete-time level-crossing converter of Mou et al.\ \cite{mou2026} reaches excellent efficiency around a SAR-like structure, but it resolves each event through successive comparisons in a feedback loop, whereas a Flash bank resolves it in a single parallel step. For the low-latency, event-driven operation targeted here, that single-step conversion was the deciding argument in favour of Flash.
+Event-driven operation is not exclusive to Flash. The discrete-time level-crossing converter of Mou et al.\ \cite{mou2026} consumes between $95$ and $250$~nW around a SAR-like structure, but it resolves each event through successive comparisons in a feedback loop, whereas a Flash bank resolves it in a single parallel step. For the low-latency, event-driven operation targeted here, that single-step conversion was the deciding argument in favour of Flash.
 
 
 

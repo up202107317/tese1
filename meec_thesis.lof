@@ -19,8 +19,12 @@
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Top-level block diagram of the synchronous 4-bit Flash ADC \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{46}{figure.caption.44}%
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Schematic of the StrongARM latch comparator \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{47}{figure.caption.45}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces FFT spectrum of the reconstructed asynchronous Flash ADC output signal.}}{51}{figure.caption.46}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces SNDR and ENOB as a function of the input signal frequency and amplitude.}}{51}{figure.caption.47}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Measured DNL and INL error profiles before (top) and after (bottom) the application of the body bias trimming calibration.}}{52}{figure.caption.48}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Total and dynamic power consumption as a function of the input signal frequency ($f_{in}$).}}{53}{figure.caption.50}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Input sinusoid and reconstructed converter output over the first microsecond of the dynamic test.}}{51}{figure.caption.46}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces FFT spectrum of the reconstructed asynchronous Flash ADC output signal.}}{51}{figure.caption.47}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces SNDR and ENOB as a function of the input signal frequency and amplitude.}}{52}{figure.caption.48}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Worst-case DNL, INL and hysteresis as a function of the equivalent conversion rate.}}{54}{figure.caption.51}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces DNL per code and INL per transition of the asynchronous converter at the typical (TT) corner.}}{54}{figure.caption.52}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Monte Carlo distribution of the DNL of the code between two adjacent slicers, with the $\pm 0.5$~LSB limits and the missing-code boundary marked.}}{56}{figure.caption.55}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Total and dynamic power consumption as a function of the input signal frequency ($f_{in}$).}}{57}{figure.caption.56}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Static characterisation of the synchronous reference: DNL and INL versus input voltage, and measured transfer function against the ideal staircase ($20$~MHz input, $640$~MHz clock).}}{58}{figure.caption.58}%
 \addvspace {10\p@ }

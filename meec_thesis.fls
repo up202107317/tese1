@@ -1,6 +1,6 @@
-PWD C:\Users\gonca\Downloads\meec-distrib-v2024 (2)\meec-distrib
+PWD c:\Users\gonca\Downloads\meec-distrib-v2024 (2)\meec-distrib
 INPUT C:\Users\gonca\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT meec_thesis.tex
+INPUT c:\Users\gonca\Downloads\meec-distrib-v2024 (2)\meec-distrib\meec_thesis.tex
 OUTPUT meec_thesis.log
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
@@ -511,14 +511,17 @@ INPUT .\meec_thesis.toc
 INPUT meec_thesis.toc
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7t.vf
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\symbol\psyr.tfm
-OUTPUT meec_thesis.toc
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmro8t.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmro8t.vf
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmro8r.tfm
+OUTPUT meec_thesis.toc
 INPUT .\meec_thesis.lof
 INPUT .\meec_thesis.lof
 INPUT meec_thesis.lof
 OUTPUT meec_thesis.lof
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7y.vf
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\gonca\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7m.vf
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\psyro.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
@@ -533,14 +536,14 @@ INPUT meec_thesis.lot
 OUTPUT meec_thesis.lot
 INPUT .\abbrevs.tex
 INPUT .\abbrevs.tex
-OUTPUT abbrevs.aux
-INPUT .\abbrevs.tex
-INPUT .\abbrevs.tex
-INPUT abbrevs.tex
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7t.vf
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\symbol\psyr.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
+OUTPUT abbrevs.aux
+INPUT .\abbrevs.tex
+INPUT .\abbrevs.tex
+INPUT abbrevs.tex
 INPUT .\chapter1.tex
 INPUT .\chapter1.tex
 OUTPUT chapter1.aux
@@ -560,9 +563,6 @@ INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7y.vf
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\gonca\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT .\chapter2.tex
 INPUT .\chapter2.tex
 OUTPUT chapter2.aux

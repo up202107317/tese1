@@ -9,8 +9,12 @@
 \contentsline {table}{\numberline {4.1}{\ignorespaces Body bias correction vectors determined for each process corner.}}{43}{table.caption.43}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Static linearity performance (DNL and INL) summary before and after calibration.}}{52}{table.caption.49}%
-\contentsline {table}{\numberline {6.2}{\ignorespaces Power dissipation breakdown and energy efficiency summary.}}{54}{table.caption.51}%
-\contentsline {table}{\numberline {6.3}{\ignorespaces Simulated performance summary of the synchronous reference Flash ADC in 16-nm CMOS.}}{55}{table.caption.52}%
-\contentsline {table}{\numberline {6.4}{\ignorespaces Performance comparison with the synchronous baseline and state-of-the-art literature.}}{55}{table.caption.53}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Dynamic performance of the asynchronous converter ($f_{in} = 9$~MHz, full-scale input, with transient noise).}}{52}{table.caption.49}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Static linearity and hysteresis of the asynchronous converter versus input ramp time. DNL excludes the two end codes. Valid means worst-case hysteresis below $1$~LSB.}}{53}{table.caption.50}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Worst-case static linearity per process corner, before and after body bias trimming, measured on the rising and falling ramps (values in LSB).}}{55}{table.caption.53}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces Monte Carlo statistics of the threshold spacing between two adjacent slicers (out$_0$, out$_1$), without trimming.}}{55}{table.caption.54}%
+\contentsline {table}{\numberline {6.5}{\ignorespaces Measured power consumption and energy efficiency of the asynchronous converter.}}{58}{table.caption.57}%
+\contentsline {table}{\numberline {6.6}{\ignorespaces Power breakdown of the synchronous reference Flash ADC.}}{59}{table.caption.59}%
+\contentsline {table}{\numberline {6.7}{\ignorespaces Simulated performance summary of the synchronous reference Flash ADC in 16-nm CMOS.}}{60}{table.caption.60}%
+\contentsline {table}{\numberline {6.8}{\ignorespaces Performance comparison with the synchronous baseline and state-of-the-art literature.}}{60}{table.caption.61}%
 \addvspace {10\p@ }

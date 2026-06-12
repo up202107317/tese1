@@ -142,7 +142,7 @@ all slicers toward a lower trip point and compresses the effective decision
 levels toward the bottom of the input range; at SF the complementary imbalance
 expands the decision levels toward the top. In all four non-typical corners,
 the loss of linearity was found to cause DNL excursions beyond $0.5$~LSB,
-which makes the converter non-monotonic under these conditions.
+which takes the converter outside its linearity target under these conditions.
 
 \section{Offline Trimming Strategy via Body Bias Adjustment}
 
@@ -165,8 +165,10 @@ involved.
 \subsection{Determination of the Correction Pairs}
 
 For each of the four non-typical corners, a specific pair of values
-$(V_{BN},\, V_{BP})$ was determined such that the DNL of the converted
-thermometer code falls below $0.5$~LSB across the full input range. The pairs
+$(V_{BN},\, V_{BP})$ was determined with the objective of bringing the DNL of
+the converted thermometer code below $0.5$~LSB across the full input range;
+the degree to which each corner meets that target is reported in
+Chapter~\ref{chap:Benchmarking}. The pairs
 were obtained by sweeping the two bulk voltages over the range permitted by
 the technology, extracting the trip points of all slicers at each bias
 combination, and selecting the combination that minimises the worst-case
