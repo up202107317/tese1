@@ -31,7 +31,12 @@ The first candidate was a current-mirror flash configuration in which a transcon
 converts the differential input voltage into an error current, and a current-to-code converter maps
 that current to a thermometer-coded output by exploiting asymmetric PMOS and NMOS mirror
 ratios at each comparison node. This topology operates in continuous time and requires no
-external clock, which made it a natural fit for the event-driven approach. The second phase
+external clock, which made it a natural fit for the event-driven approach. The decision element of
+this stage, the current comparator, was not assumed: six published current comparator topologies
+(current-mirror, Traff, Lu Chen, hysteresis, Min and Kim and CC-II) were redrawn at transistor
+level and simulated in a common testbench, and the current-mirror cell was selected for having the
+lowest propagation delay and the second-lowest average power of the six. The power and delay
+figures reported for these comparators therefore come from direct simulation, not from estimates. The second phase
 investigated a complementary dual-input architecture aimed at extending the input common-mode
 range toward rail-to-rail operation by combining an NMOS and a PMOS differential pair with
 cross-coupled output branches. Although conceptually attractive, this implementation could not be made
@@ -77,9 +82,11 @@ standard spectral metrics such as SNDR and ENOB to be extracted and compared aga
 synchronous reference and representative state-of-the-art designs. The power measurements
 confirmed the key theoretical prediction: dynamic power consumption scales linearly with input
 signal frequency, and the converter enters a near-zero dynamic consumption state when the input
-is idle. The adapted Walden figure of merit, computed using the effective average crossing rate
-rather than a fixed Nyquist frequency, demonstrates a clear energy efficiency advantage over the
-synchronous baseline for the sparse-signal operating regime targeted by this work.
+is idle. Measured at a matched conversions-per-second workload, the asynchronous core draws
+$192$~\textmu W against the $727$~\textmu W of the complete synchronous reference, and the gap
+widens for sparse inputs as the converter falls towards its idle floor. This power saving, rather
+than a record Walden figure of merit, is where the energy advantage of the proposed converter
+lies in the sparse-signal regime targeted by this work.
 
 The contribution of this work lies less in any single block than in their combination:
 ratioed-slicer quantisation, corner-indexed body bias trimming and clockless event generation,
@@ -117,12 +124,15 @@ of the trimming logic, satisfying this objective.
 The fourth objective was performance benchmarking against synchronous state-of-the-art
 designs using established figures of merit. The proposed converter was compared against the
 synchronous reference Flash ADC implemented under identical technology and supply conditions,
-as well as against relevant designs from the ISSCC and JSSC literature. The adapted Walden
-figure of merit confirms that the asynchronous architecture achieves superior energy efficiency for
-sparse-signal operating conditions, closing a meaningful portion of the power gap that
-synchronous Flash converters exhibit at high sampling rates.
+as well as against relevant designs from the ISSCC and JSSC literature, using the standard Walden
+figure of merit with the rate fixed at twice the signal bandwidth. The proposed converter does not
+set a record figure of merit, which is expected for a medium-resolution, megahertz-range Flash
+converter when placed beside the high-resolution, kilohertz-bandwidth level-crossing designs
+optimised purely for energy. Its advantage is instead in the matched-workload power, where it
+consumes a quarter of the power of the synchronous reference and scales down further for sparse
+inputs, which is the operating regime targeted by this work.
 
-It should be noted that, although process corner variation was successfully addressed by the
+Although process corner variation was successfully addressed by the
 offline trimming strategy, Monte Carlo statistical variation was not corrected within the scope of
 this work. The body bias trimming vectors were determined for the four deterministic process
 corners and are therefore not adapted to the continuous distribution of device mismatch that Monte
@@ -136,7 +146,7 @@ motivation for the first suggestion for future work described in the following s
 Two directions for future development are identified as the most impactful extensions of the
 work presented in this dissertation.
 
-\subsection{Analogue Process Corner Detection Circuit}
+\subsection{Analogue Process Corner Detection Approach}
 
 The trimming strategy validated in this work relies on the correct identification of the active
 process corner, which in the current implementation is supplied externally to the Verilog-A

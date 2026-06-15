@@ -1,0 +1,252 @@
+`include "constants.vams"
+`include "disciplines.vams"
+
+module adc_bulk_trim_ctrl (
+    pbulk0,  pbulk1,  pbulk2,  pbulk3,  pbulk4,
+    pbulk5,  pbulk6,  pbulk7,  pbulk8,  pbulk9,
+    pbulk10, pbulk11, pbulk12, pbulk13, pbulk14,
+
+    nbulk0,  nbulk1,  nbulk2,  nbulk3,  nbulk4,
+    nbulk5,  nbulk6,  nbulk7,  nbulk8,  nbulk9,
+    nbulk10, nbulk11, nbulk12, nbulk13, nbulk14
+);
+
+    // ============================================================
+    // Output ports
+    // ============================================================
+
+    output pbulk0,  pbulk1,  pbulk2,  pbulk3,  pbulk4;
+    output pbulk5,  pbulk6,  pbulk7,  pbulk8,  pbulk9;
+    output pbulk10, pbulk11, pbulk12, pbulk13, pbulk14;
+
+    output nbulk0,  nbulk1,  nbulk2,  nbulk3,  nbulk4;
+    output nbulk5,  nbulk6,  nbulk7,  nbulk8,  nbulk9;
+    output nbulk10, nbulk11, nbulk12, nbulk13, nbulk14;
+
+    electrical pbulk0,  pbulk1,  pbulk2,  pbulk3,  pbulk4;
+    electrical pbulk5,  pbulk6,  pbulk7,  pbulk8,  pbulk9;
+    electrical pbulk10, pbulk11, pbulk12, pbulk13, pbulk14;
+
+    electrical nbulk0,  nbulk1,  nbulk2,  nbulk3,  nbulk4;
+    electrical nbulk5,  nbulk6,  nbulk7,  nbulk8,  nbulk9;
+    electrical nbulk10, nbulk11, nbulk12, nbulk13, nbulk14;
+
+    // ============================================================
+    // Parameters
+    // ============================================================
+
+    // Process corner selector:
+    // "tt", "ff", "ss", "sf", or "fs"
+    parameter string process = "tt";
+
+    // Default PMOS and NMOS bulk voltages
+    parameter real VP_DEFAULT = 0.8;
+    parameter real VN_DEFAULT = 0.0;
+
+    // ============================================================
+    // Internal voltage variables
+    // ============================================================
+
+    real vp0,  vp1,  vp2,  vp3,  vp4;
+    real vp5,  vp6,  vp7,  vp8,  vp9;
+    real vp10, vp11, vp12, vp13, vp14;
+
+    real vn0,  vn1,  vn2,  vn3,  vn4;
+    real vn5,  vn6,  vn7,  vn8,  vn9;
+    real vn10, vn11, vn12, vn13, vn14;
+
+    // ============================================================
+    // Analog behavior
+    // ============================================================
+
+    analog begin
+
+        // ========================================================
+        // Default bulk voltage assignment
+        // ========================================================
+
+        vp0  = VP_DEFAULT;
+        vp1  = VP_DEFAULT;
+        vp2  = VP_DEFAULT;
+        vp3  = VP_DEFAULT;
+        vp4  = VP_DEFAULT;
+        vp5  = VP_DEFAULT;
+        vp6  = VP_DEFAULT;
+        vp7  = VP_DEFAULT;
+        vp8  = VP_DEFAULT;
+        vp9  = VP_DEFAULT;
+        vp10 = VP_DEFAULT;
+        vp11 = VP_DEFAULT;
+        vp12 = VP_DEFAULT;
+        vp13 = VP_DEFAULT;
+        vp14 = VP_DEFAULT;
+
+        vn0  = VN_DEFAULT;
+        vn1  = VN_DEFAULT;
+        vn2  = VN_DEFAULT;
+        vn3  = VN_DEFAULT;
+        vn4  = VN_DEFAULT;
+        vn5  = VN_DEFAULT;
+        vn6  = VN_DEFAULT;
+        vn7  = VN_DEFAULT;
+        vn8  = VN_DEFAULT;
+        vn9  = VN_DEFAULT;
+        vn10 = VN_DEFAULT;
+        vn11 = VN_DEFAULT;
+        vn12 = VN_DEFAULT;
+        vn13 = VN_DEFAULT;
+        vn14 = VN_DEFAULT;
+
+        // ========================================================
+        // TT corner trimming
+        // ========================================================
+        //
+        // No trimming is applied in TT.
+        // PMOS bulks remain at 0.8 V.
+        // NMOS bulks remain at 0.0 V.
+
+        if (process == "tt") begin
+            vp0  = VP_DEFAULT;
+            vp1  = VP_DEFAULT;
+            vp2  = VP_DEFAULT;
+            vp3  = VP_DEFAULT;
+            vp4  = VP_DEFAULT;
+            vp5  = VP_DEFAULT;
+            vp6  = VP_DEFAULT;
+            vp7  = VP_DEFAULT;
+            vp8  = VP_DEFAULT;
+            vp9  = VP_DEFAULT;
+            vp10 = VP_DEFAULT;
+            vp11 = VP_DEFAULT;
+            vp12 = VP_DEFAULT;
+            vp13 = VP_DEFAULT;
+            vp14 = VP_DEFAULT;
+
+            vn0  = VN_DEFAULT;
+            vn1  = VN_DEFAULT;
+            vn2  = VN_DEFAULT;
+            vn3  = VN_DEFAULT;
+            vn4  = VN_DEFAULT;
+            vn5  = VN_DEFAULT;
+            vn6  = VN_DEFAULT;
+            vn7  = VN_DEFAULT;
+            vn8  = VN_DEFAULT;
+            vn9  = VN_DEFAULT;
+            vn10 = VN_DEFAULT;
+            vn11 = VN_DEFAULT;
+            vn12 = VN_DEFAULT;
+            vn13 = VN_DEFAULT;
+            vn14 = VN_DEFAULT;
+        end
+
+        // ========================================================
+        // FF corner trimming
+        // ========================================================
+
+        else if (process == "ff") begin
+            vp8 = 0.7;
+            vp7 = 0.5;
+            vp6 = 0.5;
+
+            vn13 = 0.1;
+            vn12 = 0.5;
+            vn11 = 0.5;
+            vn10 = 0.2;
+            vn1  = 0.3;
+            vn0  = 0.3;
+        end
+
+        // ========================================================
+        // FS corner trimming
+        // ========================================================
+
+        else if (process == "fs") begin
+            vp7 = 0.7;
+            vp0 = 0.75;
+
+            vn1  = 0.23;
+            vn4  = 0.1;
+            vn14 = 0.1;
+            vn12 = 0.1;
+        end
+
+        // ========================================================
+        // SF corner trimming
+        // ========================================================
+
+        else if (process == "sf") begin
+            vp2 = 0.7;
+            vp1 = 0.75;
+
+            vn3  = 0.1;
+            vn4  = 0.2;
+            vn5  = 0.2;
+            vn11 = 0.1;
+            vn12 = 0.15;
+            vn13 = 0.1;
+            vn14 = 0.3;
+        end
+
+        // ========================================================
+        // SS corner trimming
+        // ========================================================
+
+        else if (process == "ss") begin
+            vp10 = 0.72;
+            vp9  = 0.75;
+            vp0  = 0.6;
+
+            vn2 = 0.2;
+            vn3 = 0.15;
+            vn4 = 0.2;
+            vn5 = 0.1;
+        end
+
+        // ========================================================
+        // Drive PMOS bulk voltage outputs
+        // ========================================================
+        //
+        // Each output behaves as an ideal voltage source.
+
+        V(pbulk0)  <+ vp0;
+        V(pbulk1)  <+ vp1;
+        V(pbulk2)  <+ vp2;
+        V(pbulk3)  <+ vp3;
+        V(pbulk4)  <+ vp4;
+        V(pbulk5)  <+ vp5;
+        V(pbulk6)  <+ vp6;
+        V(pbulk7)  <+ vp7;
+        V(pbulk8)  <+ vp8;
+        V(pbulk9)  <+ vp9;
+        V(pbulk10) <+ vp10;
+        V(pbulk11) <+ vp11;
+        V(pbulk12) <+ vp12;
+        V(pbulk13) <+ vp13;
+        V(pbulk14) <+ vp14;
+
+        // ========================================================
+        // Drive NMOS bulk voltage outputs
+        // ========================================================
+        //
+        // Each output behaves as an ideal voltage source.
+
+        V(nbulk0)  <+ vn0;
+        V(nbulk1)  <+ vn1;
+        V(nbulk2)  <+ vn2;
+        V(nbulk3)  <+ vn3;
+        V(nbulk4)  <+ vn4;
+        V(nbulk5)  <+ vn5;
+        V(nbulk6)  <+ vn6;
+        V(nbulk7)  <+ vn7;
+        V(nbulk8)  <+ vn8;
+        V(nbulk9)  <+ vn9;
+        V(nbulk10) <+ vn10;
+        V(nbulk11) <+ vn11;
+        V(nbulk12) <+ vn12;
+        V(nbulk13) <+ vn13;
+        V(nbulk14) <+ vn14;
+
+    end
+
+endmodule
+``

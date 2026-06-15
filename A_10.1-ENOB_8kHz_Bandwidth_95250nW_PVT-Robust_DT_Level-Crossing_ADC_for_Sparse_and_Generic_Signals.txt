@@ -1,0 +1,359 @@
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+IEEE JOURNAL OF SOLID-STATE CIRCUITS
+
+1
+
+A 10.1-ENOB 8kHz Bandwidth 95­250nW PVT-Robust DT Level-Crossing ADC for Sparse and Generic Signals
+
+Jixuan Mou , Graduate Student Member, IEEE, Pieter Harpe , Senior Member, IEEE, Alessandro Saccon , Member, IEEE, Eugenio Cantatore , Fellow, IEEE, and Marco Fattori , Member, IEEE
+
+Abstract--This article presents an event-driven discrete-time level crossing analog-to-digital converter (DT-LCADC) that is energy-efficient in converting both sparse and generic signals and is robust against process voltage and temperature (PVT) variations. The proposed DT-LCADC uses the comparator delay to classify each level-crossing event as slow (produced by a small input change in time) or fast (consequence of a large input increment). The converter can adaptively select the most suitable search scheme, between linear and binary, depending on the detected type of event. To reduce the power needed to transmit the output data, by leveraging the signal sparsity, the ADC output is efficiently encoded according to the type of event and transmitted using a variable payload using a serial data protocol. The proposed DT-LCADC, manufactured in a 65-nm CMOS technology, achieves 10.1 ENOB and a signal bandwidth of 8 kHz, while consuming between 95 and 250 nW from a supply voltage of 0.8 V, depending on the input signal. The corresponding Walden figure of merit (FoMW) ranges from 5.3 to 14.2 fJ/c.s, achieving more than 5X improvement in power efficiency compared to stateof-the-art DT-LCADCs. To convert time-sparse neural signals, the proposed ADC requires only 120 nW, while reducing the output data rate to 5.1 kb/s. Together with the data output encoding driven by the type of event, this ADC leads to a data transmission energy saving of up to 96.4%, compared to a Nyquist ADC with the same accuracy and bandwidth.
+Index Terms--Data compression, event-based sensor interface, level-crossing ADC, process voltage and temperature (PVT)robust, time-sparse signal.
+I. INTRODUCTION
+E DGE data processing has gained significant attention in applications such as event cameras [1], tactile electronic
+Received 26 November 2025; revised 22 February 2026; accepted 3 April 2026. This article was approved by Associate Editor Friedel Gerfers. This work was supported in part by the Exploratory Multidisciplinary AI Research Program (EMDAIR) Project I.Touch2See funded by Eindhoven Artificial Intelligence Systems Institute (EAISI) of Eindhoven University of Technology (TU/e). (Corresponding author: Marco Fattori.)
+Jixuan Mou and Marco Fattori are with the Department of Electrical Engineering, Eindhoven University of Technology, 5600 MB Eindhoven, The Netherlands, and also with Eindhoven AI Systems Institute (EAISI), Eindhoven University of Technology, 5612 AJ Eindhoven, The Netherlands (e-mail: m.fattori@tue.nl).
+Pieter Harpe and Eugenio Cantatore are with the Department of Electrical Engineering, Eindhoven University of Technology, 5600 MB Eindhoven, The Netherlands.
+Alessandro Saccon is with the Department of Mechanical Engineering, Eindhoven University of Technology, 5600 MB Eindhoven, The Netherlands, and also with Eindhoven AI Systems Institute (EAISI), Eindhoven University of Technology, 5612 AJ Eindhoven, The Netherlands.
+Digital Object Identifier 10.1109/JSSC.2026.3683078
+
+Fig. 1. (a) Time-sparse signal example. (b) CT event-driven sampling and conversion. (c) Conventional uniform sampling. (d) DT sampling and eventdriven conversion [10].
+skins for robotics [2], and biomedical devices [3], [4]. By performing computation directly at the sensing node, the required data rate for signal description can be significantly reduced by leveraging prior knowledge of the acquired signals. This approach minimizes the amount of data that must be stored or transmitted, thereby improving resource utilization efficiency and reducing energy consumption, which is an essential requirement for battery-powered or energy-harvesting systems.
+Achieving this goal requires hardware that is both highly energy-efficient and tailored to the characteristics of the target signals. For example, time sparsity is a common feature in several of the aforementioned applications; event-driven sensing based on continuous-time (CT) level-crossing analog-to-digital converters (LCADCs) [3], [5], [6] has proven to be an efficient and effective method for converting sparse signals into pulse trains. Unlike conventional uniform sampling Nyquist analogto-digital converters (ADCs), CT-LCADCs perform sampling and conversion only when the input signal crosses predefined amplitude thresholds (quantization levels), as shown in Fig. 1(a) and (b). Therefore, when the signal amplitude remains within two levels for a certain interval of time (i.e., the signal is "sparse" in time, having long intervals when no signal activity is observed), the CT-LCADC will not perform any conversion, thereby reducing power consumption
+
+0018-9200 © 2026 IEEE. All rights reserved, including rights for text and data mining, and training of artificial intelligence and similar technologies. Personal use is permitted, but republication/redistribution requires IEEE permission. See https://www.ieee.org/publications/rights/index.html for more information.
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 22:47:38 UTC from IEEE Xplore. Restrictions apply.
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+2
+
+IEEE JOURNAL OF SOLID-STATE CIRCUITS
+
+and output data rate. From a system-integration perspective, however, CT-LCADCs face a major challenge: the following digital processors must operate with asynchronous signals [3]. While spiking neural network (SNN) engines [7] offer an energy-efficient on-chip solution for this problem, often synchronous digital processors are preferred, and thus a clock running at very high frequency is used to re-synchronize the pulses without introducing excessive quantisation errors [5]. Alternatively, the works [8] and [9] use auxiliary subADC (pipeline and successive approximation register (SAR), respectively) to correct the loop delay-induced distortion. This approach enables a very high resolution but requires still retiming.
+To ease the integration of level crossing ADCs in digital systems, while maintaining the benefits of power efficiency and data compression, a discrete-time LCADC (DT-LCADC) has been proposed in [11]. In a DT-LCADC, the input is digitized at a clock edge only when the sample amplitude deviates by one or more quantization levels from the previous sample, as shown in Fig. 1(d). Since the output bitstream is synchronous to the system clock, DT-LCADCs offer simpler interface solutions with digital processors and can achieve improved versatility and energy efficiency at the system level, compared to their CT counterparts. However, these advantages are obtained at the cost of a higher converter power consumption since the comparator is activated at each clock cycle, even in the absence of a variation in signal amplitude.
+Several techniques have been proposed to mitigate this overhead, as discussed in [12] and [13], making the DT-LCADC architecture progressively more energy efficient. Despite these improvements, to date, DT-LCADCs still underperform their CT counterparts from the energy efficiency perspective. A more detailed analysis of these solutions reveals that a large oversampling is still needed in [13] for its synchronous delta modulation, limiting power efficiency. In [12], the converter uses a fixed number of linear searches triggered by level crossings, enabling operation at a lower oversampling rate, which, however, remains 13 times higher than the converter bandwidth. This oversampling rate is needed because of the large number of linear searches required to track rapid variations of the input signal. In addition, the energy efficiency of a DT-LCADC is signal-dependent and significantly degrades if the input signal is not sparse.
+To fill this gap, we propose here a process voltage and temperature (PVT)-robust DT-LCADC architecture that is energy-efficient for both sparse and non-sparse inputs, achieving best-in-class Walden figure of merit (FoMW ) and the highest data compression ratio (CR) among state-of-the-art LCADCs. This article expands on the results presented in [10], discussing a new implementation of the DT-LCADC, which includes circuitry to make the DT-LCADC robust to PVT, and integrates a data encoder that is tailored to the input signal rate of change, to achieve savings in the energy needed to transmit the output data.
+This article is further structured as follows. Section II presents an analysis of the energy consumption in a system exploiting a DT-LCADC. Section III describes the proposed LCADC topology and its main features. Section IV shows
+
+the simulation result of the proposed DT-LCADC at different PVT variations. Section V shows the measurement results and a performance comparison with the state-of-the-art, followed by a conclusion drawn in Section VI.
+II. SYSTEM-LEVEL ENERGY EFFICIENCY ANALYSIS
+A conventional signal acquisition chain includes analog front-ends, an ADC, and a digital data transmitter. The energy consumption of the analog front-ends varies greatly depending on the characteristics of the input signal, and is beyond the scope of this article. In this section, the energy consumption of DT-LCADCs and the energy needed to transmit their output data are analyzed.
+
+A. Energy Consumption of DT-LCADCs
+Triggered by the sampling clock, a DT-LCADC samples the input and performs two comparisons to decide whether the current sample is one or more levels higher or lower than the previous one (phase 1). In case a level crossing is detected, the ADC enters the second phase (2) and triggers a conversion [12], [13]. DT-LCADCs typically deploy clocked dynamic comparators to avoid consuming continuous current. The number of comparators in a DT-LCADC can vary by design; it can feature two comparators with a higher and a lower threshold, respectively, triggered by the same comparison clock, or it can use one comparator with two different thresholds, triggered by two comparison clocks. Moreover, the sampling clock frequency can be made adaptive according to signal activity [13]. Indeed, in all design variations two comparisons are needed in 1 for each sample, thus, in a given time interval, the number of samples (Ns) can be used to calculate the energy that a DT-LCADC needs in phase 1, the energy consumption in a given time in the first phase of a DT-LCADC (PLC1 ) can be related to the number of samples taken and the energy required for the comparison to
+
+ELC1 = 2 × Ns × EComp
+
+(1)
+
+where Ns is the number of samples taken during the time considered, and EComp is the energy required for a comparison.
+After the level-crossing decision is made in 1, the DTLCADC performs the Analog-to-Digital conversion (phase
+
+2). The energy consumption during 2 is calculated as follows:
+
+ELC2 = NComp2 × EComp
+
+(2)
+
+where NComp2 is the number of comparisons needed in phase 2 during the time considered.
+Adding (1) and (2) leads to the energy consumption of the
+DT-LCADC in the given time
+
+ELC = EComp × 2 × Ns + NComp2 .
+
+(3)
+
+Equation (3) states that the energy consumption of a DTLCADC is determined by the number of samples and the number of comparisons during 2 in a given time. The work in [13] proposes an adaptive sampling clock, such that for every sample, a maximum level crossing of 1 is expected; therefore,
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 22:47:38 UTC from IEEE Xplore. Restrictions apply.
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+MOU et al.: 10.1-ENOB 8KHZ BANDWIDTH 95­250NW PVT-ROBUST DT LEVEL-CROSSING ADC
+
+3
+
+Fig. 2. Total number of comparisons required to perform one conversion versus delta amplitude between adjacent samples (resolution = 10 bits) [10].
+
+dashed-green line in Fig. 2. When Vin is smaller than 1 VLS B, the ADC will label the event as no level crossing (no LC) and will take no further action. When Vin is between 1 and 2 VLS B, the sample is labeled "slow" (slow up or slow down depending on whether Vin is positive or negative) and the ADC output should communicate an increase in the input by +1 or -1 LSB, respectively. When Vin is more than 2 LSBs, the sample is labeled as fast, and a complete SAR search is initiated, providing a serial output word that represents the input sample with the given number of bits. The proposed search concept minimizes the total number of comparisons during the DT-LCADC conversion (2). Following the green line in Fig. 2, this approach results in a better and more balanced energy efficiency for both sparse and generic signals with various signal activities.
+
+to prevent slope overloading, the sampling frequency must be
+
+at least [13]
+
+Vin
+
+fsmin
+
+=
+
+t . LS B
+
+(4)
+
+For example, to digitalise a full-swing sinusoid input signal with a 10-bit resolution at the upper edge of the signal bandwidth, fsmax needs to be 6400 times larger than the given bandwidth, which is as demanding as the required re-timing clock to quantise the asynchronous output of a CT LCADC [5]. The work in [12] successfully makes it possible to cope with a maximum of 32 level crossings for each sample in a 7-bit DAC, and fixes the sampling frequency to be a factor 13× higher than the bandwidth. This reduction in fs results in a lower number of samples (and thus Ns) and eventually in a lower ELC according to (3).
+However, both [12], [13] rely on linear search during conversion (2), meaning that the ADC tries to track the input signal linearly by updating the DAC by only 1 VLS B at each comparison clock. In case of large input signal changes, this results in a large number of NComp2 , which dominates the total energy consumption of the DT-LCADC.
+
+B. Proposed Adaptative Search Concept for the DT-LCADCs
+To reduce total energy consumption, both the number of samples and the number of comparisons during 2 should be minimized. As explained above, state-of-the-art DT-LCADCs [12], [13] use a linear search algorithm that starts from the value of the previous sample. If the delta between the new sample and the previous one (defined here as Vin) is close to 1 VLS B, the search converges within a few comparisons (Fig. 2), improving the energy-efficiency according to (3). However, if the input signal is rapidly changing and therefore Vin is much larger than 1 VLS B, the linear search will require several comparisons to converge (Fig. 2--blue line). In this case, a SAR binary search would require far fewer comparisons (Fig. 2--red line) and, therefore, would be more energy-efficient.
+This article proposes an adaptive search concept for a DT-LCADC that applies a linear search or a binary one, depending on the amplitude of Vin, as illustrated by the
+
+C. Energy Per Bit of Transmission
+CT-LCADCs have proven to be effective in reducing the needed output data rate when the input signal is sparse [5], [14], [15]. As CT-LCADCs asynchronously output 1-bit pulses every time the signal crosses a level, their combination with asynchronous processors acquires and processes data locally at the edge, and can substantially reduce the data traffic. However, this is not the case if a CT-LCADC communicates with a synchronous processing engine, as a high-frequency re-timing clock is required to quantise the asynchronous pulses. The high-frequency re-timing clock must run continuously to avoid missing a pulse, jeopardizing the benefits of the CT-LCADCs in terms of energy efficiency.
+The synchronization of a DT-LCADC with a clocked processing engine is less cumbersome, as the ADC runs at a fixed sampling frequency and requires a fixed number of clock cycles to sample and convert. However, the energy needed for data transmission can be reduced by encoding the DT-LCADC output according to the type of detected event, prior to transmission. For example, a straightforward approach would be to encode a sample when no level crossing is detected with a sequence of static zeros, so that no transition happens on the serial output line. Assuming that the dominant cause of energy consumption in data transmission is the dynamic energy needed to charge and discharge the serial output line, no energy would be needed to transmit this "no level crossing" information from the ADC to the processor. In this work, the DT-LCADC aims to maximize the savings of data transmission energy. The percent average saving in data transmission energy (SDTE) using the above-mentioned encoding of the no level crossing events can be calculated as
+
+S DT E = Dconv - DLC × 100%
+
+(5)
+
+Dconv
+
+where Dconv is the data rate produced by a conventional Nyquist ADC, providing the same resolution and bandwidth as an SAR ADC. DLC is the compressed data rate of a level crossing ADC, which can be calculated as the ratio between the samples that produce a level crossing and the total number of samples.
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 22:47:38 UTC from IEEE Xplore. Restrictions apply.
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+4
+
+IEEE JOURNAL OF SOLID-STATE CIRCUITS
+
+Apart from the front-end, the energy consumption of the full
+
+system includes the ADC and the transmission energy. Trans-
+
+mission energy is usually defined as the energy needed per bit.
+
+Take a very low-energy wireless Bluetooth link proposed in [16] for example, the energy required per bit is 3.8 nJ/bit. Since
+
+the discrete-time ADC provides an output in a binary format,
+
+the energy required for the conversion can be approximated
+
+using the FoMW and ADC resolution ENOB as
+
+Ebit
+
+=
+
+FoMW × 2ENOB . ENOB
+
+(6)
+
+A typical Ebit for DT-LCADCs, calculated from [12], [13], varies from 0.2 to 4.5 pJ/bit, which can be significantly smaller
+
+than the transmission energy. Therefore, from a system energyefficiency perspective, a suitable ADC output data encoding
+
+scheme can be beneficial when sparse signals are considered.
+
+D. Proposed Output Encoder for the DT-LCADC
+To reduce the energy overhead of transmitting repetitive payloads when the input signal is sparse beyond the simple scenario described here above (Section II-C), an on-chip encoder is designed in this work to complement the ADC compression algorithm. As discussed in Section II-B, the samples taken by the ADC can be categorized into four types of events: 1) no LC; 2) slow up; 3) slow down; and 4) fast. Among these events, if the event is No LC or slow, the relative value of the current sample to the previous one can be immediately decoded by transmitting the type of event instead of the payloads. Only when a fast event occurs, the current digitalized output is unknown with respect to the previous sample, and hence it is required to transmit the whole payload containing a number of bits in sequence equal to the ADC resolution. Therefore, the encoder encodes the type of events into a 2-bit header: 00 for no LC, 01 for slow up, 10 for slow down, and 11 for fast. After the header, the remaining 10-bit payload will be dynamically loaded only when a Fast event occurs; otherwise, the payload will contain all zeros. In this way, the energy per transmitted bit over the output data bus can be effectively minimized, improving the overall system energy efficiency.
+Compared to a simple encoder described in Section II-C (transmit 0s for No LC and all payloads for other events), the proposed encoder can further increase the SDTE. Fig. 3 shows the energy savings in data transmission of the simple encoder and the proposed encoder, compared to transmission of the full payload at the Nyquist rate. To enable a fair comparison, we assume the activity ratio of data bit transitions between 0 and 1 in a serial data line to be 50%. It can be seen that using the proposed encoder can save more transmission energy than using the simple encoder for signals with various sparsity.
+Moreover, for CT-LCADCs, a similar SDTE can also be calculated. The architecture provided in [5] is selected, which produces a 2-bit per level crossing event. To facilitate the result comparison, an additional bar (in yellow) has been added to each category provided in Fig. 3. The only assumption on the CT-LCADC input signal is that the Vin triggers at most between 6 and 8 level crossings, leading to a maximum of 12 to 16 bits of data output. This is a conservative assumption,
+
+Fig. 3. SDTE of DT-LCADC using simple and proposed encoder, and CT-LCADCs for different normalized event occurrences.
+Fig. 4. Proposed DT-LCADC architecture.
+as in practice, this number can be even higher (reaching up to hundreds of levels). As can be seen from Fig. 3, the CT-LCADC always provides a lower SDTE than our discrete time ADCs with the proposed encoding.
+For completeness, it is worth mentioning that the encoding method proposed in this work, entails at receiver side the use of standard serial protocol, a simple decoder to distinguish different event classes ("no LC", "slow," and "fast") encoded in the header that is transmitted together with ADC conversion value (payload) and an accumulator to reconstruct the digitized signal produced from "slow" events.
+III. PROPOSED DT-LCADC A. ADC Architecture
+Fig. 4 shows in detail the proposed 10-bit DT-LCADC circuit architecture [10]. A few of the ADC main building blocks are based on previously reported works, including the track and hold circuit [17], [18], DAC [17], [18], and comparator [19]. The ADC can handle 8 differential channels
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 22:47:38 UTC from IEEE Xplore. Restrictions apply.
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+MOU et al.: 10.1-ENOB 8KHZ BANDWIDTH 95­250NW PVT-ROBUST DT LEVEL-CROSSING ADC
+
+5
+
+Fig. 5. Proposed DT-LCADC time operating diagram. Clksys is the system clock that triggers the sampling and ADC conversion. Clkcomp is the comparator clock internally generated by the asynchronous SAR logic. Comp out is the comparison result. Comp slow becomes high to indicate a "slow" event. Comp fast is high if an event is classified as "fast."
+that are multiplexed in time. Fig. 5 shows the main internal signals and the ADC input for only one channel without multiplexing. The input signal is sampled to the top plate of the DAC at the rising edge of Clksys. After sampling, the dynamic comparator is triggered, generating internally Ready pulses to synchronize the subsequent operations [20]. An inverted and delayed version of the Ready signal is fed back to the comparator, enabling input Clkcomp. The first and second periods of Ready correspond to the phase 1, which is needed for every sample. The DAC is precharged to the previous sample (Vprev stored in a shift register, which keeps the information for each channel). Before the first comparison, the DAC is incremented by 1 VLS B compared to the previous sample value, and at the second comparison, the DAC is decremented by 1 VLS B compared to the previous sample value. In such a way, at the end of 1, the ADC knows if the present sample is within ±1VLS B of Vprev. This ±1VLS B interval around Vprev is called the LC threshold. If this is not the case, a level has been crossed, and thus LC is asserted.
+The Ready signal indicates when the comparisons are complete. By introducing a current-starved inverter as a reference delay, and by propagating the start of the comparison signal Clkcomp through it, the comparator delay can be monitored [18]. The comparator delay is an inverse function of its input overdrive, i.e., the difference between the present and previous sample, incremented or decremented by 1 VLS B. By monitoring this delay, we can thus obtain information on the change rate of the input signal. If the comparator delay is lower than the properly tuned reference delay, the current sample is more than 1 VLS B away from the present comparator reference voltage. This comparison is then classified as "comp fast" (example is event 3 in Fig. 5). Conversely, if the comparator delay is larger than the reference, the current sample is within 1 VLS B of the present comparator reference voltage, meaning a "comp slow" occurs (examples include the second comparison for event 1
+
+and the first comparison for event 2 in Fig. 5). The boundary between slow/fast detection can be set to 1VLS B by tuning the reference delay with a suitable external Vbiasext. This type of slow or fast comparison is executed synchronously with the comparator clock (Clkcomp).
+The information provided by the LC and the slow/fast detection modules is used to control the DAC (and thus select between linear or binary search) in the next phase (2). Fig. 5 shows the timing diagram and an example signal with the corresponding levels. For sample 1 in Fig. 5, "no LC" event is detected, as the example input (green line) is within the LC thresholds (purple lines). In case of a "no LC" event, 2 will be skipped. Samples 2 and 4 are classified as "slow" events, as the input signal is only 1 LSB higher and lower than the LC thresholds, respectively. In the case of "slow" events, the comparator will be disabled, and the SAR logic will not be triggered to save energy. To update the LC threshold window, the digital code (stored in the individual shift register required for this channel) representing the previous sample will be incremented or decremented by 1 VLS B according to the results of the first two comparisons. Sample 3 is classified as a "fast" event, since no slow comparison is detected during 1. Thus, in 2, a complete SAR conversion including ten additional comparisons is triggered, self-synchronized by the comparator Ready signal. The conversion result will be written into a 10-bit shift register memory and used as a start point for the following conversion.
+B. Automatic Bias Voltage Generation and Regulation
+The current-starved inverter-based reference delay should have an accurately chosen bias voltage to differentiate when the input of the comparator is below or above 1 VLS B of the LC thresholds, defined as slow/fast threshold. However, the reference delay block is intrinsically PVT dependent. Our previous work [10] uses an externally provided Vbiasext to adjust the reference delay, which requires calibration for every chip, and in case of supply or temperature variations. If Vbias is incorrectly set, the proposed DT-LCADC remains functional, as any wrong "no LC" or "slow" events in the previous sample will be corrected by a complete SAR conversion in subsequent samples. However, the overall performance of the ADC will degrade in both linearity and power consumption due to incorrect detections of slow events and unnecessary complete SAR conversions triggered in the phase phi2. To avoid this shortcoming, in this article, we propose a method to automatically generate the voltage Vbias on the chip.
+Fig. 6 shows that Vbias is generated and tuned by charging/discharging the capacitor (C1) through M1 and M2. To achieve a large time-constant in the control loop without needing a very large capacitor C1, sub-threshold biased M3 and M4 are used as large pseudo resistors. The regulation is based on enabling UP and DOWN signals according to a control logic. If Vbias increases, the reference delay decreases, and vice versa. The logic uses as inputs comp out, ready, and slow signals that are evaluated during 1 and a counter driven by ready and slow that evolves in every 2. In both blocks, the ready signal is used as a clock to latch the comparison
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 22:47:38 UTC from IEEE Xplore. Restrictions apply.
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+6
+
+IEEE JOURNAL OF SOLID-STATE CIRCUITS
+
+Fig. 7. Simulation result of the internally generated bias voltage for different PVT variations, giving a test input of 40-Hz sinusoid.
+
+Fig. 6. Vbias generation and regulation scheme and its corresponding truth table used for the self-bias control V = Vin - Vprev.
+
+reference delay is too short, and Vbias should be decreased to increase the delay. If the slow comparisons are less than 2, the reference delay is too long, and Vbias will be increased to make the delay shorter. A more detailed explanation of the control loop is provided in the Appendix.
+
+result (comp out) and the comparison speed (slow). During 1, both the results of the two fixed comparisons needed to detect the LC (as discussed in Section III-A) and the comparison speed are latched and stored in the register 1. If the ADC enters into 2, the occurrence of slow comparisons during the 10× SAR comparisons is counted, and the counter result is used to accurately tune the slow/fast threshold.
+The truth table in Fig. 6 shows how the logic generates
+UP or DOWN signals to control M1, M2, and eventually Vbias. The table shows all 16 combinations for the comparison result and the value of the speed of the first two comparisons during 1. The second and third columns indicate the result and the speed of the first comparison, where the comparator assesses if Vin > Vprev + VLS B, and the fourth and fifth columns show the result and speed of the second comparison (Vin < Vprev - VLS B). For cases 2, 3, 7, and 10, the decisions made during 1 are correct and coherent, so no further bias voltage tuning is needed. However, the bias voltage stored in C1 can gradually discharge, leading to a longer reference delay and faster events than expected (e.g., Case 4). In this
+case, the bias voltage should be increased by enabling UP
+to charge the capacitor. The cases highlighted in light red
+are logically forbidden and can only occur due to, e.g., large unwanted interferences that affect the comparison: in these cases, the ADC enters 2, and the current DAC content is refreshed. For all cases where an SAR conversion is triggered (2 is entered), the data-driven operation proposed in [17] and [21] is used here to tune Vbias. During the 10-bit search of the SAR conversion, an exact number of 2 slow comparisons
+is expected. If the slow comparisons are more than 2, the
+
+IV. SIMULATION RESULTS
+Fig. 7 shows the simulation result of the internal bias voltage value when automatic bias regulation is enabled for different process corners, temperature, and supply voltage variations. More in detail, these variations are classified as typical corner (tt), slow-slow (ss), fast-fast (ff), slow-fast (sf), and fast-slow (fs) process corners; 5% higher supply voltage (HV), 5% lower supply voltage (LV), 80 C (HT), 0 C (LT), and fast-fast corner combined with low temperature (ff-LT). The sampling frequency of the ADC is set to 32 kHz. A 40-Hz single tone is selected as the input signal, as it can trigger a balanced number of fast, slow, and no LC events. An initial bias voltage condition of 488 mV is chosen to speed up the settling of the Vbias. In Fig. 7, it can be seen that in these simulation conditions, the bias voltage Vbias settles with a marginal error of 5% from the steady state value within 2 ms, in all the PVT cases analyzed. After settling, a maximum of 1 mV of fluctuation can still be observed; however, this has a negligible impact on the overall efficiency.
+Fig. 8 further reveals that, for the given variations, the proposed DT-LCADC can detect and correctly classify both events (LC, slow, and fast) with consistency for the given seven PVT corner cases. The percentage of fast events has been omitted in Fig. 8 for better readability. The only case analyzed in which the automatic bias generation circuit fails is at the ss corner combined with a temperature of 80 C and a supply of 0.8 V, because the ADC comparator does not work under these particular conditions. Correct functionality is re-established in this case by increasing the supply to 0.85 V. Moreover, the total power consumption in simulation has a variation of ±7% for different PVT conditions, which is reasonable and acceptable.
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 22:47:38 UTC from IEEE Xplore. Restrictions apply.
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+MOU et al.: 10.1-ENOB 8KHZ BANDWIDTH 95­250NW PVT-ROBUST DT LEVEL-CROSSING ADC
+
+7
+
+Fig. 10. Measurement setup.
+Fig. 8. Simulated percentage of events for a 40-Hz sinusoid input for different PVT variations.
+
+Fig. 9. Micrograph of the proposed DT-LCADC.
+
+Fig. 11. Measured spectrum of the digitalized output for a 1-kHz single tone test.
+
+V. MEASUREMENT RESULTS
+The proposed 10-bit DT-LCADC was fabricated using a 65-nm CMOS process. The active area is approximately 0.04 mm2 and consists of all the blocks shown in Figs. 4 and 6. The micrograph of the chip is shown in Fig. 9.
+A. Measurement Setup
+For every channel of the proposed DT-LCADC, the 12-bit digital codes 2-bit header and 10-bit dynamic payload) are serialized internally and acquired using a digital signal controller (DSC) (Microchip dsPIC33CK64MP105). The very same DSC is also used to provide the system clock fsys that triggers a complete ADC cycle. To avoid DAC overvoltage conditions during transitions between consecutive input samples with large amplitude and opposite polarity, a minimum oversampling ratio of 2 is required ( fsys/BW  4). The 8-channel DT-LCADC operates with a system clock (Clksys) of 256 kHz, resulting in a per-channel sampling rate of 32 kS/s and an effective signal bandwidth of 8 kHz.
+The measurement setup is shown in Fig. 10. This setup can be further simplified by using the USB cable to provide power at the same time as data transmission. For signal-to-noise and distortion ratio (SNDR) characterization, a Stanford Research low-distortion function generator (DS360) was used to provide the sinusoidal input. For power consumption measurement, a Keithley 2400 source meter was used to measure the current, which is then multiplied by the supply voltage to calculate
+
+the power. For sparse signal tests, the raw data are fed into the chip input by the Keysight 33500B waveform generator. Finally, for temperature variation tests, the whole setup was placed in the environment chamber (Angelantoni DY110). An onboard 20-kHz passive low-pass filter is added very close to the input of the chip to act as an antialiasing filter.
+B. SNDR and Power Consumption
+Due to its inherent time-domain sampling and amplitude quantization, the reported DT-LCADC architecture does not need post-interpolation techniques (e.g., spline-based methods) [5] for the signal reconstruction process. Because of the described encoding strategy, the output bitstream of the LCADC contains the full digital representation of the current sample only when a Fast event is triggered; therefore, when consecutive slow or no LC events are detected at the beginning of the data acquisition, one cannot quantify the output. To solve this, the DT-LCADC is periodically reconfigured every second to execute a complete SAR search and dispatch its complete digital output, regardless of the event types. Given the sampling frequency of 32 kHz, this periodic reconfiguration has a negligible impact on the overall energy efficiency.
+Measurement results with a 1-kHz input tone demonstrate an SNDR of 62.6 dB within the 8kHz bandwidth (Fig. 11), corresponding to an effective resolution of 10.1 bits (ENOB). The SNDR measured on four different chips varies from 62.5 to 62.9 dB. Fig. 12 shows the trend of the measured
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 22:47:38 UTC from IEEE Xplore. Restrictions apply.
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+8
+
+IEEE JOURNAL OF SOLID-STATE CIRCUITS
+
+Fig. 12. (a) SNDR versus input amplitude. (b) SNDR versus input frequency. (c) Measured power consumption versus sinewave input frequency.
+Fig. 13. Original versus digitalized neural signal.
+
+C. Sparse Signal Measurements
+To further evaluate the performance of the converter, examples of 384 neural signals available in the dataset [22] have been selected as test inputs. The signals in the dataset have been first digitally pre-processed with a first-order 20-kHz bandwidth low-pass filter as discussed in [12]. An example of a digitalised output signal is shown in Fig. 13 (blue), together with the input raw data (orange). On average, the proposed LCADC requires 120 nW/channel to convert such neural signals, which is only 25 nW more than the power needed for DC inputs, proving its efficiency in dealing with time-sparse signals. The root-mean-square error (RMSE) of the digitalized LCADC output in a measurement window of 1 s is 0.36 mV. The RMSE is 0.32 mV for the same time window when reconfiguring our ADC to operate in an SAR mode for all the samples of the acquisition. This is to ensure a consistent benchmark between the two architectures as they are physically based on the same components and therefore prove that the proposed LCADC can represent the original data with the same quality as an equivalent SAR ADC.
+When fed with the described input, the proposed converter achieves an average data rate DLC = 5.1 kb/s/channel. Indeed, the compact encoding of each slow event (2 bits) enables a significant reduction in data rate from the Dconv = 160 kb/s/channel, which would otherwise be required by a Nyquist ADC. This reduction corresponds to a SDTE of 96.4% for this neural dataset [22]. At system level, data rate reduction is a key feature to enable ultralow-power applications: for example, by using the proposed DT-LCADC instead of a Nyquist ADC, to digitize these neural signals, up to 59 µW in transmission power could be saved thanks to data compression and encoding while using, e.g., a low-energy (3.8 nJ/bit) wireless Bluetooth radio [16].
+In addition, a standard ECG dataset [23] and an in-house tactile sensing dataset coming from sensor measurements were also fed into the proposed DT-LCADC, achieving an SDTE of 88% and 55%, respectively.
+
+SNDR when varying the amplitude and frequency of a sinusoidal input tone, and the corresponding power consumption, further decomposed into its digital, comparator, and DAC components. Digital power includes contributions from digital logic and memory. The comparator power includes power dissipation from the dynamic comparator, the reference delay block, and associated counters. The DAC power contains only the power consumed by the DAC. The chip operates at a 0.8-V supply and consumes 95 and 250 nW/channel, for quasistatic input and a Nyquist input sinusoid signal, respectively. At the two extremes of the frequency span, the converter power consumption exhibits different asymptotic trends: for input frequencies smaller than 10 Hz, most of the adjacent samples differ by less than 1 LSB, never triggering a complete SAR search. On the other hand, for input frequencies higher than 300 Hz, most events are classified as "fast," requiring a complete binary search for nearly every conversion.
+
+D. Robustness Against Temperature and Supply Voltage Variations
+Our previous DT-LCADC [10] relied on fine-tuning of the delay line bias voltage from an external source, such as an LDO and a power supply. However, this approach makes the ADC performance sensitive to supply voltage and temperature variations, process and mismatch parameter spread, etc. To highlight this, a few dies of the DT-LCADC proposed in [10] have been characterized. In Fig. 14, the percentage of fast and slow events that the externally biased LCADC in [10] records using as input neural signals, while operating at room temperature. It should be mentioned that "no LC" events are not shown in the figure to improve readability; however, these can be extracted as a complement to 100% of the other two event types. The measurement of the first chip (defined here as "chip1") is performed after fine-tuning of the external bias voltage. The very same fine-tuned bias voltage Vbias is then applied to another two chips (labeled here as "chip2a" and "chip3a") and the same input neural signal is re-played. From
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 22:47:38 UTC from IEEE Xplore. Restrictions apply.
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+MOU et al.: 10.1-ENOB 8KHZ BANDWIDTH 95­250NW PVT-ROBUST DT LEVEL-CROSSING ADC
+
+9
+
+Fig. 14. Percentage of event types obtained from the acquisition of the neural dataset using three different chips [10]. Measurement results for chip1, chip2b, and chip3b are obtained after externally optimizing the Vbias voltage for each individual chip. Measurement results for chip2a and chip3a are instead obtained by using the very same external bias voltage of chip1. All the measurements are performed at room temperature.
+
+Fig. 16. Percentage of events (slow in yellow, and fast in red) recorded with four chips (different alpha colors) having as input a neural signal. The four chips are characterized over a temperature range between 0 C and 80 C while operating with a 0.8-V supply voltage.
+
+Fig. 15. SNDR for a 19-Hz single tone from four chips tested at different temperatures with external (blue, green, and red) and internal self-biasing (purple) supply voltage.
+
+the results in Fig. 14, it can be clearly seen that the delay line is extremely sensitive to die-to-die mismatch, leading to the failure of the slow detection mechanism. Therefore, all events except for "no LC" ones are classified as fast, leading to a drastic reduction in energy efficiency. Clearly, after recalibration of the bias voltage Vbias (usually by tens of mV), the nominal performance of chips can be restored ("chip2b" and "chip3b" in Fig. 14). This analysis proves that the solution proposed in [10] can only be effectively used in combination with a foreground calibration algorithm.
+Similarly, Fig. 15 shows the SNDR measurements with a 19-Hz single tone over temperature for chips with automatic bias voltage generation (purple line) and with a fixed external bias tuned at room temperature (blue, green, and red lines for three test chips). The 19-Hz single tone is chosen because the three event types exist in an approximately equal proportion if Vbias is correctly tuned. From the measurement results, it can be seen that for temperatures lower than 40 C, the SNDR does not degrade because the reference delay is smaller than the nominal one, leading to misclassification of slow events into fast ones, and resulting in SAR conversions. Conversely, as the temperature increases, more events are misclassified as slow, eventually resulting in conversion errors due to slope overload, which significantly degrades the SNDR. The performance of the proposed self-biasing DT-LCADC
+
+Fig. 17. Percentage of events (slow in yellow, and fast in red) recorded with four chips (different alpha colors) having as input a neural signal. The four chips are characterized using a supply voltage range between 0.8 and 1.3 V. The measurements are performed at room temperature.
+(the purple line) remains consistent in SNDR, highlighting its effectiveness in counteracting temperature-induced variations.
+To further demonstrate the robustness of the proposed approach against device-to-device variability, additional tests over different temperatures and supply voltages, recorded from four DT-LCADC chips, are shown in Figs. 16 and 17, respectively. In both figures are shown the percentages of fast and slow events detected by each self-biased DT-LCADC chip while acquiring the example neural signal (Fig. 13). Also in this case, for readability, the "no LC" events have been omitted. The results clearly show that the percentages of fast, slow (and thus no LC) events are consistent over temperature and supply voltage variations. This evidence proves that the variation in reference delay block introduced by voltage, temperature, and die-to-die variations can be effectively self-compensated by the proposed automatic bias generation scheme.
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 22:47:38 UTC from IEEE Xplore. Restrictions apply.
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+10
+
+IEEE JOURNAL OF SOLID-STATE CIRCUITS
+
+TABLE I PROPOSED DT-LCADC PERFORMANCE SUMMARY AND COMPARISON WITH THE STATE-OF-THE-ART
+
+The performance of the proposed DT-LCADC is compared in Table I against the relevant state of the art. With an energy per conversion ranging between 5.3 and 14.2 fJ/c.s (for a quasi-static input and Nyquist rate sinusoid input, respectively), this work achieves the lowest Walden FoMW , among all reported CT and DT-LCADCs. The reported FoMW for the sparse signal (such as the DC input) is the lowest among the DT-LCADCs. Moreover, the ratio between the maximum and minimum power consumption of this LCADC obtained for a sinusoidal and a static input is the lowest in its class, highlighting its versatility for different types of input signals. This feature allows the converter, e.g., to maintain its efficiency in case the signal sparsity is affected by unwanted interference (e.g., from power lines and motion artifacts) or by intermittent components (like vibrations in tactile sensing). Furthermore, this ADC to operate requires the lowest oversampling rate compared to all other DT-LCADCs. Finally, the proposed LCADC achieves the highest data transmission energy saving for the analyzed neural dataset [12].
+VI. CONCLUSION
+Unlike conventional SAR converters, DT-LCADCs leverage signal properties such as time sparsity to enable data compression and transmission energy savings. However, DT-LCADC power consumption typically increases sharply with higher signal activity as a combined result of the large oversampling ratio and numerous comparisons needed when processing rapidly varying inputs. This characteristic limited the efficiency and applicability of DT-LCADCs to time-sparse signals only. To address this limitation, we introduce a novel DT-LCADC architecture, implemented in 65-mm CMOS, that combines the benefits of level-crossing and SAR conversion. The proposed design maintains low power operation and enables large savings in the data transmission energy for sparse input signals, while also handling fast-changing
+
+inputs without jeopardizing energy efficiency. In addition, the design is also insensitive to device-to-device, temperature, and supply voltage variations, demonstrating its potential for a versatile range of applications. Achieving a Walden FoMW of 5.3­14.2 fJ/conversion-step and a data transmission power saving ratio of 94.4% on a neural signal dataset, the proposed circuit performance advances the state-of-the-art among DT-LCADCs.
+APPENDIX
+This appendix expands the description of the delay control loop used to regulate the internally generated bias voltage, based on the truth table shown in Fig. 6.
+For No LC events (determined only by comp out), namely Cases 1­4, the current sample is within the two LC thresholds at a delta of 2 VLS B. As the slow/fast detection threshold is also 1 VLS B, 1× slow comparison is expected to occur (an example of this is event 1 in Fig. 5). Therefore, if 2× slow comparisons are obtained (Case 1), it means the reference delay is too short, Vbias needs to be reduced by enabling DOWN and discharging the capacitor C1. Similarly, if both comparisons are fast (Case 4), Vbias needs to increase by forcing C1 to charge up.
+For slow events, by design, only one slow comparison should be expected (Cases 7 and 10), and hence no bias tuning should be applied. However, incorrect bias voltage could cause both comparisons to be slow (Cases 5 and 9). These cases could only occur if bias tuning is not enabled for a few clock cycles, due to the inherent leakage currents that discharge C1. However, due to the large RC constant built from M3, M4, and C1, the bias voltage change due to leakage will be relatively slow. This could lead, for particular samples (cases 5 and 9), to operate with a slow/fast detection threshold slightly higher than 1 VLS B. In these cases, these events will still be classified as slow, but the control logic will tune down Vbias by discharging the capacitor.
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 22:47:38 UTC from IEEE Xplore. Restrictions apply.
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+MOU et al.: 10.1-ENOB 8KHZ BANDWIDTH 95­250NW PVT-ROBUST DT LEVEL-CROSSING ADC
+
+11
+
+For fast events when 2 is entered, it is not sufficient to use only the results during phase 1 to tune Vbias. The data-driven operation for the SAR ADC proposed in [17] and [21] can also
+be used here to directly tune Vbias. In one single comparison cycle, which can be any of the bit cycles, the difference of the input signals of the comparator can fall below 0.5 VLS B, and only in one comparison cycle, this difference is between 0.5 VLS B and 1 VLS B. For all other comparison cycles, the difference between the comparator inputs is larger than 1 VLS B. In our ADC, thus, only two slow comparisons are expected
+during a complete SAR search. The number of slow clocks is
+stored in the counter (in Fig. 6). At the end of the conversion (2), the logic will compare the result of the counter with two. Therefore, if three or more slow comparisons are seen during 2, Vbias should decrease by enabling DOWN. Similarly, if only one slow comparison or even none is detected, Vbias should increase.
+REFERENCES
+[1] G. Gallego et al., "Event-based vision: A Survey," IEEE Trans. Pattern Anal. Mach. Intell., vol. 44, no. 1, pp. 154­180, Jan. 2022.
+[2] M. D. Alea, M. A. Rosa, Y. Nowicki, M. Dandekar, K. Myny, and G. Gielen, "DERMIS: A flexible fully-integrated 600µm-resolution pertaxel slip-to-spikes tactile sensor readout on A-IGZO TFT for large-area high-density electronic skins," in Proc. Symp. VLSI Technol. Circuits (VLSI Technol. Circuits), Jun. 2025, pp. 1­3.
+[3] Y. He et al., "An implantable neuromorphic sensing system featuring near-sensor computation and send-on-delta transmission for wireless neural sensing of peripheral nerves," IEEE J. Solid-State Circuits, vol. 57, no. 10, pp. 3058­3070, Oct. 2022.
+[4] A. Akhoundi et al., "A scalable 1024-channel ultra-low-power spike sorting chip with event-driven detection and spatial clustering," IEEE J. Solid-State Circuits, vol. 60, no. 11, pp. 3985­4001, Nov. 2025.
+[5] M. Timmermans, K. van Oosterhout, M. Fattori, P. Harpe, Y.-H. Liu, and E. Cantatore, "A 1.8­65 fJ/Conv.-step 64-dB SNDR continuoustime level crossing ADC exploiting dynamic self-biasing comparators," IEEE J. Solid-State Circuits, vol. 59, no. 4, pp. 1194­1203, Apr. 2024.
+[6] S. Patil, A. Ratiu, D. Morche, and Y. Tsividis, "A 3­10 fJ/convstep error-shaping alias-free continuous-time ADC," IEEE J. Solid-State Circuits, vol. 51, no. 4, pp. 908­918, Apr. 2016.
+[7] J. D. Nunes, M. Carvalho, D. Carneiro, and J. S. Cardoso, "Spiking neural networks: A survey," IEEE Access, vol. 10, pp. 60738­60764, 2022.
+[8] Z. Wang, L. Meng, M. Zhao, M. Li, S. Song, and Z. Tan, "A 1 V 9­86 fJ/Conv.Step 72.5dB-SNDR level-crossing pipelined ADC with triggered sampling and level feedback," in Proc. IEEE Custom Integr. Circuits Conf. (CICC), Apr. 2025, pp. 1­3.
+[9] M. Li et al., "A 62.2dB SNDR event-driven level-crossing ADC with SAR-assisted delay compensation loop for time-sparse biomedical signal acquisition," IEEE Trans. Biomed. Circuits Syst., vol. 19, no. 2, pp. 344­356, Apr. 2025.
+[10] J. Mou, P. Harpe, A. Saccon, E. Cantatore, and M. Fattori, "A 9.98ENOB 8 kHz bandwidth 100­260 nW DT level-crossing ADC for sparse and generic signals," in Proc. IEEE Eur. Solid-State Electron. Res. Conf. (ESSERC), Sep. 2025, pp. 557­560.
+[11] H. Wang, F. Schembari, and R. B. Staszewski, "An event-driven quasilevel-crossing delta modulator based on residue quantization," IEEE J. Solid-State Circuits, vol. 55, no. 2, pp. 298­311, Feb. 2020.
+[12] S. van der Ven et al., "A 6.1fJ/conv-step 0.0017 mm2 level crossing ADC for compressive neural sensing with event-driven ramp generation and sparse DAC switching scheme," in Proc. IEEE Asian Solid-State Circuits Conf. (A-SSCC), Nov. 2024, pp. 1­3.
+[13] J. Van Assche and G. Gielen, "A 10.4-ENOB 0.92­5.38 µW eventdriven level-crossing ADC with adaptive clocking for time-sparse edge applications," IEEE J. Solid-State Circuits, vol. 59, no. 9, pp. 2858­2869, Sep. 2024.
+[14] J. Van Assche and G. Gielen, "Power efficiency comparison of eventdriven and fixed-rate signal conversion and compression for biomedical applications," IEEE Trans. Biomed. Circuits Syst., vol. 14, no. 4, pp. 746­756, Aug. 2020.
+
+[15] M. Trakimas and S. R. Sonkusale, "An adaptive resolution asynchronous ADC architecture for data compression in energy constrained sensing applications," IEEE Trans. Circuits Syst. I, Reg. Papers, vol. 58, no. 5, pp. 921­934, May 2011.
+[16] Y.-H. Liu et al., "A 1.9nJ/b 2.4GHz multistandard (Bluetooth low energy/Zigbee/IEEE802.15.6) transceiver for personal/body-area networks," in IEEE Int. Solid-State Circuits Conf. (ISSCC) Dig. Tech. Papers, Feb. 2013, pp. 446­447.
+[17] P. Harpe, E. Cantatore, and A. van Roermund, "A 10b/12b 40 kS/s SAR ADC with data-driven noise reduction achieving up to 10.1b ENOB at 2.2 fJ/Conversion-step," IEEE J. Solid-State Circuits, vol. 48, no. 12, pp. 3011­3018, Dec. 2013.
+[18] P. Harpe, E. Cantatore, and A. van Roermund, "A 2.2/2.7fJ/conversionstep 10/12b 40kS/s SAR ADC with data-driven noise reduction," in IEEE Int. Solid-State Circuits Conf. (ISSCC) Dig. Tech. Papers, Feb. 2013, pp. 270­271.
+[19] M. van Elzakker, E. van Tuijl, P. Geraedts, D. Schinkel, E. A. M. Klumperink, and B. Nauta, "A 10-bit charge-redistribution ADC consuming 1.9 µW at 1 MS/s," IEEE J. Solid-State Circuits, vol. 45, no. 5, pp. 1007­1015, May 2010.
+[20] S.-W. M. Chen and R. W. Brodersen, "A 6b 600MS/s 5.3 mW asynchronous ADC in 0.13 µm CMOS," in IEEE Int. Solid-State Circuits Conf. (ISSCC) Dig. Tech. Papers, Feb. 2006, pp. 2350­2359.
+[21] P. Harpe, E. Cantatore, and A. van Roermund, "11.1 An oversampled 12/14b SAR ADC with noise reduction and linearity enhancements achieving up to 79.1dB SNDR," in IEEE Int. Solid-State Circuits Conf. (ISSCC) Dig. Tech. Papers, Feb. 2014, pp. 194­195.
+[22] N. A. Steinmetz and M. Carandini, "Recording with a Neuropixels probe," Version 2, UCL Res. Data Repository, Cortexlab Univ. College London, London, U.K., Mar. 2019, doi: 10.5522/04/25232962.
+[23] P. Wagner, "PTB-XL, a large publicly available electrocardiography dataset," Physikalisch-Technische Bundesanstalt, Berlin, Germany, Tech. Rep., May 2020, doi: 10.13026/kfzx-aw45.
+[24] J. Van Assche, C. Frenkel, A. Safa, and G. Gielen, "FREYA: A 0.023mm2/channel, 20.8- µW/channel, event-driven 8-channel SoC for spiking end-to-end sensing of time-sparse biosignals," IEEE Trans. Circuits Syst. I, Reg. Papers, vol. 72, no. 3, pp. 1093­1104, Mar. 2025.
+Jixuan Mou (Graduate Student Member, IEEE) received the bachelor's degree from the University of Nottingham, Nottingham, U.K., in 2020, and the master's degree in microelectronics from Delft University of Technology, Delft, The Netherlands, in 2022. He is currently pursuing the Ph.D. degree with Eindhoven University of Technology, Eindhoven, The Netherlands.
+His main research interests include the field of analog-mixed signal chip design and system-level sensor integration.
+Pieter Harpe (Senior Member, IEEE) received the M.Sc. and Ph.D. degrees from Eindhoven University of Technology, Eindhoven, The Netherlands, in 2004 and 2010, respectively.
+In 2008, he started as a Researcher at the Holst Center/imec, Eindhoven. Since then, he has been working on ultralow-power wireless transceivers, with a main focus on ADC research and design. In April 2011, he joined Eindhoven University of Technology, where he is currently an Associate Professor of low-power mixed-signal circuits. Dr. Harpe served as a TPC Member for ESSCIRC and AACD. He was a recipient of the ISSCC 2015 Distinguished Technical Paper Award. He is the TPC Subcommittee Chair of ISSCC, a TPC Member of A-SSCC, an Associate Editor of IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS--I: REGULAR PAPERS, an SSCS AdCom Member-at-Large, and an IEEE SSCS Distinguished Lecturer.
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 22:47:38 UTC from IEEE Xplore. Restrictions apply.
+
+This article has been accepted for inclusion in a future issue of this journal. Content is final as presented, with the exception of pagination.
+
+12
+
+IEEE JOURNAL OF SOLID-STATE CIRCUITS
+
+Alessandro Saccon (Member, IEEE) received the Laurea degree (cum laude) in computer engineering and the Ph.D. degree in control system theory from the University of Padua, Padua, Italy, in 2002 and 2006, respectively.
+Until 2009, he held a research and development position at the University of Padua in joint collaboration with Ducati Corse, Bologna, Italy. From 2009 to 2012, he held a post-doctoral research position at the Instituto Superior Ta´ecnico, Lisbon, Portugal, sponsored by the Portuguese Science and Technology Foundation (FCT), Lisbon. He is currently an Associate Professor in nonlinear control and robotics at the Mechanical Engineering Department, Eindhoven University of Technology (TU/e), Eindhoven, The Netherlands. His areas of expertise include nonlinear control and estimation, robotics, numerical optimal control and optimization, multibody dynamics, geometric mechanics, and computer vision. His research interests are focused on modeling, analysis, and control of complex and highly dynamical robotic and mechatronic systems. His current research efforts are directed toward the development and validation of innovative control strategies for robotic systems with multiple intermittent dynamic contacts, with application in the field of dynamic robot manipulation and locomotion (H2020 EU Project I.AM.). Dr. Saccon received the Claudio Maffezzoni Best Ph.D. Thesis Award by the Politecnico di Milano for his thesis.
+
+Dr. Cantatore has been active in the Technical Program Committees of ESSDERC, IWASI, ESSCIRC, and ISSCC. In 2006, he received the ISSCC Beatrice Winner Award for Editorial Excellence and was nominated for the Scientific American Top 50 List. He received the Philips Research Invention Award in 2007, the Best Paper Award from ESSDERC 2012, the Distinguished Technical Paper Award from ISSCC 2015, and several best lecturer awards. He was nominated in 2016. At ISSCC, he was the Chair of the Technology Directions Subcommittee, the Program Chair, and the Conference Chair. He has been a Member-at-Large of the SSCS AdCom, an Associate Editor of IEEE TRANSACTIONS ON CIRCUIT AND SYSTEMS--I: REGULAR PAPERS, and the Editor-in-Chief of IEEE OPEN JOURNAL OF THE SOLID-STATE CIRCUITS SOCIETY.
+
+Eugenio Cantatore (Fellow, IEEE) received the master's (cum laude) and Ph.D. degrees in electrical engineering from the Politecnico di Bari, Bari, Italy, in 1993 and 1997, respectively.
+Till 1999, he was a fellow at the European Laboratory for Particle Physics (CERN), Geneva, Switzerland. In 1999, he moved to Philips Research, Eindhoven, The Netherlands. In 2007, joined Eindhoven University of Technology, Eindhoven, where he has been a Full Professor since 2016 and is currently one of the Chairs of the Integrated Circuits Group. He authored or co-authored more than 250 papers in journals and conference proceedings, and holds 15 patents. His research interests include the design and characterization of electronic circuits exploiting emerging technologies and the design of ultralow-power integrated systems.
+
+Marco Fattori (Member, IEEE) was born in Rieti, Italy, in 1990. He received the M.S. degree in electronic engineering from the Universita´ degli Studi dell'Aquila, L'Aquila, Italy, in 2014, and the Ph.D. degree from Eindhoven University of Technology (TU/e), Eindhoven, The Netherlands, in 2019.
+He joined as an Assistant Professor at the Integrated Circuits Group, Department of Electrical Engineering, TU/e. Since 2021, he has been the Co-Founder of the start-up company MicroAlign, Eindhoven. His research interests include analog and mixed-signal circuit design with Si-CMOS technologies, flexible and largearea electronics, and the use of machine learning techniques in circuit design.
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 22:47:38 UTC from IEEE Xplore. Restrictions apply.
+
+

@@ -1,6 +1,8 @@
 \chapter{Body Bias Trimming Strategy}
 \label{chap:trimming}
 
+Chapter~\ref{chap:async} ended with a converter that is linear at the typical corner and out of specification at every non-typical one. This chapter develops the correction.
+
 The slicer-based quantisation stage introduced in Chapter~\ref{chap:async}
 defines each decision threshold exclusively through the PMOS-to-NMOS sizing
 ratio of a CMOS inverter, as expressed by equation~(\ref{eq:trip_point}). This
@@ -145,61 +147,62 @@ the loss of linearity was found to cause DNL excursions beyond $0.5$~LSB,
 which takes the converter outside its linearity target under these conditions.
 
 \section{Offline Trimming Strategy via Body Bias Adjustment}
+\label{sec:offline_strategy}
 
 To restore the linearity of the thermometer coder across process corners
 without modifying the core circuit topology, an offline trimming strategy
-based on body bias adjustment was adopted. The principle of the approach is
-to apply distinct bulk voltages to the NMOS and PMOS transistors of the output
-slicer stage independently for each device type in a manner calibrated to
-shift the trip points back toward their nominal positions. Since both the NMOS
-bulk voltage $V_{BN}$ and the PMOS bulk voltage $V_{BP}$ contribute
-independently to the trip point through equations (\ref{eq:body_effect_nmos})
-and (\ref{eq:body_effect_pmos}), respectively, adjusting both simultaneously
-corrects both the common-mode shift of the trip points, which affects the
-DNL, and the differential imbalance between NMOS-dominated and PMOS-dominated
-corners, which affects the INL. The trimming is offline in the sense that the
-bulk voltages are determined once, from the identified process corner, and
-held constant during normal operation; no continuous adaptive feedback is
-involved.
+based on body bias adjustment was adopted. The correction is applied per
+slicer rather than as a single global setting: each of the fifteen slicers has
+its own PMOS well and NMOS bulk terminal, and these are driven individually so
+that each decision threshold can be nudged back toward its nominal position.
 
-\subsection{Determination of the Correction Pairs}
+The default condition, used at the typical corner, ties the PMOS wells to
+$V_{DD}=0.8$~V and the NMOS bulks to ground, so that the source-to-bulk voltage
+of every device is zero and no body effect is present. A correction is then a
+deliberate departure from this default on a chosen slicer. Lowering the PMOS
+well of a slicer below $0.8$~V forward-biases its source-well junction, reduces
+$|V_{tp}|$, strengthens the pull-up network and raises that slicer's trip
+point. Raising the NMOS bulk of a slicer above ground does the complementary
+thing: it forward-biases the NMOS, reduces $V_{tn}$, strengthens the pull-down
+network and lowers the trip point. Both moves are forward body bias acting on a
+single device, so each slicer whose trip point drifted too low at a given
+corner has its PMOS strengthened, and each slicer whose trip point drifted too
+high has its NMOS strengthened. The trimming is offline in the sense that these
+bulk voltages are determined once, from the identified process corner, and held
+constant during normal operation; no continuous adaptive feedback is involved.
 
-For each of the four non-typical corners, a specific pair of values
-$(V_{BN},\, V_{BP})$ was determined with the objective of bringing the DNL of
-the converted thermometer code below $0.5$~LSB across the full input range;
-the degree to which each corner meets that target is reported in
-Chapter~\ref{chap:Benchmarking}. The pairs
-were obtained by sweeping the two bulk voltages over the range permitted by
-the technology, extracting the trip points of all slicers at each bias
-combination, and selecting the combination that minimises the worst-case
-deviation of the measured trip points from their nominal TT positions. At the
-SS corner, where both device types exhibit elevated threshold voltages and
-therefore reduced drive strength, forward body biasing is applied to both the
-NMOS and PMOS, reducing $V_{tn}$ and $|V_{tp}|$ toward their nominal values
-and thereby restoring the intended trip point positions. At the FF corner,
-reverse body biasing is applied to both types to counteract the excessive
-drive strength resulting from the low threshold voltages. The FS and SF
-corners require asymmetric corrections. At FS, a stronger reverse bias on the
-NMOS bulk weakens the pull-down network to compensate for the fast-NMOS
-tendency, while the PMOS bulk is forward-biased to recover part of the lost
-pull-up strength; the SF corner is handled symmetrically, with the dominant
-correction applied to the PMOS bulk. The resulting
-correction table is summarised in Table~\ref{tab:trimming_vectors}.
+\subsection{Determination of the Per-Slicer Correction Voltages}
+
+For each of the four non-typical corners, a set of per-slicer bulk voltages
+was determined with the objective of bringing the DNL of the converted
+thermometer code below $0.5$~LSB across the full input range; the degree to
+which each corner meets that target is reported in
+Chapter~\ref{chap:Benchmarking}. The values were obtained by extracting the
+trip point of every slicer at the corner, identifying which slicers had moved
+above or below their nominal positions, and forward-biasing the appropriate
+device (PMOS to raise a low trip, NMOS to lower a high one) until the spacing
+was restored. Only the slicers that needed correction were touched; the rest
+stayed at the default of Section~\ref{sec:offline_strategy}. Because the four
+corners perturb the bank differently, both the set of adjusted slicers and the
+applied voltages differ from corner to corner, as Table~\ref{tab:trimming_vectors}
+shows.
 
 \begin{table}[htbp]
     \centering
-    \caption{Body bias correction vectors determined for each process corner.}
+    \caption{Per-slicer body bias trim voltages applied at each process corner. A value in the PMOS column is the N-well voltage of that slicer, which forward-biases its PMOS and raises its trip point; a value in the NMOS column is the bulk voltage of that slicer, which forward-biases its NMOS and lowers its trip point. Each trimmed slicer is adjusted on one device only, so a given slicer index appears in at most one column. Slicers not listed keep the default PMOS well voltage of $0.8$~V and NMOS bulk voltage of $0$~V; the typical corner uses no trimming. The notation $k\!:\!V$ denotes slicer index $k$ set to voltage $V$.}
     \label{tab:trimming_vectors}
-    \renewcommand{\arraystretch}{1.3}
-    \begin{tabular}{lccc}
+    \renewcommand{\arraystretch}{1.4}
+    \small
+    \begin{tabular}{l p{4.7cm} p{4.7cm}}
         \toprule
-        \textbf{Corner} & \textbf{$V_{BN}$ (V)} & \textbf{$V_{BP}$ (V)} & \textbf{Bias type (NMOS / PMOS)} \\
+        \textbf{Corner} & \textbf{PMOS trim, N-well (V)} & \textbf{NMOS trim, bulk (V)} \\
+        & \textbf{(raises trip point)} & \textbf{(lowers trip point)} \\
         \midrule
-        TT &  &  & nominal / nominal \\
-        SS &  &  & FBB / FBB \\
-        FF &  &  & RBB / RBB \\
-        FS &  &  & RBB / FBB \\
-        SF &  &  & FBB / RBB \\
+        TT & default (all $0.8$) & default (all $0$) \\
+        FF & 6:0.5, \ 7:0.5, \ 8:0.7 & 0:0.3, \ 1:0.3, \ 10:0.2, \ 11:0.5, \ 12:0.5, \ 13:0.1 \\
+        FS & 0:0.75, \ 7:0.7 & 1:0.23, \ 4:0.1, \ 12:0.1, \ 14:0.1 \\
+        SF & 1:0.75, \ 2:0.7 & 3:0.1, \ 4:0.2, \ 5:0.2, \ 11:0.1, \ 12:0.15, \ 13:0.1, \ 14:0.3 \\
+        SS & 0:0.6, \ 9:0.75, \ 10:0.72 & 2:0.2, \ 3:0.15, \ 4:0.2, \ 5:0.1 \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -207,17 +210,19 @@ correction table is summarised in Table~\ref{tab:trimming_vectors}.
 \subsection{Verilog-A Behavioural Implementation}
 
 The trimming was implemented in simulation using a Verilog-A behavioural
-model. The model monitors the process corner identifier and, based on the
-detected corner, drives $V_{BN}$ and $V_{BP}$ to the pre-computed correction
-values of Table~\ref{tab:trimming_vectors}. The two bias voltages are exposed
-as electrical outputs of the behavioural block and routed to the bulk
-terminals of the NMOS devices and to the N-well contacts of the PMOS devices
-of the slicer bank, so that the correction acts on the transistor-level
-netlist without requiring any modification to it. This approach allows the
-trimming to be evaluated across all corners within the same simulation
-framework as the nominal design. The Verilog-A abstraction also provides a
-clean interface for extending the trimming table to intermediate corner
-points or to temperature-corner combinations should a finer correction
-granularity be required in future iterations. The effect of the body bias
-corrections on the DNL and INL of the converter is presented in
-Chapter~\ref{chap:Benchmarking}.
+model, listed in full in Appendix~\ref{app:veriloga}. The model takes the
+process corner as a string parameter and, for the selected corner, drives the
+thirty bulk terminals of the slicer bank, fifteen PMOS wells and fifteen NMOS
+bulks, to the voltages of Table~\ref{tab:trimming_vectors}, leaving the
+untouched slicers at the $0.8$~V and $0$~V defaults. Each output behaves as an
+ideal voltage source connected to the corresponding bulk node, so the
+correction acts on the transistor-level netlist without requiring any
+modification to it. This keeps all five corners within the same simulation
+framework as the nominal design and, because the corner is a single parameter,
+makes it straightforward to extend the table to intermediate corners or to
+temperature-corner combinations should a finer correction granularity be
+required in future iterations.
+
+\section{Chapter Summary}
+
+This chapter turned the corner problem of Chapter~\ref{chap:async} into a correction mechanism. The body effect gives an independent handle on each slicer's trip point: forward-biasing a slicer's PMOS well raises its trip point, and forward-biasing its NMOS bulk lowers it. Body biasing was preferred over the other techniques of Section~\ref{sec:calibration} because it adds no capacitance to the signal path and no clocked activity to the converter. A per-slicer set of bulk voltages was determined for each process corner (Table~\ref{tab:trimming_vectors}) and applied through the Verilog-A behavioural model of Appendix~\ref{app:veriloga}, which drives the bulk terminals of the slicer bank without touching the transistor-level netlist. The correction targets deterministic inter-corner shifts only; random mismatch stays outside its reach. The effect of these corrections on the DNL and INL of the converter, together with the rest of the final characterisation, is presented in Chapter~\ref{chap:Benchmarking}.

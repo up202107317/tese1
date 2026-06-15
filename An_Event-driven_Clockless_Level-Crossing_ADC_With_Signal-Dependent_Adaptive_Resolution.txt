@@ -1,0 +1,745 @@
+2180
+
+IEEE JOURNAL OF SOLID-STATE CIRCUITS, VOL. 48, NO. 9, SEPTEMBER 2013
+
+An Event-driven Clockless Level-Crossing ADC With Signal-Dependent Adaptive Resolution
+Colin Weltin-Wu and Yannis Tsividis, Life Fellow, IEEE
+
+Abstract--This paper presents a clock-less 8b ADC in 130 nm CMOS technology, which uses signal-dependent sampling rate and adaptive resolution through a time-varying comparison window, for applications with sparse input signals. Input-dependent dynamic bias is used to reduce comparator delay dispersion, thus helping to maintain SNDR while saving power. Alias-free operation with SNDR in the range of 47­54 dB, which partly exceeds the theoretical limit of 8b conventional converters, is achieved over a 20 kHz bandwidth with 3­9 µW power from a 0.8 V supply.
+Index Terms--Adaptive resolution, ADC, continuous-time signal processing, CTDSP, dynamic biasing, event-driven, level-crossing, offset calibration, ZCD, zero-crossing detector.
+I. INTRODUCTION
+T HE rapid miniaturization of digital-oriented CMOS technology has made it possible to pack a huge amount of computational power in a small, portable device such as a cellular phone. Unfortunately energy storage technology has not been able to keep pace with the consumer demand for more functionality, and so research trends have begun to place as much emphasis on energy-efficient circuits and architectures as on systems designed for raw speed. A typical energy-constrained sensor application contains an analog sensor, some type of analog front-end for signal conditioning, and an ADC, followed by the digital back-end which performs more signal conditioning and finally storage or transmission of the collected information. Thanks to the rapid improvement of digital circuits, one trend has been to push as much of the signal conditioning into the digital domain as possible. However, this approach typically requires a high-performance ADC, which may not be ideal in an energy-constrained application. In applications such as sensor networks, implantable biomedical devices and smart tags, signals are often sparse and their frequency content varies with time. Rather than sampling such signals at a constant high rate, based on the highest expected frequency, one can allow the sampling rate to be dictated by the signal itself, resulting in event-driven sampling. A data conversion method that adapts its sampling rate as well as resolution depending on the input signal
+Manuscript received September 04, 2012; revised March 28, 2013; accepted May 02, 2013. Date of publication June 03, 2013; date of current version August 21, 2013. This work was supported by the National Science Foundation under Grant CCF-0964606.
+C. Weltin-Wu was with Columbia University, New York, NY 10027 USA. He is now with Silicon Labs, Sunnyvale, CA 94085 USA (e-mail: colinww@gmail. com).
+Y. Tsividis is with Columbia University, New York, NY 10027 USA. Color versions of one or more of the figures in this paper are available online at http://ieeexplore.ieee.org. Digital Object Identifier 10.1109/JSSC.2013.2262738
+
+has the potential to save the most power, since it can accommodate a wide range of inputs (requiring less analog pre-conditioning) while at the same time not generating unneeded samples, minimizing the power used in the digital part to process these samples, or the power in a transmitter that may be used to transmit those samples. While activity-dependent power dissipation can also be accomplished by conventional schemes using power-down techniques, such schemes still use a constant sampling frequency independent of input frequency content, in contrast to the approach advocated here.
+Level-crossing quantization [1] is a method of digitizing an analog signal in continuous time, e.g. without a sampling clock, where a new sample is only generated when the analog input crosses a quantization threshold, resulting in a sample generation rate which is proportional to the activity of the analog input. This conversion method has been explored conceptually in the context of control systems and coding theory, but has only recently been considered for VLSI implementation. Recent prototype implementations have shown promising performance. Complete signal-processing ICs have been implemented [2], which combine the signal-adaptive sampling of level-crossing ADCs with clock-less digital signal processing in continuous time [3], [4], resulting in activity-dependent power dissipation for the entire chain. Because these systems do not sample the input with a clock, the spectrum of the resulting output is aliasfree and contains only components related to the spectrum of the input signal with no quantization noise floor, and with signal-tonoise-plus-distortion ratio (SNDR) higher than that of conventional systems with the same number of bits [3], [4]. For example, with a sinusoidal input, the quantized (but not uniformlysampled) signal can be represented in a Fourier series, and will contain only the fundamental and harmonics. Moreover, the absence of a global clock reduces the number of spur coupling mechanisms as well as of power-hungry clock buffers, all of which may lead to more efficient, higher-fidelity signal processing systems. Time need not be quantized in level-crossing ADCs [3] or in the transmitter that may follow it. At the receiving end, if power dissipation there is not an issue, time quantization and interpolation can be performed.
+In this paper, which is an expanded version of a conference presentation [5] we identify the performance bottlenecks common in level-crossing ADCs thus far published, and propose a new architecture that addresses the identified problems. Section II explains the architecture of the presented level-crossing ADC highlighting the proposed architectural innovations. Section III discusses the circuit design of important blocks. Section IV gives measurement results, and Section V concludes the paper.
+
+0018-9200 © 2013 IEEE Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 21:29:29 UTC from IEEE Xplore. Restrictions apply.
+
+WELTIN-WU AND TSIVIDIS: A CLOCK-LESS EVENT-DRIVEN LEVEL-CROSSING ADC WITH SIGNAL-DEPENDENT ADAPTIVE RESOLUTION
+
+2181
+
+Fig. 1. (a) Flash level-crossing ADC; (b) two-comparator level-crossing ADC used in this work; (c) system functionally equivalent to that in (b), with upper and lower comparison levels, and , explicitly indicated, which aids visualization in the rest of this paper.
+
+II. LEVEL CROSSING QUANTIZERS
+
+sample generation is achieved. Algorithms are presented in
+
+Conceptually, a level-crossing quantizer can be thought of
+
+as a conventional flash ADC but with zero-crossing detectors
+
+(ZCD) replacing the clocked comparators, Fig. 1(a) [3]. Because
+
+the ZCDs continuously compare the analog input against the
+
+quantization thresholds, and assuming the quantization thresh-
+
+olds are uniformly spaced by the quantization step
+
+, it
+
+is possible to reduce the number of ZCDs required to two, as
+
+shown in Fig. 1(b). This topology has been used and described
+
+in the past [2], [6], [7], so the operation of this circuit is only
+
+briefly summarized here. An analog representation of the quan-
+
+tized digital output is fed back and subtracted from the analog
+
+input. What remains after the subtraction is the instantaneous
+
+quantization error, which is then compared against two voltage
+
+thresholds
+
+and
+
+by the upper and lower
+
+ZCDs, respectively. As soon as the quantization error exceeds
+
+this comparison interval, the corresponding ZCD triggers an up-
+
+date, and the counter either increments or decrements, causing
+
+the comparison interval to shift up or down by
+
+, so that
+
+the analog input is once again contained within the
+
+-wide
+
+comparison interval. A functionally equivalent circuit is shown
+
+in Fig. 1(c); in this version, is compared against two ex-
+
+plicit tracking thresholds and , so the ZCD common mode
+
+input range must be equal to the full-scale analog input range.
+
+In contrast to that, in Fig. 1(b), the chosen implementation, the
+
+subtraction occurs before the ZCDs so that the swing of is
+
+kept small, allowing the ZCDs to have a small common-mode
+
+input range. In the following discussions the voltages and
+
+of Fig. 1(c) will be used for ease of visualization, but in our
+
+actual implementation (Fig. 1(b)) these voltages do not exist.
+
+[7] that vary the quantization steps dynamically as a function of the input signal, in such a manner that the power of the quantization error does not significantly increase within the "baseband" bandwidth. Intuitively, if the quantizer is allowed to take larger steps when the input is moving quickly, because the input slope is large, the difference between the input signal and reconstructed quantized output does not last long, and the error involved has components outside the baseband.
+A method for achieving variable resolution quantization is demonstrated in [8]. However that method was implemented off-chip in an FPGA with a high-speed clock (the clock frequency was much higher than the bandwidth of interest, giving a high oversampling ratio), and therefore the system's amenability to complete integration was not verified. Furthermore, having a high-speed clock negates one of the principal benefits of the level-crossing quantization technique, namely clock-less operation.
+In this work, we propose a "closing window" adaptation scheme for the comparison interval of the ZCDs. Instead of the conventional level crossing approach shown in Fig. 2(a), we have implemented an approach illustrated in Fig. 2(b), showing the input (solid line), the upper and lower comparison levels and (dot-dashed and dotted lines, respectively), and the reconstructed output (dashed line). The idea is to have a wide comparison interval immediately after a crossing occurs, and as time passes without a crossing, make the comparison interval progressively narrower. Therefore, a fast-moving signal such as the middle portion of the waveform will cause a new crossing to occur shortly after the previous one, while the comparison window is widest, while a slow-moving input will
+
+trigger a crossing after the comparison window is narrower.
+
+A. Variable Resolution
+
+Since the quantizer resolution is inversely proportional to the quantization step size, this scheme quantizes fast moving sig-
+
+The level-crossing ADC (LCADC) architecture shown in nals coarsely and slow-moving signals finely. As explained in
+
+Fig. 1(b) inherently exhibits input-activity-dependent sample [7], to avoid distortion in the quantizer output, the resolution
+
+rate, a key component for a system with activity-dependent should vary in odd multiples of
+
+. There is the possibility
+
+power consumption. However the samples generated are always that a sample is generated at the exact moment the compar-
+
+separated, in terms of the analog input amplitude, by
+
+, ison level changes, however through behavioral level simula-
+
+the quantization step. As demonstrated in [7], by allowing tions with real-world signals (speech, music, etc.) this did not
+
+the quantization step width to vary, a significant reduction in happen frequently. When it did, it did not reduce the in-band
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 21:29:29 UTC from IEEE Xplore. Restrictions apply.
+
+2182
+
+IEEE JOURNAL OF SOLID-STATE CIRCUITS, VOL. 48, NO. 9, SEPTEMBER 2013
+
+Fig. 2. Input signal (solid line), upper and lower comparison levels (dot-dashed and dotted lines, respectively), and quantized signal (broken line), for (a) conventional level-crossing ADC, and (b) adaptive-resolution level-crossing ADC adopted in this work.
+
+fidelity since the added extra samples had a dithering effect
+
+and simply caused the ADC power consumption to increase
+
+slightly.
+
+Two DACs are required to generate the variable comparison
+
+interval
+
+in Fig. 1(c) (the actual circuit implementa-
+
+tion will be shown in Section III). While this is a significant
+
+hardware overhead, some of the complexity can be reduced by
+
+sharing as much as possible between the DACs, as discussed in
+
+Section III-B. It was decided to separate the DACs that generate
+
+the varying comparison intervals from the DACs that generate
+
+the
+
+thresholds. The reason for this is that in this way
+
+the DACs generating the
+
+thresholds do not require a
+
+large dynamic range and thus can have a very fine resolution,
+
+allowing them to be used for ZCD offset compensation as well,
+
+discussed in Section III-D.
+
+The behavior of the algorithm used will now be described,
+
+with reference to Fig. 2(b). Without loss of generality, con-
+
+sider the case of an increasing input. Immediately after the first level crossing occurs and the upper ZCD triggers, the LCADC output is updated as shown. The upper and lower comparison
+
+Fig. 3. Comparator delay vs. input slope for a variety of comparator input stage bias currents. The sawtooth line curve shows the adaptive biasing strategy adopted in this work.
+
+level, and , are updated differently depending on the di-
+
+rection of the analog signal (see below). Considering the first B. Dynamic Biasing crossing on the left in Fig. 2(b), the threshold is updated to
+
+be equal to the updated output plus the maximum window, cor- A level-crossing quantizer shares a characteristic with multi-
+
+responding to the coarsest resolution used, which is 7 LSB in level pulse-width modulation in that the signal encodes infor-
+
+our case. After a delay of seconds (generated by an internal mation into both the values of the output codes and the time of
+
+timer--see below), is decreased as shown, thus making the code transitions. Therefore it is important to control the delay
+
+resolution equal to 5 LSB. When the input crosses this new between ideal threshold crossing and digital code generation.
+
+level, the LCADC output is updated by increasing it by 5 LSB, When the analog input crosses a threshold, after the internal
+
+as shown, and is again augmented. Similarly, in the third ZCD delay a rising edge is generated at the ZCD output. This
+
+crossing shown in Fig. 2(b), by the time the input crosses
+
+edge triggers the digital logic to update the quantizer's dig-
+
+the resolution has become 3 LSB, and the output is updated by ital output. Because of the speed of digital logic gates in the
+
+a corresponding amount.
+
+technology used (130 nm CMOS), the total propagation delay
+
+The threshold is reset at the crossing to be
+
+below the through a block of digital logic can be on the order of hundreds
+
+zero crossing voltage, and after seconds it is incremented by of picoseconds, so the overall quantizer delay is most likely
+
+to be equal to the previous crossing voltage. The reason dominated by the ZCD's delay. The ZCD delay can be expressed
+
+for the delay is to introduce hysteresis, so that noisy, slow- as the sum of a fixed delay ("absolute delay") and an input-de-
+
+moving inputs do not trigger erroneous crossings and waste pendent delay ("delay dispersion"). The latter is due to the fact
+
+samples. In the case of a decreasing input, the behavior of
+
+that in a simple differential pair, used at the input of the com-
+
+and is reversed.
+
+parators, a differential input which transitions slowly through
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 21:29:29 UTC from IEEE Xplore. Restrictions apply.
+
+WELTIN-WU AND TSIVIDIS: A CLOCK-LESS EVENT-DRIVEN LEVEL-CROSSING ADC WITH SIGNAL-DEPENDENT ADAPTIVE RESOLUTION
+
+2183
+
+Fig. 4. Method for generating input-slope-dependent comparator bias current, resulting in approximately constant comparator delay independent of input slope.
+
+the pair's linear region will cause the output to transition more slope-dependent bias current that keeps the delay dispersion
+
+slowly than if the differential input ramps very fast.
+
+within 100 ns over three orders of magnitude of the input slope,
+
+It is important to note that the absolute delay through the as shown by the sawtooth-like curve in Fig. 3. The delay
+
+ZCD does not cause distortion; it is equivalent to inserting a intervals used to set the duration at each resolution setting
+
+fixed delay in front of the LCADC. The ZCD absolute delay are also used to increase the ZCD bias current over time so
+
+in the original LCADC (Fig. 1(b)) is bounded by the minimum that the ZCD delay dispersion is minimized down to very low
+
+expected sample-to-sample time, defined as the granularity slopes. This implementation is shown in Fig. 4. The slope
+
+time [2]. For a band-limited input of frequency , with an of the input is estimated by measuring the inter-sample time
+
+-bit quantizer the worst-case (smallest) granularity time is (rising edges on the "asyncTrig" signal) with a delay line, and
+
+. From the simplified block diagram mapping this value to a 3b ZCD bias current DAC. The ZCD
+
+in Fig. 1(b), we see that a threshold crossing must propagate bias is thus set on a sample-by-sample basis in order to make
+
+through the ZCD, digital logic, and feedback DACs in order the ZCD delay approximately constant. This technique has the
+
+for the system to be ready to process a new threshold crossing. advantage of simplicity; in particular, it does not require an
+
+The absolute ZCD delay is thus limited by at least
+
+(if extra derivative-measuring circuit.
+
+we optimistically assume zero delay though both digital logic
+
+and feedback DACs). This means that the adaptive resolution algorithm introduced in the previous section, since it increases the inter-sample spacing, not only saves power by reducing the overall sample rate, but also alleviates the speed requirement of ZCD absolute delay, thereby allowing for the required ZCD bias currents to be reduced.
+However, an unwanted side effect of allowing the absolute ZCD delay to increase by reducing the bias current is that the delay dispersion increases as well. The effect of ZCD delay dispersion has been analyzed for both level-crossing ADCs [9] as well as ZCD-based synchronous ADCs [10]. In the context of level-crossing ADCs, the input-dependent threshold-crossing to output-code-change delay causes an increase in the harmonic distortion at the output, reducing the fidelity of the conversion. For example, with 200 ns delay dispersion, an 8-bit LCADC driven with a full-scale 20 kHz sine wave has a 25 dB increase in the power of the third harmonic of the input with respect to the zero delay dispersion case. Fig. 3 shows the simulated delay dispersion of the ZCD presented in Section III-A (ignore, for the moment, the sawtooth-like curve). For low bias currents, the delay dispersion is more than 700 ns. Therefore, to minimize power consumption without sacrificing fidelity the ZCD delay dispersion must be reduced.
+
+III. CIRCUIT DESIGN
+A top-level block diagram for the IC is given in Fig. 5. It follows the structure of Fig. 1(b), but several details have been added. The analog input is connected to a pair of capacitive DACs through a bootstrapped switch. The capacitive DACs are each formed by a binary-weighted MSB bank and thermometrically weighted LSB bank. The DAC outputs are compared by the two ZCDs against two thresholds generated by the calibration DAC; this DAC not only generates the half-LSB thresholds discussed in Section II-A, but compensates the ZCD offsets as well. The ZCD outputs drive an asynchronous timing generation block, which in turn creates a set of well-defined timing pulses that drive the asynchronous controller. These timing pulses can be thought of as clock edges except that, rather than timed to a uniform clock, they are timed with respect to ZCD events. There are two blocks of digital logic which were generated by APR (automatic place and route) flows. The first is the asynchronous controller, which implements the algorithms discussed in Section II. The second is the synchronous controller, which implements the to-be-discussed on-chip calibration, a SPI interface, and various performance monitoring functions (for testing purposes only).
+
+Extrapolating from simulations, we have concluded that the ZCD delay dispersion obeys a weak power law with respect
+
+A. Zero Crossing Detector
+
+to input slope (in agreement with results on ring oscillator The ZCD is comprised of a three-stage preamplifier followed
+
+delays [11]), which is difficult to compute exactly in this by a uni-directional latch, shown in Fig. 6. A high-gain pream-
+
+power-limited context. Instead, a piecewise approximation plifier is necessary because unlike traditional clocked compara-
+
+is used, taking advantage of the timing information already tors, it is not strictly possible to use a regenerative amplifier
+
+generated for the adaptive resolution algorithm, to produce a (input signal conditions allow a quasi-regenerative stage in the
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 21:29:29 UTC from IEEE Xplore. Restrictions apply.
+
+2184
+
+IEEE JOURNAL OF SOLID-STATE CIRCUITS, VOL. 48, NO. 9, SEPTEMBER 2013
+
+Fig. 5. Overview of complete system on implemented test chip. Fig. 6. ZCD schematic.
+
+Fig. 8. Uni-directional latch used in the comparator of Fig. 6.
+
+threshold voltage of the input pair is below 0.2 V, versus that of
+
+a typical NMOS transistor in this process, which is above 0.4 V.
+
+Fig. 7. Circuit for one of the three identical stages in the comparator of Fig. 6. This gives the tail source plenty of headroom even with a 0.8 V
+
+Sizes are given for each of the three stages.
+
+supply voltage. Each stage has a single bias control terminal, and
+
+local common-mode feedback (CMFB). The CMFB puts a 25%
+
+uni-directional latch) so small input differences need to be am- overhead on power consumption, so a global loop around all three
+
+plified up to logic levels. Since when the ADC is at its highest stages could have been more economical. However, the ZCD
+
+resolution state the comparison thresholds for the two ZCDs must be power-cycled quickly, so a CMFB loop around all three
+
+are separated by
+
+, each ZCD must be able to amplify a stages is too slow. Because the input pair is biased in subthreshold,
+
+sub-LSB difference at its input to the full supply voltage, which the transconductance is proportional to bias current; on the other
+
+for this system means over 50 dB of gain.
+
+hand, the output resistance is roughly inversely proportional
+
+The schematic of one of the three topologically-identical to bias current. Therefore the stage gain
+
+is constant with
+
+preamplifier stages is given in Fig. 7. The input pair of each stage is respect to bias current, making the input-referred offset constant
+
+made from low- devices with non-minimum-length channels. over varying bias conditions. The whole preamplifier chain has
+
+This helps combat the reverse short-channel effect, so that the over 70 dB of gain.
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 21:29:29 UTC from IEEE Xplore. Restrictions apply.
+
+WELTIN-WU AND TSIVIDIS: A CLOCK-LESS EVENT-DRIVEN LEVEL-CROSSING ADC WITH SIGNAL-DEPENDENT ADAPTIVE RESOLUTION
+
+2185
+
+Fig. 9. Circuit combining the functions of DAC and subtractor in the system of Fig. 1(b).
+
+Following the preamplifier is the uni-directional latch shown
+
+in Fig. 8. Transistors
+
+and
+
+form a Bayzes
+
+cell [12] which is a high-gain self-biased differential-to-single-
+
+ended amplifier. The output of this cell gets amplified by the two
+
+inverters, to drive the output, and also supply feedback to the
+
+bottom and top of the Bayzes cell. Since, during normal opera-
+
+tion, both the upper and lower ZCDs have
+
+(the
+
+input is contained within the comparison interval) if zcdRST is
+
+held low, then is low, and the feedback signal is high. This
+
+enables the tail bias NMOS transistor M6 of the Bayzes cell as
+
+well as disables the shunt current path M5. As
+
+, Fig. 10. Timing diagram of control signals for the DAC in Fig. 9.
+
+the potential on node rises, causing to fall. This both dis-
+
+ables the static bias current of the input stage, and uses positive
+
+feedback through M5 to latch the output high. Once the latch 5 binary-weighted MSBs and 3 thermometrically-weighted
+
+has triggered, the zcdRST signal must be cycled for the ZCD to LSBs, opposite of convention [14]. The reason is that as out-
+
+be active again.
+
+lined in Section II-A, the adaptive resolution algorithm must
+
+B. Segmented Capacitive DAC
+
+adjust the comparison interval in LSB steps while continuously tracking the input, thus making a reset phase in-between res-
+
+The analog reconstruction of the digitized output and the olution steps impossible. While this would be possible with
+
+subtraction of it from the input--as required by the system a binary-weighted LSB bank, the glitches during transitions
+
+in Fig. 1(b)--is performed by a capacitive DAC structure would easily be larger than an LSB step, which would trigger a
+
+shown in Fig. 9, with associated timing diagram in Fig. 10. false crossing in the ZCD. Although the thermometric bank only
+
+This circuit is based on the charge-sharing principle used in needs 3 bits to be compatible with the 5-bit binary-weighted
+
+SAR ADCs [13], and thus operates in two phases, a refresh MSB bank, it has 24 elements in order to accommodate the full
+
+phase and a tracking phase. During the refresh phase, dacRST range of the adaptive resolution algorithm.
+
+goes high, shorting all the nodes to the common mode voltage The DAC is made from custom 20 fF unit capacitance elements
+
+. After the capacitors have been discharged, dacRST designed with the EMX field solver [15]. The unit cell uses the
+
+goes low and dacEN goes high, switching the input capacitor vertical parallel plate structure [16] with Metal 2­Metal 5 layers,
+
+from
+
+to , and the DAC capacitor array is switched occupying
+
+and achieving a 1 fF/um density. The vertical
+
+with units to
+
+and
+
+units to
+
+, where plates which contribute the bulk of the capacitance are enclosed
+
+is the digital code to be converted. As a result, once charge on all sides by a metal shield, and below by an M2 sheet. This
+
+sharing is complete, the voltage to the ZCD is given by reduces the ratio between the parasitic capacitance to the main ca-
+
+.
+
+pacitor to 1.3%. Minimizing stray capacitance is important since
+
+Once the capacitors have settled, the LCADC re-enters the the lines driving the thermometric bank can couple to the top plate
+
+track mode with the ZCDs active. This DAC is segmented into node, corrupting the precise charge sharing relation.
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 21:29:29 UTC from IEEE Xplore. Restrictions apply.
+
+2186
+
+IEEE JOURNAL OF SOLID-STATE CIRCUITS, VOL. 48, NO. 9, SEPTEMBER 2013
+
+Fig. 11. Timing generation block.
+
+Fig. 12. Delay cell.
+
+C. Asynchronous Timing and Digital Logic
+
+inactive and high,
+
+is high while waiting for a falling
+
+edge on . When falls, the current through M1a begins to
+
+The state machine controlling the adaptive resolution as well charge the MOS capacitor M4 through M3. M2 and M1b form a
+
+as the dynamic ZCD bias current was described in Verilog and class-A amplifier, and as soon as node begins to fall
+
+falls
+
+synthesized to a gate-level netlist with Synopsys Design Com- as well, since the propagation delay through the remaining logic
+
+piler. The gates were placed with Cadence Encounter. Although is negligible. This opens switch M3, ensuring that the minimum
+
+the logic does not run from a uniform clock, the use of auto- amount of charge is deposited onto the MOS capacitor, as well
+
+mated tools was made possible by the asynchronous timing gen- as latching the M1b-M2 amplifier and disabling the bias current
+
+eration block. This block processes the rising edges from the through M5. Both of these features reduce power consumption.
+
+ZCDs, which do not obey any timing constraints, and generates
+
+a series of timing edges to clock the digital logic. By design, these edges obey minimum time spacing rules which are com- D. Offset Calibration
+
+patible with clock definition files used by the logic synthesis Because the ZCD device sizes are optimized for speed versus
+
+tools, thus allowing the compiler to treat the design as it would power, the input-referred offset is several times larger than the
+
+any other regular synchronous design. By pre-conditioning the LSB step. In this architecture, rising and falling signals are han-
+
+inputs to the digital logic with the timing generation block, com- dled by the upper and lower ZCDs respectively and therefore to
+
+plex (and power consuming) handshaking protocols [2], [6] typ- avoid distortion the offsets of the ZCDs must be calibrated out.
+
+ically present in asynchronous logic are avoided.
+
+To this end, the input to the ZCD is grounded, and the digital
+
+The top level of the timing generation block is shown in code to the feedback DACs is set to 0; then a successive-ap-
+
+Fig. 11. An edge from either ZCD triggers a delayed pulse gen- proximation loop is used to drive the calibration DAC output to
+
+erator that launches a wave of edges which propagates down the be equal to the ZCD offset voltages. The added logic and cali-
+
+digitally tunable delay chain. Because the timing of the ZCD bration DAC essentially implements a pair of SAR ADCs. This
+
+rising edge is important, the edges generated by the delay el- calibration loop first calculates the ZCD offsets, then the LSB
+
+ements are all referenced to the initial ZCD rising edge. The step size of the feedback DAC. With these two values, the cali-
+
+schematic of each delay element is shown in Fig. 12. With RST bration DAC is also used to produce the LSB/2 offsets discussed
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 21:29:29 UTC from IEEE Xplore. Restrictions apply.
+
+WELTIN-WU AND TSIVIDIS: A CLOCK-LESS EVENT-DRIVEN LEVEL-CROSSING ADC WITH SIGNAL-DEPENDENT ADAPTIVE RESOLUTION
+
+2187
+
+Fig. 13. Test chip microphtograph.
+
+Fig. 14. Measured reconstructed output of the ADC, for a simulated biological signal, demonstrating adaptive resolution.
+
+in Section II-A. The calibration DAC is an on-chip -string, and
+
+the SAR logic is part of a synthesized block that also contains DAC differential open-drain outputs drive an LT6204-based dif-
+
+an SPI interface for programming the IC.
+
+ferential-to-single-ended buffer with 60 dB of gain (1 tran-
+
+IV. MEASUREMENTS
+
+sresistance) and a simulated bandwidth of 20 MHz, to show clearly the steps in the LCADC output.
+
+The IC, whose die photo is shown in Fig. 13, was imple- The following results were all obtained after the calibration
+
+mented in an ST 130 nm CMOS technology. It contains both the routine was run on the IC at startup. Since the calibration rou-
+
+LCADC and a current-steering test DAC. Since the IC is bond tine is fully self-contained, running the routine is just part of
+
+pad limited, in order to save die area the bias currents and 8-bit the chip programming sequence through the SPI interface. The
+
+PCM data bus of the LCADC and DAC are multiplexed onto the calibration was run once, and all measurements shown are with
+
+same test pads. The IC powers up in DAC mode so that the 8-bit that single calibration. Both the adaptive resolution and ZCD bi-
+
+data bus is an input, and through the SPI interface it is put into asing schemes were enabled (unless otherwise specified below).
+
+LCADC mode. Since the bias pins are also shared, it is impos- The noise and distortion of the LCADC was integrated over a
+
+sible to use both the LCADC and DAC on one IC, so the testing 20 Hz­20 kHz bandwidth. All measurements were performed at
+
+board contains two copies of the IC. Although the DAC was pur- room temperature, with the IC running from a 0.8 V regulated
+
+posely over-designed so that it is not the performance-limiting supply. The results shown are representative of three dies that
+
+block in the measurement chain, it should be noted that as all had nearly identical performance.
+
+measurements were performed with the test DAC, the numbers As motivated in the introduction of this work, this data con-
+
+are conservative representations of the actual LCADC perfor- verter is less suited for processing continuous-energy signals
+
+mance. The bias currents needed by the LCADC were in the such as sinusoids than it is for converting bursty, high peak-to-
+
+range of 10 s of nanoamperes, but the ESD diode leakage of average ratio signals. Fig. 14 shows the time-domain output of
+
+the foundry-provided pads was several times larger. As a result, the LCADC with a cardiac pulse signal from an Agilent 33220A
+
+the bias currents, which were fed from off chip for testing pur- arbitrary waveform generator. As designed, the LCADC takes
+
+poses, were on the order of several . At the pad they go into large quantization steps during fast input transients, and takes
+
+a 300:1 current divider before propagating to the LCADC core. smaller steps when the input is moving slowly.
+
+Therefore, the bias current through the external resistor is not Fig. 15 shows the spectrum of the reconstructed output when
+
+counted in the total power consumption since it would normally the LCADC processes a pure 1 kHz sinusoidal input 3 dB rel-
+
+be generated on-chip, and not require large division. Also, the ative to full scale. The peak of the next highest tone (the second
+
+power dissipated through the voltage divider setting the
+
+harmonic, which is significant due to the single-ended architec-
+
+reference is not counted. The reason is that this node does not ture) is indicated by the waveform marker, and gives the SFDR
+
+require a stiff voltage reference. The
+
+pin does not draw of 58.3 dB. The locations of the spurious tones are at integer
+
+or source static current (up to mismatched leakage currents), so multiples of the fundamental, indicating that such tones are har-
+
+even a large resistor divider with decoupling capacitance works monics, as expected [2]­[4]. Components in-between appear
+
+properly.
+
+discrete due to the use of a digital spectrum analyzer, but are
+
+The IC requires two fixed resistors to generate a
+
+actually wideband device noise with a continuous spectrum. A
+
+reference, as well as two potentiometers to set bias currents. 3 dBFS input amplitude means that only 190 of the 256 pos-
+
+The input was driven through an LT1880 opamp configured as sible digital codes are exercised by the input; the reason the re-
+
+a voltage follower, though the LCADC showed no performance duced amplitude was chosen is that for amplitudes greater than
+
+degradation with up to 1 driving source resistance. The test 3 dBFS the distortion drastically increases, as shown in the
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 21:29:29 UTC from IEEE Xplore. Restrictions apply.
+
+2188
+
+IEEE JOURNAL OF SOLID-STATE CIRCUITS, VOL. 48, NO. 9, SEPTEMBER 2013
+
+Fig. 15. Measured spectrum of reconstructed output, for a 1 kHz input signal at 3 dBFS.
+
+Fig. 17. Measured SNR and SNDR of reconstructed output vs. input frequency, for a 3 dBFS singnal.
+
+Fig. 16. Measured SNR and SNDR of reconstructed output vs. input amplitude, for a 1 kHz input.
+
+Fig. 18. Measured power dissipation vs. input frequency for a 3 dBFS input.
+
+plot of SNDR versus amplitude in Fig. 16 for a fixed 1 kHz
+
+input. It is suspected that the cause of this problem is that a par-
+
+asitic diode in the input bootstrapped switch driver turns on at different resolutions (1 LSB, 3 LSB, and 5 LSB) gave the best
+
+high input amplitudes, but this is not certain. It is important to performance/power ratio. At higher input frequencies, distor-
+
+point out that in spite of this circuit impairment the SNDR of tion would increase however this is as much due to the input
+
+the converter exceeds the theoretical limit for a conventional sampling network as the level-crossing scheme, and this phe-
+
+8-bit ADC. Since the maximum useable input is 3 dB below nomenon is universal across all data converters. Once the input
+
+the digital full-scale output, it would make sense to re-define slope increases to the point that the loop cannot respond fast
+
+the full-scale input amplitude as that which exercises 190 out of enough, the distortion increases rapidly.
+
+256 digital codes. It was decided to leave the 0 dBFS reference The power dissipation for a 3 dBFS input is shown vs. input
+
+as absolute with respect to the digital code output, so as to be frequency in Fig. 18. As seen, the digital logic is the dominant
+
+mindful of this performance loss.
+
+power consumer. Without adaptive resolution, the IC power
+
+The SNDR performance over frequency is shown in Fig. 17 consumption is 11 at a 4 kHz input frequency; this is com-
+
+for a 3 dBFS input. The sharp jumps in the SDR are due to pared to 6.5 with the adaptive algorithm enabled. The total
+
+transitions between resolutions, but once again the SNDR is ZCD power consumption does not largely vary with the adap-
+
+generally higher than that possible with a conventional 8-bit tive algorithm because as input frequency increases, while the
+
+ADC; this can be explained by the fact that, due to the absence bias current decreases the dynamic power increases with sample
+
+of regular sampling, the quantization noise is not aliased into rate, and the net sum remains fairly constant. Unfortunately
+
+the baseband [4] It was experimentally found that using only 3 comparison at higher input frequencies, where the benefit of
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 21:29:29 UTC from IEEE Xplore. Restrictions apply.
+
+WELTIN-WU AND TSIVIDIS: A CLOCK-LESS EVENT-DRIVEN LEVEL-CROSSING ADC WITH SIGNAL-DEPENDENT ADAPTIVE RESOLUTION
+
+2189
+
+of offsets, inserted manually. As shown, the calibration algorithm achieves in almost all cases the peak SNDR. The SNDR is slightly lower than that shown in Figs. 16 and 17 because the ZCD bias current was fixed between dies. If the ZCD bias current is tuned per die, an extra 2­3 dB is gained.
+A summary of the LCADC performance is given in Table 1.
+
+Fig. 19. Measured average sampling rate vs. input frequency for a 3 dBFS input, for three different fixed resolutions and for adaptive resolution.
+
+V. CONCLUSION
+We have presented a level-crossing ADC with signal-dependent sampling rate and adaptive resolution. A variable comparison window technique was introduced, as were techniques for dynamic biasing, which reduce comparator delay dispersion. Because the ADC's analog input is not sampled with a synchronous clock, aliasing is absent and an SNDR beyond the theoretical limit for conventional 8-bit ADCs is achieved, while the power dissipation decreases when the input activity decreases. Such ADCs may help improve system power consumption in applications in which the input signals exhibit a sporadic activity level. Such applications include sensor networks, biomedical devices, and smart tags.
+
+REFERENCES
+
+Fig. 20. Pre- and post-calibration SNDR for 12 dies.
+
+adaptive resolution would be even more pronounced, is impos-
+
+sible since the IC is not able to process signals above 4 kHz
+
+without the adaptive algorithm.
+
+A plot of the average sampling rate vs. input frequency for
+
+the LCADC in Fig. 19 shows the effectiveness of the adaptive
+
+resolution algorithm, for a 3 dBFS input. When the LCADC is
+
+set to fixed 1 LSB resolution, it hits the maximum sampling rate
+
+(set by the delay line) within the band of interest, and at 3 LSB
+
+resolution it is almost to the point of saturating right at the band
+
+edge. When the adaptive resolution is enabled, the sampling rate
+
+varies without ever saturating.
+
+The digital calibration routine provides four values to the
+
+LCADC: the offset and
+
+values for the upper and
+
+lower ZCDs. To quantify the performance of the digital cali-
+
+bration algorithm, the setting of the two bias potentiometers on
+
+the test PCB was fixed, and 12 dies were calibrated. Fig. 20
+
+shows the SDNR both pre- and post-calibration. The curves
+
+corresponding to pre-calibration are for various combinations
+
+[1] J. W. Mark and T. D. Todd, "A nonuniform sampling approach to data compression," IEEE Trans. Commun., vol. COM-29, pp. 24­32, Jan. 1981.
+[2] B. Schell and Y. Tsividis, "A continuous-time ADC/DSP/DAC system with no clock and with activity-dependent power dissipation," IEEE J. Solid-State Circuits, vol. 43, no. 11, p. 2472, Nov. 2008.
+[3] Y. Tsividis, "Continuous-time digital signal processing," Electronics Lett., vol. 39, no. 21, pp. 1551­1552, Oct. 2003.
+[4] Y. Tsividis, "Event-driven data acquisition and digital signal processing--A tutorial," IEEE Trans. Circuits Syst. II, vol. 57, no. 8, pp. 577­581, Aug. 2010.
+[5] C. Weltin-Wu and Y. Tsividis, "An event driven, alias-free ADC with signal-dependent resolution," in Proc. 2012 IEEE VLSI Circuits Symp., Hawaii, Jun. 2012.
+[6] E. Allier et al., "A new class of asynchronous A/D converters based on time quantization," in Proc. IEEE Int. Symp. Asynchronous Circuits and Systems, Vancouver, BC, Canada, May 2003, pp. 196­205.
+[7] M. Kurchuk and Y. Tsividis, "Signal-dependent variable-resolution clockless A/D conversion with application to continuous-time digital signal processing," IEEE Trans. Circuits Syst. I, vol. 57, no. 5, pp. 982­991, May 2010.
+[8] M. Trakimas and S. R. Sonkusale, "An adaptive resolution asynchronous ADC architecture for data compression in energy constrained sensing applications," IEEE Trans. Circuits Syst. I, vol. 58, no. 5, pp. 921­934, May 2011.
+[9] K. Kozmin, "Data acquisition and signal conditioning for low power measurement systems," Ph.D. dissertation, Luleå University of Technology, Luleå, Sweden, 2008.
+[10] T. C. Sepke, "Comparator Design and Analysis for Comparator-Based Switched-Capacitor Circuits," Ph.D. dissertation, Massachusetts Institute of Technology, Cambridge, MA, USA, Sep. 2006.
+[11] B. Leung, "A switching-based phase noise model for CMOS ring oscillators based on multiple thresholds crossing," IEEE Trans. Circuits Syst. I, vol. 57, no. 11, pp. 2858­2869, Nov. 2010.
+[12] M. Bayzes, "Two novel fully differential complementary self-biased CMOS differential amplifiers," IEEE J. Solid-State Circuits, vol. 26, no. 2, pp. 165­168, Feb. 1991.
+[13] J. McCreary and P. Gray, "All-MOS charge redistribution analog-todigital conversion techniques. I," IEEE J. Solid-State Circuits, vol. 10, no. 6, pp. 371­379, Dec. 1975.
+[14] C. H. Lin and K. Bult, "A 10-b, 500-MSample/s CMOS DAC in 0.6 mm ," IEEE J. Solid-State Circuits, vol. 33, no. 12, pp. 1948­1958, Dec. 1998.
+[15] EMX. Integrand Software, Inc.. [16] R. Aparicio and A. Hajimiri, "Capacity limits and matching properties
+of integrated capacitors," IEEE J. Solid-State Circuits, vol. 37, no. 3, pp. 384­393, Mar. 2002.
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 21:29:29 UTC from IEEE Xplore. Restrictions apply.
+
+2190
+
+IEEE JOURNAL OF SOLID-STATE CIRCUITS, VOL. 48, NO. 9, SEPTEMBER 2013
+
+Colin Weltin-Wu received the B.S. and M.Eng. degrees from the Massachusetts Institute of Technology (MIT), Cambridge, MA, USA, and the Ph.D. from Columbia University, New York, NY, USA. His research focused on asynchronous data converters for low-power and wireless applications. His interests are ultra-low-power analog circuits and data mining. He previously worked at ST Microelectronics in Pavia, Italy, on highly digital frequency synthesizers. He is currently a Senior Design Engineer at Silicon Labs, Sunnyvale, CA, USA.
+
+setts Institute of Technology, and the National Technical University of Athens, Greece.
+Prof. Tsividis has received the 1984 IEEE W.R.G. Baker Award for the best IEEE publication, and was a recipient or co-recipient of best paper awards from the European Solid-State Circuits Conference in 1986, the IEEE International Solid-State Circuits Conference in 2003, and the IEEE Circuits and Systems Society (Darlington Award, 1987; Guillemin-Cauer Award, 1998 and 2008). He has received Columbia's Presidential Award for Outstanding Teaching in 2003, the IEEE Undergraduate Teaching Award in 2005, the IEEE Gustav Robert Kirchhoff Award in 2007, and the IEEE Circuits and Systems Education Award in 2010. He is a Life Fellow of the IEEE.
+
+Yannis Tsividis (M'74­SM'81­F'86­LF'12) received the B.S. degree from the University of Minnesota, Minneapolis, MN, USA, and the M.S. and Ph.D. degrees from the University of California, Berkeley, CA, USA, in 1972, 1973, and 1976, respectively.
+He is Charles Batchelor Professor of Electrical Engineering at Columbia University, New York, NY, USA. He has worked at Motorola Semiconductor and AT&T Bell Laboratories, and has taught at the University of California at Berkeley, the Massachu-
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 21:29:29 UTC from IEEE Xplore. Restrictions apply.
+
+

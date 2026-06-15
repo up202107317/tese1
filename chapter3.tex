@@ -2,14 +2,16 @@
 \chapter{Proposed Asynchronous Flash ADC Design}
 \label{chap:async}
 
+The previous chapter fixed the benchmark; this one develops the converter that will be measured against it. The presentation follows the order the work took: three successive design phases, each shown with its circuit, the calculations that support it and the simulation results that motivated the move to the next phase. The chapter closes with the characterisation of the final architecture at the typical corner and across process corners, whose outcome motivates the trimming strategy of Chapter~\ref{chap:trimming}.
+
 \section{Design Specifications and Terminology}
 \label{sec:design_specs}
 
 Before describing the architectural exploration, the specifications that constrained every design decision in this chapter are stated explicitly. The converter is designed in a 16~nm CMOS technology node, operating from a nominal supply voltage of $V_{DD} = 0.8$~V. The target application is the acquisition of time-sparse signals, as motivated in Chapter~\ref{chap:intro}, which dictates the central architectural requirement: fully clockless, event-driven operation, with dynamic power dissipated only when the input crosses a decision level.
 
-A point of terminology must also be fixed, since it is a recurring source of ambiguity in Flash converter descriptions. A Flash quantiser with a binary resolution of $N$ bits requires $2^N - 1$ parallel comparison elements, whose collective outputs form a \emph{thermometer code} of $2^N - 1$ levels; the number of thermometer outputs is therefore always distinct from, and larger than, the number of binary resolution bits. Throughout this chapter, the term \emph{thermometer outputs} refers to the individual comparator or slicer outputs, while \emph{resolution bits} refers exclusively to the binary word produced after encoding.
+A point of terminology must also be fixed, since it is a recurring source of ambiguity in Flash converter descriptions. A Flash quantiser with a binary resolution of $N$ bits requires $2^N - 1$ parallel comparison elements, whose collective outputs form a thermometer code of $2^N - 1$ levels; the number of thermometer outputs is therefore always distinct from, and larger than, the number of binary resolution bits. Throughout this chapter, the term thermometer outputs refers to the individual comparator or slicer outputs, while resolution bits refers exclusively to the binary word produced after encoding.
 
-The converter implemented in this work has a resolution of 4 bits: a bank of $2^4 - 1 = 15$ slicers produces a fifteen-level thermometer code that the encoder maps to sixteen quantisation levels. This matches the resolution of the synchronous reference converter used for benchmarking (Chapter~\ref{chap:synchronous}), which also uses fifteen comparators, so the two designs are compared at equal resolution. A presentational convention applies throughout the chapter: whenever the operating principle of the comparison stage is explained step by step, a reduced bank of \emph{five} slicers (outputs out$_4$ to out$_0$) stands in for the full fifteen, purely to keep the figures and the code examples readable. The five-slicer bank is an explanatory device, not the implemented circuit; everything said about it extends directly to the fifteen-slicer bank of the actual design.
+The converter implemented in this work has a resolution of 4 bits: a bank of $2^4 - 1 = 15$ slicers produces a fifteen-level thermometer code that the encoder maps to sixteen quantisation levels. This matches the resolution of the synchronous reference converter used for benchmarking (Chapter~\ref{chap:synchronous}), which also uses fifteen comparators, so the two designs are compared at equal resolution. A presentational convention applies throughout the chapter: whenever the operating principle of the comparison stage is explained step by step, a reduced bank of five slicers (outputs out$_4$ to out$_0$) stands in for the full fifteen, purely to keep the figures and the code examples readable. The five-slicer bank is an explanatory device, not the implemented circuit; everything said about it extends directly to the fifteen-slicer bank of the actual design.
 
 \section{Architectural Evolution and Methodology}
 The design of the voltage comparator responsible for generating the digital
@@ -26,7 +28,7 @@ candidate.
 \section{Phase I: The Baseline Current-Mirror OTA Flash Configuration}
 
 The first topology investigated was the current-mirror flash ADC (CMF-ADC)
-introduced by Lee~\textit{et al.}~\cite{lee2017}, originally proposed as the
+introduced by Lee et al.~\cite{lee2017}, originally proposed as the
 sensing front end of a coarse-fine dual-loop digital low-dropout regulator.
 Although the application context of that work differs substantially from the
 present design, the CMF-ADC converts a voltage directly into a thermometer
@@ -43,9 +45,9 @@ concepts reviewed in Section~\ref{sec:clockless_event}.
 \subsection{Operating Principle and Core Topology}
 
 The CMF-ADC topology is structured
-around two cascaded functional stages: a \emph{transconductance cell}, which converts a
+around two cascaded functional stages: a transconductance cell, which converts a
 differential input voltage into a proportional error current, and a
-\emph{current-to-code converter}, which maps that current into a parallel thermometer-coded
+current-to-code converter, which maps that current into a parallel thermometer-coded
 output without requiring a sampling clock. The complete circuit, annotated with the
 current-flow conventions used throughout this analysis, is shown in
 Figure~\ref{fig:cmf_adc_op}.
@@ -213,6 +215,194 @@ an explicitly quantifiable input-output characteristic. It was therefore
 adopted as the first candidate for the present comparator design, and its
 operating principle informed all subsequent topological choices.
 
+\subsection{Small-Signal Behaviour of the Current-Mirror OTA}
+\label{subsec:cm_ota_analysis}
+
+The transconductance cell and the current-to-code converter together form a
+current-mirror OTA, a single-stage topology whose distinguishing feature is
+that the input current is replicated to the output through current mirrors
+sized with a multiplication factor $K$ (the ratios $\alpha_k$ introduced
+above). A short small-signal analysis, following the treatment of single-stage
+OTAs in~\cite{choi2023}, explains why this structure was attractive as a fast,
+current-domain front end.
+
+When the input pair is matched with transconductance $g_m$, each input device
+delivers a signal current $g_m v_{id}/2$. The output mirrors copy this current
+with the factor $K$ and merge the two halves at the output node, so the
+effective transconductance of the cell is
+
+\begin{equation}
+    G_m = K\,g_m,
+    \label{eq:gm_cm}
+\end{equation}
+
+\noindent
+$K$ times larger than that of a plain differential pair. The output node sees
+two device output resistances in parallel,
+
+\begin{equation}
+    r_{out} = r_{oK} \,\|\, r_{o} \approx \frac{r_{o}}{2},
+    \label{eq:rout_cm}
+\end{equation}
+
+\noindent
+where $r_o$ is the output resistance of a single transistor at the operating
+bias. The low-frequency gain and the single-pole frequency response then
+follow from the product of these two quantities and the load capacitance
+$C_L$:
+
+\begin{equation}
+    A_0 = -G_m\,r_{out} = -\frac{K}{2}\,g_m r_{o},
+    \qquad
+    \omega_{3\mathrm{dB}} = \frac{1}{r_{out} C_L},
+    \qquad
+    \omega_{GB} = |A_0|\,\omega_{3\mathrm{dB}} = \frac{K g_m}{C_L}.
+    \label{eq:freq_cm}
+\end{equation}
+
+\noindent
+The gain-bandwidth product is therefore $K$ times that of a single
+differential pair, which is the source of the speed advantage of the
+current-mode approach. The same $K$ amplification acts on the large-signal
+behaviour: the current available to charge the output node is the mirrored
+tail current, so the slew rate
+
+\begin{equation}
+    SR = \frac{K\,I_{tail}}{C_L}
+    \label{eq:sr_cm}
+\end{equation}
+
+\noindent
+is not bounded by the input bias current, unlike in a simple OTA. Finally,
+because only two transistors stack at the output node, the output can swing
+between $V_{DSAT}$ and $V_{DD} - V_{DSAT}$, the widest output range of the
+single-stage OTA family and effectively rail-to-rail at this resolution.
+
+High $G_m$, wide bandwidth, fast slewing and a wide output swing all suit an
+event-driven comparison stage, and they justified the choice of the
+current-mirror configuration for the first approach. The same analysis also
+shows the costs that later ruled the current-mode line out. The $K$ extra
+current paths raise the power consumption, the mirror devices add noise that
+is amplified to the output, and, as the next phase shows, every stacked mirror
+spends voltage headroom the $0.8$~V supply cannot afford.
+
+\subsection{Current Comparator Selection}
+\label{subsec:comp_selection}
+
+The current-to-code converter resolves each thermometer output through a
+current comparison, so the decision element of this first approach is a
+current comparator, and its choice sets the speed and the power of the whole
+stage. This choice was not made from the literature alone. All six topologies
+reviewed in Section~\ref{sec:clockless_event}, the current-mirror, Traff, Lu
+Chen, hysteresis, Min and Kim and CC-II comparators, were redrawn at
+transistor level and simulated under identical conditions, and the
+current-mirror cell was selected on the basis of those simulations. This
+section documents the testbench, the small-signal behaviour and the measured
+results, so that the power and delay figures used later in the chapter rest on
+an explicit comparison rather than on an asserted choice.
+
+The small-signal behaviour of each topology was analysed in
+Section~\ref{sec:clockless_event} and is the starting point for the
+comparison. Figure~\ref{fig:comp_schematics} shows the schematic of each
+comparator with its input and output swing ranges annotated, the input swing
+being the range of input current (or the equivalent node voltage) over which
+the comparator resolves correctly, and the output swing the excursion of the
+decision node. These ranges, together with the small-signal input resistance
+of each topology, set the sensitivity and the speed that the transient
+measurements then quantify.
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.95\textwidth]{figures/comp_schematics.pdf}
+    \vspace{6cm} % Placeholder space for the image
+    \caption{Schematic of each simulated current comparator with the input and output swing ranges annotated: (a) current-mirror, (b) Traff, (c) Lu Chen, (d) hysteresis, (e) Min and Kim, (f) CC-II based.}
+    \label{fig:comp_schematics}
+\end{figure}
+
+The six comparators were placed in a common testbench: the same supply, the
+same reference current, and the same input current step and slow input ramp,
+so that the figures are directly comparable. From the step response, the
+propagation delay was measured as the time from the input crossing the
+decision threshold to the output reaching its logic level, and the maximum and
+average power were integrated over the switching event. From the slow ramp,
+the static transfer characteristic of each comparator was extracted.
+Figure~\ref{fig:comp_transfer} shows that transfer characteristic, the output
+voltage against the input, for the six topologies; it is the clearest view of
+the decision threshold, the gain through the transition, and the output swing.
+Table~\ref{tab:comp_comparison} collects the three figures of merit and
+Figure~\ref{fig:comp_operation} shows the transient response of each
+comparator to the same input current step.
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.95\textwidth]{figures/comp_transfer.pdf}
+    \vspace{6cm} % Placeholder space for the image
+    \caption{Simulated static transfer characteristic (output voltage versus input) of each current comparator: (a) current-mirror, (b) Traff, (c) Lu Chen, (d) hysteresis, (e) Min and Kim, (f) CC-II based.}
+    \label{fig:comp_transfer}
+\end{figure}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Comparison of the simulated current comparator topologies.}
+    \label{tab:comp_comparison}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{lccc}
+        \toprule
+        \textbf{Topology} & \textbf{Max power ($\mu$W)} & \textbf{Average power ($\mu$W)} & \textbf{Propagation delay (ps)} \\
+        \midrule
+        Current-mirror     & 1.976 & 1.624  & 0.476 \\
+        Traff              & 1.064 & 0.824  & 25.1  \\
+        Lu Chen            & 135.2 & 108.8  & 89.8  \\
+        Hysteresis         & 38.8  & 35.28  & 123   \\
+        Min and Kim        & 342.2 & 291.2  & 76.7  \\
+        CC-II based        & 659.2 & 19.52  & 1030  \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.95\textwidth]{figures/comp_operation.pdf}
+    \vspace{6cm} % Placeholder space for the image
+    \caption{Transient response of each simulated current comparator to the same input current step: (a) current-mirror, (b) Traff, (c) Lu Chen, (d) hysteresis, (e) Min and Kim, (f) CC-II based.}
+    \label{fig:comp_operation}
+\end{figure}
+
+The current-mirror comparator was selected. Its propagation delay of $0.476$~ps
+is the lowest of the six by a wide margin, more than fifty times shorter than
+the next fastest, and its average power of $1.624$~\textmu W is the
+second-lowest, behind only the Traff comparator. The Traff comparator draws
+slightly less ($0.824$~\textmu W) but is about fifty times slower and carries
+the deadband limitation described in Section~\ref{sec:clockless_event}, so it
+does not match the speed-and-power combination of the current-mirror cell. The
+choice also keeps the comparison stage structurally homogeneous with the rest
+of the CMF-ADC, which is itself built on current mirrors. Working as the
+decision node of the CMF-ADC, at low current and driving only a light internal
+load rather than a buffered rail-to-rail output, the cell avoids the
+large-capacitive-load penalty discussed in
+Section~\ref{sec:clockless_event} and reaches the lowest delay of the six.
+
+\subsection{Results of the First Approach}
+\label{subsec:phase1_results}
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.85\textwidth]{figures/phase1_results.pdf}
+    \vspace{5cm} % Placeholder space for the image
+    \caption{Simulated operation of the first approach: thermometer outputs of the CMF-ADC as the input sweeps the reference level.}
+    \label{fig:phase1_results}
+\end{figure}
+
+Figure~\ref{fig:phase1_results} shows the implemented CMF-ADC in operation:
+as the input crosses the reference level, the thermometer outputs switch in
+the expected monotonic order, confirming the operating principle of
+Section~\ref{sec:cmf_characterisation}. The same simulations, however,
+exposed the limitation that ended this phase: the usable input common-mode
+range is far from the supply rails, bounded by the headroom of the
+differential pair and its tail source. For the sensor-driven applications
+targeted in Chapter~\ref{chap:intro}, that restriction is too costly, and the
+work moved to a rail-to-rail input stage.
+
 
 \section{Phase II: The Complementary Dual-Input Flash Configuration}
 
@@ -268,7 +458,16 @@ complementary transconductance of both stages so that each OTA could reinforce
 the operation of the other near the boundaries of its valid input common-mode
 range. In principle, this mechanism would extend the effective dynamic
 operating region of the converter while preserving the event-driven
-current-comparison methodology.
+current-comparison methodology. Figure~\ref{fig:phase2_circuit} shows the
+implemented circuit, with the role of each transistor annotated.
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.9\textwidth]{figures/phase2_circuit.pdf}
+    \vspace{6cm} % Placeholder space for the image
+    \caption{Complementary dual-input current-mirror OTA of the second approach, with the function of each transistor annotated: NMOS and PMOS input pairs, tail sources, mirror loads and cross-coupled output branches.}
+    \label{fig:phase2_circuit}
+\end{figure}
 
 Despite the conceptual advantages of this architecture, its practical
 implementation proved incompatible with the target supply voltage of
@@ -283,11 +482,43 @@ topology, each load is itself a mirror that copies the branch current onward
 to the thermometer-code conversion stage, so every signal path stacks the
 gate-to-source voltage of the input pair, the saturation voltage of the tail
 source and the gate-to-source voltage of the mirror load; the cross-coupling
-mechanism then inserted one more transistor into this same path. Each stacked
-device adds its own overdrive or saturation voltage requirement, and the sum
-of these contributions exceeded the available supply. No operating point kept
-all active devices in saturation over the intended input range, so the
-architecture could not function correctly.
+mechanism then inserted one more transistor into this same path. The budget
+of the critical path is
+
+\begin{equation}
+    V_{DD} \geq V_{GS,\mathrm{in}} + V_{DSAT,\mathrm{tail}} + V_{GS,\mathrm{mirror}} + V_{DSAT,\mathrm{cc}},
+    \label{eq:headroom_phase2}
+\end{equation}
+
+\noindent
+where $V_{GS,\mathrm{in}}$ belongs to the input pair, $V_{DSAT,\mathrm{tail}}$
+to the tail source, $V_{GS,\mathrm{mirror}}$ to the mirror load and
+$V_{DSAT,\mathrm{cc}}$ to the cross-coupling device. Following the kind of
+voltage-budget reasoning used in~\cite{razavi}, each gate-to-source term is
+the sum of a threshold voltage and an overdrive, $V_{GS} = V_{th} + V_{ov}$,
+where the overdrive equals the saturation voltage, $V_{ov} = V_{DSAT}$.
+Substituting this into equation~\eqref{eq:headroom_phase2} gives
+
+\begin{equation}
+    V_{DD} \geq \underbrace{V_{th,\mathrm{in}} + V_{th,\mathrm{mirror}}}_{\text{two thresholds}} + \underbrace{V_{ov,\mathrm{in}} + V_{ov,\mathrm{tail}} + V_{ov,\mathrm{mirror}} + V_{ov,\mathrm{cc}}}_{\text{four overdrives}}.
+    \label{eq:headroom_phase2_expanded}
+\end{equation}
+
+\noindent
+The stack carries two full threshold voltages plus four overdrives. At
+$V_{DD} = 0.8$~V the two thresholds alone already consume most of the supply,
+so the four stacked overdrives leave no room: no operating point kept all
+active devices in saturation over the intended input range, and the
+architecture could not function correctly. Figure~\ref{fig:phase2_headroom}
+illustrates the violation, marking the devices forced out of saturation.
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.85\textwidth]{figures/phase2_headroom.pdf}
+    \vspace{5cm} % Placeholder space for the image
+    \caption{Node voltages of the second approach, with the devices that fall out of saturation marked. The accumulated stack of equation~\eqref{eq:headroom_phase2} exceeds the $0.8$~V supply.}
+    \label{fig:phase2_headroom}
+\end{figure}
 
 Part of the lost headroom could be recovered at the tail of the OTAs. The
 conventional tail current source was replaced with the low-voltage current
@@ -313,21 +544,132 @@ dual-input idea and rebuilds it around a far smaller stack of transistors.
 \subsection{Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}
 \label{subsec:5t_ota}
 
-The third design phase kept the rail-to-rail objective of Phase II and rebuilt its implementation around the classical five-transistor operational transconductance amplifier. The complementary input is preserved: two five-transistor OTAs operate in parallel on the same input, one built around an NMOS differential pair and the other around a PMOS differential pair, so the usable input range is extended in the same way as before. The load structure is what changes. Each pair is loaded by a single active current mirror, in which one device operates in diode connection and sets the gate voltage of the mirrored branch; this is the conventional active load that defines the five-transistor OTA~\cite{razavi}.
+The third design phase kept the rail-to-rail objective of Phase II and rebuilt its implementation around the classical five-transistor operational transconductance amplifier. The complementary input is preserved: two five-transistor OTAs operate in parallel on the same input, one built around an NMOS differential pair and the other around a PMOS differential pair, so the usable input range is extended in the same way as before. The load structure is what changes. Each pair is loaded by a single active current mirror, in which one device operates in diode connection and sets the gate voltage of the mirrored branch; this is the conventional active load that defines the five-transistor OTA~\cite{razavi}. Figure~\ref{fig:phase3_circuit} shows the circuit with the role of each transistor annotated.
 
-The headroom is recovered in this load. In the Phase II topology every load was itself a mirror that copied the branch current onward, so each signal path carried the extra stacked gate-to-source drops described in the previous section. With one current-mirror active load per pair, those extra devices and their accumulated overdrive requirements disappear, and the complementary structure fits within the $V_\mathrm{DD}=0.8$~V budget while it keeps the extended input range.
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.9\textwidth]{figures/phase3_circuit.pdf}
+    \vspace{6cm} % Placeholder space for the image
+    \caption{Final architecture of the third approach: complementary pair of five-transistor OTAs with the function of each transistor annotated, including the low-voltage tail mirrors and the current-mirror active loads.}
+    \label{fig:phase3_circuit}
+\end{figure}
+
+The headroom is recovered in this load. In the Phase II topology every load was itself a mirror that copied the branch current onward, so each signal path carried the extra stacked gate-to-source drops described in the previous section. With one current-mirror active load per pair, those extra devices and their accumulated overdrive requirements disappear, and the budget of equation~\eqref{eq:headroom_phase2} reduces to
+
+\begin{equation}
+    V_{DD} \geq V_{GS,\mathrm{in}} + V_{DSAT,\mathrm{tail}} + V_{DSAT,\mathrm{load}},
+    \label{eq:headroom_phase3}
+\end{equation}
+
+\noindent
+one gate-to-source drop and one saturation voltage lighter than before. The
+size of the saving follows directly from subtracting
+equation~\eqref{eq:headroom_phase3} from~\eqref{eq:headroom_phase2}:
+
+\begin{equation}
+    \Delta V = V_{GS,\mathrm{mirror}} + V_{DSAT,\mathrm{cc}} - V_{DSAT,\mathrm{load}}
+             = V_{th,\mathrm{mirror}} + V_{ov,\mathrm{mirror}} + V_{ov,\mathrm{cc}} - V_{ov,\mathrm{load}}.
+    \label{eq:headroom_diff}
+\end{equation}
+
+\noindent
+The mirror load of the second approach and the active load of the third play
+the same role and carry a comparable overdrive, so
+$V_{ov,\mathrm{mirror}} \approx V_{ov,\mathrm{load}}$ and the expression
+collapses to
+
+\begin{equation}
+    \Delta V \approx V_{th,\mathrm{mirror}} + V_{ov,\mathrm{cc}}.
+    \label{eq:headroom_diff_approx}
+\end{equation}
+
+\noindent
+The third approach frees roughly one threshold voltage plus one overdrive
+compared with the second. Because a threshold voltage is a large fraction of a
+$0.8$~V supply, recovering it is precisely what brings the stack back inside
+the budget while the extended input range is preserved.
 
 The tail bias carries over a result from the previous phase. Both OTAs draw their tail current through the low-voltage current mirror from Razavi's book~\cite{razavi}, the same structure tested in Phase II, because even this reduced topology operates close to the headroom limit and a conventional tail mirror would spend voltage the design does not have.
 
 One limitation remains: close to either supply rail neither input pair has enough overdrive to stay in saturation, so the effective input window of the complementary structure stops slightly short of the rails. The consequences for the test stimuli and for the idle power consumption are discussed in Section~\ref{subsec:resolution_power}.
 
-The initial implementation evaluated the complementary OTA under open loop conditions in order to maximise gain and improve sensitivity to small differential input voltages. Through transistor sizing optimisation, high voltage gain could be achieved and with it higher comparison sensitivity. Practical simulations, however, revealed a critical limitation of this approach: small unintended differential inputs originating from offset, thermal noise or marginal overdrive caused the output node to saturate rapidly at one of the supply rails before the intended comparison could complete.
+The initial implementation evaluated the complementary OTA under open loop conditions to maximise gain and improve sensitivity to small differential input voltages. Through transistor sizing optimisation, high voltage gain could be achieved and with it higher comparison sensitivity. Practical simulations, however, revealed a critical limitation of this approach: small unintended differential inputs originating from offset, thermal noise or marginal overdrive caused the output node to saturate rapidly at one of the supply rails before the intended comparison could complete.
 
 Once saturation occurred, the recovery was limited by the bias current available to charge or discharge the high-impedance output node. This increased the settling time considerably and introduced variability between consecutive conversion cycles.
 
 To overcome this limitation, the complementary OTA was reconfigured as a unity gain voltage follower by directly connecting the output node to the inverting input and establishing full negative feedback. Under this configuration, the differential input voltage remains close to zero in steady state and the amplifier operates continuously in its linear region.
 
 As a consequence, the OTA acts as a low impedance replica of the input signal, reproducing $V_\mathrm{in}$ at its output while avoiding saturation effects. The resulting accuracy is determined primarily by the open loop gain and the input referred offset of the amplifier.
+
+\subsection{Small-Signal Analysis of the Five-Transistor OTA}
+\label{subsec:5t_analysis}
+
+The same small-signal framework applied to the current-mirror OTA in
+Section~\ref{subsec:cm_ota_analysis} makes the headroom-versus-performance
+trade-off of the final choice explicit. Each five-transistor OTA has no current
+amplification, so its effective transconductance is simply that of the input
+pair,
+
+\begin{equation}
+    G_m = g_{m1} = g_{m2} = g_m,
+    \label{eq:gm_5t}
+\end{equation}
+
+\noindent
+the special case $K = 1$ of equation~\eqref{eq:gm_cm}. The output node again
+sees two device resistances in parallel, $r_{out} = r_{o2} \,\|\, r_{o4}
+\approx r_{o}/2$, which gives a low-frequency gain and a single-pole response
+of
+
+\begin{equation}
+    A_0 = -\frac{1}{2}\,g_m r_{o},
+    \qquad
+    \omega_{3\mathrm{dB}} = \frac{1}{(r_{o}/2)\,C_L},
+    \qquad
+    \omega_{GB} = \frac{g_m}{C_L}.
+    \label{eq:freq_5t}
+\end{equation}
+
+\noindent
+The slew rate is set by the tail current charging the load,
+
+\begin{equation}
+    SR = \frac{I_{tail}}{C_L},
+    \label{eq:sr_5t}
+\end{equation}
+
+\noindent
+without the factor $K$ that the current-mirror OTA enjoyed. Comparing
+equations~\eqref{eq:freq_5t} and~\eqref{eq:sr_5t} with their current-mirror
+counterparts~\eqref{eq:freq_cm} and~\eqref{eq:sr_cm} shows what was given up:
+the gain, the gain-bandwidth product and the slew rate are all $K$ times
+smaller. What is gained in return is the short device stack. With $V_{DSAT}$
+the minimum drain-to-source voltage for saturation and $V_{th}$ the threshold
+voltage, the input common-mode level of a five-transistor OTA must lie between
+$2V_{DSAT} + V_{th}$ and $V_{DD} - V_{DSAT}$, and the output between
+$2V_{DSAT}$ and $V_{DD} - V_{DSAT}$. These are the moderate swing ranges of
+the simplest single-stage OTA~\cite{choi2023}, and they fit the $0.8$~V budget
+once the extra mirror loads of the second approach are removed, as the
+headroom difference of equation~\eqref{eq:headroom_diff_approx} showed.
+
+The reduced performance is acceptable here because the OTA works as a
+unity-gain follower rather than as an open-loop high-gain amplifier. The
+slicer bank that follows sets the decision thresholds, so the OTA only has to
+reproduce the input voltage accurately and settle within the conversion
+window. The complementary structure places two such OTAs in parallel, an
+NMOS-input pair covering the upper part of the range and a PMOS-input pair
+covering the lower part, so that at least one of them keeps the
+transconductance of equation~\eqref{eq:gm_5t} available across almost the
+entire supply range.
+
+\subsection{Stability Without Frequency Compensation}
+\label{subsec:no_compensation}
+
+An OTA placed in feedback is normally frequency-compensated to keep the loop stable. The follower here uses no compensation, for two reasons.
+
+Compensation moves the dominant pole to a lower frequency, trading bandwidth for phase margin. The follower has to settle inside the conversion window before the next threshold is crossed, so a slower amplifier would lengthen the conversion delay $\tau_{conv}$ of Section~\ref{subsec:slope_overload} and tighten the slew-rate limit on the input frequency. Spending bandwidth to buy margin the design does not need would work against the speed of the converter.
+
+The margin is not needed because the amplifier already has it. A five-transistor OTA has a single high-impedance node, its output, so in unity-gain feedback the loop is dominated by one pole and the phase margin is wide by construction. Open-loop simulation of the complementary OTA confirmed this: the phase margin stayed above $60^\circ$ over the input range and dropped below it only for inputs under $0.1$~V or above $0.7$~V, where one of the input pairs runs out of overdrive near the rail. That high-margin band is the same $0.1$--$0.7$~V window over which the front end is most linear in Section~\ref{subsec:5t_ota}. Outside it the complementary pair still keeps one input stage conducting, so the follower remains stable and the converter resolves crossings all the way to both rails; the cost is only a milder loss of follower linearity in the outer margins of the swing, not a loss of operation.
 
 \subsection{Ratioed Output Slicers Design}
 
@@ -377,6 +719,42 @@ Compared with previous current mirror based implementations, this architecture i
 
 This separation simplifies the design procedure, makes the circuit robust against saturation and removes the extra voltage headroom requirements. The result is a compact, scalable architecture suited to low-voltage asynchronous Flash conversion.
 
+\subsection{Results at the Typical Corner and Across Process Corners}
+\label{subsec:phase3_results}
+
+The final architecture was characterised statically at the typical corner and at the four non-typical process corners, with the thresholds of the fifteen slicers extracted on rising and falling ramps as detailed in Chapter~\ref{chap:Benchmarking}.
+
+At the typical corner the converter needs no correction: both the DNL and the INL stay within approximately $\pm 0.15$~LSB across all codes, as Figure~\ref{fig:dnl_inl_comparison} shows.
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.9\textwidth]{figures/dnl_inl_comparison.pdf}
+    \vspace{6cm} % Placeholder space for the image
+    \caption{DNL per code and INL per transition of the final architecture at the typical (TT) corner.}
+    \label{fig:dnl_inl_comparison}
+\end{figure}
+
+The process corners are a different matter. Table~\ref{tab:untrimmed_corners} lists the worst-case errors measured at SS, FF, FS and SF without any correction. Every corner exceeds the $0.5$~LSB DNL target on at least one ramp, and three of the four show worst-case INL above $1$~LSB. The sizing-defined trip points of the slicer bank, accurate at TT, drift with the corner-dependent imbalance between NMOS and PMOS drive strengths, exactly as anticipated in the threshold model of equation~\eqref{eq:trip_point}.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Worst-case static linearity of the final architecture at the non-typical process corners, without trimming (values in LSB, measured on rising and falling ramps).}
+    \label{tab:untrimmed_corners}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{lcccc}
+        \toprule
+        \textbf{Corner} & \textbf{DNL rise} & \textbf{DNL fall} & \textbf{INL rise} & \textbf{INL fall} \\
+        \midrule
+        SS & 0.6958 & 0.6628 & 0.9489 & 1.0949 \\
+        FF & 0.3814 & 0.6372 & 0.6670 & 1.3724 \\
+        FS & 0.3814 & 0.6372 & 0.6670 & 1.3724 \\
+        SF & 0.5191 & 0.5142 & 0.5829 & 1.0787 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+The final architecture works, but its linearity does not survive process variation on its own. Some form of post-fabrication correction is required; the next chapter develops it.
+
 
 
 
@@ -419,7 +797,7 @@ Rearranging this inequality yields the absolute maximum input frequency $f_{in,m
     f_{in,max} = \frac{1}{\pi 2^N \tau_{conv}}
 \end{equation}
 
-Transient noise lowers this limit considerably. Superimposed thermal and substrate noise produces rapid local voltage fluctuations ($dV_{noise}/dt$) that inflate the effective slope of the signal and make the voltage bounce back and forth across a quantisation threshold. These bounces consume the processing window $\tau_{conv}$ and appear at the output as thermometer-code metastability, the so-called \textit{bubble errors}. The practical maximum slew rate under noise is therefore well below the ideal value: slope overload appears at lower input frequencies and the measured bubble rate rises.
+Transient noise lowers this limit considerably. Superimposed thermal and substrate noise produces rapid local voltage fluctuations ($dV_{noise}/dt$) that inflate the effective slope of the signal and make the voltage bounce back and forth across a quantisation threshold. These bounces consume the processing window $\tau_{conv}$ and appear at the output as thermometer-code metastability, the so-called bubble errors. The practical maximum slew rate under noise is therefore well below the ideal value: slope overload appears at lower input frequencies and the measured bubble rate rises.
 
 \subsection{Resolution and Power Dissipation}
 \label{subsec:resolution_power}
@@ -431,7 +809,7 @@ When the input signal is entirely static ($f_{in} = 0$), no quantisation thresho
     P_{total} = P_{static} + P_{dynamic}
 \end{equation}
 
-In the implemented converter this zero-power condition is a theoretical limit rather than a measurable operating point. As discussed in Section~\ref{subsec:5t_ota}, the complementary follower operates correctly only within an input window that stops slightly short of both supply rails, so the dynamic characterisation used a sinusoidal stimulus between $0.1$~V and $0.7$~V. Because the input never reaches the bottom rail, the input stages always conduct a residual bias current, and the measured consumption at idle settles at a non-zero floor set by $P_{static}$ instead of falling to the ideal zero.
+In the implemented converter this zero-power condition is a theoretical limit rather than a measurable operating point. The complementary follower is continuously biased, so its input pairs always conduct a residual bias current, and the measured consumption at idle settles at a non-zero floor set by $P_{static}$ instead of falling to the ideal zero.
 
 For a dynamic input, such as a full-scale sinusoid at frequency $f_{in}$, the signal traverses the full-scale range $V_{FS}$ twice per period $T = 1/f_{in}$ (one upward and one downward excursion across the $2^N$ levels in each half). The average number of quantisation level crossings per second, which can be read as an effective average sampling frequency $f_{s,avg}$, is therefore proportional to both the frequency and the resolution:
 \begin{equation}
@@ -455,12 +833,14 @@ In practical circuit implementations, the physical performance is constrained by
 
 Transient noise degrades the Signal-to-Noise Ratio ($SNR$) and the $SNDR$, and with them the $ENOB$. It also introduces spurious, non-monotonic threshold crossings (chatter), and each of these noise-driven crossings triggers a redundant conversion cycle that encodes no useful information. The bubble rate rises and $P_{dynamic}$ grows well beyond the ideal prediction. Power goes up while $ENOB$ goes down, so the Walden Figure of Merit ($FoM_W$) suffers twice over. Keeping the noise-induced bubble rate low is therefore a first-order design constraint for energy efficiency.
 
-\subsection{Chapter Summary}
+\section{Chapter Summary}
 \label{subsec:chapter_summary}
 
 This chapter established the architecture of the proposed asynchronous Flash ADC and the theory that bounds its performance. The converter replaces clock-bound sampling with signal-dependent quantisation: with no global clock, it avoids the energy that synchronous architectures waste on sparse or bursty signals.
 
 The structural development progressed through three architectural phases: a current-mirror Flash configuration adopted from the literature, a current-mirror implementation of the complementary dual-input extension rejected for exceeding the voltage headroom available at $0.8$~V, and the final voltage-mode solution, in which a complementary pair of five-transistor OTAs configured as a unity-gain follower drives a bank of ratioed CMOS slicers whose switching thresholds are set purely by transistor sizing. The event-generation network described in Section~\ref{sec:async_logic} completes the conversion chain, detecting the transitions of the thermometer outputs and encoding them combinationally into the binary output word, with no clock involved at any point in the signal path.
+
+The results presented along the way told a consistent story. The first approach validated the conversion principle but not the input range; the second could not be biased within the supply; the third recovers the headroom (equation~\eqref{eq:headroom_diff_approx}), is linear at the typical corner, and loses its linearity at all four non-typical process corners (Table~\ref{tab:untrimmed_corners}). That last result is the brief for Chapter~\ref{chap:trimming}.
 
 Finally, the analytical models bounded the design space. The maximum input frequency is set not by a Nyquist limit but by the slew rate constraint $SR_{ADC}$, in which the propagation delay $\tau_{conv}$ determines the onset of slope overload. The power analysis showed that dynamic consumption grows linearly with the input frequency $f_{in}$ but exponentially with the nominal resolution $N$. The same models quantify the cost of transient noise: degraded $SNR$ and $SNDR$, bubble errors, and redundant conversion cycles that raise the power while the effective resolution ($ENOB$) falls, to the detriment of the $FoM_W$. These results are the baseline for the simulation setup and the performance evaluation of the following chapters.
 

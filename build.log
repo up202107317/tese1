@@ -1,0 +1,1455 @@
+Rc files read:
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+Latexmk: Doing full clean up for 'meec_thesis.tex'
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Force everything to be remade.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'go_mode'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -recorder  "meec_thesis.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(meec_thesis.tex
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-08-13>
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-pdftex.def
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/circuitikz\circuitikz.s
+ty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarycalc.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.meta.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarybending.code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+bending.code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+nonlineartransformations.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+arycurvilinear.code.tex)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryfpu.code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryfpu.code.tex))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirc.de
+fines.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircuti
+ls.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircpat
+h.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircsha
+pes.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircmon
+opoles.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircbip
+oles.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirctri
+poles.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircqua
+dpoles.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircmul
+tipoles.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirclab
+el.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircvol
+tage.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirccur
+rent.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircflo
+w.tex)) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/svg\svg.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
+
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.st
+y
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-ho
+ok.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
+))))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty))
+
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.s
+ty) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty)
+)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/transparent\transparent
+.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/transparent\transparent
+-nometadata.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg))
+
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypositioning.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryshapes.geometric.code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
+pgflibraryshapes.geometric.code.tex)) (feupteses.sty
+Document Style `FEUP Teses' 1.1.3 <2024/10/07>
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.l
+df
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel
+-english.tex)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\mathptmx.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/courier-scaled\couriers
+.sty) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\helvet.sty
+) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgfgantt\pgfgantt.sty
+
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryarrows.code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.code.tex))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarybackgrounds.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypatterns.code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+arypatterns.code.tex))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfcalend
+ar.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfcale
+ndar.code.tex)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/base\makeidx.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg))
+ (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
+) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
+)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\numeric-co
+mp.bbx
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\numeric.bb
+x
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.b
+bx)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\numeric-co
+mp.cbx)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3
+.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty))) 
+File meec.cfg loaded.
+(meec.cfg))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd)
+(meec_thesis.aux)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lb
+x) (meec_thesis.bbl)
+[-3{C:/Users/gonca/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/g
+onca/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./figures/upor
+to-feup.pdf>]
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd)
+[-2] (abstract.tex)
+[1] (un-sdg.tex
+Overfull \hbox (1.82004pt too wide) in paragraph at lines 6--8
+\T1/ptm/m/n/10.95 The United Na-tions Sus-tain-able De-vel-op-ment Goals (SDGs)
+ pro-vide a global frame-work to achieve
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ztmcm.fd)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlztmcm.fd)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsztmcm.fd)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxztmcm.fd)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd)
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+[]\T1/ptm/b/n/10.95 Performance In-di-ca-tors and
+)
+[2]
+No file meec_thesis.toc.
+
+[3]
+No file meec_thesis.lof.
+
+[4]
+No file meec_thesis.lot.
+
+[5] (abbrevs.tex)
+[6] (chapter1.tex
+Chapter 1.
+
+[1]
+
+LaTeX Warning: Reference `fig:Sparse-time' on page 2 undefined on input line 40
+.
+
+
+[2 <./figures/uporto.pdf>])
+[3] (chapter2.tex
+Chapter 2.
+
+LaTeX Warning: Reference `chap:intro' on page 4 undefined on input line 6.
+
+
+[4]
+[5]
+
+LaTeX Warning: Reference `fig:offset_gain_error' on page 6 undefined on input l
+ine 62.
+
+
+[6]
+[7]
+
+LaTeX Warning: Reference `sec:async_vs_sync' on page 8 undefined on input line 
+105.
+
+
+[8]
+Overfull \hbox (20.53398pt too wide) in paragraph at lines 171--171
+[][]\T1/ptm/m/n/10.95 SHA  
+
+Overfull \hbox (17.55829pt too wide) in paragraph at lines 171--171
+[][]\T1/ptm/m/n/10.95 Output  
+
+Overfull \hbox (10.99428pt too wide) in paragraph at lines 171--171
+[][]\T1/ptm/m/n/10.95 Comparator  
+
+LaTeX Warning: Reference `fig:sar_arch' on page 9 undefined on input line 175.
+
+
+[9]
+
+LaTeX Warning: Reference `fig:pipeline_arch' on page 10 undefined on input line
+ 246.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 247.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Sigma' on input line 247.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Delta' on input line 247.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 247.
+
+
+[10] (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd)
+
+LaTeX Warning: Reference `fig:sigma_delta_arch' on page 11 undefined on input l
+ine 359.
+
+
+[11]
+
+Package mathptmx Warning: There are no bold math fonts on input line 410.
+
+
+Overfull \hbox (9.74214pt too wide) in paragraph at lines 410--410
+[][]\T1/ptm/m/n/10.95 Clock  
+
+Overfull \hbox (10.44482pt too wide) in paragraph at lines 410--410
+[][]\T1/ptm/m/n/10.95 Digital 
+
+Overfull \hbox (12.865pt too wide) in paragraph at lines 410--410
+\T1/ptm/m/n/10.95 counter  
+
+LaTeX Warning: Reference `fig:dual_slope_arch' on page 12 undefined on input li
+ne 418.
+
+
+[12]
+
+LaTeX Warning: Reference `fig:LC_digital_logic' on page 13 undefined on input l
+ine 438.
+
+
+[13]
+
+LaTeX Warning: Reference `chap:async' on page 14 undefined on input line 448.
+
+
+[14]
+Overfull \hbox (2.84885pt too wide) in paragraph at lines 464--465
+\T1/ptm/m/n/10.95 nodes un-til a volt-age thresh-old is reached, cur-rent com-p
+ara-tors pro-cess in-for-ma-tion di-rectly through
+
+[15]
+[16]
+[17]
+Overfull \hbox (11.66904pt too wide) in paragraph at lines 504--505
+[]\T1/ptm/m/n/10.95 This non-linear feed-back mech-a-nism cre-ates an ef-fec-ti
+ve hys-tere-sis, once the out-put has switched,
+
+[18]
+[19]
+[20]
+
+LaTeX Warning: Reference `fig:mismatch_correction' on page 21 undefined on inpu
+t line 580.
+
+
+LaTeX Warning: Reference `fig:resistive_ladder' on page 21 undefined on input l
+ine 580.
+
+
+[21]
+
+LaTeX Warning: Reference `chap:trimming' on page 22 undefined on input line 588
+.
+
+
+[22]
+
+LaTeX Warning: Reference `fig:fom_fs' on page 23 undefined on input line 654.
+
+
+[23]
+
+LaTeX Warning: Reference `fig:energy_year' on page 24 undefined on input line 6
+89.
+
+
+[24 <./figures/fom_fs.png>]
+
+LaTeX Warning: Reference `fig:energy_year' on page 25 undefined on input line 7
+06.
+
+
+[25 <./figures/energy_year.png>]
+Overfull \hbox (18.8027pt too wide) in paragraph at lines 740--741
+\T1/ptm/m/n/10.95 bank of com-par-i-son el-e-ments ob-serves dif-fer-ent de-ci-
+sion lev-els in par-al-lel and pro-duces a thermometer-
+
+LaTeX Warning: Reference `sec:clockless_event' on page 26 undefined on input li
+ne 742.
+
+
+LaTeX Warning: Reference `chap:async' on page 26 undefined on input line 742.
+
+
+LaTeX Warning: Reference `sec:calibration' on page 26 undefined on input line 7
+42.
+
+
+LaTeX Warning: Reference `chap:trimming' on page 26 undefined on input line 742
+.
+
+)
+[26] (chapter4.tex
+Chapter 3.
+
+LaTeX Warning: Reference `chap:Benchmarking' on page 27 undefined on input line
+ 5.
+
+
+LaTeX Warning: Reference `chap:async' on page 27 undefined on input line 5.
+
+
+LaTeX Warning: Reference `chap:async' on page 27 undefined on input line 14.
+
+
+LaTeX Warning: Reference `chap:async' on page 27 undefined on input line 16.
+
+
+[27]
+
+LaTeX Warning: Reference `chap:async' on page 28 undefined on input line 47.
+
+
+[28]
+[29]
+
+LaTeX Warning: Reference `chap:async' on page 30 undefined on input line 83.
+
+
+LaTeX Warning: Reference `chap:Benchmarking' on page 30 undefined on input line
+ 83.
+
+
+[30]
+
+LaTeX Warning: Reference `chap:Benchmarking' on page 31 undefined on input line
+ 102.
+
+)
+[31] (chapter3.tex
+Chapter 4.
+
+LaTeX Warning: Reference `chap:trimming' on page 32 undefined on input line 5.
+
+
+LaTeX Warning: Reference `chap:intro' on page 32 undefined on input line 10.
+
+
+LaTeX Warning: Reference `chap:synchronous' on page 32 undefined on input line 
+14.
+
+
+[32]
+
+LaTeX Warning: Reference `sec:clockless_event' on page 33 undefined on input li
+ne 38.
+
+
+LaTeX Warning: Reference `fig:cmf_adc_op' on page 33 undefined on input line 53
+.
+
+
+[33]
+
+LaTeX Warning: Reference `fig:cmf_adc_op' on page 34 undefined on input line 80
+.
+
+
+LaTeX Warning: Reference `fig:cmf_adc_op' on page 34 undefined on input line 87
+.
+
+
+LaTeX Warning: Reference `fig:cmf_adc_op' on page 34 undefined on input line 92
+.
+
+
+LaTeX Warning: Reference `fig:cmf_adc_op' on page 34 undefined on input line 10
+3.
+
+
+[34]
+
+LaTeX Warning: Reference `fig:cmf_adc_op' on page 35 undefined on input line 12
+5.
+
+
+LaTeX Warning: Reference `eq:vth_cmf' on page 35 undefined on input line 157.
+
+
+LaTeX Warning: Reference `sec:async_logic' on page 35 undefined on input line 1
+66.
+
+
+[35]
+
+LaTeX Warning: Reference `eq:vth_cmf' on page 36 undefined on input line 175.
+
+
+LaTeX Warning: Reference `sec:cmf_characterisation' on page 36 undefined on inp
+ut line 181.
+
+
+LaTeX Warning: Reference `sec:design_specs' on page 36 undefined on input line 
+188.
+
+
+LaTeX Warning: Reference `eq:vth_cmf' on page 36 undefined on input line 198.
+
+
+[36]
+
+LaTeX Warning: Reference `sec:clockless_event' on page 37 undefined on input li
+ne 296.
+
+
+[37]
+
+LaTeX Warning: Reference `sec:clockless_event' on page 38 undefined on input li
+ne 305.
+
+
+LaTeX Warning: Reference `fig:comp_schematics' on page 38 undefined on input li
+ne 306.
+
+
+LaTeX Warning: Reference `fig:comp_transfer' on page 38 undefined on input line
+ 329.
+
+
+LaTeX Warning: Reference `tab:comp_comparison' on page 38 undefined on input li
+ne 332.
+
+
+LaTeX Warning: Reference `fig:comp_operation' on page 38 undefined on input lin
+e 333.
+
+
+LaTeX Warning: Reference `sec:clockless_event' on page 38 undefined on input li
+ne 376.
+
+
+LaTeX Warning: Reference `sec:clockless_event' on page 38 undefined on input li
+ne 383.
+
+
+[38]
+[39]
+
+LaTeX Warning: Reference `fig:phase1_results' on page 40 undefined on input lin
+e 396.
+
+
+LaTeX Warning: Reference `sec:cmf_characterisation' on page 40 undefined on inp
+ut line 399.
+
+
+LaTeX Warning: Reference `chap:intro' on page 40 undefined on input line 403.
+
+
+[40]
+
+LaTeX Warning: Reference `fig:phase2_circuit' on page 41 undefined on input lin
+e 461.
+
+
+[41]
+
+LaTeX Warning: Reference `eq:headroom_phase2' on page 42 undefined on input lin
+e 500.
+
+
+[42]
+
+LaTeX Warning: Reference `fig:phase2_headroom' on page 43 undefined on input li
+ne 512.
+
+
+LaTeX Warning: Reference `eq:headroom_phase2' on page 43 undefined on input lin
+e 519.
+
+
+LaTeX Warning: Reference `eq:headroom_phase2' on page 43 undefined on input lin
+e 519.
+
+
+LaTeX Warning: Reference `fig:phase3_circuit' on page 43 undefined on input lin
+e 547.
+
+
+[43]
+
+LaTeX Warning: Reference `eq:headroom_phase2' on page 44 undefined on input lin
+e 557.
+
+
+LaTeX Warning: Reference `eq:headroom_phase3' on page 44 undefined on input lin
+e 567.
+
+
+LaTeX Warning: Reference `eq:headroom_phase2' on page 44 undefined on input lin
+e 567.
+
+
+[44]
+
+LaTeX Warning: Reference `subsec:resolution_power' on page 45 undefined on inpu
+t line 594.
+
+
+LaTeX Warning: Reference `subsec:cm_ota_analysis' on page 45 undefined on input
+ line 608.
+
+
+LaTeX Warning: Reference `eq:gm_cm' on page 45 undefined on input line 619.
+
+
+[45]
+
+LaTeX Warning: Reference `eq:freq_5t' on page 46 undefined on input line 643.
+
+
+LaTeX Warning: Reference `eq:sr_5t' on page 46 undefined on input line 643.
+
+
+LaTeX Warning: Reference `eq:freq_cm' on page 46 undefined on input line 644.
+
+
+LaTeX Warning: Reference `eq:sr_cm' on page 46 undefined on input line 644.
+
+
+LaTeX Warning: Reference `eq:headroom_diff_approx' on page 46 undefined on inpu
+t line 653.
+
+
+LaTeX Warning: Reference `eq:gm_5t' on page 46 undefined on input line 662.
+
+
+LaTeX Warning: Reference `subsec:slope_overload' on page 46 undefined on input 
+line 670.
+
+
+LaTeX Warning: Reference `subsec:5t_ota' on page 46 undefined on input line 672
+.
+
+
+[46]
+
+LaTeX Warning: Reference `sec:design_specs' on page 47 undefined on input line 
+699.
+
+
+[47]
+
+LaTeX Warning: Reference `chap:trimming' on page 48 undefined on input line 714
+.
+
+
+LaTeX Warning: Reference `chap:Benchmarking' on page 48 undefined on input line
+ 714.
+
+
+LaTeX Warning: Reference `chap:Benchmarking' on page 48 undefined on input line
+ 725.
+
+
+[48]
+
+LaTeX Warning: Reference `fig:dnl_inl_comparison' on page 49 undefined on input
+ line 727.
+
+
+LaTeX Warning: Reference `tab:untrimmed_corners' on page 49 undefined on input 
+line 737.
+
+
+LaTeX Warning: Reference `eq:trip_point' on page 49 undefined on input line 737
+.
+
+
+[49]
+[50]
+
+LaTeX Warning: Reference `subsec:5t_ota' on page 51 undefined on input line 812
+.
+
+
+LaTeX Warning: Reference `eq:p_total_model' on page 51 undefined on input line 
+830.
+
+
+[51]
+
+LaTeX Warning: Reference `chap:lit_review' on page 52 undefined on input line 8
+32.
+
+
+LaTeX Warning: Reference `sec:async_logic' on page 52 undefined on input line 8
+41.
+
+
+LaTeX Warning: Reference `eq:headroom_diff_approx' on page 52 undefined on inpu
+t line 843.
+
+
+LaTeX Warning: Reference `tab:untrimmed_corners' on page 52 undefined on input 
+line 843.
+
+
+LaTeX Warning: Reference `chap:trimming' on page 52 undefined on input line 843
+.
+
+)
+[52] (trimming.tex
+Chapter 5.
+
+LaTeX Warning: Reference `chap:async' on page 53 undefined on input line 4.
+
+
+LaTeX Warning: Reference `chap:async' on page 53 undefined on input line 6.
+
+
+LaTeX Warning: Reference `eq:trip_point' on page 53 undefined on input line 8.
+
+
+LaTeX Warning: Reference `sec:calibration' on page 53 undefined on input line 1
+4.
+
+
+LaTeX Warning: Reference `subsec:ladder_trimming' on page 53 undefined on input
+ line 17.
+
+
+LaTeX Warning: Reference `chap:Conclusions' on page 53 undefined on input line 
+23.
+
+
+LaTeX Warning: Reference `sec:calibration' on page 53 undefined on input line 2
+7.
+
+
+LaTeX Warning: Reference `subsec:static_trimming' on page 53 undefined on input
+ line 35.
+
+
+LaTeX Warning: Reference `sec:corner_dependence' on page 53 undefined on input 
+line 50.
+
+
+[53]
+
+LaTeX Warning: Reference `eq:trip_point' on page 54 undefined on input line 89.
+
+
+
+[54]
+
+LaTeX Warning: Reference `chap:async' on page 55 undefined on input line 117.
+
+
+[55]
+
+LaTeX Warning: Reference `chap:Benchmarking' on page 56 undefined on input line
+ 180.
+
+
+LaTeX Warning: Reference `sec:offline_strategy' on page 56 undefined on input l
+ine 185.
+
+
+LaTeX Warning: Reference `tab:trimming_vectors' on page 56 undefined on input l
+ine 187.
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 204--205
+[]\T1/ptm/m/n/10 3:0.1,  4:0.2,  5:0.2,  11:0.1,
+
+LaTeX Warning: Reference `app:veriloga' on page 56 undefined on input line 213.
+
+
+
+LaTeX Warning: Reference `tab:trimming_vectors' on page 56 undefined on input l
+ine 216.
+
+
+[56]
+
+LaTeX Warning: Reference `chap:async' on page 57 undefined on input line 228.
+
+
+LaTeX Warning: Reference `sec:calibration' on page 57 undefined on input line 2
+28.
+
+
+LaTeX Warning: Reference `tab:trimming_vectors' on page 57 undefined on input l
+ine 228.
+
+
+LaTeX Warning: Reference `app:veriloga' on page 57 undefined on input line 228.
+
+
+
+LaTeX Warning: Reference `chap:Benchmarking' on page 57 undefined on input line
+ 228.
+
+)
+[57] (chapter5.tex
+Chapter 6.
+
+LaTeX Warning: Reference `chap:trimming' on page 58 undefined on input line 4.
+
+
+LaTeX Warning: Reference `chap:synchronous' on page 58 undefined on input line 
+4.
+
+
+LaTeX Warning: Reference `chap:async' on page 58 undefined on input line 9.
+
+
+LaTeX Warning: Reference `subsec:5t_ota' on page 58 undefined on input line 11.
+
+
+
+[58]
+
+LaTeX Warning: Reference `fig:reconstruction_time' on page 59 undefined on inpu
+t line 25.
+
+
+LaTeX Warning: Reference `fig:fft_spectrum' on page 59 undefined on input line 
+25.
+
+
+LaTeX Warning: Reference `fig:dynamic_curves' on page 59 undefined on input lin
+e 35.
+
+
+LaTeX Warning: Reference `subsec:static_ramp' on page 59 undefined on input lin
+e 45.
+
+
+[59]
+
+LaTeX Warning: Reference `tab:dynamic_results' on page 60 undefined on input li
+ne 47.
+
+
+LaTeX Warning: Reference `chap:lit_review' on page 60 undefined on input line 4
+7.
+
+
+LaTeX Warning: Reference `chap:trimming' on page 60 undefined on input line 73.
+
+
+
+[60]
+
+LaTeX Warning: Reference `sec:simulation_setup' on page 61 undefined on input l
+ine 78.
+
+
+LaTeX Warning: Reference `subsec:slope_overload' on page 61 undefined on input 
+line 80.
+
+
+LaTeX Warning: Reference `tab:static_ramp' on page 61 undefined on input line 8
+0.
+
+
+LaTeX Warning: Reference `fig:static_vs_ramp' on page 61 undefined on input lin
+e 101.
+
+
+LaTeX Warning: Reference `chap:trimming' on page 61 undefined on input line 113
+.
+
+
+LaTeX Warning: Reference `subsec:phase3_results' on page 61 undefined on input 
+line 113.
+
+
+LaTeX Warning: Reference `tab:static_linearity_summary' on page 61 undefined on
+ input line 113.
+
+
+[61]
+
+LaTeX Warning: Reference `chap:Conclusions' on page 62 undefined on input line 
+135.
+
+
+LaTeX Warning: Reference `chap:trimming' on page 62 undefined on input line 142
+.
+
+
+[62]
+
+LaTeX Warning: Reference `fig:mc_dnl_hist' on page 63 undefined on input line 1
+65.
+
+
+LaTeX Warning: Reference `chap:Conclusions' on page 63 undefined on input line 
+165.
+
+
+[63]
+
+LaTeX Warning: Reference `tab:sync_results' on page 64 undefined on input line 
+187.
+
+
+LaTeX Warning: Reference `chap:synchronous' on page 64 undefined on input line 
+187.
+
+
+LaTeX Warning: Reference `chap:async' on page 64 undefined on input line 187.
+
+
+LaTeX Warning: Reference `subsec:resolution_power' on page 64 undefined on inpu
+t line 191.
+
+
+LaTeX Warning: Reference `fig:power_scaling' on page 64 undefined on input line
+ 191.
+
+
+LaTeX Warning: Reference `chap:lit_review' on page 64 undefined on input line 2
+01.
+
+
+[64]
+
+LaTeX Warning: Reference `sec:simulation_setup' on page 65 undefined on input l
+ine 207.
+
+
+LaTeX Warning: Reference `eq:fomw' on page 65 undefined on input line 207.
+
+
+LaTeX Warning: Reference `tab:power_metrics_empty' on page 65 undefined on inpu
+t line 209.
+
+
+LaTeX Warning: Reference `tab:power_metrics_empty' on page 65 undefined on inpu
+t line 232.
+
+
+LaTeX Warning: Reference `fig:power_scaling' on page 65 undefined on input line
+ 238.
+
+
+[65]
+
+LaTeX Warning: Reference `chap:synchronous' on page 66 undefined on input line 
+247.
+
+
+LaTeX Warning: Reference `sec:power_methodology' on page 66 undefined on input 
+line 247.
+
+
+LaTeX Warning: Reference `subsec:resolution_power' on page 66 undefined on inpu
+t line 249.
+
+
+LaTeX Warning: Reference `sec:simulation_setup' on page 66 undefined on input l
+ine 249.
+
+
+LaTeX Warning: Reference `sec:simulation_setup' on page 66 undefined on input l
+ine 249.
+
+
+LaTeX Warning: Reference `fig:sync_linearity' on page 66 undefined on input lin
+e 249.
+
+
+LaTeX Warning: Reference `tab:sync_results' on page 66 undefined on input line 
+249.
+
+
+LaTeX Warning: Reference `chap:synchronous' on page 66 undefined on input line 
+259.
+
+
+LaTeX Warning: Reference `tab:sync_power_breakdown' on page 66 undefined on inp
+ut line 259.
+
+
+[66]
+
+LaTeX Warning: Reference `tab:state_of_the_art' on page 67 undefined on input l
+ine 317.
+
+
+LaTeX Warning: Reference `chap:synchronous' on page 67 undefined on input line 
+317.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <5.47603> not available
+(Font)              size <5> substituted on input line 337.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <4.44003> not available
+(Font)              size <5> substituted on input line 337.
+
+
+LaTeX Warning: Reference `sec:sync_results' on page 67 undefined on input line 
+347.
+
+
+[67]
+[68]
+
+LaTeX Warning: Reference `chap:lit_review' on page 69 undefined on input line 3
+49.
+
+
+LaTeX Warning: Reference `sec:power_methodology' on page 69 undefined on input 
+line 351.
+
+
+LaTeX Warning: Reference `subsec:resolution_power' on page 69 undefined on inpu
+t line 351.
+
+
+LaTeX Warning: Reference `chap:intro' on page 69 undefined on input line 351.
+
+
+LaTeX Warning: Reference `chap:intro' on page 69 undefined on input line 355.
+
+)
+[69] (chapter6.tex
+Chapter 7.
+
+[70]
+[71]
+
+LaTeX Warning: Reference `chap:trimming' on page 72 undefined on input line 111
+.
+
+
+LaTeX Warning: Reference `tab:static_linearity_summary' on page 72 undefined on
+ input line 115.
+
+
+[72]
+
+LaTeX Warning: Reference `chap:Benchmarking' on page 73 undefined on input line
+ 139.
+
+
+[73]
+
+LaTeX Warning: Reference `chap:trimming' on page 74 undefined on input line 190
+.
+
+)
+[74]
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/courier-scaled\t1pcrs.f
+d)
+[75]
+Overfull \hbox (13.80038pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2025
+. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 /
+ ISSCC49661 . 2025 . 10904766$[][]\T1/ptm/m/n/10.95 . 
+
+[76]
+Overfull \hbox (6.83562pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/
+ptm/m/n/10.95 . 2024. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m
+/n/10.95 10 . 1109 / ISSCC49657 .
+
+Overfull \hbox (6.42601pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 ADC with Dynamic-Amplifier-Assisted Cas-caded In-te-gra-tor^^
+Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-
+
+Overfull \hbox (13.80038pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2024
+. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 /
+ ISSCC49657 . 2024 . 10454362$[][]\T1/ptm/m/n/10.95 . 
+
+Overfull \hbox (20.31177pt too wide) in paragraph at lines 142--142
+[]\T1/ptm/m/n/10.95 Jaesuk Choi, Soon-Jae Kweon, and Hyun-tak Jeon. ^^P  Single
+-Stage CMOS Op-er-a-tional Transcon-
+
+[77]
+Overfull \hbox (22.84404pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 Pipelined-SAR ADC with Cross-Stage Gain-Mismatch-Error-Shapin
+g Tech-nique and Negative-
+
+[78]
+Overfull \hbox (6.83562pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/
+ptm/m/n/10.95 . 2023. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m
+/n/10.95 10 . 1109 / ISSCC42615 .
+
+Overfull \hbox (13.80038pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2024
+. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 /
+ ISSCC49657 . 2024 . 10454431$[][]\T1/ptm/m/n/10.95 . 
+
+Overfull \hbox (10.60767pt too wide) in paragraph at lines 142--142
+[]\T1/ptm/m/n/10.95 H-K. Hong et al. ^^P  A 2.6b/cycle-architecture-based 10b 1
+.7GS/s 15.4mW 4x Time-interleaved
+
+Overfull \hbox (2.51082pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 
+. 2015. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 
+1109 / ISSCC . 2015 . 7063130$[][]\T1/ptm/m/n/10.95 . 
+
+[79]
+[80]
+Overfull \hbox (7.55891pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2022
+. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 /
+ ISSCC42614 . 2022 . 9731571$[][]\T1/ptm/m/n/10.95 . 
+
+Overfull \hbox (5.33601pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 179.4dB-FOMSNDR 2nd-Order Noise-Shaping SARADC with En-hanced
+ In-put Impedance
+
+Overfull \hbox (1.57942pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 in 0.18$\OML/ztmcm/m/it/10.95 ^^V$\T1/ptm/m/n/10.95 m CMOS^^Q
+. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-en
+ce (ISSCC)\T1/ptm/m/n/10.95 . 2023.
+
+[81]
+[82]
+Overfull \hbox (5.09041pt too wide) in paragraph at lines 142--142
+\OT1/ztmcm/m/n/10.95 ^^A$$^^F$ \T1/ptm/m/n/10.95 ADC in 40nm CMOS^^Q. In: \T1/p
+tm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\
+T1/ptm/m/n/10.95 .
+
+[83]
+Overfull \hbox (6.08362pt too wide) in paragraph at lines 142--142
+[]\T1/ptm/m/n/10.95 Sharvil Patil et al. ^^P  A 700MHz-BW ^^U164dBFS/Hz-Small-S
+ignal-NSD 703mW Continuous-
+
+Overfull \hbox (10.29994pt too wide) in paragraph at lines 142--142
+[]\T1/ptm/m/n/10.95 Sourja Ray and Bang-Sup Song. ^^P  A 13b Lin-ear 40MS/s Pip
+elined ADC with Self-Configured
+
+[84]
+Overfull \hbox (2.51082pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 
+. 2006. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 
+1109 / ISSCC . 2006 . 1696297$[][]\T1/ptm/m/n/10.95 . 
+
+Overfull \hbox (2.51082pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 
+. 2006. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 
+1109 / ISSCC . 2006 . 1696120$[][]\T1/ptm/m/n/10.95 . 
+
+[85]
+Overfull \hbox (1.82037pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 drive read chan-nel^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na
+-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 1999.
+
+Overfull \hbox (0.39282pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 Cross-ing ADC Ex-ploit-ing Dy-namic Self-Biasing Com-para-tor
+s^^Q. In: \T1/ptm/m/it/10.95 IEEE Jour-nal of Solid-
+
+Overfull \hbox (14.23299pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 Micro-Sensor Ap-pli-ca-tions^^Q. In: \T1/ptm/m/it/10.95 IEEE 
+In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 .
+
+[86]
+Overfull \hbox (1.96727pt too wide) in paragraph at lines 142--142
+[]\T1/ptm/m/n/10.95 Jia-Ching Wang and Tai-Haur Kuo. ^^P  A 3-mW 2.7-GS/s 8b Su
+b-rang-ing ADC with Multiple-
+
+[87]
+[88]
+Overfull \hbox (6.0335pt too wide) in paragraph at lines 142--142
+[]\T1/ptm/m/n/10.95 Mingtao Zhan, Lu Jie, and Nan Sun. ^^P  A 10mW 10-ENoB 1GS/
+s Ring-Amp-Based Pipelined
+
+Overfull \hbox (4.73744pt too wide) in paragraph at lines 142--142
+[]\T1/ptm/m/n/10.95 Yanbo Zhang et al. ^^P  A Single-channel 70dB-SNDR 100MHz-B
+W 4th-Order Noise-Shaping
+
+Overfull \hbox (13.80038pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2023
+. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 /
+ ISSCC42615 . 2023 . 10067687$[][]\T1/ptm/m/n/10.95 . 
+
+Overfull \hbox (24.90707pt too wide) in paragraph at lines 142--142
+[]\T1/ptm/m/n/10.95 Yannan Zhang et al. ^^P  A 72GS/s 9b Time-Interleaved Pipel
+ine-SAR ADC Achiev-ing 55.3/49.3dB
+
+[89] (appendix1.tex
+Appendix A.
+
+LaTeX Warning: Reference `chap:trimming' on page 90 undefined on input line 4.
+
+
+[90]
+[91])
+[92] (meec_thesis.aux (abstract.aux) (un-sdg.aux) (abbrevs.aux) (chapter1.aux)
+(chapter2.aux) (chapter4.aux) (chapter3.aux) (trimming.aux) (chapter5.aux)
+(chapter6.aux) (appendix1.aux))
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.55997pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `meec_thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                meec_thesis
+(biblatex)                and rerun LaTeX afterwards.
+
+ )
+(see the transcript file for additional information)<C:/Users/gonca/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/gonca/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users
+/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
+y10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmtt10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/
+courier/ucrb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/ur
+w/courier/ucrr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/
+urw/helvetic/uhvb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type
+1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1
+/urw/times/utmb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1
+/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1
+/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1
+/urw/times/utmri8a.pfb>
+Output written on meec_thesis.pdf (100 pages, 1766730 bytes).
+Transcript written on meec_thesis.log.
+Latexmk: Getting log file 'meec_thesis.log'
+Latexmk: Examining 'meec_thesis.fls'
+Latexmk: Examining 'meec_thesis.log'
+Latexmk: Found input bbl file 'meec_thesis.bbl'
+Latexmk: Missing input file 'meec_thesis.toc' message in .log file:
+  No file meec_thesis.toc.
+Latexmk: Missing input file 'meec_thesis.lof' message in .log file:
+  No file meec_thesis.lof.
+Latexmk: Missing input file 'meec_thesis.lot' message in .log file:
+  No file meec_thesis.lot.
+Latexmk: References changed.
+Latexmk: References changed.
+====== biblatex/biber in use
+Latexmk: Log file says output to 'meec_thesis.pdf'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  references.bib
+Sources for biber
+  references.bib
+  meec_thesis.bcf
+Latexmk: applying rule 'biber meec_thesis'...
+Rule 'biber meec_thesis':  Reasons for rerun
+Category 'other':
+  Rerun of 'biber meec_thesis' forced or previously required:
+    Reason or flag: 'Initial set up of rule'
+
+------------
+Run number 1 of rule 'biber meec_thesis'
+------------
+------------
+Running 'internal mybiber "meec_thesis.bcf"'
+------------
+Latexmk: calling mybiber( "meec_thesis.bcf" )
+sh: -c: line 1: unexpected EOF while looking for matching `"'
+Latexmk: Error return from 'biber meec_thesis'
+I will add to its source list, anything cached from analysis of bcf file.
+Latexmk: Could not open biber log file 'meec_thesis.blg'
+Latexmk: Summary of warnings from last run of *latex:
+  Latex failed to resolve 170 reference(s)
+Latexmk: ====Undefined refs and citations with line #s in .tex file:
+  Reference `fig:Sparse-time' on page 2 undefined on input line 40
+  Reference `chap:intro' on page 4 undefined on input line 6
+  Reference `fig:offset_gain_error' on page 6 undefined on input line 62
+  Reference `sec:async_vs_sync' on page 8 undefined on input line 105
+  Reference `fig:sar_arch' on page 9 undefined on input line 175
+  Reference `fig:pipeline_arch' on page 10 undefined on input line 246
+  Reference `fig:sigma_delta_arch' on page 11 undefined on input line 359
+ And 163 more --- see log file 'meec_thesis.log'
+Latexmk: Errors, so I did not complete making targets
+Collected error summary (may duplicate other messages):
+  biber meec_thesis: Could not open biber log file 'meec_thesis.blg'
+
+Latexmk: Sometimes, the -f option can be used to get latexmk
+  to try to force complete processing.
+  But normally, you will need to correct the file(s) that caused the
+  error, and then rerun latexmk.
+  In some cases, it is best to clean out generated files before rerunning
+  latexmk after you've corrected the files.

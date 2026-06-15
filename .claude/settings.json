@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ' *)",
+      "Bash(grep -rno \"0\\\\.27\\\\|0\\\\.1--0\\\\.7\\\\|0\\\\.1\\\\$--\\\\$0\\\\.7\\\\|rail-to-rail\\\\|0\\\\.1.*0\\\\.7\" chapter4.tex chapter6.tex)"
+    ]
+  }
+}

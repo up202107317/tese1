@@ -20,7 +20,23 @@
 \usepackage{circuitikz}
 \usepackage{svg}
 \usepackage{amsmath}
+\usepackage{listings}
 \usetikzlibrary{positioning, arrows.meta, calc, shapes.geometric}
+
+%% Listing style for the Verilog-A appendix
+\lstdefinestyle{verilogA}{
+  basicstyle=\ttfamily\footnotesize,
+  numbers=left,
+  numberstyle=\tiny,
+  numbersep=8pt,
+  frame=single,
+  breaklines=true,
+  showstringspaces=false,
+  tabsize=2,
+  captionpos=b,
+  morekeywords={module,endmodule,analog,begin,end,if,else,parameter,real,
+                string,electrical,output,input,include}
+}
 %% MEEC options
 %\usepackage[meec]{feupteses}              % working version
 %\usepackage[meec,juri]{feupteses}        % juri version
@@ -110,10 +126,10 @@
 %% TIP: use a separate file for each chapter
 \include{chapter1}
 \include{chapter2}
-\include{chapter3}
-\include{trimming}  % Chapter 4: Body Bias Trimming (continuação direta do Cap. 3)
-\include{chapter4}  % Chapter 5: Synchronous Reference Flash ADC
-\include{chapter5}  % Chapter 6: Simulation Results and Performance Benchmarking
+\include{chapter4}  % Chapter 3: Synchronous Reference Flash ADC
+\include{chapter3}  % Chapter 4: Proposed Asynchronous Flash ADC Design (com resultados por fase)
+\include{trimming}  % Chapter 5: Body Bias Trimming
+\include{chapter5}  % Chapter 6: Final Results and Comparison
 \include{chapter6}  % Chapter 7: Conclusions
 %% Uncomment to see a listing example (cp meic.cfg meec.cfg)
 %\include{chapter45-listing}
@@ -127,6 +143,11 @@
 
 % Define o estilo da bibliografia (IEEE é o padrão em Engenharia)
 %\printbibliography[title=Bibliography]
-%\include{appendix1}
+
+%%----------------------------------------
+%% Appendices
+%%----------------------------------------
+\appendix
+\include{appendix1}
 
 \end{document}

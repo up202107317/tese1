@@ -1,0 +1,880 @@
+2472
+
+IEEE JOURNAL OF SOLID-STATE CIRCUITS, VOL. 43, NO. 11, NOVEMBER 2008
+
+A Continuous-Time ADC/DSP/DAC System With No Clock and With Activity-Dependent
+Power Dissipation
+Bob Schell and Yannis Tsividis, Fellow, IEEE
+
+Abstract--A continuous-time system that converts its analog input to a continuous-time digital representation without sampling, then processes the information digitally without the aid of a clock, is presented. Without sampling there is no aliasing, which reduces the in-band distortion power by not aliasing into band out-of-band distortion components. The 8-bit system, fabricated in a 90 nm CMOS process, utilizes continuous delay elements as part of a programmable transversal FIR filter. The input is encoded by a delta modulator without a clock into a series of non-uniformly spaced tokens, which are processed by the digital continuous-time filter and converted to an analog output using a custom DAC that guarantees there are no glitches in the output waveform. All activity is signal driven, automatically affording dynamic power scaling that tracks input activity.
+Index Terms--Asynchronous processing, continuous-time digital filter, continuous-time digital signal processing, delay element, delta modulator.
+
+Fig. 1. Spectra of signals involved in a conventional ADC.
+
+I. INTRODUCTION
+
+C ONVENTIONAL digital signal processors (DSPs) operate in discrete amplitude and discrete time. The block
+
+diagram of a conventional DSP system front-end, the sampled
+
+analog-to-digital converter (ADC), is shown at the top of Fig. 1.
+
+The discretization of time is done with a sampling clock at fre-
+
+quency that provides a finite number of samples which can
+
+then be stored in a digital medium. The discretization of ampli-
+
+tude, done via the finite-resolution ADC, allows for processing
+
+that involves handling only 0s and 1s, affording noise immu-
+
+nity and programmability. The remainder of Fig. 1 qualitatively
+
+shows the spectra at various points when the input is a single si-
+
+nusoid and the sampling clock has a frequency of . The spec-
+
+trum of the input, seen in Fig. 1(a), contains a single frequency,
+
+while the spectrum at the ADC input, seen in Fig. 1(b), contains
+
+many frequencies at
+
+, where is an integer.1 As
+
+quantization is a nonlinear operation, the output of the ADC will
+
+have intermodulation (IM) components where the IM product
+
+frequencies arise from all possible combinations of the alias
+
+Manuscript received March 12, 2008; revised July 11, 2008. Current version published November 19, 2008. This material is based on work supported by the National Science Foundation under Grants CCR-02-09109 and CCF-07-01766. This material was presented in part at the 2008 IEEE International Solid-State Circuits Conference.
+B. Schell was with Columbia University, New York, NY 10027 USA. He is now with Conexant Systems Inc., Red Bank, NJ 07701 USA (e-mail: rcs2002@columbia.edu).
+Y. Tsividis is with the Department of Electrical Engineering, Columbia University, New York, NY 10027 USA (e-mail: tsividis@ee.columbia.edu).
+Digital Object Identifier 10.1109/JSSC.2008.2005456
+1Note that at the output of the sampler there is no filter to limit the band to f =2.
+
+Fig. 2. General block diagram of a CT DSP system, with example waveforms.
+frequencies. Thus the ADC output spectrum seen in Fig. 1(c) contains many frequency components, collectively considered to represent the so-called "quantization noise."
+If the sampling block in Fig. 1 were removed, then the ADC input will only have one tone in its spectrum (the input frequency). Therefore, the nonlinearity of the quantization process of the ADC will only give rise to harmonic distortion, which appears only at frequencies directly related to the input frequency. Such a construction does not discretize time but still generates a discrete-amplitude signal that may be processed with digital hardware [1], [2]. A system that operates on such a discrete-amplitude, but not discrete-time, signal is called here a continuous-time (CT) ADC/DSP/DAC system, or a CT DSP system for short, and is shown in Fig. 2. A CT DSP system operates on 0s and 1s but the conversion from analog to digital form is done without a clock, as shown. There is no clock in any part of a CT DSP system. From the qualitative analysis above, the spectrum of the signal in a CT DSP system will be "cleaner" and will have fewer distortion components at frequencies within the band of interest.
+Further benefits that CT DSP systems have over conventional (sampled) systems include a power dissipation that depends drastically on input activity, as shown by the example waveforms in Fig. 2. The CT DSP will only receive new inputs
+
+0018-9200/$25.00 © 2008 IEEE Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 21:29:10 UTC from IEEE Xplore. Restrictions apply.
+
+SCHELL AND TSIVIDIS: CONTINUOUS-TIME ADC/DSP/DAC SYSTEM WITH NO CLOCK AND WITH ACTIVITY-DEPENDENT POWER DISSIPATION
+
+2473
+
+from the CT ADC when the input is active, and thus power
+
+dissipation within the CT DSP will depend directly on input
+
+activity. Thus, for signals with low activity and long periods of
+
+silence, the power consumption of a CT DSP system becomes
+
+much lower than during full activity. Also, CT DSPs have a
+
+very fast response to sudden input variations as they do not
+
+need to wait for a clock signal; this turns out to be beneficial in
+
+DC control loops, such as those in DC-DC converters [3]. See
+
+[1] and [2] for more details on the CT DSP concept.
+
+The remainder of this paper is organized as follows. Section II Fig. 3. Simplified block diagram of the implemented CT ADC/DSP/DAC describes the entire CT DSP system at a glance. The circuits system.
+
+used in the CT ADC, CT DSP, and CT DAC are each presented
+
+in Sections III­V, respectively. Section VII presents measured results characterizing the entire CT ADC/DSP/DAC system targeting voiceband applications.
+
+summed and sent to a CT DAC, which has a resolution of only 8 bits. Thus the final output of the CT DSP system is , an 8-bit representation of . To prevent glitches and ensure re-
+
+II. OVERVIEW OF THE CT DSP SYSTEM
+The CT DSP system presented in this paper has a similar general signal flow to that of a previous system by Li et al. in [4]. However, the design presented in [4] did not function properly as a single system due to block-to-block interference, and their results were presented by examining individual system components one at a time. In addition, the chip area and power dissipation were very large. The CT system presented in this paper represents a major improvement at the circuit level, resulting in
+
+liable transmission of data, handshaking techniques as in standard asynchronous digital design are used throughout [9], [10]. Note the difference between this CT DSP system and an asynchronous DSP, as in [11]--in the former the time difference between events is maintained and is critical to the signal representation, while in the latter only their ordering is important. As there is no clock, though, the CT DSP system must be designed similarly to an asynchronous system, and conventional synchronous design techniques will not apply.
+
+a fully operational, high-performance CT DSP system.
+
+An overview of the CT DSP system is shown in Fig. 3. The
+
+CT ADC is an asynchronous delta modulator [5], [6] that has
+
+a resolution of
+
+8 bits. The output of the CT ADC is an
+
+indication of whether the 8-bit representation of the input has
+
+moved up or down by one least significant bit (LSB). Such CT
+
+ADC output signals are easier to process through the delay taps
+
+(of the CT DSP) compared to delaying a full 8-bit representation
+
+of the input. The CT DSP is a 16-tap direct-form finite impulse
+
+response (FIR) filter with programmable 8-bit tap coefficients
+
+and continuous time delay taps of delay time
+
+(these are not flip-flops; rather, they are pure continuous-time
+
+delay elements which do not involve clocking). The CT ADC
+
+outputs, indications of change, are accumulated in the UP/DN
+
+counters, whose outputs are then weighted by the tap coeffi-
+
+cients to form the full 16-bit words representing the weighted
+
+and delayed versions of the digitized input, . Other ways to
+
+do DSP involving delta modulation have been discussed else-
+
+where [7], [8]. The final adder, shown as a summation block in
+
+Fig. 3, outputs a 16-bit word whose value, , is given by
+
+III. CT ADC
+
+A block diagram of the CT ADC, modified from [12], is
+
+shown in Fig. 5(a), while example waveforms are shown in
+
+Fig. 5(b). The two inputs ACKA and ACKB will be discussed
+
+later. The input is split off-chip into two signals, to which
+
+DC voltages are added, resulting in the signals INH and INL
+
+which feed two comparators. The purpose of the split is to allow
+
+calibration to cancel the offset of each comparator individually;
+
+this is discussed later in this section (for this chip, calibration
+
+was done externally, although it could be integrated on chip).
+
+The top comparator compares INH to a signal
+
+, while
+
+the bottom comparator compares INL to
+
+.
+
+and
+
+are consecutive levels taken from a resistor string
+
+DAC.
+
+The summary of operations is as follows: when is within
+
+the range
+
+, then both comparators have
+
+outputs of logic 0, and nothing happens. Such a state is seen at
+
+the extreme left in the waveforms of Fig. 5(b). When moves
+
+outside this range [in Fig. 5(b)], begins by increasing be-
+
+yond
+
+), one of the comparators will detect the move-
+
+(1)
+
+ment of and create a logic 1 on either INC (increment) or DEC (decrement), depending on the direction of movement.
+
+When either INC or DEC becomes a logic 1, the control logic
+
+The complete block diagram of the CT DSP system is shown will create an indication of the change, akin to that in delta mod-
+
+in Fig. 4. The CT ADC has two inputs INH and INL, formed ulation, here termed a token. The token consists of two binary
+
+from the applied input as will be made clear in Section III. signals: CHANGE and UPDN. As seen in Fig. 5(a), the token
+
+The CT ADC generates delta mod signals that are passed to CT is fed back through a DAC so that both
+
+and
+
+delay taps, just as in Fig. 3. However, in Fig. 3 the operations are updated after a token is generated. After such an update,
+
+of accumulating these delta mod signals and then weighting
+
+is once again within the range
+
+. This
+
+them by the tap coefficients was shown in two steps, while in behavior is demonstrated in the example shown in Fig. 5(b).
+
+the actual hardware these two operations are done in one step, The CHANGE signal is seen to have a negative edge every
+
+as will be described in Section IV-B. These outputs are then time crosses either
+
+or
+
+, while UPDN
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 21:29:10 UTC from IEEE Xplore. Restrictions apply.
+
+2474
+
+IEEE JOURNAL OF SOLID-STATE CIRCUITS, VOL. 43, NO. 11, NOVEMBER 2008
+
+Fig. 4. Detailed block diagram of the entire CT ADC/DSP/DSP system.
+
+Fig. 5. (a) Block diagram of CT ADC. (b) Example waveforms showing how the CT ADC operates. (c) With added hysteresis, exaggerated for clarity.
+
+is a logic 1 when
+
+has been crossed, and a logic 0 non-overload region of the CT ADC is
+
+, then the spacing
+
+when
+
+has been crossed. Such an ADC scheme has of quantization level boundaries for an -bit CT ADC will be
+
+been termed "level-crossing sampling" or "time code modula-
+
+tion" [12]­[15].
+
+(2)
+
+As the CT ADC output tokens always indicate a change (ei-
+
+ther up or down) by one LSB, the 8-bit feedback resistor string
+
+DAC in Fig. 5(a) is not controlled by an 8-bit input word but by
+
+a simple bi-directional shift register, as seen in Fig. 6. This sim-
+
+plifies the design of the feedback DAC and prevents glitches in
+
+the
+
+and
+
+signals, as it is not possible for ei-
+
+ther signal to change by more than one step of the resistor string
+
+Suppose is rising; once it crosses
+
+,
+
+will
+
+be updated to the value of the next point of the resistor string
+
+DAC (higher by ). Thus the new value of
+
+must
+
+settle before can reach it. If is a sinusoidal input of
+
+frequency
+
+with an amplitude of
+
+, the min-
+
+imum time it will take for to cross is
+
+at a time.
+
+The speed required by the entire CT ADC is determined by
+
+how quickly can cross consecutive boundaries
+
+and
+
+. If the full-scale amplitude covering half of the the
+
+(3)
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 21:29:10 UTC from IEEE Xplore. Restrictions apply.
+
+SCHELL AND TSIVIDIS: CONTINUOUS-TIME ADC/DSP/DAC SYSTEM WITH NO CLOCK AND WITH ACTIVITY-DEPENDENT POWER DISSIPATION
+
+2475
+
+B. Comparators in CT ADC
+
+The schematic of each comparator in Fig. 5(a) is shown in
+
+Fig. 8. The comparator, with no clock, is effectively an amplifier
+
+with rail-to-rail (logic level) swings at the output. The first stage
+
+is a preamplifier (differential pair), the second is a high-gain
+
+stage, and the third is a very-wide-common-mode-range differ-
+
+ential amplifier (VCDA) [16]. The design achieves a low static
+
+power consumption (20 W per comparator on a 1 V supply)
+
+and a high gain (over 80 dB). However, due to the non-clocked
+
+usage of the comparators, their offsets cannot be stored and can-
+
+celled while the signal is being processed. In this experimental
+
+chip, these offsets are cancelled by setting the DC levels of
+
+Fig. 6. Schematic of resistor string DAC seen in Fig. 5(a).
+
+INH and INL through the use of the potentiometers shown in
+
+Fig. 5(a). In fact, following offset cancellation, these levels are
+
+on purpose made to differ by a slightly larger amount than ,
+
+To process voiceband signals (200­3400 Hz), which is the goal as shown in Fig. 5(c), thus adding hysteresis to the loop and en-
+
+of this work, we assume that the CT system must be able to suring noise robustness. Metastable states can lead to an overly
+
+process signals for frequencies up to 20 kHz (including spectral long comparison time, but not to multiple "decisions" due to this
+
+components that must be rejected2). This leads to
+
+hysteresis. In a complete implementation, the setting of INH and
+
+ns. The CT ADC is designed so that it updates in a time INL DC levels would be done through an on-chip digital cali-
+
+shorter than
+
+, so that the actual value of the update time bration cycle.4
+
+does not affect the performance. Thus, the CT ADC can track As there is no clock, the decision time of the comparator will
+
+an input with a maximum slope of
+
+V/ms for depend on the slope of the input as it crosses the comparator
+
+this design.3
+
+threshold. To keep power low, the comparators are allowed to
+
+have a comparison time which significantly depends on the input
+
+A. Control Logic in CT ADC
+
+rate of change (20, 30, and 150 ns, simulated, for input slopes
+
+The control circuitry within the CT ADC, shown in Fig. 7, will be described next. The circuitry takes the comparator outputs INC and DEC [Fig. 5(a)] and forms a token made up of CHANGE and UPDN as previously described. The token, the
+
+of 2000 V/ms, 32 V/ms, and 2 V/ms, respectively). Since this time is smallest when the token distance is minimum (shorter comparator delay for faster moving input), the resulting effect is small, consistent with intended performance.
+
+CT ADC output, is passed with handshaking to the first delay tap, governed by the ACKA and ACKB signals that come from
+
+IV. CT DSP
+
+the first delay tap. The generation of ACKA and ACKB will be
+
+described in detail in Section IV-A, but for now it should be kept
+
+in mind that ACKB will always arrive after ACKA.
+
+INC and DEC enter on the left in Fig. 7. Consider the situ-
+
+ation where DEC is a logic 0 and INC changes from a logic 0
+
+to a logic 1 when INH crosses
+
+in Fig. 5. INC passes
+
+through a switch and sets a NOR-based set-reset (SR) latch
+
+( , labeled no. 2), which eventually causes CHANGE to flip
+
+from a logic 1 to a logic 0 (as gets set). will also get set,
+
+disconnecting INC and DEC from the circuitry (by opening the
+
+input switches). Also, the output of triggers the D flip-flop
+
+at the bottom of the figure, which latches in the output of
+
+to be the UPDN signal. The circuit remains in this state until
+
+ACKA resets , then ACKB resets (this order of opera-
+
+tions is guaranteed, as will be made clear in Section IV-A). Only
+
+when is reset are INC and DEC reconnected to the rest the
+
+circuitry. In this manner, the CT ADC cannot generate a new
+
+token until ACKB resets . The operation when INL crosses
+
+in Fig. 5 is similar, with DEC playing the role of INC
+
+and playing the role of .
+
+A. CT Delay Tap
+
+As part of the operation of the transversal FIR filter, the tokens
+
+output from the CT ADC are delayed by CT delay taps of delay
+
+time . The value of is chosen based on the desired fre-
+
+quency response of the system. An example of the input and
+
+the tokens generated by the CT ADC at the input and output of a
+
+delay tap is shown in Fig. 9 (only the timing signal CHANGE of
+
+the token is plotted for simplicity). The input rises from a low to
+
+a high value, then remains constant. Such movement generates a
+
+number of unevenly spaced tokens (each generated at the times
+
+crosses a threshold) by the CT ADC. As seen in Fig. 9, the
+
+delay tap must be able to accomodate many tokens at any given
+
+time. Eight bits of resolution is typical for voiceband processing
+
+and thus is the target for this design. If higher resolution were
+
+desired, a smaller
+
+would have to be used, requiring the
+
+delay taps to handle a higher density of tokens. The ability of the
+
+delay taps to process tokens is a limiting factor in this design.
+
+The structure of the th delay tap is shown in Fig. 10.
+
+The token, consisting of two signals
+
+and
+
+, enters the delay tap and emerges after a delay time
+
+2For example, a digital LPF with a passband of 3.4 kHz with an effective f =2
+
+as
+
+and
+
+. As the delay tap must have
+
+of 4 kHz would repeat its passband starting at 4.6 kHz, which is undesirable. within it many tokens at a given time, the delay tap is formed
+
+3If the input moves faster than this, distortion will arise due to slope overload by concatenating many delay cells in series, as shown in the
+
+similar to the case of conventional delta modulation. It is the slope of the input,
+
+not the input spectrum, that determines proper tracking of the CT ADC.
+
+4For such startup calibration, any on-chip oscillator can be used.
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 21:29:10 UTC from IEEE Xplore. Restrictions apply.
+
+2476
+
+IEEE JOURNAL OF SOLID-STATE CIRCUITS, VOL. 43, NO. 11, NOVEMBER 2008
+
+Fig. 7. Schematic of CONTROL LOGIC block shown in Fig. 5(a).
+
+Fig. 8. Schematic of comparator.
+
+ports are used for handshaking. When IN has a negative edge, a
+
+current source
+
+begins charging capacitor
+
+.
+
+The capacitor is charged in this manner until the positive feed-
+
+back circuit [18], formed by the remaining drawn transistors in
+
+the bottom of Fig. 10, flips state. This causes OUT to change
+
+from a logic 1 to 0, completing the delay.
+
+The UPDN signal is carried along with the CHANGE signal
+
+by successively latching in the signal in each delay cell. The
+
+delay time of the delay cell is tunable by controlling the bias
+
+voltage
+
+. This allows for setting the value of the total delay
+
+through digital calibration using a delay-locked loop (not in-
+
+cluded on this experimental chip) which will also track supply
+
+and temperature variations as is done, for example, in [19].
+
+The first delay tap, which receives the tokens generated by
+
+the CT ADC, handshakes with the CT ADC via the ACKA and
+
+Fig. 9. Example waveforms showing how a rising input (top) can generate
+many unequally spaced tokens (middle--showing only CHANGE signal at input to the kth delay tap). (bottom) The output of the kth delay tap is a delayed version of its input.
+
+ACKB signals as indicated in Fig. 5(a). ACKA and ACKB are simply the ACK signals from the first two delay cells, respectively. ACKA tells the CT ADC that the first delay tap has received the token, and ACKB tells the CT ADC that that token
+
+has advanced to the second delay cell. With the token in the
+
+middle of Fig. 10. Tokens are passed between each delay cell via handshaking.
+The details of a single delay cell are shown at the bottom of
+
+second delay cell, the first delay cell is now free, and thus the CT ADC is free to generate a new token (when required by the input).
+
+Fig. 10. This delay cell is very similar to that in our previous work [17]--the reader is referred to that work for details of
+
+B. Digital Core
+
+its operation and the tuning of a collection of cells, as only a The remainder of the digital core is next described. As men-
+
+brief summary is given here. The delay cell receives a token tioned in Section II, tokens are accumulated and weighted by
+
+(CHANGE, UPDN) on its IN and D ports, while the delayed the tap coefficients in a single step in an accumulator/multiplier
+
+token emerges on the OUT and Q ports. The ACK and REQ block as shown in Fig. 4. Instead of accumulating tokens and
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 21:29:10 UTC from IEEE Xplore. Restrictions apply.
+
+SCHELL AND TSIVIDIS: CONTINUOUS-TIME ADC/DSP/DAC SYSTEM WITH NO CLOCK AND WITH ACTIVITY-DEPENDENT POWER DISSIPATION
+
+2477
+
+Fig. 10. Architecture of a delay tap.
+
+Fig. 11. Block diagram of an accumulator/multiplier block. The multiplexer output is chosen from the A (B) port when the selection signal is a logic 0 (1).
+
+then multiplying the 8-bit word by an 8-bit tap coefficient to ital adders are used. As tokens cannot arrive at a given accumu-
+
+form a 16-bit word, the accumulator/multiplier block starts with lator/multiplier block spaced in time less than
+
+60 ns
+
+the 16-bit word that represents its current output value, and ei- (see (3)), a simple adder (ripple-carry) is used as even for this
+
+ther adds
+
+or subtracts
+
+from adder the addition time is much less than 60 ns.
+
+that value. The circuitry is shown in Fig. 11. The benefit of pro- The adder in the digital core that completes the FIR filter is
+
+cessing delta mod tokens in this manner is that a 16-bit output the combination of a carry-save adder followed by a ripple-carry
+
+signal, , is formed without any digital multipliers; only dig- adder, and the total completion time is measured to be near
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 21:29:10 UTC from IEEE Xplore. Restrictions apply.
+
+2478
+
+IEEE JOURNAL OF SOLID-STATE CIRCUITS, VOL. 43, NO. 11, NOVEMBER 2008
+
+4 ns. The inputs to the adder are the 16 output words from each accumulator/multiplier block. Note that two accumulator/multiplier blocks may update at times arbitrarily close to each other. In such a case, two addition requests from different accumulator/multiplier blocks need to be arbitrated. The arbitration routine operates as follows: when an addition request arrives, all the adder input words are latched in and addition begins. If another addition request arrives while adding, the original addition is continued, but as soon as it is complete, all the adder inputs are latched in and a new addition begins immediately.
+
+V. CT DAC
+
+The final adder discussed in Section IV-B outputs a 16-bit
+
+output word. However, the output DAC has an 8-bit resolution,
+
+and thus the 16-bit adder output word is truncated to 8 bits as
+
+mentioned in Section II.
+
+The final 8-bit word is not passed to the output DAC as a
+
+parallel word. Instead, the 8-bit word is examined for changes
+
+in its LSB to create a token consisting of two signals ODACCLK
+
+and ODACUPDN which have similar meanings to the CT ADC
+
+output token counterparts CHANGE and UPDN, respectively.
+
+A justification of this approach is given in the next paragraph.
+
+The hardware of the DAC, with an 8-bit resolution, only handles
+
+a delta mod input, meaning it will only have to change its output
+
+voltage by one step at a time (either up or down, depending
+
+on the value of ODACUPDN). There is already a DAC in this
+
+design that operates by changing its output value by one step at
+
+a time, the DAC used in feedback in the CT ADC [see Fig. 5(a)];
+
+the output DAC is a copy.
+
+The output DAC as described above creates tokens by exam-
+
+ining the LSB of the truncated 8-bit adder output. This scheme
+
+will work properly if the final adder's 16-bit word (of value
+
+), when truncated to 8-bits (of value ), changes from ad-
+
+dition to addition by no more than one 8-bit LSB at a time. Given
+
+that is a signal that results from filtering the input , and
+
+the 8-bit representation of , , has been shown to vary
+
+through consecutive levels no faster than once every
+
+,
+
+the 8-bit representation of will also not vary through con-
+
+secutive levels faster than once every
+
+.
+
+Fig. 12. Chip photograph.
+Fig. 13. Four different frequency responses (measured versus expected magni-
+tudes) achieved by programming the tap coefficients h . Clockwise from upper
+left: high-pass, bandstop, low-pass, and bandpass filters.
+
+VI. CT DSP SYSTEM POWER CONSUMPTION
+
+amplitude be
+
+(
+
+olution of the CT ADC is
+
+250 mV in this design). The res8 bits, and if all 2 levels are
+
+When tracing the path of a single token (CHANGE, UPDN) as generated by the CT ADC all the way through the CT DSP system, it is seen that each token generates the same amount of circuit processing as every other token. Let the amount of en-
+
+used, then there will be 2 1 threshold crossings as the input moves from the bottom to the top of the non-overload region, leading to 2 2 tokens generated per period. The power consumption of the entire CT system can be written as
+
+ergy expended on processing a single token be
+
+(delay
+
+through all 15 delay taps, updating of all 16 accumulator/multi-
+
+plier blocks, and additions from 16 addition requests). The average power consumption (over a finite sliding time window) of the entire CT system will therefore be a function of the number of tokens generated per second. There will also be static power
+
+(4)
+Thus the power consumption of the CT system is automatically signal driven.
+
+consumption involved in the resistor string DACs (in the CT ADC and output DAC) and the comparators in the CT ADC, as
+
+VII. MEASUREMENT RESULTS
+
+well as leakage power throughout. Let all the static power be This section presents measurement results on the whole CT
+
+termed
+
+.
+
+DSP system, shown in Fig. 12 [20]. A summary of the chip is
+
+Next, let the input be a sinusoid of amplitude and fre- given in Table I. Fig. 13 shows measured magnitude frequency
+
+quency
+
+, and let the CT ADC's maximum non-overload responses of the CT DSP attained by setting the tap delays to
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 21:29:10 UTC from IEEE Xplore. Restrictions apply.
+
+SCHELL AND TSIVIDIS: CONTINUOUS-TIME ADC/DSP/DAC SYSTEM WITH NO CLOCK AND WITH ACTIVITY-DEPENDENT POWER DISSIPATION
+
+2479
+
+TABLE I SUMMARY OF CT ADC/DSP/DAC CHIP
+
+Fig. 15. Output spectra when the CT DSP configured as a low-pass filter, given (a) a full-scale 200 Hz input, and (b) a full-scale 4 kHz input.
+
+The spectral investigation of the output given sinusoidal in-
+
+puts is continued in Fig. 15 with the CT DSP always a low-pass
+
+filter. The output spectrum given a full-scale 200 Hz (4 kHz)
+
+sinusoid is shown on the left (right) of Fig. 15. As can be seen,
+
+only harmonic distortion is present; no tones at frequencies un-
+
+related to the input frequency are generated. This is in contrast
+
+to a sampled system where distortion components at frequen-
+
+cies unrelated to the input frequency arise due to sampling and
+
+Fig. 14. (Top) Expanded frequency response view of the low-pass filter.
+0 (Bottom left) Output spectrum given a full-scale 2 kHz input. (Bottom right)
+Output spectrum given a 14 dBFS 39 kHz input.
+
+aliasing. Considering a bandwidth up to 10 kHz as plotted in Fig. 15, the in-band signal-to-noise-and-distortion ratio (SNDR) will depend on how many harmonics fall in-band. On the left (right) of Fig. 15, fifty (two) harmonics fall in-band. Thus, the
+
+SNDR increases as the input frequency increases: the measured
+
+s (using a test port, with 460 delay cells per tap (on in-band SNDR is 47 dB given a 200 Hz input signal, but rises
+
+average) with a 8% spread) and programming the tap coeffi- to 62 dB for a 4 kHz input signal.
+
+cients
+
+. Different responses are attained, achieving The output of the CT DSP system given a two-tone input
+
+high-pass, band-stop, bandpass, and low-pass filters. Each fre- is investigated in Fig. 16. The input is a full-scale signal con-
+
+quency response is also compared to an expected curve, which sisting of two equal-amplitude tones, and the CT DSP is again
+
+represents the frequency response when accounting for the 8-bit a low-pass filter. The total intermodulation distortion (IMD) re-
+
+resolution of the tap coefficients as well as the actual measured mains relatively constant as the input frequencies increase. This
+
+delay tap delay times.
+
+is because the IM3 components are among the largest distor-
+
+By configuring the CT DSP as the low-pass filter on the tion components and they remain in-band as the input tones are
+
+lower right in Fig. 13, some interesting properties of a CT swept in frequency. Also, unlike for single sinusoidal inputs,
+
+DSP system are investigated next. Fig. 14 expands the view the number of IMD components remains relatively constant as
+
+of the low-pass filter frequency response to higher frequencies the input frequencies are increased. Thus the total in-band IMD
+
+(top) while examining the output spectrum for different input does not decrease as drastically as it did for sinusoidal inputs,
+
+sinusoids (bottom). As is expected for a transversal FIR filter measuring 50 dB for both cases. Noting that the SNDR of an
+
+using tap delays of
+
+27 s, the passband of the low-pass ideal 8-bit conventional system for a full-scale input is 50 dB,
+
+filter is repeated, centered at a frequency of
+
+37 kHz the lack of improvement by the CT system is partially attributed
+
+[1]. The bottom of Fig. 14 shows two output spectra given a to imperfect linearity of the blocks, as well as jitter in the delay
+
+full-scale 2 kHz input sinusoid (left) and a 14 dBFS 39 kHz taps.
+
+input sinusoid (right). In each case, there is no aliasing seen, Fig. 17 shows plots of the power consumption of each of the
+
+either of a 2 kHz signal appearing in the second lobe, or from main blocks in the CT DSP as well as the total power consump-
+
+the 39 kHz signal down to the first passband. This is because tion versus the frequency of a sinusoidal input. The amplitude
+
+there is no sampling in the CT DSP system; only continuous of the sinusoid is full-scale
+
+for the results shown
+
+time processing is present.
+
+in Fig. 17(a), and half-scale
+
+for the results
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 21:29:10 UTC from IEEE Xplore. Restrictions apply.
+
+2480
+
+IEEE JOURNAL OF SOLID-STATE CIRCUITS, VOL. 43, NO. 11, NOVEMBER 2008
+
+Fig. 16. Output spectra when the CT DSP configured as a low-pass filter, given (a) a full-scale input consisting of equal amplitude 0.5 kHz and 1 kHz tones. (b) The same, given 3 kHz and 3.5 kHz tones.
+
+Fig. 18. Plot of input speech signal (top) and the instantaneous power consumption (bottom) of the CT ADC/DSP/DAC.
+TABLE II SUMMARY OF PERFORMANCE OF FIR LPF OVER A 10 KHZ RANGE
+
+power consumption is 800 W for the specific input shown, but due to the quiet times the average power consumption is only 310 W.
+A summary of the performance of the CT DSP system when configured as a low-pass filter (lower-right in Fig. 13) is given in Table II.
+
+Fig. 17. Plot of power consumption, broken down into the main components. (a) Full-scale sinusoidal input. (b) Half-scale sinusoidal input.
+
+VIII. CONCLUSION We have presented a chip that converts an analog signal to
+
+the digital domain, processes the resulting digital signal, and
+
+converts the output to analog form, all without sampling or any
+
+shown in Fig. 17(b). As predicted by (4), the total power con- clock. The result, a CT DSP system, is shown to only generate
+
+sumption varies linearly with the input frequency. Comparing harmonic distortion for single sinusoid inputs, or intermodula-
+
+Fig. 17(a)­(b), the reduction in amplitude by half is also seen to tion distortion for multi-tone inputs. As there is no sampling,
+
+reduce the slope of the total power curve by half, also agreeing there is no aliasing, which results in fewer in-band distortion
+
+with (4). From these results, we deduce that
+
+280 pJ components and a higher in-band SDR compared to conven-
+
+in (4).
+
+tional (Nyquist-rate sampled) systems. The power consump-
+
+In Fig. 18, the top of the figure shows a speech signal over tion is strongly dependent on input activity due to the per-token
+
+time, and the bottom is the measured instantaneous total power based energy consumption of the CT DSP system. Handshaking
+
+consumption. As can be seen, when the input signal is quiet, is used throughout the entire path of a token to prevent glitches
+
+the power consumption drops to a quiescent level of 250 W, from occurring. Our results indicate that continuous-time dig-
+
+which is the value of
+
+in (4). When the input be- ital signal processing is complementary to sampled signal pro-
+
+comes more active, the power consumption increases automati- cessing, with certain interesting and attractive properties of its
+
+cally due to the processing of more tokens per second. The peak own.
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 21:29:10 UTC from IEEE Xplore. Restrictions apply.
+
+SCHELL AND TSIVIDIS: CONTINUOUS-TIME ADC/DSP/DAC SYSTEM WITH NO CLOCK AND WITH ACTIVITY-DEPENDENT POWER DISSIPATION
+
+2481
+
+ACKNOWLEDGMENT
+The authors would like to thank Prof. K. Shepard for helpful
+discussions and UMC for chip fabrication.
+REFERENCES
+[1] Y. Tsividis, "Digital signal processing in continuous time: a possibility for avoiding aliasing and reducing quantization error," in Proc. IEEE Int. Conf. Acoustics, Speech, and Signal Processing, Montreal, Canada, 2004, vol. II, pp. 589­592.
+[2] B. Schell and Y. Tsividis, "Continuous-time digital signal processing," in Proc. 2007 IEEE Int. Symp. Circuits and Systems (ISCAS'07), New Orleans, LA, May 2007, pp. 2232­2235.
+[3] Z. Zhao, V. Smolyakov, and A. Prodic, "Continuous-time digital signal processing based controller for high-frequency DC-DC converters," in Proc. IEEE Applied Power Electronics Conf., Anaheim, CA, Feb. 2007, pp. 882­886.
+[4] Y. Li, K. Shepard, and Y. Tsividis, "A continuous-time programmable digital FIR filter," IEEE J. Solid-State Circuits, vol. 41, no. 11, pp. 2512­2520, Nov. 2006.
+[5] H. Inose, T. Aoki, and K. Watanabe, "Asynchronous delta-modulation system," Electron. Lett., vol. 2, no. 3, pp. 95­96, Mar. 1966.
+[6] R. Steele, Delta Modulation Systems. New York: Wiley, 1975. [7] G. Lockhart, "Digital encoding and filtering using delta modulation,"
+Radio Electron. Eng., vol. 42, no. 12, pp. 547­551, Dec. 1972. [8] N. Kouvaras, "Operations on delta-modulated signals and their appli-
+cations in the realizations of digital filters," Radio Electron. Eng., vol. 48, no. 9, pp. 431­438, Sep. 1978. [9] S. Hauck, "Asynchronous design methodologies: an overview," Proc. IEEE, vol. 83, no. 1, pp. 69­93, Jan. 1995. [10] M. B. Josephs, S. M. Nowick, and C. H. van Berkel, "Modeling and design of asynchronous circuits," Proc. IEEE, vol. 87, no. 2, pp. 234­242, Feb. 1999. [11] T. H.-Y. Meng, R. Broderson, and D. G. Messerschmitt, "Asynchronous design for programmable digital signal processors," IEEE Trans. Signal Process., vol. 39, pp. 939­952, Apr. 1991. [12] E. Allier, G. Sicard, L. Fesquet, and M. Renaudin, "A new class of asynchronous A/D converters based on time quantization," in Proc. 9th IEEE Int. Symp. Asynchronous Circuits and Systems, Vancouver, Canada, May 2003, pp. 196­205. [13] J. Mark and T. Todd, "A nonuniform sampling approach to data compression," IEEE Trans. Commun., vol. COM-29, no. 1, pp. 24­32, Jan. 1981. [14] J. Foster and T.-K. Wang, "Speech coding using time code modulation," in Proc. IEEE SoutheastCon, Williamsburg, VA, 1991, vol. 2, pp. 861­863. [15] N. Sayiner, H. V. Sorensen, and T. R. Viswanathan, "A level-crossing sampling scheme for A/D conversion," IEEE Trans. Circuits Syst. II, vol. 43, no. 4, pp. 335­339, Apr. 1996. [16] M. Bazes, "Two novel fully complementary self-biased CMOS differential amplifiers," IEEE J. Solid-State Circuits, vol. 26, no. 2, pp. 165­168, Feb. 1991.
+
+[17] B. Schell and Y. Tsividis, "A low power tunable delay element suitable for asynchronous delays of burst information," IEEE J. Solid-State Circuits, vol. 43, no. 5, pp. 1227­1234, May 2008.
+[18] G. Kim, M. K. Kim, B. S. Chang, and W. Kim, "A low-voltage, lowpower CMOS delay element," IEEE J. Solid-State Circuits, vol. 31, no. 7, pp. 966­971, Jul. 1996.
+[19] G. Taylor, S. Moore, S. Wilcox, and P. Robinson, "An on-chip dynamically recalibrated delay line for embedded self-timed systems," in IEEE Asynch. Symp., Eilat, Israel, Apr. 2000, pp. 45­51.
+[20] B. Schell and Y. Tsividis, "A clockless ADC/DSP/DAC system with activity-dependent power dissipation and no aliasing," in IEEE ISSCC Dig. Tech. Papers, San Francisco, CA, 2008, pp. 550­551.
+Bob Schell received the B.S.E. degree in electrical engineering from Princeton University, Princeton, NJ, in 2001, and the M.S. and Ph.D. degrees from Columbia University, New York, NY, in 2004 and 2008, respectively.
+From 2001 to 2004 he worked at MultiLink Technology, later Vitesse Semiconductor, in the applications division supporting optical drivers and serial links. He has since worked for Analog Devices and Conexant Systems working on mixed-signal blocks for various applications. His current research interests include analog and mixed-signal circuits.
+Yannis Tsividis (F'86) received the B.S. degree from the University of Minnesota, Minneapolis, and the M.S. and Ph.D. degrees from the University of California, Berkeley, in 1972, 1973, and 1976, respectively.
+He is the Charles Batchelor Memorial Professor of Electrical Engineering at Columbia University, New York, NY. He has worked at Motorola Semiconductor and AT&T Bell Laboratories, and has taught at the University of California at Berkeley, the Massachusetts Institute of Technology, and the National Technical University of Athens, Greece. Dr. Tsividis is the recipient of the 1984 IEEE W. R. G. Baker Best Paper Award, the 1986 European Solid-State Circuits Conference Best Paper Award, and the 1998 IEEE Circuits and Systems Society Guilllemin-Cauer Best Paper Award. He is a co-recipient of the 1987 IEEE Circuits and Systems Society Darlington Best Paper Award and the 2003 International Solid-State Circuits Conference L. Winner Outstanding Paper Award. He received the IEEE Gustav Robert Kirchhoff Award in 2007, the Presidential Teaching Award from Columbia University in 2003, and the IEEE Undergraduate Teaching Award in 2005.
+
+Authorized licensed use limited to: b-on: UNIVERSIDADE DO PORTO. Downloaded on June 13,2026 at 21:29:10 UTC from IEEE Xplore. Restrictions apply.
+
+

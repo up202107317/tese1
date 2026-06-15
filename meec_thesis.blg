@@ -1,17 +1,17 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'meec_thesis.blg'
-[106] biber-MSWIN64:342> INFO - === 
-[149] Biber.pm:421> INFO - Reading 'meec_thesis.bcf'
-[322] Biber.pm:1002> INFO - Found 166 citekeys in bib section 0
-[338] Biber.pm:4487> INFO - Processing section 0
-[349] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
-[428] bibtex.pm:1713> INFO - LaTeX decoding ...
-[752] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[1932] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1932] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1932] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[1932] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
-[2092] bbl.pm:676> INFO - Writing 'meec_thesis.bbl' with encoding 'UTF-8'
-[2226] bbl.pm:779> INFO - Output to meec_thesis.bbl
-[2226] Biber.pm:132> WARN - Possible typo (case mismatch) between datasource keys: 'Van_Der_Ploeg' and 'van_der_Ploeg' in file 'references.bib'
-[2226] Biber.pm:134> INFO - WARNINGS: 1
+[105] biber-MSWIN64:342> INFO - === 
+[146] Biber.pm:421> INFO - Reading 'meec_thesis.bcf'
+[309] Biber.pm:1002> INFO - Found 175 citekeys in bib section 0
+[323] Biber.pm:4487> INFO - Processing section 0
+[333] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
+[413] bibtex.pm:1713> INFO - LaTeX decoding ...
+[749] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[1985] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1985] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1985] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[1985] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[2153] bbl.pm:676> INFO - Writing 'meec_thesis.bbl' with encoding 'UTF-8'
+[2279] bbl.pm:779> INFO - Output to meec_thesis.bbl
+[2279] Biber.pm:132> WARN - Possible typo (case mismatch) between datasource keys: 'Van_Der_Ploeg' and 'van_der_Ploeg' in file 'references.bib'
+[2279] Biber.pm:134> INFO - WARNINGS: 1

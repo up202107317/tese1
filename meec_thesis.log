@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.20)  12 JUN 2026 14:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.20)  15 JUN 2026 09:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -410,7 +410,31 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks36
 LaTeX Info: Redefining \[ on input line 2949.
 LaTeX Info: Redefining \] on input line 2950.
-) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypositioning.code.tex
+) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count327
+\lst@gtempboxa=\box68
+\lst@token=\toks37
+\lst@length=\count328
+\lst@currlwidth=\dimen302
+\lst@column=\count329
+\lst@pos=\count330
+\lst@lostspace=\dimen303
+\lst@width=\dimen304
+\lst@newlines=\count331
+\lst@lineno=\count332
+\lst@maxwidth=\dimen305
+ (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
+File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
+) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
+\c@lstnumber=\count333
+\lst@skipnumbers=\count334
+\lst@framebox=\box69
+) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2024/09/23 1.10c listings configuration
+))
+Package: listings 2024/09/23 1.10c (Carsten Heinz)
+ (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.geometric.code.tex
 File: tikzlibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -426,7 +450,7 @@ Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
 Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
 ) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2025/08/03 v25.12 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
-\babel@savecnt=\count327
+\babel@savecnt=\count335
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2045.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2047.
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2049.
@@ -434,11 +458,11 @@ LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line
 LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2051.
 LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2053.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2078.
-\U@D=\dimen302
+\U@D=\dimen306
 \l@unhyphenated=\language79
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read3
-\bbl@dirlevel=\count328
+\bbl@dirlevel=\count336
 
 *************************************
 * Local config file bblopts.cfg used
@@ -462,18 +486,18 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count329
-\Gm@cntv=\count330
-\c@Gm@tempcnt=\count331
-\Gm@bindingoffset=\dimen303
-\Gm@wd@mp=\dimen304
-\Gm@odd@mp=\dimen305
-\Gm@even@mp=\dimen306
-\Gm@layoutwidth=\dimen307
-\Gm@layoutheight=\dimen308
-\Gm@layouthoffset=\dimen309
-\Gm@layoutvoffset=\dimen310
-\Gm@dimlist=\toks37
+\Gm@cnth=\count337
+\Gm@cntv=\count338
+\c@Gm@tempcnt=\count339
+\Gm@bindingoffset=\dimen307
+\Gm@wd@mp=\dimen308
+\Gm@odd@mp=\dimen309
+\Gm@even@mp=\dimen310
+\Gm@layoutwidth=\dimen311
+\Gm@layoutheight=\dimen312
+\Gm@layouthoffset=\dimen313
+\Gm@layoutvoffset=\dimen314
+\Gm@dimlist=\toks38
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\mathptmx.sty
 Package: mathptmx 2020/03/25 PSNFSS-v9.3 Times w/ Math, improved (SPQR, WaS) 
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
@@ -519,45 +543,45 @@ Package: pgfgantt 2024/06/19 v5.0a Draw Gantt diagrams with TikZ
 File: tikzlibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\arrowsize=\dimen311
+\arrowsize=\dimen315
 )) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarybackgrounds.code.tex
 File: tikzlibrarybackgrounds.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@layerbox@background=\box68
-\pgf@layerboxsaved@background=\box69
+\pgf@layerbox@background=\box70
+\pgf@layerboxsaved@background=\box71
 ) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypatterns.code.tex
 File: tikzlibrarypatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibrarypatterns.code.tex
 File: pgflibrarypatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfcalendar.sty (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfcalendar.code.tex
 File: pgfcalendar.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfcalendarcurrentjulian=\count332
-\pgf@cal@easter@Y=\count333
-\pgf@cal@easter@G=\count334
-\pgf@cal@easter@C=\count335
-\pgf@cal@easter@X=\count336
-\pgf@cal@easter@Z=\count337
-\pgf@cal@easter@D=\count338
-\pgf@cal@easter@E=\count339
-\pgf@cal@easter@N=\count340
-\pgf@cal@easter@M=\count341
-\pgf@cal@easter@julianday=\count342
+\pgfcalendarcurrentjulian=\count340
+\pgf@cal@easter@Y=\count341
+\pgf@cal@easter@G=\count342
+\pgf@cal@easter@C=\count343
+\pgf@cal@easter@X=\count344
+\pgf@cal@easter@Z=\count345
+\pgf@cal@easter@D=\count346
+\pgf@cal@easter@E=\count347
+\pgf@cal@easter@N=\count348
+\pgf@cal@easter@M=\count349
+\pgf@cal@easter@julianday=\count350
 ))
-\gtt@currentline=\count343
-\gtt@lasttitleline=\count344
-\gtt@currgrid=\count345
-\gtt@chartwidth=\count346
-\gtt@lasttitleslot=\count347
-\gtt@elementid=\count348
-\gtt@today@slot=\count349
-\gtt@startjulian=\count350
-\gtt@endjulian=\count351
-\gtt@chartid=\count352
-\gtt@vrule@slot=\count353
-\gtt@calendar@slots=\count354
-\gtt@calendar@weeknumber=\count355
-\gtt@calendar@startofweek=\count356
-\gtt@left@slot=\count357
-\gtt@right@slot=\count358
+\gtt@currentline=\count351
+\gtt@lasttitleline=\count352
+\gtt@currgrid=\count353
+\gtt@chartwidth=\count354
+\gtt@lasttitleslot=\count355
+\gtt@elementid=\count356
+\gtt@today@slot=\count357
+\gtt@startjulian=\count358
+\gtt@endjulian=\count359
+\gtt@chartid=\count360
+\gtt@vrule@slot=\count361
+\gtt@calendar@slots=\count362
+\gtt@calendar@weeknumber=\count363
+\gtt@calendar@startofweek=\count364
+\gtt@left@slot=\count365
+\gtt@right@slot=\count366
 ) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -569,65 +593,66 @@ Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen312
-\captionmargin=\dimen313
-\caption@leftmargin=\dimen314
-\caption@rightmargin=\dimen315
-\caption@width=\dimen316
-\caption@indent=\dimen317
-\caption@parindent=\dimen318
-\caption@hangindent=\dimen319
+\caption@tempdima=\dimen316
+\captionmargin=\dimen317
+\caption@leftmargin=\dimen318
+\caption@rightmargin=\dimen319
+\caption@width=\dimen320
+\caption@indent=\dimen321
+\caption@parindent=\dimen322
+\caption@hangindent=\dimen323
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count359
-\c@continuedfloat=\count360
+\c@caption@flags=\count367
+\c@continuedfloat=\count368
+Package caption Info: listings package is loaded.
 ) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count361
-\float@exts=\toks38
-\float@box=\box70
-\@float@everytoks=\toks39
-\@floatcapt=\box71
+\c@float@type=\count369
+\float@exts=\toks39
+\float@box=\box72
+\@float@everytoks=\toks40
+\@floatcapt=\box73
 ) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip54
-\multirow@cntb=\count362
+\multirow@cntb=\count370
 \multirow@dima=\skip55
-\bigstrutjot=\dimen320
+\bigstrutjot=\dimen324
 ) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
 Package: lineno 2025/05/13 line numbers on paragraphs v5.5
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count363
+\etb@tempcnta=\count371
 ) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ))
-\linenopenalty=\count364
-\output=\toks40
-\linenoprevgraf=\count365
-\linenumbersep=\dimen321
-\linenumberwidth=\dimen322
-\c@linenumber=\count366
-\c@pagewiselinenumber=\count367
-\c@LN@truepage=\count368
-\c@internallinenumber=\count369
-\c@internallinenumbers=\count370
-\quotelinenumbersep=\dimen323
-\bframerule=\dimen324
-\bframesep=\dimen325
-\bframebox=\box72
-\@LN@amsmath@ams@eqpen=\count371
+\linenopenalty=\count372
+\output=\toks41
+\linenoprevgraf=\count373
+\linenumbersep=\dimen325
+\linenumberwidth=\dimen326
+\c@linenumber=\count374
+\c@pagewiselinenumber=\count375
+\c@LN@truepage=\count376
+\c@internallinenumber=\count377
+\c@internallinenumbers=\count378
+\quotelinenumbersep=\dimen327
+\bframerule=\dimen328
+\bframesep=\dimen329
+\bframebox=\box74
+\@LN@amsmath@ams@eqpen=\count379
 ) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
-\csq@reset=\count372
-\csq@gtype=\count373
-\csq@glevel=\count374
-\csq@qlevel=\count375
-\csq@maxlvl=\count376
-\csq@tshold=\count377
-\csq@ltx@everypar=\toks41
+\csq@reset=\count380
+\csq@gtype=\count381
+\csq@glevel=\count382
+\csq@qlevel=\count383
+\csq@maxlvl=\count384
+\csq@tshold=\count385
+\csq@ltx@everypar=\toks42
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
 File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
 )
@@ -639,55 +664,55 @@ File: csquotes.cfg
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count378
+\lrq@indent=\count386
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 )) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
-\c@tabx@nest=\count379
-\c@listtotal=\count380
-\c@listcount=\count381
-\c@liststart=\count382
-\c@liststop=\count383
-\c@citecount=\count384
-\c@citetotal=\count385
-\c@multicitecount=\count386
-\c@multicitetotal=\count387
-\c@instcount=\count388
-\c@maxnames=\count389
-\c@minnames=\count390
-\c@maxitems=\count391
-\c@minitems=\count392
-\c@citecounter=\count393
-\c@maxcitecounter=\count394
-\c@savedcitecounter=\count395
-\c@uniquelist=\count396
-\c@uniquename=\count397
-\c@refsection=\count398
-\c@refsegment=\count399
-\c@maxextratitle=\count400
-\c@maxextratitleyear=\count401
-\c@maxextraname=\count402
-\c@maxextradate=\count403
-\c@maxextraalpha=\count404
-\c@abbrvpenalty=\count405
-\c@highnamepenalty=\count406
-\c@lownamepenalty=\count407
-\c@maxparens=\count408
-\c@parenlevel=\count409
-\blx@tempcnta=\count410
-\blx@tempcntb=\count411
-\blx@tempcntc=\count412
-\c@blx@maxsection=\count413
-\blx@maxsegment@0=\count414
-\blx@notetype=\count415
-\blx@parenlevel@text=\count416
-\blx@parenlevel@foot=\count417
-\blx@sectionciteorder@0=\count418
-\blx@sectionciteorderinternal@0=\count419
-\blx@entrysetcounter=\count420
-\blx@biblioinstance=\count421
+\c@tabx@nest=\count387
+\c@listtotal=\count388
+\c@listcount=\count389
+\c@liststart=\count390
+\c@liststop=\count391
+\c@citecount=\count392
+\c@citetotal=\count393
+\c@multicitecount=\count394
+\c@multicitetotal=\count395
+\c@instcount=\count396
+\c@maxnames=\count397
+\c@minnames=\count398
+\c@maxitems=\count399
+\c@minitems=\count400
+\c@citecounter=\count401
+\c@maxcitecounter=\count402
+\c@savedcitecounter=\count403
+\c@uniquelist=\count404
+\c@uniquename=\count405
+\c@refsection=\count406
+\c@refsegment=\count407
+\c@maxextratitle=\count408
+\c@maxextratitleyear=\count409
+\c@maxextraname=\count410
+\c@maxextradate=\count411
+\c@maxextraalpha=\count412
+\c@abbrvpenalty=\count413
+\c@highnamepenalty=\count414
+\c@lownamepenalty=\count415
+\c@maxparens=\count416
+\c@parenlevel=\count417
+\blx@tempcnta=\count418
+\blx@tempcntb=\count419
+\blx@tempcntc=\count420
+\c@blx@maxsection=\count421
+\blx@maxsegment@0=\count422
+\blx@notetype=\count423
+\blx@parenlevel@text=\count424
+\blx@parenlevel@foot=\count425
+\blx@sectionciteorder@0=\count426
+\blx@sectionciteorderinternal@0=\count427
+\blx@entrysetcounter=\count428
+\blx@biblioinstance=\count429
 \labelnumberwidth=\skip56
 \labelalphawidth=\skip57
 \biblabelsep=\skip58
@@ -699,9 +724,9 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 \blx@bcfin=\read4
 \blx@bcfout=\write4
 \blx@langwohyphens=\language80
-\c@mincomprange=\count422
-\c@maxcomprange=\count423
-\c@mincompwidth=\count424
+\c@mincomprange=\count430
+\c@maxcomprange=\count431
+\c@mincompwidth=\count432
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
@@ -711,74 +736,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric-comp.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count425
-\c@savedafterword=\count426
-\c@annotator=\count427
-\c@savedannotator=\count428
-\c@author=\count429
-\c@savedauthor=\count430
-\c@bookauthor=\count431
-\c@savedbookauthor=\count432
-\c@commentator=\count433
-\c@savedcommentator=\count434
-\c@editor=\count435
-\c@savededitor=\count436
-\c@editora=\count437
-\c@savededitora=\count438
-\c@editorb=\count439
-\c@savededitorb=\count440
-\c@editorc=\count441
-\c@savededitorc=\count442
-\c@foreword=\count443
-\c@savedforeword=\count444
-\c@holder=\count445
-\c@savedholder=\count446
-\c@introduction=\count447
-\c@savedintroduction=\count448
-\c@namea=\count449
-\c@savednamea=\count450
-\c@nameb=\count451
-\c@savednameb=\count452
-\c@namec=\count453
-\c@savednamec=\count454
-\c@translator=\count455
-\c@savedtranslator=\count456
-\c@shortauthor=\count457
-\c@savedshortauthor=\count458
-\c@shorteditor=\count459
-\c@savedshorteditor=\count460
-\c@labelname=\count461
-\c@savedlabelname=\count462
-\c@institution=\count463
-\c@savedinstitution=\count464
-\c@lista=\count465
-\c@savedlista=\count466
-\c@listb=\count467
-\c@savedlistb=\count468
-\c@listc=\count469
-\c@savedlistc=\count470
-\c@listd=\count471
-\c@savedlistd=\count472
-\c@liste=\count473
-\c@savedliste=\count474
-\c@listf=\count475
-\c@savedlistf=\count476
-\c@location=\count477
-\c@savedlocation=\count478
-\c@organization=\count479
-\c@savedorganization=\count480
-\c@origlocation=\count481
-\c@savedoriglocation=\count482
-\c@origpublisher=\count483
-\c@savedorigpublisher=\count484
-\c@publisher=\count485
-\c@savedpublisher=\count486
-\c@language=\count487
-\c@savedlanguage=\count488
-\c@origlanguage=\count489
-\c@savedoriglanguage=\count490
-\c@pageref=\count491
-\c@savedpageref=\count492
+\c@afterword=\count433
+\c@savedafterword=\count434
+\c@annotator=\count435
+\c@savedannotator=\count436
+\c@author=\count437
+\c@savedauthor=\count438
+\c@bookauthor=\count439
+\c@savedbookauthor=\count440
+\c@commentator=\count441
+\c@savedcommentator=\count442
+\c@editor=\count443
+\c@savededitor=\count444
+\c@editora=\count445
+\c@savededitora=\count446
+\c@editorb=\count447
+\c@savededitorb=\count448
+\c@editorc=\count449
+\c@savededitorc=\count450
+\c@foreword=\count451
+\c@savedforeword=\count452
+\c@holder=\count453
+\c@savedholder=\count454
+\c@introduction=\count455
+\c@savedintroduction=\count456
+\c@namea=\count457
+\c@savednamea=\count458
+\c@nameb=\count459
+\c@savednameb=\count460
+\c@namec=\count461
+\c@savednamec=\count462
+\c@translator=\count463
+\c@savedtranslator=\count464
+\c@shortauthor=\count465
+\c@savedshortauthor=\count466
+\c@shorteditor=\count467
+\c@savedshorteditor=\count468
+\c@labelname=\count469
+\c@savedlabelname=\count470
+\c@institution=\count471
+\c@savedinstitution=\count472
+\c@lista=\count473
+\c@savedlista=\count474
+\c@listb=\count475
+\c@savedlistb=\count476
+\c@listc=\count477
+\c@savedlistc=\count478
+\c@listd=\count479
+\c@savedlistd=\count480
+\c@liste=\count481
+\c@savedliste=\count482
+\c@listf=\count483
+\c@savedlistf=\count484
+\c@location=\count485
+\c@savedlocation=\count486
+\c@organization=\count487
+\c@savedorganization=\count488
+\c@origlocation=\count489
+\c@savedoriglocation=\count490
+\c@origpublisher=\count491
+\c@savedorigpublisher=\count492
+\c@publisher=\count493
+\c@savedpublisher=\count494
+\c@language=\count495
+\c@savedlanguage=\count496
+\c@origlanguage=\count497
+\c@savedoriglanguage=\count498
+\c@pageref=\count499
+\c@savedpageref=\count500
 \shorthandwidth=\skip64
 \shortjournalwidth=\skip65
 \shortserieswidth=\skip66
@@ -802,19 +827,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-\c@textcitecount=\count493
-\c@textcitetotal=\count494
-\c@textcitemaxnames=\count495
-\c@biburlbigbreakpenalty=\count496
-\c@biburlbreakpenalty=\count497
-\c@biburlnumpenalty=\count498
-\c@biburlucpenalty=\count499
-\c@biburllcpenalty=\count500
+\c@textcitecount=\count501
+\c@textcitetotal=\count502
+\c@textcitemaxnames=\count503
+\c@biburlbigbreakpenalty=\count504
+\c@biburlbreakpenalty=\count505
+\c@biburlnumpenalty=\count506
+\c@biburlucpenalty=\count507
+\c@biburllcpenalty=\count508
 \biburlbigskip=\muskip19
 \biburlnumskip=\muskip20
 \biburlucskip=\muskip21
 \biburllcskip=\muskip22
-\c@smartand=\count501
+\c@smartand=\count509
 )
 Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.bbx' found.
@@ -828,17 +853,17 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count502
-\c@bbx:relatedtotal=\count503
+\c@bbx:relatedcount=\count510
+\c@bbx:relatedtotal=\count511
 )))
 Package biblatex Info: Trying to load citation style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.cbx' found.
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\numeric-comp.cbx
 File: numeric-comp.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
-\c@cbx@tempcnta=\count504
-\c@cbx@tempcntb=\count505
-\c@cbx@tempcntc=\count506
-\c@cbx@tempcntd=\count507
+\c@cbx@tempcnta=\count512
+\c@cbx@tempcntb=\count513
+\c@cbx@tempcntc=\count514
+\c@cbx@tempcntd=\count515
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -862,7 +887,7 @@ Package biblatex Info: Document encoding is UTF8 ....
 Package: expl3 2025-08-13 L3 programming layer (loader) 
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count508
+\l__color_backend_stack_int=\count516
 ))
 Package biblatex Info: ... and expl3
 (biblatex)             2025-08-13 L3 programming layer (loader) 
@@ -873,8 +898,8 @@ Package: xparse 2024-08-16 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
 ))
-\@vivatext=\box73
-\@supervisorstext=\box74
+\@vivatext=\box75
+\@supervisorstext=\box76
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@headwidth=\skip78
@@ -891,7 +916,7 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthL=\skip89
 \f@nch@widthC=\skip90
 \f@nch@widthR=\skip91
-\@temptokenb=\toks42
+\@temptokenb=\toks43
 ) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
@@ -907,13 +932,13 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count509
+\c@section@level=\count517
 ) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen326
-\Hy@linkcounter=\count510
-\Hy@pagecounter=\count511
+\@linkdim=\dimen330
+\Hy@linkcounter=\count518
+\Hy@pagecounter=\count519
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -921,7 +946,7 @@ Now handling font encoding PD1 ...
 ) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count512
+\Hy@SavedSpaceFactor=\count520
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -938,17 +963,17 @@ Package hyperref Info: Plain pages OFF on input line 4210.
 Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count513
+\c@Hy@tempcnt=\count521
 LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen327
+\XeTeXLinkMargin=\dimen331
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count514
-\Field@Width=\dimen328
-\Fld@charsize=\dimen329
+\Fld@menulength=\count522
+\Field@Width=\dimen332
+\Fld@charsize=\dimen333
 Package hyperref Info: Hyper figures ON on input line 6076.
 Package hyperref Info: Link nesting OFF on input line 6083.
 Package hyperref Info: Hyper index ON on input line 6086.
@@ -956,15 +981,15 @@ Package hyperref Info: backreferencing OFF on input line 6093.
 Package hyperref Info: Link coloring OFF on input line 6098.
 Package hyperref Info: Link coloring with OCG OFF on input line 6103.
 Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count515
-\c@Item=\count516
-\c@Hfootnote=\count517
+\Hy@abspage=\count523
+\c@Item=\count524
+\c@Hfootnote=\count525
 )
 Package hyperref Info: Driver: hpdftex.
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
-\Fld@listcount=\count518
-\c@bookmark@seq@number=\count519
+\Fld@listcount=\count526
+\c@bookmark@seq@number=\count527
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
@@ -987,49 +1012,51 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 45.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 61.
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-) (meec_thesis.aux (abstract.aux) (un-sdg.aux) (abbrevs.aux) (chapter1.aux) (chapter2.aux) (chapter3.aux) (trimming.aux) (chapter4.aux) (chapter5.aux) (chapter6.aux))
+) (meec_thesis.aux (abstract.aux) (un-sdg.aux) (abbrevs.aux) (chapter1.aux) (chapter2.aux) (chapter4.aux) (chapter3.aux) (trimming.aux) (chapter5.aux) (chapter6.aux) (appendix1.aux))
 \openout1 = `meec_thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count520
-\scratchdimen=\dimen330
-\scratchbox=\box75
-\nofMPsegments=\count521
-\nofMParguments=\count522
-\everyMPshowfont=\toks43
-\MPscratchCnt=\count523
-\MPscratchDim=\dimen331
-\MPnumerator=\count524
-\makeMPintoPDFobject=\count525
-\everyMPtoPDFconversion=\toks44
+\scratchcounter=\count528
+\scratchdimen=\dimen334
+\scratchbox=\box77
+\nofMPsegments=\count529
+\nofMParguments=\count530
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count531
+\MPscratchDim=\dimen335
+\MPnumerator=\count532
+\makeMPintoPDFobject=\count533
+\everyMPtoPDFconversion=\toks45
 ) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
+\c@lstlisting=\count534
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1081,18 +1108,18 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'meec_thesis.bbl' found.
  (meec_thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 45.
-Package biblatex Info: Reference segment=0 on input line 45.
-Package hyperref Info: Link coloring ON on input line 45.
+Package biblatex Info: Reference section=0 on input line 61.
+Package biblatex Info: Reference segment=0 on input line 61.
+Package hyperref Info: Link coloring ON on input line 61.
  (meec_thesis.out) (meec_thesis.out)
 \@outlinefile=\write5
 \openout5 = `meec_thesis.out'.
 
-\@crestbox=\box76
-<figures/uporto-feup.pdf, id=358, 338.26375pt x 126.4725pt>
+\@crestbox=\box78
+<figures/uporto-feup.pdf, id=402, 338.26375pt x 126.4725pt>
 File: figures/uporto-feup.pdf Graphic file (type pdf)
 <use figures/uporto-feup.pdf>
-Package pdftex.def Info: figures/uporto-feup.pdf  used on input line 83.
+Package pdftex.def Info: figures/uporto-feup.pdf  used on input line 99.
 (pdftex.def)             Requested size: 204.85983pt x 76.59618pt.
 
 
@@ -1100,7 +1127,7 @@ Package pdftex.def Info: figures/uporto-feup.pdf  used on input line 83.
 
 
 {C:/Users/gonca/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./figures/uporto-feup.pdf>]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 83.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 99.
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
@@ -1178,16 +1205,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
 
 
-[5] (meec_thesis.lof)
+[5] (meec_thesis.lof
+
+[6
+
+
+])
 \tf@lof=\write7
 \openout7 = `meec_thesis.lof'.
 
 
 
-[6
-
-
-] (meec_thesis.lot
+[7] (meec_thesis.lot
 Overfull \hbox (5.22673pt too wide) in paragraph at lines 5--5
  [][] []\T1/ptm/m/n/10.95 Comparison of Power Con-sump-tion be-tween Syn-chronous and Asyn-chronous Flash 
  []
@@ -1198,7 +1227,7 @@ Overfull \hbox (5.22673pt too wide) in paragraph at lines 5--5
 
 
 
-[7
+[8
 
 
 ]
@@ -1206,7 +1235,7 @@ Overfull \hbox (5.22673pt too wide) in paragraph at lines 5--5
 
  (abbrevs.tex)
 
-[8
+[9
 
 
 ]
@@ -1214,7 +1243,7 @@ Overfull \hbox (5.22673pt too wide) in paragraph at lines 5--5
 
  (chapter1.tex
 Chapter 1.
-<figures/uporto.pdf, id=579, 2405.98875pt x 522.95375pt>
+<figures/uporto.pdf, id=656, 2405.98875pt x 522.95375pt>
 File: figures/uporto.pdf Graphic file (type pdf)
 <use figures/uporto.pdf>
 Package pdftex.def Info: figures/uporto.pdf  used on input line 35.
@@ -1257,17 +1286,17 @@ Package pdftex.def Info: figures/uporto.pdf  used on input line 66.
 [7]
 
 [8]
-Overfull \hbox (20.53398pt too wide) in paragraph at lines 173--173
+Overfull \hbox (20.53398pt too wide) in paragraph at lines 171--171
 [][]\T1/ptm/m/n/10.95 SHA  
  []
 
 
-Overfull \hbox (17.55829pt too wide) in paragraph at lines 173--173
+Overfull \hbox (17.55829pt too wide) in paragraph at lines 171--171
 [][]\T1/ptm/m/n/10.95 Output  
  []
 
 
-Overfull \hbox (10.99428pt too wide) in paragraph at lines 173--173
+Overfull \hbox (10.99428pt too wide) in paragraph at lines 171--171
 [][]\T1/ptm/m/n/10.95 Comparator  
  []
 
@@ -1275,65 +1304,65 @@ Overfull \hbox (10.99428pt too wide) in paragraph at lines 173--173
 
 [9]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 249.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 247.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 249.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 247.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 249.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 247.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 249.
+(hyperref)                removing `math shift' on input line 247.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Sigma' on input line 249.
+(hyperref)                removing `\Sigma' on input line 247.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Delta' on input line 249.
+(hyperref)                removing `\Delta' on input line 247.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 249.
+(hyperref)                removing `math shift' on input line 247.
 
 
 
 [10]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 354.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 352.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 354.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 352.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 354.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 354.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 352.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 352.
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 354.
+(Font)              scaled to size 10.40245pt on input line 352.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.40245pt on input line 354.
+(Font)              scaled to size 10.40245pt on input line 352.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 7.59998pt on input line 354.
+(Font)              scaled to size 7.59998pt on input line 352.
 
 
 [11]
 
-Package mathptmx Warning: There are no bold math fonts on input line 412.
+Package mathptmx Warning: There are no bold math fonts on input line 410.
 
 
-Overfull \hbox (9.74214pt too wide) in paragraph at lines 412--412
+Overfull \hbox (9.74214pt too wide) in paragraph at lines 410--410
 [][]\T1/ptm/m/n/10.95 Clock  
  []
 
 
-Overfull \hbox (10.44482pt too wide) in paragraph at lines 412--412
+Overfull \hbox (10.44482pt too wide) in paragraph at lines 410--410
 [][]\T1/ptm/m/n/10.95 Digital 
  []
 
 
-Overfull \hbox (12.865pt too wide) in paragraph at lines 412--412
+Overfull \hbox (12.865pt too wide) in paragraph at lines 410--410
 \T1/ptm/m/n/10.95 counter  
  []
 
@@ -1342,14 +1371,14 @@ Overfull \hbox (12.865pt too wide) in paragraph at lines 412--412
 [12]
 File: figures/uporto.pdf Graphic file (type pdf)
 <use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 432.
+Package pdftex.def Info: figures/uporto.pdf  used on input line 430.
 (pdftex.def)             Requested size: 256.07741pt x 55.65785pt.
 
 
 [13]
 
 [14]
-Overfull \hbox (2.84885pt too wide) in paragraph at lines 466--467
+Overfull \hbox (2.84885pt too wide) in paragraph at lines 464--465
 \T1/ptm/m/n/10.95 nodes un-til a volt-age thresh-old is reached, cur-rent com-para-tors pro-cess in-for-ma-tion di-rectly through
  []
 
@@ -1358,79 +1387,89 @@ Overfull \hbox (2.84885pt too wide) in paragraph at lines 466--467
 [15]
 
 [16]
-Overfull \hbox (11.66904pt too wide) in paragraph at lines 500--501
+
+[17]
+Overfull \hbox (11.66904pt too wide) in paragraph at lines 504--505
 []\T1/ptm/m/n/10.95 This non-linear feed-back mech-a-nism cre-ates an ef-fec-tive hys-tere-sis, once the out-put has switched,
  []
 
 
-
-[17]
 
 [18]
 
 [19]
 File: figures/uporto.pdf Graphic file (type pdf)
 <use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 559.
+Package pdftex.def Info: figures/uporto.pdf  used on input line 565.
 (pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
 File: figures/uporto.pdf Graphic file (type pdf)
 <use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 566.
+Package pdftex.def Info: figures/uporto.pdf  used on input line 572.
 (pdftex.def)             Requested size: 298.75264pt x 64.93018pt.
 
 
 [20]
 
 [21]
-<figures/fom_fs.png, id=853, 867.24pt x 505.89pt>
-File: figures/fom_fs.png Graphic file (type png)
-<use figures/fom_fs.png>
-Package pdftex.def Info: figures/fom_fs.png  used on input line 640.
-(pdftex.def)             Requested size: 362.77525pt x 211.62323pt.
-
 
 [22]
-
-[23 <./figures/fom_fs.png>]
-<figures/energy_year.png, id=918, 867.24pt x 505.89pt>
-File: figures/energy_year.png Graphic file (type png)
-<use figures/energy_year.png>
-Package pdftex.def Info: figures/energy_year.png  used on input line 691.
+<figures/fom_fs.png, id=954, 867.24pt x 505.89pt>
+File: figures/fom_fs.png Graphic file (type png)
+<use figures/fom_fs.png>
+Package pdftex.def Info: figures/fom_fs.png  used on input line 646.
 (pdftex.def)             Requested size: 362.77525pt x 211.62323pt.
 
 
-[24 <./figures/energy_year.png>]
-Overfull \hbox (18.8027pt too wide) in paragraph at lines 734--735
+[23]
+
+[24 <./figures/fom_fs.png>]
+<figures/energy_year.png, id=1026, 867.24pt x 505.89pt>
+File: figures/energy_year.png Graphic file (type png)
+<use figures/energy_year.png>
+Package pdftex.def Info: figures/energy_year.png  used on input line 697.
+(pdftex.def)             Requested size: 362.77525pt x 211.62323pt.
+
+
+[25 <./figures/energy_year.png>]
+Overfull \hbox (18.8027pt too wide) in paragraph at lines 740--741
 \T1/ptm/m/n/10.95 bank of com-par-i-son el-e-ments ob-serves dif-fer-ent de-ci-sion lev-els in par-al-lel and pro-duces a thermometer-
  []
 
 )
 
-[25]
-\openout2 = `chapter3.aux'.
+[26]
+\openout2 = `chapter4.aux'.
 
- (chapter3.tex
+ (chapter4.tex
 Chapter 3.
 
 
-[26
+[27
 
 
 
 
 ]
 
-[27]
-
 [28]
 
 [29]
 
-[30]
+[30])
 
 [31]
+\openout2 = `chapter3.aux'.
 
-[32]
+ (chapter3.tex
+Chapter 4.
+
+
+[32
+
+
+
+
+]
 
 [33]
 
@@ -1440,293 +1479,348 @@ Chapter 3.
 
 [36]
 
-[37])
+[37]
 
 [38]
 
 [39]
-\openout2 = `trimming.aux'.
 
- (trimming.tex
-Chapter 4.
-
-
-[40
-
-
-
-
-]
+[40]
 
 [41]
 
-[42])
+[42]
 
 [43]
 
 [44]
-\openout2 = `chapter4.aux'.
 
- (chapter4.tex
-Chapter 5.
-
-
-[45
-
-
-
-
-]
+[45]
 
 [46]
 
 [47]
 
-[48])
+[48]
 
 [49]
+
+[50]
+
+[51])
+
+[52]
+\openout2 = `trimming.aux'.
+
+ (trimming.tex
+Chapter 5.
+
+
+[53
+
+
+
+
+]
+
+[54]
+
+[55]
+Underfull \hbox (badness 1112) in paragraph at lines 204--205
+[]\T1/ptm/m/n/10 3:0.1,  4:0.2,  5:0.2,  11:0.1,
+ []
+
+
+
+[56])
+
+[57]
 \openout2 = `chapter5.aux'.
 
  (chapter5.tex
 Chapter 6.
 
 
-[50
+[58
 
 
 
 
 ]
 
-[51]
-
-[52]
-
-[53]
-
-[54]
-
-[55]
-
-[56]
-
-[57]
-
-[58]
-Overfull \hbox (0.59584pt too wide) in paragraph at lines 320--336
- [][] 
- []
-
-
-
 [59]
 
-[60])
+[60]
 
 [61]
+
+[62]
+
+[63]
+
+[64]
+
+[65]
+
+[66]
+LaTeX Font Info:    Calculating math sizes for size <7.4> on input line 313.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <5.47603> not available
+(Font)              size <5> substituted on input line 313.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <4.44003> not available
+(Font)              size <5> substituted on input line 313.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.47603> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 313.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <4.44003> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 313.
+
+
+[67]
+
+[68])
+
+[69]
 \openout2 = `chapter6.aux'.
 
  (chapter6.tex
 Chapter 7.
 
 
-[62
+[70
 
 
 
 
 ]
 
-[63]
+[71]
 
-[64]
+[72]
 
-[65])
+[73])
 
-[66]
-LaTeX Font Info:    Trying to load font information for T1+pcrs on input line 126.
+[74]
+LaTeX Font Info:    Trying to load font information for T1+pcrs on input line 142.
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/courier-scaled\t1pcrs.fd
 File: t1pcrs.fd 2004/07/09 scalable font definitions for T1/pcrs.
 )
 LaTeX Font Info:    Font shape `T1/pcrs/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 126.
+(Font)              scaled to size 10.40245pt on input line 142.
 
 
-[67
+[75
 
 
 
 ]
-Overfull \hbox (13.80038pt too wide) in paragraph at lines 126--126
+Overfull \hbox (13.80038pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2025. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC49661 . 2025 . 10904766$[][]\T1/ptm/m/n/10.95 . 
- []
-
-
-Overfull \hbox (6.83562pt too wide) in paragraph at lines 126--126
-\T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2024. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC49657 .
- []
-
-
-
-[68]
-Overfull \hbox (6.42601pt too wide) in paragraph at lines 126--126
-\T1/ptm/m/n/10.95 ADC with Dynamic-Amplifier-Assisted Cas-caded In-te-gra-tor^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-
- []
-
-
-Overfull \hbox (13.80038pt too wide) in paragraph at lines 126--126
-\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2024. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC49657 . 2024 . 10454362$[][]\T1/ptm/m/n/10.95 . 
- []
-
-
-
-[69]
-Overfull \hbox (22.84404pt too wide) in paragraph at lines 126--126
-\T1/ptm/m/n/10.95 Pipelined-SAR ADC with Cross-Stage Gain-Mismatch-Error-Shaping Tech-nique and Negative-
- []
-
-
-Overfull \hbox (6.83562pt too wide) in paragraph at lines 126--126
-\T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2023. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC42615 .
- []
-
-
-
-[70]
-Overfull \hbox (13.80038pt too wide) in paragraph at lines 126--126
-\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2024. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC49657 . 2024 . 10454431$[][]\T1/ptm/m/n/10.95 . 
- []
-
-
-Overfull \hbox (10.60767pt too wide) in paragraph at lines 126--126
-[]\T1/ptm/m/n/10.95 H-K. Hong et al. ^^P  A 2.6b/cycle-architecture-based 10b 1.7GS/s 15.4mW 4x Time-interleaved
- []
-
-
-Overfull \hbox (2.51082pt too wide) in paragraph at lines 126--126
-\T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2015. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC . 2015 . 7063130$[][]\T1/ptm/m/n/10.95 . 
- []
-
-
-
-[71]
-Overfull \hbox (7.55891pt too wide) in paragraph at lines 126--126
-\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2022. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC42614 . 2022 . 9731571$[][]\T1/ptm/m/n/10.95 . 
- []
-
-
-Overfull \hbox (5.33601pt too wide) in paragraph at lines 126--126
-\T1/ptm/m/n/10.95 179.4dB-FOMSNDR 2nd-Order Noise-Shaping SARADC with En-hanced In-put Impedance
- []
-
-
-Overfull \hbox (1.57942pt too wide) in paragraph at lines 126--126
-\T1/ptm/m/n/10.95 in 0.18$\OML/ztmcm/m/it/10.95 ^^V$\T1/ptm/m/n/10.95 m CMOS^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2023.
- []
-
-
-
-[72]
-
-[73]
-Overfull \hbox (5.09041pt too wide) in paragraph at lines 126--126
-\OT1/ztmcm/m/n/10.95 ^^A$$^^F$ \T1/ptm/m/n/10.95 ADC in 40nm CMOS^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 .
- []
-
-
-
-[74]
-Overfull \hbox (6.08362pt too wide) in paragraph at lines 126--126
-[]\T1/ptm/m/n/10.95 Sharvil Patil et al. ^^P  A 700MHz-BW ^^U164dBFS/Hz-Small-Signal-NSD 703mW Continuous-
- []
-
-
-
-[75]
-Overfull \hbox (10.29994pt too wide) in paragraph at lines 126--126
-[]\T1/ptm/m/n/10.95 Sourja Ray and Bang-Sup Song. ^^P  A 13b Lin-ear 40MS/s Pipelined ADC with Self-Configured
- []
-
-
-Overfull \hbox (2.51082pt too wide) in paragraph at lines 126--126
-\T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2006. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC . 2006 . 1696297$[][]\T1/ptm/m/n/10.95 . 
  []
 
 
 
 [76]
-Overfull \hbox (2.51082pt too wide) in paragraph at lines 126--126
-\T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2006. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC . 2006 . 1696120$[][]\T1/ptm/m/n/10.95 . 
+Overfull \hbox (6.83562pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2024. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC49657 .
  []
 
 
-Overfull \hbox (1.82037pt too wide) in paragraph at lines 126--126
-\T1/ptm/m/n/10.95 drive read chan-nel^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 1999.
+Overfull \hbox (6.42601pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 ADC with Dynamic-Amplifier-Assisted Cas-caded In-te-gra-tor^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-
  []
 
 
-Overfull \hbox (14.23299pt too wide) in paragraph at lines 126--126
-\T1/ptm/m/n/10.95 Micro-Sensor Ap-pli-ca-tions^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 .
+Overfull \hbox (13.80038pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2024. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC49657 . 2024 . 10454362$[][]\T1/ptm/m/n/10.95 . 
+ []
+
+
+Overfull \hbox (20.31177pt too wide) in paragraph at lines 142--142
+[]\T1/ptm/m/n/10.95 Jaesuk Choi, Soon-Jae Kweon, and Hyun-tak Jeon. ^^P  Single-Stage CMOS Op-er-a-tional Transcon-
  []
 
 
 
 [77]
-Overfull \hbox (1.96727pt too wide) in paragraph at lines 126--126
-[]\T1/ptm/m/n/10.95 Jia-Ching Wang and Tai-Haur Kuo. ^^P  A 3-mW 2.7-GS/s 8b Sub-rang-ing ADC with Multiple-
+Overfull \hbox (22.84404pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 Pipelined-SAR ADC with Cross-Stage Gain-Mismatch-Error-Shaping Tech-nique and Negative-
  []
 
 
 
 [78]
+Overfull \hbox (6.83562pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2023. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC42615 .
+ []
+
+
+Overfull \hbox (13.80038pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2024. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC49657 . 2024 . 10454431$[][]\T1/ptm/m/n/10.95 . 
+ []
+
+
+Overfull \hbox (10.60767pt too wide) in paragraph at lines 142--142
+[]\T1/ptm/m/n/10.95 H-K. Hong et al. ^^P  A 2.6b/cycle-architecture-based 10b 1.7GS/s 15.4mW 4x Time-interleaved
+ []
+
+
+Overfull \hbox (2.51082pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2015. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC . 2015 . 7063130$[][]\T1/ptm/m/n/10.95 . 
+ []
+
+
 
 [79]
-Overfull \hbox (6.0335pt too wide) in paragraph at lines 126--126
+
+[80]
+Overfull \hbox (7.55891pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2022. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC42614 . 2022 . 9731571$[][]\T1/ptm/m/n/10.95 . 
+ []
+
+
+Overfull \hbox (5.33601pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 179.4dB-FOMSNDR 2nd-Order Noise-Shaping SARADC with En-hanced In-put Impedance
+ []
+
+
+Overfull \hbox (1.57942pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 in 0.18$\OML/ztmcm/m/it/10.95 ^^V$\T1/ptm/m/n/10.95 m CMOS^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2023.
+ []
+
+
+
+[81]
+
+[82]
+Overfull \hbox (5.09041pt too wide) in paragraph at lines 142--142
+\OT1/ztmcm/m/n/10.95 ^^A$$^^F$ \T1/ptm/m/n/10.95 ADC in 40nm CMOS^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 .
+ []
+
+
+
+[83]
+Overfull \hbox (6.08362pt too wide) in paragraph at lines 142--142
+[]\T1/ptm/m/n/10.95 Sharvil Patil et al. ^^P  A 700MHz-BW ^^U164dBFS/Hz-Small-Signal-NSD 703mW Continuous-
+ []
+
+
+Overfull \hbox (10.29994pt too wide) in paragraph at lines 142--142
+[]\T1/ptm/m/n/10.95 Sourja Ray and Bang-Sup Song. ^^P  A 13b Lin-ear 40MS/s Pipelined ADC with Self-Configured
+ []
+
+
+
+[84]
+Overfull \hbox (2.51082pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2006. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC . 2006 . 1696297$[][]\T1/ptm/m/n/10.95 . 
+ []
+
+
+Overfull \hbox (2.51082pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2006. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC . 2006 . 1696120$[][]\T1/ptm/m/n/10.95 . 
+ []
+
+
+
+[85]
+Overfull \hbox (1.82037pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 drive read chan-nel^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 1999.
+ []
+
+
+Overfull \hbox (0.39282pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 Cross-ing ADC Ex-ploit-ing Dy-namic Self-Biasing Com-para-tors^^Q. In: \T1/ptm/m/it/10.95 IEEE Jour-nal of Solid-
+ []
+
+
+Overfull \hbox (14.23299pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 Micro-Sensor Ap-pli-ca-tions^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 .
+ []
+
+
+
+[86]
+Overfull \hbox (1.96727pt too wide) in paragraph at lines 142--142
+[]\T1/ptm/m/n/10.95 Jia-Ching Wang and Tai-Haur Kuo. ^^P  A 3-mW 2.7-GS/s 8b Sub-rang-ing ADC with Multiple-
+ []
+
+
+
+[87]
+
+[88]
+Overfull \hbox (6.0335pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Mingtao Zhan, Lu Jie, and Nan Sun. ^^P  A 10mW 10-ENoB 1GS/s Ring-Amp-Based Pipelined
  []
 
 
-Overfull \hbox (4.73744pt too wide) in paragraph at lines 126--126
+Overfull \hbox (4.73744pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Yanbo Zhang et al. ^^P  A Single-channel 70dB-SNDR 100MHz-BW 4th-Order Noise-Shaping
  []
 
 
-Overfull \hbox (13.80038pt too wide) in paragraph at lines 126--126
+Overfull \hbox (13.80038pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2023. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC42615 . 2023 . 10067687$[][]\T1/ptm/m/n/10.95 . 
  []
 
 
-Overfull \hbox (24.90707pt too wide) in paragraph at lines 126--126
+Overfull \hbox (24.90707pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Yannan Zhang et al. ^^P  A 72GS/s 9b Time-Interleaved Pipeline-SAR ADC Achiev-ing 55.3/49.3dB
  []
 
 
 
-[80]
+[89]
+\openout2 = `appendix1.aux'.
 
-[81] (meec_thesis.aux (abstract.aux) (un-sdg.aux) (abbrevs.aux) (chapter1.aux) (chapter2.aux) (chapter3.aux) (trimming.aux) (chapter4.aux) (chapter5.aux) (chapter6.aux))
+ (appendix1.tex
+Appendix A.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 6.
+LaTeX Font Info:    Font shape `T1/pcrs/m/n' will be
+(Font)              scaled to size 8.54997pt on input line 6.
+LaTeX Font Info:    Font shape `T1/pcrs/b/n' will be
+(Font)              scaled to size 8.54997pt on input line 7.
+
+
+[90
+
+
+]
+
+[91])
+
+[92] (meec_thesis.aux (abstract.aux) (un-sdg.aux) (abbrevs.aux) (chapter1.aux) (chapter2.aux) (chapter4.aux) (chapter3.aux) (trimming.aux) (chapter5.aux) (chapter6.aux) (appendix1.aux))
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.55997pt have occurred.
+
 Package rerunfilecheck Info: File `meec_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 92E6AB5BABB5B2BECF990977A5E84C6A;23531.
+(rerunfilecheck)             Checksum: 16845E64041C1CCB8B95F20407D5E7CE;26508.
 Package logreq Info: Writing requests to 'meec_thesis.run.xml'.
 \openout1 = `meec_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55261 strings out of 468133
- 1297556 string characters out of 5430711
- 2407293 words of memory out of 5000000
- 82673 multiletter control sequences out of 15000+600000
- 729157 words of font info for 176 fonts, out of 8000000 for 9000
+ 57301 strings out of 468133
+ 1326540 string characters out of 5430711
+ 2846273 words of memory out of 5000000
+ 84520 multiletter control sequences out of 15000+600000
+ 745580 words of font info for 204 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,13n,107p,3447b,3172s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on meec_thesis.pdf (91 pages, 1780421 bytes).
+ 102i,14n,107p,3447b,3170s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on meec_thesis.pdf (103 pages, 1879677 bytes).
 PDF statistics:
- 1777 PDF objects out of 2073 (max. 8388607)
- 460 named destinations out of 1000 (max. 500000)
- 737 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2147 PDF objects out of 2487 (max. 8388607)
+ 623 named destinations out of 1000 (max. 500000)
+ 825 words of extra memory for PDF output out of 10000 (max. 10000000)
 

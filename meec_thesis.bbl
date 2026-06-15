@@ -853,6 +853,39 @@
       \verb 10.1109/ISSCC.2015.7063128
       \endverb
     \endentry
+    \entry{chavoshisani_2011}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=f0dcef88af956fd3427401e46322ef1e}{%
+           family={Chavoshisani},
+           familyi={C\bibinitperiod},
+           given={Reza},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e09717a1406bdcd4a7c6eddb9de79924}{%
+           family={Hashemipour},
+           familyi={H\bibinitperiod},
+           given={Omid},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{6802da013ce4737037b8111e5ebcdfb8}
+      \strng{fullhash}{6802da013ce4737037b8111e5ebcdfb8}
+      \strng{fullhashraw}{6802da013ce4737037b8111e5ebcdfb8}
+      \strng{bibnamehash}{6802da013ce4737037b8111e5ebcdfb8}
+      \strng{authorbibnamehash}{6802da013ce4737037b8111e5ebcdfb8}
+      \strng{authornamehash}{6802da013ce4737037b8111e5ebcdfb8}
+      \strng{authorfullhash}{6802da013ce4737037b8111e5ebcdfb8}
+      \strng{authorfullhashraw}{6802da013ce4737037b8111e5ebcdfb8}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Microelectronics Journal}
+      \field{number}{1}
+      \field{title}{A high-speed current conveyor based current comparator}
+      \field{volume}{42}
+      \field{year}{2011}
+      \field{pages}{28\bibrangedash 32}
+      \range{pages}{5}
+    \endentry
     \entry{FengChen_2003_115}{inproceedings}{}{}
       \name{author}{3}{}{%
         {{hash=76d2a0c3861b383bfabec56e48139137}{%
@@ -888,6 +921,47 @@
       \field{year}{2003}
       \verb{doi}
       \verb 10.1109/ISSCC.2003.1234204
+      \endverb
+    \endentry
+    \entry{chen_2001}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=54a3c319195500d522f4318c883d3e82}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Lu},
+           giveni={L\bibinitperiod}}}%
+        {{hash=5febff168dd5e39492b036c40c51026a}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Bingxue},
+           giveni={B\bibinitperiod}}}%
+        {{hash=49e670da4e2e47b4165d9b5a6214d70c}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Chun},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{c2a48b0ecaf9758f8b81ac8b54ea7231}
+      \strng{fullhash}{c2a48b0ecaf9758f8b81ac8b54ea7231}
+      \strng{fullhashraw}{c2a48b0ecaf9758f8b81ac8b54ea7231}
+      \strng{bibnamehash}{c2a48b0ecaf9758f8b81ac8b54ea7231}
+      \strng{authorbibnamehash}{c2a48b0ecaf9758f8b81ac8b54ea7231}
+      \strng{authornamehash}{c2a48b0ecaf9758f8b81ac8b54ea7231}
+      \strng{authorfullhash}{c2a48b0ecaf9758f8b81ac8b54ea7231}
+      \strng{authorfullhashraw}{c2a48b0ecaf9758f8b81ac8b54ea7231}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Analog Integrated Circuits and Signal Processing}
+      \field{number}{3}
+      \field{title}{Circuit design of a high speed and low power {CMOS} continuous-time current comparator}
+      \field{volume}{28}
+      \field{year}{2001}
+      \field{pages}{293\bibrangedash 297}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1023/A:1011260111919
       \endverb
     \endentry
     \entry{Chen_2006}{inproceedings}{}{}
@@ -1110,6 +1184,47 @@
       \field{year}{2024}
       \verb{doi}
       \verb 10.1109/ISSCC49657.2024.10454362
+      \endverb
+    \endentry
+    \entry{choi2023}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=9043702485559788867b75ff046e8148}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Jaesuk},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b2b0bba54b6c97ea4b66396514c9103c}{%
+           family={Kweon},
+           familyi={K\bibinitperiod},
+           given={Soon-Jae},
+           giveni={S\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=b3d4ac1e2e5a2637b19557be9619a25d}{%
+           family={Jeon},
+           familyi={J\bibinitperiod},
+           given={Hyuntak},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{6c636222153fd55ce321da4d8d047766}
+      \strng{fullhash}{6c636222153fd55ce321da4d8d047766}
+      \strng{fullhashraw}{6c636222153fd55ce321da4d8d047766}
+      \strng{bibnamehash}{6c636222153fd55ce321da4d8d047766}
+      \strng{authorbibnamehash}{6c636222153fd55ce321da4d8d047766}
+      \strng{authornamehash}{6c636222153fd55ce321da4d8d047766}
+      \strng{authorfullhash}{6c636222153fd55ce321da4d8d047766}
+      \strng{authorfullhashraw}{6c636222153fd55ce321da4d8d047766}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Electronics}
+      \field{number}{18}
+      \field{title}{Single-Stage {CMOS} Operational Transconductance Amplifiers ({OTAs}): A Design Tutorial}
+      \field{volume}{12}
+      \field{year}{2023}
+      \field{pages}{3833}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/electronics12183833
       \endverb
     \endentry
     \entry{KyojinDChoo_2016_59}{inproceedings}{}{}
@@ -1531,6 +1646,42 @@
       \field{year}{2005}
       \verb{doi}
       \verb 10.1109/ISSCC.2005.1494087
+      \endverb
+    \endentry
+    \entry{freitas_current_1983}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=b9cba5b13423fa81c4cbe05864bac1a9}{%
+           family={Freitas},
+           familyi={F\bibinitperiod},
+           given={D.\bibnamedelimi A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=1531939d8b6b4ee02f243f2765786f05}{%
+           family={Current},
+           familyi={C\bibinitperiod},
+           given={K.\bibnamedelimi W.},
+           giveni={K\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{fade323c679d00d6dc2ef2a8621a96c6}
+      \strng{fullhash}{fade323c679d00d6dc2ef2a8621a96c6}
+      \strng{fullhashraw}{fade323c679d00d6dc2ef2a8621a96c6}
+      \strng{bibnamehash}{fade323c679d00d6dc2ef2a8621a96c6}
+      \strng{authorbibnamehash}{fade323c679d00d6dc2ef2a8621a96c6}
+      \strng{authornamehash}{fade323c679d00d6dc2ef2a8621a96c6}
+      \strng{authorfullhash}{fade323c679d00d6dc2ef2a8621a96c6}
+      \strng{authorfullhashraw}{fade323c679d00d6dc2ef2a8621a96c6}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Electronics Letters}
+      \field{number}{17}
+      \field{title}{{CMOS} current comparator circuit}
+      \field{volume}{19}
+      \field{year}{1983}
+      \field{pages}{695\bibrangedash 697}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1049/el:19830474
       \endverb
     \endentry
     \entry{Fujimoto_2006_129}{inproceedings}{}{}
@@ -4293,6 +4444,39 @@
       \verb 10.1109/ISSCC.2011.5746404
       \endverb
     \endentry
+    \entry{minkim_1998}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=c154b1d67f1fe4904d605a20dea95024}{%
+           family={Min},
+           familyi={M\bibinitperiod},
+           given={B.\bibnamedelimi M.},
+           giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=1233f2bfbc492d90e5f1c1b6d653fb3c}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={S.\bibnamedelimi W.},
+           giveni={S\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{c7cfc63c71e399a1841b0e3b8e5abd61}
+      \strng{fullhash}{c7cfc63c71e399a1841b0e3b8e5abd61}
+      \strng{fullhashraw}{c7cfc63c71e399a1841b0e3b8e5abd61}
+      \strng{bibnamehash}{c7cfc63c71e399a1841b0e3b8e5abd61}
+      \strng{authorbibnamehash}{c7cfc63c71e399a1841b0e3b8e5abd61}
+      \strng{authornamehash}{c7cfc63c71e399a1841b0e3b8e5abd61}
+      \strng{authorfullhash}{c7cfc63c71e399a1841b0e3b8e5abd61}
+      \strng{authorfullhashraw}{c7cfc63c71e399a1841b0e3b8e5abd61}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Electronics Letters}
+      \field{number}{22}
+      \field{title}{High performance {CMOS} current comparator using resistive feedback network}
+      \field{volume}{34}
+      \field{year}{1998}
+      \field{pages}{2074\bibrangedash 2076}
+      \range{pages}{3}
+    \endentry
     \entry{Mitteregger_2006_126}{inproceedings}{}{}
       \name{author}{8}{}{%
         {{hash=443b3603dc9de078b129f3360a0487ad}{%
@@ -4888,6 +5072,42 @@
       \range{pages}{6}
       \verb{doi}
       \verb 10.1109/MSSC.2015.2418155
+      \endverb
+    \endentry
+    \entry{schell2008}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=a53f40a28ff36814aaf75c328b206b0a}{%
+           family={Schell},
+           familyi={S\bibinitperiod},
+           given={Bob},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8753f9c169820291a350d654833aac12}{%
+           family={Tsividis},
+           familyi={T\bibinitperiod},
+           given={Yannis},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ed5f603f22db8fc41373e1909f33625}
+      \strng{fullhash}{6ed5f603f22db8fc41373e1909f33625}
+      \strng{fullhashraw}{6ed5f603f22db8fc41373e1909f33625}
+      \strng{bibnamehash}{6ed5f603f22db8fc41373e1909f33625}
+      \strng{authorbibnamehash}{6ed5f603f22db8fc41373e1909f33625}
+      \strng{authornamehash}{6ed5f603f22db8fc41373e1909f33625}
+      \strng{authorfullhash}{6ed5f603f22db8fc41373e1909f33625}
+      \strng{authorfullhashraw}{6ed5f603f22db8fc41373e1909f33625}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Journal of Solid-State Circuits}
+      \field{number}{11}
+      \field{title}{A Continuous-Time {ADC/DSP/DAC} System With No Clock and With Activity-Dependent Power Dissipation}
+      \field{volume}{43}
+      \field{year}{2008}
+      \field{pages}{2472\bibrangedash 2481}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/JSSC.2008.2005456
       \endverb
     \endentry
     \entry{schreier_2005}{article}{}{}
@@ -5498,6 +5718,48 @@
       \verb 10.1109/ISSCC.2006.1696044
       \endverb
     \endentry
+    \entry{sridhar_2015}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=48017648641a0154e5721c89fb9a0a46}{%
+           family={Sridhar},
+           familyi={S\bibinitperiod},
+           given={Ranjana},
+           giveni={R\bibinitperiod}}}%
+        {{hash=87f21fc574e5e88ad26a5680f83f4cc1}{%
+           family={Pandey},
+           familyi={P\bibinitperiod},
+           given={Neeta},
+           giveni={N\bibinitperiod}}}%
+        {{hash=340266905eb333d3167296e1ffeeb280}{%
+           family={Bhatia},
+           familyi={B\bibinitperiod},
+           given={Veepsa},
+           giveni={V\bibinitperiod}}}%
+        {{hash=c1f2b893764db16f3f9110edf2fd9a18}{%
+           family={Bhattacharyya},
+           familyi={B\bibinitperiod},
+           given={Asok},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ebfeeaa6033bf8e7cd14931fca0cccc8}
+      \strng{fullhash}{be1615423d04bda1b0f0a6c93f41458e}
+      \strng{fullhashraw}{be1615423d04bda1b0f0a6c93f41458e}
+      \strng{bibnamehash}{ebfeeaa6033bf8e7cd14931fca0cccc8}
+      \strng{authorbibnamehash}{ebfeeaa6033bf8e7cd14931fca0cccc8}
+      \strng{authornamehash}{ebfeeaa6033bf8e7cd14931fca0cccc8}
+      \strng{authorfullhash}{be1615423d04bda1b0f0a6c93f41458e}
+      \strng{authorfullhashraw}{be1615423d04bda1b0f0a6c93f41458e}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of The Institution of Engineers (India): Series B}
+      \field{title}{High speed high resolution current comparator and its application to analog to digital converter}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.1007/s40031-015-0189-1
+      \endverb
+    \endentry
     \entry{AnandSubramanian_2024_143}{inproceedings}{}{}
       \name{author}{4}{}{%
         {{hash=010571c164ca89ae5a13d1d2878d0afa}{%
@@ -5738,6 +6000,92 @@
       \field{year}{2025}
       \verb{doi}
       \verb 10.1109/ISSCC49661.2025.10904751
+      \endverb
+    \endentry
+    \entry{timmermans2024}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=0fa066108a42a2745b6c2c31cc2ed386}{%
+           family={Timmermans},
+           familyi={T\bibinitperiod},
+           given={Michiel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4373838304fc5ae934f232466a3cb8f3}{%
+           family={Oosterhout},
+           familyi={O\bibinitperiod},
+           given={Koen},
+           giveni={K\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=9de21f61e3c9220a53001be778739f76}{%
+           family={Fattori},
+           familyi={F\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d8d51c85bcfac1c49eb2d781f08a96b0}{%
+           family={Harpe},
+           familyi={H\bibinitperiod},
+           given={Pieter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e2e6f74e491c6a6934dd292052e06a07}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yao-Hong},
+           giveni={Y\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=bf15477ad5d486cd08044cffacc9e4d9}{%
+           family={Cantatore},
+           familyi={C\bibinitperiod},
+           given={Eugenio},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{19b005b1358925eee2242e595484e181}
+      \strng{fullhash}{db8a9fb50564d1931333df2de8dd1cad}
+      \strng{fullhashraw}{db8a9fb50564d1931333df2de8dd1cad}
+      \strng{bibnamehash}{19b005b1358925eee2242e595484e181}
+      \strng{authorbibnamehash}{19b005b1358925eee2242e595484e181}
+      \strng{authornamehash}{19b005b1358925eee2242e595484e181}
+      \strng{authorfullhash}{db8a9fb50564d1931333df2de8dd1cad}
+      \strng{authorfullhashraw}{db8a9fb50564d1931333df2de8dd1cad}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Journal of Solid-State Circuits}
+      \field{number}{4}
+      \field{title}{A 1.8--65 {fJ/Conv.-step} 64-{dB} {SNDR} Continuous-Time Level Crossing {ADC} Exploiting Dynamic Self-Biasing Comparators}
+      \field{volume}{59}
+      \field{year}{2024}
+      \field{pages}{1194\bibrangedash 1203}
+      \range{pages}{10}
+    \endentry
+    \entry{traff_1992}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=b7d7e6e3efeb98ac7b90b8c25600a225}{%
+           family={Träff},
+           familyi={T\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7d7e6e3efeb98ac7b90b8c25600a225}
+      \strng{fullhash}{b7d7e6e3efeb98ac7b90b8c25600a225}
+      \strng{fullhashraw}{b7d7e6e3efeb98ac7b90b8c25600a225}
+      \strng{bibnamehash}{b7d7e6e3efeb98ac7b90b8c25600a225}
+      \strng{authorbibnamehash}{b7d7e6e3efeb98ac7b90b8c25600a225}
+      \strng{authornamehash}{b7d7e6e3efeb98ac7b90b8c25600a225}
+      \strng{authorfullhash}{b7d7e6e3efeb98ac7b90b8c25600a225}
+      \strng{authorfullhashraw}{b7d7e6e3efeb98ac7b90b8c25600a225}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Electronics Letters}
+      \field{number}{3}
+      \field{title}{Novel approach to high speed {CMOS} current comparators}
+      \field{volume}{28}
+      \field{year}{1992}
+      \field{pages}{310\bibrangedash 312}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1049/el:19920192
       \endverb
     \endentry
     \entry{Veldhoven_2021}{inproceedings}{}{}
