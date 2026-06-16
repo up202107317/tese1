@@ -126,13 +126,14 @@
 \contentsline {subsection}{\numberline {6.4.1}Power Measurement Methodology}{64}{subsection.6.4.1}%
 \contentsline {subsection}{\numberline {6.4.2}Signal-Dependent Power Scaling}{64}{subsection.6.4.2}%
 \contentsline {subsection}{\numberline {6.4.3}Average Power Under Duty-Cycled Operation}{66}{subsection.6.4.3}%
-\contentsline {section}{\numberline {6.5}Synchronous Reference Flash ADC Results}{66}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Comparative Analysis and Discussion}{67}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Chapter Summary}{69}{section.6.7}%
-\contentsline {chapter}{\numberline {7}Conclusions and Suggestions for Future Work}{70}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Summary of the Work Developed}{70}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Concluded Objectives}{72}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Future Work}{73}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Analogue Process Corner Detection Approach}{73}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}Monte Carlo Trimming}{74}{subsection.7.3.2}%
-\contentsline {chapter}{\numberline {A}Verilog-A Body Bias Trimming Model}{90}{appendix.A}%
+\contentsline {subsection}{\numberline {6.4.4}Output Event Rate and Data Reduction}{66}{subsection.6.4.4}%
+\contentsline {section}{\numberline {6.5}Synchronous Reference Flash ADC Results}{67}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Comparative Analysis and Discussion}{68}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Chapter Summary}{70}{section.6.7}%
+\contentsline {chapter}{\numberline {7}Conclusions and Suggestions for Future Work}{72}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Summary of the Work Developed}{72}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Concluded Objectives}{74}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Future Work}{75}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Analogue Process Corner Detection Approach}{75}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Monte Carlo Trimming}{76}{subsection.7.3.2}%
+\contentsline {chapter}{\numberline {A}Verilog-A Body Bias Trimming Model}{92}{appendix.A}%

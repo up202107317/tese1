@@ -1,6 +1,6 @@
-PWD c:\Users\gonca\Downloads\meec-distrib-v2024 (2)\meec-distrib
+PWD C:\Users\gonca\Downloads\meec-distrib-v2024 (2)\meec-distrib
 INPUT C:\Users\gonca\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\gonca\Downloads\meec-distrib-v2024 (2)\meec-distrib\meec_thesis.tex
+INPUT meec_thesis.tex
 OUTPUT meec_thesis.log
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls

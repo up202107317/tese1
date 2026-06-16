@@ -26,7 +26,7 @@ Smart devices are now everywhere, a development usually grouped under the name I
 
 Energy efficiency has moved from a secondary performance metric to a primary design constraint. Many sensors run on small batteries or on harvested energy, so every joule dissipated shortens the autonomy of the system. The data conversion block is frequently the largest consumer in these interfaces, particularly when the digital transmission is duty-cycled and the radio spends most of its time off.
 
-Many environmental and physiological signals are also sparse. Electrocardiograms, voice activity and environmental monitoring data arrive in bursts: short periods of high information content followed by long intervals in which nothing changes.
+Many real-world signals are also sparse and non-periodic. Voice activity, machine vibration and environmental monitoring data arrive in bursts: short periods of high information content followed by long intervals in which nothing changes.
 
 Traditional data conversion, based on uniform sampling at the rate dictated by the Nyquist-Shannon theorem \cite{shannon_1949}, treats these silent periods exactly like the active ones. The system dissipates power to generate redundant samples that carry no new information. Exploiting this sparsity is the most direct route to ultra-low-power conversion interfaces.
 

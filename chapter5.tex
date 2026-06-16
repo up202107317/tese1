@@ -188,13 +188,13 @@ Under this methodology, the power reported for the synchronous reference in Tabl
 
 \subsection{Signal-Dependent Power Scaling}
 
-The active consumption was bounded with two stimuli. Driven by the full-scale $9$~MHz sinusoid swinging rail to rail across the $0$--$0.8$~V supply, the converter draws $192$~\textmu W; a slew-rate-matched $35$~ns full-scale ramp gives $184$~\textmu W, confirming the figure. With the input idle, it draws $145$~\textmu W. The idle figure is the static floor anticipated in Section~\ref{subsec:resolution_power}: the complementary follower is continuously biased, so its input pairs conduct a residual class-A bias current even when no threshold is being crossed. The difference between the active sinusoid and the idle floor, $47$~\textmu W, is the activity-dependent component of the consumption. Figure~\ref{fig:power_scaling} shows the dependency of the total power on the input frequency.
+Driven by the full-scale $9$~MHz sinusoid swinging rail to rail across the $0$--$0.8$~V supply, the converter draws an average of $99.5$~\textmu W, the instantaneous consumption peaking at $108$~\textmu W around the mid-scale crossing, where the level-crossing rate is highest. With the input idle, it draws $94.8$~\textmu W. The idle figure is the static floor anticipated in Section~\ref{subsec:resolution_power}: the complementary follower is continuously biased, so its input pairs conduct a residual class-A bias current even when no threshold is being crossed. The difference between the active average and the idle floor, $4.7$~\textmu W, is the activity-dependent component of the consumption. Figure~\ref{fig:power_scaling} shows the dependency of the total power on the input frequency.
 
 \begin{figure}[htbp]
     \centering
     % \includegraphics[width=0.75\textwidth]{figures/power_scaling.pdf}
     \vspace{5cm} % Placeholder space for the image
-    \caption{Average power of the asynchronous converter as a function of input activity, rising from the $145$~\textmu W idle floor to $192$~\textmu W at full activity, with the activity-independent $727$~\textmu W of the synchronous reference shown as a flat line for comparison.}
+    \caption{Average power of the asynchronous converter as a function of input activity, rising from the $94.8$~\textmu W idle floor to $99.5$~\textmu W at full activity, with the activity-independent $727$~\textmu W of the synchronous reference shown as a flat line for comparison.}
     \label{fig:power_scaling}
 \end{figure}
 
@@ -204,7 +204,7 @@ Energy efficiency is assessed with the standard Walden Figure of Merit, applied 
     \label{eq:fomw}
 \end{equation}
 
-The signal bandwidth of the proposed converter is its full-scale sinusoidal tracking limit, $B = 9$~MHz (Section~\ref{sec:simulation_setup}). At that operating point, with $P = 192$~\textmu W and an ENOB of $4.11$, equation~\eqref{eq:fomw} gives $\mathrm{FoM}_W \approx 618$~fJ/conv.-step. As in the level-crossing references, the figure of merit improves for sparse inputs, not through the denominator but through the power term, as the converter approaches its $145$~\textmu W idle floor.
+The signal bandwidth of the proposed converter is its full-scale sinusoidal tracking limit, $B = 9$~MHz (Section~\ref{sec:simulation_setup}). At that operating point, with $P = 99.5$~\textmu W and an ENOB of $4.11$, equation~\eqref{eq:fomw} gives $\mathrm{FoM}_W \approx 320$~fJ/conv.-step. As in the level-crossing references, the figure of merit improves for sparse inputs, not through the denominator but through the power term, as the converter approaches its $94.8$~\textmu W idle floor.
 
 The measured power figures are summarised in Table~\ref{tab:power_metrics_empty}.
 
@@ -217,11 +217,11 @@ The measured power figures are summarised in Table~\ref{tab:power_metrics_empty}
         \toprule
         \textbf{Performance Parameter}           & \textbf{Value} & \textbf{Unit}         \\
         \midrule
-        Power consumption, input active          & 192            & $\mu$W                \\
-        Power consumption, input idle            & 145            & $\mu$W                \\
-        Activity-dependent component             & 47             & $\mu$W                \\
+        Power consumption, input active          & 99.5           & $\mu$W                \\
+        Power consumption, input idle            & 94.8           & $\mu$W                \\
+        Activity-dependent component             & 4.7            & $\mu$W                \\
         \midrule
-        $\mathrm{FoM}_{W}$ ($B = 9$~MHz)         & 618            & fJ/conv.-step         \\
+        $\mathrm{FoM}_{W}$ ($B = 9$~MHz)         & 320            & fJ/conv.-step         \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -231,20 +231,54 @@ The measured power figures are summarised in Table~\ref{tab:power_metrics_empty}
 
 The two power figures of Table~\ref{tab:power_metrics_empty} are the end points of a continuous relationship. For an input that is active a fraction $\alpha$ of the time, the average power of the converter interpolates between the idle floor and the full-activity value:
 \begin{equation}
-    P_{avg}(\alpha) = P_{idle} + (P_{active} - P_{idle})\,\alpha = 145 + 47\,\alpha \quad [\mu\mathrm{W}].
+    P_{avg}(\alpha) = P_{idle} + (P_{active} - P_{idle})\,\alpha = 94.8 + 4.7\,\alpha \quad [\mu\mathrm{W}].
     \label{eq:avg_power}
 \end{equation}
 
-The synchronous reference has no such dependence. Its clock and comparator bank switch every cycle regardless of the input, so its power stays at $727$~\textmu W for any $\alpha$. The ratio between the two is $727/(145 + 47\alpha)$, which is $3.8$ at full activity and rises to $5.0$ as the input becomes sparse. The advantage of the asynchronous converter is therefore largest exactly where the target applications operate, at low activity, and Figure~\ref{fig:power_scaling} shows the two curves: the asynchronous power rising gently with activity against the flat line of the clocked reference.
+The synchronous reference has no such dependence. Its clock and comparator bank switch every cycle regardless of the input, so its power stays at $727$~\textmu W for any $\alpha$. The ratio between the two is $727/(94.8 + 4.7\alpha)$, which is $7.3$ at full activity and rises to $7.7$ as the input becomes sparse. The advantage of the asynchronous converter is therefore largest exactly where the target applications operate, at low activity, and Figure~\ref{fig:power_scaling} shows the two curves: the asynchronous power rising gently with activity against the flat line of the clocked reference.
+
+The nature of this idle figure should be stated plainly. At $94.8$~\textmu W the floor is $95\%$ of the active power, so the converter is not a near-zero-power part when the input is quiet: what falls to zero is the dynamic, activity-dependent component, while the static bias of the complementary follower remains and dominates the budget. The benefit demonstrated here is thus twofold and bounded: the clock-distribution network is removed entirely, and the remaining $4.7$~\textmu W of dynamic power scales down with input activity. Collapsing the floor itself would require duty-cycling the follower bias during idle intervals, a power-gating extension left for future work; without it, the $94.8$~\textmu W bias current sets the practical lower bound on the converter's average power.
 
 This activity-dependent power, rather than a per-conversion figure of merit, is the appropriate way to compare a clockless converter with a clocked one, as established by the continuous-time system of Schell and Tsividis, whose power fell from $800$~\textmu W at full activity to a $250$~\textmu W quiescent level driven entirely by the input \cite{schell2008}. The Walden FoM, normalised to a fixed bandwidth, is blind to this scaling by construction.
 
-One limitation must be stated plainly. In this converter the dynamic component is only $36$~\textmu W, a fifth of the active power, because the complementary follower draws a static bias current that does not switch off when the input is idle. Most of the saving over the synchronous reference therefore comes from removing the clock, not from the residual activity scaling within the asynchronous core. Power-gating the follower during long idle intervals would lower the $145$~\textmu W floor and widen the advantage for very sparse signals.
+\subsection{Output Event Rate and Data Reduction}
+\label{subsec:event_rate}
+
+The power saving of the previous subsections is capped by the static floor, so on its own it does not capture the full benefit of clockless operation for non-periodic signals. A second and independent advantage shows up at the output. The asynchronous converter produces a transition only when the input crosses a quantisation threshold, so the rate at which it emits data follows the activity of the signal. The synchronous reference, by contrast, emits a fresh sample on every clock edge whether or not the input has moved.
+
+One level crossing is one output event, a single $\pm 1$ change of the thermometer code, and the number of events per second is the average crossing rate $f_{s,avg}$ of Section~\ref{subsec:resolution_power}. For a full-scale sinusoid at $f_{in}$ this rate is $2^{N+1} f_{in}$, which at the $9$~MHz full-scale operating point is $288$~M events per second, exactly the $288$~MS/s of the matched synchronous reference. The full-scale sinusoid is therefore the worst case: the asynchronous output carries no redundancy to remove, and the two converters emit data at the same rate.
+
+For sparse, non-periodic inputs the two diverge. As the signal spends longer between crossings the event rate falls with its activity, while the synchronous reference keeps emitting $288$~M samples per second of largely repeated codes. The ratio of the two rates is the data reduction factor,
+\begin{equation}
+    \mathrm{DR} = \frac{f_s}{R_{event}},
+    \label{eq:data_reduction}
+\end{equation}
+with $f_s = 288$~MS/s and $R_{event}$ the event rate of the asynchronous converter for the input in question, obtained by counting thermometer-code transitions over the simulated record. Table~\ref{tab:event_rate} lists this factor for a set of representative inputs.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Output event rate of the asynchronous converter and the resulting data reduction against the synchronous reference. The full-scale sinusoid is the worst case; sparse, non-periodic inputs lower the event rate in proportion to their activity.}
+    \label{tab:event_rate}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{lccc}
+        \toprule
+        \textbf{Input} & \textbf{$R_{event}$ (Mev/s)} & \textbf{Sync.\ rate (MS/s)} & \textbf{Data reduction} \\
+        \midrule
+        Full-scale $9$~MHz sinusoid        & 288 & 288 & $1.0\times$ \\
+        Non-periodic input (low activity)  &     & 288 &             \\
+        Non-periodic input (sparse)        &     & 288 &             \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+The same event count also fixes the dynamic energy. From the $4.7$~\textmu W of activity-dependent power drawn at the $288$~M events per second of the full-scale test, each conversion costs $E_{conv} = P_{dyn}/f_{s,avg} \approx 16$~fJ, so the dynamic power of any input follows from its event rate as $P_{dyn} \approx E_{conv}\,R_{event}$. The event rate is therefore the single quantity that links the output data volume to the activity-dependent power: a sparse input lowers both, by the same factor.
+
+This data reduction is the form in which the event-driven principle pays off for non-periodic signals. The synchronous reference cannot share in it. With no way of knowing whether the input has changed, it clocks and emits at the fixed Nyquist-matched rate, producing redundant samples and spending the corresponding power throughout the quiet intervals that dominate a sparse record.
 
 \section{Synchronous Reference Flash ADC Results}
 \label{sec:sync_results}
 
-The synchronous reference converter described in Chapter~\ref{chap:synchronous} was simulated under the same 16-nm, $0.8$~V conditions as the proposed design, following the power measurement methodology of Section~\ref{sec:power_methodology}. It was confirmed to operate across the full $0$--$0.8$~V input range, and its power was measured at the workload-matched operating point defined below, a $9$~MHz full-scale input sampled at $288$~MS/s, giving $727$~\textmu W.
+The synchronous reference exists in this work for a single purpose: to measure, under identical technology and supply, the power that a clocked Flash ADC spends on the same conversion workload, so that the energy cost of the clock can be isolated and the lower consumption of the asynchronous design can be demonstrated. Its dynamic linearity is not an objective of this work and plays no part in the comparison; only its power is used. That converter, described in Chapter~\ref{chap:synchronous}, was simulated under the same 16-nm, $0.8$~V conditions as the proposed design, following the power measurement methodology of Section~\ref{sec:power_methodology}. It was confirmed to operate across the full $0$--$0.8$~V input range, and its power was measured at the workload-matched operating point defined below, a $9$~MHz full-scale input sampled at $288$~MS/s, giving $727$~\textmu W.
 
 Neither operating point comes from the original publication. The design of \cite{flashadc_ref} was demonstrated at $20$~MS/s with a $332$~kHz input in 65~nm; reproducing that point here would compare the two converters in a regime unrelated to the one the asynchronous design targets. The matched point follows instead from the activity model of Section~\ref{subsec:resolution_power} and from the slew rate envelope of Section~\ref{sec:simulation_setup}: the fastest full-scale sinusoid the asynchronous converter tracks cleanly is $9$~MHz, and at that input a 4-bit level-crossing converter generates $f_{s,avg} = 2^{N+1} f_{in} = 32 \times 9~\mathrm{MHz} = 288$~M crossings per second. Clocked at $288$~MS/s with the same $9$~MHz stimulus, the synchronous reference performs the same number of conversions per second, on the same input, as the asynchronous converter in the test of Section~\ref{sec:simulation_setup}. The power figures of the two converters therefore describe the same workload, which is what the synchronous reference was built for. The reference is a functional 4-bit Flash converter and is used here solely as a power benchmark; its dynamic linearity is not part of the comparison and is not characterised in detail. The power summary is presented in Table~\ref{tab:sync_results} and is the baseline for the power comparison of the following section.
 
@@ -310,23 +344,23 @@ Table~\ref{tab:state_of_the_art} puts the developed design in context. It compar
         Resolution (bit)   & 4      & 4           & 8           & 8         & 10          \\
         Signal BW (MHz)    & 9      & 9           & 0.02        & 0.02      & 0.02        \\
         $f_s$ (MS/s)       & 288    & event       & event       & event     & event       \\
-        Power ($\mu$W)     & 727    & 192         & 250--800\textsuperscript{$1$} & 3--9 & 0.066--2.8 \\
-        $\mathrm{FoM}_W$ (fJ/c.s.) &  & 618       & n.r.\textsuperscript{$1$} & n.r. & 1.8--65 \\
+        Power ($\mu$W)     & 727    & 99.5        & 250--800\textsuperscript{$1$} & 3--9 & 0.066--2.8 \\
+        $\mathrm{FoM}_W$ (fJ/c.s.) & 2524\textsuperscript{$2$} & 320       & n.r.\textsuperscript{$1$} & n.r. & 1.8--65 \\
         Architecture       & Sync. Flash & Async. LC Flash & CT system & LC-ADC & CT LC-ADC \\
         \bottomrule
     \end{tabular}
 
     \vspace{2mm}
-    {\footnotesize \textsuperscript{$1$}~Reference~\cite{schell2008} is a complete continuous-time ADC/DSP/DAC system; the power figure is system-level and the work does not report a per-conversion FoM. ``n.r.'' denotes a quantity not reported in the original work; ``event'' denotes event-driven, clockless operation with no fixed sampling rate.}
+    {\footnotesize \textsuperscript{$1$}~Reference~\cite{schell2008} is a complete continuous-time ADC/DSP/DAC system; the power figure is system-level and the work does not report a per-conversion FoM. ``n.r.'' denotes a quantity not reported in the original work; ``event'' denotes event-driven, clockless operation with no fixed sampling rate. \textsuperscript{$2$}~The synchronous reference is included for the power comparison only; its FoM is computed at the nominal 4-bit resolution, the converter not being characterised for ENOB, so the value is a conservative (best-case) estimate that the measured effective resolution would only worsen.}
 \end{table}
 
-The comparison makes the trade-off concrete. On the same $9$~MHz full-scale stimulus and at a matched conversions-per-second workload (Section~\ref{sec:sync_results}), the complete synchronous converter draws $727$~\textmu W against $192$~\textmu W for the active asynchronous core, a factor of nearly four. A substantial part of the synchronous budget goes to clock generation and distribution, blocks that do not exist in the asynchronous design.
+The comparison makes the trade-off concrete. On the same $9$~MHz full-scale stimulus and at a matched conversions-per-second workload (Section~\ref{sec:sync_results}), the complete synchronous converter draws $727$~\textmu W against $99.5$~\textmu W for the active asynchronous core, a factor of more than seven. A substantial part of the synchronous budget goes to clock generation and distribution, blocks that do not exist in the asynchronous design.
 
-Two cautions keep this comparison honest. First, the Walden FoM is not the right yardstick for the synchronous baseline: at the matched point it is oversampled, performing $288$~M conversions per second on a $9$~MHz signal, and the per-conversion FoM would reward that oversampling rather than penalise the wasted clock energy. The matched-workload power, $727$ against $192$~\textmu W, is the meaningful efficiency figure for the synchronous reference. Second, the $618$~fJ/conv.-step of the proposed converter is well above the best dedicated level-crossing ADCs in the literature (single-digit to tens of fJ for the biomedical designs of Chapter~\ref{chap:lit_review}); this is expected, since those are high-resolution, kilohertz-bandwidth converters optimised for energy, whereas this work is a medium-resolution, megahertz-range Flash converter benchmarked against a synchronous Flash of the same family. The energy argument of this work rests on the matched-workload power saving against that synchronous baseline and on the drop towards the $145$~\textmu W idle floor for sparse inputs, not on a record FoM.
+Two cautions keep this comparison honest. First, two efficiency figures tell the same story for the synchronous baseline. On the standard Walden FoM with the rate at twice the bandwidth, the reference reaches $2524$~fJ/conv.-step at the nominal 4-bit resolution, against $320$~fJ for the proposed converter, around eight times worse. A per-conversion FoM referenced instead to the actual $288$~MS/s clock would reward the oversampling rather than penalise the wasted clock energy, which is why the matched-workload power, $727$ against $99.5$~\textmu W, remains the most direct efficiency figure for the comparison. Second, the $320$~fJ/conv.-step of the proposed converter is well above the best dedicated level-crossing ADCs in the literature (single-digit to tens of fJ for the dedicated low-bandwidth designs of Chapter~\ref{chap:lit_review}); this is expected, since those are high-resolution, kilohertz-bandwidth converters optimised for energy, whereas this work is a medium-resolution, megahertz-range Flash converter benchmarked against a synchronous Flash of the same family. The energy argument of this work rests on the matched-workload power saving against that synchronous baseline and on the drop towards the $94.8$~\textmu W idle floor for sparse inputs, not on a record FoM.
 
-A note on the fairness of the power comparison is warranted, since it could be suspected of favouring the asynchronous design by construction. Three observations bound that concern. First, both converters have the same 4-bit resolution and their cores are measured under the same exclusions (Section~\ref{sec:power_methodology}), so the structural terms are symmetric. Second, the asynchronous advantage is conditional, and the condition is stated by the model of Section~\ref{subsec:resolution_power}: as input activity rises, the crossing rate approaches $2^{N+1} f_{in}$ and the dynamic power of the asynchronous core grows linearly, until near the slope-overload limit the advantage disappears. The asynchronous architecture is expected to win for sparse inputs and to lose its margin for continuously active inputs near full bandwidth; this comparison targets the former, which is the application space defined in Chapter~\ref{chap:intro}. Third, the one structural asymmetry that remains, the reduced linearity of the complementary follower near the supply rails, runs against the asynchronous design rather than in its favour.
+A note on the fairness of the power comparison is warranted, since it could be suspected of favouring the asynchronous design by construction. Three observations bound that concern. First, both converters have the same 4-bit resolution and their cores are measured under the same exclusions (Section~\ref{sec:power_methodology}), so the structural terms are symmetric. Second, the comparison does not depend on choosing a favourable, sparse operating point. The matched-workload point used here is already full activity, the fastest full-scale input the converter tracks, and even there the asynchronous core draws $99.5$~\textmu W against $727$~\textmu W, a factor of $7.3$; as the input becomes sparse the ratio only widens, to $7.7$. The advantage therefore holds across the whole activity range. Because the dynamic component of the asynchronous power is small next to its static floor, this saving comes mainly from the lower absolute consumption of the clockless core, with the activity-dependent scaling adding only a secondary contribution. Third, the one structural asymmetry that remains, the reduced linearity of the complementary follower near the supply rails, runs against the asynchronous design rather than in its favour.
 
 \section{Chapter Summary}
 
-The measurements of this chapter close the loop opened in Chapter~\ref{chap:intro}. The asynchronous converter tracks full-scale inputs up to a $14.3$~MHz equivalent conversion rate, bounded by hysteresis rather than by linearity, and digitises a $9$~MHz full-scale sinusoid with an ENOB of $4.11$~bits and no bubble errors. The body bias trimming improves the worst-case DNL at all four process corners and the worst-case INL at three of them, with the SF corner exposing the limit of a corner-indexed, forward-bias-only per-slicer correction. The Monte Carlo analysis confirms that random mismatch, outside the scope of the corner-indexed trimming, remains the dominant linearity hazard. On power, the comparison under a matched workload gives $192$~\textmu W against $727$~\textmu W for the synchronous reference, and the gap widens for sparse inputs, where the asynchronous converter falls to its $145$~\textmu W idle floor while the clocked reference keeps paying for every cycle. The final chapter weighs these results against the objectives of the dissertation.
+The measurements of this chapter close the loop opened in Chapter~\ref{chap:intro}. The asynchronous converter tracks full-scale inputs up to a $14.3$~MHz equivalent conversion rate, bounded by hysteresis rather than by linearity, and digitises a $9$~MHz full-scale sinusoid with an ENOB of $4.11$~bits and no bubble errors. The body bias trimming improves the worst-case DNL at all four process corners and the worst-case INL at three of them, with the SF corner exposing the limit of a corner-indexed, forward-bias-only per-slicer correction. The Monte Carlo analysis confirms that random mismatch, outside the scope of the corner-indexed trimming, remains the dominant linearity hazard. On power, the comparison under a matched workload gives $99.5$~\textmu W against $727$~\textmu W for the synchronous reference, and the gap widens for sparse inputs, where the asynchronous converter falls to its $94.8$~\textmu W idle floor while the clocked reference keeps paying for every cycle. The final chapter weighs these results against the objectives of the dissertation.
 
