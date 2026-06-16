@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.20)  16 JUN 2026 15:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.20)  16 JUN 2026 17:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1387,84 +1387,98 @@ Overfull \hbox (2.84885pt too wide) in paragraph at lines 464--465
 [15]
 
 [16]
+<figures/HTraff_schematic_no_explanation.pdf, id=856, 93.677pt x 93.41646pt>
+File: figures/HTraff_schematic_no_explanation.pdf Graphic file (type pdf)
+<use figures/HTraff_schematic_no_explanation.pdf>
+Package pdftex.def Info: figures/HTraff_schematic_no_explanation.pdf  used on input line 496.
+(pdftex.def)             Requested size: 298.75264pt x 297.98654pt.
 
-[17]
-Overfull \hbox (11.66904pt too wide) in paragraph at lines 520--521
+
+[17 <./figures/HTraff_schematic_no_explanation.pdf>]
+<figures/LuChen_schematic_no_explanation.pdf, id=867, 343.13997pt x 188.782pt>
+File: figures/LuChen_schematic_no_explanation.pdf Graphic file (type pdf)
+<use figures/LuChen_schematic_no_explanation.pdf>
+Package pdftex.def Info: figures/LuChen_schematic_no_explanation.pdf  used on input line 508.
+(pdftex.def)             Requested size: 298.75264pt x 164.36574pt.
+
+Overfull \hbox (11.66904pt too wide) in paragraph at lines 518--519
 []\T1/ptm/m/n/10.95 This non-linear feed-back mech-a-nism cre-ates an ef-fec-tive hys-tere-sis, once the out-put has switched,
  []
 
 
 
-[18]
+[18 <./figures/LuChen_schematic_no_explanation.pdf>]
 
 [19]
 
 [20]
 File: figures/uporto.pdf Graphic file (type pdf)
 <use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 581.
+Package pdftex.def Info: figures/uporto.pdf  used on input line 579.
 (pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
 File: figures/uporto.pdf Graphic file (type pdf)
 <use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 588.
+Package pdftex.def Info: figures/uporto.pdf  used on input line 586.
 (pdftex.def)             Requested size: 298.75264pt x 64.93018pt.
 
 
 [21]
 
 [22]
-<figures/fom_fs.png, id=969, 867.24pt x 505.89pt>
-File: figures/fom_fs.png Graphic file (type png)
-<use figures/fom_fs.png>
-Package pdftex.def Info: figures/fom_fs.png  used on input line 662.
-(pdftex.def)             Requested size: 362.77525pt x 211.62323pt.
-
 
 [23]
-
-[24 <./figures/fom_fs.png>]
-<figures/energy_year.png, id=1041, 867.24pt x 505.89pt>
-File: figures/energy_year.png Graphic file (type png)
-<use figures/energy_year.png>
-Package pdftex.def Info: figures/energy_year.png  used on input line 713.
+<figures/fom_fs.png, id=981, 867.24pt x 505.89pt>
+File: figures/fom_fs.png Graphic file (type png)
+<use figures/fom_fs.png>
+Package pdftex.def Info: figures/fom_fs.png  used on input line 660.
 (pdftex.def)             Requested size: 362.77525pt x 211.62323pt.
 
 
-[25 <./figures/energy_year.png>]
-Overfull \hbox (18.8027pt too wide) in paragraph at lines 756--757
+[24]
+
+[25 <./figures/fom_fs.png>]
+<figures/energy_year.png, id=1053, 867.24pt x 505.89pt>
+File: figures/energy_year.png Graphic file (type png)
+<use figures/energy_year.png>
+Package pdftex.def Info: figures/energy_year.png  used on input line 711.
+(pdftex.def)             Requested size: 362.77525pt x 211.62323pt.
+
+
+[26 <./figures/energy_year.png>]
+Overfull \hbox (18.8027pt too wide) in paragraph at lines 754--755
 \T1/ptm/m/n/10.95 bank of com-par-i-son el-e-ments ob-serves dif-fer-ent de-ci-sion lev-els in par-al-lel and pro-duces a thermometer-
  []
 
 )
 
-[26]
+[27]
 \openout2 = `chapter4.aux'.
 
  (chapter4.tex
 Chapter 3.
 
 
-[27
+[28
 
 
 
 
 ]
 
-[28]
-
 [29]
 
-[30])
+[30]
 
-[31]
+[31])
+
+[32]
 \openout2 = `chapter3.aux'.
 
  (chapter3.tex
 Chapter 4.
 
 
-[32
+[33
 
 
 
@@ -1475,8 +1489,6 @@ Overfull \hbox (5.4772pt too wide) in paragraph at lines 28--28
  []
 
 
-
-[33]
 
 [34]
 
@@ -1489,26 +1501,26 @@ Overfull \hbox (5.4772pt too wide) in paragraph at lines 28--28
 [38]
 
 [39]
+
+[40]
 Overfull \hbox (6.77417pt too wide) in paragraph at lines 407--407
 []\T1/ptm/b/n/14.4 Second Ar-chi-tec-ture: The Com-ple-men-tary Dual-Input Flash Con-
  []
 
 
 
-[40]
-
 [41]
 
 [42]
 
 [43]
+
+[44]
 Overfull \hbox (2.0444pt too wide) in paragraph at lines 558--559
 []\T1/ptm/m/n/10.95 The dif-fi-culty ap-peared across pro-cess cor-ners. The transcon-duc-tance boost re-lies on a positive-
  []
 
 
-
-[44]
 
 [45]
 
@@ -1526,48 +1538,48 @@ Overfull \hbox (2.0444pt too wide) in paragraph at lines 558--559
 
 [52]
 
-[53])
+[53]
 
-[54]
+[54])
+
+[55]
 \openout2 = `trimming.aux'.
 
  (trimming.tex
 Chapter 5.
 
 
-[55
+[56
 
 
 
 
 ]
 
-[56]
-
 [57]
+
+[58]
 Underfull \hbox (badness 1112) in paragraph at lines 204--205
 []\T1/ptm/m/n/10 3:0.1,  4:0.2,  5:0.2,  11:0.1,
  []
 
 
 
-[58])
+[59])
 
-[59]
+[60]
 \openout2 = `chapter5.aux'.
 
  (chapter5.tex
 Chapter 6.
 
 
-[60
+[61
 
 
 
 
 ]
-
-[61]
 
 [62]
 
@@ -1582,6 +1594,8 @@ Chapter 6.
 [67]
 
 [68]
+
+[69]
 LaTeX Font Info:    Calculating math sizes for size <7.4> on input line 333.
 
 
@@ -1597,34 +1611,39 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.47603> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <4.44003> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 333.
 
+Overfull \hbox (5.35648pt too wide) in paragraph at lines 321--338
+ [][] 
+ []
 
-[69]
+
 
 [70]
 
-[71])
+[71]
 
-[72]
+[72])
+
+[73]
 \openout2 = `chapter6.aux'.
 
  (chapter6.tex
 Chapter 7.
 
 
-[73
+[74
 
 
 
 
 ]
 
-[74]
-
 [75]
 
-[76])
+[76]
 
-[77]
+[77])
+
+[78]
 LaTeX Font Info:    Trying to load font information for T1+pcrs on input line 142.
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/courier-scaled\t1pcrs.fd
 File: t1pcrs.fd 2004/07/09 scalable font definitions for T1/pcrs.
@@ -1638,7 +1657,7 @@ Overfull \hbox (2.28789pt too wide) in paragraph at lines 142--142
 
 
 
-[78
+[79
 
 
 
@@ -1649,7 +1668,7 @@ Overfull \hbox (13.80038pt too wide) in paragraph at lines 142--142
 
 
 
-[79]
+[80]
 Overfull \hbox (6.83562pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2024. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC49657 .
  []
@@ -1671,14 +1690,14 @@ Overfull \hbox (20.31177pt too wide) in paragraph at lines 142--142
 
 
 
-[80]
+[81]
 Overfull \hbox (22.84404pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/n/10.95 Pipelined-SAR ADC with Cross-Stage Gain-Mismatch-Error-Shaping Tech-nique and Negative-
  []
 
 
 
-[81]
+[82]
 Overfull \hbox (6.83562pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2023. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC42615 .
  []
@@ -1700,9 +1719,9 @@ Overfull \hbox (2.51082pt too wide) in paragraph at lines 142--142
 
 
 
-[82]
-
 [83]
+
+[84]
 Overfull \hbox (7.55891pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2022. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC42614 . 2022 . 9731571$[][]\T1/ptm/m/n/10.95 . 
  []
@@ -1719,16 +1738,16 @@ Overfull \hbox (1.57942pt too wide) in paragraph at lines 142--142
 
 
 
-[84]
-
 [85]
+
+[86]
 Overfull \hbox (5.09041pt too wide) in paragraph at lines 142--142
 \OT1/ztmcm/m/n/10.95 ^^A$$^^F$ \T1/ptm/m/n/10.95 ADC in 40nm CMOS^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 .
  []
 
 
 
-[86]
+[87]
 Overfull \hbox (6.08362pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Sharvil Patil et al. ^^P  A 700MHz-BW ^^U164dBFS/Hz-Small-Signal-NSD 703mW Continuous-
  []
@@ -1740,7 +1759,7 @@ Overfull \hbox (10.29994pt too wide) in paragraph at lines 142--142
 
 
 
-[87]
+[88]
 Overfull \hbox (2.51082pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2006. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC . 2006 . 1696297$[][]\T1/ptm/m/n/10.95 . 
  []
@@ -1752,7 +1771,7 @@ Overfull \hbox (2.51082pt too wide) in paragraph at lines 142--142
 
 
 
-[88]
+[89]
 Overfull \hbox (1.82037pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/n/10.95 drive read chan-nel^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 1999.
  []
@@ -1769,16 +1788,16 @@ Overfull \hbox (14.23299pt too wide) in paragraph at lines 142--142
 
 
 
-[89]
+[90]
 Overfull \hbox (1.96727pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Jia-Ching Wang and Tai-Haur Kuo. ^^P  A 3-mW 2.7-GS/s 8b Sub-rang-ing ADC with Multiple-
  []
 
 
 
-[90]
-
 [91]
+
+[92]
 Overfull \hbox (6.0335pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Mingtao Zhan, Lu Jie, and Nan Sun. ^^P  A 10mW 10-ENoB 1GS/s Ring-Amp-Based Pipelined
  []
@@ -1800,7 +1819,7 @@ Overfull \hbox (24.90707pt too wide) in paragraph at lines 142--142
 
 
 
-[92]
+[93]
 \openout2 = `appendix1.aux'.
 
  (appendix1.tex
@@ -1812,14 +1831,14 @@ LaTeX Font Info:    Font shape `T1/pcrs/b/n' will be
 (Font)              scaled to size 8.54997pt on input line 7.
 
 
-[93
+[94
 
 
 ]
 
-[94])
+[95])
 
-[95] (meec_thesis.aux (abstract.aux) (un-sdg.aux) (abbrevs.aux) (chapter1.aux) (chapter2.aux) (chapter4.aux) (chapter3.aux) (trimming.aux) (chapter5.aux) (chapter6.aux) (appendix1.aux))
+[96] (meec_thesis.aux (abstract.aux) (un-sdg.aux) (abbrevs.aux) (chapter1.aux) (chapter2.aux) (chapter4.aux) (chapter3.aux) (trimming.aux) (chapter5.aux) (chapter6.aux) (appendix1.aux))
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
@@ -1836,17 +1855,17 @@ Package logreq Info: Writing requests to 'meec_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57321 strings out of 468133
- 1326939 string characters out of 5430711
+ 57336 strings out of 468133
+ 1327692 string characters out of 5430711
  2847027 words of memory out of 5000000
- 84530 multiletter control sequences out of 15000+600000
+ 84544 multiletter control sequences out of 15000+600000
  745580 words of font info for 204 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,14n,107p,3447b,3170s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on meec_thesis.pdf (106 pages, 1891503 bytes).
+Output written on meec_thesis.pdf (107 pages, 1899711 bytes).
 PDF statistics:
- 2183 PDF objects out of 2487 (max. 8388607)
- 633 named destinations out of 1000 (max. 500000)
- 833 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2195 PDF objects out of 2487 (max. 8388607)
+ 634 named destinations out of 1000 (max. 500000)
+ 843 words of extra memory for PDF output out of 10000 (max. 10000000)
 

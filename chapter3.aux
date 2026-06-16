@@ -1,98 +1,98 @@
 \relax 
 \providecommand{\transparent@use}[1]{}
 \providecommand\hyper@newdestlabel[2]{}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Proposed Asynchronous Flash ADC Design}{32}{chapter.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Proposed Asynchronous Flash ADC Design}{33}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap:async}{{4}{32}{Proposed Asynchronous Flash ADC Design}{chapter.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Design Specifications and Terminology}{32}{section.4.1}\protected@file@percent }
-\newlabel{sec:design_specs}{{4.1}{32}{Design Specifications and Terminology}{section.4.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Architectural Evolution and Methodology}{33}{section.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}First Architecture: The Baseline Current-Mirror OTA Flash Configuration}{33}{section.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Operating Principle and Core Topology}{33}{subsection.4.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.1}Transconductance Cell}{33}{subsubsection.4.3.1.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Operating principle of the current-mirror Flash ADC (CMF-ADC): (a) equilibrium operation, (b) signal operation, and (c) current-to-code conversion with asymmetric mirror ratios.}}{34}{figure.caption.44}\protected@file@percent }
-\newlabel{fig:cmf_adc_op}{{4.1}{34}{Operating principle of the current-mirror Flash ADC (CMF-ADC): (a) equilibrium operation, (b) signal operation, and (c) current-to-code conversion with asymmetric mirror ratios}{figure.caption.44}{}}
-\@writefile{toc}{\contentsline {paragraph}{Equilibrium operation.}{34}{section*.45}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Signal operation.}{34}{section*.46}\protected@file@percent }
-\newlabel{eq:branch_currents}{{4.1}{34}{Signal operation}{equation.4.1}{}}
-\newlabel{eq:Gm_cmf}{{4.2}{35}{Signal operation}{equation.4.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.2}Current-to-Code Converter and Threshold Generation}{35}{subsubsection.4.3.1.2}\protected@file@percent }
-\newlabel{eq:vth_cmf}{{4.3}{35}{Current-to-Code Converter and Threshold Generation}{equation.4.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.3}Adaptation to an Asynchronous Flash ADC}{35}{subsubsection.4.3.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Reference Implementation and Mirror Ratio Assignment}{36}{subsection.4.3.2}\protected@file@percent }
-\newlabel{sec:cmf_characterisation}{{4.3.2}{36}{Reference Implementation and Mirror Ratio Assignment}{subsection.4.3.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Small-Signal Behaviour of the Current-Mirror OTA}{36}{subsection.4.3.3}\protected@file@percent }
-\newlabel{subsec:cm_ota_analysis}{{4.3.3}{36}{Small-Signal Behaviour of the Current-Mirror OTA}{subsection.4.3.3}{}}
-\newlabel{eq:gm_cm}{{4.4}{37}{Small-Signal Behaviour of the Current-Mirror OTA}{equation.4.4}{}}
-\newlabel{eq:rout_cm}{{4.5}{37}{Small-Signal Behaviour of the Current-Mirror OTA}{equation.4.5}{}}
-\newlabel{eq:freq_cm}{{4.6}{37}{Small-Signal Behaviour of the Current-Mirror OTA}{equation.4.6}{}}
-\newlabel{eq:sr_cm}{{4.7}{37}{Small-Signal Behaviour of the Current-Mirror OTA}{equation.4.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.4}Current Comparator Selection}{37}{subsection.4.3.4}\protected@file@percent }
-\newlabel{subsec:comp_selection}{{4.3.4}{37}{Current Comparator Selection}{subsection.4.3.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Schematic of each simulated current comparator with the input and output swing ranges annotated: (a) current-mirror, (b) Traff, (c) Lu Chen, (d) hysteresis, (e) Min and Kim, (f) CC-II based.}}{38}{figure.caption.47}\protected@file@percent }
-\newlabel{fig:comp_schematics}{{4.2}{38}{Schematic of each simulated current comparator with the input and output swing ranges annotated: (a) current-mirror, (b) Traff, (c) Lu Chen, (d) hysteresis, (e) Min and Kim, (f) CC-II based}{figure.caption.47}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Simulated static transfer characteristic (output voltage versus input) of each current comparator: (a) current-mirror, (b) Traff, (c) Lu Chen, (d) hysteresis, (e) Min and Kim, (f) CC-II based.}}{39}{figure.caption.48}\protected@file@percent }
-\newlabel{fig:comp_transfer}{{4.3}{39}{Simulated static transfer characteristic (output voltage versus input) of each current comparator: (a) current-mirror, (b) Traff, (c) Lu Chen, (d) hysteresis, (e) Min and Kim, (f) CC-II based}{figure.caption.48}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Comparison of the simulated current comparator topologies.}}{39}{table.caption.49}\protected@file@percent }
-\newlabel{tab:comp_comparison}{{4.1}{39}{Comparison of the simulated current comparator topologies}{table.caption.49}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Transient response of each simulated current comparator to the same input current step: (a) current-mirror, (b) Traff, (c) Lu Chen, (d) hysteresis, (e) Min and Kim, (f) CC-II based.}}{39}{figure.caption.50}\protected@file@percent }
-\newlabel{fig:comp_operation}{{4.4}{39}{Transient response of each simulated current comparator to the same input current step: (a) current-mirror, (b) Traff, (c) Lu Chen, (d) hysteresis, (e) Min and Kim, (f) CC-II based}{figure.caption.50}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.5}Results of the First Approach}{40}{subsection.4.3.5}\protected@file@percent }
-\newlabel{subsec:phase1_results}{{4.3.5}{40}{Results of the First Approach}{subsection.4.3.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Simulated operation of the first approach: thermometer outputs of the CMF-ADC as the input sweeps the reference level.}}{40}{figure.caption.51}\protected@file@percent }
-\newlabel{fig:phase1_results}{{4.5}{40}{Simulated operation of the first approach: thermometer outputs of the CMF-ADC as the input sweeps the reference level}{figure.caption.51}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Second Architecture: The Complementary Dual-Input Flash Configuration}{40}{section.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Motivation for Wide Input Common-Mode Range Extension}{40}{subsection.4.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Rail-to-Rail Architecture Evaluation and Voltage Headroom Limitations}{41}{subsection.4.4.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Complementary dual-input current-mirror OTA of the second approach, with the function of each transistor annotated: NMOS and PMOS input pairs, tail sources, mirror loads and cross-coupled output branches.}}{42}{figure.caption.52}\protected@file@percent }
-\newlabel{fig:phase2_circuit}{{4.6}{42}{Complementary dual-input current-mirror OTA of the second approach, with the function of each transistor annotated: NMOS and PMOS input pairs, tail sources, mirror loads and cross-coupled output branches}{figure.caption.52}{}}
-\newlabel{eq:headroom_phase2}{{4.8}{42}{Rail-to-Rail Architecture Evaluation and Voltage Headroom Limitations}{equation.4.8}{}}
-\newlabel{eq:headroom_phase2_expanded}{{4.9}{43}{Rail-to-Rail Architecture Evaluation and Voltage Headroom Limitations}{equation.4.9}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Node voltages of the second approach, with the devices that fall out of saturation marked. The accumulated stack of equation~\eqref  {eq:headroom_phase2} exceeds the $0.8$~V supply.}}{43}{figure.caption.53}\protected@file@percent }
-\newlabel{fig:phase2_headroom}{{4.7}{43}{Node voltages of the second approach, with the devices that fall out of saturation marked. The accumulated stack of equation~\eqref {eq:headroom_phase2} exceeds the $0.8$~V supply}{figure.caption.53}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}A Bulk-Driven Alternative}{43}{section.4.5}\protected@file@percent }
-\newlabel{sec:bulk_driven}{{4.5}{43}{A Bulk-Driven Alternative}{section.4.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Simulated response of the bulk-driven OTA follower to an input signal at the typical corner.}}{44}{figure.caption.54}\protected@file@percent }
-\newlabel{fig:bulk_driven_response}{{4.8}{44}{Simulated response of the bulk-driven OTA follower to an input signal at the typical corner}{figure.caption.54}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Final Architecture: The Complementary Five-Transistor OTA}{44}{section.4.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{44}{subsection.4.6.1}\protected@file@percent }
-\newlabel{subsec:5t_ota}{{4.6.1}{44}{Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{subsection.4.6.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces Final architecture, a complementary pair of five-transistor OTAs with the function of each transistor annotated, including the low-voltage tail mirrors and the current-mirror active loads.}}{45}{figure.caption.55}\protected@file@percent }
-\newlabel{fig:phase3_circuit}{{4.9}{45}{Final architecture, a complementary pair of five-transistor OTAs with the function of each transistor annotated, including the low-voltage tail mirrors and the current-mirror active loads}{figure.caption.55}{}}
-\newlabel{eq:headroom_phase3}{{4.10}{45}{Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{equation.4.10}{}}
-\newlabel{eq:headroom_diff}{{4.11}{45}{Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{equation.4.11}{}}
-\newlabel{eq:headroom_diff_approx}{{4.12}{45}{Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{equation.4.12}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.2}Small-Signal Analysis of the Five-Transistor OTA}{46}{subsection.4.6.2}\protected@file@percent }
-\newlabel{subsec:5t_analysis}{{4.6.2}{46}{Small-Signal Analysis of the Five-Transistor OTA}{subsection.4.6.2}{}}
-\newlabel{eq:gm_5t}{{4.13}{46}{Small-Signal Analysis of the Five-Transistor OTA}{equation.4.13}{}}
-\newlabel{eq:freq_5t}{{4.14}{46}{Small-Signal Analysis of the Five-Transistor OTA}{equation.4.14}{}}
-\newlabel{eq:sr_5t}{{4.15}{47}{Small-Signal Analysis of the Five-Transistor OTA}{equation.4.15}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.3}Stability Without Frequency Compensation}{47}{subsection.4.6.3}\protected@file@percent }
-\newlabel{subsec:no_compensation}{{4.6.3}{47}{Stability Without Frequency Compensation}{subsection.4.6.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Open-loop magnitude and phase response of the complementary five-transistor OTA, showing the single dominant pole and the wide phase margin.}}{48}{figure.caption.56}\protected@file@percent }
-\newlabel{fig:bode_async}{{4.10}{48}{Open-loop magnitude and phase response of the complementary five-transistor OTA, showing the single dominant pole and the wide phase margin}{figure.caption.56}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.4}Ratioed Output Slicers Design}{48}{subsection.4.6.4}\protected@file@percent }
-\newlabel{eq:trip_point}{{4.16}{48}{Ratioed Output Slicers Design}{equation.4.16}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.5}Asynchronous Control Logic and Clockless Event Generation Network}{49}{subsection.4.6.5}\protected@file@percent }
-\newlabel{sec:async_logic}{{4.6.5}{49}{Asynchronous Control Logic and Clockless Event Generation Network}{subsection.4.6.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.6}Results at the Typical Corner and Across Process Corners}{50}{subsection.4.6.6}\protected@file@percent }
-\newlabel{subsec:phase3_results}{{4.6.6}{50}{Results at the Typical Corner and Across Process Corners}{subsection.4.6.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces DNL per code and INL per transition of the final architecture at the typical (TT) corner.}}{50}{figure.caption.57}\protected@file@percent }
-\newlabel{fig:dnl_inl_comparison}{{4.11}{50}{DNL per code and INL per transition of the final architecture at the typical (TT) corner}{figure.caption.57}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Worst-case static linearity of the final architecture at the non-typical process corners, without trimming (values in LSB, measured on rising and falling ramps).}}{51}{table.caption.58}\protected@file@percent }
-\newlabel{tab:untrimmed_corners}{{4.2}{51}{Worst-case static linearity of the final architecture at the non-typical process corners, without trimming (values in LSB, measured on rising and falling ramps)}{table.caption.58}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.7}Analytical Modelling and Design Constraints}{51}{section.4.7}\protected@file@percent }
-\newlabel{sec:analytical_modeling}{{4.7}{51}{Analytical Modelling and Design Constraints}{section.4.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.1}Maximum Input Wave Frequency and Slope Overload}{51}{subsection.4.7.1}\protected@file@percent }
-\newlabel{subsec:slope_overload}{{4.7.1}{51}{Maximum Input Wave Frequency and Slope Overload}{subsection.4.7.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.2}Resolution and Power Dissipation}{52}{subsection.4.7.2}\protected@file@percent }
-\newlabel{subsec:resolution_power}{{4.7.2}{52}{Resolution and Power Dissipation}{subsection.4.7.2}{}}
-\newlabel{eq:p_total_model}{{4.26}{53}{Resolution and Power Dissipation}{equation.4.26}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.8}Chapter Summary}{53}{section.4.8}\protected@file@percent }
-\newlabel{subsec:chapter_summary}{{4.8}{53}{Chapter Summary}{section.4.8}{}}
+\newlabel{chap:async}{{4}{33}{Proposed Asynchronous Flash ADC Design}{chapter.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Design Specifications and Terminology}{33}{section.4.1}\protected@file@percent }
+\newlabel{sec:design_specs}{{4.1}{33}{Design Specifications and Terminology}{section.4.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Architectural Evolution and Methodology}{34}{section.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}First Architecture: The Baseline Current-Mirror OTA Flash Configuration}{34}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Operating Principle and Core Topology}{34}{subsection.4.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.1}Transconductance Cell}{34}{subsubsection.4.3.1.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Operating principle of the current-mirror Flash ADC (CMF-ADC): (a) equilibrium operation, (b) signal operation, and (c) current-to-code conversion with asymmetric mirror ratios.}}{35}{figure.caption.44}\protected@file@percent }
+\newlabel{fig:cmf_adc_op}{{4.1}{35}{Operating principle of the current-mirror Flash ADC (CMF-ADC): (a) equilibrium operation, (b) signal operation, and (c) current-to-code conversion with asymmetric mirror ratios}{figure.caption.44}{}}
+\@writefile{toc}{\contentsline {paragraph}{Equilibrium operation.}{35}{section*.45}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Signal operation.}{35}{section*.46}\protected@file@percent }
+\newlabel{eq:branch_currents}{{4.1}{35}{Signal operation}{equation.4.1}{}}
+\newlabel{eq:Gm_cmf}{{4.2}{36}{Signal operation}{equation.4.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.2}Current-to-Code Converter and Threshold Generation}{36}{subsubsection.4.3.1.2}\protected@file@percent }
+\newlabel{eq:vth_cmf}{{4.3}{36}{Current-to-Code Converter and Threshold Generation}{equation.4.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.3}Adaptation to an Asynchronous Flash ADC}{36}{subsubsection.4.3.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Reference Implementation and Mirror Ratio Assignment}{37}{subsection.4.3.2}\protected@file@percent }
+\newlabel{sec:cmf_characterisation}{{4.3.2}{37}{Reference Implementation and Mirror Ratio Assignment}{subsection.4.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Small-Signal Behaviour of the Current-Mirror OTA}{37}{subsection.4.3.3}\protected@file@percent }
+\newlabel{subsec:cm_ota_analysis}{{4.3.3}{37}{Small-Signal Behaviour of the Current-Mirror OTA}{subsection.4.3.3}{}}
+\newlabel{eq:gm_cm}{{4.4}{38}{Small-Signal Behaviour of the Current-Mirror OTA}{equation.4.4}{}}
+\newlabel{eq:rout_cm}{{4.5}{38}{Small-Signal Behaviour of the Current-Mirror OTA}{equation.4.5}{}}
+\newlabel{eq:freq_cm}{{4.6}{38}{Small-Signal Behaviour of the Current-Mirror OTA}{equation.4.6}{}}
+\newlabel{eq:sr_cm}{{4.7}{38}{Small-Signal Behaviour of the Current-Mirror OTA}{equation.4.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.4}Current Comparator Selection}{38}{subsection.4.3.4}\protected@file@percent }
+\newlabel{subsec:comp_selection}{{4.3.4}{38}{Current Comparator Selection}{subsection.4.3.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Schematic of each simulated current comparator with the input and output swing ranges annotated: (a) current-mirror, (b) Traff, (c) Lu Chen, (d) hysteresis, (e) Min and Kim, (f) CC-II based.}}{39}{figure.caption.47}\protected@file@percent }
+\newlabel{fig:comp_schematics}{{4.2}{39}{Schematic of each simulated current comparator with the input and output swing ranges annotated: (a) current-mirror, (b) Traff, (c) Lu Chen, (d) hysteresis, (e) Min and Kim, (f) CC-II based}{figure.caption.47}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Simulated static transfer characteristic (output voltage versus input) of each current comparator: (a) current-mirror, (b) Traff, (c) Lu Chen, (d) hysteresis, (e) Min and Kim, (f) CC-II based.}}{40}{figure.caption.48}\protected@file@percent }
+\newlabel{fig:comp_transfer}{{4.3}{40}{Simulated static transfer characteristic (output voltage versus input) of each current comparator: (a) current-mirror, (b) Traff, (c) Lu Chen, (d) hysteresis, (e) Min and Kim, (f) CC-II based}{figure.caption.48}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Comparison of the simulated current comparator topologies.}}{40}{table.caption.49}\protected@file@percent }
+\newlabel{tab:comp_comparison}{{4.1}{40}{Comparison of the simulated current comparator topologies}{table.caption.49}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Transient response of each simulated current comparator to the same input current step: (a) current-mirror, (b) Traff, (c) Lu Chen, (d) hysteresis, (e) Min and Kim, (f) CC-II based.}}{40}{figure.caption.50}\protected@file@percent }
+\newlabel{fig:comp_operation}{{4.4}{40}{Transient response of each simulated current comparator to the same input current step: (a) current-mirror, (b) Traff, (c) Lu Chen, (d) hysteresis, (e) Min and Kim, (f) CC-II based}{figure.caption.50}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.5}Results of the First Approach}{41}{subsection.4.3.5}\protected@file@percent }
+\newlabel{subsec:phase1_results}{{4.3.5}{41}{Results of the First Approach}{subsection.4.3.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Simulated operation of the first approach: thermometer outputs of the CMF-ADC as the input sweeps the reference level.}}{41}{figure.caption.51}\protected@file@percent }
+\newlabel{fig:phase1_results}{{4.5}{41}{Simulated operation of the first approach: thermometer outputs of the CMF-ADC as the input sweeps the reference level}{figure.caption.51}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Second Architecture: The Complementary Dual-Input Flash Configuration}{41}{section.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Motivation for Wide Input Common-Mode Range Extension}{41}{subsection.4.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Rail-to-Rail Architecture Evaluation and Voltage Headroom Limitations}{42}{subsection.4.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Complementary dual-input current-mirror OTA of the second approach, with the function of each transistor annotated: NMOS and PMOS input pairs, tail sources, mirror loads and cross-coupled output branches.}}{43}{figure.caption.52}\protected@file@percent }
+\newlabel{fig:phase2_circuit}{{4.6}{43}{Complementary dual-input current-mirror OTA of the second approach, with the function of each transistor annotated: NMOS and PMOS input pairs, tail sources, mirror loads and cross-coupled output branches}{figure.caption.52}{}}
+\newlabel{eq:headroom_phase2}{{4.8}{43}{Rail-to-Rail Architecture Evaluation and Voltage Headroom Limitations}{equation.4.8}{}}
+\newlabel{eq:headroom_phase2_expanded}{{4.9}{44}{Rail-to-Rail Architecture Evaluation and Voltage Headroom Limitations}{equation.4.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Node voltages of the second approach, with the devices that fall out of saturation marked. The accumulated stack of equation~\eqref  {eq:headroom_phase2} exceeds the $0.8$~V supply.}}{44}{figure.caption.53}\protected@file@percent }
+\newlabel{fig:phase2_headroom}{{4.7}{44}{Node voltages of the second approach, with the devices that fall out of saturation marked. The accumulated stack of equation~\eqref {eq:headroom_phase2} exceeds the $0.8$~V supply}{figure.caption.53}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}A Bulk-Driven Alternative}{44}{section.4.5}\protected@file@percent }
+\newlabel{sec:bulk_driven}{{4.5}{44}{A Bulk-Driven Alternative}{section.4.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Simulated response of the bulk-driven OTA follower to an input signal at the typical corner.}}{45}{figure.caption.54}\protected@file@percent }
+\newlabel{fig:bulk_driven_response}{{4.8}{45}{Simulated response of the bulk-driven OTA follower to an input signal at the typical corner}{figure.caption.54}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Final Architecture: The Complementary Five-Transistor OTA}{45}{section.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{45}{subsection.4.6.1}\protected@file@percent }
+\newlabel{subsec:5t_ota}{{4.6.1}{45}{Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{subsection.4.6.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces Final architecture, a complementary pair of five-transistor OTAs with the function of each transistor annotated, including the low-voltage tail mirrors and the current-mirror active loads.}}{46}{figure.caption.55}\protected@file@percent }
+\newlabel{fig:phase3_circuit}{{4.9}{46}{Final architecture, a complementary pair of five-transistor OTAs with the function of each transistor annotated, including the low-voltage tail mirrors and the current-mirror active loads}{figure.caption.55}{}}
+\newlabel{eq:headroom_phase3}{{4.10}{46}{Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{equation.4.10}{}}
+\newlabel{eq:headroom_diff}{{4.11}{46}{Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{equation.4.11}{}}
+\newlabel{eq:headroom_diff_approx}{{4.12}{46}{Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{equation.4.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.2}Small-Signal Analysis of the Five-Transistor OTA}{47}{subsection.4.6.2}\protected@file@percent }
+\newlabel{subsec:5t_analysis}{{4.6.2}{47}{Small-Signal Analysis of the Five-Transistor OTA}{subsection.4.6.2}{}}
+\newlabel{eq:gm_5t}{{4.13}{47}{Small-Signal Analysis of the Five-Transistor OTA}{equation.4.13}{}}
+\newlabel{eq:freq_5t}{{4.14}{47}{Small-Signal Analysis of the Five-Transistor OTA}{equation.4.14}{}}
+\newlabel{eq:sr_5t}{{4.15}{48}{Small-Signal Analysis of the Five-Transistor OTA}{equation.4.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.3}Stability Without Frequency Compensation}{48}{subsection.4.6.3}\protected@file@percent }
+\newlabel{subsec:no_compensation}{{4.6.3}{48}{Stability Without Frequency Compensation}{subsection.4.6.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Open-loop magnitude and phase response of the complementary five-transistor OTA, showing the single dominant pole and the wide phase margin.}}{49}{figure.caption.56}\protected@file@percent }
+\newlabel{fig:bode_async}{{4.10}{49}{Open-loop magnitude and phase response of the complementary five-transistor OTA, showing the single dominant pole and the wide phase margin}{figure.caption.56}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.4}Ratioed Output Slicers Design}{49}{subsection.4.6.4}\protected@file@percent }
+\newlabel{eq:trip_point}{{4.16}{49}{Ratioed Output Slicers Design}{equation.4.16}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.5}Asynchronous Control Logic and Clockless Event Generation Network}{50}{subsection.4.6.5}\protected@file@percent }
+\newlabel{sec:async_logic}{{4.6.5}{50}{Asynchronous Control Logic and Clockless Event Generation Network}{subsection.4.6.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.6}Results at the Typical Corner and Across Process Corners}{51}{subsection.4.6.6}\protected@file@percent }
+\newlabel{subsec:phase3_results}{{4.6.6}{51}{Results at the Typical Corner and Across Process Corners}{subsection.4.6.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces DNL per code and INL per transition of the final architecture at the typical (TT) corner.}}{51}{figure.caption.57}\protected@file@percent }
+\newlabel{fig:dnl_inl_comparison}{{4.11}{51}{DNL per code and INL per transition of the final architecture at the typical (TT) corner}{figure.caption.57}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Worst-case static linearity of the final architecture at the non-typical process corners, without trimming (values in LSB, measured on rising and falling ramps).}}{52}{table.caption.58}\protected@file@percent }
+\newlabel{tab:untrimmed_corners}{{4.2}{52}{Worst-case static linearity of the final architecture at the non-typical process corners, without trimming (values in LSB, measured on rising and falling ramps)}{table.caption.58}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}Analytical Modelling and Design Constraints}{52}{section.4.7}\protected@file@percent }
+\newlabel{sec:analytical_modeling}{{4.7}{52}{Analytical Modelling and Design Constraints}{section.4.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.1}Maximum Input Wave Frequency and Slope Overload}{52}{subsection.4.7.1}\protected@file@percent }
+\newlabel{subsec:slope_overload}{{4.7.1}{52}{Maximum Input Wave Frequency and Slope Overload}{subsection.4.7.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.2}Resolution and Power Dissipation}{53}{subsection.4.7.2}\protected@file@percent }
+\newlabel{subsec:resolution_power}{{4.7.2}{53}{Resolution and Power Dissipation}{subsection.4.7.2}{}}
+\newlabel{eq:p_total_model}{{4.26}{54}{Resolution and Power Dissipation}{equation.4.26}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.8}Chapter Summary}{54}{section.4.8}\protected@file@percent }
+\newlabel{subsec:chapter_summary}{{4.8}{54}{Chapter Summary}{section.4.8}{}}
 \@setckpt{chapter3}{
-\setcounter{page}{55}
+\setcounter{page}{56}
 \setcounter{equation}{26}
 \setcounter{enumi}{3}
 \setcounter{enumii}{0}
@@ -117,7 +117,7 @@
 \setcounter{continuedfloat}{0}
 \setcounter{float@type}{8}
 \setcounter{linenumber}{0}
-\setcounter{LN@truepage}{65}
+\setcounter{LN@truepage}{66}
 \setcounter{tabx@nest}{0}
 \setcounter{listtotal}{0}
 \setcounter{listcount}{0}

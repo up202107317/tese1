@@ -53,87 +53,87 @@
 \contentsline {subsubsection}{\numberline {2.5.3.2}Traff Current Comparator}{16}{subsubsection.2.5.3.2}%
 \contentsline {subsubsection}{\numberline {2.5.3.3}Lu Chen Current Comparator}{17}{subsubsection.2.5.3.3}%
 \contentsline {subsubsection}{\numberline {2.5.3.4}Hysteresis Current Comparator}{18}{subsubsection.2.5.3.4}%
-\contentsline {subsubsection}{\numberline {2.5.3.5}Min and Kim Current Comparator}{18}{subsubsection.2.5.3.5}%
+\contentsline {subsubsection}{\numberline {2.5.3.5}Min and Kim Current Comparator}{19}{subsubsection.2.5.3.5}%
 \contentsline {subsubsection}{\numberline {2.5.3.6}CC-II-Based Current Comparator}{19}{subsubsection.2.5.3.6}%
 \contentsline {section}{\numberline {2.6}Calibration and Trimming Techniques}{20}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1}The Component Mismatch Problem}{20}{subsection.2.6.1}%
 \contentsline {subsection}{\numberline {2.6.2}Calibration Classifications}{20}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}Trimming Techniques}{20}{subsection.2.6.3}%
-\contentsline {subsubsection}{\numberline {2.6.3.1}Internal Loading}{20}{subsubsection.2.6.3.1}%
+\contentsline {subsection}{\numberline {2.6.3}Trimming Techniques}{21}{subsection.2.6.3}%
+\contentsline {subsubsection}{\numberline {2.6.3.1}Internal Loading}{21}{subsubsection.2.6.3.1}%
 \contentsline {subsubsection}{\numberline {2.6.3.2}Reference Ladder Trimming}{21}{subsubsection.2.6.3.2}%
 \contentsline {paragraph}{}{21}{section*.29}%
 \contentsline {paragraph}{}{21}{section*.30}%
-\contentsline {paragraph}{}{22}{figure.caption.33}%
-\contentsline {paragraph}{}{22}{section*.34}%
-\contentsline {paragraph}{}{22}{section*.35}%
+\contentsline {paragraph}{}{21}{figure.caption.33}%
+\contentsline {paragraph}{}{21}{section*.34}%
+\contentsline {paragraph}{}{21}{section*.35}%
 \contentsline {paragraph}{}{22}{section*.36}%
 \contentsline {subsection}{\numberline {2.6.4}Advantages of Static Bulk-Driven Trimming for Asynchronous ADCs}{22}{subsection.2.6.4}%
-\contentsline {section}{\numberline {2.7}Asynchronous vs. Synchronous}{23}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Advantage}{23}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}Comparative Evaluation}{23}{subsection.2.7.2}%
-\contentsline {subsection}{\numberline {2.7.3}Chapter Summary and Design Directives}{26}{subsection.2.7.3}%
-\contentsline {chapter}{\numberline {3}Synchronous Reference Flash ADC}{27}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Motivation for Architectural Selection}{27}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Architecture Overview}{28}{section.3.2}%
-\contentsline {section}{\numberline {3.3}The StrongARM Latch Comparator}{29}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Circuit Description and Operating Principle}{29}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Rail-to-Rail Input Range}{30}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Clock Generation}{30}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Chapter Summary}{31}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Proposed Asynchronous Flash ADC Design}{32}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Design Specifications and Terminology}{32}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Architectural Evolution and Methodology}{33}{section.4.2}%
-\contentsline {section}{\numberline {4.3}First Architecture: The Baseline Current-Mirror OTA Flash Configuration}{33}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Operating Principle and Core Topology}{33}{subsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.1.1}Transconductance Cell}{33}{subsubsection.4.3.1.1}%
-\contentsline {paragraph}{Equilibrium operation.}{34}{section*.45}%
-\contentsline {paragraph}{Signal operation.}{34}{section*.46}%
-\contentsline {subsubsection}{\numberline {4.3.1.2}Current-to-Code Converter and Threshold Generation}{35}{subsubsection.4.3.1.2}%
-\contentsline {subsubsection}{\numberline {4.3.1.3}Adaptation to an Asynchronous Flash ADC}{35}{subsubsection.4.3.1.3}%
-\contentsline {subsection}{\numberline {4.3.2}Reference Implementation and Mirror Ratio Assignment}{36}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Small-Signal Behaviour of the Current-Mirror OTA}{36}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Current Comparator Selection}{37}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}Results of the First Approach}{40}{subsection.4.3.5}%
-\contentsline {section}{\numberline {4.4}Second Architecture: The Complementary Dual-Input Flash Configuration}{40}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Motivation for Wide Input Common-Mode Range Extension}{40}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Rail-to-Rail Architecture Evaluation and Voltage Headroom Limitations}{41}{subsection.4.4.2}%
-\contentsline {section}{\numberline {4.5}A Bulk-Driven Alternative}{43}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Final Architecture: The Complementary Five-Transistor OTA}{44}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{44}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Small-Signal Analysis of the Five-Transistor OTA}{46}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Stability Without Frequency Compensation}{47}{subsection.4.6.3}%
-\contentsline {subsection}{\numberline {4.6.4}Ratioed Output Slicers Design}{48}{subsection.4.6.4}%
-\contentsline {subsection}{\numberline {4.6.5}Asynchronous Control Logic and Clockless Event Generation Network}{49}{subsection.4.6.5}%
-\contentsline {subsection}{\numberline {4.6.6}Results at the Typical Corner and Across Process Corners}{50}{subsection.4.6.6}%
-\contentsline {section}{\numberline {4.7}Analytical Modelling and Design Constraints}{51}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Maximum Input Wave Frequency and Slope Overload}{51}{subsection.4.7.1}%
-\contentsline {subsection}{\numberline {4.7.2}Resolution and Power Dissipation}{52}{subsection.4.7.2}%
-\contentsline {section}{\numberline {4.8}Chapter Summary}{53}{section.4.8}%
-\contentsline {chapter}{\numberline {5}Body Bias Trimming Strategy}{55}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Choice of Body Biasing Among the Reviewed Techniques}{55}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Function of NMOS and PMOS Transistors Under Different Body Bias}{56}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Process Corner Dependence and Motivation for Trimming}{57}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Offline Trimming Strategy via Body Bias Adjustment}{58}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Determination of the Per-Slicer Correction Voltages}{58}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Verilog-A Behavioural Implementation}{58}{subsection.5.4.2}%
-\contentsline {section}{\numberline {5.5}Chapter Summary}{59}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Simulation Results and Performance Benchmarking}{60}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Simulation Setup and Input Test Signals}{60}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Static Linearity Results}{63}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Threshold Extraction and Linearity Versus Conversion Rate}{63}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Linearity Across Process Corners and Trimming}{64}{subsection.6.2.2}%
-\contentsline {section}{\numberline {6.3}Random Mismatch: Monte Carlo Analysis}{65}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Power Dissipation and Energy Efficiency}{66}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Power Measurement Methodology}{66}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Signal-Dependent Power Scaling}{66}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}Average Power Under Duty-Cycled Operation}{68}{subsection.6.4.3}%
-\contentsline {section}{\numberline {6.5}Synchronous Reference Flash ADC Results}{68}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Comparative Analysis and Discussion}{69}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Chapter Summary}{72}{section.6.7}%
-\contentsline {chapter}{\numberline {7}Conclusions and Suggestions for Future Work}{73}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Summary of the Work Developed}{73}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Concluded Objectives}{75}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Future Work}{76}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Analogue Process Corner Detection Approach}{76}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}Monte Carlo Trimming}{77}{subsection.7.3.2}%
-\contentsline {chapter}{\numberline {A}Verilog-A Body Bias Trimming Model}{93}{appendix.A}%
+\contentsline {section}{\numberline {2.7}Asynchronous vs. Synchronous}{24}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Advantage}{24}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Comparative Evaluation}{24}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}Chapter Summary and Design Directives}{27}{subsection.2.7.3}%
+\contentsline {chapter}{\numberline {3}Synchronous Reference Flash ADC}{28}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Motivation for Architectural Selection}{28}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Architecture Overview}{29}{section.3.2}%
+\contentsline {section}{\numberline {3.3}The StrongARM Latch Comparator}{30}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Circuit Description and Operating Principle}{30}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Rail-to-Rail Input Range}{31}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Clock Generation}{31}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Chapter Summary}{32}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Proposed Asynchronous Flash ADC Design}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Design Specifications and Terminology}{33}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Architectural Evolution and Methodology}{34}{section.4.2}%
+\contentsline {section}{\numberline {4.3}First Architecture: The Baseline Current-Mirror OTA Flash Configuration}{34}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Operating Principle and Core Topology}{34}{subsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}Transconductance Cell}{34}{subsubsection.4.3.1.1}%
+\contentsline {paragraph}{Equilibrium operation.}{35}{section*.45}%
+\contentsline {paragraph}{Signal operation.}{35}{section*.46}%
+\contentsline {subsubsection}{\numberline {4.3.1.2}Current-to-Code Converter and Threshold Generation}{36}{subsubsection.4.3.1.2}%
+\contentsline {subsubsection}{\numberline {4.3.1.3}Adaptation to an Asynchronous Flash ADC}{36}{subsubsection.4.3.1.3}%
+\contentsline {subsection}{\numberline {4.3.2}Reference Implementation and Mirror Ratio Assignment}{37}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Small-Signal Behaviour of the Current-Mirror OTA}{37}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Current Comparator Selection}{38}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Results of the First Approach}{41}{subsection.4.3.5}%
+\contentsline {section}{\numberline {4.4}Second Architecture: The Complementary Dual-Input Flash Configuration}{41}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Motivation for Wide Input Common-Mode Range Extension}{41}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Rail-to-Rail Architecture Evaluation and Voltage Headroom Limitations}{42}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}A Bulk-Driven Alternative}{44}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Final Architecture: The Complementary Five-Transistor OTA}{45}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{45}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Small-Signal Analysis of the Five-Transistor OTA}{47}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Stability Without Frequency Compensation}{48}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Ratioed Output Slicers Design}{49}{subsection.4.6.4}%
+\contentsline {subsection}{\numberline {4.6.5}Asynchronous Control Logic and Clockless Event Generation Network}{50}{subsection.4.6.5}%
+\contentsline {subsection}{\numberline {4.6.6}Results at the Typical Corner and Across Process Corners}{51}{subsection.4.6.6}%
+\contentsline {section}{\numberline {4.7}Analytical Modelling and Design Constraints}{52}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Maximum Input Wave Frequency and Slope Overload}{52}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Resolution and Power Dissipation}{53}{subsection.4.7.2}%
+\contentsline {section}{\numberline {4.8}Chapter Summary}{54}{section.4.8}%
+\contentsline {chapter}{\numberline {5}Body Bias Trimming Strategy}{56}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Choice of Body Biasing Among the Reviewed Techniques}{56}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Function of NMOS and PMOS Transistors Under Different Body Bias}{57}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Process Corner Dependence and Motivation for Trimming}{58}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Offline Trimming Strategy via Body Bias Adjustment}{59}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Determination of the Per-Slicer Correction Voltages}{59}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Verilog-A Behavioural Implementation}{59}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}Chapter Summary}{60}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Simulation Results and Performance Benchmarking}{61}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Simulation Setup and Input Test Signals}{61}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Static Linearity Results}{64}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Threshold Extraction and Linearity Versus Conversion Rate}{64}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Linearity Across Process Corners and Trimming}{65}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}Random Mismatch: Monte Carlo Analysis}{66}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Power Dissipation and Energy Efficiency}{67}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Power Measurement Methodology}{67}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Signal-Dependent Power Scaling}{67}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Average Power Under Duty-Cycled Operation}{69}{subsection.6.4.3}%
+\contentsline {section}{\numberline {6.5}Synchronous Reference Flash ADC Results}{69}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Comparative Analysis and Discussion}{70}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Chapter Summary}{73}{section.6.7}%
+\contentsline {chapter}{\numberline {7}Conclusions and Suggestions for Future Work}{74}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Summary of the Work Developed}{74}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Concluded Objectives}{76}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Future Work}{77}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Analogue Process Corner Detection Approach}{77}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Monte Carlo Trimming}{78}{subsection.7.3.2}%
+\contentsline {chapter}{\numberline {A}Verilog-A Body Bias Trimming Model}{94}{appendix.A}%
