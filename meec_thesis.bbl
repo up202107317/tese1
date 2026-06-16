@@ -338,6 +338,47 @@
       \field{title}{CMOS: Circuit Design, Layout, and Simulation}
       \field{year}{2010}
     \endentry
+    \entry{ballo2022}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=581bfeae3a3e57452efef777fdca1dc2}{%
+           family={Ballo},
+           familyi={B\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=70dca20f372a398e4f104156f5bb5576}{%
+           family={Grasso},
+           familyi={G\bibinitperiod},
+           given={Alfio\bibnamedelima Dario},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=a15158b4e9a82550bbc9423ca7abba62}{%
+           family={Pennisi},
+           familyi={P\bibinitperiod},
+           given={Salvatore},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{ce32dd8bafd7c6b8d2f7e31c6fc94138}
+      \strng{fullhash}{ce32dd8bafd7c6b8d2f7e31c6fc94138}
+      \strng{fullhashraw}{ce32dd8bafd7c6b8d2f7e31c6fc94138}
+      \strng{bibnamehash}{ce32dd8bafd7c6b8d2f7e31c6fc94138}
+      \strng{authorbibnamehash}{ce32dd8bafd7c6b8d2f7e31c6fc94138}
+      \strng{authornamehash}{ce32dd8bafd7c6b8d2f7e31c6fc94138}
+      \strng{authorfullhash}{ce32dd8bafd7c6b8d2f7e31c6fc94138}
+      \strng{authorfullhashraw}{ce32dd8bafd7c6b8d2f7e31c6fc94138}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Electronics}
+      \field{number}{17}
+      \field{title}{0.4-{V}, 81.3-n{A} Bulk-Driven Single-Stage {CMOS} {OTA} with Enhanced Transconductance}
+      \field{volume}{11}
+      \field{year}{2022}
+      \field{pages}{2704}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/electronics11172704
+      \endverb
+    \endentry
     \entry{Balmelli_2004_119}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=e2e492dfdfb5694288e5bc25dc3e1bd4}{%

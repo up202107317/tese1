@@ -26,27 +26,29 @@ figures of merit to asynchronous systems was also included, since applying a fix
 sampling frequency to a level-crossing converter is inherently inappropriate and leads to
 misleading efficiency estimates.
 
-The design of the asynchronous ADC itself evolved through three distinct architectural phases.
+The design of the asynchronous ADC itself evolved through a sequence of architectures.
 The first candidate was a current-mirror flash configuration in which a transconductance cell
 converts the differential input voltage into an error current, and a current-to-code converter maps
 that current to a thermometer-coded output by exploiting asymmetric PMOS and NMOS mirror
 ratios at each comparison node. This topology operates in continuous time and requires no
 external clock, which made it a natural fit for the event-driven approach. The decision element of
-this stage, the current comparator, was not assumed: six published current comparator topologies
+this stage, the current comparator, was not assumed. Six published current comparator topologies
 (current-mirror, Traff, Lu Chen, hysteresis, Min and Kim and CC-II) were redrawn at transistor
 level and simulated in a common testbench, and the current-mirror cell was selected for having the
 lowest propagation delay and the second-lowest average power of the six. The power and delay
-figures reported for these comparators therefore come from direct simulation, not from estimates. The second phase
-investigated a complementary dual-input architecture aimed at extending the input common-mode
+figures reported for these comparators therefore come from direct simulation, not from estimates. The second architecture
+investigated a complementary dual-input topology aimed at extending the input common-mode
 range toward rail-to-rail operation by combining an NMOS and a PMOS differential pair with
 cross-coupled output branches. Although conceptually attractive, this implementation could not be made
-to work within the 0.8\,V supply budget of the target 16\,nm process: the mirror loads and the
+to work within the 0.8\,V supply budget of the target 16\,nm process. The mirror loads and the
 cross-coupling stacked additional transistors in every signal path, the accumulated overdrive
 requirements exceeded the available voltage headroom, and no feasible bias point could be found
-that kept all devices in saturation simultaneously. The third and final architecture kept the
+that kept all devices in saturation simultaneously. A bulk-driven amplifier was then evaluated as a
+low-voltage route to the same rail-to-rail input, but its positive-feedback transconductance boost
+proved too sensitive to process corners and was discarded. The final architecture kept the
 complementary rail-to-rail input but rebuilt it with two five-transistor OTAs, one with an NMOS
 and one with a PMOS input pair, each loaded by a single active current mirror and biased through
-the low-voltage tail mirror retained from the second phase. With far fewer stacked devices, this
+the low-voltage tail mirror retained from the second architecture. With far fewer stacked devices, this
 arrangement fits the available headroom, and the complementary OTA, configured as a unity-gain
 voltage follower, drives a bank of CMOS slicer inverters through its low-impedance output. Each
 slicer is sized with a distinct PMOS-to-NMOS transistor ratio, which sets its switching threshold

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.20)  16 JUN 2026 10:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.20)  16 JUN 2026 15:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1243,7 +1243,7 @@ Overfull \hbox (5.22673pt too wide) in paragraph at lines 5--5
 
  (chapter1.tex
 Chapter 1.
-<figures/uporto.pdf, id=663, 2405.98875pt x 522.95375pt>
+<figures/uporto.pdf, id=671, 2405.98875pt x 522.95375pt>
 File: figures/uporto.pdf Graphic file (type pdf)
 <use figures/uporto.pdf>
 Package pdftex.def Info: figures/uporto.pdf  used on input line 35.
@@ -1389,7 +1389,7 @@ Overfull \hbox (2.84885pt too wide) in paragraph at lines 464--465
 [16]
 
 [17]
-Overfull \hbox (11.66904pt too wide) in paragraph at lines 504--505
+Overfull \hbox (11.66904pt too wide) in paragraph at lines 520--521
 []\T1/ptm/m/n/10.95 This non-linear feed-back mech-a-nism cre-ates an ef-fec-tive hys-tere-sis, once the out-put has switched,
  []
 
@@ -1398,40 +1398,40 @@ Overfull \hbox (11.66904pt too wide) in paragraph at lines 504--505
 [18]
 
 [19]
+
+[20]
 File: figures/uporto.pdf Graphic file (type pdf)
 <use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 565.
+Package pdftex.def Info: figures/uporto.pdf  used on input line 581.
 (pdftex.def)             Requested size: 341.43437pt x 74.21046pt.
 File: figures/uporto.pdf Graphic file (type pdf)
 <use figures/uporto.pdf>
-Package pdftex.def Info: figures/uporto.pdf  used on input line 572.
+Package pdftex.def Info: figures/uporto.pdf  used on input line 588.
 (pdftex.def)             Requested size: 298.75264pt x 64.93018pt.
 
-
-[20]
 
 [21]
 
 [22]
-<figures/fom_fs.png, id=961, 867.24pt x 505.89pt>
+<figures/fom_fs.png, id=969, 867.24pt x 505.89pt>
 File: figures/fom_fs.png Graphic file (type png)
 <use figures/fom_fs.png>
-Package pdftex.def Info: figures/fom_fs.png  used on input line 646.
+Package pdftex.def Info: figures/fom_fs.png  used on input line 662.
 (pdftex.def)             Requested size: 362.77525pt x 211.62323pt.
 
 
 [23]
 
 [24 <./figures/fom_fs.png>]
-<figures/energy_year.png, id=1033, 867.24pt x 505.89pt>
+<figures/energy_year.png, id=1041, 867.24pt x 505.89pt>
 File: figures/energy_year.png Graphic file (type png)
 <use figures/energy_year.png>
-Package pdftex.def Info: figures/energy_year.png  used on input line 697.
+Package pdftex.def Info: figures/energy_year.png  used on input line 713.
 (pdftex.def)             Requested size: 362.77525pt x 211.62323pt.
 
 
 [25 <./figures/energy_year.png>]
-Overfull \hbox (18.8027pt too wide) in paragraph at lines 740--741
+Overfull \hbox (18.8027pt too wide) in paragraph at lines 756--757
 \T1/ptm/m/n/10.95 bank of com-par-i-son el-e-ments ob-serves dif-fer-ent de-ci-sion lev-els in par-al-lel and pro-duces a thermometer-
  []
 
@@ -1470,6 +1470,11 @@ Chapter 4.
 
 
 ]
+Overfull \hbox (5.4772pt too wide) in paragraph at lines 28--28
+[]\T1/ptm/b/n/14.4 First Ar-chi-tec-ture: The Base-line Current-Mirror OTA Flash Con-
+ []
+
+
 
 [33]
 
@@ -1484,6 +1489,11 @@ Chapter 4.
 [38]
 
 [39]
+Overfull \hbox (6.77417pt too wide) in paragraph at lines 407--407
+[]\T1/ptm/b/n/14.4 Second Ar-chi-tec-ture: The Com-ple-men-tary Dual-Input Flash Con-
+ []
+
+
 
 [40]
 
@@ -1492,6 +1502,11 @@ Chapter 4.
 [42]
 
 [43]
+Overfull \hbox (2.0444pt too wide) in paragraph at lines 558--559
+[]\T1/ptm/m/n/10.95 The dif-fi-culty ap-peared across pro-cess cor-ners. The transcon-duc-tance boost re-lies on a positive-
+ []
+
+
 
 [44]
 
@@ -1507,50 +1522,50 @@ Chapter 4.
 
 [50]
 
-[51])
+[51]
 
 [52]
+
+[53])
+
+[54]
 \openout2 = `trimming.aux'.
 
  (trimming.tex
 Chapter 5.
 
 
-[53
+[55
 
 
 
 
 ]
 
-[54]
+[56]
 
-[55]
+[57]
 Underfull \hbox (badness 1112) in paragraph at lines 204--205
 []\T1/ptm/m/n/10 3:0.1,  4:0.2,  5:0.2,  11:0.1,
  []
 
 
 
-[56])
+[58])
 
-[57]
+[59]
 \openout2 = `chapter5.aux'.
 
  (chapter5.tex
 Chapter 6.
 
 
-[58
+[60
 
 
 
 
 ]
-
-[59]
-
-[60]
 
 [61]
 
@@ -1565,49 +1580,51 @@ Chapter 6.
 [66]
 
 [67]
-LaTeX Font Info:    Calculating math sizes for size <7.4> on input line 357.
+
+[68]
+LaTeX Font Info:    Calculating math sizes for size <7.4> on input line 333.
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <5.47603> not available
-(Font)              size <5> substituted on input line 357.
+(Font)              size <5> substituted on input line 333.
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <4.44003> not available
-(Font)              size <5> substituted on input line 357.
+(Font)              size <5> substituted on input line 333.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.47603> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 357.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 333.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <4.44003> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 357.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 333.
 
-
-[68]
 
 [69]
 
-[70])
+[70]
 
-[71]
+[71])
+
+[72]
 \openout2 = `chapter6.aux'.
 
  (chapter6.tex
 Chapter 7.
 
 
-[72
+[73
 
 
 
 
 ]
 
-[73]
-
 [74]
 
-[75])
+[75]
 
-[76]
+[76])
+
+[77]
 LaTeX Font Info:    Trying to load font information for T1+pcrs on input line 142.
  (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/courier-scaled\t1pcrs.fd
 File: t1pcrs.fd 2004/07/09 scalable font definitions for T1/pcrs.
@@ -1615,8 +1632,13 @@ File: t1pcrs.fd 2004/07/09 scalable font definitions for T1/pcrs.
 LaTeX Font Info:    Font shape `T1/pcrs/m/n' will be
 (Font)              scaled to size 10.40245pt on input line 142.
 
+Overfull \hbox (2.28789pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 Single-Stage CMOS OTA with En-hanced Transcon-duc-tance^^Q. In: \T1/ptm/m/it/10.95 Elec-tron-ics \T1/ptm/m/n/10.95 11.17 (2022),
+ []
 
-[77
+
+
+[78
 
 
 
@@ -1627,7 +1649,7 @@ Overfull \hbox (13.80038pt too wide) in paragraph at lines 142--142
 
 
 
-[78]
+[79]
 Overfull \hbox (6.83562pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2024. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC49657 .
  []
@@ -1649,14 +1671,14 @@ Overfull \hbox (20.31177pt too wide) in paragraph at lines 142--142
 
 
 
-[79]
+[80]
 Overfull \hbox (22.84404pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/n/10.95 Pipelined-SAR ADC with Cross-Stage Gain-Mismatch-Error-Shaping Tech-nique and Negative-
  []
 
 
 
-[80]
+[81]
 Overfull \hbox (6.83562pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2023. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC42615 .
  []
@@ -1678,9 +1700,9 @@ Overfull \hbox (2.51082pt too wide) in paragraph at lines 142--142
 
 
 
-[81]
-
 [82]
+
+[83]
 Overfull \hbox (7.55891pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2022. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC42614 . 2022 . 9731571$[][]\T1/ptm/m/n/10.95 . 
  []
@@ -1697,16 +1719,16 @@ Overfull \hbox (1.57942pt too wide) in paragraph at lines 142--142
 
 
 
-[83]
-
 [84]
+
+[85]
 Overfull \hbox (5.09041pt too wide) in paragraph at lines 142--142
 \OT1/ztmcm/m/n/10.95 ^^A$$^^F$ \T1/ptm/m/n/10.95 ADC in 40nm CMOS^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 .
  []
 
 
 
-[85]
+[86]
 Overfull \hbox (6.08362pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Sharvil Patil et al. ^^P  A 700MHz-BW ^^U164dBFS/Hz-Small-Signal-NSD 703mW Continuous-
  []
@@ -1718,7 +1740,7 @@ Overfull \hbox (10.29994pt too wide) in paragraph at lines 142--142
 
 
 
-[86]
+[87]
 Overfull \hbox (2.51082pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2006. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 / ISSCC . 2006 . 1696297$[][]\T1/ptm/m/n/10.95 . 
  []
@@ -1730,7 +1752,7 @@ Overfull \hbox (2.51082pt too wide) in paragraph at lines 142--142
 
 
 
-[87]
+[88]
 Overfull \hbox (1.82037pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/n/10.95 drive read chan-nel^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 1999.
  []
@@ -1747,16 +1769,16 @@ Overfull \hbox (14.23299pt too wide) in paragraph at lines 142--142
 
 
 
-[88]
+[89]
 Overfull \hbox (1.96727pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Jia-Ching Wang and Tai-Haur Kuo. ^^P  A 3-mW 2.7-GS/s 8b Sub-rang-ing ADC with Multiple-
  []
 
 
 
-[89]
-
 [90]
+
+[91]
 Overfull \hbox (6.0335pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Mingtao Zhan, Lu Jie, and Nan Sun. ^^P  A 10mW 10-ENoB 1GS/s Ring-Amp-Based Pipelined
  []
@@ -1778,7 +1800,7 @@ Overfull \hbox (24.90707pt too wide) in paragraph at lines 142--142
 
 
 
-[91]
+[92]
 \openout2 = `appendix1.aux'.
 
  (appendix1.tex
@@ -1790,14 +1812,14 @@ LaTeX Font Info:    Font shape `T1/pcrs/b/n' will be
 (Font)              scaled to size 8.54997pt on input line 7.
 
 
-[92
+[93
 
 
 ]
 
-[93])
+[94])
 
-[94] (meec_thesis.aux (abstract.aux) (un-sdg.aux) (abbrevs.aux) (chapter1.aux) (chapter2.aux) (chapter4.aux) (chapter3.aux) (trimming.aux) (chapter5.aux) (chapter6.aux) (appendix1.aux))
+[95] (meec_thesis.aux (abstract.aux) (un-sdg.aux) (abbrevs.aux) (chapter1.aux) (chapter2.aux) (chapter4.aux) (chapter3.aux) (trimming.aux) (chapter5.aux) (chapter6.aux) (appendix1.aux))
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
@@ -1808,23 +1830,23 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.55997pt have occurred.
 
 Package rerunfilecheck Info: File `meec_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 88D906D998DAF2E6420B0E8B0FF7BA13;26799.
+(rerunfilecheck)             Checksum: A0FA114E760470F9E4FB244645577B37;26908.
 Package logreq Info: Writing requests to 'meec_thesis.run.xml'.
 \openout1 = `meec_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57310 strings out of 468133
- 1326670 string characters out of 5430711
- 2846645 words of memory out of 5000000
- 84524 multiletter control sequences out of 15000+600000
+ 57321 strings out of 468133
+ 1326939 string characters out of 5430711
+ 2847027 words of memory out of 5000000
+ 84530 multiletter control sequences out of 15000+600000
  745580 words of font info for 204 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,14n,107p,3447b,3170s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on meec_thesis.pdf (105 pages, 1886924 bytes).
+Output written on meec_thesis.pdf (106 pages, 1891503 bytes).
 PDF statistics:
- 2165 PDF objects out of 2487 (max. 8388607)
- 628 named destinations out of 1000 (max. 500000)
+ 2183 PDF objects out of 2487 (max. 8388607)
+ 633 named destinations out of 1000 (max. 500000)
  833 words of extra memory for PDF output out of 10000 (max. 10000000)
 

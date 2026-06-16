@@ -2,7 +2,7 @@
 \chapter{Proposed Asynchronous Flash ADC Design}
 \label{chap:async}
 
-The previous chapter fixed the benchmark; this one develops the converter that will be measured against it. The presentation follows the order the work took: three successive design phases, each shown with its circuit, the calculations that support it and the simulation results that motivated the move to the next phase. The chapter closes with the characterisation of the final architecture at the typical corner and across process corners, whose outcome motivates the trimming strategy of Chapter~\ref{chap:trimming}.
+The previous chapter fixed the benchmark; this one develops the converter that will be measured against it. The presentation follows the order the work took, a sequence of architectures, each shown with its circuit, the calculations that support it and the simulation results that motivated the move to the next one. The chapter closes with the characterisation of the final architecture at the typical corner and across process corners, whose outcome motivates the trimming strategy of Chapter~\ref{chap:trimming}.
 
 \section{Design Specifications and Terminology}
 \label{sec:design_specs}
@@ -25,7 +25,7 @@ either led to its adoption or prompted its replacement by a subsequent
 candidate.
 
 
-\section{Phase I: The Baseline Current-Mirror OTA Flash Configuration}
+\section{First Architecture: The Baseline Current-Mirror OTA Flash Configuration}
 
 The first topology investigated was the current-mirror flash ADC (CMF-ADC)
 introduced by Lee et al.~\cite{lee2017}, originally proposed as the
@@ -34,7 +34,7 @@ Although the application context of that work differs substantially from the
 present design, the CMF-ADC converts a voltage directly into a thermometer
 code, which is exactly what a multi-bit comparison stage needs, so it was a
 natural starting point for the architectural exploration. It is also the
-design phase that puts into practice the current-mode event-detection
+architecture that puts into practice the current-mode event-detection
 concepts reviewed in Section~\ref{sec:clockless_event}.
 
 % ─────────────────────────────────────────────────────────────────────────────
@@ -283,7 +283,7 @@ event-driven comparison stage, and they justified the choice of the
 current-mirror configuration for the first approach. The same analysis also
 shows the costs that later ruled the current-mode line out. The $K$ extra
 current paths raise the power consumption, the mirror devices add noise that
-is amplified to the output, and, as the next phase shows, every stacked mirror
+is amplified to the output, and, as the next architecture shows, every stacked mirror
 spends voltage headroom the $0.8$~V supply cannot afford.
 
 \subsection{Current Comparator Selection}
@@ -397,14 +397,14 @@ Figure~\ref{fig:phase1_results} shows the implemented CMF-ADC in operation:
 as the input crosses the reference level, the thermometer outputs switch in
 the expected monotonic order, confirming the operating principle of
 Section~\ref{sec:cmf_characterisation}. The same simulations, however,
-exposed the limitation that ended this phase: the usable input common-mode
+exposed the limitation that ended this architecture. The usable input common-mode
 range is far from the supply rails, bounded by the headroom of the
 differential pair and its tail source. For the sensor-driven applications
 targeted in Chapter~\ref{chap:intro}, that restriction is too costly, and the
 work moved to a rail-to-rail input stage.
 
 
-\section{Phase II: The Complementary Dual-Input Flash Configuration}
+\section{Second Architecture: The Complementary Dual-Input Flash Configuration}
 
 \subsection{Motivation for Wide Input Common-Mode Range Extension}
 
@@ -531,30 +531,50 @@ output stage still exceeded the available supply.
 
 No feasible bias point could be identified that simultaneously maintained all
 transistors within their intended operating regions while preserving the
-desired dynamic-range extension mechanism. What this phase showed is that the
+desired dynamic-range extension mechanism. What this architecture showed is that the
 current-mirror implementation of the rail-to-rail concept cost too much
-headroom at $0.8~\mathrm{V}$; the concept itself survived, along with the
-low-voltage tail mirror. The third design phase keeps the complementary
-dual-input idea and rebuilds it around a far smaller stack of transistors.
+headroom at $0.8~\mathrm{V}$. The concept itself survived, along with the
+low-voltage tail mirror. The search for a rail-to-rail front end therefore
+continued, first through a bulk-driven amplifier and then through the
+five-transistor OTA that was finally adopted.
 
 
 
-\section{Phase III: The Final Adopted Architecture}
+\section{A Bulk-Driven Alternative}
+\label{sec:bulk_driven}
+
+The headroom problem of the second architecture comes from stacking gate-driven devices under a low supply. A bulk-driven input stage sidesteps that problem at the source. Driving the signal into the bulk terminal rather than the gate takes the threshold voltage out of the input common-mode budget, so a bulk-driven differential pair accepts an input that swings rail to rail even when the supply is below a single threshold. The amplifier evaluated here follows the single-stage bulk-driven OTA of Ballo, Grasso and Pennisi~\cite{ballo2022}, in which a non-tailed bulk-driven pair is loaded by current mirrors and a cross-coupled load adds local positive feedback that boosts the otherwise weak bulk transconductance back to a useful level.
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.85\textwidth]{figures/bulk_driven_response.pdf}
+    \vspace{5cm} % Placeholder space for the image
+    \caption{Simulated response of the bulk-driven OTA follower to an input signal at the typical corner.}
+    \label{fig:bulk_driven_response}
+\end{figure}
+
+At the nominal corner the cell behaved well. It reproduced a rail-to-rail input at $0.8$~V with adequate gain and a clean response, and as a unity-gain follower it tracked the input across the full supply, which is the property the converter needs. Figure~\ref{fig:bulk_driven_response} shows its response to an input signal.
+
+The difficulty appeared across process corners. The transconductance boost relies on a positive-feedback factor set by the ratio of the cross-coupled devices, and that factor multiplies not only the nominal transconductance but also its spread. A small mismatch in the feedback ratio, or a corner shift in the device transconductances, moves the effective gain and bandwidth by a large amount. The same sensitivity is visible in the source design, whose reported corner data spread the DC gain from roughly $20$ to $45$~dB and the gain-bandwidth product by more than an order of magnitude~\cite{ballo2022}. For a standalone amplifier this is tolerable, but the Flash converter needs fifteen consistent decision paths and a follower whose behaviour repeats from corner to corner. A front end whose gain and bandwidth move that much with process would shift the slicer thresholds in a way the body-bias trimming of Chapter~\ref{chap:trimming} could not reliably absorb.
+
+For that reason the bulk-driven amplifier was set aside despite its attractive nominal behaviour, and the design moved to the more robust five-transistor OTA of the next section, trading some of the rail-to-rail reach of the bulk-driven input for predictable, corner-stable operation.
+
+\section{Final Architecture: The Complementary Five-Transistor OTA}
 
 \subsection{Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}
 \label{subsec:5t_ota}
 
-The third design phase kept the rail-to-rail objective of Phase II and rebuilt its implementation around the classical five-transistor operational transconductance amplifier. The complementary input is preserved: two five-transistor OTAs operate in parallel on the same input, one built around an NMOS differential pair and the other around a PMOS differential pair, so the usable input range is extended in the same way as before. The load structure is what changes. Each pair is loaded by a single active current mirror, in which one device operates in diode connection and sets the gate voltage of the mirrored branch. This is the conventional active load that defines the five-transistor OTA~\cite{razavi}. Figure~\ref{fig:phase3_circuit} shows the circuit with the role of each transistor annotated.
+This final architecture kept the rail-to-rail objective of the second architecture and rebuilt its implementation around the classical five-transistor operational transconductance amplifier. The complementary input is preserved. Two five-transistor OTAs operate in parallel on the same input, one built around an NMOS differential pair and the other around a PMOS differential pair, so the usable input range is extended in the same way as before. The load structure is what changes. Each pair is loaded by a single active current mirror, in which one device operates in diode connection and sets the gate voltage of the mirrored branch. This is the conventional active load that defines the five-transistor OTA~\cite{razavi}. Figure~\ref{fig:phase3_circuit} shows the circuit with the role of each transistor annotated.
 
 \begin{figure}[htbp]
     \centering
     % \includegraphics[width=0.9\textwidth]{figures/phase3_circuit.pdf}
     \vspace{6cm} % Placeholder space for the image
-    \caption{Final architecture of the third approach: complementary pair of five-transistor OTAs with the function of each transistor annotated, including the low-voltage tail mirrors and the current-mirror active loads.}
+    \caption{Final architecture, a complementary pair of five-transistor OTAs with the function of each transistor annotated, including the low-voltage tail mirrors and the current-mirror active loads.}
     \label{fig:phase3_circuit}
 \end{figure}
 
-The headroom is recovered in this load. In the Phase II topology every load was itself a mirror that copied the branch current onward, so each signal path carried the extra stacked gate-to-source drops described in the previous section. With one current-mirror active load per pair, those extra devices and their accumulated overdrive requirements disappear, and the budget of equation~\eqref{eq:headroom_phase2} reduces to
+The headroom is recovered in this load. In the second-architecture topology every load was itself a mirror that copied the branch current onward, so each signal path carried the extra stacked gate-to-source drops described in the previous section. With one current-mirror active load per pair, those extra devices and their accumulated overdrive requirements disappear, and the budget of equation~\eqref{eq:headroom_phase2} reduces to
 
 \begin{equation}
     V_{DD} \geq V_{GS,\mathrm{in}} + V_{DSAT,\mathrm{tail}} + V_{DSAT,\mathrm{load}},
@@ -589,7 +609,7 @@ compared with the second. Because a threshold voltage is a large fraction of a
 $0.8$~V supply, recovering it is precisely what brings the stack back inside
 the budget while the extended input range is preserved.
 
-The tail bias carries over a result from the previous phase. Both OTAs draw their tail current through the low-voltage current mirror from Razavi's book~\cite{razavi}, the same structure tested in Phase II, because even this reduced topology operates close to the headroom limit and a conventional tail mirror would spend voltage the design does not have.
+The tail bias carries over a result from the earlier architectures. Both OTAs draw their tail current through the low-voltage current mirror from Razavi's book~\cite{razavi}, the same structure tested in the second architecture, because even this reduced topology operates close to the headroom limit and a conventional tail mirror would spend voltage the design does not have.
 
 One limitation remains: close to either supply rail neither input pair has enough overdrive to stay in saturation, so the effective input window of the complementary structure stops slightly short of the rails. The consequences for the test stimuli and for the idle power consumption are discussed in Section~\ref{subsec:resolution_power}.
 
@@ -669,7 +689,15 @@ An OTA placed in feedback is normally frequency-compensated to keep the loop sta
 
 Compensation moves the dominant pole to a lower frequency, trading bandwidth for phase margin. The follower has to settle inside the conversion window before the next threshold is crossed, so a slower amplifier would lengthen the conversion delay $\tau_{conv}$ of Section~\ref{subsec:slope_overload} and tighten the slew-rate limit on the input frequency. Spending bandwidth to buy margin the design does not need would work against the speed of the converter.
 
-The margin is not needed because the amplifier already has it. A five-transistor OTA has a single high-impedance node, its output, so in unity-gain feedback the loop is dominated by one pole and the phase margin is wide by construction. Open-loop simulation of the complementary OTA confirmed this: the phase margin stayed above $60^\circ$ over the input range and dropped below it only for inputs under $0.1$~V or above $0.7$~V, where one of the input pairs runs out of overdrive near the rail. That high-margin band is the same $0.1$--$0.7$~V window over which the front end is most linear in Section~\ref{subsec:5t_ota}. Outside it the complementary pair still keeps one input stage conducting, so the follower remains stable and the converter resolves crossings all the way to both rails. The cost is only a milder loss of follower linearity in the outer margins of the swing, not a loss of operation.
+The margin is not needed because the amplifier already has it. A five-transistor OTA has a single high-impedance node, its output, so in unity-gain feedback the loop is dominated by one pole and the phase margin is wide by construction. Open-loop simulation of the complementary OTA confirmed this, as the magnitude and phase response of Figure~\ref{fig:bode_async} shows. The phase margin stayed above $60^\circ$ over the input range and dropped below it only for inputs under $0.1$~V or above $0.7$~V, where one of the input pairs runs out of overdrive near the rail.
+
+\begin{figure}[htbp]
+    \centering
+    % \includesvg[width=0.85\textwidth]{figures/bode_plot_mag_and_phase_async}
+    \vspace{6cm} % Placeholder space for the image
+    \caption{Open-loop magnitude and phase response of the complementary five-transistor OTA, showing the single dominant pole and the wide phase margin.}
+    \label{fig:bode_async}
+\end{figure} That high-margin band is the same $0.1$--$0.7$~V window over which the front end is most linear in Section~\ref{subsec:5t_ota}. Outside it the complementary pair still keeps one input stage conducting, so the follower remains stable and the converter resolves crossings all the way to both rails. The cost is only a milder loss of follower linearity in the outer margins of the swing, not a loss of operation.
 
 \subsection{Ratioed Output Slicers Design}
 
@@ -838,7 +866,7 @@ Transient noise degrades the Signal-to-Noise Ratio ($SNR$) and the $SNDR$, and w
 
 This chapter established the architecture of the proposed asynchronous Flash ADC and the theory that bounds its performance. The converter replaces clock-bound sampling with signal-dependent quantisation: with no global clock, it avoids the energy that synchronous architectures waste on sparse or bursty signals.
 
-The structural development progressed through three architectural phases: a current-mirror Flash configuration adopted from the literature, a current-mirror implementation of the complementary dual-input extension rejected for exceeding the voltage headroom available at $0.8$~V, and the final voltage-mode solution, in which a complementary pair of five-transistor OTAs configured as a unity-gain follower drives a bank of ratioed CMOS slicers whose switching thresholds are set purely by transistor sizing. The event-generation network described in Section~\ref{sec:async_logic} completes the conversion chain, detecting the transitions of the thermometer outputs and encoding them combinationally into the binary output word, with no clock involved at any point in the signal path.
+The structural development progressed through a sequence of architectures. A current-mirror Flash configuration adopted from the literature came first. A current-mirror implementation of the complementary dual-input extension followed, rejected for exceeding the voltage headroom available at $0.8$~V. A bulk-driven amplifier was then tried for its rail-to-rail reach at low voltage but discarded as too sensitive to process corners. The final voltage-mode solution uses a complementary pair of five-transistor OTAs configured as a unity-gain follower, driving a bank of ratioed CMOS slicers whose switching thresholds are set purely by transistor sizing. The event-generation network described in Section~\ref{sec:async_logic} completes the conversion chain, detecting the transitions of the thermometer outputs and encoding them combinationally into the binary output word, with no clock involved at any point in the signal path.
 
 The results presented along the way told a consistent story. The first approach validated the conversion principle but not the input range. The second could not be biased within the supply. The third recovers the headroom (equation~\eqref{eq:headroom_diff_approx}), is linear at the typical corner, and loses its linearity at all four non-typical process corners (Table~\ref{tab:untrimmed_corners}). That last result is the brief for Chapter~\ref{chap:trimming}.
 

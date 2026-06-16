@@ -490,11 +490,25 @@ The Traff comparator introduces a high-speed continuous-time current comparison 
 The small-signal input resistance set by the push-pull source followers is $r_{in} \approx 1/(g_{mn} + g_{mp})$, where $g_{mn}$ and $g_{mp}$ are the transconductances of the two follower devices. Because this resistance is low the sensing node barely moves, the input current is steered into the inverter quickly, and the propagation delay is short. The weakness lives in the same expression. For $|I_{in}|$ small, both followers approach cut-off, $g_{mn}$ and $g_{mp}$ collapse, $r_{in}$ rises, and a dead zone appears, which is exactly the regime of small currents an asynchronous front end has to resolve.
 
 Among its main advantages, this architecture achieves a high speed, with reduced propagation delay for a given input current step and relatively low power consumption for high-speed operation. Furthermore, the absence of large high-resistance nodes improves the frequency response and makes the design attractive for high-bandwidth current-mode ADCs. On the other hand, the Traff comparator exhibits a deadband region for very small input currents in which both input transistors operate near cut-off, temporarily increasing input resistance and degrading response time making it not suitable for this application.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/HTraff_schematic_no_explanation.pdf}
+    \caption{Transistor-level schematic of the Traff current comparator.}
+    \label{fig:traff_schematic}
+\end{figure}
 \subsubsection{Lu Chen Current Comparator}
 
 The continuous-time comparator proposed by Lu Chen employs a CMOS complementary amplifier with resistive feedback, followed by two resistive-load amplifiers and CMOS inverters \cite{chen_2001}. The core stage uses a pair of complementary transistors operating in saturation, with a MOS transistor in the linear region acting as a feedback resistor between input and output nodes. Small-signal analysis of this structure shows that, for typical device sizing, both input and output resistances of the complementary amplifier are approximately $1/(g_{mn} + g_{mp})$, the inverse of the sum of the transconductances of the input devices, since the feedback divides the open-loop resistance by the loop gain. The internal swing for a given input current is then $\Delta V \approx I_{in}/(g_{mn} + g_{mp})$, small enough that the stage settles fast. The following resistive-load amplifiers provide additional gain with relatively low static current, while the final inverters restore rail-to-rail logic levels.
 
 This design achieves a favourable speed-to-power ratio because the reduced internal voltage swings translate into shorter response time for a given input current, while the resistive-load stages limit power consumption, particularly when the input current increases. Compared with other high-speed comparators, simulations reported by the authors show that the average delay for small currents is comparable to more complex solutions, but with lower or similar power, and without requiring external bias currents or voltages, improving process robustness. As a drawback, the achievable resolution remains dependent on the sizing of the feedback device and the effective transconductance of the input pair, so aggressive scaling of bias currents to save power can degrade sensitivity.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/LuChen_schematic_no_explanation.pdf}
+    \caption{Transistor-level schematic of the Lu Chen current comparator.}
+    \label{fig:luchen_schematic}
+\end{figure}
 \subsubsection{Hysteresis Current Comparator}
 
 The hysteresis current comparator studied by Sridhar et al.\ introduces a current gain stage with non-linear feedback and a CMOS inverter output \cite{sridhar_2015}. The gain stage consists of cascaded resistive amplifiers and an inverter enclosed by a pair of transistors that implement non-linear feedback, whose gates are driven by the output node while their sources sense the difference-node voltage. For small \(|I_{\mathrm{diff}}|\), both feedback transistors are off and the node behaves as a capacitive load around a quiescent operating point, whereas for larger positive or negative differences one of the feedback devices turns on, enhancing the loop gain around that point and accelerating the transition.
