@@ -16,9 +16,9 @@
 \contentsline {table}{\numberline {6.3}{\ignorespaces Worst-case static linearity per process corner, before and after body bias trimming, measured on the rising and falling ramps (values in LSB).}}{62}{table.caption.62}%
 \contentsline {table}{\numberline {6.4}{\ignorespaces Monte Carlo statistics of the threshold spacing between two adjacent slicers (out$_0$, out$_1$), without trimming.}}{63}{table.caption.63}%
 \contentsline {table}{\numberline {6.5}{\ignorespaces Measured power consumption and energy efficiency of the asynchronous converter.}}{65}{table.caption.66}%
-\contentsline {table}{\numberline {6.6}{\ignorespaces Output event rate of the asynchronous converter and the resulting data reduction against the synchronous reference. The full-scale sinusoid is the worst case; sparse, non-periodic inputs lower the event rate in proportion to their activity.}}{67}{table.caption.67}%
+\contentsline {table}{\numberline {6.6}{\ignorespaces Output event rate of the asynchronous converter and the resulting data reduction against the synchronous reference. The full-scale sinusoid is the worst case. Sparse, non-periodic inputs lower the event rate in proportion to their activity.}}{67}{table.caption.67}%
 \contentsline {table}{\numberline {6.7}{\ignorespaces Power breakdown of the synchronous reference Flash ADC.}}{68}{table.caption.68}%
-\contentsline {table}{\numberline {6.8}{\ignorespaces Power summary of the synchronous reference Flash ADC in 16-nm CMOS, characterised at the workload-matched operating point.}}{69}{table.caption.69}%
+\contentsline {table}{\numberline {6.8}{\ignorespaces Simulated performance summary of the synchronous reference Flash ADC in 16-nm CMOS.}}{69}{table.caption.69}%
 \contentsline {table}{\numberline {6.9}{\ignorespaces Performance comparison with the synchronous baseline and state-of-the-art literature.}}{69}{table.caption.70}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

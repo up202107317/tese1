@@ -32,6 +32,6 @@
 \contentsline {figure}{\numberline {6.3}{\ignorespaces SNDR and ENOB as a function of the input signal frequency and amplitude.}}{60}{figure.caption.58}%
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Worst-case DNL, INL and hysteresis as a function of the equivalent conversion rate.}}{62}{figure.caption.61}%
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Monte Carlo distribution of the DNL of the code between two adjacent slicers, with the $\pm 0.5$~LSB limits and the missing-code boundary marked.}}{64}{figure.caption.64}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Average power of the asynchronous converter as a function of input activity, rising from the $94.8$~\textmu W idle floor to $99.5$~\textmu W at full activity, with the activity-independent $727$~\textmu W of the synchronous reference shown as a flat line for comparison.}}{65}{figure.caption.65}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Average power of the asynchronous converter as a function of input activity, rising from the $94.8$~\textmu W idle floor to $99.5$~\textmu W at full activity, with the activity-independent $886$~\textmu W of the synchronous reference shown as a flat line for comparison.}}{65}{figure.caption.65}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
