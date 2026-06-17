@@ -1,6 +1,6 @@
-PWD c:\Users\gonca\Downloads\meec-distrib-v2024 (2)\meec-distrib
+PWD C:\Users\gonca\Downloads\meec-distrib-v2024 (2)\meec-distrib
 INPUT C:\Users\gonca\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\gonca\Downloads\meec-distrib-v2024 (2)\meec-distrib\meec_thesis.tex
+INPUT meec_thesis.tex
 OUTPUT meec_thesis.log
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
@@ -536,6 +536,10 @@ INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7m
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\psyro.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7m.vf
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\psyro.tfm
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
 OUTPUT meec_thesis.lof
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7y.vf
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
@@ -546,10 +550,6 @@ INPUT meec_thesis.lot
 OUTPUT meec_thesis.lot
 INPUT .\abbrevs.tex
 INPUT .\abbrevs.tex
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7m.vf
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\psyro.tfm
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7t.vf
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\symbol\psyr.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
@@ -726,6 +726,12 @@ INPUT chapter3.tex
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt8.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt8.tfm
+INPUT .\figures\bode_plot.pdf
+INPUT .\figures\bode_plot.pdf
+INPUT .\figures\bode_plot.pdf
+INPUT .\figures\bode_plot.pdf
+INPUT .\figures\bode_plot.pdf
+INPUT .\figures\bode_plot.pdf
 INPUT .\trimming.tex
 INPUT .\trimming.tex
 OUTPUT trimming.aux
@@ -743,6 +749,36 @@ OUTPUT chapter5.aux
 INPUT .\chapter5.tex
 INPUT .\chapter5.tex
 INPUT chapter5.tex
+INPUT .\figures\adc_reconstructed_vs_vin.pdf
+INPUT .\figures\adc_reconstructed_vs_vin.pdf
+INPUT .\figures\adc_reconstructed_vs_vin.pdf
+INPUT .\figures\adc_reconstructed_vs_vin.pdf
+INPUT .\figures\adc_reconstructed_vs_vin.pdf
+INPUT .\figures\adc_reconstructed_vs_vin.pdf
+INPUT .\figures\fft_clean_async.pdf
+INPUT .\figures\fft_clean_async.pdf
+INPUT .\figures\fft_clean_async.pdf
+INPUT .\figures\fft_clean_async.pdf
+INPUT .\figures\fft_clean_async.pdf
+INPUT .\figures\fft_clean_async.pdf
+INPUT .\figures\adc_transfer_sync.pdf
+INPUT .\figures\adc_transfer_sync.pdf
+INPUT .\figures\adc_transfer_sync.pdf
+INPUT .\figures\adc_transfer_sync.pdf
+INPUT .\figures\adc_transfer_sync.pdf
+INPUT .\figures\adc_transfer_sync.pdf
+INPUT .\figures\dnl_sync.pdf
+INPUT .\figures\dnl_sync.pdf
+INPUT .\figures\dnl_sync.pdf
+INPUT .\figures\dnl_sync.pdf
+INPUT .\figures\dnl_sync.pdf
+INPUT .\figures\dnl_sync.pdf
+INPUT .\figures\inl_sync.pdf
+INPUT .\figures\inl_sync.pdf
+INPUT .\figures\inl_sync.pdf
+INPUT .\figures\inl_sync.pdf
+INPUT .\figures\inl_sync.pdf
+INPUT .\figures\inl_sync.pdf
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\zptmcm7t.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\zptmcm7t.tfm

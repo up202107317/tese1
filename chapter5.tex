@@ -16,30 +16,18 @@ The same resampled record defines the bubble error rate used throughout this cha
 
 \begin{figure}[htbp]
     \centering
-    % \includegraphics[width=0.75\textwidth]{figures/reconstruction_time.pdf}
-    \vspace{5cm} % Placeholder space for the image
-    \caption{Input sinusoid and reconstructed converter output over the first microsecond of the dynamic test.}
+    \includegraphics[width=0.75\textwidth]{figures/adc_reconstructed_vs_vin.pdf}
+    \caption{Input sinusoid (Vin) and reconstructed converter output (ADC) over two input periods of the dynamic test.}
     \label{fig:reconstruction_time}
 \end{figure}
 
-Figure~\ref{fig:reconstruction_time} shows the input sinusoid against the reconstructed output over the first microsecond of the test, and Figure~\ref{fig:fft_spectrum} shows the spectrum of the reconstructed output, with the fundamental signal bin, the noise floor and the harmonic distortion components.
+Figure~\ref{fig:reconstruction_time} shows the input sinusoid against the reconstructed output over a representative interval of the test, and Figure~\ref{fig:fft_spectrum} shows the spectrum of the reconstructed output, with the fundamental signal bin, the noise floor and the harmonic distortion components.
 
 \begin{figure}[htbp]
     \centering
-    % \includegraphics[width=0.75\textwidth]{figures/fft_spectrum.pdf}
-    \vspace{5cm} % Placeholder space for the image
+    \includegraphics[width=0.75\textwidth]{figures/fft_clean_async.pdf}
     \caption{FFT spectrum of the reconstructed asynchronous Flash ADC output signal.}
     \label{fig:fft_spectrum}
-\end{figure}
-
-Figure~\ref{fig:dynamic_curves} maps the SNDR and the ENOB over a broad range of input frequencies and amplitudes. The curves contrast the ideal noiseless performance with the degraded values under transient noise, and record the incidence of noise-induced threshold chatter.
-
-\begin{figure}[htbp]
-    \centering
-    % \includegraphics[width=0.75\textwidth]{figures/dynamic_curves.pdf}
-    \vspace{5cm} % Placeholder space for the image
-    \caption{SNDR and ENOB as a function of the input signal frequency and amplitude.}
-    \label{fig:dynamic_curves}
 \end{figure}
 
 The choice of $9$~MHz follows from the converter's measured tracking limit. Driven rail to rail, the $9$~MHz sinusoid (amplitude $0.4$~V) has a peak slew rate of $2\pi f_{in} A \approx 22.5$~V/\textmu s at mid-scale, the value returned by the simulator, and the converter digitises the whole record without a single bubble error. That bubble-free result is the direct evidence that $9$~MHz lies inside the tracking envelope. The hysteresis analysis of Section~\ref{subsec:static_ramp} provides a more conservative, static bound. The rising and falling thresholds separate by more than $1$~LSB once the ramp slew passes roughly $20$~V/\textmu s, which at $9$~MHz contributes the small amount of hysteresis-induced distortion already reflected in the ENOB sitting just above the nominal four bits, rather than producing bubble errors. A $20$~MHz sinusoid would more than double the peak slew rate, to $\approx 50$~V/\textmu s, deep into slope overload, so $9$~MHz is, in practice, the full-scale sinusoidal bandwidth of the converter.
@@ -98,15 +86,7 @@ The hysteresis is not a designed property of the slicers. It is the input-referr
     \end{tabular}
 \end{table}
 
-The data confirms the behaviour predicted by the slew rate model. The DNL, INL and offset stay essentially flat across the sweep (all fifteen thresholds were found in every run, with no missing codes), but the hysteresis grows roughly in proportion to the ramp rate, from $0.96$~LSB at $35$~ns to $4.87$~LSB at $5$~ns. The hysteresis is therefore the binding constraint on speed. The fastest ramp that meets the $1$~LSB criterion is $35$~ns, which corresponds to a maximum conversion rate of $14.3$~MHz over the active ramps ($11.1$~MHz when the $20$~ns hold is included). Figure~\ref{fig:static_vs_ramp} plots the three error metrics against the conversion rate.
-
-\begin{figure}[htbp]
-    \centering
-    % \includegraphics[width=0.75\textwidth]{figures/static_vs_ramp.pdf}
-    \vspace{5cm} % Placeholder space for the image
-    \caption{Worst-case DNL, INL and hysteresis as a function of the equivalent conversion rate.}
-    \label{fig:static_vs_ramp}
-\end{figure}
+The data confirms the behaviour predicted by the slew rate model. The DNL, INL and offset stay essentially flat across the sweep (all fifteen thresholds were found in every run, with no missing codes), but the hysteresis grows roughly in proportion to the ramp rate, from $0.96$~LSB at $35$~ns to $4.87$~LSB at $5$~ns. The hysteresis is therefore the binding constraint on speed. The fastest ramp that meets the $1$~LSB criterion is $35$~ns, which corresponds to a maximum conversion rate of $14.3$~MHz over the active ramps ($11.1$~MHz when the $20$~ns hold is included).
 
 \subsection{Linearity Across Process Corners and Trimming}
 
@@ -248,10 +228,9 @@ The synchronous reference, described in Chapter~\ref{chap:synchronous}, was simu
 
 \begin{figure}[htbp]
     \centering
-    % \includesvg[width=0.8\textwidth]{figures/adc_transfer_sync}\\
-    % \includesvg[width=0.49\textwidth]{figures/dnl_sync}
-    % \includesvg[width=0.49\textwidth]{figures/inl_sync}
-    \vspace{6cm} % Placeholder space for the images
+    \includegraphics[width=0.8\textwidth]{figures/adc_transfer_sync.pdf}\\
+    \includegraphics[width=0.49\textwidth]{figures/dnl_sync.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/inl_sync.pdf}
     \caption{Static characterisation of the synchronous reference: (top) measured transfer function against the ideal staircase, (bottom left) DNL per code and (bottom right) INL per transition.}
     \label{fig:sync_linearity}
 \end{figure}
