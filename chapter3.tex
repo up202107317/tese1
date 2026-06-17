@@ -387,9 +387,8 @@ Section~\ref{sec:clockless_event} and reaches the lowest delay of the six.
 
 \begin{figure}[htbp]
     \centering
-    % \includegraphics[width=0.85\textwidth]{figures/phase1_results.pdf}
-    \vspace{5cm} % Placeholder space for the image
-    \caption{Simulated operation of the first approach: thermometer outputs of the CMF-ADC as the input sweeps the reference level.}
+    \includegraphics[width=0.95\textwidth]{figures/phase1.pdf}
+    \caption{Simulated operation of the first architecture. The five comparator outputs (top) follow a trapezoidal input crossing the $0.4$~V reference (bottom). The rising crossing is tracked sharply, but the falling transition lags well behind the input crossing, the slow-recovery asymmetry of the high-impedance current-mirror node.}
     \label{fig:phase1_results}
 \end{figure}
 
@@ -521,9 +520,8 @@ stacked terms against the available $0.8$~V.
 
 \begin{figure}[htbp]
     \centering
-    % \includegraphics[width=0.85\textwidth]{figures/phase2_dc_response.pdf}
-    \vspace{5cm} % Placeholder space for the image
-    \caption{Simulated DC response of the second-architecture stage. The output saturates below $V_{DD}$, the headroom shortfall predicted by equation~\eqref{eq:headroom_phase2_expanded} at the $0.8$~V supply.}
+    \includegraphics[width=0.95\textwidth]{figures/phase2.pdf}
+    \caption{Simulated DC response of the second-architecture stage. The complementary outputs (out\_nmos, out\_pmos) and the internal node voltages never reach the supply rails and the transfer is visibly non-linear, the headroom shortfall predicted by equation~\eqref{eq:headroom_phase2_expanded} at the $0.8$~V supply.}
     \label{fig:phase2_headroom}
 \end{figure}
 
@@ -554,15 +552,21 @@ The headroom problem of the second architecture comes from stacking gate-driven 
 
 \begin{figure}[htbp]
     \centering
-    % \includegraphics[width=0.85\textwidth]{figures/bulk_driven_response.pdf}
-    \vspace{5cm} % Placeholder space for the image
-    \caption{Simulated response of the bulk-driven OTA follower to an input signal at the typical corner.}
+    \includegraphics[width=0.85\textwidth]{figures/corners_waveform_zoom.pdf}
+    \caption{Response of the bulk-driven OTA follower across the four process corners (FF, FS, SF, SS). The output waveform diverges markedly between corners, most of all near the lower rail, the sensitivity that led to discarding the architecture.}
     \label{fig:bulk_driven_response}
 \end{figure}
 
-At the nominal corner the cell behaved well. It reproduced a rail-to-rail input at $0.8$~V with adequate gain and a clean response, and as a unity-gain follower it tracked the input across the full supply, which is the property the converter needs. Figure~\ref{fig:bulk_driven_response} shows its response to an input signal.
+At the nominal corner the cell behaved well. It reproduced a rail-to-rail input at $0.8$~V with adequate gain and a clean response, and as a unity-gain follower it tracked the input across the full supply, which is the property the converter needs.
 
-The difficulty appeared across process corners. The transconductance boost relies on a positive-feedback factor set by the ratio of the cross-coupled devices, and that factor multiplies not only the nominal transconductance but also its spread. A small mismatch in the feedback ratio, or a corner shift in the device transconductances, moves the effective gain and bandwidth by a large amount. The same sensitivity is visible in the source design, whose reported corner data spread the DC gain from roughly $20$ to $45$~dB and the gain-bandwidth product by more than an order of magnitude~\cite{ballo2022}. For a standalone amplifier this is tolerable, but the Flash converter needs fifteen consistent decision paths and a follower whose behaviour repeats from corner to corner. A front end whose gain and bandwidth move that much with process would shift the slicer thresholds in a way the body-bias trimming of Chapter~\ref{chap:trimming} could not reliably absorb.
+The difficulty appeared across process corners. The transconductance boost relies on a positive-feedback factor set by the ratio of the cross-coupled devices, and that factor multiplies not only the nominal transconductance but also its spread. A small mismatch in the feedback ratio, or a corner shift in the device transconductances, moves the effective gain and bandwidth by a large amount. Figure~\ref{fig:bulk_driven_response} shows this directly, the follower output diverging between the four corners, most of all near the lower rail. The same sensitivity is visible in the source design, whose reported corner data spread the DC gain from roughly $20$ to $45$~dB and the gain-bandwidth product by more than an order of magnitude~\cite{ballo2022}. For a standalone amplifier this is tolerable, but the Flash converter needs fifteen consistent decision paths and a follower whose behaviour repeats from corner to corner. A front end whose gain and bandwidth move that much with process would shift the slicer thresholds in a way the body-bias trimming of Chapter~\ref{chap:trimming} could not reliably absorb. The same corner sensitivity appears in the time domain. Figure~\ref{fig:hyst_corner} reports the input-referred hysteresis of the bulk-driven follower measured under the $9$~MHz full-scale sinusoid at each process corner, and the worst case falls on the slow SS corner.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/hysteresis_corner.pdf}
+    \caption{Input-referred hysteresis of the bulk-driven OTA follower at the four process corners, measured under the $9$~MHz full-scale sinusoid, with the worst case marked at the slow SS corner.}
+    \label{fig:hyst_corner}
+\end{figure}
 
 For that reason the bulk-driven amplifier was set aside despite its attractive nominal behaviour, and the design moved to the more robust five-transistor OTA of the next section, trading some of the rail-to-rail reach of the bulk-driven input for predictable, corner-stable operation.
 
@@ -762,9 +766,9 @@ At the typical corner the converter needs no correction: both the DNL and the IN
 
 \begin{figure}[htbp]
     \centering
-    % \includegraphics[width=0.9\textwidth]{figures/dnl_inl_comparison.pdf}
-    \vspace{6cm} % Placeholder space for the image
-    \caption{DNL per code and INL per transition of the final architecture at the typical (TT) corner.}
+    \includegraphics[width=0.49\textwidth]{figures/dnl_typical.png}
+    \includegraphics[width=0.49\textwidth]{figures/inl_typical.png}
+    \caption{DNL per code (left) and INL per transition (right) of the final architecture at the typical (TT) corner.}
     \label{fig:dnl_inl_comparison}
 \end{figure}
 

@@ -94,21 +94,21 @@
 \contentsline {subsection}{\numberline {4.3.3}Small-Signal Behaviour of the Current-Mirror OTA}{37}{subsection.4.3.3}%
 \contentsline {subsection}{\numberline {4.3.4}Current Comparator Selection}{38}{subsection.4.3.4}%
 \contentsline {subsection}{\numberline {4.3.5}Results of the First Approach}{41}{subsection.4.3.5}%
-\contentsline {section}{\numberline {4.4}Second Architecture: The Complementary Dual-Input Flash Configuration}{41}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Motivation for Wide Input Common-Mode Range Extension}{41}{subsection.4.4.1}%
+\contentsline {section}{\numberline {4.4}Second Architecture: The Complementary Dual-Input Flash Configuration}{42}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Motivation for Wide Input Common-Mode Range Extension}{42}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Rail-to-Rail Architecture Evaluation and Voltage Headroom Limitations}{42}{subsection.4.4.2}%
 \contentsline {section}{\numberline {4.5}A Bulk-Driven Alternative}{45}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Final Architecture: The Complementary Five-Transistor OTA}{46}{section.4.6}%
 \contentsline {subsection}{\numberline {4.6.1}Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{46}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Small-Signal Analysis of the Five-Transistor OTA}{47}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Stability Without Frequency Compensation}{48}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.2}Small-Signal Analysis of the Five-Transistor OTA}{49}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Stability Without Frequency Compensation}{49}{subsection.4.6.3}%
 \contentsline {subsection}{\numberline {4.6.4}Ratioed Output Slicers Design}{50}{subsection.4.6.4}%
 \contentsline {subsection}{\numberline {4.6.5}Asynchronous Control Logic and Clockless Event Generation Network}{51}{subsection.4.6.5}%
 \contentsline {subsection}{\numberline {4.6.6}Results at the Typical Corner and Across Process Corners}{52}{subsection.4.6.6}%
-\contentsline {section}{\numberline {4.7}Analytical Modelling and Design Constraints}{52}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Maximum Input Wave Frequency and Slope Overload}{53}{subsection.4.7.1}%
-\contentsline {subsection}{\numberline {4.7.2}Resolution and Power Dissipation}{54}{subsection.4.7.2}%
-\contentsline {section}{\numberline {4.8}Chapter Summary}{55}{section.4.8}%
+\contentsline {section}{\numberline {4.7}Analytical Modelling and Design Constraints}{53}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Maximum Input Wave Frequency and Slope Overload}{54}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Resolution and Power Dissipation}{55}{subsection.4.7.2}%
+\contentsline {section}{\numberline {4.8}Chapter Summary}{56}{section.4.8}%
 \contentsline {chapter}{\numberline {5}Body Bias Trimming Strategy}{57}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Choice of Body Biasing Among the Reviewed Techniques}{57}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Function of NMOS and PMOS Transistors Under Different Body Bias}{58}{section.5.2}%
@@ -123,12 +123,12 @@
 \contentsline {subsection}{\numberline {6.2.1}Threshold Extraction and Linearity Versus Conversion Rate}{65}{subsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.2.2}Linearity Across Process Corners and Trimming}{66}{subsection.6.2.2}%
 \contentsline {section}{\numberline {6.3}Random Mismatch: Monte Carlo Analysis}{66}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Power Dissipation and Energy Efficiency}{67}{section.6.4}%
+\contentsline {section}{\numberline {6.4}Power Dissipation and Energy Efficiency}{68}{section.6.4}%
 \contentsline {subsection}{\numberline {6.4.1}Power Measurement Methodology}{68}{subsection.6.4.1}%
 \contentsline {subsection}{\numberline {6.4.2}Signal-Dependent Power Scaling}{68}{subsection.6.4.2}%
 \contentsline {subsection}{\numberline {6.4.3}Average Power Under Duty-Cycled Operation}{69}{subsection.6.4.3}%
 \contentsline {section}{\numberline {6.5}Synchronous Reference Flash ADC Results}{70}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Comparative Analysis and Discussion}{72}{section.6.6}%
+\contentsline {section}{\numberline {6.6}Comparative Analysis and Discussion}{73}{section.6.6}%
 \contentsline {section}{\numberline {6.7}Chapter Summary}{74}{section.6.7}%
 \contentsline {chapter}{\numberline {7}Conclusions and Suggestions for Future Work}{75}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Summary of the Work Developed}{75}{section.7.1}%

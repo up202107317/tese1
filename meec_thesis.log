@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.20)  17 JUN 2026 09:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.20)  17 JUN 2026 14:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1585,7 +1585,7 @@ us and Asyn-chronous Flash
 
  (chapter1.tex
 Chapter 1.
-<figures/uporto.pdf, id=667, 2405.98875pt x 522.95375pt>
+<figures/uporto.pdf, id=669, 2405.98875pt x 522.95375pt>
 File: figures/uporto.pdf Graphic file (type pdf)
 <use figures/uporto.pdf>
 Package pdftex.def Info: figures/uporto.pdf  used on input line 35.
@@ -1731,7 +1731,7 @@ ara-tors pro-cess in-for-ma-tion di-rectly through
 [15]
 
 [16]
-<figures/HTraff_schematic_no_explanation.pdf, id=852, 93.677pt x 93.41646pt>
+<figures/HTraff_schematic_no_explanation.pdf, id=854, 93.677pt x 93.41646pt>
 File: figures/HTraff_schematic_no_explanation.pdf Graphic file (type pdf)
 <use figures/HTraff_schematic_no_explanation.pdf>
 Package pdftex.def Info: figures/HTraff_schematic_no_explanation.pdf  used on i
@@ -1740,7 +1740,7 @@ nput line 496.
 
 
 [17 <./figures/HTraff_schematic_no_explanation.pdf>]
-<figures/LuChen_schematic_no_explanation.pdf, id=863, 343.13997pt x 188.782pt>
+<figures/LuChen_schematic_no_explanation.pdf, id=865, 343.13997pt x 188.782pt>
 File: figures/LuChen_schematic_no_explanation.pdf Graphic file (type pdf)
 <use figures/LuChen_schematic_no_explanation.pdf>
 Package pdftex.def Info: figures/LuChen_schematic_no_explanation.pdf  used on i
@@ -1774,7 +1774,7 @@ Package pdftex.def Info: figures/uporto.pdf  used on input line 586.
 [22]
 
 [23]
-<figures/fom_fs.png, id=977, 867.24pt x 505.89pt>
+<figures/fom_fs.png, id=979, 867.24pt x 505.89pt>
 File: figures/fom_fs.png Graphic file (type png)
 <use figures/fom_fs.png>
 Package pdftex.def Info: figures/fom_fs.png  used on input line 660.
@@ -1784,7 +1784,7 @@ Package pdftex.def Info: figures/fom_fs.png  used on input line 660.
 [24]
 
 [25 <./figures/fom_fs.png>]
-<figures/energy_year.png, id=1049, 867.24pt x 505.89pt>
+<figures/energy_year.png, id=1051, 867.24pt x 505.89pt>
 File: figures/energy_year.png Graphic file (type png)
 <use figures/energy_year.png>
 Package pdftex.def Info: figures/energy_year.png  used on input line 711.
@@ -1852,50 +1852,87 @@ h Con-
 [39]
 
 [40]
-Overfull \hbox (6.77417pt too wide) in paragraph at lines 407--407
+<figures/phase1.pdf, id=1193, 568.99649pt x 335.47914pt>
+File: figures/phase1.pdf Graphic file (type pdf)
+<use figures/phase1.pdf>
+Package pdftex.def Info: figures/phase1.pdf  used on input line 390.
+(pdftex.def)             Requested size: 405.45047pt x 239.06207pt.
+
+Overfull \hbox (6.77417pt too wide) in paragraph at lines 406--406
 []\T1/ptm/b/n/14.4 Second Ar-chi-tec-ture: The Com-ple-men-tary Dual-Input Flas
 h Con-
  []
 
 
 
-[41]
+[41 <./figures/phase1.pdf>]
 
 [42]
 
 [43]
+<figures/phase2.pdf, id=1218, 591.07587pt x 407.82141pt>
+File: figures/phase2.pdf Graphic file (type pdf)
+<use figures/phase2.pdf>
+Package pdftex.def Info: figures/phase2.pdf  used on input line 523.
+(pdftex.def)             Requested size: 405.45047pt x 279.74802pt.
+
 
 [44]
-Overfull \hbox (2.0444pt too wide) in paragraph at lines 565--566
+<figures/corners_waveform_zoom.pdf, id=1229, 422.41695pt x 279.4216pt>
+File: figures/corners_waveform_zoom.pdf Graphic file (type pdf)
+<use figures/corners_waveform_zoom.pdf>
+Package pdftex.def Info: figures/corners_waveform_zoom.pdf  used on input line 
+555.
+(pdftex.def)             Requested size: 362.77525pt x 239.97383pt.
+
+Overfull \hbox (2.0444pt too wide) in paragraph at lines 562--563
 []\T1/ptm/m/n/10.95 The dif-fi-culty ap-peared across pro-cess cor-ners. The tr
 anscon-duc-tance boost re-lies on a positive-
  []
 
 
 
-[45]
+[45 <./figures/phase2.pdf>]
+<figures/hysteresis_corner.pdf, id=1241, 422.50438pt x 279.86467pt>
+File: figures/hysteresis_corner.pdf Graphic file (type pdf)
+<use figures/hysteresis_corner.pdf>
+Package pdftex.def Info: figures/hysteresis_corner.pdf  used on input line 566.
 
-[46]
+(pdftex.def)             Requested size: 298.75264pt x 197.88965pt.
 
-[47]
-<figures/bode_plot.pdf, id=1261, 425.3198pt x 421.31432pt>
-File: figures/bode_plot.pdf Graphic file (type pdf)
-<use figures/bode_plot.pdf>
-Package pdftex.def Info: figures/bode_plot.pdf  used on input line 703.
-(pdftex.def)             Requested size: 362.77525pt x 359.35959pt.
 
+[46 <./figures/corners_waveform_zoom.pdf>]
+
+[47 <./figures/hysteresis_corner.pdf>]
 
 [48]
 
-[49 <./figures/bode_plot.pdf>]
+[49]
+<figures/bode_plot.pdf, id=1286, 425.3198pt x 421.31432pt>
+File: figures/bode_plot.pdf Graphic file (type pdf)
+<use figures/bode_plot.pdf>
+Package pdftex.def Info: figures/bode_plot.pdf  used on input line 707.
+(pdftex.def)             Requested size: 362.77525pt x 359.35959pt.
 
-[50]
+
+[50 <./figures/bode_plot.pdf>]
 
 [51]
 
 [52]
+<figures/dnl_typical.png, id=1309, 423.0204pt x 279.2031pt>
+File: figures/dnl_typical.png Graphic file (type png)
+<use figures/dnl_typical.png>
+Package pdftex.def Info: figures/dnl_typical.png  used on input line 769.
+(pdftex.def)             Requested size: 209.1301pt x 138.02914pt.
+<figures/inl_typical.png, id=1310, 423.0204pt x 278.9622pt>
+File: figures/inl_typical.png Graphic file (type png)
+<use figures/inl_typical.png>
+Package pdftex.def Info: figures/inl_typical.png  used on input line 770.
+(pdftex.def)             Requested size: 209.1301pt x 137.91006pt.
 
-[53]
+
+[53 <./figures/dnl_typical.png> <./figures/inl_typical.png>]
 
 [54]
 
@@ -1939,13 +1976,13 @@ Chapter 6.
 
 
 ]
-<figures/adc_reconstructed_vs_vin.pdf, id=1383, 423.16483pt x 279.4216pt>
+<figures/adc_reconstructed_vs_vin.pdf, id=1402, 423.16483pt x 279.4216pt>
 File: figures/adc_reconstructed_vs_vin.pdf Graphic file (type pdf)
 <use figures/adc_reconstructed_vs_vin.pdf>
 Package pdftex.def Info: figures/adc_reconstructed_vs_vin.pdf  used on input li
 ne 19.
 (pdftex.def)             Requested size: 320.0935pt x 211.36491pt.
-<figures/fft_clean_async.pdf, id=1386, 421.43349pt x 279.59286pt>
+<figures/fft_clean_async.pdf, id=1405, 421.43349pt x 279.59286pt>
 File: figures/fft_clean_async.pdf Graphic file (type pdf)
 <use figures/fft_clean_async.pdf>
 Package pdftex.def Info: figures/fft_clean_async.pdf  used on input line 28.
@@ -1959,27 +1996,33 @@ Package pdftex.def Info: figures/fft_clean_async.pdf  used on input line 28.
 [65]
 
 [66]
+<figures/monte_carlo_dnl.pdf, id=1440, 537.11536pt x 307.3581pt>
+File: figures/monte_carlo_dnl.pdf Graphic file (type pdf)
+<use figures/monte_carlo_dnl.pdf>
+Package pdftex.def Info: figures/monte_carlo_dnl.pdf  used on input line 149.
+(pdftex.def)             Requested size: 341.43437pt x 195.38594pt.
 
-[67]
+
+[67 <./figures/monte_carlo_dnl.pdf>]
 
 [68]
 
 [69]
-<figures/adc_transfer_sync.pdf, id=1451, 433.62pt x 361.35pt>
+<figures/adc_transfer_sync.pdf, id=1473, 433.62pt x 361.35pt>
 File: figures/adc_transfer_sync.pdf Graphic file (type pdf)
 <use figures/adc_transfer_sync.pdf>
-Package pdftex.def Info: figures/adc_transfer_sync.pdf  used on input line 231.
+Package pdftex.def Info: figures/adc_transfer_sync.pdf  used on input line 230.
 
 (pdftex.def)             Requested size: 341.43437pt x 284.54257pt.
-<figures/dnl_sync.pdf, id=1452, 433.62pt x 289.08pt>
+<figures/dnl_sync.pdf, id=1474, 433.62pt x 289.08pt>
 File: figures/dnl_sync.pdf Graphic file (type pdf)
 <use figures/dnl_sync.pdf>
-Package pdftex.def Info: figures/dnl_sync.pdf  used on input line 232.
+Package pdftex.def Info: figures/dnl_sync.pdf  used on input line 231.
 (pdftex.def)             Requested size: 209.1301pt x 139.42288pt.
-<figures/inl_sync.pdf, id=1453, 433.62pt x 289.08pt>
+<figures/inl_sync.pdf, id=1475, 433.62pt x 289.08pt>
 File: figures/inl_sync.pdf Graphic file (type pdf)
 <use figures/inl_sync.pdf>
-Package pdftex.def Info: figures/inl_sync.pdf  used on input line 233.
+Package pdftex.def Info: figures/inl_sync.pdf  used on input line 232.
 (pdftex.def)             Requested size: 209.1301pt x 139.42288pt.
 
 
@@ -1987,28 +2030,28 @@ Package pdftex.def Info: figures/inl_sync.pdf  used on input line 233.
 
 [71 <./figures/adc_transfer_sync.pdf> <./figures/dnl_sync.pdf> <./figures/inl_s
 ync.pdf>]
-LaTeX Font Info:    Calculating math sizes for size <7.4> on input line 312.
+
+[72]
+LaTeX Font Info:    Calculating math sizes for size <7.4> on input line 311.
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <5.47603> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <4.44003> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.47603> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 312.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 311.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <4.44003> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 312.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 311.
 
-Overfull \hbox (5.35648pt too wide) in paragraph at lines 300--317
+Overfull \hbox (5.35648pt too wide) in paragraph at lines 299--316
  [][] 
  []
 
 
-
-[72]
 
 [73])
 
@@ -2289,10 +2332,10 @@ Package logreq Info: Writing requests to 'meec_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57373 strings out of 468133
- 1328941 string characters out of 5430711
- 2846831 words of memory out of 5000000
- 84584 multiletter control sequences out of 15000+600000
+ 57424 strings out of 468133
+ 1330628 string characters out of 5430711
+ 2847512 words of memory out of 5000000
+ 84634 multiletter control sequences out of 15000+600000
  745580 words of font info for 204 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,14n,107p,3386b,3170s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2311,9 +2354,9 @@ l/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/gonca/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on meec_thesis.pdf (108 pages, 1984509 bytes).
+Output written on meec_thesis.pdf (108 pages, 2246515 bytes).
 PDF statistics:
- 2212 PDF objects out of 2487 (max. 8388607)
- 633 named destinations out of 1000 (max. 500000)
- 873 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2234 PDF objects out of 2487 (max. 8388607)
+ 634 named destinations out of 1000 (max. 500000)
+ 908 words of extra memory for PDF output out of 10000 (max. 10000000)
 
