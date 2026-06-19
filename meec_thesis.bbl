@@ -3761,10 +3761,16 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Journal of Solid-State Circuits}
+      \field{month}{1}
       \field{number}{1}
       \field{title}{A 200-{mA} Digital Low Drop-Out Regulator With Coarse-Fine Dual Loop in Mobile Application Processor}
       \field{volume}{52}
       \field{year}{2017}
+      \field{pages}{64\bibrangedash 76}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/JSSC.2016.2614308
+      \endverb
     \endentry
     \entry{ManxinLi_2023_70}{inproceedings}{}{}
       \name{author}{7}{}{%

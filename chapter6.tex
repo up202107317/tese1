@@ -7,7 +7,7 @@ This dissertation addressed the design and validation of an asynchronous Flash
 Analog-to-Digital Converter intended for low-power, event-driven applications such as Internet
 of Things sensor nodes and other sources of non-periodic signals. The central motivation for
 this work stems from the fundamental inefficiency of conventional synchronous ADC
-architectures when dealing with time-sparse signals: a global clock forces continuous switching
+architectures when dealing with time-sparse signals. A global clock forces continuous switching
 activity across the comparator bank and clock distribution network, dissipating dynamic power
 regardless of whether the input signal is actually carrying new information. Removing that clock
 and replacing it with a level-crossing, event-driven mechanism was the core hypothesis explored
@@ -74,7 +74,7 @@ transistors of the slicer stage, the threshold voltage of each device type can b
 body effect, so the trip points can be steered back toward their nominal positions after
 fabrication. Correction vectors were determined for the four standard process corners (SS, FF,
 FS and SF) and were shown in simulation to improve the worst-case DNL at all four corners and
-the worst-case INL at three of them, with the largest gains at the symmetric corners; the SF
+the worst-case INL at three of them, with the largest gains at the symmetric corners, the SF
 corner proved the hardest to correct with a single global bias pair.
 
 Finally, the complete system was validated through transistor-level analog and mixed-signal
@@ -82,7 +82,7 @@ co-simulation. The dynamic performance of the asynchronous converter was charact
 non-uniform to uniform resampling algorithm applied to the raw level-crossing output, enabling
 standard spectral metrics such as SNDR and ENOB to be extracted and compared against both the
 synchronous reference and representative state-of-the-art designs. The power measurements
-confirmed the key theoretical prediction: dynamic power consumption scales linearly with input
+confirmed the key theoretical prediction. Dynamic power consumption scales linearly with input
 signal frequency, and the converter enters a near-zero dynamic consumption state when the input
 is idle. Measured at a matched conversions-per-second workload, the asynchronous core draws
 $99.5$~\textmu W against the $886$~\textmu W of the complete synchronous reference, and the gap
@@ -90,7 +90,7 @@ widens for sparse inputs as the converter falls towards its idle floor. This pow
 than a record Walden figure of merit, is where the energy advantage of the proposed converter
 lies in the sparse-signal regime targeted by this work.
 
-The contribution of this work lies less in any single block than in their combination:
+The contribution of this work lies less in any single block than in their combination,
 ratioed-slicer quantisation, corner-indexed body bias trimming and clockless event generation,
 brought together at $0.8$~V in a 16~nm process and benchmarked against a synchronous reference
 of equal resolution and technology.
@@ -139,7 +139,7 @@ offline trimming strategy, Monte Carlo statistical variation was not corrected w
 this work. The body bias trimming vectors were determined for the four deterministic process
 corners and are therefore not adapted to the continuous distribution of device mismatch that Monte
 Carlo analysis exposes. The Monte Carlo results of Chapter~\ref{chap:Benchmarking} quantify the
-cost: the spread of a single code width reaches several LSB. This limitation is acknowledged as an important gap between the
+cost, the spread of a single code width reaches several LSB. This limitation is acknowledged as an important gap between the
 presented prototype and a fully robust production-ready implementation, and it is the primary
 motivation for the first suggestion for future work described in the following section.
 
@@ -153,14 +153,14 @@ work presented in this dissertation.
 The trimming strategy validated in this work relies on the correct identification of the active
 process corner, which in the current implementation is supplied externally to the Verilog-A
 behavioural model and used to select the appropriate pre-computed correction vector. In a
-physical integrated circuit this external identification is not available: the fabricated die has no
+physical integrated circuit this external identification is not available, the fabricated die has no
 direct means of knowing which combination of NMOS and PMOS device parameters it has been
 assigned by the foundry.
 
 A natural extension would therefore be a dedicated on-chip analogue process
 detection circuit that senses the effective transistor characteristics of the fabricated device
 and communicates the inferred process corner directly to the trimming logic. Such a circuit could
-be implemented as a small reference cell: for example, a pair of matched inverter-based ring
+be implemented as a small reference cell, for example, a pair of matched inverter-based ring
 oscillators, one biased toward NMOS-dominated operation and the other toward PMOS-dominated
 operation, whose relative oscillation frequencies or propagation delays encode the current
 process corner. The ratio between the two delay measurements maps unambiguously onto the

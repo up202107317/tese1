@@ -1,0 +1,719 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(meec_thesis.tex
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-08-13>
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-pdftex.def
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/circuitikz\circuitikz.s
+ty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarycalc.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.meta.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarybending.code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+bending.code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+nonlineartransformations.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+arycurvilinear.code.tex)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryfpu.code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryfpu.code.tex))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirc.de
+fines.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircuti
+ls.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircpat
+h.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircsha
+pes.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircmon
+opoles.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircbip
+oles.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirctri
+poles.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircqua
+dpoles.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircmul
+tipoles.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirclab
+el.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircvol
+tage.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirccur
+rent.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircflo
+w.tex)) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/svg\svg.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
+
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.st
+y
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-ho
+ok.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
+))))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty))
+
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.s
+ty) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty)
+)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/transparent\transparent
+.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/transparent\transparent
+-nometadata.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg))
+
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypositioning.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryshapes.geometric.code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
+pgflibraryshapes.geometric.code.tex)) (feupteses.sty
+Document Style `FEUP Teses' 1.1.3 <2024/10/07>
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.l
+df
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel
+-english.tex)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\mathptmx.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/courier-scaled\couriers
+.sty) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\helvet.sty
+) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgfgantt\pgfgantt.sty
+
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryarrows.code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.code.tex))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarybackgrounds.code.tex)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypatterns.code.tex
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+arypatterns.code.tex))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfcalend
+ar.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfcale
+ndar.code.tex)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/base\makeidx.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg))
+ (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
+) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
+)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\numeric-co
+mp.bbx
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\numeric.bb
+x
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.b
+bx)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\numeric-co
+mp.cbx)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3
+.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+) (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty)))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty))) 
+File meec.cfg loaded.
+(meec.cfg))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd)
+(meec_thesis.aux (abstract.aux) (un-sdg.aux) (abbrevs.aux) (chapter1.aux)
+(chapter2.aux) (chapter4.aux) (chapter3.aux) (trimming.aux) (chapter5.aux)
+(chapter6.aux) (appendix1.aux))
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lb
+x) (meec_thesis.bbl) (meec_thesis.out) (meec_thesis.out)
+[-3{C:/Users/gonca/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/g
+onca/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./figures/upor
+to-feup.pdf>]
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd)
+[-2] (abstract.tex)
+[1] (un-sdg.tex
+Overfull \hbox (1.82004pt too wide) in paragraph at lines 6--8
+\T1/ptm/m/n/10.95 The United Na-tions Sus-tain-able De-vel-op-ment Goals (SDGs)
+ pro-vide a global frame-work to achieve
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ztmcm.fd)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlztmcm.fd)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsztmcm.fd)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxztmcm.fd)
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd)
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+[]\T1/ptm/b/n/10.95 Performance In-di-ca-tors and
+)
+[2] (meec_thesis.toc
+[3]
+[4])
+[5] (meec_thesis.lof
+[6])
+[7] (meec_thesis.lot
+Overfull \hbox (5.22673pt too wide) in paragraph at lines 5--5
+ [][] []\T1/ptm/m/n/10.95 Comparison of Power Con-sump-tion be-tween Syn-chrono
+us and Asyn-chronous Flash 
+)
+[8] (abbrevs.tex)
+[9] (chapter1.tex
+Chapter 1.
+
+[1]
+[2 <./figures/uporto.pdf>]
+[3])
+[4] (chapter2.tex
+Chapter 2.
+
+[5]
+[6]
+[7]
+[8]
+[9]
+Overfull \hbox (20.53398pt too wide) in paragraph at lines 170--170
+[][]\T1/ptm/m/n/10.95 SHA  
+
+Overfull \hbox (17.55829pt too wide) in paragraph at lines 170--170
+[][]\T1/ptm/m/n/10.95 Output  
+
+Overfull \hbox (10.99428pt too wide) in paragraph at lines 170--170
+[][]\T1/ptm/m/n/10.95 Comparator  
+
+[10]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 246.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Sigma' on input line 246.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Delta' on input line 246.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 246.
+
+
+[11] (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd)
+[12]
+
+Package mathptmx Warning: There are no bold math fonts on input line 409.
+
+
+Overfull \hbox (9.74214pt too wide) in paragraph at lines 409--409
+[][]\T1/ptm/m/n/10.95 Clock  
+
+Overfull \hbox (10.44482pt too wide) in paragraph at lines 409--409
+[][]\T1/ptm/m/n/10.95 Digital 
+
+Overfull \hbox (12.865pt too wide) in paragraph at lines 409--409
+\T1/ptm/m/n/10.95 counter  
+
+[13]
+[14]
+[15]
+Overfull \hbox (2.84885pt too wide) in paragraph at lines 463--464
+\T1/ptm/m/n/10.95 nodes un-til a volt-age thresh-old is reached, cur-rent com-p
+ara-tors pro-cess in-for-ma-tion di-rectly through
+
+[16]
+[17]
+[18 <./figures/HTraff_schematic_no_explanation.pdf>]
+Overfull \hbox (11.66904pt too wide) in paragraph at lines 517--518
+[]\T1/ptm/m/n/10.95 This non-linear feed-back mech-a-nism cre-ates an ef-fec-ti
+ve hys-tere-sis, once the out-put has switched,
+
+[19 <./figures/LuChen_schematic_no_explanation.pdf>]
+[20]
+[21]
+[22]
+[23]
+[24]
+[25]
+[26 <./figures/fom_fs.png>]
+[27 <./figures/energy_year.png>]
+Overfull \hbox (18.8027pt too wide) in paragraph at lines 753--754
+\T1/ptm/m/n/10.95 bank of com-par-i-son el-e-ments ob-serves dif-fer-ent de-ci-
+sion lev-els in par-al-lel and pro-duces a thermometer-
+)
+[28] (chapter4.tex
+Chapter 3.
+
+[29]
+[30]
+[31]
+[32])
+[33] (chapter3.tex
+Chapter 4.
+
+[34]
+Overfull \hbox (5.4772pt too wide) in paragraph at lines 28--28
+[]\T1/ptm/b/n/14.4 First Ar-chi-tec-ture: The Base-line Current-Mirror OTA Flas
+h Con-
+
+[35]
+[36]
+[37]
+[38]
+[39]
+[40]
+[41]
+Overfull \hbox (6.77417pt too wide) in paragraph at lines 417--417
+[]\T1/ptm/b/n/14.4 Second Ar-chi-tec-ture: The Com-ple-men-tary Dual-Input Flas
+h Con-
+
+[42]
+[43 <./figures/phase1.pdf>]
+[44]
+[45]
+Overfull \hbox (2.0444pt too wide) in paragraph at lines 573--574
+[]\T1/ptm/m/n/10.95 The dif-fi-culty ap-peared across pro-cess cor-ners. The tr
+anscon-duc-tance boost re-lies on a positive-
+
+[46 <./figures/phase2.pdf>]
+[47 <./figures/corners_waveform_zoom.pdf>]
+[48 <./figures/hysteresis_corner.pdf>]
+[49]
+[50]
+[51 <./figures/bode_plot.pdf>]
+[52]
+[53]
+[54 <./figures/dnl_typical.png> <./figures/inl_typical.png>]
+[55]
+[56])
+[57] (trimming.tex
+Chapter 5.
+
+[58]
+[59]
+[60]
+Underfull \hbox (badness 1112) in paragraph at lines 204--205
+[]\T1/ptm/m/n/10 3:0.1,  4:0.2,  5:0.2,  11:0.1,
+
+[61])
+[62] (chapter5.tex
+Chapter 6.
+
+[63]
+[64 <./figures/adc_reconstructed_vs_vin.pdf>]
+[65 <./figures/fft_clean_async.pdf>]
+[66]
+[67]
+[68]
+[69 <./figures/monte_carlo_dnl.pdf>]
+[70]
+[71]
+[72 <./figures/adc_transfer_sync.pdf> <./figures/dnl_sync.pdf> <./figures/inl_s
+ync.pdf>]
+
+LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <5.47603> not available
+(Font)              size <5> substituted on input line 314.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <4.44003> not available
+(Font)              size <5> substituted on input line 314.
+
+
+Overfull \hbox (5.35648pt too wide) in paragraph at lines 302--319
+ [][] 
+
+[73]
+[74]
+[75])
+[76] (chapter6.tex
+Chapter 7.
+
+[77]
+[78]
+[79]
+[80])
+[81]
+(C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/courier-scaled\t1pcrs.f
+d)
+Overfull \hbox (2.28789pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 Single-Stage CMOS OTA with En-hanced Transcon-duc-tance^^Q. I
+n: \T1/ptm/m/it/10.95 Elec-tron-ics \T1/ptm/m/n/10.95 11.17 (2022),
+
+[82]
+Overfull \hbox (13.80038pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2025
+. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 /
+ ISSCC49661 . 2025 . 10904766$[][]\T1/ptm/m/n/10.95 . 
+
+[83]
+Overfull \hbox (6.83562pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/
+ptm/m/n/10.95 . 2024. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m
+/n/10.95 10 . 1109 / ISSCC49657 .
+
+Overfull \hbox (6.42601pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 ADC with Dynamic-Amplifier-Assisted Cas-caded In-te-gra-tor^^
+Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-
+
+Overfull \hbox (13.80038pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2024
+. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 /
+ ISSCC49657 . 2024 . 10454362$[][]\T1/ptm/m/n/10.95 . 
+
+Overfull \hbox (20.31177pt too wide) in paragraph at lines 142--142
+[]\T1/ptm/m/n/10.95 Jaesuk Choi, Soon-Jae Kweon, and Hyun-tak Jeon. ^^P  Single
+-Stage CMOS Op-er-a-tional Transcon-
+
+[84]
+Overfull \hbox (22.84404pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 Pipelined-SAR ADC with Cross-Stage Gain-Mismatch-Error-Shapin
+g Tech-nique and Negative-
+
+[85]
+Overfull \hbox (6.83562pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/
+ptm/m/n/10.95 . 2023. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m
+/n/10.95 10 . 1109 / ISSCC42615 .
+
+Overfull \hbox (13.80038pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2024
+. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 /
+ ISSCC49657 . 2024 . 10454431$[][]\T1/ptm/m/n/10.95 . 
+
+Overfull \hbox (10.60767pt too wide) in paragraph at lines 142--142
+[]\T1/ptm/m/n/10.95 H-K. Hong et al. ^^P  A 2.6b/cycle-architecture-based 10b 1
+.7GS/s 15.4mW 4x Time-interleaved
+
+Overfull \hbox (2.51082pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 
+. 2015. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 
+1109 / ISSCC . 2015 . 7063130$[][]\T1/ptm/m/n/10.95 . 
+
+[86]
+[87]
+Overfull \hbox (7.55891pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2022
+. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 /
+ ISSCC42614 . 2022 . 9731571$[][]\T1/ptm/m/n/10.95 . 
+
+Overfull \hbox (5.33601pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 179.4dB-FOMSNDR 2nd-Order Noise-Shaping SARADC with En-hanced
+ In-put Impedance
+
+Overfull \hbox (1.57942pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 in 0.18$\OML/ztmcm/m/it/10.95 ^^V$\T1/ptm/m/n/10.95 m CMOS^^Q
+. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-en
+ce (ISSCC)\T1/ptm/m/n/10.95 . 2023.
+
+[88]
+[89]
+Overfull \hbox (5.09041pt too wide) in paragraph at lines 142--142
+\OT1/ztmcm/m/n/10.95 ^^A$$^^F$ \T1/ptm/m/n/10.95 ADC in 40nm CMOS^^Q. In: \T1/p
+tm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\
+T1/ptm/m/n/10.95 .
+
+[90]
+Overfull \hbox (6.08362pt too wide) in paragraph at lines 142--142
+[]\T1/ptm/m/n/10.95 Sharvil Patil et al. ^^P  A 700MHz-BW ^^U164dBFS/Hz-Small-S
+ignal-NSD 703mW Continuous-
+
+Overfull \hbox (10.29994pt too wide) in paragraph at lines 142--142
+[]\T1/ptm/m/n/10.95 Sourja Ray and Bang-Sup Song. ^^P  A 13b Lin-ear 40MS/s Pip
+elined ADC with Self-Configured
+
+[91]
+Overfull \hbox (2.51082pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 
+. 2006. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 
+1109 / ISSCC . 2006 . 1696297$[][]\T1/ptm/m/n/10.95 . 
+
+Overfull \hbox (2.51082pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 
+. 2006. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 
+1109 / ISSCC . 2006 . 1696120$[][]\T1/ptm/m/n/10.95 . 
+
+[92]
+Overfull \hbox (1.82037pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 drive read chan-nel^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na
+-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 1999.
+
+Overfull \hbox (0.39282pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 Cross-ing ADC Ex-ploit-ing Dy-namic Self-Biasing Com-para-tor
+s^^Q. In: \T1/ptm/m/it/10.95 IEEE Jour-nal of Solid-
+
+Overfull \hbox (14.23299pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 Micro-Sensor Ap-pli-ca-tions^^Q. In: \T1/ptm/m/it/10.95 IEEE 
+In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 .
+
+[93]
+Overfull \hbox (1.96727pt too wide) in paragraph at lines 142--142
+[]\T1/ptm/m/n/10.95 Jia-Ching Wang and Tai-Haur Kuo. ^^P  A 3-mW 2.7-GS/s 8b Su
+b-rang-ing ADC with Multiple-
+
+[94]
+[95]
+Overfull \hbox (6.0335pt too wide) in paragraph at lines 142--142
+[]\T1/ptm/m/n/10.95 Mingtao Zhan, Lu Jie, and Nan Sun. ^^P  A 10mW 10-ENoB 1GS/
+s Ring-Amp-Based Pipelined
+
+Overfull \hbox (4.73744pt too wide) in paragraph at lines 142--142
+[]\T1/ptm/m/n/10.95 Yanbo Zhang et al. ^^P  A Single-channel 70dB-SNDR 100MHz-B
+W 4th-Order Noise-Shaping
+
+Overfull \hbox (13.80038pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2023
+. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 /
+ ISSCC42615 . 2023 . 10067687$[][]\T1/ptm/m/n/10.95 . 
+
+Overfull \hbox (24.90707pt too wide) in paragraph at lines 142--142
+[]\T1/ptm/m/n/10.95 Yannan Zhang et al. ^^P  A 72GS/s 9b Time-Interleaved Pipel
+ine-SAR ADC Achiev-ing 55.3/49.3dB
+
+[96] (appendix1.tex
+Appendix A.
+
+[97]
+[98])
+[99] (meec_thesis.aux (abstract.aux) (un-sdg.aux) (abbrevs.aux) (chapter1.aux)
+(chapter2.aux) (chapter4.aux) (chapter3.aux) (trimming.aux) (chapter5.aux)
+(chapter6.aux) (appendix1.aux))
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.55997pt have occurred.
+
+ )
+(see the transcript file for additional information)<C:/Users/gonca/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/gonca/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users
+/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
+y10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmtt10.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/urw/
+courier/ucrb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/ur
+w/courier/ucrr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/
+urw/helvetic/uhvb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type
+1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1
+/urw/times/utmb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1
+/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1
+/urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1
+/urw/times/utmri8a.pfb>
+Output written on meec_thesis.pdf (110 pages, 2255935 bytes).
+Transcript written on meec_thesis.log.

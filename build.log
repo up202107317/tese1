@@ -399,829 +399,886 @@ LaTeX Warning: Reference `fig:Sparse-time' on page 2 undefined on input line 40
 .
 
 
-[2 <./figures/uporto.pdf>])
-[3] (chapter2.tex
+[2 <./figures/uporto.pdf>]
+[3])
+[4] (chapter2.tex
 Chapter 2.
 
-LaTeX Warning: Reference `chap:intro' on page 4 undefined on input line 6.
+LaTeX Warning: Reference `chap:intro' on page 5 undefined on input line 6.
 
 
-[4]
 [5]
+[6]
 
-LaTeX Warning: Reference `fig:offset_gain_error' on page 6 undefined on input l
+LaTeX Warning: Reference `fig:offset_gain_error' on page 7 undefined on input l
 ine 62.
 
 
-[6]
 [7]
+[8]
 
-LaTeX Warning: Reference `sec:async_vs_sync' on page 8 undefined on input line 
+LaTeX Warning: Reference `sec:async_vs_sync' on page 9 undefined on input line 
 105.
 
 
-[8]
-Overfull \hbox (20.53398pt too wide) in paragraph at lines 171--171
+[9]
+Overfull \hbox (20.53398pt too wide) in paragraph at lines 170--170
 [][]\T1/ptm/m/n/10.95 SHA  
 
-Overfull \hbox (17.55829pt too wide) in paragraph at lines 171--171
+Overfull \hbox (17.55829pt too wide) in paragraph at lines 170--170
 [][]\T1/ptm/m/n/10.95 Output  
 
-Overfull \hbox (10.99428pt too wide) in paragraph at lines 171--171
+Overfull \hbox (10.99428pt too wide) in paragraph at lines 170--170
 [][]\T1/ptm/m/n/10.95 Comparator  
 
-LaTeX Warning: Reference `fig:sar_arch' on page 9 undefined on input line 175.
+LaTeX Warning: Reference `fig:sar_arch' on page 10 undefined on input line 174.
 
 
-[9]
 
-LaTeX Warning: Reference `fig:pipeline_arch' on page 10 undefined on input line
- 246.
+[10]
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 247.
+LaTeX Warning: Reference `fig:pipeline_arch' on page 11 undefined on input line
+ 245.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Sigma' on input line 247.
+(hyperref)                removing `math shift' on input line 246.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Delta' on input line 247.
+(hyperref)                removing `\Sigma' on input line 246.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 247.
+(hyperref)                removing `\Delta' on input line 246.
 
 
-[10] (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd)
-
-LaTeX Warning: Reference `fig:sigma_delta_arch' on page 11 undefined on input l
-ine 359.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 246.
 
 
-[11]
+[11] (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd)
 
-Package mathptmx Warning: There are no bold math fonts on input line 410.
-
-
-Overfull \hbox (9.74214pt too wide) in paragraph at lines 410--410
-[][]\T1/ptm/m/n/10.95 Clock  
-
-Overfull \hbox (10.44482pt too wide) in paragraph at lines 410--410
-[][]\T1/ptm/m/n/10.95 Digital 
-
-Overfull \hbox (12.865pt too wide) in paragraph at lines 410--410
-\T1/ptm/m/n/10.95 counter  
-
-LaTeX Warning: Reference `fig:dual_slope_arch' on page 12 undefined on input li
-ne 418.
+LaTeX Warning: Reference `fig:sigma_delta_arch' on page 12 undefined on input l
+ine 358.
 
 
 [12]
 
-LaTeX Warning: Reference `fig:LC_digital_logic' on page 13 undefined on input l
-ine 438.
+Package mathptmx Warning: There are no bold math fonts on input line 409.
+
+
+Overfull \hbox (9.74214pt too wide) in paragraph at lines 409--409
+[][]\T1/ptm/m/n/10.95 Clock  
+
+Overfull \hbox (10.44482pt too wide) in paragraph at lines 409--409
+[][]\T1/ptm/m/n/10.95 Digital 
+
+Overfull \hbox (12.865pt too wide) in paragraph at lines 409--409
+\T1/ptm/m/n/10.95 counter  
+
+LaTeX Warning: Reference `fig:dual_slope_arch' on page 13 undefined on input li
+ne 417.
 
 
 [13]
 
-LaTeX Warning: Reference `chap:async' on page 14 undefined on input line 448.
+LaTeX Warning: Reference `fig:LC_digital_logic' on page 14 undefined on input l
+ine 437.
 
 
 [14]
-Overfull \hbox (2.84885pt too wide) in paragraph at lines 464--465
+
+LaTeX Warning: Reference `chap:async' on page 15 undefined on input line 447.
+
+
+[15]
+Overfull \hbox (2.84885pt too wide) in paragraph at lines 463--464
 \T1/ptm/m/n/10.95 nodes un-til a volt-age thresh-old is reached, cur-rent com-p
 ara-tors pro-cess in-for-ma-tion di-rectly through
 
-[15]
 [16]
 [17]
-Overfull \hbox (11.66904pt too wide) in paragraph at lines 504--505
+[18 <./figures/HTraff_schematic_no_explanation.pdf>]
+Overfull \hbox (11.66904pt too wide) in paragraph at lines 517--518
 []\T1/ptm/m/n/10.95 This non-linear feed-back mech-a-nism cre-ates an ef-fec-ti
 ve hys-tere-sis, once the out-put has switched,
 
-[18]
-[19]
+[19 <./figures/LuChen_schematic_no_explanation.pdf>]
 [20]
-
-LaTeX Warning: Reference `fig:mismatch_correction' on page 21 undefined on inpu
-t line 580.
-
-
-LaTeX Warning: Reference `fig:resistive_ladder' on page 21 undefined on input l
-ine 580.
-
-
 [21]
 
-LaTeX Warning: Reference `chap:trimming' on page 22 undefined on input line 588
-.
+LaTeX Warning: Reference `fig:mismatch_correction' on page 22 undefined on inpu
+t line 593.
+
+
+LaTeX Warning: Reference `fig:resistive_ladder' on page 22 undefined on input l
+ine 593.
 
 
 [22]
 
-LaTeX Warning: Reference `fig:fom_fs' on page 23 undefined on input line 654.
+LaTeX Warning: Reference `chap:trimming' on page 23 undefined on input line 601
+.
 
 
 [23]
+[24]
 
-LaTeX Warning: Reference `fig:energy_year' on page 24 undefined on input line 6
-89.
-
-
-[24 <./figures/fom_fs.png>]
-
-LaTeX Warning: Reference `fig:energy_year' on page 25 undefined on input line 7
-06.
+LaTeX Warning: Reference `fig:fom_fs' on page 25 undefined on input line 667.
 
 
-[25 <./figures/energy_year.png>]
-Overfull \hbox (18.8027pt too wide) in paragraph at lines 740--741
+[25]
+
+LaTeX Warning: Reference `fig:energy_year' on page 26 undefined on input line 7
+02.
+
+
+[26 <./figures/fom_fs.png>]
+
+LaTeX Warning: Reference `fig:energy_year' on page 27 undefined on input line 7
+19.
+
+
+[27 <./figures/energy_year.png>]
+Overfull \hbox (18.8027pt too wide) in paragraph at lines 753--754
 \T1/ptm/m/n/10.95 bank of com-par-i-son el-e-ments ob-serves dif-fer-ent de-ci-
 sion lev-els in par-al-lel and pro-duces a thermometer-
 
-LaTeX Warning: Reference `sec:clockless_event' on page 26 undefined on input li
-ne 742.
+LaTeX Warning: Reference `sec:clockless_event' on page 28 undefined on input li
+ne 755.
 
 
-LaTeX Warning: Reference `chap:async' on page 26 undefined on input line 742.
+LaTeX Warning: Reference `chap:async' on page 28 undefined on input line 755.
 
 
-LaTeX Warning: Reference `sec:calibration' on page 26 undefined on input line 7
-42.
+LaTeX Warning: Reference `sec:calibration' on page 28 undefined on input line 7
+55.
 
 
-LaTeX Warning: Reference `chap:trimming' on page 26 undefined on input line 742
+LaTeX Warning: Reference `chap:trimming' on page 28 undefined on input line 755
 .
 
 )
-[26] (chapter4.tex
+[28] (chapter4.tex
 Chapter 3.
 
-LaTeX Warning: Reference `chap:Benchmarking' on page 27 undefined on input line
+LaTeX Warning: Reference `chap:Benchmarking' on page 29 undefined on input line
  5.
 
 
-LaTeX Warning: Reference `chap:async' on page 27 undefined on input line 5.
+LaTeX Warning: Reference `chap:async' on page 29 undefined on input line 5.
 
 
-LaTeX Warning: Reference `chap:async' on page 27 undefined on input line 14.
+LaTeX Warning: Reference `chap:async' on page 29 undefined on input line 14.
 
 
-LaTeX Warning: Reference `chap:async' on page 27 undefined on input line 16.
+LaTeX Warning: Reference `chap:async' on page 29 undefined on input line 16.
 
 
-[27]
-
-LaTeX Warning: Reference `chap:async' on page 28 undefined on input line 47.
-
-
-[28]
 [29]
 
-LaTeX Warning: Reference `chap:async' on page 30 undefined on input line 83.
-
-
-LaTeX Warning: Reference `chap:Benchmarking' on page 30 undefined on input line
- 83.
+LaTeX Warning: Reference `chap:async' on page 30 undefined on input line 47.
 
 
 [30]
+[31]
 
-LaTeX Warning: Reference `chap:Benchmarking' on page 31 undefined on input line
- 102.
-
-)
-[31] (chapter3.tex
-Chapter 4.
-
-LaTeX Warning: Reference `chap:trimming' on page 32 undefined on input line 5.
+LaTeX Warning: Reference `chap:async' on page 32 undefined on input line 83.
 
 
-LaTeX Warning: Reference `chap:intro' on page 32 undefined on input line 10.
-
-
-LaTeX Warning: Reference `chap:synchronous' on page 32 undefined on input line 
-14.
+LaTeX Warning: Reference `chap:Benchmarking' on page 32 undefined on input line
+ 83.
 
 
 [32]
 
-LaTeX Warning: Reference `sec:clockless_event' on page 33 undefined on input li
-ne 38.
+LaTeX Warning: Reference `chap:Benchmarking' on page 33 undefined on input line
+ 102.
+
+)
+[33] (chapter3.tex
+Chapter 4.
+
+LaTeX Warning: Reference `chap:trimming' on page 34 undefined on input line 5.
 
 
-LaTeX Warning: Reference `fig:cmf_adc_op' on page 33 undefined on input line 53
-.
+LaTeX Warning: Reference `chap:intro' on page 34 undefined on input line 10.
 
 
-[33]
-
-LaTeX Warning: Reference `fig:cmf_adc_op' on page 34 undefined on input line 80
-.
-
-
-LaTeX Warning: Reference `fig:cmf_adc_op' on page 34 undefined on input line 87
-.
-
-
-LaTeX Warning: Reference `fig:cmf_adc_op' on page 34 undefined on input line 92
-.
-
-
-LaTeX Warning: Reference `fig:cmf_adc_op' on page 34 undefined on input line 10
-3.
+LaTeX Warning: Reference `chap:synchronous' on page 34 undefined on input line 
+14.
 
 
 [34]
+Overfull \hbox (5.4772pt too wide) in paragraph at lines 28--28
+[]\T1/ptm/b/n/14.4 First Ar-chi-tec-ture: The Base-line Current-Mirror OTA Flas
+h Con-
 
-LaTeX Warning: Reference `fig:cmf_adc_op' on page 35 undefined on input line 12
-5.
+LaTeX Warning: Reference `sec:clockless_event' on page 35 undefined on input li
+ne 38.
 
 
-LaTeX Warning: Reference `eq:vth_cmf' on page 35 undefined on input line 157.
-
-
-LaTeX Warning: Reference `sec:async_logic' on page 35 undefined on input line 1
-66.
+LaTeX Warning: Reference `fig:cmf_adc_op' on page 35 undefined on input line 53
+.
 
 
 [35]
 
-LaTeX Warning: Reference `eq:vth_cmf' on page 36 undefined on input line 175.
+LaTeX Warning: Reference `fig:cmf_adc_op' on page 36 undefined on input line 80
+.
 
 
-LaTeX Warning: Reference `sec:cmf_characterisation' on page 36 undefined on inp
-ut line 181.
+LaTeX Warning: Reference `fig:cmf_adc_op' on page 36 undefined on input line 87
+.
 
 
-LaTeX Warning: Reference `sec:design_specs' on page 36 undefined on input line 
-188.
+LaTeX Warning: Reference `fig:cmf_adc_op' on page 36 undefined on input line 92
+.
 
 
-LaTeX Warning: Reference `eq:vth_cmf' on page 36 undefined on input line 198.
+LaTeX Warning: Reference `fig:cmf_adc_op' on page 36 undefined on input line 10
+3.
 
 
 [36]
 
-LaTeX Warning: Reference `sec:clockless_event' on page 37 undefined on input li
-ne 296.
+LaTeX Warning: Reference `fig:cmf_adc_op' on page 37 undefined on input line 12
+5.
+
+
+LaTeX Warning: Reference `eq:vth_cmf' on page 37 undefined on input line 157.
+
+
+LaTeX Warning: Reference `sec:async_logic' on page 37 undefined on input line 1
+66.
 
 
 [37]
 
-LaTeX Warning: Reference `sec:clockless_event' on page 38 undefined on input li
-ne 305.
+LaTeX Warning: Reference `eq:vth_cmf' on page 38 undefined on input line 175.
 
 
-LaTeX Warning: Reference `fig:comp_schematics' on page 38 undefined on input li
-ne 306.
+LaTeX Warning: Reference `sec:cmf_characterisation' on page 38 undefined on inp
+ut line 181.
 
 
-LaTeX Warning: Reference `fig:comp_transfer' on page 38 undefined on input line
- 329.
+LaTeX Warning: Reference `sec:design_specs' on page 38 undefined on input line 
+188.
 
 
-LaTeX Warning: Reference `tab:comp_comparison' on page 38 undefined on input li
-ne 332.
-
-
-LaTeX Warning: Reference `fig:comp_operation' on page 38 undefined on input lin
-e 333.
-
-
-LaTeX Warning: Reference `sec:clockless_event' on page 38 undefined on input li
-ne 376.
-
-
-LaTeX Warning: Reference `sec:clockless_event' on page 38 undefined on input li
-ne 383.
+LaTeX Warning: Reference `eq:vth_cmf' on page 38 undefined on input line 198.
 
 
 [38]
+
+LaTeX Warning: Reference `sec:clockless_event' on page 39 undefined on input li
+ne 296.
+
+
 [39]
 
-LaTeX Warning: Reference `fig:phase1_results' on page 40 undefined on input lin
-e 396.
+LaTeX Warning: Reference `sec:clockless_event' on page 40 undefined on input li
+ne 305.
 
 
-LaTeX Warning: Reference `sec:cmf_characterisation' on page 40 undefined on inp
-ut line 399.
+LaTeX Warning: Reference `fig:comp_schematics' on page 40 undefined on input li
+ne 306.
 
 
-LaTeX Warning: Reference `chap:intro' on page 40 undefined on input line 403.
+LaTeX Warning: Reference `fig:comp_transfer' on page 40 undefined on input line
+ 329.
+
+
+LaTeX Warning: Reference `tab:comp_comparison' on page 40 undefined on input li
+ne 332.
+
+
+LaTeX Warning: Reference `fig:comp_operation' on page 40 undefined on input lin
+e 333.
+
+
+LaTeX Warning: Reference `sec:clockless_event' on page 40 undefined on input li
+ne 376.
+
+
+LaTeX Warning: Reference `sec:clockless_event' on page 40 undefined on input li
+ne 383.
 
 
 [40]
-
-LaTeX Warning: Reference `fig:phase2_circuit' on page 41 undefined on input lin
-e 461.
-
-
 [41]
 
-LaTeX Warning: Reference `eq:headroom_phase2' on page 42 undefined on input lin
-e 500.
+LaTeX Warning: Reference `fig:phase1_results' on page 42 undefined on input lin
+e 395.
 
 
-[42]
-
-LaTeX Warning: Reference `fig:phase2_headroom' on page 43 undefined on input li
-ne 512.
+LaTeX Warning: Reference `sec:cmf_characterisation' on page 42 undefined on inp
+ut line 398.
 
 
-LaTeX Warning: Reference `eq:headroom_phase2' on page 43 undefined on input lin
-e 519.
+LaTeX Warning: Reference `chap:intro' on page 42 undefined on input line 402.
 
 
-LaTeX Warning: Reference `eq:headroom_phase2' on page 43 undefined on input lin
-e 519.
+Overfull \hbox (6.77417pt too wide) in paragraph at lines 406--406
+[]\T1/ptm/b/n/14.4 Second Ar-chi-tec-ture: The Com-ple-men-tary Dual-Input Flas
+h Con-
 
-
-LaTeX Warning: Reference `fig:phase3_circuit' on page 43 undefined on input lin
-e 547.
-
-
+[42 <./figures/phase1.pdf>]
 [43]
 
-LaTeX Warning: Reference `eq:headroom_phase2' on page 44 undefined on input lin
-e 557.
-
-
-LaTeX Warning: Reference `eq:headroom_phase3' on page 44 undefined on input lin
-e 567.
-
-
-LaTeX Warning: Reference `eq:headroom_phase2' on page 44 undefined on input lin
-e 567.
+LaTeX Warning: Reference `fig:phase2_circuit' on page 44 undefined on input lin
+e 460.
 
 
 [44]
 
-LaTeX Warning: Reference `subsec:resolution_power' on page 45 undefined on inpu
-t line 594.
+LaTeX Warning: Reference `eq:headroom_phase2' on page 45 undefined on input lin
+e 499.
 
 
-LaTeX Warning: Reference `subsec:cm_ota_analysis' on page 45 undefined on input
- line 608.
+LaTeX Warning: Reference `fig:phase2_headroom' on page 45 undefined on input li
+ne 512.
 
 
-LaTeX Warning: Reference `eq:gm_cm' on page 45 undefined on input line 619.
+LaTeX Warning: Reference `eq:headroom_phase2_expanded' on page 45 undefined on 
+input line 514.
+
+
+LaTeX Warning: Reference `eq:headroom_phase2_expanded' on page 45 undefined on 
+input line 524.
+
+
+LaTeX Warning: Reference `eq:headroom_phase2_expanded' on page 45 undefined on 
+input line 524.
 
 
 [45]
 
-LaTeX Warning: Reference `eq:freq_5t' on page 46 undefined on input line 643.
+LaTeX Warning: Reference `fig:bulk_driven_response' on page 46 undefined on inp
+ut line 562.
 
 
-LaTeX Warning: Reference `eq:sr_5t' on page 46 undefined on input line 643.
-
-
-LaTeX Warning: Reference `eq:freq_cm' on page 46 undefined on input line 644.
-
-
-LaTeX Warning: Reference `eq:sr_cm' on page 46 undefined on input line 644.
-
-
-LaTeX Warning: Reference `eq:headroom_diff_approx' on page 46 undefined on inpu
-t line 653.
-
-
-LaTeX Warning: Reference `eq:gm_5t' on page 46 undefined on input line 662.
-
-
-LaTeX Warning: Reference `subsec:slope_overload' on page 46 undefined on input 
-line 670.
-
-
-LaTeX Warning: Reference `subsec:5t_ota' on page 46 undefined on input line 672
+LaTeX Warning: Reference `chap:trimming' on page 46 undefined on input line 562
 .
 
 
-[46]
-
-LaTeX Warning: Reference `sec:design_specs' on page 47 undefined on input line 
-699.
+LaTeX Warning: Reference `fig:hyst_corner' on page 46 undefined on input line 5
+62.
 
 
-[47]
+Overfull \hbox (2.0444pt too wide) in paragraph at lines 562--563
+[]\T1/ptm/m/n/10.95 The dif-fi-culty ap-peared across pro-cess cor-ners. The tr
+anscon-duc-tance boost re-lies on a positive-
 
-LaTeX Warning: Reference `chap:trimming' on page 48 undefined on input line 714
-.
+[46 <./figures/phase2.pdf>]
 
-
-LaTeX Warning: Reference `chap:Benchmarking' on page 48 undefined on input line
- 714.
-
-
-LaTeX Warning: Reference `chap:Benchmarking' on page 48 undefined on input line
- 725.
+LaTeX Warning: Reference `fig:phase3_circuit' on page 47 undefined on input lin
+e 578.
 
 
-[48]
+[47 <./figures/corners_waveform_zoom.pdf>]
 
-LaTeX Warning: Reference `fig:dnl_inl_comparison' on page 49 undefined on input
- line 727.
-
-
-LaTeX Warning: Reference `tab:untrimmed_corners' on page 49 undefined on input 
-line 737.
+LaTeX Warning: Reference `eq:headroom_phase2' on page 48 undefined on input lin
+e 588.
 
 
-LaTeX Warning: Reference `eq:trip_point' on page 49 undefined on input line 737
-.
+[48 <./figures/hysteresis_corner.pdf>]
+
+LaTeX Warning: Reference `eq:headroom_phase3' on page 49 undefined on input lin
+e 598.
+
+
+LaTeX Warning: Reference `eq:headroom_phase2' on page 49 undefined on input lin
+e 598.
+
+
+LaTeX Warning: Reference `subsec:resolution_power' on page 49 undefined on inpu
+t line 625.
+
+
+LaTeX Warning: Reference `subsec:cm_ota_analysis' on page 49 undefined on input
+ line 639.
 
 
 [49]
+
+LaTeX Warning: Reference `eq:gm_cm' on page 50 undefined on input line 650.
+
+
+LaTeX Warning: Reference `eq:freq_5t' on page 50 undefined on input line 674.
+
+
+LaTeX Warning: Reference `eq:sr_5t' on page 50 undefined on input line 674.
+
+
+LaTeX Warning: Reference `eq:freq_cm' on page 50 undefined on input line 675.
+
+
+LaTeX Warning: Reference `eq:sr_cm' on page 50 undefined on input line 675.
+
+
+LaTeX Warning: Reference `eq:headroom_diff_approx' on page 50 undefined on inpu
+t line 684.
+
+
+LaTeX Warning: Reference `eq:gm_5t' on page 50 undefined on input line 693.
+
+
+LaTeX Warning: Reference `subsec:slope_overload' on page 50 undefined on input 
+line 701.
+
+
+LaTeX Warning: Reference `fig:bode_async' on page 50 undefined on input line 70
+3.
+
+
 [50]
 
-LaTeX Warning: Reference `subsec:5t_ota' on page 51 undefined on input line 812
+LaTeX Warning: Reference `subsec:5t_ota' on page 51 undefined on input line 710
 .
 
 
-LaTeX Warning: Reference `eq:p_total_model' on page 51 undefined on input line 
-830.
+[51 <./figures/bode_plot.pdf>]
+
+LaTeX Warning: Reference `sec:design_specs' on page 52 undefined on input line 
+737.
 
 
-[51]
+[52]
 
-LaTeX Warning: Reference `chap:lit_review' on page 52 undefined on input line 8
-32.
-
-
-LaTeX Warning: Reference `sec:async_logic' on page 52 undefined on input line 8
-41.
-
-
-LaTeX Warning: Reference `eq:headroom_diff_approx' on page 52 undefined on inpu
-t line 843.
-
-
-LaTeX Warning: Reference `tab:untrimmed_corners' on page 52 undefined on input 
-line 843.
-
-
-LaTeX Warning: Reference `chap:trimming' on page 52 undefined on input line 843
+LaTeX Warning: Reference `chap:trimming' on page 53 undefined on input line 752
 .
 
-)
-[52] (trimming.tex
-Chapter 5.
 
-LaTeX Warning: Reference `chap:async' on page 53 undefined on input line 4.
+LaTeX Warning: Reference `chap:Benchmarking' on page 53 undefined on input line
+ 752.
 
 
-LaTeX Warning: Reference `chap:async' on page 53 undefined on input line 6.
-
-
-LaTeX Warning: Reference `eq:trip_point' on page 53 undefined on input line 8.
-
-
-LaTeX Warning: Reference `sec:calibration' on page 53 undefined on input line 1
-4.
-
-
-LaTeX Warning: Reference `subsec:ladder_trimming' on page 53 undefined on input
- line 17.
-
-
-LaTeX Warning: Reference `chap:Conclusions' on page 53 undefined on input line 
-23.
-
-
-LaTeX Warning: Reference `sec:calibration' on page 53 undefined on input line 2
-7.
-
-
-LaTeX Warning: Reference `subsec:static_trimming' on page 53 undefined on input
- line 35.
-
-
-LaTeX Warning: Reference `sec:corner_dependence' on page 53 undefined on input 
-line 50.
+LaTeX Warning: Reference `chap:Benchmarking' on page 53 undefined on input line
+ 763.
 
 
 [53]
 
-LaTeX Warning: Reference `eq:trip_point' on page 54 undefined on input line 89.
+LaTeX Warning: Reference `fig:dnl_inl_comparison' on page 54 undefined on input
+ line 765.
 
 
-
-[54]
-
-LaTeX Warning: Reference `chap:async' on page 55 undefined on input line 117.
+LaTeX Warning: Reference `tab:untrimmed_corners' on page 54 undefined on input 
+line 775.
 
 
+LaTeX Warning: Reference `eq:trip_point' on page 54 undefined on input line 775
+.
+
+
+[54 <./figures/dnl_typical.png> <./figures/inl_typical.png>]
 [55]
 
-LaTeX Warning: Reference `chap:Benchmarking' on page 56 undefined on input line
+LaTeX Warning: Reference `eq:p_total_model' on page 56 undefined on input line 
+868.
+
+
+LaTeX Warning: Reference `chap:lit_review' on page 56 undefined on input line 8
+70.
+
+
+[56]
+
+LaTeX Warning: Reference `sec:async_logic' on page 57 undefined on input line 8
+79.
+
+
+LaTeX Warning: Reference `eq:headroom_diff_approx' on page 57 undefined on inpu
+t line 881.
+
+
+LaTeX Warning: Reference `tab:untrimmed_corners' on page 57 undefined on input 
+line 881.
+
+
+LaTeX Warning: Reference `chap:trimming' on page 57 undefined on input line 881
+.
+
+)
+[57] (trimming.tex
+Chapter 5.
+
+LaTeX Warning: Reference `chap:async' on page 58 undefined on input line 4.
+
+
+LaTeX Warning: Reference `chap:async' on page 58 undefined on input line 6.
+
+
+LaTeX Warning: Reference `eq:trip_point' on page 58 undefined on input line 8.
+
+
+LaTeX Warning: Reference `sec:calibration' on page 58 undefined on input line 1
+4.
+
+
+LaTeX Warning: Reference `subsec:ladder_trimming' on page 58 undefined on input
+ line 17.
+
+
+LaTeX Warning: Reference `chap:Conclusions' on page 58 undefined on input line 
+23.
+
+
+LaTeX Warning: Reference `sec:calibration' on page 58 undefined on input line 2
+7.
+
+
+LaTeX Warning: Reference `subsec:static_trimming' on page 58 undefined on input
+ line 35.
+
+
+LaTeX Warning: Reference `sec:corner_dependence' on page 58 undefined on input 
+line 50.
+
+
+[58]
+
+LaTeX Warning: Reference `eq:trip_point' on page 59 undefined on input line 89.
+
+
+
+[59]
+
+LaTeX Warning: Reference `chap:async' on page 60 undefined on input line 117.
+
+
+[60]
+
+LaTeX Warning: Reference `chap:Benchmarking' on page 61 undefined on input line
  180.
 
 
-LaTeX Warning: Reference `sec:offline_strategy' on page 56 undefined on input l
+LaTeX Warning: Reference `sec:offline_strategy' on page 61 undefined on input l
 ine 185.
 
 
-LaTeX Warning: Reference `tab:trimming_vectors' on page 56 undefined on input l
+LaTeX Warning: Reference `tab:trimming_vectors' on page 61 undefined on input l
 ine 187.
 
 
 Underfull \hbox (badness 1112) in paragraph at lines 204--205
 []\T1/ptm/m/n/10 3:0.1,  4:0.2,  5:0.2,  11:0.1,
 
-LaTeX Warning: Reference `app:veriloga' on page 56 undefined on input line 213.
+LaTeX Warning: Reference `app:veriloga' on page 61 undefined on input line 213.
 
 
 
-LaTeX Warning: Reference `tab:trimming_vectors' on page 56 undefined on input l
+LaTeX Warning: Reference `tab:trimming_vectors' on page 61 undefined on input l
 ine 216.
-
-
-[56]
-
-LaTeX Warning: Reference `chap:async' on page 57 undefined on input line 228.
-
-
-LaTeX Warning: Reference `sec:calibration' on page 57 undefined on input line 2
-28.
-
-
-LaTeX Warning: Reference `tab:trimming_vectors' on page 57 undefined on input l
-ine 228.
-
-
-LaTeX Warning: Reference `app:veriloga' on page 57 undefined on input line 228.
-
-
-
-LaTeX Warning: Reference `chap:Benchmarking' on page 57 undefined on input line
- 228.
-
-)
-[57] (chapter5.tex
-Chapter 6.
-
-LaTeX Warning: Reference `chap:trimming' on page 58 undefined on input line 4.
-
-
-LaTeX Warning: Reference `chap:synchronous' on page 58 undefined on input line 
-4.
-
-
-LaTeX Warning: Reference `chap:async' on page 58 undefined on input line 9.
-
-
-LaTeX Warning: Reference `subsec:5t_ota' on page 58 undefined on input line 11.
-
-
-
-[58]
-
-LaTeX Warning: Reference `fig:reconstruction_time' on page 59 undefined on inpu
-t line 25.
-
-
-LaTeX Warning: Reference `fig:fft_spectrum' on page 59 undefined on input line 
-25.
-
-
-LaTeX Warning: Reference `fig:dynamic_curves' on page 59 undefined on input lin
-e 35.
-
-
-LaTeX Warning: Reference `subsec:static_ramp' on page 59 undefined on input lin
-e 45.
-
-
-[59]
-
-LaTeX Warning: Reference `tab:dynamic_results' on page 60 undefined on input li
-ne 47.
-
-
-LaTeX Warning: Reference `chap:lit_review' on page 60 undefined on input line 4
-7.
-
-
-LaTeX Warning: Reference `chap:trimming' on page 60 undefined on input line 73.
-
-
-
-[60]
-
-LaTeX Warning: Reference `sec:simulation_setup' on page 61 undefined on input l
-ine 78.
-
-
-LaTeX Warning: Reference `subsec:slope_overload' on page 61 undefined on input 
-line 80.
-
-
-LaTeX Warning: Reference `tab:static_ramp' on page 61 undefined on input line 8
-0.
-
-
-LaTeX Warning: Reference `fig:static_vs_ramp' on page 61 undefined on input lin
-e 101.
-
-
-LaTeX Warning: Reference `chap:trimming' on page 61 undefined on input line 113
-.
-
-
-LaTeX Warning: Reference `subsec:phase3_results' on page 61 undefined on input 
-line 113.
-
-
-LaTeX Warning: Reference `tab:static_linearity_summary' on page 61 undefined on
- input line 113.
 
 
 [61]
 
-LaTeX Warning: Reference `chap:Conclusions' on page 62 undefined on input line 
-135.
+LaTeX Warning: Reference `chap:async' on page 62 undefined on input line 228.
 
 
-LaTeX Warning: Reference `chap:trimming' on page 62 undefined on input line 142
-.
+LaTeX Warning: Reference `sec:calibration' on page 62 undefined on input line 2
+28.
 
 
-[62]
-
-LaTeX Warning: Reference `fig:mc_dnl_hist' on page 63 undefined on input line 1
-65.
+LaTeX Warning: Reference `tab:trimming_vectors' on page 62 undefined on input l
+ine 228.
 
 
-LaTeX Warning: Reference `chap:Conclusions' on page 63 undefined on input line 
-165.
+LaTeX Warning: Reference `app:veriloga' on page 62 undefined on input line 228.
+
+
+
+LaTeX Warning: Reference `chap:Benchmarking' on page 62 undefined on input line
+ 228.
+
+)
+[62] (chapter5.tex
+Chapter 6.
+
+LaTeX Warning: Reference `chap:trimming' on page 63 undefined on input line 4.
+
+
+LaTeX Warning: Reference `chap:synchronous' on page 63 undefined on input line 
+4.
+
+
+LaTeX Warning: Reference `chap:async' on page 63 undefined on input line 9.
+
+
+LaTeX Warning: Reference `subsec:static_ramp' on page 63 undefined on input lin
+e 11.
 
 
 [63]
 
-LaTeX Warning: Reference `tab:sync_results' on page 64 undefined on input line 
-187.
+LaTeX Warning: Reference `fig:reconstruction_time' on page 64 undefined on inpu
+t line 24.
 
 
-LaTeX Warning: Reference `chap:synchronous' on page 64 undefined on input line 
-187.
+LaTeX Warning: Reference `fig:fft_spectrum' on page 64 undefined on input line 
+24.
 
 
-LaTeX Warning: Reference `chap:async' on page 64 undefined on input line 187.
+LaTeX Warning: Reference `subsec:static_ramp' on page 64 undefined on input lin
+e 33.
 
 
-LaTeX Warning: Reference `subsec:resolution_power' on page 64 undefined on inpu
-t line 191.
+[64 <./figures/adc_reconstructed_vs_vin.pdf>]
+
+LaTeX Warning: Reference `tab:dynamic_results' on page 65 undefined on input li
+ne 35.
 
 
-LaTeX Warning: Reference `fig:power_scaling' on page 64 undefined on input line
- 191.
+LaTeX Warning: Reference `chap:lit_review' on page 65 undefined on input line 3
+5.
 
-
-LaTeX Warning: Reference `chap:lit_review' on page 64 undefined on input line 2
-01.
-
-
-[64]
 
 LaTeX Warning: Reference `sec:simulation_setup' on page 65 undefined on input l
-ine 207.
+ine 37.
 
 
-LaTeX Warning: Reference `eq:fomw' on page 65 undefined on input line 207.
+LaTeX Warning: Reference `chap:trimming' on page 65 undefined on input line 63.
 
 
-LaTeX Warning: Reference `tab:power_metrics_empty' on page 65 undefined on inpu
-t line 209.
 
-
-LaTeX Warning: Reference `tab:power_metrics_empty' on page 65 undefined on inpu
-t line 232.
-
-
-LaTeX Warning: Reference `fig:power_scaling' on page 65 undefined on input line
- 238.
-
-
-[65]
-
-LaTeX Warning: Reference `chap:synchronous' on page 66 undefined on input line 
-247.
-
-
-LaTeX Warning: Reference `sec:power_methodology' on page 66 undefined on input 
-line 247.
-
-
-LaTeX Warning: Reference `subsec:resolution_power' on page 66 undefined on inpu
-t line 249.
-
+[65 <./figures/fft_clean_async.pdf>]
 
 LaTeX Warning: Reference `sec:simulation_setup' on page 66 undefined on input l
-ine 249.
+ine 68.
 
 
-LaTeX Warning: Reference `sec:simulation_setup' on page 66 undefined on input l
-ine 249.
+LaTeX Warning: Reference `subsec:slope_overload' on page 66 undefined on input 
+line 70.
 
 
-LaTeX Warning: Reference `fig:sync_linearity' on page 66 undefined on input lin
-e 249.
+LaTeX Warning: Reference `tab:static_ramp' on page 66 undefined on input line 7
+0.
 
 
-LaTeX Warning: Reference `tab:sync_results' on page 66 undefined on input line 
-249.
+LaTeX Warning: Reference `chap:trimming' on page 66 undefined on input line 95.
 
 
-LaTeX Warning: Reference `chap:synchronous' on page 66 undefined on input line 
-259.
+
+LaTeX Warning: Reference `subsec:phase3_results' on page 66 undefined on input 
+line 95.
 
 
-LaTeX Warning: Reference `tab:sync_power_breakdown' on page 66 undefined on inp
-ut line 259.
+LaTeX Warning: Reference `tab:static_linearity_summary' on page 66 undefined on
+ input line 95.
 
 
 [66]
 
-LaTeX Warning: Reference `tab:state_of_the_art' on page 67 undefined on input l
-ine 317.
+LaTeX Warning: Reference `chap:Conclusions' on page 67 undefined on input line 
+117.
 
 
-LaTeX Warning: Reference `chap:synchronous' on page 67 undefined on input line 
-317.
-
-
-LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <5.47603> not available
-(Font)              size <5> substituted on input line 337.
-
-
-LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <4.44003> not available
-(Font)              size <5> substituted on input line 337.
-
-
-LaTeX Warning: Reference `sec:sync_results' on page 67 undefined on input line 
-347.
+LaTeX Warning: Reference `chap:trimming' on page 67 undefined on input line 124
+.
 
 
 [67]
+
+LaTeX Warning: Reference `fig:mc_dnl_hist' on page 68 undefined on input line 1
+46.
+
+
+LaTeX Warning: Reference `sec:calibration' on page 68 undefined on input line 1
+46.
+
+
+LaTeX Warning: Reference `chap:Conclusions' on page 68 undefined on input line 
+146.
+
+
 [68]
 
-LaTeX Warning: Reference `chap:lit_review' on page 69 undefined on input line 3
-49.
+LaTeX Warning: Reference `tab:sync_results' on page 69 undefined on input line 
+167.
 
 
-LaTeX Warning: Reference `sec:power_methodology' on page 69 undefined on input 
-line 351.
+LaTeX Warning: Reference `chap:synchronous' on page 69 undefined on input line 
+167.
+
+
+LaTeX Warning: Reference `chap:async' on page 69 undefined on input line 167.
 
 
 LaTeX Warning: Reference `subsec:resolution_power' on page 69 undefined on inpu
-t line 351.
+t line 171.
 
 
-LaTeX Warning: Reference `chap:intro' on page 69 undefined on input line 351.
+LaTeX Warning: Reference `fig:power_scaling' on page 69 undefined on input line
+ 171.
 
 
-LaTeX Warning: Reference `chap:intro' on page 69 undefined on input line 355.
+[69 <./figures/monte_carlo_dnl.pdf>]
 
-)
-[69] (chapter6.tex
-Chapter 7.
+LaTeX Warning: Reference `chap:lit_review' on page 70 undefined on input line 1
+81.
+
+
+LaTeX Warning: Reference `sec:simulation_setup' on page 70 undefined on input l
+ine 187.
+
+
+LaTeX Warning: Reference `eq:fomw' on page 70 undefined on input line 187.
+
+
+LaTeX Warning: Reference `tab:power_metrics_empty' on page 70 undefined on inpu
+t line 189.
+
+
+LaTeX Warning: Reference `tab:power_metrics_empty' on page 70 undefined on inpu
+t line 212.
+
+
+LaTeX Warning: Reference `fig:power_scaling' on page 70 undefined on input line
+ 218.
+
 
 [70]
+
+LaTeX Warning: Reference `chap:synchronous' on page 71 undefined on input line 
+227.
+
+
+LaTeX Warning: Reference `sec:power_methodology' on page 71 undefined on input 
+line 227.
+
+
+LaTeX Warning: Reference `fig:sync_linearity' on page 71 undefined on input lin
+e 227.
+
+
 [71]
 
-LaTeX Warning: Reference `chap:trimming' on page 72 undefined on input line 111
-.
+LaTeX Warning: Reference `subsec:resolution_power' on page 72 undefined on inpu
+t line 238.
 
 
-LaTeX Warning: Reference `tab:static_linearity_summary' on page 72 undefined on
- input line 115.
+LaTeX Warning: Reference `sec:simulation_setup' on page 72 undefined on input l
+ine 238.
 
 
-[72]
+LaTeX Warning: Reference `sec:simulation_setup' on page 72 undefined on input l
+ine 238.
 
-LaTeX Warning: Reference `chap:Benchmarking' on page 73 undefined on input line
- 139.
 
+LaTeX Warning: Reference `tab:sync_results' on page 72 undefined on input line 
+238.
+
+
+LaTeX Warning: Reference `tab:sync_power_breakdown' on page 72 undefined on inp
+ut line 238.
+
+
+[72 <./figures/adc_transfer_sync.pdf> <./figures/dnl_sync.pdf> <./figures/inl_s
+ync.pdf>]
+
+LaTeX Warning: Reference `chap:synchronous' on page 73 undefined on input line 
+241.
+
+
+LaTeX Warning: Reference `tab:sync_power_breakdown' on page 73 undefined on inp
+ut line 241.
+
+
+LaTeX Warning: Reference `chap:synchronous' on page 73 undefined on input line 
+243.
+
+
+LaTeX Warning: Reference `tab:state_of_the_art' on page 73 undefined on input l
+ine 294.
+
+
+LaTeX Warning: Reference `chap:synchronous' on page 73 undefined on input line 
+294.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <5.47603> not available
+(Font)              size <5> substituted on input line 314.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <4.44003> not available
+(Font)              size <5> substituted on input line 314.
+
+
+Overfull \hbox (5.35648pt too wide) in paragraph at lines 302--319
+ [][] 
 
 [73]
 
-LaTeX Warning: Reference `chap:trimming' on page 74 undefined on input line 190
+LaTeX Warning: Reference `sec:sync_results' on page 74 undefined on input line 
+324.
+
+
+LaTeX Warning: Reference `sec:simulation_setup' on page 74 undefined on input l
+ine 326.
+
+
+LaTeX Warning: Reference `tab:dynamic_results' on page 74 undefined on input li
+ne 326.
+
+
+LaTeX Warning: Reference `chap:lit_review' on page 74 undefined on input line 3
+28.
+
+
+[74]
+
+LaTeX Warning: Reference `sec:power_methodology' on page 75 undefined on input 
+line 330.
+
+
+[75]
+
+LaTeX Warning: Reference `chap:intro' on page 76 undefined on input line 334.
+
+)
+[76] (chapter6.tex
+Chapter 7.
+
+[77]
+[78]
+
+LaTeX Warning: Reference `chap:trimming' on page 79 undefined on input line 113
+.
+
+
+LaTeX Warning: Reference `tab:static_linearity_summary' on page 79 undefined on
+ input line 117.
+
+
+[79]
+
+LaTeX Warning: Reference `chap:Benchmarking' on page 80 undefined on input line
+ 141.
+
+
+[80]
+
+LaTeX Warning: Reference `chap:trimming' on page 81 undefined on input line 192
 .
 
 )
-[74]
+[81]
 (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/courier-scaled\t1pcrs.f
 d)
-[75]
+Overfull \hbox (2.28789pt too wide) in paragraph at lines 142--142
+\T1/ptm/m/n/10.95 Single-Stage CMOS OTA with En-hanced Transcon-duc-tance^^Q. I
+n: \T1/ptm/m/it/10.95 Elec-tron-ics \T1/ptm/m/n/10.95 11.17 (2022),
+
+[82]
 Overfull \hbox (13.80038pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2025
 . \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 /
  ISSCC49661 . 2025 . 10904766$[][]\T1/ptm/m/n/10.95 . 
 
-[76]
+[83]
 Overfull \hbox (6.83562pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/
 ptm/m/n/10.95 . 2024. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m
@@ -1240,12 +1297,12 @@ Overfull \hbox (20.31177pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Jaesuk Choi, Soon-Jae Kweon, and Hyun-tak Jeon. ^^P  Single
 -Stage CMOS Op-er-a-tional Transcon-
 
-[77]
+[84]
 Overfull \hbox (22.84404pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/n/10.95 Pipelined-SAR ADC with Cross-Stage Gain-Mismatch-Error-Shapin
 g Tech-nique and Negative-
 
-[78]
+[85]
 Overfull \hbox (6.83562pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/
 ptm/m/n/10.95 . 2023. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m
@@ -1265,8 +1322,8 @@ Overfull \hbox (2.51082pt too wide) in paragraph at lines 142--142
 . 2015. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 
 1109 / ISSCC . 2015 . 7063130$[][]\T1/ptm/m/n/10.95 . 
 
-[79]
-[80]
+[86]
+[87]
 Overfull \hbox (7.55891pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2022
 . \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 /
@@ -1281,14 +1338,14 @@ Overfull \hbox (1.57942pt too wide) in paragraph at lines 142--142
 . In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-en
 ce (ISSCC)\T1/ptm/m/n/10.95 . 2023.
 
-[81]
-[82]
+[88]
+[89]
 Overfull \hbox (5.09041pt too wide) in paragraph at lines 142--142
 \OT1/ztmcm/m/n/10.95 ^^A$$^^F$ \T1/ptm/m/n/10.95 ADC in 40nm CMOS^^Q. In: \T1/p
 tm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\
 T1/ptm/m/n/10.95 .
 
-[83]
+[90]
 Overfull \hbox (6.08362pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Sharvil Patil et al. ^^P  A 700MHz-BW ^^U164dBFS/Hz-Small-S
 ignal-NSD 703mW Continuous-
@@ -1297,7 +1354,7 @@ Overfull \hbox (10.29994pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Sourja Ray and Bang-Sup Song. ^^P  A 13b Lin-ear 40MS/s Pip
 elined ADC with Self-Configured
 
-[84]
+[91]
 Overfull \hbox (2.51082pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 
 . 2006. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 
@@ -1308,7 +1365,7 @@ Overfull \hbox (2.51082pt too wide) in paragraph at lines 142--142
 . 2006. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 
 1109 / ISSCC . 2006 . 1696120$[][]\T1/ptm/m/n/10.95 . 
 
-[85]
+[92]
 Overfull \hbox (1.82037pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/n/10.95 drive read chan-nel^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na
 -tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 1999.
@@ -1321,13 +1378,13 @@ Overfull \hbox (14.23299pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/n/10.95 Micro-Sensor Ap-pli-ca-tions^^Q. In: \T1/ptm/m/it/10.95 IEEE 
 In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 .
 
-[86]
+[93]
 Overfull \hbox (1.96727pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Jia-Ching Wang and Tai-Haur Kuo. ^^P  A 3-mW 2.7-GS/s 8b Su
 b-rang-ing ADC with Multiple-
 
-[87]
-[88]
+[94]
+[95]
 Overfull \hbox (6.0335pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Mingtao Zhan, Lu Jie, and Nan Sun. ^^P  A 10mW 10-ENoB 1GS/
 s Ring-Amp-Based Pipelined
@@ -1345,15 +1402,15 @@ Overfull \hbox (24.90707pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Yannan Zhang et al. ^^P  A 72GS/s 9b Time-Interleaved Pipel
 ine-SAR ADC Achiev-ing 55.3/49.3dB
 
-[89] (appendix1.tex
+[96] (appendix1.tex
 Appendix A.
 
-LaTeX Warning: Reference `chap:trimming' on page 90 undefined on input line 4.
+LaTeX Warning: Reference `chap:trimming' on page 97 undefined on input line 4.
 
 
-[90]
-[91])
-[92] (meec_thesis.aux (abstract.aux) (un-sdg.aux) (abbrevs.aux) (chapter1.aux)
+[97]
+[98])
+[99] (meec_thesis.aux (abstract.aux) (un-sdg.aux) (abbrevs.aux) (chapter1.aux)
 (chapter2.aux) (chapter4.aux) (chapter3.aux) (trimming.aux) (chapter5.aux)
 (chapter6.aux) (appendix1.aux))
 
@@ -1393,7 +1450,7 @@ e1/urw/symbol/usyr.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type
 /urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1
 /urw/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on meec_thesis.pdf (100 pages, 1766730 bytes).
+Output written on meec_thesis.pdf (107 pages, 2136945 bytes).
 Transcript written on meec_thesis.log.
 Latexmk: Getting log file 'meec_thesis.log'
 Latexmk: Examining 'meec_thesis.fls'
@@ -1433,16 +1490,16 @@ Latexmk: Error return from 'biber meec_thesis'
 I will add to its source list, anything cached from analysis of bcf file.
 Latexmk: Could not open biber log file 'meec_thesis.blg'
 Latexmk: Summary of warnings from last run of *latex:
-  Latex failed to resolve 170 reference(s)
+  Latex failed to resolve 177 reference(s)
 Latexmk: ====Undefined refs and citations with line #s in .tex file:
   Reference `fig:Sparse-time' on page 2 undefined on input line 40
-  Reference `chap:intro' on page 4 undefined on input line 6
-  Reference `fig:offset_gain_error' on page 6 undefined on input line 62
-  Reference `sec:async_vs_sync' on page 8 undefined on input line 105
-  Reference `fig:sar_arch' on page 9 undefined on input line 175
-  Reference `fig:pipeline_arch' on page 10 undefined on input line 246
-  Reference `fig:sigma_delta_arch' on page 11 undefined on input line 359
- And 163 more --- see log file 'meec_thesis.log'
+  Reference `chap:intro' on page 5 undefined on input line 6
+  Reference `fig:offset_gain_error' on page 7 undefined on input line 62
+  Reference `sec:async_vs_sync' on page 9 undefined on input line 105
+  Reference `fig:sar_arch' on page 10 undefined on input line 174
+  Reference `fig:sar_arch' on page 10 undefined on input line 174
+  Reference `fig:pipeline_arch' on page 11 undefined on input line 245
+ And 170 more --- see log file 'meec_thesis.log'
 Latexmk: Errors, so I did not complete making targets
 Collected error summary (may duplicate other messages):
   biber meec_thesis: Could not open biber log file 'meec_thesis.blg'
