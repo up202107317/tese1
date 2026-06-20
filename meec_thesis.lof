@@ -3,36 +3,34 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Time-sparse signal and sampling strategies}}{2}{figure.caption.7}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Offset and gain errors in ADC transfer function}}{7}{figure.caption.9}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Digital logic for level-crossing asynchronous ADC}}{13}{figure.caption.23}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Transistor-level schematic of the current-mirror current comparator.}}{17}{figure.caption.30}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Transistor-level schematic of the Traff current comparator.}}{18}{figure.caption.37}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Transistor-level schematic of the Lu Chen current comparator.}}{19}{figure.caption.44}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Transistor-level schematic of the hysteresis current comparator.}}{20}{figure.caption.51}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Transistor-level schematic of the Min and Kim current comparator.}}{21}{figure.caption.58}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Transistor-level schematic of the CC-II-based current comparator, with its internal operational amplifier subcircuit shown below.}}{23}{figure.caption.65}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Bulk-driven resistive ladder trimming for comparator offset calibration}}{25}{figure.caption.72}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Bulk-driven trimming effect on input pair threshold voltage}}{26}{figure.caption.73}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Walden FoM versus sampling frequency for representative ADCs}}{28}{figure.caption.80}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Energy per conversion versus publication year for representative ADCs}}{29}{figure.caption.86}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Top-level block diagram of the synchronous 4-bit Flash ADC \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{14}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Schematic of the StrongARM latch comparator \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{15}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Digital logic for level-crossing asynchronous ADC}}{18}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Transistor-level schematic of the current-mirror current comparator.}}{22}{figure.caption.32}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Transistor-level schematic of the Traff current comparator.}}{23}{figure.caption.39}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Transistor-level schematic of the Lu Chen current comparator.}}{24}{figure.caption.46}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Transistor-level schematic of the hysteresis current comparator.}}{25}{figure.caption.53}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Transistor-level schematic of the Min and Kim current comparator.}}{26}{figure.caption.60}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Transistor-level schematic of the CC-II-based current comparator, with its internal operational amplifier subcircuit shown below.}}{28}{figure.caption.67}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Bulk-driven resistive ladder trimming for comparator offset calibration}}{30}{figure.caption.74}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Bulk-driven trimming effect on input pair threshold voltage}}{31}{figure.caption.75}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Walden FoM versus sampling frequency for representative ADCs}}{33}{figure.caption.82}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Energy per conversion versus publication year for representative ADCs}}{34}{figure.caption.88}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Top-level block diagram of the synchronous 4-bit Flash ADC \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{34}{figure.caption.88}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Schematic of the StrongARM latch comparator \blx@tocontentsinit {0}\cite {flashadc_ref}.}}{34}{figure.caption.89}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Operating principle of the current-mirror Flash ADC (CMF-ADC): (a) equilibrium operation, (b) signal operation, and (c) current-to-code conversion with asymmetric mirror ratios.}}{39}{figure.caption.90}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Transient response of each simulated current comparator to the same input current step, showing the output voltage together with the input and reference currents against time, from which the propagation delay is measured.}}{44}{figure.caption.94}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Simulated operation of the first architecture. The five comparator outputs (top) follow a trapezoidal input crossing the $0.4$~V reference (bottom). The rising crossing is tracked sharply, but the falling transition lags well behind the input crossing, the slow-recovery asymmetry of the high-impedance current-mirror node.}}{45}{figure.caption.95}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Complementary dual-input current-mirror OTA of the second approach, with the function of each transistor annotated: NMOS and PMOS input pairs, tail sources, mirror loads and cross-coupled output branches.}}{47}{figure.caption.96}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Simulated DC response of the second-architecture stage. The complementary outputs (out\_nmos, out\_pmos) and the internal node voltages never reach the supply rails and the transfer is visibly non-linear, the headroom shortfall predicted by equation~\eqref {eq:headroom_phase2_expanded} at the $0.8$~V supply.}}{49}{figure.caption.97}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Response of the bulk-driven OTA follower across the four process corners (FF, FS, SF, SS). The output waveform diverges markedly between corners, most of all near the lower rail, the sensitivity that led to discarding the architecture.}}{50}{figure.caption.101}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Input-referred hysteresis of the bulk-driven OTA follower at the four process corners, measured under the $9$~MHz full-scale sinusoid, with the worst case marked at the slow SS corner.}}{51}{figure.caption.108}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Final architecture, a complementary pair of five-transistor OTAs with the function of each transistor annotated, including the low-voltage tail mirrors and the current-mirror active loads.}}{52}{figure.caption.115}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Open-loop magnitude and phase response of the complementary five-transistor OTA, showing the single dominant pole and the wide phase margin.}}{55}{figure.caption.122}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces DNL per code (left) and INL per transition (right) of the final architecture at the typical (TT) corner.}}{57}{figure.caption.126}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Operating principle of the current-mirror Flash ADC (CMF-ADC): (a) equilibrium operation, (b) signal operation, and (c) current-to-code conversion with asymmetric mirror ratios.}}{39}{figure.caption.90}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Transient response of each simulated current comparator to the same input current step, showing the output voltage together with the input and reference currents against time, from which the propagation delay is measured.}}{44}{figure.caption.94}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Simulated operation of the first architecture. The five comparator outputs (top) follow a trapezoidal input crossing the $0.4$~V reference (bottom). The rising crossing is tracked sharply, but the falling transition lags well behind the input crossing, the slow-recovery asymmetry of the high-impedance current-mirror node.}}{45}{figure.caption.95}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Complementary dual-input current-mirror OTA of the second approach, with the function of each transistor annotated: NMOS and PMOS input pairs, tail sources, mirror loads and cross-coupled output branches.}}{47}{figure.caption.96}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Simulated DC response of the second-architecture stage. The complementary outputs (out\_nmos, out\_pmos) and the internal node voltages never reach the supply rails and the transfer is visibly non-linear, the headroom shortfall predicted by equation~\eqref {eq:headroom_phase2_expanded} at the $0.8$~V supply.}}{49}{figure.caption.97}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Response of the bulk-driven OTA follower across the four process corners (FF, FS, SF, SS). The output waveform diverges markedly between corners, most of all near the lower rail, the sensitivity that led to discarding the architecture.}}{50}{figure.caption.101}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Input-referred hysteresis of the bulk-driven OTA follower at the four process corners, measured under the $9$~MHz full-scale sinusoid, with the worst case marked at the slow SS corner.}}{51}{figure.caption.108}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Final architecture, a complementary pair of five-transistor OTAs with the function of each transistor annotated, including the low-voltage tail mirrors and the current-mirror active loads.}}{52}{figure.caption.115}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Open-loop magnitude and phase response of the complementary five-transistor OTA, showing the single dominant pole and the wide phase margin.}}{55}{figure.caption.122}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces DNL per code (left) and INL per transition (right) of the final architecture at the typical (TT) corner.}}{57}{figure.caption.126}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Input sinusoid (Vin) and reconstructed converter output (ADC) over two input periods of the dynamic test.}}{68}{figure.caption.129}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces FFT spectrum of the reconstructed asynchronous Flash ADC output signal.}}{69}{figure.caption.130}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Monte Carlo distribution of the DNL of the code between two adjacent slicers (out$_0$ and out$_1$), with the $\pm 1$~LSB limits marked.}}{73}{figure.caption.135}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Static characterisation of the synchronous reference: (top) measured transfer function against the ideal staircase, (bottom left) DNL per code and (bottom right) INL per transition.}}{76}{figure.caption.137}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Input sinusoid (Vin) and reconstructed converter output (ADC) over two input periods of the dynamic test.}}{67}{figure.caption.129}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces FFT spectrum of the reconstructed asynchronous Flash ADC output signal.}}{68}{figure.caption.130}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Monte Carlo distribution of the DNL of the code between two adjacent slicers (out$_0$ and out$_1$), with the $\pm 1$~LSB limits marked.}}{72}{figure.caption.135}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Static characterisation of the synchronous reference: (top) measured transfer function against the ideal staircase, (bottom left) DNL per code and (bottom right) INL per transition.}}{75}{figure.caption.137}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

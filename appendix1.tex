@@ -1,7 +1,7 @@
 \chapter{Verilog-A Body Bias Trimming Model}
 \label{app:veriloga}
 
-This appendix lists the Verilog-A behavioural model used to apply the body bias trimming described in Chapter~\ref{chap:trimming}. The module exposes, for each of the fifteen slicers, one PMOS bulk output (\texttt{pbulk0}--\texttt{pbulk14}) and one NMOS bulk output (\texttt{nbulk0}--\texttt{nbulk14}). Based on the \texttt{process} parameter, which selects the active process corner, it drives each bulk terminal to the corresponding correction voltage. Bulks that are not adjusted for the selected corner remain at their default values, \texttt{VP\_DEFAULT}~$=0.8$~V for the PMOS wells and \texttt{VN\_DEFAULT}~$=0.0$~V for the NMOS bulks, which corresponds to no body effect and is the condition used at the typical corner.
+This appendix lists the Verilog-A behavioural model used to apply the body bias trimming described in Section~\ref{chap:trimming}. The module exposes, for each of the fifteen slicers, one PMOS bulk output (\texttt{pbulk0}--\texttt{pbulk14}) and one NMOS bulk output (\texttt{nbulk0}--\texttt{nbulk14}). Based on the \texttt{process} parameter, which selects the active process corner, it drives each bulk terminal to the corresponding correction voltage. Bulks that are not adjusted for the selected corner remain at their default values, \texttt{VP\_DEFAULT}~$=0.8$~V for the PMOS wells and \texttt{VN\_DEFAULT}~$=0.0$~V for the NMOS bulks, which corresponds to no body effect and is the condition used at the typical corner.
 
 \begin{lstlisting}[style=verilogA, caption={Verilog-A model of the per-slicer body bias trimming controller.}, label={lst:veriloga}]
 `include "constants.vams"

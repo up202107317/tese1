@@ -1,11 +1,11 @@
 
 
-\chapter{Synchronous Reference Flash ADC} \label{chap:synchronous}
+\section{Synchronous Reference Flash ADC} \label{chap:synchronous}
 
-The literature review closed with the choice of an asynchronous Flash topology for this work. Before that converter is developed, this chapter establishes the yardstick it will be measured against, a synchronous 4-bit Flash ADC, re-implemented in the same technology and supply conditions. The chapter explains why this particular design was selected, describes its architecture, its StrongARM comparators and its clock generation, and defines the role it plays in the rest of the dissertation. Its measured results appear in Chapter~\ref{chap:Benchmarking}, side by side with those of the asynchronous converter proposed in Chapter~\ref{chap:async}.
+This work benchmarks the proposed asynchronous converter against a synchronous Flash ADC of the same resolution and technology. This section introduces that reference, a synchronous 4-bit Flash ADC re-implemented in the same technology and supply conditions, and defines the role it plays in the rest of the dissertation. It explains why this particular design was selected, and describes its architecture, its StrongARM comparators and its clock generation. Its measured results appear in Chapter~\ref{chap:Benchmarking}, side by side with those of the asynchronous converter proposed in Chapter~\ref{chap:async}.
 
 %                      -
-\section{Motivation for Architectural Selection}
+\subsection{Motivation for Architectural Selection}
 %                      -
 
 Benchmarking a novel converter architecture requires a reference point that is close enough structurally to make the comparison genuinely informative. The synchronous reference used in this work is a 4-bit Flash ADC with rail-to-rail comparators, originally presented in \cite{flashadc_ref} and designed in a 65-nm CMOS process.
@@ -19,7 +19,7 @@ The fundamental difference, and the one this comparison is intended to illuminat
 
 
 %                      -
-\section{Architecture Overview}
+\subsection{Architecture Overview}
 %                      -
 
 A Flash ADC resolves an analogue input voltage in a single conversion step by comparing it simultaneously against $2^N - 1$ evenly spaced reference levels, where $N$ is the number of output bits. For a 4-bit converter, this means 15 comparators operate in parallel at every active clock edge, each producing a binary decision about whether the input exceeds its assigned threshold. The outputs of all 15 comparators form a thermometer code (a sequence of ones followed by zeros, with no transition other than the boundary between them), which an encoder then maps to the final 4-bit binary word.
@@ -48,10 +48,10 @@ Since all comparators are driven by the same clock, every decision is made withi
 
 
 %                      -
-\section{The StrongARM Latch Comparator}
+\subsection{The StrongARM Latch Comparator}
 %                      -
 
-\subsection{Circuit Description and Operating Principle}
+\subsubsection{Circuit Description and Operating Principle}
 
 The comparator used in this architecture is the StrongARM latch, a dynamic topology that has become something of a standard reference in both high-speed receiver design and data converter circuits \cite{razavi_strongarm}. It is widely adopted for good reasons, high regeneration speed, good noise performance and essentially zero static power dissipation, all of which matter in a Flash ADC where 15 comparators operate in parallel.
 
@@ -76,7 +76,7 @@ The evaluation phase occurs when the clock rises, the tail transistor turns on a
 
 Since current only flows during the evaluation phase, and only briefly at that, the average power consumption is directly proportional to the clock frequency. This makes the StrongARM latch well suited to low-power converter design, reducing the sampling rate reduces the power linearly.
 
-\subsection{Rail-to-Rail Input Range}
+\subsubsection{Rail-to-Rail Input Range}
 
 A key property of this comparator implementation is its ability to correctly resolve input voltages across the full supply range, from $V_{SS}$ to $V_{DD}$. In a Flash ADC, the comparators assigned to the top and bottom reference levels must operate very close to the supply rails, and a comparator that loses sensitivity or gain in those regions would introduce nonlinearity at the extremes of the transfer characteristic, degrading the integral linearity of the converter. The rail-to-rail design ensures this does not happen, maintaining consistent performance across the entire input range.
 
@@ -84,7 +84,7 @@ The asynchronous front-end will pursue the same goal with a complementary input 
 
 
 %                      -
-\section{Clock Generation}
+\subsection{Clock Generation}
 %                      -
 
 Since the architecture is synchronous, a stable clock signal must drive the comparator array and determine the conversion instants. For simulation purposes, the clock was generated using a ring oscillator, which provides a compact and realistic on-chip clock source without requiring an ideal external generator.
@@ -96,7 +96,7 @@ A $\times$24 final buffer is a reasonable and representative choice for modellin
 The complete clock path used in simulation is therefore the ring oscillator, followed by the buffer chain ($\times$2 fanout per stage), the $\times$24 output buffer and, finally, the comparator array.
 
 %                      -
-\section{Chapter Summary}
+\subsection{Summary}
 %                      -
 
-This chapter fixed the reference against which the proposed converter will be judged, a 4-bit synchronous Flash ADC from \cite{flashadc_ref}, re-implemented in 16~nm at $0.8$~V. The reference shares the Flash topology, the resolution (fifteen comparison elements) and the low-power orientation of the asynchronous design, and differs from it in the property under study, the global clock, plus one declared asymmetry in input range. Its comparators are StrongARM latches, clocked through a ring oscillator and a tapered buffer chain whose $\times 24$ output stage models a realistic clock route. The power measurement methodology applied to this reference, together with its simulated performance figures, is presented alongside the results of the proposed asynchronous design in Chapter~\ref{chap:Benchmarking}, so that the two converters are characterised and compared within a single framework. The next chapter develops the asynchronous converter itself.
+This section fixed the reference against which the proposed converter will be judged, a 4-bit synchronous Flash ADC from \cite{flashadc_ref}, re-implemented in 16~nm at $0.8$~V. The reference shares the Flash topology, the resolution (fifteen comparison elements) and the low-power orientation of the asynchronous design, and differs from it in the property under study, the global clock, plus one declared asymmetry in input range. Its comparators are StrongARM latches, clocked through a ring oscillator and a tapered buffer chain whose $\times 24$ output stage models a realistic clock route. The power measurement methodology applied to this reference, together with its simulated performance figures, is presented alongside the results of the proposed asynchronous design in Chapter~\ref{chap:Benchmarking}, so that the two converters are characterised and compared within a single framework. The asynchronous converter it benchmarks is developed in Chapter~\ref{chap:async}.
