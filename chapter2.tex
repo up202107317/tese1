@@ -3,7 +3,7 @@
 % CAPÍTULO 2: REVISÃO DA LITERATURA
 % =================================================================
 \chapter{Literature Review} \label{chap:lit_review}
-Chapter~\ref{chap:intro} defined the goal. A converter that spends power only when the input produces events. This chapter assembles the background needed to design one. It presents the state-of-the-art in Analog-to-Digital Converters, reviewing theoretical foundations and analysing survey data to justify the proposed architecture.
+Chapter~\ref{chap:intro} defined the goal. A converter that spends power only when the input produces events. This chapter assembles the background needed to design one. It presents the state-of-the-art in ADCs, reviewing theoretical foundations and analysing survey data to justify the proposed architecture.
 
 Subsequent sections focus on asynchronous and level-crossing sampling strategies, including prior work on event-driven converters and their advantages for time-sparse signals. The chapter closes with a review of calibration and trimming techniques for comparator non-idealities, which is the reference framework for the bulk-driven body bias trimming mechanism proposed later in this work.
 
@@ -76,13 +76,7 @@ Figures of merit (FoMs) provide normalised metrics to compare ADC performance ac
 \begin{equation}
     \mathrm{FoM}_W = \frac{\mathrm{Power}}{2^{\mathrm{ENOB}} \cdot f_s}
 \end{equation}
-where lower values indicate better performance.
-
-The Schreier FoM extends this by incorporating bandwidth effectiveness for oversampled converters:
-\begin{equation}
-    \mathrm{FoM}_S = \mathrm{SNDR} + 10\log_{10}\left(\frac{\mathrm{BW}}{\mathrm{Power}}\right)
-\end{equation}
-with higher values representing superior performance.
+where lower values indicate better performance. This is the figure of merit used throughout this work.
 
 \subsection{Metrics Adaptation for Asynchronous Systems}
 

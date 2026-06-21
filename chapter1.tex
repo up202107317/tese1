@@ -22,11 +22,11 @@
 
 This chapter introduces the topic of the dissertation. It presents the context, the research question and the motivation for the work, states the objectives and the scope, and ends with the structure of the document.
 
-Smart devices are now everywhere, a development usually grouped under the name Internet of Things (IoT). The processing and storage of information are digital and have benefited from the scaling described by Moore's law, but the physical world is analog: temperature, sound and biological potentials are continuous in both time and amplitude. The Analog-to-Digital Converter (ADC) is the interface between the two domains, and every digital system that measures the real world depends on one \cite{johns_martin_2012}.
+Smart devices are now everywhere, a development usually grouped under the name Internet of Things (IoT). The processing and storage of information are digital and have benefited from the scaling described by Moore's law, but the physical world is analog, temperature, sound and pressure are continuous in both time and amplitude. The Analog-to-Digital Converter (ADC) is the interface between the two domains, and every digital system that measures the real world depends on one \cite{johns_martin_2012}.
 
 Energy efficiency has moved from a secondary performance metric to a primary design constraint. Many sensors run on small batteries or on harvested energy, so every joule dissipated shortens the autonomy of the system. The data conversion block is frequently the largest consumer in these interfaces, particularly when the digital transmission is duty-cycled and the radio spends most of its time off.
 
-Many real-world signals are also sparse and non-periodic. Voice activity, machine vibration and environmental monitoring data arrive in bursts: short periods of high information content followed by long intervals in which nothing changes.
+Many real-world signals are also sparse and non-periodic. Voice activity, machine vibration and environmental monitoring data arrive in bursts, short periods of high information content followed by long intervals in which nothing changes.
 
 Traditional data conversion, based on uniform sampling at the rate dictated by the Nyquist-Shannon theorem \cite{shannon_1949}, treats these silent periods exactly like the active ones. The system dissipates power to generate redundant samples that carry no new information. Exploiting this sparsity is the most direct route to ultra-low-power conversion interfaces.
 
@@ -44,7 +44,7 @@ The energy wasted in large IoT deployments, together with the poor match between
 
 \subsection{Inefficiency of Synchronous Sampling}
 
-Traditional Analog-to-Digital Converters sample at a fixed rate set by a global clock ($f_s$). The Nyquist-Shannon sampling theorem \cite{shannon_1949} ties this rate to the maximum bandwidth of the signal, $f_s \geq~2B$. In many real applications, however, the signal is active for only a fraction of the time, so its true information content is far below what the bandwidth alone suggests.
+Traditional ADCs sample at a fixed rate set by a global clock ($f_s$). The Nyquist-Shannon sampling theorem \cite{shannon_1949} ties this rate to the maximum bandwidth of the signal, $f_s \geq~2B$. In many real applications, however, the signal is active for only a fraction of the time, so its true information content is far below what the bandwidth alone suggests.
 
 The cost of this mismatch follows from the expression for dynamic power consumption in CMOS circuits \cite{baker_cmos_2010}:
 \begin{equation}
@@ -85,16 +85,14 @@ where:
 Given the limitations of synchronous data conversion for time-sparse sensor signals, the primary objective of this work is to design and implement an ADC that exploits signal inactivity to reduce power consumption.
 
 
-This overall goal breaks down into four specific objectives:
+This overall goal breaks down into three specific objectives:
 
 \begin{enumerate}
-  \item Asynchronous Architecture Design: To develop the circuit-level design of an asynchronous Flash ADC.
-  
-  \item Offline Trimming Implementation: To implement an offline trimming mechanism capable of compensating the deterministic trip-point deviations of the comparison stage across process corners.
+  \item Circuit Proposal and Typical Validation. To implement a valid asynchronous Flash ADC circuit proposal and validate it under typical operating conditions.
 
-  \item System Validation: To validate the complete design through transistor-level analog and mixed-signal co-simulation, extracting both the static linearity and the dynamic performance metrics of the converter.
+  \item Trimming Implementation. To implement a trimming approach for the proposed schematic, which may be based on a hardware-description-language model.
 
-  \item Performance Benchmarking: To quantify the energy efficiency of the proposed design using well known figures of merit. The results must be compared against the current state of the art synchronous ADCs and relevant asynchronous solutions.
+  \item Complete System Validation. To validate the complete ADC system, the schematic together with the trimming, through analog and mixed-signal co-simulation.
 \end{enumerate}
 \section{Document Structure} \label{sec:document_structure}
 

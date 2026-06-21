@@ -5,7 +5,7 @@ The preceding section ended with a converter that is linear at the typical corne
 
 The slicer-based quantisation stage introduced earlier in this chapter
 defines each decision threshold exclusively through the PMOS-to-NMOS sizing
-ratio of a CMOS inverter, as expressed by equation~(\ref{eq:trip_point}). This
+ratio of the slicer, as expressed by equation~(\ref{eq:trip_point}). This
 makes the converter linearity directly dependent on the effective drive
 strengths of the two device types, and therefore directly exposed to
 fabrication process variability. This section describes the offline trimming
@@ -28,7 +28,7 @@ Among the trimming techniques surveyed in Section~\ref{sec:calibration},
 several alternatives were considered before adopting body biasing. Internal
 resistive loading, in which a digitally switched resistor bank modulates the
 load of each comparator branch, is well suited to differential comparator
-stages but does not map naturally onto the slicer inverters of the proposed
+stages but does not map naturally onto the slicers of the proposed
 architecture, which have no explicit load element to modulate; introducing one
 would add capacitance to the only high-speed node of each slicer and degrade
 its switching delay. Dynamic offset-cancellation schemes such as auto-zeroing
@@ -85,23 +85,19 @@ $|V_{SB}|$ below its nominal value or, in technologies that permit it,
 forward-biasing the body junction lowers $|V_t|$, a condition known as
 forward body biasing (FBB).
 
-A direct consequence for the slicer inverters in the proposed architecture is
-that each cell's trip point, given by equation~(\ref{eq:trip_point}),
-depends on the threshold voltages of both transistors composing the inverter.
-By substituting the body-bias-dependent expressions for $V_{tn}$ and $|V_{tp}|$
-into the inverter threshold equation and expanding to first order, it is
-apparent that a positive shift in $V_{tn}$ achieved by applying RBB to the
-NMOS weakens the pull-down network relative to the pull-up network and
-therefore raises $V_M$, while an equivalent increase in $|V_{tp}|$ weakens
-the pull-up network and lowers $V_M$. This asymmetry between the NMOS and
-PMOS body bias responses provides two independent degrees of freedom for
-adjusting the trip point of each slicer: the NMOS bulk voltage controls the
-effective strength of the pull-down path, while the PMOS bulk voltage
-(equivalently, the N-well potential) controls the pull-up path. Applying
-corrections simultaneously to both body terminals therefore allows independent
-tuning of the trip point magnitude and of the symmetry of the transition
-characteristic, providing a richer correction space than either terminal alone
-could offer.
+A direct consequence for the slicers in the proposed architecture is that
+each cell's trip point depends on the threshold voltages, and hence the drive
+strengths, of its PMOS source and NMOS sink. Forward-biasing the PMOS, by
+lowering its N-well below $V_{DD}$, reduces $|V_{tp}|$ and strengthens the
+source, which moves that slicer's trip to a lower input voltage, so the output
+crosses the logic level earlier. Forward-biasing the NMOS, by raising its bulk
+above ground, reduces $V_{tn}$ and strengthens the sink, which moves the trip
+to a higher input voltage, so the crossing happens later. The two body
+terminals therefore act as two independent degrees of freedom, the PMOS well
+voltage pulling the trip point down and the NMOS bulk voltage pushing it up.
+Applying corrections to both allows independent tuning of the trip-point
+position and of the symmetry of the transition characteristic, a richer
+correction space than either terminal alone could offer.
 
 \subsection{Process Corner Dependence and Motivation for Trimming}
 \label{sec:corner_dependence}
@@ -116,16 +112,16 @@ which circuit performance is most likely to degrade.
 
 For the slicer-based thermometer coder described in Chapter~\ref{chap:async},
 the impact of process variation is particularly significant because the
-thermometer code relies on the precise relative ordering of the inverter trip
+thermometer code relies on the precise relative ordering of the slicer trip
 points across the output bank. At the typical corner, the ratios $r_k$
 assigned to each slicer place the trip points at the intended positions
 relative to the reference level of $0.4$~V, and the resulting differential
 non-linearity (DNL) and integral non-linearity (INL) of the converter remain
 within specification. At non-typical corners, however, the effective
 transistor strengths deviate from their nominal values in a manner that is not
-uniform across the bank: since the PMOS and NMOS devices within each slicer
+uniform across the bank. Since the PMOS and NMOS devices within each slicer
 are affected differently depending on the corner, the trip point of each
-inverter shifts by a cell-dependent amount, breaking the intended monotonic
+slicer shifts by a cell-dependent amount, breaking the intended monotonic
 spacing and introducing non-linearities that manifest as elevated DNL and INL.
 
 At the SS corner, both NMOS and PMOS threshold voltages increase, reducing the
@@ -135,7 +131,7 @@ trip point, the body effect coefficients $\gamma_n$ and $\gamma_p$ and the
 nominal threshold values are in general not matched between the two device
 types, so the net shift in $V_M$ is non-zero and, more importantly,
 cell-dependent due to the different sizing ratios across the slicer bank. The
-FF corner produces the complementary effect: reduced threshold voltages
+FF corner produces the complementary effect. Reduced threshold voltages
 increase the drive strength of both device types, again shifting the trip
 points by amounts that vary across the bank. The FS and SF corners are
 qualitatively different in that they introduce an asymmetric perturbation.
@@ -152,7 +148,7 @@ which takes the converter outside its linearity target under these conditions.
 To restore the linearity of the thermometer coder across process corners
 without modifying the core circuit topology, an offline trimming strategy
 based on body bias adjustment was adopted. The correction is applied per
-slicer rather than as a single global setting: each of the fifteen slicers has
+slicer rather than as a single global setting. Each of the fifteen slicers has
 its own PMOS well and NMOS bulk terminal, and these are driven individually so
 that each decision threshold can be nudged back toward its nominal position.
 
@@ -161,13 +157,14 @@ $V_{DD}=0.8$~V and the NMOS bulks to ground, so that the source-to-bulk voltage
 of every device is zero and no body effect is present. A correction is then a
 deliberate departure from this default on a chosen slicer. Lowering the PMOS
 well of a slicer below $0.8$~V forward-biases its source-well junction, reduces
-$|V_{tp}|$, strengthens the pull-up network and raises that slicer's trip
-point. Raising the NMOS bulk of a slicer above ground does the complementary
-thing: it forward-biases the NMOS, reduces $V_{tn}$, strengthens the pull-down
-network and lowers the trip point. Both moves are forward body bias acting on a
-single device, so each slicer whose trip point drifted too low at a given
-corner has its PMOS strengthened, and each slicer whose trip point drifted too
-high has its NMOS strengthened. The trimming is offline in the sense that these
+$|V_{tp}|$, strengthens the PMOS source and moves that slicer's trip point to a
+lower input voltage. Raising the NMOS bulk of a slicer above ground does the
+complementary thing, it forward-biases the NMOS, reduces $V_{tn}$, strengthens
+the NMOS sink and moves the trip point to a higher input voltage. Both moves
+are forward body bias acting on a single device, so each slicer whose trip
+point drifted too high at a given corner has its PMOS strengthened to pull it
+back down, and each slicer whose trip point drifted too low has its NMOS
+strengthened to push it back up. The trimming is offline in the sense that these
 bulk voltages are determined once, from the identified process corner, and held
 constant during normal operation; no continuous adaptive feedback is involved.
 
@@ -180,23 +177,25 @@ which each corner meets that target is reported in
 Chapter~\ref{chap:Benchmarking}. The values were obtained by extracting the
 trip point of every slicer at the corner, identifying which slicers had moved
 above or below their nominal positions, and forward-biasing the appropriate
-device (PMOS to raise a low trip, NMOS to lower a high one) until the spacing
-was restored. Only the slicers that needed correction were touched; the rest
+device (PMOS to pull a high trip back down, NMOS to push a low trip back up)
+until the spacing was restored. Only the slicers that needed correction were touched; the rest
 stayed at the default of Section~\ref{sec:offline_strategy}. Because the four
 corners perturb the bank differently, both the set of adjusted slicers and the
 applied voltages differ from corner to corner, as Table~\ref{tab:trimming_vectors}
-shows.
+shows. Each vector was verified in simulation to reduce the worst-case DNL at its
+corner under the trip-point direction established above, with the detailed
+outcome reported in Chapter~\ref{chap:Benchmarking}.
 
 \begin{table}[htbp]
     \centering
-    \caption{Per-slicer body bias trim voltages applied at each process corner. A value in the PMOS column is the N-well voltage of that slicer, which forward-biases its PMOS and raises its trip point; a value in the NMOS column is the bulk voltage of that slicer, which forward-biases its NMOS and lowers its trip point. Each trimmed slicer is adjusted on one device only, so a given slicer index appears in at most one column. Slicers not listed keep the default PMOS well voltage of $0.8$~V and NMOS bulk voltage of $0$~V; the typical corner uses no trimming. The notation $k\!:\!V$ denotes slicer index $k$ set to voltage $V$.}
+    \caption{Per-slicer body bias trim voltages applied at each process corner. A value in the PMOS column is the N-well voltage of that slicer, which forward-biases its PMOS and lowers its trip point; a value in the NMOS column is the bulk voltage of that slicer, which forward-biases its NMOS and raises its trip point. Each trimmed slicer is adjusted on one device only, so a given slicer index appears in at most one column. Slicers not listed keep the default PMOS well voltage of $0.8$~V and NMOS bulk voltage of $0$~V; the typical corner uses no trimming. The notation $k\!:\!V$ denotes slicer index $k$ set to voltage $V$.}
     \label{tab:trimming_vectors}
     \renewcommand{\arraystretch}{1.4}
     \small
     \begin{tabular}{l p{4.7cm} p{4.7cm}}
         \toprule
         \textbf{Corner} & \textbf{PMOS trim, N-well (V)} & \textbf{NMOS trim, bulk (V)} \\
-        & \textbf{(raises trip point)} & \textbf{(lowers trip point)} \\
+        & \textbf{(lowers trip point)} & \textbf{(raises trip point)} \\
         \midrule
         TT & default (all $0.8$) & default (all $0$) \\
         FF & 6:0.5, \ 7:0.5, \ 8:0.7 & 0:0.3, \ 1:0.3, \ 10:0.2, \ 11:0.5, \ 12:0.5, \ 13:0.1 \\
@@ -225,4 +224,4 @@ required in future iterations.
 
 \subsection{Summary}
 
-This section turned the corner problem of the preceding architecture into a correction mechanism. The body effect gives an independent handle on each slicer's trip point: forward-biasing a slicer's PMOS well raises its trip point, and forward-biasing its NMOS bulk lowers it. Body biasing was preferred over the other techniques of Section~\ref{sec:calibration} because it adds no capacitance to the signal path and no clocked activity to the converter. A per-slicer set of bulk voltages was determined for each process corner (Table~\ref{tab:trimming_vectors}) and applied through the Verilog-A behavioural model of Appendix~\ref{app:veriloga}, which drives the bulk terminals of the slicer bank without touching the transistor-level netlist. The correction targets deterministic inter-corner shifts only; random mismatch stays outside its reach. The effect of these corrections on the DNL and INL of the converter, together with the rest of the final characterisation, is presented in Chapter~\ref{chap:Benchmarking}.
+This section turned the corner problem of the preceding architecture into a correction mechanism. The body effect gives an independent handle on each slicer's trip point: forward-biasing a slicer's PMOS well lowers its trip point, and forward-biasing its NMOS bulk raises it. Body biasing was preferred over the other techniques of Section~\ref{sec:calibration} because it adds no capacitance to the signal path and no clocked activity to the converter. A per-slicer set of bulk voltages was determined for each process corner (Table~\ref{tab:trimming_vectors}) and applied through the Verilog-A behavioural model of Appendix~\ref{app:veriloga}, which drives the bulk terminals of the slicer bank without touching the transistor-level netlist. The correction targets deterministic inter-corner shifts only; random mismatch stays outside its reach. The effect of these corrections on the DNL and INL of the converter, together with the rest of the final characterisation, is presented in Chapter~\ref{chap:Benchmarking}.

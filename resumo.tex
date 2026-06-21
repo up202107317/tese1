@@ -1,46 +1,42 @@
 \chapter*{Resumo} \label{chap:Resumo}
-A proliferação de dispositivos para a Internet das Coisas e de sensores
-distribuídos tem gerado uma crescente procura por interfaces de processamento
-de sinal de baixo consumo energético. Em muitas destas aplicações, os sinais
-de interesse são esparsos e não periódicos, caracterizando-se por longos períodos de
-inatividade. Os conversores analógico-digitais síncronos clássicos são 
-inerentemente ineficientes nestes cenários, uma vez que dissipam potência 
-dinâmica de forma contínua devido ao relógio global, independentemente da 
-atividade do sinal de entrada.
 
-Idealmente, a taxa de amostragem deveria ser adaptada dinamicamente às 
-propriedades do sinal, por forma a minimizar o consumo energético associado 
-à atividade do relógio. Contudo, a implementação de uma taxa de amostragem 
-adaptativa não é direta. Neste contexto, a utilização de um conversor 
-analógico-digital assíncrono surge como uma abordagem natural para processar 
-sinais não uniformes. Os conversores assíncronos requerem alterações 
-arquiteturais que permitam o seu funcionamento correto na ausência de um 
-relógio global.
+A aquisição de sinal de baixo consumo é uma necessidade crescente na Internet
+das Coisas e na deteção distribuída, onde muitos dos sinais de interesse são
+não periódicos. Surgem como acontecimentos ocasionais e de variação lenta, como
+uma leitura de temperatura que se altera ao longo do tempo, separados por longos
+intervalos de inatividade. Um conversor
+analógico-digital síncrono convencional adapta-se mal a este tipo de entrada. O
+seu relógio global mantém o banco de comparadores e a rede de distribuição de
+relógio a comutar a uma taxa fixa, pelo que o conversor dissipa potência
+dinâmica quer a entrada traga ou não informação nova.
 
-A adoção de controlo assíncrono em arquiteturas Flash é motivada, em 
-primeiro lugar, pela necessidade de eliminar o consumo energético associado 
-às redes de distribuição de relógio de alta velocidade, melhorando assim a 
-eficiência energética do sistema. Para além disso, o funcionamento assíncrono 
-oferece benefícios intrínsecos no tratamento da metaestabilidade dos 
-comparadores e na redução da latência, tornando esta abordagem 
-particularmente atrativa para aplicações orientadas a eventos, em que a 
-atividade do sinal varia significativamente ao longo do tempo.
+Esta dissertação desenvolve um conversor Flash assíncrono que gasta potência
+apenas quando a entrada efetivamente muda. O relógio global é removido e a
+conversão é conduzida pelo próprio sinal, de forma orientada a eventos
+(level-crossing), pelo que a potência dinâmica acompanha a atividade da entrada
+e cai para um piso estático quando a entrada está em repouso. Remover o relógio
+elimina também a rede de distribuição de alta velocidade que, num Flash
+síncrono, representa uma grande parte do orçamento de potência, e reduz a
+latência de conversão.
 
-Esta dissertação propõe o projeto e a implementação de um conversor 
-analógico-digital Flash assíncrono. Ao eliminar o relógio global, a 
-arquitetura proposta alinha o consumo de potência com a atividade do sinal 
-de entrada, atingindo teoricamente um consumo energético significativamente 
-mais reduzido face às soluções síncronas convencionais.
+O conversor é projetado num processo CMOS de 16~nm com alimentação de 0.8~V,
+resolução de 4 bits e um banco de quinze slicers de comparação. Um amplificador
+operacional de transcondutância complementar de cinco transístores, configurado
+como seguidor de tensão de ganho unitário, reproduz a entrada em quase toda a gama de alimentação e
+alimenta o banco de slicers. Cada slicer é um comparador de espelho de corrente
+cujo nível de decisão é fixado apenas pela razão das larguras dos seus
+transístores, pelo que os quinze limiares são definidos por dimensionamento e
+não por uma escada de referência. Como esses limiares dependentes do
+dimensionamento variam com o processo de fabrico, uma estratégia de calibração
+offline por polarização do substrato (body bias) ajusta as tensões de bulk de
+cada slicer para repor os pontos de disparo ao longo dos cantos de processo, sem
+acrescentar atividade comandada por relógio nem atrasar a conversão Flash.
 
-Adicionalmente, é proposta uma estratégia de calibração
-offline, baseada em polarização do substrato (body bias), destinada a
-compensar os desvios determinísticos dos limiares de decisão do estágio de
-comparação entre os cantos do processo de fabrico (process corners), sem
-comprometer o funcionamento de alta velocidade característico da topologia
-Flash. O trabalho engloba a análise teórica, o projeto ao nível de
-esquemático e a validação do sistema através de co-simulação analógica e de
-sinal misto. Comparado com uma referência Flash síncrona da mesma resolução e
-tecnologia, com a mesma carga de conversões por segundo, o conversor proposto
-consome cerca de um nono da potência, poupança que aumenta para sinais
-esparsos à medida que o conversor se aproxima do seu piso de repouso.
-
+O trabalho engloba a análise teórica, o projeto ao nível de esquemático e a
+validação do sistema através de co-simulação analógica e de sinal misto, e não a
+implementação física. O conversor proposto é comparado com uma referência Flash
+síncrona da mesma resolução e tecnologia, caracterizada nas mesmas condições.
+Com a mesma carga de conversões por segundo, o conversor assíncrono consome
+cerca de um nono da potência da referência síncrona, e a poupança aumenta quando
+a entrada está quase sempre inativa, à medida que o conversor se aproxima do seu
+piso de repouso.

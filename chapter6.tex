@@ -4,7 +4,7 @@
 \section{Summary of the Work Developed}
 
 This dissertation addressed the design and validation of an asynchronous Flash
-Analog-to-Digital Converter intended for low-power, event-driven applications such as Internet
+ADC intended for low-power, event-driven applications such as Internet
 of Things sensor nodes and other sources of non-periodic signals. The central motivation for
 this work stems from the fundamental inefficiency of conventional synchronous ADC
 architectures when dealing with time-sparse signals. A global clock forces continuous switching
@@ -17,7 +17,7 @@ The work began with a review of the state of the art in data conversion. The cla
 ADC architectures (Flash, SAR, Pipeline and Sigma-Delta) were examined with particular
 attention to the trade-offs between speed, resolution and power consumption. This analysis was
 grounded in performance data from 140 publications drawn from ISSCC and JSSC, from which
-Walden and Schreier figures of merit were extracted and compared across a wide range of sampling
+the Walden figure of merit was extracted and compared across a wide range of sampling
 frequencies and technology nodes. The review made clear that synchronous Flash converters
 occupy the high-speed frontier but at the cost of a poor energy figure of merit, and that
 asynchronous, event-driven operation is one of the most promising paths toward breaking this
@@ -50,7 +50,7 @@ complementary rail-to-rail input but rebuilt it with two five-transistor OTAs, o
 and one with a PMOS input pair, each loaded by a single active current mirror and biased through
 the low-voltage tail mirror retained from the second architecture. With far fewer stacked devices, this
 arrangement fits the available headroom, and the complementary OTA, configured as a unity-gain
-voltage follower, drives a bank of CMOS slicer inverters through its low-impedance output. Each
+voltage follower, drives a bank of ratioed current-mode slicers through its low-impedance output. Each
 slicer is sized with a distinct PMOS-to-NMOS transistor ratio, which sets its switching threshold
 at a specific voltage level within the supply range. The ensemble of slicers produces an
 asynchronous thermometer code whose transitions directly encode level-crossing events, with no
@@ -65,7 +65,7 @@ two converters therefore isolates the effect of removing the global clock from a
 structurally similar Flash architecture.
 
 A critical practical challenge of the slicer-based thermometer coder is its sensitivity to process
-variation. Since the threshold of each inverter is determined by the ratio of PMOS to NMOS drive
+variation. Since the threshold of each slicer is determined by the ratio of PMOS to NMOS drive
 strength, any departure from the nominal device parameters shifts the trip points in a
 bit-dependent manner, degrading the differential and integral non-linearity of the converter. To
 address this, an offline body bias trimming strategy was designed and implemented using a
@@ -97,42 +97,36 @@ of equal resolution and technology.
 
 \section{Concluded Objectives}
 
-The four specific objectives defined at the outset of this dissertation were all successfully
+The three specific objectives defined at the outset of this dissertation were all successfully
 accomplished.
 
-The first objective was the design of an asynchronous Flash ADC architecture that
-dissipates dynamic power only when input signal events occur. This was achieved through the
-final topology, a complementary five-transistor OTA driving the ratioed-slicer bank, which
-operates in continuous time without any global clock signal. The theoretical analysis confirmed that the converter's dynamic power
-scales linearly with the input signal frequency and approaches zero during idle intervals, directly
-validating the intended activity-dependent power profile.
+The first objective was to implement a valid asynchronous Flash ADC circuit proposal and
+validate it under typical operating conditions. This was achieved through the final topology, a
+complementary five-transistor OTA driving the ratioed-slicer bank, which operates in continuous
+time without any global clock signal. At the typical corner the converter is linear, with the DNL
+and INL of the slicer bank staying within about $\pm 0.15$~LSB, and the theoretical analysis
+confirmed that its dynamic power scales with the input activity and approaches zero during idle
+intervals, validating the intended activity-dependent power profile.
 
-The second objective was the implementation of an offline trimming mechanism capable
-of compensating the deterministic trip-point deviations of the comparison stage across process
-corners. This was fulfilled through the body bias trimming strategy described in
-Section~\ref{chap:trimming}, in
-which pre-computed pairs of NMOS and PMOS bulk voltages are applied to the slicer bank to
-restore the intended trip-point positions. The approach was validated across the SS, FF, FS, and
-SF process corners, reducing the worst-case DNL at all corners and the worst-case INL at three
-of the four, as reported in Table~\ref{tab:static_linearity_summary}.
+The second objective was to implement a trimming approach for the proposed schematic. This
+was fulfilled through the body bias trimming strategy of Section~\ref{chap:trimming}, implemented
+as a hardware-description-language behavioural model in Verilog-A that applies pre-computed NMOS
+and PMOS bulk voltages to the slicer bank to restore the intended trip-point positions. The
+approach was validated across the SS, FF, FS and SF process corners, reducing the worst-case DNL
+at all corners and the worst-case INL at three of the four, as reported in
+Table~\ref{tab:static_linearity_summary}.
 
-The third objective was the validation of the complete system through analog and digital
-co-simulation. The transistor-level netlist of the asynchronous ADC was simulated in a 16\,nm
-CMOS process under a 0.8\,V supply, and both static linearity and dynamic performance metrics
-were extracted. The FFT-based spectral analysis, performed on the uniformly resampled
-level-crossing output, confirmed correct operation of the asynchronous core and the functionality
-of the trimming logic, satisfying this objective.
-
-The fourth objective was performance benchmarking against synchronous state-of-the-art
-designs using established figures of merit. The proposed converter was compared against the
-synchronous reference Flash ADC implemented under identical technology and supply conditions,
-as well as against relevant designs from the ISSCC and JSSC literature, using the standard Walden
-figure of merit with the rate fixed at twice the signal bandwidth. The proposed converter does not
-set a record figure of merit, which is expected for a medium-resolution, megahertz-range Flash
-converter when placed beside the high-resolution, kilohertz-bandwidth level-crossing designs
-optimised purely for energy. Its advantage is instead in the matched-workload power, where it
-consumes about a ninth of the power of the synchronous reference and scales down further for sparse
-inputs, which is the operating regime targeted by this work.
+The third objective was to validate the complete ADC system, the schematic together with the
+trimming, through analog and mixed-signal co-simulation. The transistor-level netlist was
+simulated in a 16\,nm CMOS process under a 0.8\,V supply, and both static linearity and dynamic
+performance metrics were extracted. The FFT-based spectral analysis, performed on the uniformly
+resampled level-crossing output, confirmed correct operation of the asynchronous core together
+with the trimming logic. As part of this validation the converter was benchmarked against a
+synchronous Flash reference implemented under identical technology and supply conditions. It does
+not set a record figure of merit, which is expected for a medium-resolution, megahertz-range Flash
+converter, but at a matched conversions-per-second workload it draws about a ninth of the power of
+the synchronous reference, and the saving grows further when the input is mostly idle, which is the
+operating regime targeted by this work.
 
 Although process corner variation was successfully addressed by the
 offline trimming strategy, Monte Carlo statistical variation was not corrected within the scope of
