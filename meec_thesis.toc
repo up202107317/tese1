@@ -16,7 +16,7 @@
 \contentsline {subsubsection}{\numberline {2.1.2.2}Signal-to-Noise-Distortion Ratio (SNDR)}{5}{subsubsection.2.1.2.2}%
 \contentsline {subsubsection}{\numberline {2.1.2.3}Differential and Integral Non-Linearity (DNL and INL)}{6}{subsubsection.2.1.2.3}%
 \contentsline {subsubsection}{\numberline {2.1.2.4}Offset and Gain Error}{6}{subsubsection.2.1.2.4}%
-\contentsline {paragraph}{}{6}{figure.caption.10}%
+\contentsline {paragraph}{}{6}{figure.caption.12}%
 \contentsline {subsubsection}{\numberline {2.1.2.5}Figures of Merit}{7}{subsubsection.2.1.2.5}%
 \contentsline {subsection}{\numberline {2.1.3}Metrics Adaptation for Asynchronous Systems}{7}{subsection.2.1.3}%
 \contentsline {section}{\numberline {2.2}Sampling Paradigms: Synchronous and Asynchronous}{8}{section.2.2}%
@@ -28,17 +28,17 @@
 \contentsline {subsubsection}{\numberline {2.3.1.1}The Power Bottleneck}{9}{subsubsection.2.3.1.1}%
 \contentsline {subsection}{\numberline {2.3.2}SAR (Successive Approximation Register)}{9}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Pipeline}{10}{subsection.2.3.3}%
-\contentsline {paragraph}{}{10}{section*.13}%
-\contentsline {paragraph}{}{10}{section*.14}%
 \contentsline {paragraph}{}{10}{section*.15}%
-\contentsline {subsection}{\numberline {2.3.4}Sigma-Delta ($\Sigma \Delta $)}{10}{subsection.2.3.4}%
+\contentsline {paragraph}{}{10}{section*.16}%
 \contentsline {paragraph}{}{10}{section*.17}%
-\contentsline {paragraph}{}{10}{section*.18}%
+\contentsline {subsection}{\numberline {2.3.4}Sigma-Delta ($\Sigma \Delta $)}{10}{subsection.2.3.4}%
 \contentsline {paragraph}{}{10}{section*.19}%
+\contentsline {paragraph}{}{10}{section*.20}%
+\contentsline {paragraph}{}{10}{section*.21}%
 \contentsline {subsection}{\numberline {2.3.5}Dual-slope}{10}{subsection.2.3.5}%
-\contentsline {paragraph}{}{11}{section*.21}%
-\contentsline {paragraph}{}{11}{section*.22}%
 \contentsline {paragraph}{}{11}{section*.23}%
+\contentsline {paragraph}{}{11}{section*.24}%
+\contentsline {paragraph}{}{11}{section*.25}%
 \contentsline {section}{\numberline {2.4}Synchronous Reference Flash ADC}{12}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Motivation for Architectural Selection}{12}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Architecture Overview}{13}{subsection.2.4.2}%
@@ -49,78 +49,78 @@
 \contentsline {subsection}{\numberline {2.4.5}Summary}{16}{subsection.2.4.5}%
 \contentsline {section}{\numberline {2.5}Asynchronous Architectures}{17}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Level-Crossing Sampling (LCS)}{17}{subsection.2.5.1}%
-\contentsline {paragraph}{}{17}{section*.27}%
-\contentsline {paragraph}{}{17}{section*.28}%
 \contentsline {paragraph}{}{17}{section*.29}%
+\contentsline {paragraph}{}{17}{section*.30}%
+\contentsline {paragraph}{}{17}{section*.31}%
 \contentsline {subsection}{\numberline {2.5.2}Flash ADC}{18}{subsection.2.5.2}%
 \contentsline {section}{\numberline {2.6}Clockless Event Conversion}{18}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1}The Voltage to Current Conversion Concept in Event Detection}{18}{subsection.2.6.1}%
 \contentsline {subsection}{\numberline {2.6.2}Current Comparator Operating Principles}{19}{subsection.2.6.2}%
 \contentsline {subsection}{\numberline {2.6.3}Topologies for Event Detection in the Literature}{19}{subsection.2.6.3}%
 \contentsline {subsubsection}{\numberline {2.6.3.1}Current-Mirror-Based Current Comparator}{19}{subsubsection.2.6.3.1}%
-\contentsline {paragraph}{}{20}{section*.30}%
-\contentsline {paragraph}{}{20}{section*.31}%
-\contentsline {paragraph}{}{20}{figure.caption.33}%
-\contentsline {paragraph}{}{20}{section*.34}%
-\contentsline {paragraph}{}{20}{section*.35}%
+\contentsline {paragraph}{}{20}{section*.32}%
+\contentsline {paragraph}{}{20}{section*.33}%
+\contentsline {paragraph}{}{20}{figure.caption.35}%
 \contentsline {paragraph}{}{20}{section*.36}%
+\contentsline {paragraph}{}{20}{section*.37}%
+\contentsline {paragraph}{}{20}{section*.38}%
 \contentsline {subsubsection}{\numberline {2.6.3.2}Traff Current Comparator}{20}{subsubsection.2.6.3.2}%
-\contentsline {paragraph}{}{22}{section*.37}%
-\contentsline {paragraph}{}{22}{section*.38}%
-\contentsline {paragraph}{}{22}{figure.caption.40}%
+\contentsline {paragraph}{}{22}{section*.39}%
+\contentsline {paragraph}{}{22}{section*.40}%
+\contentsline {paragraph}{}{22}{figure.caption.42}%
 \contentsline {subsubsection}{\numberline {2.6.3.3}Lu Chen Current Comparator}{22}{subsubsection.2.6.3.3}%
-\contentsline {paragraph}{}{22}{section*.41}%
-\contentsline {paragraph}{}{22}{section*.42}%
 \contentsline {paragraph}{}{22}{section*.43}%
-\contentsline {paragraph}{}{23}{section*.44}%
-\contentsline {paragraph}{}{23}{section*.45}%
-\contentsline {paragraph}{}{23}{figure.caption.47}%
+\contentsline {paragraph}{}{22}{section*.44}%
+\contentsline {paragraph}{}{22}{section*.45}%
+\contentsline {paragraph}{}{23}{section*.46}%
+\contentsline {paragraph}{}{23}{section*.47}%
+\contentsline {paragraph}{}{23}{figure.caption.49}%
 \contentsline {subsubsection}{\numberline {2.6.3.4}Hysteresis Current Comparator}{23}{subsubsection.2.6.3.4}%
-\contentsline {paragraph}{}{23}{section*.48}%
-\contentsline {paragraph}{}{23}{section*.49}%
 \contentsline {paragraph}{}{23}{section*.50}%
-\contentsline {paragraph}{}{24}{section*.51}%
-\contentsline {paragraph}{}{24}{section*.52}%
-\contentsline {paragraph}{}{24}{figure.caption.54}%
-\contentsline {paragraph}{}{24}{section*.55}%
-\contentsline {paragraph}{}{24}{section*.56}%
+\contentsline {paragraph}{}{23}{section*.51}%
+\contentsline {paragraph}{}{23}{section*.52}%
+\contentsline {paragraph}{}{24}{section*.53}%
+\contentsline {paragraph}{}{24}{section*.54}%
+\contentsline {paragraph}{}{24}{figure.caption.56}%
 \contentsline {paragraph}{}{24}{section*.57}%
+\contentsline {paragraph}{}{24}{section*.58}%
+\contentsline {paragraph}{}{24}{section*.59}%
 \contentsline {subsubsection}{\numberline {2.6.3.5}Min and Kim Current Comparator}{25}{subsubsection.2.6.3.5}%
-\contentsline {paragraph}{}{25}{section*.58}%
-\contentsline {paragraph}{}{25}{section*.59}%
-\contentsline {paragraph}{}{25}{figure.caption.61}%
-\contentsline {paragraph}{}{25}{section*.62}%
-\contentsline {paragraph}{}{25}{section*.63}%
-\contentsline {paragraph}{}{26}{section*.64}%
-\contentsline {subsubsection}{\numberline {2.6.3.6}CC-II-Based Current Comparator}{26}{subsubsection.2.6.3.6}%
-\contentsline {paragraph}{}{26}{section*.65}%
+\contentsline {paragraph}{}{25}{section*.60}%
+\contentsline {paragraph}{}{25}{section*.61}%
+\contentsline {paragraph}{}{25}{figure.caption.63}%
+\contentsline {paragraph}{}{25}{section*.64}%
+\contentsline {paragraph}{}{25}{section*.65}%
 \contentsline {paragraph}{}{26}{section*.66}%
-\contentsline {paragraph}{}{26}{figure.caption.68}%
-\contentsline {paragraph}{}{26}{section*.69}%
-\contentsline {paragraph}{}{26}{section*.70}%
-\contentsline {paragraph}{}{28}{section*.71}%
+\contentsline {subsubsection}{\numberline {2.6.3.6}CC-II-Based Current Comparator}{26}{subsubsection.2.6.3.6}%
+\contentsline {paragraph}{}{26}{section*.67}%
+\contentsline {paragraph}{}{26}{section*.68}%
+\contentsline {paragraph}{}{26}{figure.caption.70}%
+\contentsline {paragraph}{}{26}{section*.71}%
+\contentsline {paragraph}{}{26}{section*.72}%
+\contentsline {paragraph}{}{28}{section*.73}%
 \contentsline {section}{\numberline {2.7}Calibration and Trimming Techniques}{28}{section.2.7}%
 \contentsline {subsection}{\numberline {2.7.1}The Component Mismatch Problem}{28}{subsection.2.7.1}%
 \contentsline {subsection}{\numberline {2.7.2}Calibration Classifications}{28}{subsection.2.7.2}%
 \contentsline {subsection}{\numberline {2.7.3}Trimming Techniques}{28}{subsection.2.7.3}%
 \contentsline {subsubsection}{\numberline {2.7.3.1}Internal Loading}{28}{subsubsection.2.7.3.1}%
 \contentsline {subsubsection}{\numberline {2.7.3.2}Reference Ladder Trimming}{29}{subsubsection.2.7.3.2}%
-\contentsline {paragraph}{}{29}{section*.72}%
-\contentsline {paragraph}{}{29}{section*.73}%
-\contentsline {paragraph}{}{29}{figure.caption.76}%
-\contentsline {paragraph}{}{29}{section*.77}%
-\contentsline {paragraph}{}{29}{section*.78}%
-\contentsline {paragraph}{}{30}{section*.79}%
+\contentsline {paragraph}{}{29}{section*.74}%
+\contentsline {paragraph}{}{29}{section*.75}%
+\contentsline {paragraph}{}{29}{figure.caption.78}%
+\contentsline {paragraph}{}{29}{section*.79}%
+\contentsline {paragraph}{}{29}{section*.80}%
+\contentsline {paragraph}{}{30}{section*.81}%
 \contentsline {subsection}{\numberline {2.7.4}Advantages of Static Bulk-Driven Trimming for Asynchronous ADCs}{30}{subsection.2.7.4}%
 \contentsline {section}{\numberline {2.8}Asynchronous vs. Synchronous}{31}{section.2.8}%
 \contentsline {subsection}{\numberline {2.8.1}Advantage}{31}{subsection.2.8.1}%
 \contentsline {subsection}{\numberline {2.8.2}Comparative Evaluation}{31}{subsection.2.8.2}%
-\contentsline {paragraph}{}{31}{section*.80}%
-\contentsline {paragraph}{}{31}{section*.81}%
-\contentsline {paragraph}{}{32}{figure.caption.83}%
-\contentsline {paragraph}{}{32}{section*.84}%
-\contentsline {paragraph}{}{32}{section*.85}%
+\contentsline {paragraph}{}{31}{section*.82}%
+\contentsline {paragraph}{}{31}{section*.83}%
+\contentsline {paragraph}{}{32}{figure.caption.85}%
 \contentsline {paragraph}{}{32}{section*.86}%
+\contentsline {paragraph}{}{32}{section*.87}%
+\contentsline {paragraph}{}{32}{section*.88}%
 \contentsline {subsection}{\numberline {2.8.3}Chapter Summary and Design Directives}{34}{subsection.2.8.3}%
 \contentsline {chapter}{\numberline {3}Proposed Asynchronous Flash ADC Design}{36}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Design Specifications and Terminology}{36}{section.3.1}%
@@ -128,8 +128,8 @@
 \contentsline {section}{\numberline {3.3}First Architecture: The Baseline Current-Mirror OTA Flash Configuration}{37}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Operating Principle and Core Topology}{37}{subsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.1.1}Transconductance Cell}{37}{subsubsection.3.3.1.1}%
-\contentsline {paragraph}{Equilibrium operation.}{39}{section*.92}%
-\contentsline {paragraph}{Signal operation.}{39}{section*.93}%
+\contentsline {paragraph}{Equilibrium operation.}{39}{section*.94}%
+\contentsline {paragraph}{Signal operation.}{39}{section*.95}%
 \contentsline {subsubsection}{\numberline {3.3.1.2}Current-to-Code Converter and Threshold Generation}{39}{subsubsection.3.3.1.2}%
 \contentsline {subsubsection}{\numberline {3.3.1.3}Adaptation to an Asynchronous Flash ADC}{40}{subsubsection.3.3.1.3}%
 \contentsline {subsection}{\numberline {3.3.2}Reference Implementation and Mirror Ratio Assignment}{40}{subsection.3.3.2}%
@@ -140,34 +140,34 @@
 \contentsline {subsection}{\numberline {3.4.1}Motivation for Wide Input Common-Mode Range Extension}{46}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Rail-to-Rail Architecture Evaluation and Voltage Headroom Limitations}{47}{subsection.3.4.2}%
 \contentsline {section}{\numberline {3.5}A Bulk-Driven Alternative}{50}{section.3.5}%
-\contentsline {paragraph}{}{50}{section*.100}%
-\contentsline {paragraph}{}{50}{section*.101}%
-\contentsline {paragraph}{}{50}{figure.caption.103}%
-\contentsline {paragraph}{}{50}{section*.104}%
-\contentsline {paragraph}{}{50}{section*.105}%
-\contentsline {paragraph}{}{51}{section*.106}%
-\contentsline {paragraph}{}{51}{section*.107}%
+\contentsline {paragraph}{}{50}{section*.102}%
+\contentsline {paragraph}{}{50}{section*.103}%
+\contentsline {paragraph}{}{50}{figure.caption.105}%
+\contentsline {paragraph}{}{50}{section*.106}%
+\contentsline {paragraph}{}{50}{section*.107}%
 \contentsline {paragraph}{}{51}{section*.108}%
-\contentsline {paragraph}{}{51}{figure.caption.110}%
-\contentsline {paragraph}{}{51}{section*.111}%
-\contentsline {paragraph}{}{52}{section*.112}%
-\contentsline {paragraph}{}{52}{section*.113}%
-\contentsline {section}{\numberline {3.6}Final Architecture: The Complementary Five-Transistor OTA}{52}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{52}{subsection.3.6.1}%
+\contentsline {paragraph}{}{51}{section*.109}%
+\contentsline {paragraph}{}{51}{section*.110}%
+\contentsline {paragraph}{}{51}{figure.caption.112}%
+\contentsline {paragraph}{}{51}{section*.113}%
 \contentsline {paragraph}{}{52}{section*.114}%
 \contentsline {paragraph}{}{52}{section*.115}%
-\contentsline {paragraph}{}{52}{figure.caption.117}%
-\contentsline {paragraph}{}{52}{section*.118}%
-\contentsline {paragraph}{}{53}{section*.119}%
-\contentsline {paragraph}{}{53}{section*.120}%
+\contentsline {section}{\numberline {3.6}Final Architecture: The Complementary Five-Transistor OTA}{52}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{52}{subsection.3.6.1}%
+\contentsline {paragraph}{}{52}{section*.116}%
+\contentsline {paragraph}{}{52}{section*.117}%
+\contentsline {paragraph}{}{52}{figure.caption.119}%
+\contentsline {paragraph}{}{52}{section*.120}%
+\contentsline {paragraph}{}{53}{section*.121}%
+\contentsline {paragraph}{}{53}{section*.122}%
 \contentsline {subsection}{\numberline {3.6.2}Small-Signal Analysis of the Five-Transistor OTA}{54}{subsection.3.6.2}%
 \contentsline {subsection}{\numberline {3.6.3}Stability Without Frequency Compensation}{55}{subsection.3.6.3}%
-\contentsline {paragraph}{}{55}{section*.121}%
-\contentsline {paragraph}{}{55}{section*.122}%
-\contentsline {paragraph}{}{55}{figure.caption.124}%
-\contentsline {paragraph}{}{55}{section*.125}%
-\contentsline {paragraph}{}{55}{section*.126}%
+\contentsline {paragraph}{}{55}{section*.123}%
+\contentsline {paragraph}{}{55}{section*.124}%
+\contentsline {paragraph}{}{55}{figure.caption.126}%
 \contentsline {paragraph}{}{55}{section*.127}%
+\contentsline {paragraph}{}{55}{section*.128}%
+\contentsline {paragraph}{}{55}{section*.129}%
 \contentsline {subsection}{\numberline {3.6.4}Ratioed Output Slicers Design}{55}{subsection.3.6.4}%
 \contentsline {subsection}{\numberline {3.6.5}Asynchronous Control Logic and Clockless Event Generation Network}{58}{subsection.3.6.5}%
 \contentsline {subsection}{\numberline {3.6.6}Results at the Typical Corner and Across Process Corners}{59}{subsection.3.6.6}%

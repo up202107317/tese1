@@ -332,9 +332,9 @@ ounter.sty)))
 File meec.cfg loaded.
 (meec.cfg))
 (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd)
-(meec_thesis.aux (resumo.aux) (abstract.aux) (un-sdg.aux) (abbrevs.aux)
-(chapter1.aux) (chapter2.aux) (chapter3.aux) (chapter5.aux) (chapter6.aux)
-(appendix1.aux))
+(meec_thesis.aux (resumo.aux) (abstract.aux) (un-sdg.aux) (acknows.aux)
+(quote.aux) (ethics.aux) (abbrevs.aux) (chapter1.aux) (chapter2.aux)
+(chapter3.aux) (chapter5.aux) (chapter6.aux) (appendix1.aux))
 (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -366,18 +366,21 @@ Overfull \hbox (1.82004pt too wide) in paragraph at lines 6--8
 Underfull \hbox (badness 10000) in paragraph at lines 23--24
 []\T1/ptm/b/n/10.95 Performance In-di-ca-tors and
 )
-[3] (meec_thesis.toc
-[4]
-[5])
-[6] (meec_thesis.lof
-[7])
-[8] (meec_thesis.lot
+[3] (acknows.tex)
+[4] (quote.tex)
+[5] (ethics.tex)
+[6] (meec_thesis.toc
+[7]
+[8])
+[9] (meec_thesis.lof
+[10])
+[11] (meec_thesis.lot
 Overfull \hbox (5.22673pt too wide) in paragraph at lines 5--5
  [][] []\T1/ptm/m/n/10.95 Comparison of Power Con-sump-tion be-tween Syn-chrono
 us and Asyn-chronous Flash 
 )
-[9] (abbrevs.tex)
-[10] (chapter1.tex
+[12] (abbrevs.tex)
+[13] (chapter1.tex
 Chapter 1.
 
 [1]
@@ -552,137 +555,137 @@ Chapter 5.
 [86]
 (C:\Users\gonca\AppData\Local\Programs\MiKTeX\tex/latex/courier-scaled\t1pcrs.f
 d)
-Overfull \hbox (2.28789pt too wide) in paragraph at lines 141--141
+Overfull \hbox (2.28789pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/n/10.95 Single-Stage CMOS OTA with En-hanced Transcon-duc-tance^^Q. I
 n: \T1/ptm/m/it/10.95 Elec-tron-ics \T1/ptm/m/n/10.95 11.17 (2022),
 
 [87]
-Overfull \hbox (13.80038pt too wide) in paragraph at lines 141--141
+Overfull \hbox (13.80038pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2025
 . \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 /
  ISSCC49661 . 2025 . 10904766$[][]\T1/ptm/m/n/10.95 . 
 
 [88]
-Overfull \hbox (6.83562pt too wide) in paragraph at lines 141--141
+Overfull \hbox (6.83562pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/
 ptm/m/n/10.95 . 2024. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m
 /n/10.95 10 . 1109 / ISSCC49657 .
 
-Overfull \hbox (6.42601pt too wide) in paragraph at lines 141--141
+Overfull \hbox (6.42601pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/n/10.95 ADC with Dynamic-Amplifier-Assisted Cas-caded In-te-gra-tor^^
 Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-
 
-Overfull \hbox (13.80038pt too wide) in paragraph at lines 141--141
+Overfull \hbox (13.80038pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2024
 . \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 /
  ISSCC49657 . 2024 . 10454362$[][]\T1/ptm/m/n/10.95 . 
 
-Overfull \hbox (20.31177pt too wide) in paragraph at lines 141--141
+Overfull \hbox (20.31177pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Jaesuk Choi, Soon-Jae Kweon, and Hyun-tak Jeon. ^^P  Single
 -Stage CMOS Op-er-a-tional Transcon-
 
 [89]
-Overfull \hbox (22.84404pt too wide) in paragraph at lines 141--141
+Overfull \hbox (22.84404pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/n/10.95 Pipelined-SAR ADC with Cross-Stage Gain-Mismatch-Error-Shapin
 g Tech-nique and Negative-
 
 [90]
-Overfull \hbox (6.83562pt too wide) in paragraph at lines 141--141
+Overfull \hbox (6.83562pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/
 ptm/m/n/10.95 . 2023. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m
 /n/10.95 10 . 1109 / ISSCC42615 .
 
-Overfull \hbox (13.80038pt too wide) in paragraph at lines 141--141
+Overfull \hbox (13.80038pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2024
 . \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 /
  ISSCC49657 . 2024 . 10454431$[][]\T1/ptm/m/n/10.95 . 
 
-Overfull \hbox (10.60767pt too wide) in paragraph at lines 141--141
+Overfull \hbox (10.60767pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 H-K. Hong et al. ^^P  A 2.6b/cycle-architecture-based 10b 1
 .7GS/s 15.4mW 4x Time-interleaved
 
-Overfull \hbox (2.51082pt too wide) in paragraph at lines 141--141
+Overfull \hbox (2.51082pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 
 . 2015. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 
 1109 / ISSCC . 2015 . 7063130$[][]\T1/ptm/m/n/10.95 . 
 
 [91]
 [92]
-Overfull \hbox (7.55891pt too wide) in paragraph at lines 141--141
+Overfull \hbox (7.55891pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2022
 . \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 /
  ISSCC42614 . 2022 . 9731571$[][]\T1/ptm/m/n/10.95 . 
 
-Overfull \hbox (5.33601pt too wide) in paragraph at lines 141--141
+Overfull \hbox (5.33601pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/n/10.95 179.4dB-FOMSNDR 2nd-Order Noise-Shaping SARADC with En-hanced
  In-put Impedance
 
-Overfull \hbox (1.57942pt too wide) in paragraph at lines 141--141
+Overfull \hbox (1.57942pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/n/10.95 in 0.18$\OML/ztmcm/m/it/10.95 ^^V$\T1/ptm/m/n/10.95 m CMOS^^Q
 . In: \T1/ptm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-en
 ce (ISSCC)\T1/ptm/m/n/10.95 . 2023.
 
 [93]
 [94]
-Overfull \hbox (5.09041pt too wide) in paragraph at lines 141--141
+Overfull \hbox (5.09041pt too wide) in paragraph at lines 142--142
 \OT1/ztmcm/m/n/10.95 ^^A$$^^F$ \T1/ptm/m/n/10.95 ADC in 40nm CMOS^^Q. In: \T1/p
 tm/m/it/10.95 IEEE In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\
 T1/ptm/m/n/10.95 .
 
 [95]
-Overfull \hbox (6.08362pt too wide) in paragraph at lines 141--141
+Overfull \hbox (6.08362pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Sharvil Patil et al. ^^P  A 700MHz-BW ^^U164dBFS/Hz-Small-S
 ignal-NSD 703mW Continuous-
 
-Overfull \hbox (10.29994pt too wide) in paragraph at lines 141--141
+Overfull \hbox (10.29994pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Sourja Ray and Bang-Sup Song. ^^P  A 13b Lin-ear 40MS/s Pip
 elined ADC with Self-Configured
 
 [96]
-Overfull \hbox (2.51082pt too wide) in paragraph at lines 141--141
+Overfull \hbox (2.51082pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 
 . 2006. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 
 1109 / ISSCC . 2006 . 1696297$[][]\T1/ptm/m/n/10.95 . 
 
-Overfull \hbox (2.51082pt too wide) in paragraph at lines 141--141
+Overfull \hbox (2.51082pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 
 . 2006. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 
 1109 / ISSCC . 2006 . 1696120$[][]\T1/ptm/m/n/10.95 . 
 
 [97]
-Overfull \hbox (1.82037pt too wide) in paragraph at lines 141--141
+Overfull \hbox (1.82037pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/n/10.95 drive read chan-nel^^Q. In: \T1/ptm/m/it/10.95 IEEE In-ter-na
 -tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 1999.
 
-Overfull \hbox (0.39282pt too wide) in paragraph at lines 141--141
+Overfull \hbox (0.39282pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/n/10.95 Cross-ing ADC Ex-ploit-ing Dy-namic Self-Biasing Com-para-tor
 s^^Q. In: \T1/ptm/m/it/10.95 IEEE Jour-nal of Solid-
 
-Overfull \hbox (14.23299pt too wide) in paragraph at lines 141--141
+Overfull \hbox (14.23299pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/n/10.95 Micro-Sensor Ap-pli-ca-tions^^Q. In: \T1/ptm/m/it/10.95 IEEE 
 In-ter-na-tional Solid-State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 .
 
 [98]
-Overfull \hbox (1.96727pt too wide) in paragraph at lines 141--141
+Overfull \hbox (1.96727pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Jia-Ching Wang and Tai-Haur Kuo. ^^P  A 3-mW 2.7-GS/s 8b Su
 b-rang-ing ADC with Multiple-
 
 [99]
 [100]
-Overfull \hbox (6.0335pt too wide) in paragraph at lines 141--141
+Overfull \hbox (6.0335pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Mingtao Zhan, Lu Jie, and Nan Sun. ^^P  A 10mW 10-ENoB 1GS/
 s Ring-Amp-Based Pipelined
 
-Overfull \hbox (4.73744pt too wide) in paragraph at lines 141--141
+Overfull \hbox (4.73744pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Yanbo Zhang et al. ^^P  A Single-channel 70dB-SNDR 100MHz-B
 W 4th-Order Noise-Shaping
 
-Overfull \hbox (13.80038pt too wide) in paragraph at lines 141--141
+Overfull \hbox (13.80038pt too wide) in paragraph at lines 142--142
 \T1/ptm/m/it/10.95 State Cir-cuits Con-fer-ence (ISSCC)\T1/ptm/m/n/10.95 . 2023
 . \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : [][]$\T1/pcrs/m/n/10.95 10 . 1109 /
  ISSCC42615 . 2023 . 10067687$[][]\T1/ptm/m/n/10.95 . 
 
-Overfull \hbox (24.90707pt too wide) in paragraph at lines 141--141
+Overfull \hbox (24.90707pt too wide) in paragraph at lines 142--142
 []\T1/ptm/m/n/10.95 Yannan Zhang et al. ^^P  A 72GS/s 9b Time-Interleaved Pipel
 ine-SAR ADC Achiev-ing 55.3/49.3dB
 
@@ -691,9 +694,9 @@ Appendix A.
 
 [102]
 [103])
-[104] (meec_thesis.aux (resumo.aux) (abstract.aux) (un-sdg.aux) (abbrevs.aux)
-(chapter1.aux) (chapter2.aux) (chapter3.aux) (chapter5.aux) (chapter6.aux)
-(appendix1.aux))
+[104] (meec_thesis.aux (resumo.aux) (abstract.aux) (un-sdg.aux) (acknows.aux)
+(quote.aux) (ethics.aux) (abbrevs.aux) (chapter1.aux) (chapter2.aux)
+(chapter3.aux) (chapter5.aux) (chapter6.aux) (appendix1.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.55997pt have occurred.
@@ -720,5 +723,5 @@ w/times/utmb8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/ur
 w/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/ur
 w/times/utmr8a.pfb><C:/Users/gonca/AppData/Local/Programs/MiKTeX/fonts/type1/ur
 w/times/utmri8a.pfb>
-Output written on meec_thesis.pdf (116 pages, 2442379 bytes).
+Output written on meec_thesis.pdf (119 pages, 2447491 bytes).
 Transcript written on meec_thesis.log.
