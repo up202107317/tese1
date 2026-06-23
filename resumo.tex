@@ -10,11 +10,11 @@ seu relógio global mantém o banco de comparadores e a rede de distribuição d
 relógio a comutar a uma taxa fixa, pelo que o conversor dissipa potência
 dinâmica quer a entrada traga ou não informação nova.
 
-Esta dissertação desenvolve um conversor Flash assíncrono que gasta potência
+Esta dissertação desenvolve um conversor Flash assíncrono que consome potência
 apenas quando a entrada efetivamente muda. O relógio global é removido e a
 conversão é conduzida pelo próprio sinal, de forma orientada a eventos
 (level-crossing), pelo que a potência dinâmica acompanha a atividade da entrada
-e cai para um piso estático quando a entrada está em repouso. Remover o relógio
+e cai para um nivel estático quando a entrada está em repouso. Remover o relógio
 elimina também a rede de distribuição de alta velocidade que, num Flash
 síncrono, representa uma grande parte do orçamento de potência, e reduz a
 latência de conversão.
@@ -32,11 +32,12 @@ offline por polarização do substrato (body bias) ajusta as tensões de bulk de
 cada slicer para repor os pontos de disparo ao longo dos cantos de processo, sem
 acrescentar atividade comandada por relógio nem atrasar a conversão Flash.
 
-O trabalho engloba a análise teórica, o projeto ao nível de esquemático e a
+Este trabalho foi realizado em ambiente empresarial, na Synopsys Portugal.
+Engloba a análise teórica, o projeto ao nível de esquemático e a
 validação do sistema através de co-simulação analógica e de sinal misto, e não a
 implementação física. O conversor proposto é comparado com uma referência Flash
 síncrona da mesma resolução e tecnologia, caracterizada nas mesmas condições.
 Com a mesma carga de conversões por segundo, o conversor assíncrono consome
 cerca de um nono da potência da referência síncrona, e a poupança aumenta quando
 a entrada está quase sempre inativa, à medida que o conversor se aproxima do seu
-piso de repouso.
+nivel de repouso.

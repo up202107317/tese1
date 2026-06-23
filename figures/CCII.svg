@@ -24,11 +24,11 @@
      inkscape:deskcolor="#4a4a4a"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="337.28993"
-     inkscape:cy="89.095454"
-     inkscape:window-width="1920"
-     inkscape:window-height="992"
+     inkscape:zoom="2.0000001"
+     inkscape:cx="267.74999"
+     inkscape:cy="93.499998"
+     inkscape:window-width="2560"
+     inkscape:window-height="1352"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -189,23 +189,24 @@
       </g>
     </symbol>
     <symbol
-       id="circuitikz_0.5mm_grid.svg:ground1"><path
-   d="M 8.36282,0.40001863"
-   fill="none"
-   style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-   id="path419" />
-<path
-   d="M 8.36282,0.40001863 V 4.4429286"
-   fill="none"
-   style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-   id="path420" />
-<path
-   id="path421"
-   style="stroke:#000000;stroke-width:0.246944;stroke-miterlimit:10;stroke-dasharray:none"
-   d="m 6.26281,4.4429286 h 4.20002 M 6.96285,5.3714523 H 9.76279 M 7.48783,6.2999759 h 1.74998" />
-     <title
-   id="title421">ground</title>
-</symbol>
+       id="circuitikz_0.5mm_grid.svg:ground1">
+      <path
+         d="M 8.36282,0.40001863"
+         fill="none"
+         style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+         id="path419" />
+      <path
+         d="M 8.36282,0.40001863 V 4.4429286"
+         fill="none"
+         style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+         id="path420" />
+      <path
+         id="path421"
+         style="stroke:#000000;stroke-width:0.246944;stroke-miterlimit:10;stroke-dasharray:none"
+         d="m 6.26281,4.4429286 h 4.20002 M 6.96285,5.3714523 H 9.76279 M 7.48783,6.2999759 h 1.74998" />
+      <title
+         id="title421">ground</title>
+    </symbol>
     <symbol
        id="circuitikz_0.5mm_grid.svg:supply1">
       <title
@@ -588,1161 +589,1144 @@
      id="layer1"
      transform="translate(-61.97381,-36.74542)">
     <g
-       id="use1-6-7-0"
-       transform="translate(113.98472,-155.97907)">
+       id="use1-8"
+       transform="translate(71.48689,-127.97132)">
       <title
-         id="title53">mos: pmos analog</title>
-      <title
-         id="title58">mos: pmos analog</title>
-    </g>
-    <g
-       id="use1-8-0"
-       transform="matrix(-1,0,0,1,188.51312,-127.9926)">
-      <title
-         id="title35-2">mos: nmos analog</title>
-      <title
-         id="title40-6">mos: nmos analog</title>
-    </g>
-    <g
-       id="g259">
+         id="title35">mos: nmos analog</title>
       <g
-         id="use1-8"
-         transform="translate(71.48689,-127.97132)">
-        <title
-           id="title35">mos: nmos analog</title>
-        <g
-           id="g39">
-          <path
-             d="m 68.513115,210.96843 v 2.98936 h -3.674962"
-             fill="none"
-             id="path35"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-             sodipodi:nodetypes="ccc" />
-          <path
-             d="m 64.838153,218.00035 h 3.674962 v 2.96808"
-             fill="none"
-             id="path36"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-             sodipodi:nodetypes="ccc" />
-          <path
-             id="path37"
-             style="stroke:#000000;stroke-width:0.264583;stroke-miterlimit:10;stroke-dasharray:none"
-             d="m 63.956193,213.82546 v 4.30722 m 0.88196,-5.04111 v 5.775" />
-          <path
-             d="m 66.952299,218.00035 v -0.6757 l 1.560816,0.6757 -1.560816,0.6757 z"
-             stroke="none"
-             id="path38"
-             style="stroke-width:0.264649;stroke-miterlimit:10" />
-          <path
-             d="M 63.956193,215.97907 H 61.51311"
-             fill="none"
-             id="path39"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
-        </g>
-        <g
-           transform="translate(-148.01503,278.92075)"
-           id="g40">
-          <text
-             x="220.84665"
-             y="-61.999996"
-             style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text39"><tspan
-               x="220.84665"
-               y="-61.999996"
-               style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
-               id="tspan39">M</tspan></text>
-          <text
-             x="221.06665"
-             y="-61.473885"
-             style="font-size:2.46944px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text40"><tspan
-               x="221.06665"
-               y="-61.473885"
-               style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
-               id="tspan40">N2</tspan></text>
-        </g>
-        <title
-           id="title40">mos: nmos analog</title>
-      </g>
-      <g
-         id="use1-8-8"
-         transform="translate(51.486888,-154.46843)">
-        <title
-           id="title35-4">mos: nmos analog</title>
-        <g
-           id="g39-3">
-          <path
-             d="m 68.513115,210.96843 v 2.98936 h -3.674962"
-             fill="none"
-             id="path35-7"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-             sodipodi:nodetypes="ccc" />
-          <path
-             d="m 64.838153,218.00035 h 3.674962 v 2.96808"
-             fill="none"
-             id="path36-13"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-             sodipodi:nodetypes="ccc" />
-          <path
-             id="path37-8"
-             style="stroke:#000000;stroke-width:0.264583;stroke-miterlimit:10;stroke-dasharray:none"
-             d="m 63.956193,213.82546 v 4.30722 m 0.88196,-5.04111 v 5.775" />
-          <path
-             d="m 66.952299,218.00035 v -0.6757 l 1.560816,0.6757 -1.560816,0.6757 z"
-             stroke="none"
-             id="path38-09"
-             style="stroke-width:0.264649;stroke-miterlimit:10" />
-          <path
-             d="M 63.956193,215.97907 H 61.51311"
-             fill="none"
-             id="path39-79"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
-        </g>
-        <g
-           transform="translate(-148.01503,278.92075)"
-           id="g40-9">
-          <text
-             x="220.84665"
-             y="-61.999996"
-             style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text39-3"><tspan
-               x="220.84665"
-               y="-61.999996"
-               style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
-               id="tspan39-2">M</tspan></text>
-          <text
-             x="221.06665"
-             y="-61.473885"
-             style="font-size:2.46944px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text40-4"><tspan
-               x="221.06665"
-               y="-61.473885"
-               style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
-               id="tspan40-3">1</tspan></text>
-        </g>
-        <title
-           id="title40-7">mos: nmos analog</title>
-      </g>
-      <g
-         id="use1-6-7"
-         transform="translate(91.484716,-164.2712)">
-        <title
-           id="title47">mos: pmos analog</title>
-        <g
-           id="g51">
-          <path
-             d="m 48.51311,210.97907 -5e-6,2.97872 h -3.674962"
-             fill="none"
-             id="path47"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-             sodipodi:nodetypes="ccc" />
-          <path
-             d="m 44.838143,218.00035 h 3.674962 v 2.97872"
-             fill="none"
-             id="path48"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-             sodipodi:nodetypes="ccc" />
-          <path
-             id="path49"
-             style="stroke:#000000;stroke-width:0.264583;stroke-miterlimit:10;stroke-dasharray:none"
-             d="m 43.956183,213.82546 v 4.30722 m 0.88196,-5.04111 v 5.775" />
-          <path
-             d="m 46.513108,213.96843 v 0.6757 l -1.560815,-0.6757 1.560815,-0.6757 z"
-             stroke="none"
-             id="path50"
-             style="stroke-width:0.264649;stroke-miterlimit:10" />
-          <path
-             d="M 43.956183,215.97907 H 41.513105"
-             fill="none"
-             id="path51"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
-        </g>
-        <g
-           transform="translate(-167.83136,278.27119)"
-           id="g52">
-          <text
-             x="220.84665"
-             y="-61.999996"
-             style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text51"><tspan
-               x="220.84665"
-               y="-61.999996"
-               style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
-               id="tspan51">M</tspan></text>
-          <text
-             x="221.06665"
-             y="-61.473885"
-             style="font-size:2.46944px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text52"><tspan
-               x="221.06665"
-               y="-61.473885"
-               style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
-               id="tspan52">P2</tspan></text>
-        </g>
-        <title
-           id="title52">mos: pmos analog</title>
-      </g>
-      <g
-         id="use1-6-7-5"
-         transform="translate(71.486898,-136.95779)">
-        <title
-           id="title47-3">mos: pmos analog</title>
-        <g
-           id="g51-3">
-          <path
-             d="m 48.51311,210.97907 -5e-6,2.97872 h -3.674962"
-             fill="none"
-             id="path47-8"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-             sodipodi:nodetypes="ccc" />
-          <path
-             d="m 44.838143,218.00035 h 3.674962 v 2.97872"
-             fill="none"
-             id="path48-3"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-             sodipodi:nodetypes="ccc" />
-          <path
-             id="path49-7"
-             style="stroke:#000000;stroke-width:0.264583;stroke-miterlimit:10;stroke-dasharray:none"
-             d="m 43.956183,213.82546 v 4.30722 m 0.88196,-5.04111 v 5.775" />
-          <path
-             d="m 46.513108,213.96843 v 0.6757 l -1.560815,-0.6757 1.560815,-0.6757 z"
-             stroke="none"
-             id="path50-9"
-             style="stroke-width:0.264649;stroke-miterlimit:10" />
-          <path
-             d="M 43.956183,215.97907 H 41.513105"
-             fill="none"
-             id="path51-3"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
-        </g>
-        <g
-           transform="translate(-168.05136,276.95295)"
-           id="g52-7">
-          <text
-             x="220.84665"
-             y="-61.999996"
-             style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text51-8"><tspan
-               x="220.84665"
-               y="-61.999996"
-               style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
-               id="tspan51-7">M</tspan></text>
-          <text
-             x="221.06665"
-             y="-61.473885"
-             style="font-size:2.46944px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text52-4"><tspan
-               x="221.06665"
-               y="-61.473885"
-               style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
-               id="tspan52-1">2</tspan></text>
-        </g>
-        <title
-           id="title52-90">mos: pmos analog</title>
-      </g>
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 139.99782,65 v 9.999998"
-         id="path2" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 140,82.991785 v 0.04835"
-         id="path3" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 155.49782,69.999997 h -15.5"
-         id="path13" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 139.99782,42.697224 1e-5,4.021283"
-         id="path15-5" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 139.99782,42.697224 V 40.176848"
-         id="path24-6" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 140.00001,95.512162 v 4.021283"
-         id="path15-0" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 140.00001,95.512162 V 92.991786"
-         id="path24-4" />
-      <g
-         id="g39-1"
-         transform="matrix(-1,0,0,1,188.51312,-127.9926)">
+         id="g39">
         <path
            d="m 68.513115,210.96843 v 2.98936 h -3.674962"
            fill="none"
-           id="path35-0"
+           id="path35"
            style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
            sodipodi:nodetypes="ccc" />
         <path
            d="m 64.838153,218.00035 h 3.674962 v 2.96808"
            fill="none"
-           id="path36-5"
+           id="path36"
            style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
            sodipodi:nodetypes="ccc" />
         <path
-           id="path37-1"
+           id="path37"
            style="stroke:#000000;stroke-width:0.264583;stroke-miterlimit:10;stroke-dasharray:none"
            d="m 63.956193,213.82546 v 4.30722 m 0.88196,-5.04111 v 5.775" />
         <path
            d="m 66.952299,218.00035 v -0.6757 l 1.560816,0.6757 -1.560816,0.6757 z"
            stroke="none"
-           id="path38-1"
+           id="path38"
            style="stroke-width:0.264649;stroke-miterlimit:10" />
         <path
            d="M 63.956193,215.97907 H 61.51311"
            fill="none"
-           id="path39-0"
+           id="path39"
            style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
       </g>
       <g
-         transform="translate(-104.06665,150.97388)"
-         id="g40-8">
+         transform="translate(-148.01503,278.92075)"
+         id="g40">
         <text
            x="220.84665"
            y="-61.999996"
            style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
            xml:space="preserve"
-           id="text39-5"><tspan
+           id="text39"><tspan
              x="220.84665"
              y="-61.999996"
              style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
-             id="tspan39-0">M</tspan></text>
+             id="tspan39">M</tspan></text>
         <text
            x="221.06665"
            y="-61.473885"
            style="font-size:2.46944px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
            xml:space="preserve"
-           id="text40-6"><tspan
+           id="text40"><tspan
              x="221.06665"
              y="-61.473885"
              style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
-             id="tspan40-4">N1</tspan></text>
+             id="tspan40">N2</tspan></text>
       </g>
+      <title
+         id="title40">mos: nmos analog</title>
+    </g>
+    <g
+       id="use1-8-8"
+       transform="translate(51.486888,-154.46843)">
+      <title
+         id="title35-4">mos: nmos analog</title>
       <g
-         id="use1-6-7-2"
-         transform="matrix(-1,0,0,1,168.51311,-164.2712)">
-        <title
-           id="title47-5">mos: pmos analog</title>
-        <g
-           id="g51-8">
-          <path
-             d="m 48.51311,210.97907 -5e-6,2.97872 h -3.674962"
-             fill="none"
-             id="path47-6"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-             sodipodi:nodetypes="ccc" />
-          <path
-             d="m 44.838143,218.00035 h 3.674962 v 2.97872"
-             fill="none"
-             id="path48-2"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-             sodipodi:nodetypes="ccc" />
-          <path
-             id="path49-8"
-             style="stroke:#000000;stroke-width:0.264583;stroke-miterlimit:10;stroke-dasharray:none"
-             d="m 43.956183,213.82546 v 4.30722 m 0.88196,-5.04111 v 5.775" />
-          <path
-             d="m 46.513108,213.96843 v 0.6757 l -1.560815,-0.6757 1.560815,-0.6757 z"
-             stroke="none"
-             id="path50-4"
-             style="stroke-width:0.264649;stroke-miterlimit:10" />
-          <path
-             d="M 43.956183,215.97907 H 41.513105"
-             fill="none"
-             id="path51-7"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
-        </g>
-        <g
-           transform="matrix(-1,0,0,1,272.35976,278.27119)"
-           id="g52-2">
-          <text
-             x="220.84665"
-             y="-61.999996"
-             style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text51-4"><tspan
-               x="220.84665"
-               y="-61.999996"
-               style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
-               id="tspan51-0">M</tspan></text>
-          <text
-             x="221.06665"
-             y="-61.473885"
-             style="font-size:2.46944px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text52-6"><tspan
-               sodipodi:role="line"
-               id="tspan174"
-               x="221.06665"
-               y="-61.473885"><tspan
-                 x="221.06665"
-                 y="-61.473885"
-                 style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
-                 id="tspan52-2">P1</tspan></tspan><tspan
-               sodipodi:role="line"
-               id="tspan175"
-               x="221.06665"
-               y="-61.473885"><tspan
-                 x="221.06665"
-                 y="-61.473885"
-                 style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
-                 id="tspan176" /></tspan></text>
-        </g>
-        <title
-           id="title52-9">mos: pmos analog</title>
-      </g>
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 119.99782,64.984038 v 9.999998"
-         id="path2-9" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 120,82.975823 v 0.04835"
-         id="path3-0" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 119.99782,42.681262 10e-6,4.021283"
-         id="path15-5-1" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 119.99782,42.681262 V 40.160886"
-         id="path24-6-3" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 120.00001,95.4962 v 4.021286"
-         id="path15-0-1" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 120.00001,95.4962 V 92.975824"
-         id="path24-4-1" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 127,51.707864 h 6"
-         id="path176" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 119.99782,40.160884 20,0.01595"
-         id="path178" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 140.00402,40.176841 0.12592,1.4e-5"
-         id="path179" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 140.0863,40.177398 -0.10757,-0.0011"
-         id="path180" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 127.00001,87.986467 133,88.007737 v 0 0"
-         id="path181" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 128.50218,87.991783 v -4.999998 h -8.5"
-         id="path177-7" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 120.00001,99.517484 20.00217,-0.02569"
-         id="path182" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 120.00001,99.517484 h -0.13229"
-         id="path183" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 140.00218,99.491791 0.13012,2.64e-4"
-         id="path184" />
-      <g
-         id="use1-7"
-         transform="translate(-307.51309,9.2394294)">
-        <title
-           id="title190">vdd</title>
+         id="g39-3">
         <path
-           style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.705556;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
-           d="m 432.5131,28.968435 h 10.00001"
-           id="path190" />
-        <path
-           style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-           d="m 437.51309,28.968435 v 1.999999"
-           id="path191" />
-        <g
-           id="g192"
-           transform="translate(229.75797,87.661945)">
-          <title
-             id="title191">label2</title>
-          <text
-             x="215.75513"
-             y="-57.746479"
-             style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text191"><tspan
-               x="215.75513"
-               y="-57.746479"
-               style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
-               id="tspan191">V</tspan></text>
-          <text
-             x="215.88588"
-             y="-57.231068"
-             style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';text-decoration-color:#000000;letter-spacing:0.0978958px;word-spacing:0px;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text192"><tspan
-               x="215.88588"
-               y="-57.231068"
-               style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';letter-spacing:0.0978958px;word-spacing:0px;stroke-width:0.264583"
-               id="tspan192">DD</tspan></text>
-          <title
-             id="title192">label2</title>
-        </g>
-        <title
-           id="title193">vdd</title>
-      </g>
-      <g
-         id="use1-5"
-         transform="translate(121.63936,99.070311)"><path
-   d="M 8.36282,0.40001863"
-   fill="none"
-   style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-   id="path187" />
-<path
-   d="M 8.36282,0.40001863 V 4.4429286"
-   fill="none"
-   style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-   id="path188" />
-<path
-   id="path189"
-   style="stroke:#000000;stroke-width:0.246944;stroke-miterlimit:10;stroke-dasharray:none"
-   d="m 6.26281,4.4429286 h 4.20002 M 6.96285,5.3714523 H 9.76279 M 7.48783,6.2999759 h 1.74998" />
-     <title
-   id="title189">ground</title>
-</g>
-      <g
-         id="use1-8-1"
-         transform="translate(94.043812,-135.96311)">
-        <title
-           id="title35-9">mos: nmos analog</title>
-        <g
-           id="g39-6">
-          <path
-             d="m 68.513115,210.96843 v 2.98936 h -3.674962"
-             fill="none"
-             id="path35-2"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-             sodipodi:nodetypes="ccc" />
-          <path
-             d="m 64.838153,218.00035 h 3.674962 v 2.96808"
-             fill="none"
-             id="path36-1"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-             sodipodi:nodetypes="ccc" />
-          <path
-             id="path37-2"
-             style="stroke:#000000;stroke-width:0.264583;stroke-miterlimit:10;stroke-dasharray:none"
-             d="m 63.956193,213.82546 v 4.30722 m 0.88196,-5.04111 v 5.775" />
-          <path
-             d="m 66.952299,218.00035 v -0.6757 l 1.560816,0.6757 -1.560816,0.6757 z"
-             stroke="none"
-             id="path38-0"
-             style="stroke-width:0.264649;stroke-miterlimit:10" />
-          <path
-             d="M 63.956193,215.97907 H 61.51311"
-             fill="none"
-             id="path39-7"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
-        </g>
-        <g
-           transform="translate(-148.01503,278.92075)"
-           id="g40-3">
-          <text
-             x="220.84665"
-             y="-61.999996"
-             style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text39-1"><tspan
-               x="220.84665"
-               y="-61.999996"
-               style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
-               id="tspan39-1">M</tspan></text>
-          <text
-             x="221.06665"
-             y="-61.473885"
-             style="font-size:2.46944px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text40-9"><tspan
-               x="221.06665"
-               y="-61.473885"
-               style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
-               id="tspan40-0">N3</tspan></text>
-        </g>
-        <title
-           id="title40-5">mos: nmos analog</title>
-      </g>
-      <g
-         id="use1-6-7-6"
-         transform="translate(114.04382,-155.97907)">
-        <title
-           id="title47-7">mos: pmos analog</title>
-        <g
-           id="g51-7">
-          <path
-             d="m 48.51311,210.97907 -5e-6,2.97872 h -3.674962"
-             fill="none"
-             id="path47-4"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-             sodipodi:nodetypes="ccc" />
-          <path
-             d="m 44.838143,218.00035 h 3.674962 v 2.97872"
-             fill="none"
-             id="path48-0"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-             sodipodi:nodetypes="ccc" />
-          <path
-             id="path49-6"
-             style="stroke:#000000;stroke-width:0.264583;stroke-miterlimit:10;stroke-dasharray:none"
-             d="m 43.956183,213.82546 v 4.30722 m 0.88196,-5.04111 v 5.775" />
-          <path
-             d="m 46.513108,213.96843 v 0.6757 l -1.560815,-0.6757 1.560815,-0.6757 z"
-             stroke="none"
-             id="path50-47"
-             style="stroke-width:0.264649;stroke-miterlimit:10" />
-          <path
-             d="M 43.956183,215.97907 H 41.513105"
-             fill="none"
-             id="path51-4"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
-        </g>
-        <g
-           transform="translate(-168.89047,277.97906)"
-           id="g52-8">
-          <text
-             x="220.84665"
-             y="-61.999996"
-             style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text51-5"><tspan
-               x="220.84665"
-               y="-61.999996"
-               style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
-               id="tspan51-8">M</tspan></text>
-          <text
-             x="221.06665"
-             y="-61.473885"
-             style="font-size:2.46944px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text52-2"><tspan
-               x="221.06665"
-               y="-61.473885"
-               style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
-               id="tspan52-6">P3</tspan></text>
-        </g>
-        <title
-           id="title52-0">mos: pmos analog</title>
-      </g>
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 162.55692,64.999995 v 9.999998"
-         id="path2-6" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 162.55692,74.999993 v 0.04835"
-         id="path3-6" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 178.05692,69.999992 h -15.5"
-         id="path13-4" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 162.55692,50.989353 1e-5,4.021283"
-         id="path15-5-6" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 162.55693,87.52037 v 4.021283"
-         id="path15-0-2" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 162.55693,87.52037 V 84.999994"
-         id="path24-4-8" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 155.55692,59.999998 V 80.01596"
-         id="path200" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 155.55692,80.148283 V 79.972378"
-         id="path201" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 155.55692,59.867675 v 0.182406"
-         id="path202" />
-      <g
-         id="use1-8-1-1"
-         transform="translate(116.54381,-135.97907)">
-        <title
-           id="title35-9-0">mos: nmos analog</title>
-        <g
-           id="g39-6-1">
-          <path
-             d="m 68.513115,210.96843 v 2.98936 h -3.674962"
-             fill="none"
-             id="path35-2-3"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-             sodipodi:nodetypes="ccc" />
-          <path
-             d="m 64.838153,218.00035 h 3.674962 v 2.96808"
-             fill="none"
-             id="path36-1-7"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-             sodipodi:nodetypes="ccc" />
-          <path
-             id="path37-2-7"
-             style="stroke:#000000;stroke-width:0.264583;stroke-miterlimit:10;stroke-dasharray:none"
-             d="m 63.956193,213.82546 v 4.30722 m 0.88196,-5.04111 v 5.775" />
-          <path
-             d="m 66.952299,218.00035 v -0.6757 l 1.560816,0.6757 -1.560816,0.6757 z"
-             stroke="none"
-             id="path38-0-2"
-             style="stroke-width:0.264649;stroke-miterlimit:10" />
-          <path
-             d="M 63.956193,215.97907 H 61.51311"
-             fill="none"
-             id="path39-7-6"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
-        </g>
-        <g
-           transform="translate(-148.01503,278.92075)"
-           id="g40-3-4">
-          <text
-             x="220.84665"
-             y="-61.999996"
-             style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text39-1-5"><tspan
-               x="220.84665"
-               y="-61.999996"
-               style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
-               id="tspan39-1-2">M</tspan></text>
-          <text
-             x="221.06665"
-             y="-61.473885"
-             style="font-size:2.46944px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text40-9-0"><tspan
-               x="221.06665"
-               y="-61.473885"
-               style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
-               id="tspan40-0-2">N4</tspan></text>
-        </g>
-        <title
-           id="title40-5-9">mos: nmos analog</title>
-      </g>
-      <g
-         id="use1-6-7-6-0"
-         transform="translate(136.54382,-155.99503)">
-        <title
-           id="title47-7-9">mos: pmos analog</title>
-        <g
-           id="g51-7-9">
-          <path
-             d="m 48.51311,210.97907 -5e-6,2.97872 h -3.674962"
-             fill="none"
-             id="path47-4-4"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-             sodipodi:nodetypes="ccc" />
-          <path
-             d="m 44.838143,218.00035 h 3.674962 v 2.97872"
-             fill="none"
-             id="path48-0-5"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-             sodipodi:nodetypes="ccc" />
-          <path
-             id="path49-6-1"
-             style="stroke:#000000;stroke-width:0.264583;stroke-miterlimit:10;stroke-dasharray:none"
-             d="m 43.956183,213.82546 v 4.30722 m 0.88196,-5.04111 v 5.775" />
-          <path
-             d="m 46.513108,213.96843 v 0.6757 l -1.560815,-0.6757 1.560815,-0.6757 z"
-             stroke="none"
-             id="path50-47-0"
-             style="stroke-width:0.264649;stroke-miterlimit:10" />
-          <path
-             d="M 43.956183,215.97907 H 41.513105"
-             fill="none"
-             id="path51-4-3"
-             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
-        </g>
-        <g
-           transform="translate(-168.39046,277.99502)"
-           id="g52-8-7">
-          <text
-             x="220.84665"
-             y="-61.999996"
-             style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text51-5-8"><tspan
-               x="220.84665"
-               y="-61.999996"
-               style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
-               id="tspan51-8-8">M</tspan></text>
-          <text
-             x="221.06665"
-             y="-61.473885"
-             style="font-size:2.46944px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text52-2-6"><tspan
-               x="221.06665"
-               y="-61.473885"
-               style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
-               id="tspan52-6-0">P4</tspan></text>
-        </g>
-        <title
-           id="title52-0-4">mos: pmos analog</title>
-      </g>
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 185.05692,64.984031 v 9.999998"
-         id="path2-6-6" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 185.05692,74.984029 v 0.04835"
-         id="path3-6-7" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 185.05693,87.504406 V 84.98403"
-         id="path24-4-8-6" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 178.05692,59.984034 V 79.999996"
-         id="path200-0" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 178.05692,80.132319 V 79.956414"
-         id="path201-9" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 178.05692,59.851711 v 0.182406"
-         id="path202-7" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 139.99782,56.70787 v 8.292129"
-         id="path203" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 140,74.999997 v 8.040137"
-         id="path204" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 113,61.510639 V 79.02128"
-         id="path205" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 113,61.544863 v -0.16655"
-         id="path206" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 113,78.986392 v 0.167212"
-         id="path207" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 113,69.999997 H 102.5"
-         id="path208" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264521px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 140.00218,99.491792 45.16533,-0.132294"
-         id="path209" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 185.05693,87.504404 -0.0204,11.85554"
-         id="path210" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 162.55693,91.541652 0.0279,7.883993"
-         id="path211" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 162.55692,50.989351 162.42463,40.176846"
-         id="path212" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 140.03251,40.176846 h 22.39212"
-         id="path213" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.263853px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 162.42466,40.176827 22.63477,-0.0016 0.13155,-0.0012"
-         id="path215" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 185.05693,54.984038 0.003,-14.80861 h 0.0204"
-         id="path216" />
-      <g
-         id="use1"
-         transform="matrix(1,0,0,-1,-116.30932,359.74099)">
-        <title
-           id="title232">opamp: single-ended (wider)</title>
-        <path
-           d="m 201.62744,289.74099 -12.49487,-7.34993 v 14.69986 z"
+           d="m 68.513115,210.96843 v 2.98936 h -3.674962"
            fill="none"
-           style="stroke:#000000;stroke-width:0.529302;stroke-miterlimit:10"
-           id="path233" />
-        <path
-           d="m 201.30932,289.74099 h 4.19934 M 185.28314,284.741 h 3.85631 m -3.85631,10.00467 h 3.85631"
-           style="font-variation-settings:normal;fill:none;stroke:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-           id="path234"
-           sodipodi:nodetypes="cccccc" />
-        <path
-           id="path235"
-           style="stroke-width:0.199229;stroke-linecap:square;stroke-miterlimit:10"
-           d="m 191.26433,294.74099 c 0,-0.0613 -0.0573,-0.0613 -0.085,-0.0613 h -0.61045 v -0.61242 c 0,-0.0237 0,-0.083 -0.0593,-0.083 -0.0612,0 -0.0612,0.0573 -0.0612,0.083 v 0.61242 h -0.61044 c -0.0277,0 -0.0849,0 -0.0849,0.0613 0,0.0593 0.0593,0.0593 0.0849,0.0593 h 0.61044 v 0.61243 c 0,0.0237 0,0.083 0.0593,0.083 0.0612,0 0.0612,-0.0573 0.0612,-0.083 v -0.61243 h 0.61045 c 0.0257,0 0.085,0 0.085,-0.0593 z m 0,-10 c 0,-0.0613 -0.0612,-0.0613 -0.0909,-0.0613 h -1.32955 c -0.0296,0 -0.0909,0 -0.0909,0.0613 0,0.0593 0.0573,0.0593 0.081,0.0593 h 1.34931 c 0.0237,0 0.081,0 0.081,-0.0593 z" />
-      </g>
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 89.199338,69.999999 102.5,69.999997"
-         id="path220" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 170,69.999997 V 44.999999 h -60"
-         id="path222" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 69.000001,64.999996 68.973808,44.867708"
-         id="path225" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 110,44.999999 c 0,0 -41.026192,-0.132291 -41.026192,-0.132291 v 0"
-         id="path226" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 69.13229,44.867536 h -0.290774 v 0"
-         id="path227" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 69.000001,64.953141 v 0.174665"
-         id="path228" />
-      <g
-         id="use1-71"
-         transform="translate(129.4794,63.519417)">
-        <title
-           id="title236">circuitikz_0.5mm_grid.svg:node2_inkscape_duplicate</title>
-        <g
-           id="g238"
-           transform="matrix(0.83559759,0,0,0.83538016,-3.2548357,3.723846)">
-          <title
-             id="title237">node net</title>
-          <path
-             d="m 52.922714,3.299976 c 0,-0.3092284 -0.250676,-0.5599036 -0.559904,-0.5599036 -0.309228,0 -0.559904,0.2506752 -0.559904,0.5599036 0,0.3092284 0.250676,0.5599036 0.559904,0.5599036 0.309228,0 0.559904,-0.2506752 0.559904,-0.5599036 z"
-             id="path237"
-             style="stroke:#000000;stroke-width:0.31676;stroke-miterlimit:10" />
-          <title
-             id="title238">node net</title>
-        </g>
-      </g>
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 120,73.999997 -27.495053,0.02127 v 0"
-         id="path229" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 69.000001,74.999997 v 9.999999 l 23.504844,-0.0026 1.02e-4,-10.976129"
-         id="path230" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 92.596931,74.021266 H 92.373689"
-         id="path231" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 69.162363,74.998963 -0.293708,0.0021"
-         id="path232" />
-      <g
-         id="use1-6"
-         transform="translate(-349.38902,68.700014)">
-        <title
-           id="title239">arrow</title>
-        <path
-           d="m 411.36283,6.299974 h 6.73535"
-           fill="none"
+           id="path35-7"
            style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-           id="path239" />
-        <g
-           transform="matrix(0.3514598,0,0,-0.3514598,418.36284,6.299976)"
-           stroke-linecap="round"
-           style="stroke:#000000;stroke-width:0.753;stroke-miterlimit:10"
-           id="g241">
-          <g
-             stroke-linejoin="round"
-             id="g240">
-            <path
-               d="M -4.93753,1.75745 C -4.03546,0.70296 -2.0253,0.20503 0,0 -2.0253,-0.20503 -4.03546,-0.70296 -4.93753,-1.75745"
-               fill="none"
-               id="path240" />
-          </g>
-        </g>
-        <title
-           id="title241">arrow</title>
-      </g>
-      <g
-         id="use1-1"
-         transform="translate(-226.36283,63.700024)">
-        <title
-           id="title242">arrow</title>
+           sodipodi:nodetypes="ccc" />
         <path
-           d="m 411.36283,6.299974 h 6.73535"
+           d="m 64.838153,218.00035 h 3.674962 v 2.96808"
            fill="none"
+           id="path36-13"
            style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-           id="path242" />
-        <g
-           transform="matrix(0.3514598,0,0,-0.3514598,418.36284,6.299976)"
-           stroke-linecap="round"
-           style="stroke:#000000;stroke-width:0.753;stroke-miterlimit:10"
-           id="g244">
-          <g
-             stroke-linejoin="round"
-             id="g243">
-            <path
-               d="M -4.93753,1.75745 C -4.03546,0.70296 -2.0253,0.20503 0,0 -2.0253,-0.20503 -4.03546,-0.70296 -4.93753,-1.75745"
-               fill="none"
-               id="path243" />
-          </g>
-        </g>
-        <title
-           id="title244">arrow</title>
+           sodipodi:nodetypes="ccc" />
+        <path
+           id="path37-8"
+           style="stroke:#000000;stroke-width:0.264583;stroke-miterlimit:10;stroke-dasharray:none"
+           d="m 63.956193,213.82546 v 4.30722 m 0.88196,-5.04111 v 5.775" />
+        <path
+           d="m 66.952299,218.00035 v -0.6757 l 1.560816,0.6757 -1.560816,0.6757 z"
+           stroke="none"
+           id="path38-09"
+           style="stroke-width:0.264649;stroke-miterlimit:10" />
+        <path
+           d="M 63.956193,215.97907 H 61.51311"
+           fill="none"
+           id="path39-79"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
       </g>
       <g
-         id="use1-3"
-         transform="translate(-151.88588,136.73107)">
+         transform="translate(-148.01503,278.92075)"
+         id="g40-9">
+        <text
+           x="220.84665"
+           y="-61.999996"
+           style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+           xml:space="preserve"
+           id="text39-3"><tspan
+             x="220.84665"
+             y="-61.999996"
+             style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+             id="tspan39-2">M</tspan></text>
+        <text
+           x="221.06665"
+           y="-61.473885"
+           style="font-size:2.46944px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+           xml:space="preserve"
+           id="text40-4"><tspan
+             x="221.06665"
+             y="-61.473885"
+             style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
+             id="tspan40-3">1</tspan></text>
+      </g>
+      <title
+         id="title40-7">mos: nmos analog</title>
+    </g>
+    <g
+       id="use1-6-7"
+       transform="translate(91.484716,-164.2712)">
+      <title
+         id="title47">mos: pmos analog</title>
+      <g
+         id="g51">
+        <path
+           d="m 48.51311,210.97907 -5e-6,2.97872 h -3.674962"
+           fill="none"
+           id="path47"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+           sodipodi:nodetypes="ccc" />
+        <path
+           d="m 44.838143,218.00035 h 3.674962 v 2.97872"
+           fill="none"
+           id="path48"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+           sodipodi:nodetypes="ccc" />
+        <path
+           id="path49"
+           style="stroke:#000000;stroke-width:0.264583;stroke-miterlimit:10;stroke-dasharray:none"
+           d="m 43.956183,213.82546 v 4.30722 m 0.88196,-5.04111 v 5.775" />
+        <path
+           d="m 46.513108,213.96843 v 0.6757 l -1.560815,-0.6757 1.560815,-0.6757 z"
+           stroke="none"
+           id="path50"
+           style="stroke-width:0.264649;stroke-miterlimit:10" />
+        <path
+           d="M 43.956183,215.97907 H 41.513105"
+           fill="none"
+           id="path51"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
+      </g>
+      <g
+         transform="translate(-167.83136,278.27119)"
+         id="g52">
+        <text
+           x="220.84665"
+           y="-61.999996"
+           style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+           xml:space="preserve"
+           id="text51"><tspan
+             x="220.84665"
+             y="-61.999996"
+             style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+             id="tspan51">M</tspan></text>
+        <text
+           x="221.06665"
+           y="-61.473885"
+           style="font-size:2.46944px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+           xml:space="preserve"
+           id="text52"><tspan
+             x="221.06665"
+             y="-61.473885"
+             style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
+             id="tspan52">P2</tspan></text>
+      </g>
+      <title
+         id="title52">mos: pmos analog</title>
+    </g>
+    <g
+       id="use1-6-7-5"
+       transform="translate(71.486898,-136.95779)">
+      <title
+         id="title47-3">mos: pmos analog</title>
+      <g
+         id="g51-3">
+        <path
+           d="m 48.51311,210.97907 -5e-6,2.97872 h -3.674962"
+           fill="none"
+           id="path47-8"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+           sodipodi:nodetypes="ccc" />
+        <path
+           d="m 44.838143,218.00035 h 3.674962 v 2.97872"
+           fill="none"
+           id="path48-3"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+           sodipodi:nodetypes="ccc" />
+        <path
+           id="path49-7"
+           style="stroke:#000000;stroke-width:0.264583;stroke-miterlimit:10;stroke-dasharray:none"
+           d="m 43.956183,213.82546 v 4.30722 m 0.88196,-5.04111 v 5.775" />
+        <path
+           d="m 46.513108,213.96843 v 0.6757 l -1.560815,-0.6757 1.560815,-0.6757 z"
+           stroke="none"
+           id="path50-9"
+           style="stroke-width:0.264649;stroke-miterlimit:10" />
+        <path
+           d="M 43.956183,215.97907 H 41.513105"
+           fill="none"
+           id="path51-3"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
+      </g>
+      <g
+         transform="translate(-168.05136,276.95295)"
+         id="g52-7">
+        <text
+           x="220.84665"
+           y="-61.999996"
+           style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+           xml:space="preserve"
+           id="text51-8"><tspan
+             x="220.84665"
+             y="-61.999996"
+             style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+             id="tspan51-7">M</tspan></text>
+        <text
+           x="221.06665"
+           y="-61.473885"
+           style="font-size:2.46944px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+           xml:space="preserve"
+           id="text52-4"><tspan
+             x="221.06665"
+             y="-61.473885"
+             style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
+             id="tspan52-1">2</tspan></text>
+      </g>
+      <title
+         id="title52-90">mos: pmos analog</title>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 139.99782,65 v 9.999998"
+       id="path2" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 140,82.991785 v 0.04835"
+       id="path3" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 155.49782,69.999997 h -15.5"
+       id="path13" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 139.99782,42.697224 1e-5,4.021283"
+       id="path15-5" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 139.99782,42.697224 V 40.176848"
+       id="path24-6" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 140.00001,95.512162 v 4.021283"
+       id="path15-0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 140.00001,95.512162 V 92.991786"
+       id="path24-4" />
+    <g
+       id="g39-1"
+       transform="matrix(-1,0,0,1,188.51312,-127.9926)">
+      <path
+         d="m 68.513115,210.96843 v 2.98936 h -3.674962"
+         fill="none"
+         id="path35-0"
+         style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+         sodipodi:nodetypes="ccc" />
+      <path
+         d="m 64.838153,218.00035 h 3.674962 v 2.96808"
+         fill="none"
+         id="path36-5"
+         style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+         sodipodi:nodetypes="ccc" />
+      <path
+         id="path37-1"
+         style="stroke:#000000;stroke-width:0.264583;stroke-miterlimit:10;stroke-dasharray:none"
+         d="m 63.956193,213.82546 v 4.30722 m 0.88196,-5.04111 v 5.775" />
+      <path
+         d="m 66.952299,218.00035 v -0.6757 l 1.560816,0.6757 -1.560816,0.6757 z"
+         stroke="none"
+         id="path38-1"
+         style="stroke-width:0.264649;stroke-miterlimit:10" />
+      <path
+         d="M 63.956193,215.97907 H 61.51311"
+         fill="none"
+         id="path39-0"
+         style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
+    </g>
+    <g
+       transform="translate(-104.06665,150.97388)"
+       id="g40-8">
+      <text
+         x="220.84665"
+         y="-61.999996"
+         style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+         xml:space="preserve"
+         id="text39-5"><tspan
+           x="220.84665"
+           y="-61.999996"
+           style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+           id="tspan39-0">M</tspan></text>
+      <text
+         x="221.06665"
+         y="-61.473885"
+         style="font-size:2.46944px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+         xml:space="preserve"
+         id="text40-6"><tspan
+           x="221.06665"
+           y="-61.473885"
+           style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
+           id="tspan40-4">N1</tspan></text>
+    </g>
+    <g
+       id="use1-6-7-2"
+       transform="matrix(-1,0,0,1,168.51311,-164.2712)">
+      <title
+         id="title47-5">mos: pmos analog</title>
+      <g
+         id="g51-8">
+        <path
+           d="m 48.51311,210.97907 -5e-6,2.97872 h -3.674962"
+           fill="none"
+           id="path47-6"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+           sodipodi:nodetypes="ccc" />
+        <path
+           d="m 44.838143,218.00035 h 3.674962 v 2.97872"
+           fill="none"
+           id="path48-2"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+           sodipodi:nodetypes="ccc" />
+        <path
+           id="path49-8"
+           style="stroke:#000000;stroke-width:0.264583;stroke-miterlimit:10;stroke-dasharray:none"
+           d="m 43.956183,213.82546 v 4.30722 m 0.88196,-5.04111 v 5.775" />
+        <path
+           d="m 46.513108,213.96843 v 0.6757 l -1.560815,-0.6757 1.560815,-0.6757 z"
+           stroke="none"
+           id="path50-4"
+           style="stroke-width:0.264649;stroke-miterlimit:10" />
+        <path
+           d="M 43.956183,215.97907 H 41.513105"
+           fill="none"
+           id="path51-7"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
+      </g>
+      <g
+         transform="matrix(-1,0,0,1,272.35976,278.27119)"
+         id="g52-2">
+        <text
+           x="220.84665"
+           y="-61.999996"
+           style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+           xml:space="preserve"
+           id="text51-4"><tspan
+             x="220.84665"
+             y="-61.999996"
+             style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+             id="tspan51-0">M</tspan></text>
+        <text
+           x="221.06665"
+           y="-61.473885"
+           style="font-size:2.46944px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+           xml:space="preserve"
+           id="text52-6"><tspan
+             sodipodi:role="line"
+             id="tspan174"
+             x="221.06665"
+             y="-61.473885"><tspan
+               x="221.06665"
+               y="-61.473885"
+               style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
+               id="tspan52-2">P1</tspan></tspan><tspan
+             sodipodi:role="line"
+             id="tspan175"
+             x="221.06665"
+             y="-61.473885"><tspan
+               x="221.06665"
+               y="-61.473885"
+               style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
+               id="tspan176" /></tspan></text>
+      </g>
+      <title
+         id="title52-9">mos: pmos analog</title>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 119.99782,64.984038 v 9.999998"
+       id="path2-9" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 120,82.975823 v 0.04835"
+       id="path3-0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 119.99782,42.681262 10e-6,4.021283"
+       id="path15-5-1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 119.99782,42.681262 V 40.160886"
+       id="path24-6-3" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 120.00001,95.4962 v 4.021286"
+       id="path15-0-1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 120.00001,95.4962 V 92.975824"
+       id="path24-4-1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 127,51.707864 h 6"
+       id="path176" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 119.99782,40.160884 20,0.01595"
+       id="path178" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 140.00402,40.176841 0.12592,1.4e-5"
+       id="path179" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 140.0863,40.177398 -0.10757,-0.0011"
+       id="path180" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 127.00001,87.986467 133,88.007737 v 0 0"
+       id="path181" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 128.50218,87.991783 v -4.999998 h -8.5"
+       id="path177-7" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 120.00001,99.517484 20.00217,-0.02569"
+       id="path182" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 120.00001,99.517484 h -0.13229"
+       id="path183" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 140.00218,99.491791 0.13012,2.64e-4"
+       id="path184" />
+    <g
+       id="use1-7"
+       transform="translate(-307.51309,9.2394294)">
+      <title
+         id="title190">vdd</title>
+      <path
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+         d="m 432.5131,28.968435 h 10.00001"
+         id="path190" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 437.51309,28.968435 v 1.999999"
+         id="path191" />
+      <g
+         id="g192"
+         transform="translate(229.75797,87.661945)">
         <title
-           id="title245">label2</title>
+           id="title191">label2</title>
         <text
            x="215.75513"
            y="-57.746479"
            style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
            xml:space="preserve"
-           id="text245"><tspan
+           id="text191"><tspan
              x="215.75513"
              y="-57.746479"
              style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
-             id="tspan245">I</tspan></text>
+             id="tspan191">V</tspan></text>
         <text
            x="215.88588"
            y="-57.231068"
            style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';text-decoration-color:#000000;letter-spacing:0.0978958px;word-spacing:0px;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
            xml:space="preserve"
-           id="text246"><tspan
+           id="text192"><tspan
              x="215.88588"
              y="-57.231068"
-             dx="0"
              style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';letter-spacing:0.0978958px;word-spacing:0px;stroke-width:0.264583"
-             id="tspan246">in</tspan></text>
+             id="tspan192">DD</tspan></text>
         <title
-           id="title246">label2</title>
+           id="title192">label2</title>
+      </g>
+      <title
+         id="title193">vdd</title>
+    </g>
+    <g
+       id="use1-5"
+       transform="translate(121.63936,99.070311)">
+      <path
+         d="M 8.36282,0.40001863"
+         fill="none"
+         style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+         id="path187" />
+      <path
+         d="M 8.36282,0.40001863 V 4.4429286"
+         fill="none"
+         style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+         id="path188" />
+      <path
+         id="path189"
+         style="stroke:#000000;stroke-width:0.246944;stroke-miterlimit:10;stroke-dasharray:none"
+         d="m 6.26281,4.4429286 h 4.20002 M 6.96285,5.3714523 H 9.76279 M 7.48783,6.2999759 h 1.74998" />
+      <title
+         id="title189">ground</title>
+    </g>
+    <g
+       id="use1-8-1"
+       transform="translate(94.043812,-135.96311)">
+      <title
+         id="title35-9">mos: nmos analog</title>
+      <g
+         id="g39-6">
+        <path
+           d="m 68.513115,210.96843 v 2.98936 h -3.674962"
+           fill="none"
+           id="path35-2"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+           sodipodi:nodetypes="ccc" />
+        <path
+           d="m 64.838153,218.00035 h 3.674962 v 2.96808"
+           fill="none"
+           id="path36-1"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+           sodipodi:nodetypes="ccc" />
+        <path
+           id="path37-2"
+           style="stroke:#000000;stroke-width:0.264583;stroke-miterlimit:10;stroke-dasharray:none"
+           d="m 63.956193,213.82546 v 4.30722 m 0.88196,-5.04111 v 5.775" />
+        <path
+           d="m 66.952299,218.00035 v -0.6757 l 1.560816,0.6757 -1.560816,0.6757 z"
+           stroke="none"
+           id="path38-0"
+           style="stroke-width:0.264649;stroke-miterlimit:10" />
+        <path
+           d="M 63.956193,215.97907 H 61.51311"
+           fill="none"
+           id="path39-7"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
       </g>
       <g
-         id="use1-0"
-         transform="translate(-138.16502,146.94099)">
-        <title
-           id="title247">label2</title>
+         transform="translate(-148.01503,278.92075)"
+         id="g40-3">
         <text
-           x="215.75513"
-           y="-57.746479"
+           x="220.84665"
+           y="-61.999996"
            style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
            xml:space="preserve"
-           id="text247"><tspan
-             x="215.75513"
-             y="-57.746479"
+           id="text39-1"><tspan
+             x="220.84665"
+             y="-61.999996"
              style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
-             id="tspan247">X</tspan></text>
-        <title
-           id="title248">label2</title>
+             id="tspan39-1">M</tspan></text>
+        <text
+           x="221.06665"
+           y="-61.473885"
+           style="font-size:2.46944px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+           xml:space="preserve"
+           id="text40-9"><tspan
+             x="221.06665"
+             y="-61.473885"
+             style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
+             id="tspan40-0">N3</tspan></text>
+      </g>
+      <title
+         id="title40-5">mos: nmos analog</title>
+    </g>
+    <g
+       id="use1-6-7-6"
+       transform="translate(114.04382,-155.97907)">
+      <title
+         id="title47-7">mos: pmos analog</title>
+      <g
+         id="g51-7">
+        <path
+           d="m 48.51311,210.97907 -5e-6,2.97872 h -3.674962"
+           fill="none"
+           id="path47-4"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+           sodipodi:nodetypes="ccc" />
+        <path
+           d="m 44.838143,218.00035 h 3.674962 v 2.97872"
+           fill="none"
+           id="path48-0"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+           sodipodi:nodetypes="ccc" />
+        <path
+           id="path49-6"
+           style="stroke:#000000;stroke-width:0.264583;stroke-miterlimit:10;stroke-dasharray:none"
+           d="m 43.956183,213.82546 v 4.30722 m 0.88196,-5.04111 v 5.775" />
+        <path
+           d="m 46.513108,213.96843 v 0.6757 l -1.560815,-0.6757 1.560815,-0.6757 z"
+           stroke="none"
+           id="path50-47"
+           style="stroke-width:0.264649;stroke-miterlimit:10" />
+        <path
+           d="M 43.956183,215.97907 H 41.513105"
+           fill="none"
+           id="path51-4"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
       </g>
       <g
-         id="use1-55"
-         transform="translate(-149.06085,124.15595)">
-        <title
-           id="title249">label2</title>
+         transform="translate(-168.89047,277.97906)"
+         id="g52-8">
         <text
-           x="215.75513"
-           y="-57.746479"
+           x="220.84665"
+           y="-61.999996"
            style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
            xml:space="preserve"
-           id="text249"><tspan
-             x="215.75513"
-             y="-57.746479"
+           id="text51-5"><tspan
+             x="220.84665"
+             y="-61.999996"
              style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
-             id="tspan249">Y</tspan></text>
-        <title
-           id="title250">label2</title>
+             id="tspan51-8">M</tspan></text>
+        <text
+           x="221.06665"
+           y="-61.473885"
+           style="font-size:2.46944px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+           xml:space="preserve"
+           id="text52-2"><tspan
+             x="221.06665"
+             y="-61.473885"
+             style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
+             id="tspan52-6">P3</tspan></text>
+      </g>
+      <title
+         id="title52-0">mos: pmos analog</title>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 162.55692,64.999995 v 9.999998"
+       id="path2-6" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 162.55692,74.999993 v 0.04835"
+       id="path3-6" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 178.05692,69.999992 h -15.5"
+       id="path13-4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 162.55692,50.989353 1e-5,4.021283"
+       id="path15-5-6" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 162.55693,87.52037 v 4.021283"
+       id="path15-0-2" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 162.55693,87.52037 V 84.999994"
+       id="path24-4-8" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 155.55692,59.999998 V 80.01596"
+       id="path200" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 155.55692,80.148283 V 79.972378"
+       id="path201" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 155.55692,59.867675 v 0.182406"
+       id="path202" />
+    <g
+       id="use1-8-1-1"
+       transform="translate(116.54381,-135.97907)">
+      <title
+         id="title35-9-0">mos: nmos analog</title>
+      <g
+         id="g39-6-1">
+        <path
+           d="m 68.513115,210.96843 v 2.98936 h -3.674962"
+           fill="none"
+           id="path35-2-3"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+           sodipodi:nodetypes="ccc" />
+        <path
+           d="m 64.838153,218.00035 h 3.674962 v 2.96808"
+           fill="none"
+           id="path36-1-7"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+           sodipodi:nodetypes="ccc" />
+        <path
+           id="path37-2-7"
+           style="stroke:#000000;stroke-width:0.264583;stroke-miterlimit:10;stroke-dasharray:none"
+           d="m 63.956193,213.82546 v 4.30722 m 0.88196,-5.04111 v 5.775" />
+        <path
+           d="m 66.952299,218.00035 v -0.6757 l 1.560816,0.6757 -1.560816,0.6757 z"
+           stroke="none"
+           id="path38-0-2"
+           style="stroke-width:0.264649;stroke-miterlimit:10" />
+        <path
+           d="M 63.956193,215.97907 H 61.51311"
+           fill="none"
+           id="path39-7-6"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
       </g>
       <g
-         id="use1-70"
-         transform="translate(-25.491425,124.73107)">
-        <title
-           id="title251">label2</title>
+         transform="translate(-148.01503,278.92075)"
+         id="g40-3-4">
         <text
-           x="215.75513"
-           y="-57.746479"
+           x="220.84665"
+           y="-61.999996"
            style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
            xml:space="preserve"
-           id="text251"><tspan
-             x="215.75513"
-             y="-57.746479"
+           id="text39-1-5"><tspan
+             x="220.84665"
+             y="-61.999996"
              style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
-             id="tspan251">V</tspan></text>
+             id="tspan39-1-2">M</tspan></text>
         <text
+           x="221.06665"
+           y="-61.473885"
+           style="font-size:2.46944px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+           xml:space="preserve"
+           id="text40-9-0"><tspan
+             x="221.06665"
+             y="-61.473885"
+             style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
+             id="tspan40-0-2">N4</tspan></text>
+      </g>
+      <title
+         id="title40-5-9">mos: nmos analog</title>
+    </g>
+    <g
+       id="use1-6-7-6-0"
+       transform="translate(136.54382,-155.99503)">
+      <title
+         id="title47-7-9">mos: pmos analog</title>
+      <g
+         id="g51-7-9">
+        <path
+           d="m 48.51311,210.97907 -5e-6,2.97872 h -3.674962"
+           fill="none"
+           id="path47-4-4"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+           sodipodi:nodetypes="ccc" />
+        <path
+           d="m 44.838143,218.00035 h 3.674962 v 2.97872"
+           fill="none"
+           id="path48-0-5"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+           sodipodi:nodetypes="ccc" />
+        <path
+           id="path49-6-1"
+           style="stroke:#000000;stroke-width:0.264583;stroke-miterlimit:10;stroke-dasharray:none"
+           d="m 43.956183,213.82546 v 4.30722 m 0.88196,-5.04111 v 5.775" />
+        <path
+           d="m 46.513108,213.96843 v 0.6757 l -1.560815,-0.6757 1.560815,-0.6757 z"
+           stroke="none"
+           id="path50-47-0"
+           style="stroke-width:0.264649;stroke-miterlimit:10" />
+        <path
+           d="M 43.956183,215.97907 H 41.513105"
+           fill="none"
+           id="path51-4-3"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
+      </g>
+      <g
+         transform="translate(-168.39046,277.99502)"
+         id="g52-8-7">
+        <text
+           x="220.84665"
+           y="-61.999996"
+           style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+           xml:space="preserve"
+           id="text51-5-8"><tspan
+             x="220.84665"
+             y="-61.999996"
+             style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+             id="tspan51-8-8">M</tspan></text>
+        <text
+           x="221.06665"
+           y="-61.473885"
+           style="font-size:2.46944px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+           xml:space="preserve"
+           id="text52-2-6"><tspan
+             x="221.06665"
+             y="-61.473885"
+             style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
+             id="tspan52-6-0">P4</tspan></text>
+      </g>
+      <title
+         id="title52-0-4">mos: pmos analog</title>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 185.05692,64.984031 v 9.999998"
+       id="path2-6-6" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 185.05692,74.984029 v 0.04835"
+       id="path3-6-7" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 185.05693,87.504406 V 84.98403"
+       id="path24-4-8-6" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 178.05692,59.984034 V 79.999996"
+       id="path200-0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 178.05692,80.132319 V 79.956414"
+       id="path201-9" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 178.05692,59.851711 v 0.182406"
+       id="path202-7" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 139.99782,56.70787 v 8.292129"
+       id="path203" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 140,74.999997 v 8.040137"
+       id="path204" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 113,61.510639 V 79.02128"
+       id="path205" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 113,61.544863 v -0.16655"
+       id="path206" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 113,78.986392 v 0.167212"
+       id="path207" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 113,69.999997 H 102.5"
+       id="path208" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264521px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 140.00218,99.491792 45.16533,-0.132294"
+       id="path209" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 185.05693,87.504404 -0.0204,11.85554"
+       id="path210" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 162.55693,91.541652 0.0279,7.883993"
+       id="path211" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 162.55692,50.989351 162.42463,40.176846"
+       id="path212" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 140.03251,40.176846 h 22.39212"
+       id="path213" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.263853px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 162.42466,40.176827 22.63477,-0.0016 0.13155,-0.0012"
+       id="path215" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 185.05693,54.984038 0.003,-14.80861 h 0.0204"
+       id="path216" />
+    <g
+       id="use1"
+       transform="matrix(1,0,0,-1,-116.30932,359.74099)"
+       style="stroke-width:0.3;stroke-dasharray:none">
+      <title
+         id="title232">opamp: single-ended (wider)</title>
+      <path
+         d="m 201.62744,289.74099 -12.49487,-7.34993 v 14.69986 z"
+         fill="none"
+         style="stroke:#000000;stroke-width:0.3;stroke-miterlimit:10;stroke-dasharray:none"
+         id="path233" />
+      <path
+         d="m 201.30932,289.74099 h 4.19934 M 185.28314,284.741 h 3.85631 m -3.85631,10.00467 h 3.85631"
+         style="font-variation-settings:normal;fill:none;stroke:#000000;stroke-width:0.3;stop-color:#000000;stroke-dasharray:none"
+         id="path234"
+         sodipodi:nodetypes="cccccc" />
+      <path
+         id="path235"
+         style="stroke-width:0.3;stroke-linecap:square;stroke-miterlimit:10;stroke-dasharray:none"
+         d="m 191.26433,294.74099 c 0,-0.0613 -0.0573,-0.0613 -0.085,-0.0613 h -0.61045 v -0.61242 c 0,-0.0237 0,-0.083 -0.0593,-0.083 -0.0612,0 -0.0612,0.0573 -0.0612,0.083 v 0.61242 h -0.61044 c -0.0277,0 -0.0849,0 -0.0849,0.0613 0,0.0593 0.0593,0.0593 0.0849,0.0593 h 0.61044 v 0.61243 c 0,0.0237 0,0.083 0.0593,0.083 0.0612,0 0.0612,-0.0573 0.0612,-0.083 v -0.61243 h 0.61045 c 0.0257,0 0.085,0 0.085,-0.0593 z m 0,-10 c 0,-0.0613 -0.0612,-0.0613 -0.0909,-0.0613 h -1.32955 c -0.0296,0 -0.0909,0 -0.0909,0.0613 0,0.0593 0.0573,0.0593 0.081,0.0593 h 1.34931 c 0.0237,0 0.081,0 0.081,-0.0593 z" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 89.199338,69.999999 102.5,69.999997"
+       id="path220" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 170,69.999997 V 44.999999 h -60"
+       id="path222" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 69.000001,64.999996 68.973808,44.867708"
+       id="path225" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 110,44.999999 c 0,0 -41.026192,-0.132291 -41.026192,-0.132291 v 0"
+       id="path226" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 69.13229,44.867536 h -0.290774 v 0"
+       id="path227" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 69.000001,64.953141 v 0.174665"
+       id="path228" />
+    <g
+       id="use1-71"
+       transform="translate(129.4794,63.519417)">
+      <title
+         id="title236">circuitikz_0.5mm_grid.svg:node2_inkscape_duplicate</title>
+      <g
+         id="g238"
+         transform="matrix(0.83559759,0,0,0.83538016,-3.2548357,3.723846)">
+        <title
+           id="title237">node net</title>
+        <path
+           d="m 52.922714,3.299976 c 0,-0.3092284 -0.250676,-0.5599036 -0.559904,-0.5599036 -0.309228,0 -0.559904,0.2506752 -0.559904,0.5599036 0,0.3092284 0.250676,0.5599036 0.559904,0.5599036 0.309228,0 0.559904,-0.2506752 0.559904,-0.5599036 z"
+           id="path237"
+           style="stroke:#000000;stroke-width:0.31676;stroke-miterlimit:10" />
+        <title
+           id="title238">node net</title>
+      </g>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 120,73.999997 -27.495053,0.02127 v 0"
+       id="path229" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 69.000001,74.999997 v 9.999999 l 23.504844,-0.0026 1.02e-4,-10.976129"
+       id="path230" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 92.596931,74.021266 H 92.373689"
+       id="path231" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 69.162363,74.998963 -0.293708,0.0021"
+       id="path232" />
+    <g
+       id="use1-6"
+       transform="translate(-349.38902,68.700014)">
+      <title
+         id="title239">arrow</title>
+      <path
+         d="m 411.36283,6.299974 h 6.73535"
+         fill="none"
+         style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+         id="path239" />
+      <g
+         transform="matrix(0.3514598,0,0,-0.3514598,418.36284,6.299976)"
+         stroke-linecap="round"
+         style="stroke:#000000;stroke-width:0.753;stroke-miterlimit:10"
+         id="g241">
+        <g
+           stroke-linejoin="round"
+           id="g240">
+          <path
+             d="M -4.93753,1.75745 C -4.03546,0.70296 -2.0253,0.20503 0,0 -2.0253,-0.20503 -4.03546,-0.70296 -4.93753,-1.75745"
+             fill="none"
+             id="path240" />
+        </g>
+      </g>
+      <title
+         id="title241">arrow</title>
+    </g>
+    <g
+       id="use1-1"
+       transform="translate(-226.36283,63.700024)">
+      <title
+         id="title242">arrow</title>
+      <path
+         d="m 411.36283,6.299974 h 6.73535"
+         fill="none"
+         style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+         id="path242" />
+      <g
+         transform="matrix(0.3514598,0,0,-0.3514598,418.36284,6.299976)"
+         stroke-linecap="round"
+         style="stroke:#000000;stroke-width:0.753;stroke-miterlimit:10"
+         id="g244">
+        <g
+           stroke-linejoin="round"
+           id="g243">
+          <path
+             d="M -4.93753,1.75745 C -4.03546,0.70296 -2.0253,0.20503 0,0 -2.0253,-0.20503 -4.03546,-0.70296 -4.93753,-1.75745"
+             fill="none"
+             id="path243" />
+        </g>
+      </g>
+      <title
+         id="title244">arrow</title>
+    </g>
+    <g
+       id="use1-3"
+       transform="translate(-151.88588,136.73107)">
+      <title
+         id="title245">label2</title>
+      <text
+         x="215.75513"
+         y="-57.746479"
+         style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+         xml:space="preserve"
+         id="text245"><tspan
+           x="215.75513"
+           y="-57.746479"
+           style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+           id="tspan245">I</tspan></text>
+      <text
+         x="215.88588"
+         y="-57.231068"
+         style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';text-decoration-color:#000000;letter-spacing:0.0978958px;word-spacing:0px;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+         xml:space="preserve"
+         id="text246"><tspan
            x="215.88588"
            y="-57.231068"
-           style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';text-decoration-color:#000000;letter-spacing:0.0978958px;word-spacing:0px;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-           xml:space="preserve"
-           id="text252"><tspan
-             x="215.88588"
-             y="-57.231068"
-             style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';letter-spacing:0.0978958px;word-spacing:0px;stroke-width:0.264583"
-             id="tspan252">out</tspan></text>
-        <title
-           id="title252">label2</title>
-      </g>
+           dx="0"
+           style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';letter-spacing:0.0978958px;word-spacing:0px;stroke-width:0.264583"
+           id="tspan246">in</tspan></text>
+      <title
+         id="title246">label2</title>
+    </g>
+    <g
+       id="use1-0"
+       transform="translate(-138.16502,146.94099)">
+      <title
+         id="title247">label2</title>
+      <text
+         x="215.75513"
+         y="-57.746479"
+         style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+         xml:space="preserve"
+         id="text247"><tspan
+           x="215.75513"
+           y="-57.746479"
+           style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+           id="tspan247">X</tspan></text>
+      <title
+         id="title248">label2</title>
+    </g>
+    <g
+       id="use1-55"
+       transform="translate(-149.06085,124.15595)">
+      <title
+         id="title249">label2</title>
+      <text
+         x="215.75513"
+         y="-57.746479"
+         style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+         xml:space="preserve"
+         id="text249"><tspan
+           x="215.75513"
+           y="-57.746479"
+           style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+           id="tspan249">Y</tspan></text>
+      <title
+         id="title250">label2</title>
+    </g>
+    <g
+       id="use1-70"
+       transform="translate(-25.491425,124.73107)">
+      <title
+         id="title251">label2</title>
+      <text
+         x="215.75513"
+         y="-57.746479"
+         style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+         xml:space="preserve"
+         id="text251"><tspan
+           x="215.75513"
+           y="-57.746479"
+           style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+           id="tspan251">V</tspan></text>
+      <text
+         x="215.88588"
+         y="-57.231068"
+         style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';text-decoration-color:#000000;letter-spacing:0.0978958px;word-spacing:0px;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+         xml:space="preserve"
+         id="text252"><tspan
+           x="215.88588"
+           y="-57.231068"
+           style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';letter-spacing:0.0978958px;word-spacing:0px;stroke-width:0.264583"
+           id="tspan252">out</tspan></text>
+      <title
+         id="title252">label2</title>
+    </g>
+    <g
+       id="use1-4"
+       transform="translate(79.5007,67.583154)">
+      <title
+         id="title253">circuitikz_0.5mm_grid.svg:node2_inkscape_duplicate</title>
       <g
-         id="use1-4"
-         transform="translate(79.5007,67.583154)">
+         id="g255"
+         transform="matrix(0.83559759,0,0,0.83538016,-3.2548357,3.723846)">
         <title
-           id="title253">circuitikz_0.5mm_grid.svg:node2_inkscape_duplicate</title>
-        <g
-           id="g255"
-           transform="matrix(0.83559759,0,0,0.83538016,-3.2548357,3.723846)">
-          <title
-             id="title254">node net</title>
-          <path
-             d="m 52.922714,3.299976 c 0,-0.3092284 -0.250676,-0.5599036 -0.559904,-0.5599036 -0.309228,0 -0.559904,0.2506752 -0.559904,0.5599036 0,0.3092284 0.250676,0.5599036 0.559904,0.5599036 0.309228,0 0.559904,-0.2506752 0.559904,-0.5599036 z"
-             id="path254"
-             style="stroke:#000000;stroke-width:0.31676;stroke-miterlimit:10" />
-          <title
-             id="title255">node net</title>
-        </g>
+           id="title254">node net</title>
+        <path
+           d="m 52.922714,3.299976 c 0,-0.3092284 -0.250676,-0.5599036 -0.559904,-0.5599036 -0.309228,0 -0.559904,0.2506752 -0.559904,0.5599036 0,0.3092284 0.250676,0.5599036 0.559904,0.5599036 0.309228,0 0.559904,-0.2506752 0.559904,-0.5599036 z"
+           id="path254"
+           style="stroke:#000000;stroke-width:0.31676;stroke-miterlimit:10" />
+        <title
+           id="title255">node net</title>
       </g>
+    </g>
+    <g
+       id="use1-2"
+       transform="translate(72.500598,63.519417)">
+      <title
+         id="title256">circuitikz_0.5mm_grid.svg:node2_inkscape_duplicate</title>
       <g
-         id="use1-2"
-         transform="translate(72.500598,63.519417)">
+         id="g258"
+         transform="matrix(0.83559759,0,0,0.83538016,-3.2548357,3.723846)">
         <title
-           id="title256">circuitikz_0.5mm_grid.svg:node2_inkscape_duplicate</title>
-        <g
-           id="g258"
-           transform="matrix(0.83559759,0,0,0.83538016,-3.2548357,3.723846)">
-          <title
-             id="title257">node net</title>
-          <path
-             d="m 52.922714,3.299976 c 0,-0.3092284 -0.250676,-0.5599036 -0.559904,-0.5599036 -0.309228,0 -0.559904,0.2506752 -0.559904,0.5599036 0,0.3092284 0.250676,0.5599036 0.559904,0.5599036 0.309228,0 0.559904,-0.2506752 0.559904,-0.5599036 z"
-             id="path257"
-             style="stroke:#000000;stroke-width:0.31676;stroke-miterlimit:10" />
-          <title
-             id="title258">node net</title>
-        </g>
+           id="title257">node net</title>
+        <path
+           d="m 52.922714,3.299976 c 0,-0.3092284 -0.250676,-0.5599036 -0.559904,-0.5599036 -0.309228,0 -0.559904,0.2506752 -0.559904,0.5599036 0,0.3092284 0.250676,0.5599036 0.559904,0.5599036 0.309228,0 0.559904,-0.2506752 0.559904,-0.5599036 z"
+           id="path257"
+           style="stroke:#000000;stroke-width:0.31676;stroke-miterlimit:10" />
+        <title
+           id="title258">node net</title>
       </g>
     </g>
   </g>

@@ -4431,34 +4431,6 @@
       \verb 10.1109/ISSCC49657.2024.10454361
       \endverb
     \endentry
-    \entry{matlab}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=2d2b0d998977e6379aad61f1b56ac3c1}{%
-           family={MathWorks},
-           familyi={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{2d2b0d998977e6379aad61f1b56ac3c1}
-      \strng{fullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
-      \strng{fullhashraw}{2d2b0d998977e6379aad61f1b56ac3c1}
-      \strng{bibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
-      \strng{authorbibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
-      \strng{authornamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
-      \strng{authorfullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
-      \strng{authorfullhashraw}{2d2b0d998977e6379aad61f1b56ac3c1}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: Jan. 12, 2026}
-      \field{title}{Measuring Offset and Gain Errors in ADC}
-      \field{year}{2024}
-      \verb{urlraw}
-      \verb https://www.mathworks.com/help/msblks/ug/offset-error-and-gain-error.html
-      \endverb
-      \verb{url}
-      \verb https://www.mathworks.com/help/msblks/ug/offset-error-and-gain-error.html
-      \endverb
-    \endentry
     \entry{FMichel_2011_134}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=3b6f1d1847e03e7222eda832a5758cee}{%
@@ -4692,40 +4664,6 @@
       \field{year}{1997}
       \verb{doi}
       \verb 10.1109/ISSCC.1997.585337
-      \endverb
-    \endentry
-    \entry{pae2022_lcadc}{inproceedings}{}{}
-      \name{author}{2}{}{%
-        {{hash=55d0f61dca53038b83d5fbafab155fe8}{%
-           family={Pae},
-           familyi={P\bibinitperiod},
-           given={Kieren},
-           giveni={K\bibinitperiod}}}%
-        {{hash=409e515ffd4ed81dec0df73249783ab2}{%
-           family={Mahbub},
-           familyi={M\bibinitperiod},
-           given={Ifana},
-           giveni={I\bibinitperiod}}}%
-      }
-      \strng{namehash}{b03aa7ee26f6747493edd433102feddd}
-      \strng{fullhash}{b03aa7ee26f6747493edd433102feddd}
-      \strng{fullhashraw}{b03aa7ee26f6747493edd433102feddd}
-      \strng{bibnamehash}{b03aa7ee26f6747493edd433102feddd}
-      \strng{authorbibnamehash}{b03aa7ee26f6747493edd433102feddd}
-      \strng{authornamehash}{b03aa7ee26f6747493edd433102feddd}
-      \strng{authorfullhash}{b03aa7ee26f6747493edd433102feddd}
-      \strng{authorfullhashraw}{b03aa7ee26f6747493edd433102feddd}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2022 {IEEE} 15th Dallas Circuits and Systems Conference (DCAS)}
-      \field{title}{A Low-Power Asynchronous Level Crossing {ADC} Designed in 180 nm {CMOS} Process for Electrophysiological Signal Recording Applications}
-      \field{year}{2022}
-      \field{pages}{1\bibrangedash 4}
-      \range{pages}{4}
-      \verb{doi}
-      \verb 10.1109/DCAS53974.2022.9845498
       \endverb
     \endentry
     \entry{SharvilPatil_2024_35}{inproceedings}{}{}

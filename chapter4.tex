@@ -22,16 +22,11 @@ The fundamental difference, and the one this comparison is intended to illuminat
 \subsection{Architecture Overview}
 %                      -
 
-A Flash ADC resolves an analogue input voltage in a single conversion step by comparing it simultaneously against $2^N - 1$ evenly spaced reference levels, where $N$ is the number of output bits. For a 4-bit converter, this means 15 comparators operate in parallel at every active clock edge, each producing a binary decision about whether the input exceeds its assigned threshold. The outputs of all 15 comparators form a thermometer code (a sequence of ones followed by zeros, with no transition other than the boundary between them), which an encoder then maps to the final 4-bit binary word.
+A Flash ADC resolves an analogue input voltage in a single conversion step by comparing it simultaneously against $2^N - 1$ evenly spaced reference levels, where $N$ is the number of output bits. For a 4-bit converter, this means 15 comparators operate in parallel at every active clock edge, each producing a binary decision about whether the input exceeds its assigned threshold. The outputs of all 15 comparators form a thermometer code (a sequence of ones followed by zeros, with no transition other than the boundary between them), which an encoder then maps to the final 4-bit binary word, as detailed in Section~\ref{subsec:sync_encoder}.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    %  - Replace the placeholder box below with your actual figure  -
-    \fbox{\parbox{0.80\textwidth}{%
-        \centering\vspace{3.5cm}%
-        \textit{[Insert: top-level block diagram of the synchronous Flash ADC]}%
-        \vspace{3.5cm}}}
-    %
+    \includegraphics[width=0.45\textwidth]{figures/Flash_sync.pdf}
     \caption{Top-level block diagram of the synchronous 4-bit Flash ADC \cite{flashadc_ref}.}
     \label{fig:flash_arch}
 \end{figure}
@@ -55,14 +50,9 @@ Since all comparators are driven by the same clock, every decision is made withi
 
 The comparator used in this architecture is the StrongARM latch, a dynamic topology that has become something of a standard reference in both high-speed receiver design and data converter circuits \cite{razavi_strongarm}. It is widely adopted for good reasons, high regeneration speed, good noise performance and essentially zero static power dissipation, all of which matter in a Flash ADC where 15 comparators operate in parallel.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    %  - Replace the placeholder box below with your actual figure  -
-    \fbox{\parbox{0.75\textwidth}{%
-        \centering\vspace{3.5cm}%
-        \textit{[Insert: StrongARM latch schematic]}%
-        \vspace{3.5cm}}}
-    %
+    \includegraphics[width=0.7\textwidth]{figures/strong-arm.pdf}
     \caption{Schematic of the StrongARM latch comparator \cite{flashadc_ref}.}
     \label{fig:strongarm}
 \end{figure}
@@ -81,6 +71,61 @@ Since current only flows during the evaluation phase, and only briefly at that, 
 A key property of this comparator implementation is its ability to correctly resolve input voltages across the full supply range, from $V_{SS}$ to $V_{DD}$. In a Flash ADC, the comparators assigned to the top and bottom reference levels must operate very close to the supply rails, and a comparator that loses sensitivity or gain in those regions would introduce nonlinearity at the extremes of the transfer characteristic, degrading the integral linearity of the converter. The rail-to-rail design ensures this does not happen, maintaining consistent performance across the entire input range.
 
 The asynchronous front-end will pursue the same goal with a complementary input stage, but, as Chapter~\ref{chap:async} shows, its effective window stops slightly short of both rails due to the overdrive lost by the input pairs near the supply limits. The benchmarking methodology described in Chapter~\ref{chap:Benchmarking} therefore evaluates each converter over its own effective input range.
+
+
+%                      -
+\subsection{Thermometer-to-Binary Encoder}
+\label{subsec:sync_encoder}
+%                      -
+
+The 15 comparator outputs form a thermometer code that has to be reduced to the final 4-bit binary word. A direct thermometer-to-binary mapping is sensitive to bubble errors, isolated zeros within the run of ones, or ones within the run of zeros, caused by comparator metastability or mismatch near a decision threshold. In a direct encoder such a single misplaced bit can translate into a large output error. To make the encoding more robust, the conversion is split into two stages, the thermometer code is first converted to a Gray code and then from Gray to binary.
+
+\subsubsection{Thermometer-to-Gray Conversion}
+
+In the first stage each Gray bit is formed by combining selected thermometer outputs through XOR gates, so that the code depends only on the position of the boundary between the ones and the zeros rather than on the absolute pattern. Because a Gray code changes only a single bit between adjacent levels, a lone bubble shifts the encoded value by at most one LSB instead of producing a large jump, which is the property that gives this two-stage scheme its tolerance to comparator errors. Figure~\ref{fig:therm_to_gray} shows the thermometer-to-Gray conversion logic.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/THERMOMETER_TO_GRAY.pdf}
+    \caption{Thermometer-to-Gray conversion logic of the synchronous reference encoder.}
+    \label{fig:therm_to_gray}
+\end{figure}
+
+\subsubsection{Gray-to-Binary Conversion}
+
+The second stage converts the Gray code into the final natural binary word. The most significant binary bit equals the most significant Gray bit, and each lower binary bit is obtained as the XOR of the corresponding Gray bit with the binary bit immediately above it, so the conversion reduces to a short chain of XOR gates. Figure~\ref{fig:gray_to_binary} shows this stage.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.22\textwidth]{figures/Gray_to_binary_code.pdf}
+    \caption{Gray-to-binary conversion logic of the synchronous reference encoder.}
+    \label{fig:gray_to_binary}
+\end{figure}
+
+\subsubsection{Logic Primitives}
+
+Both encoding stages are assembled from two standard cells, the two-input XOR gate that performs the modulo-2 additions of the conversion and the 2:1 multiplexer that routes the bits along the encoding path. Their gate-level realisations are shown in Figure~\ref{fig:encoder_primitives}.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.40\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/xor.pdf}
+        \caption{Two-input XOR gate}
+        \label{fig:xor}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.40\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/multiplexer.pdf}
+        \caption{2:1 multiplexer}
+        \label{fig:multiplexer}
+    \end{subfigure}
+    \caption{Logic primitives used to build the thermometer-to-binary encoder: (a) the two-input XOR gate and (b) the 2:1 multiplexer.}
+    \label{fig:encoder_primitives}
+\end{figure}
+
+Once the binary word is available, the encoder output is registered, completing the single-cycle Flash conversion.
 
 
 %                      -

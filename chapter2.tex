@@ -55,18 +55,17 @@ This value represents the true resolution of the converter at a specific input f
 \subsubsection{Differential and Integral Non-Linearity (DNL and INL)}
 Static linearity is characterised by measuring the deviation of code transition levels from their ideal positions \cite{johns_martin_2012}. The DNL measures the deviation of a single step width from the ideal 1 LSB. A DNL less than -1 LSB implies a missing code in the transfer function.
 
-The INL is the cumulative sum of DNL errors, representing the deviation of the transfer curve from a straight line. Specific INL patterns like saw-tooth shapes can reveal systematic errors in the architecture, such as gain mismatch or non-linear biasing \cite{van_de_plassche_1994}.
+The INL is the cumulative sum of DNL errors, representing the deviation of the transfer curve from a straight line. Specific INL patterns like saw-tooth shapes can reveal systematic errors in the architecture, such as gain mismatch or non-linear biasing \cite{van_de_plassche_1994}. Figure~\ref{fig:dnl_inl_staircase} illustrates both errors on a staircase distorted by device mismatch, the deviation in each code width being the DNL and the displacement of each transition from its ideal position being the INL.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{figures/adc_dnl_inl_staircase_thesis_style.pdf}
+  \caption[Static transfer errors from device mismatch]{Effect of device mismatch on the ADC transfer characteristic. The actual staircase departs from the ideal one, the deviation in each code width is the differential non-linearity (DNL) and the displacement of each transition from its ideal position is the integral non-linearity (INL).}
+\label{fig:dnl_inl_staircase}
+\end{figure}
 
 \subsubsection{Offset and Gain Error}
-These are linear errors, offset is a constant shift of the transfer characteristic, while gain error is a deviation in its slope \cite{johns_martin_2012}. Unlike non-linearity, both preserve the signal shape and can usually be calibrated out with little effort.
-Figure~\ref{fig:offset_gain_error} shows their effect on the transfer characteristic. A constant DC shift moves the whole curve up or down (offset error), while a slope deviation alters the full-scale span (gain error). Both can be compensated by simple digital calibration.
-\paragraph{}
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.8\textwidth]{figures/uporto.pdf} 
-  \caption[ Offset and gain errors in ADC transfer function]{Adapted from ~\cite{matlab} ADC transfer function showing offset and gain errors. Offset error represents a constant DC shift applied uniformly across all codes, while gain error modifies the slope of the transfer function. Both are linear errors that can be calibrated using digital post-processing techniques \cite{johns_martin_2012}.}
-\label{fig:offset_gain_error}
-\end{figure}
+These are linear errors, offset is a constant shift of the transfer characteristic, while gain error is a deviation in its slope \cite{johns_martin_2012}. Unlike non-linearity, both preserve the signal shape and can usually be calibrated out with little effort. A constant DC shift moves the whole curve up or down (offset error), while a slope deviation alters the full-scale span (gain error), and both can be compensated by simple digital calibration.
 \par\vspace{1.5em}
 \par\vspace{1.5em}
 \newpage
@@ -127,15 +126,21 @@ The continuous clocking of a massive comparator bank creates a significant energ
 \subsection{SAR (Successive Approximation Register)}
 The SAR ADC operates using a binary search algorithm \cite{van_de_plassche_1994}, for each sample the internal logic tests one bit at a time, starting from the most significant bit (MSB). A single comparator compares the input to the output of an internal digital to analog converter (DAC), if the input is higher, the bit is set to '1' otherwise, it is set to '0'. This process repeats for $N$ cycles. Because it uses very few active components, it is the most energy efficient choice for low speeds.
 
-\begin{figure}[htbp]
-
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/SAR.pdf}
+  \caption{Block diagram of the SAR ADC architecture.}
+  \label{fig:sar_arch}
 \end{figure}
 The binary search operation of a SAR ADC is implemented by successively testing each bit through the interaction of the sample-and-hold amplifier (SHA), DAC, comparator, and control logic, as shown in Fig.~\ref{fig:sar_arch}. At every conversion step, the SAR logic updates the DAC output and the comparator decides whether the input is above or below the trial voltage, gradually converging from the MSB to the LSB towards the final digital code.
 \subsection{Pipeline}
 The Pipeline ADC breaks the conversion into several sequential stages \cite{johns_martin_2012}. Each stage resolves a few bits, quantises them, and passes the amplified remaining error (the residue) to the next stage. Because several samples are processed concurrently, the architecture reaches high throughput at high resolution. The price is the processing latency.
 
-\begin{figure}[htbp]
-  
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{figures/Pipeline.pdf}
+  \caption{Block diagram of the pipeline ADC architecture.}
+  \label{fig:pipeline_arch}
 \end{figure}
 \paragraph{}
 \paragraph{}
@@ -144,8 +149,11 @@ The pipelined converter processes multiple samples simultaneously by distributin
 \subsection{Sigma-Delta ($\Sigma\Delta$)}
 The $\Sigma\Delta$ architecture relies on oversampling, sampling much faster than the Nyquist rate \cite{candy_1985}, and noise-modulation. A modulator integrates the difference between the input signal and a feedback version of the quantised output. This process pushes the quantisation noise into higher frequencies, outside the signal band of interest, a digital filter then removes the high-frequency noise, resulting in high resolution and precision \cite{schreier_2005}.
 
-\begin{figure}[htbp]
-
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{figures/Delta-sigma.pdf}
+  \caption{Block diagram of the first-order sigma-delta ADC architecture.}
+  \label{fig:sigma_delta_arch}
 \end{figure}
 \paragraph{}
 \paragraph{}
@@ -154,8 +162,11 @@ Oversampling and noise shaping are achieved by the feedback loop formed by summe
 \subsection{Dual-slope}
 This integrating architecture \cite{microelectronics_1998} measures the time a capacitor takes to charge and discharge. In the first phase the capacitor is charged by the input voltage for a fixed period. In the second it is discharged by a known reference voltage. The time needed to return to zero is proportional to the average value of the input. The technique is accurate and immune to high-frequency noise, but much slower than the other architectures.
 
-\begin{figure}[htbp]
- 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.78\textwidth]{figures/Dual_slope.pdf}
+  \caption{Block diagram of the dual-slope ADC architecture.}
+  \label{fig:dual_slope_arch}
 \end{figure}
 \paragraph{}
 \paragraph{}
@@ -172,19 +183,18 @@ Asynchronous, or event-driven, architectures represent a fundamental paradigm sh
 The core principle behind many asynchronous ADCs is Level-Crossing Sampling (LCS) \cite{lim_2013}. In traditional uniform sampling, the signal is captured at fixed time intervals ($T_s$), and the amplitude is quantised. In LCS, the process is inverted. The amplitude levels are fixed (quantisation thresholds), and the ADC records the exact time at which the input signal crosses these thresholds.
 
 This method is particularly powerful for signals that remain constant or change slowly over long periods. Instead of generating redundant samples that capture no new information, the LCS ADC remains idle, only producing a digital event when the signal effectively changes by more than the defined threshold.
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{figures/uporto.pdf}
-\caption[Digital logic for level-crossing asynchronous ADC]%
-{Digital logic core of a level-crossing asynchronous ADC showing the two DACs that generate upper and lower thresholds around the input signal $V_{IN}$, the pair of comparators that produce the INC and DEC event signals, and the digital logic that updates the output code $DOUT$ and the time-stamp $\Delta t$ based on each level crossing. The feedback paths from the digital logic to the DACs keep the thresholds centered around the most recent output level, enabling event-driven tracking of the input signal instead of uniform-rate sampling \cite{pae2022_lcadc}.}
+\includegraphics[width=0.8\textwidth]{figures/level_crossing_adc_thesis_style_second_crossing.pdf}
+\caption[Level-crossing ADC operation]{Operation of a level-crossing ADC. The analog input $V_{in}(t)$ (top) is compared against a set of fixed amplitude thresholds, here the levels $+A/2$ and $-A/2$, and a conversion event is produced only at the instants where the input crosses one of them (markers). The event-driven digital code (bottom) is updated at each crossing and held constant in between, so the output changes only when the input does rather than at a uniform sampling rate.}
 \label{fig:LC_digital_logic}
 \end{figure}
 \paragraph{}
 \paragraph{}
 \paragraph{}
-The core of the proposed event-driven conversion scheme is illustrated in Fig.~\ref{fig:LC_digital_logic}. In this architecture, two on-chip DACs generate a pair of voltage thresholds placed symmetrically around the analog input signal $V_{IN}$, while two comparators continuously monitor the crossings of $V_{IN}$ with respect to these levels. The upper comparator asserts the INC signal whenever $V_{IN}$ rises above the upper threshold, whereas the lower comparator asserts the DEC signal when $V_{IN}$ falls below the lower threshold. 
+The core of the event-driven conversion scheme is illustrated in Fig.~\ref{fig:LC_digital_logic}. The converter holds a set of fixed amplitude thresholds and continuously monitors the input against them. As long as $V_{in}$ stays between two adjacent levels nothing happens and no conversion is performed. Each time the input crosses a threshold a single event is generated and the output code is updated by one step, upward for an upward crossing and downward for a downward crossing.
 
-Upon each level-crossing event, the digital logic block updates the encoded amplitude word $DOUT$ and the control words driving the DACs so that the thresholds are recentered around the new signal level. In addition, the logic measures the elapsed time since the previous event and outputs a time-stamp $\Delta t$, thereby representing the signal as a sequence of non-uniform events $(DOUT, \Delta t)$ instead of uniformly spaced samples. This mechanism concentrates conversion activity in intervals where the input varies rapidly and suppresses conversions during flat regions, so the converter's power consumption scales with the actual signal dynamics rather than with a fixed global sampling clock.
+The signal is therefore represented as a sequence of events rather than as uniformly spaced samples, each event recording both the new amplitude level and the instant at which the crossing occurred. Conversion activity concentrates in the intervals where the input varies and disappears during the flat regions, so the converter's power consumption scales with the actual signal dynamics rather than with a fixed global sampling clock.
 \subsection{Flash ADC}
 The Asynchronous Flash ADC adapts the parallel structure of a standard Flash ADC but removes the sampling clock entirely. In this architecture, the comparators are not latched by a clock, they operate in continuous time, constantly monitoring the input voltage $V_{in}$ against the reference ladder.
 The event generation happens when the input signal crosses a threshold, the corresponding comparator changes its output state immediately, this transition triggers an asynchronous logic to generate a digital output pulse.
@@ -232,9 +242,9 @@ A small-signal view of the canonical mirror comparator of Freitas and Current ma
 \paragraph{}
 \paragraph{}
 \paragraph{}
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{figures/Current_mirror_comparator.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/Current_mirror_comparator.pdf}
     \caption{Transistor-level schematic of the current-mirror current comparator.}
     \label{fig:currentmirror_schematic}
 \end{figure}
@@ -251,9 +261,9 @@ Among its main advantages, this architecture achieves a high speed, with reduced
 \paragraph{}
 \paragraph{}
 \paragraph{}
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{figures/HTraff_schematic_no_explanation.pdf}
+    \includegraphics[width=0.30\textwidth]{figures/HTraff.pdf}
     \caption{Transistor-level schematic of the Traff current comparator.}
     \label{fig:traff_schematic}
 \end{figure}
@@ -268,9 +278,9 @@ This design achieves a favourable speed-to-power ratio because the reduced inter
 \paragraph{}
 \paragraph{}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{figures/LuChen_schematic_no_explanation.pdf}
+    \includegraphics[width=0.60\textwidth]{figures/LuChen.pdf}
     \caption{Transistor-level schematic of the Lu Chen current comparator.}
     \label{fig:luchen_schematic}
 \end{figure}
@@ -288,9 +298,9 @@ This non-linear feedback mechanism creates an effective hysteresis, once the out
 \paragraph{}
 \paragraph{}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{figures/Hysteresis.pdf}
+    \includegraphics[width=0.62\textwidth]{figures/Hysteresis.pdf}
     \caption{Transistor-level schematic of the hysteresis current comparator.}
     \label{fig:hysteresis_schematic}
 \end{figure}
@@ -306,9 +316,9 @@ Simulation results reported in the literature indicate that this architecture ac
 \paragraph{}
 \paragraph{}
 \paragraph{}
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{figures/Min_Kim.pdf}
+    \includegraphics[width=0.58\textwidth]{figures/Min_Kim_schematic.pdf}
     \caption{Transistor-level schematic of the Min and Kim current comparator.}
     \label{fig:minkim_schematic}
 \end{figure}
@@ -325,10 +335,10 @@ A key feature of this architecture is the use of positive feedback from one of t
 \paragraph{}
 \paragraph{}
 \paragraph{}
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{figures/CCII.pdf}\\[2pt]
-    \includegraphics[width=0.55\textwidth]{figures/CCII_opamp.pdf}
+    \includegraphics[width=0.65\textwidth]{figures/CCII.pdf}\\[2pt]
+    \includegraphics[width=0.40\textwidth]{figures/CCII_opamp.pdf}
     \caption{Transistor-level schematic of the CC-II-based current comparator, with its internal operational amplifier subcircuit shown below.}
     \label{fig:ccii_schematic}
 \end{figure}
@@ -375,31 +385,8 @@ The internal resistive loading method involves placing a variable resistive netw
 
 The reference ladder trimming technique corrects comparator offset by using the main reference ladder as a calibration source \cite{yao_bulk_2011}. In this architecture, a switching network selects specific voltages from the resistor ladder and applies them to the bulk terminals of the input transistors M1 and M2. The body effect then shifts the threshold voltage ($V_{th}$) of the differential pair and cancels the input-referred offset caused by process mismatch.
 
-As demonstrated in the simulation results of the threshold voltage ($|V_t|$) versus the ladder tap voltage ($LT$), the threshold voltage of transistors M1 and M2 increases linearly from approximately 356.5~mV to 372~mV as the calibration voltage is adjusted. In contrast, the threshold voltage of transistors M3 and M4 remains constant at approximately 356.5~mV because their bulk terminals are not connected to the tuning network. This targeted adjustment of the bulk potential for the input differential pair provides a tuning range sufficient to compensate for random process variations and ensure the accuracy of the comparator trip points.
-\paragraph{}
-\paragraph{}
-\paragraph{}
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.8\textwidth]{figures/uporto.pdf}
-\caption[Bulk-driven resistive ladder trimming for comparator offset calibration]%
-{Bulk-driven resistive reference ladder trimming architecture used for comparator offset calibration. The preamplifier input pair (M1, M2) has its bulk terminals driven by a selectable tap of the main reference resistor ladder via the offset calibration circuit (OSCAL). A digital control word selects one of the ladder taps (Rtap) through a tree decoder and multiplexers, generating a calibration voltage $V_{cal}$ that modulates the bulk node $V_B$. By shifting the bulk potential of M1 and M2 while keeping the load devices at a fixed substrate potential, the threshold voltage of the input pair is adjusted through the body effect, providing a tunable range to cancel process-induced input offset in high-speed Flash ADC comparators \cite{yao_bulk_2011}.}
-\label{fig:resistive_ladder}
-\end{figure}
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.7\textwidth]{figures/uporto.pdf}
-  \caption[Bulk-driven trimming effect on input pair threshold voltage]{Threshold voltage $V_{th}$ variation of input differential pair transistors M1, M2 and load transistors M3, M4 as a function of the resistive ladder tap voltage $LT$. The graph demonstrates the body effect as the bulk potential of M1 and M2 is modulated via the reference ladder, providing a calibration range to compensate for process-induced mismatch \cite{yao_bulk_2011}.}
-\label{fig:mismatch_correction}
-\end{figure}
-\paragraph{}
-\paragraph{}
-\paragraph{}
-The effectiveness of the bulk-driven trimming mechanism is illustrated by the controlled change
-of the input pair threshold voltage with the ladder tap voltage, as shown in Fig.~\ref{fig:mismatch_correction} and Fig.~\ref{fig:resistive_ladder}. As the
-calibration voltage LT increases, the threshold of M1 and M2 shifts linearly while M3 and M4
-remain fixed, providing the tuning range required to compensate comparator offset caused by
-random process variations \cite{yao_bulk_2011}.
+Simulation results reported in \cite{yao_bulk_2011} show that the threshold voltage of transistors M1 and M2 increases linearly from approximately 356.5~mV to 372~mV as the calibration voltage is adjusted. In contrast, the threshold voltage of transistors M3 and M4 remains constant at approximately 356.5~mV because their bulk terminals are not connected to the tuning network. This targeted adjustment of the bulk potential for the input differential pair provides a tuning range sufficient to compensate for random process variations and ensure the accuracy of the comparator trip points. As the calibration voltage increases, the threshold of M1 and M2 shifts linearly while M3 and M4 remain fixed, providing the tuning range required to compensate comparator offset caused by random process variations \cite{yao_bulk_2011}.
+
 \subsection{Advantages of Static Bulk-Driven Trimming for Asynchronous ADCs}
 \label{subsec:static_trimming}
 Dynamic offset-cancellation techniques such as auto-zeroing rely on accurately timed clock phases $\phi_1$ and $\phi_2$ and on storage capacitors that must be charged and discharged periodically \cite{baker_cmos_2010}. Static trimming techniques, whether implemented with resistive networks or with bulk-driven threshold adjustment as in \cite{yao_bulk_2011}, suit an event-driven architecture far better. Once the correction values are found during a foreground calibration phase, the trimming network stays static, no further switching or clocking is required, and the comparator bias conditions are held by DC conduction paths alone. The trimming circuitry therefore does not disturb the event-driven operation of the ADC, which should remain idle whenever the input is not crossing a quantisation threshold.
@@ -414,7 +401,7 @@ The bulk-driven variant has a second advantage. The correction acts on terminals
 
 % Nijhawan et al.\ propose a current-mode low-power Flash ADC in which the core decision element is a current comparator built around a current conveyor structure \cite{nijhawan_design_2022}. The design targets high-speed operation with very low propagation delay (on the order of 0.4~ns) at 1.8~V in 0.18~\(\mu\)m CMOS, achieving a reported power consumption of approximately 158~\(\mu\)W at 0.1~mA input current. As illustrated in Fig.~\ref{fig:nijhawan_comp}, the ADC employs a current-mode front-end in which current conveyors and mirror structures realize the high-speed comparators that interface a reference ladder and a thermometer-to-binary encoder. This organisation attains low input impedance and short decision time, leading to very low propagation delay and modest power, but the reliance on multiple current mirrors increases sensitivity to mismatch and temperature, and the overall converter still operates under a global sampling clock without any form of asynchronous level-crossing or on-chip offset trimming.
 
-% \begin{figure}[htbp]
+% \begin{figure}[H]
 % \centering
 % \includegraphics[width=0.6\textwidth]{figures/nijhawan_comp.png}
 % \caption[Current-conveyor-based comparator used in \cite{nijhawan_design_2022}]%
@@ -424,7 +411,7 @@ The bulk-driven variant has a second advantage. The correction acts on terminals
 
 % In the 2-bit Flash ADC by Panchal et al., the comparator is implemented using second-generation current conveyors (CC-II) combined with positive feedback to sharpen the transition between logic levels \cite{panchal_design_nodate}. As illustrated in Fig.~\ref{fig:panchal_comp}, the input current is processed by the CC-II core, which converts small current differences into a voltage that is then amplified by a regenerative latch, yielding fast and rail-to-rail outputs. This configuration achieves excellent linearity and very low power for the 2-bit target resolution, but the strong positive feedback and reliance on precise current matching make the structure less attractive for higher resolutions without complementary offset calibration or background trimming.
 
-% \begin{figure}[htbp]
+% \begin{figure}[H]
 % \centering
 % \includegraphics[width=0.6\textwidth]{figures/panchal_comp.png}
 % \caption[CC-II-based current comparator used in \cite{panchal_design_nodate}]%
@@ -451,7 +438,7 @@ In an asynchronous ADC, the switching frequency is replaced by the event rate. I
 \begin{equation}
   P_{async} \propto Activity \times V_{DD}^2
 \end{equation}
-The energy consumed is therefore proportional to the information content of the signal. For sparse signals this is a large advantage: during periods of inactivity the converter draws close to no dynamic power.
+The energy consumed is therefore proportional to the information content of the signal. For sparse signals this is a large advantage. During periods of inactivity the converter draws close to no dynamic power.
 
 \subsection{Comparative Evaluation}
 State-of-the-art data show that asynchronous ADCs are among the most energy-efficient converters over a wide range of sampling rates, particularly at low and medium bandwidths \cite{lim_2013}.
@@ -463,7 +450,7 @@ In each plot, the entry marked [1] is the Flash ADC with the best performance am
 \paragraph{}
 \paragraph{}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.85\textwidth]{fom_fs.png}
 \caption[Walden FoM versus sampling frequency for representative ADCs]{Walden FoM vs. Sampling Frequency (Flash reference [1] highlighted)}
@@ -516,7 +503,7 @@ Figure \ref{fig:energy_year} shows how this architectural difference plays out o
 \par\vspace{1.5em}
 \par\vspace{1.5em}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.85\textwidth]{energy_year.png}
 \caption[Energy per conversion versus publication year for representative ADCs]%

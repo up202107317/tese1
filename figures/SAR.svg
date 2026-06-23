@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="135.43532mm"
+   height="47.725742mm"
+   viewBox="0 0 135.43532 47.725742"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="SAR.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#4a4a4a"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="2.8934906"
+     inkscape:cx="230.17182"
+     inkscape:cy="94.868117"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="use1-05-0">
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="2.1903898"
+       originy="-12.367502"
+       spacingx="0.5"
+       spacingy="0.5"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="marker20"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Stylized triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="m 6,0 c -3,1 -7,3 -9,5 0,0 0,-4 2,-5 -2,-1 -2,-5 -2,-5 2,2 6,4 9,5 z"
+         id="path20" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker18"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Stylized triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="m 6,0 c -3,1 -7,3 -9,5 0,0 0,-4 2,-5 -2,-1 -2,-5 -2,-5 2,2 6,4 9,5 z"
+         id="path18" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ArrowTriangleStylized"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Stylized triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="m 6,0 c -3,1 -7,3 -9,5 0,0 0,-4 2,-5 -2,-1 -2,-5 -2,-5 2,2 6,4 9,5 z"
+         id="path17" />
+    </marker>
+    <symbol
+       id="circuitikz_0.5mm_grid.svg:block3">
+      <title
+         id="title107">amp</title>
+      <path
+         d="m 223.36283,16.299976 h -5.10004 m 14.89996,0 h 5.10004"
+         fill="none"
+         id="path116"
+         style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
+      <path
+         d="m 223.36283,10.909996 9.79992,5.38998 -9.79992,5.38998 z"
+         fill="none"
+         id="path117"
+         style="stroke:#000000;stroke-width:0.529302;stroke-miterlimit:10" />
+      <title
+         id="title189">amp</title>
+    </symbol>
+    <symbol
+       id="circuitikz_0.5mm_grid.svg:opamp1">
+      <title
+         id="title299">opamp: single-ended</title>
+      <path
+         d="M 20.835649,306.96842 8.3407784,299.61849 v 14.69986 z"
+         fill="none"
+         style="stroke:#000000;stroke-width:0.529302;stroke-miterlimit:10"
+         id="path301" />
+      <path
+         d="m 20.517529,306.96842 h 4.199343 m -19.9999991,-4 h 3.6307855 m -3.6307855,7.99999 h 3.6307855"
+         style="font-variation-settings:normal;fill:none;stroke:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+         id="path303"
+         sodipodi:nodetypes="cccccc" />
+      <title
+         id="title317">opamp: single-ended</title>
+      <path
+         class="f1"
+         d="m 11.506538,310.96981 c 0,-0.0875 -0.08184,-0.0875 -0.121355,-0.0875 h -0.872067 v -0.87489 c 0,-0.0339 0,-0.11853 -0.08467,-0.11853 -0.08749,0 -0.08749,0.0818 -0.08749,0.11853 v 0.87489 H 9.4688939 c -0.039511,0 -0.1213554,0 -0.1213554,0.0875 0,0.0847 0.084667,0.0847 0.1213554,0.0847 H 10.34096 v 0.87489 c 0,0.0339 0,0.11853 0.08467,0.11853 0.08749,0 0.08749,-0.0819 0.08749,-0.11853 v -0.87489 h 0.872067 c 0.03669,0 0.121355,0 0.121355,-0.0847 z m 0,-7.99999 c 0,-0.0875 -0.08749,-0.0875 -0.129822,-0.0875 H 9.4773604 c -0.042333,0 -0.1298219,0 -0.1298219,0.0875 0,0.0847 0.081844,0.0847 0.1157108,0.0847 h 1.9275777 c 0.03387,0 0.115711,0 0.115711,-0.0847 z"
+         id="path302"
+         style="stroke-width:0.199229;stroke-linecap:square;stroke-miterlimit:10" />
+    </symbol>
+    <symbol
+       id="circuitikz_0.5mm_grid.svg:block7">
+      <title
+         id="title111">dac</title>
+      <g
+         id="g160">
+        <path
+           d="m 253.36282,41.299975 h -4.99999 m 14.79991,0 h 5.20009"
+           fill="none"
+           id="path176"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
+        <path
+           d="m 253.36282,36.400017 h 9.79991 v 9.799912 h -9.79991 z"
+           fill="none"
+           id="path177"
+           style="stroke:#000000;stroke-width:0.529302;stroke-miterlimit:10" />
+        <path
+           d="m 253.36282,46.199933 9.79992,-9.799916"
+           fill="none"
+           id="path178"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
+      </g>
+      <g
+         id="g159">
+        <text
+           class="f0"
+           x="254.71544"
+           y="40.29583"
+           id="text178"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Latin Modern Roman Slanted';-inkscape-font-specification:'Latin Modern Roman Slanted';stroke:none;stroke-width:0.265642;stroke-miterlimit:10">D</text>
+        <text
+           class="f0"
+           x="259.14978"
+           y="44.705753"
+           id="text180"
+           style="font-size:3.52778px;stroke:none;stroke-width:0.265642;stroke-miterlimit:10"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Latin Modern Roman Slanted';-inkscape-font-specification:'Latin Modern Roman Slanted'"
+             id="tspan8">A</tspan></text>
+      </g>
+      <title
+         id="title30">dac</title>
+    </symbol>
+    <marker
+       style="overflow:visible"
+       id="ArrowTriangleStylized-0"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Stylized triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="m 6,0 c -3,1 -7,3 -9,5 0,0 0,-4 2,-5 -2,-1 -2,-5 -2,-5 2,2 6,4 9,5 z"
+         id="path17-0" />
+    </marker>
+    <symbol
+       id="circuitikz_0.5mm_grid.svg:node2"
+       style="stroke-width:1.19691">
+      <title
+         id="title1-3">circuitikz_0.5mm_grid.svg:node2_inkscape_duplicate</title>
+      <g
+         id="node2_transform"
+         transform="matrix(0.83559759,0,0,0.83538016,-3.2548357,3.723846)">
+        <title
+           id="title61">node net</title>
+        <path
+           d="m 52.922714,3.299976 c 0,-0.3092284 -0.250676,-0.5599036 -0.559904,-0.5599036 -0.309228,0 -0.559904,0.2506752 -0.559904,0.5599036 0,0.3092284 0.250676,0.5599036 0.559904,0.5599036 0.309228,0 0.559904,-0.2506752 0.559904,-0.5599036 z"
+           id="path778"
+           style="stroke:#000000;stroke-width:0.31676;stroke-miterlimit:10" />
+        <title
+           id="title144">node net</title>
+      </g>
+    </symbol>
+    <symbol
+       id="circuitikz_0.5mm_grid.svg:text2">
+      <title
+         id="title140">label2</title>
+      <text
+         x="215.75513"
+         y="-57.746479"
+         style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+         xml:space="preserve"
+         id="text791"><tspan
+           x="215.75513"
+           y="-57.746479"
+           style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+           id="tspan791">V</tspan></text>
+      <text
+         x="215.88588"
+         y="-57.231068"
+         style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';text-decoration-color:#000000;letter-spacing:0.0978958px;word-spacing:0px;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+         xml:space="preserve"
+         id="text792"><tspan
+           x="215.88588"
+           y="-57.231068"
+           dx="0"
+           style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';letter-spacing:0.0978958px;word-spacing:0px;stroke-width:0.264583"
+           id="tspan792">in</tspan></text>
+      <title
+         id="title215">label2</title>
+    </symbol>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(2.1903898,-12.3675)">
+    <g
+       id="g28">
+      <g
+         id="use1"
+         style="stroke-width:0.265;stroke-dasharray:none"
+         transform="translate(-198.31281,8.7000233)">
+        <title
+           id="title6">amp</title>
+        <path
+           d="m 223.36283,16.299976 h -5.10004 m 14.89996,0 h 5.10004"
+           fill="none"
+           id="path6"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
+        <path
+           d="m 223.36283,10.909996 9.79992,5.38998 -9.79992,5.38998 z"
+           fill="none"
+           id="path7"
+           style="stroke:#000000;stroke-width:0.265;stroke-miterlimit:10;stroke-dasharray:none" />
+        <title
+           id="title7">amp</title>
+      </g>
+      <g
+         id="use1-241"
+         transform="matrix(1,0,0,-1,-127.88,325.91595)"
+         style="stroke-width:0.265;stroke-dasharray:none">
+        <title
+           id="title232">opamp: single-ended (wider)</title>
+      </g>
+      <g
+         id="g1"
+         transform="translate(-2.4031387,-6.1702807)">
+        <path
+           d="m 201.62744,289.74099 -12.49487,-7.34993 v 14.69986 z"
+           fill="none"
+           style="stroke:#000000;stroke-width:0.265;stroke-miterlimit:10;stroke-dasharray:none"
+           id="path233"
+           transform="matrix(1,0,0,-1,-127.88,325.91595)" />
+        <path
+           d="m 201.30932,289.74099 h 4.19934 M 185.28314,284.741 h 3.85631 m -3.85631,10.00467 h 3.85631"
+           style="font-variation-settings:normal;fill:none;stroke:#000000;stroke-width:0.265;stroke-dasharray:none;stop-color:#000000"
+           id="path234"
+           sodipodi:nodetypes="cccccc"
+           transform="matrix(1,0,0,-1,-127.88,325.91595)" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 67.403143,33.660937 h -2.50001 v 5 h -2.5"
+           id="path68" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 63.403133,36.160937 3.01789,0.01168"
+           id="path69-6" />
+      </g>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 39.949979,24.999999 H 55.071845"
+         id="path1" />
+      <g
+         id="use1-0"
+         style="stroke-width:0.265;stroke-dasharray:none"
+         transform="translate(-193.36283,11.200024)">
+        <title
+           id="title1">dac</title>
+        <g
+           id="g4">
+          <path
+             d="m 253.36282,41.299975 h -4.99999 m 14.79991,0 h 5.20009"
+             fill="none"
+             id="path2"
+             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
+          <path
+             d="m 253.36282,36.400017 h 9.79991 v 9.799912 h -9.79991 z"
+             fill="none"
+             id="path3"
+             style="stroke:#000000;stroke-width:0.265;stroke-miterlimit:10;stroke-dasharray:none" />
+          <path
+             d="m 253.36282,46.199933 9.79992,-9.799916"
+             fill="none"
+             id="path4"
+             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10" />
+        </g>
+        <g
+           id="g5">
+          <text
+             class="f0"
+             x="254.71544"
+             y="40.29583"
+             id="text4"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Latin Modern Roman Slanted';-inkscape-font-specification:'Latin Modern Roman Slanted';stroke:none;stroke-width:0.265642;stroke-miterlimit:10">D</text>
+          <text
+             class="f0"
+             x="259.14978"
+             y="44.705753"
+             id="text5"
+             style="font-size:3.52778px;stroke:none;stroke-width:0.265642;stroke-miterlimit:10"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Latin Modern Roman Slanted';-inkscape-font-specification:'Latin Modern Roman Slanted'"
+               id="tspan4">A</tspan></text>
+        </g>
+        <title
+           id="title5">dac</title>
+      </g>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 55,52.499998 h -0.500991 l 0.0011,-17.5 0.621344,0.0047"
+         id="path8" />
+      <rect
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.264999;stroke-dasharray:none"
+         id="rect8"
+         width="22.500002"
+         height="7.5"
+         x="82.5"
+         y="12.5" />
+      <g
+         id="use1-05-0"
+         transform="translate(-118.4209,75.220619)">
+        <title
+           id="title21-1">label2</title>
+        <text
+           x="217.51585"
+           y="-58.139824"
+           style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+           xml:space="preserve"
+           id="text21-7"><tspan
+             x="217.51585"
+             y="-58.139824"
+             style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+             id="tspan21-9">Timing</tspan></text>
+        <text
+           x="251.48918"
+           y="-60.023907"
+           style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+           xml:space="preserve"
+           id="text21-7-4"><tspan
+             x="251.48918"
+             y="-60.023907"
+             style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+             id="tspan21-9-6">Convert Start</tspan></text>
+        <text
+           x="251.7709"
+           y="-55.535255"
+           style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+           xml:space="preserve"
+           id="text21-7-4-3"><tspan
+             x="251.7709"
+             y="-55.535255"
+             style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+             id="tspan21-9-6-0">DRDY or Busy</tspan></text>
+        <text
+           x="215.88588"
+           y="-57.231068"
+           style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';text-decoration-color:#000000;letter-spacing:0.0978958px;word-spacing:0px;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+           xml:space="preserve"
+           id="text22-1"><tspan
+             x="215.88588"
+             y="-57.231068"
+             style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';letter-spacing:0.0978958px;word-spacing:0px;stroke-width:0.264583"
+             id="tspan22-0" /></text>
+        <title
+           id="title22-3">label2</title>
+      </g>
+      <rect
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.281573;stroke-dasharray:none"
+         id="rect9"
+         width="19.769447"
+         height="27.483421"
+         x="85.008286"
+         y="27.508284" />
+      <text
+         x="101.46172"
+         y="41.259674"
+         style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+         xml:space="preserve"
+         id="text21-7-0-7"><tspan
+           x="101.46172"
+           y="41.259674"
+           style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+           id="tspan21-9-65-3" /></text>
+      <text
+         x="110.59427"
+         y="34.339069"
+         style="font-size:2.76926px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.207694;-inkscape-stroke:none;stop-color:#000000"
+         xml:space="preserve"
+         id="text21-7-49"
+         transform="scale(0.94022103,1.0635797)"><tspan
+           sodipodi:role="line"
+           id="tspan23"
+           x="0"
+           y="0"
+           style="stroke-width:0.207694"><tspan
+             x="110.59427"
+             y="34.339069"
+             style="font-size:2.76926px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.207694"
+             id="tspan21-9-9" /></tspan><tspan
+           sodipodi:role="line"
+           x="0"
+           y="3.461575"
+           id="tspan25"
+           style="stroke-width:0.207694" /><tspan
+           sodipodi:role="line"
+           x="110.59427"
+           y="34.339069"
+           id="tspan27"
+           style="stroke-width:0.207694"><tspan
+             x="110.59427"
+             y="34.339069"
+             style="font-size:2.76926px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.207694"
+             id="tspan28">Control Logic:</tspan></tspan><tspan
+           sodipodi:role="line"
+           id="tspan24"
+           x="0"
+           y="37.800644"
+           style="stroke-width:0.207694" /></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.257677px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker20)"
+         d="M 85.042054,52.499998 H 75.517381"
+         id="path9" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 75.22552,30.004678 9.774481,-0.0047"
+         id="path10" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 93.749999,20 v 7.499995 0 0"
+         id="path11" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker18)"
+         d="m 29.94998,21.161998 -2e-6,-4.911998 h 52.55002"
+         id="path12"
+         sodipodi:nodetypes="ccc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#ArrowTriangleStylized)"
+         d="m 106.1757,14 h 2.5"
+         id="path13" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#ArrowTriangleStylized-0)"
+         d="m 106.1757,18.50028 h 2.5"
+         id="path13-9" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 77.5,52.499998 v 3.999999"
+         id="path21" />
+      <use
+         xlink:href="#circuitikz_0.5mm_grid.svg:node2"
+         id="use1-7"
+         transform="translate(37.000598,46.079564)" />
+      <g
+         id="use1-05"
+         transform="translate(-183.15635,83.772367)">
+        <title
+           id="title21">label2</title>
+        <text
+           x="215.75513"
+           y="-57.746479"
+           style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+           xml:space="preserve"
+           id="text21"><tspan
+             x="215.75513"
+             y="-57.746479"
+             style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+             id="tspan21">SHA</tspan></text>
+        <text
+           x="215.88588"
+           y="-57.231068"
+           style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';text-decoration-color:#000000;letter-spacing:0.0978958px;word-spacing:0px;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+           xml:space="preserve"
+           id="text22"><tspan
+             x="215.88588"
+             y="-57.231068"
+             style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';letter-spacing:0.0978958px;word-spacing:0px;stroke-width:0.264583"
+             id="tspan22" /></text>
+        <title
+           id="title22">label2</title>
+      </g>
+      <text
+         x="98.647911"
+         y="42.474133"
+         style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+         xml:space="preserve"
+         id="text21-7-0"><tspan
+           x="98.647911"
+           y="42.474133"
+           style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+           id="tspan21-9-65">SAR</tspan></text>
+      <text
+         x="79.844208"
+         y="60.039845"
+         style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+         xml:space="preserve"
+         id="text21-7-0-4"><tspan
+           x="79.844208"
+           y="60.039845"
+           style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+           id="tspan21-9-65-4">out</tspan></text>
+      <text
+         x="20.095947"
+         y="25.76726"
+         style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+         xml:space="preserve"
+         id="text21-7-0-3"><tspan
+           x="20.095947"
+           y="25.76726"
+           style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+           id="tspan21-9-65-2">Analog input</tspan></text>
+    </g>
+  </g>
+</svg>

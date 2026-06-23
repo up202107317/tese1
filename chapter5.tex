@@ -14,7 +14,7 @@ In a synchronous converter the output samples sit on a periodic clock grid. The 
 
 The same resampled record defines the bubble error rate used throughout this chapter. A sample exhibits a bubble error when its fifteen-bit thermometer pattern contains more than one $0\leftrightarrow 1$ transition, and the bubble rate is the fraction of analysis samples for which this happens.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{figures/adc_reconstructed_vs_vin.pdf}
     \caption{Input sinusoid (Vin) and reconstructed converter output (ADC) over two input periods of the dynamic test.}
@@ -23,7 +23,7 @@ The same resampled record defines the bubble error rate used throughout this cha
 
 Figure~\ref{fig:reconstruction_time} shows the input sinusoid against the reconstructed output over a representative interval of the test, and Figure~\ref{fig:fft_spectrum} shows the spectrum of the reconstructed output, with the fundamental signal bin, the noise floor and the harmonic distortion components.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{figures/fft_clean_async.pdf}
     \caption{FFT spectrum of the reconstructed asynchronous Flash ADC output signal.}
@@ -145,7 +145,7 @@ The corner-indexed trimming of Section~\ref{chap:trimming} corrects deterministi
 
 The standard deviation of the threshold spacing, $215.6$~mV or $5.75$~LSB, is almost six times the ideal LSB of $37.5$~mV. Fewer than half of the runs ($42.5\%$) keep the two thresholds in their nominal order with no missing code between them, and fewer than one run in ten holds the spacing within $\pm 0.5$~LSB of the ideal. Figure~\ref{fig:mc_dnl_hist} shows the distribution over the 300 runs, in which the runs with a collapsed or inverted spacing form the strongly negative DNL tail. The magnitude of this spread is consistent with Pelgrom's law (Section~\ref{sec:calibration}): the slicers are sized with the small integer width ratios of Table~\ref{tab:slicer_ratios}, the PMOS and NMOS widths ranging from $2$ to $23$ unit transistors with equal channel lengths, so their absolute device area is small and the threshold mismatch $\sigma_{V_{th}} = A_{V_{th}}/\sqrt{WL}$ is correspondingly large. The spacing between two adjacent slicers carries the mismatch of two independent thresholds, so its variance is the sum of the two device variances, which is how a nominally one-LSB code acquires a multi-LSB standard deviation. Random threshold mismatch, rather than corner variation, is therefore the dominant linearity hazard of the slicer bank. This confirms the limitation acknowledged in Chapter~\ref{chap:Conclusions} and puts numbers behind the per-slicer foreground calibration proposed there as future work.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/monte_carlo_dnl.pdf}
     \caption{Monte Carlo distribution of the DNL of the code between two adjacent slicers (out$_0$ and out$_1$), with the $\pm 1$~LSB limits marked.}
@@ -218,7 +218,7 @@ This activity-dependent power, rather than a per-conversion figure of merit, is 
 
 The synchronous reference, described in Section~\ref{chap:synchronous}, was simulated under the same 16-nm, $0.8$~V conditions as the proposed design and characterised for both dynamic performance and power, following the power measurement methodology of Section~\ref{sec:power_methodology}. Driven by the same $9$~MHz full-scale sinusoid sampled at $288$~MS/s, it reaches an SNDR of $24.98$~dB and an ENOB of $3.86$~bits, exercising all sixteen output codes with no missing levels. It is therefore a competent 4-bit Flash converter, not a weakened reference chosen to flatter the comparison. Its main role here is to quantify the power that a clocked Flash spends on this conversion workload, where it draws $886$~\textmu W. Its static linearity is shown in Figure~\ref{fig:sync_linearity}, with the measured transfer function against the ideal staircase, the DNL per code and the INL per transition.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/adc_transfer_sync.pdf}\\
     \includegraphics[width=0.49\textwidth]{figures/dnl_sync.pdf}

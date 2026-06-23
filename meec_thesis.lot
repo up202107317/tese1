@@ -1,22 +1,23 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Walden FoM vs. Sampling Frequency (Flash reference [1] highlighted)}}{32}{table.caption.89}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces Comparison of Power Consumption between Synchronous and Asynchronous Flash ADCs. Simulation results from ISSCC conference showing the power advantage of asynchronous operation for sparse signals.}}{33}{table.caption.90}%
-\contentsline {table}{\numberline {2.3}{\ignorespaces Energy per Conversion vs. Year (Flash reference [1] highlighted)}}{34}{table.caption.92}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Walden FoM vs. Sampling Frequency (Flash reference [1] highlighted)}}{35}{table.caption.83}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Comparison of Power Consumption between Synchronous and Asynchronous Flash ADCs. Simulation results from ISSCC conference showing the power advantage of asynchronous operation for sparse signals.}}{36}{table.caption.84}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Energy per Conversion vs. Year (Flash reference [1] highlighted)}}{37}{table.caption.86}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Comparison of the simulated current comparator topologies.}}{43}{table.caption.96}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces PMOS-to-NMOS sizing ratio $r$ of each of the fifteen slicers. The numerators and the denominators each sum to $166$.}}{58}{table.caption.130}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Worst-case static linearity of the final architecture at the non-typical process corners, without trimming (values in LSB, measured on rising and falling ramps).}}{59}{table.caption.132}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces Per-slicer body bias trim voltages applied at each process corner. A value in the PMOS column is the N-well voltage of that slicer, which forward-biases its PMOS and lowers its trip point; a value in the NMOS column is the bulk voltage of that slicer, which forward-biases its NMOS and raises its trip point. Each trimmed slicer is adjusted on one device only, so a given slicer index appears in at most one column. Slicers not listed keep the default PMOS well voltage of $0.8$~V and NMOS bulk voltage of $0$~V; the typical corner uses no trimming. The notation $k\!:\!V$ denotes slicer index $k$ set to voltage $V$.}}{63}{table.caption.133}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Comparison of the simulated current comparator topologies.}}{46}{table.caption.91}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Decision thresholds of the slicer bank under the two operating conditions. The DC figures describe the sizing of the bank, while the transient figures describe operation and are used for all results.}}{62}{table.caption.126}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces PMOS-to-NMOS sizing ratio $r$ of each of the fifteen slicers. The numerators and the denominators each sum to $166$.}}{63}{table.caption.127}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Worst-case static linearity of the final architecture at the non-typical process corners, without trimming (values in LSB, measured on rising and falling ramps).}}{64}{table.caption.129}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces Per-slicer body bias trim voltages applied at each process corner. A value in the PMOS column is the N-well voltage of that slicer, which forward-biases its PMOS and lowers its trip point. A value in the NMOS column is the bulk voltage of that slicer, which forward-biases its NMOS and raises its trip point. Each trimmed slicer is adjusted on one device only, so a given slicer index appears in at most one column. Slicers not listed keep the default PMOS well voltage of $0.8$~V and NMOS bulk voltage of $0$~V. The typical corner uses no trimming. The notation $k\!:\!V$ denotes slicer index $k$ set to voltage $V$.}}{68}{table.caption.130}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Dynamic performance of the asynchronous converter ($f_{in} = 9$~MHz, full-scale input, with transient noise).}}{71}{table.caption.136}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Static linearity and hysteresis of the asynchronous converter versus input ramp time. DNL excludes the two end codes. Valid means worst-case hysteresis below $1$~LSB.}}{72}{table.caption.137}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Worst-case static linearity per process corner, before and after body bias trimming, measured on the rising and falling ramps (values in LSB).}}{72}{table.caption.138}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Monte Carlo statistics of the threshold spacing between two adjacent slicers (out$_0$, out$_1$), without trimming. The spacing is the code width separating the two thresholds, deviations are referred to the ideal LSB of $37.5$~mV.}}{73}{table.caption.139}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces Measured power consumption and energy efficiency of the asynchronous converter.}}{75}{table.caption.141}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces Power breakdown of the synchronous reference Flash ADC.}}{78}{table.caption.143}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces Simulated performance summary of the synchronous reference Flash ADC in 16-nm CMOS.}}{79}{table.caption.144}%
-\contentsline {table}{\numberline {4.8}{\ignorespaces Performance comparison with the synchronous baseline and state-of-the-art literature.}}{80}{table.caption.145}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Dynamic performance of the asynchronous converter ($f_{in} = 9$~MHz, full-scale input, with transient noise).}}{76}{table.caption.133}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Static linearity and hysteresis of the asynchronous converter versus input ramp time. DNL excludes the two end codes. Valid means worst-case hysteresis below $1$~LSB.}}{77}{table.caption.134}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Worst-case static linearity per process corner, before and after body bias trimming, measured on the rising and falling ramps (values in LSB).}}{77}{table.caption.135}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Monte Carlo statistics of the threshold spacing between two adjacent slicers (out$_0$, out$_1$), without trimming. The spacing is the code width separating the two thresholds, deviations are referred to the ideal LSB of $37.5$~mV.}}{78}{table.caption.136}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Measured power consumption and energy efficiency of the asynchronous converter.}}{80}{table.caption.138}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Power breakdown of the synchronous reference Flash ADC.}}{83}{table.caption.140}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Simulated performance summary of the synchronous reference Flash ADC in 16-nm CMOS.}}{84}{table.caption.141}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces Performance comparison with the synchronous baseline and state-of-the-art literature.}}{84}{table.caption.142}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

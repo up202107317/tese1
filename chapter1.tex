@@ -30,14 +30,14 @@ Many real-world signals are also sparse and non-periodic. Voice activity, machin
 
 Traditional data conversion, based on uniform sampling at the rate dictated by the Nyquist-Shannon theorem \cite{shannon_1949}, treats these silent periods exactly like the active ones. The system dissipates power to generate redundant samples that carry no new information. Exploiting this sparsity is the most direct route to ultra-low-power conversion interfaces.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\textwidth]{figures/uporto.pdf}
-  \caption[Time-sparse signal and sampling strategies]{Time-sparse signal representation and sampling strategies. (a) Time-sparse signal example showing burst activity with periods of inactivity. (b) Continuous-time event-driven sampling and conversion, which responds to signal changes. (c) Conventional uniform sampling operating at fixed Nyquist rate regardless of signal activity. (d) Discrete-time sampling with event-driven conversion, combining periodic and event-based approaches. This illustration demonstrates the efficiency of adaptive sampling methods for sparse signals compared to uniform sampling at the Nyquist rate \cite{lim_2013}.}
+  \includegraphics[width=0.8\textwidth]{figures/irregular_breathing_sinusoidal_signal.pdf}
+  \caption[Non-periodic quasi-sinusoidal signal]{Example of a non-periodic signal, a quasi-sinusoidal waveform whose cycles vary in duration and never settle into a fixed period, here illustrated by the airflow or chest displacement of natural breathing. The information is carried by the slow, irregular variation of the waveform rather than by a fixed repetition rate.}
 \label{fig:Sparse-time}
 \end{figure}
 \newpage
-Figure~\ref{fig:Sparse-time} shows this behaviour: the information in the burst waveform is concentrated in short intervals separated by long idle periods. Subfigures (b) and (d) show that continuous-time and discrete-time event-driven strategies generate no samples during inactivity, whereas conventional uniform sampling keeps running at a fixed Nyquist rate regardless of the signal content.
+Figure~\ref{fig:Sparse-time} shows an example of such a signal, a quasi-sinusoidal waveform whose cycles vary in length and never settle into a fixed period. Its information lies in these slow, irregular variations rather than at a fixed rate, so a converter that reacts to the signal's own changes matches it far better than one sampling uniformly at the Nyquist rate.
 \section{Motivation and Problem Statement} \label{sec:motivation}
 
 The energy wasted in large IoT deployments, together with the poor match between synchronous architectures and sparse data, motivates converters that activate only when the input actually produces an event.
@@ -70,7 +70,7 @@ where:
 
 % To mitigate the power and area issues mentioned above, designers are compelled to minimise the physical dimensions of the core devices, particularly the transistors within the comparators. However, this introduces a fundamental physical constraint:
 
-% \begin{figure}[htbp]
+% \begin{figure}[H]
 %   \centering
 %   \includegraphics[width=0.6\textwidth]{figures/uporto.pdf}
 %   \caption[Effect of DNL on ADC transfer characteristic]{Adapted from \cite{MPScholar}. ADC transfer function illustrating Differential Non-Linearity (DNL) errors. The graph compares the ideal staircase response (blue) with the actual response (red), highlighting varying step widths and a missing code.}

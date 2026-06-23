@@ -25,10 +25,10 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="2.8284271"
-     inkscape:cx="56.214989"
+     inkscape:cx="56.21499"
      inkscape:cy="101.11627"
-     inkscape:window-width="1920"
-     inkscape:window-height="992"
+     inkscape:window-width="2560"
+     inkscape:window-height="1352"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -189,23 +189,24 @@
       </g>
     </symbol>
     <symbol
-       id="circuitikz_0.5mm_grid.svg:ground1"><path
-   d="M 8.36282,0.40001863"
-   fill="none"
-   style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-   id="path419" />
-<path
-   d="M 8.36282,0.40001863 V 4.4429286"
-   fill="none"
-   style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-   id="path420" />
-<path
-   id="path421"
-   style="stroke:#000000;stroke-width:0.246944;stroke-miterlimit:10;stroke-dasharray:none"
-   d="m 6.26281,4.4429286 h 4.20002 M 6.96285,5.3714523 H 9.76279 M 7.48783,6.2999759 h 1.74998" />
-     <title
-   id="title421">ground</title>
-</symbol>
+       id="circuitikz_0.5mm_grid.svg:ground1">
+      <path
+         d="M 8.36282,0.40001863"
+         fill="none"
+         style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+         id="path419" />
+      <path
+         d="M 8.36282,0.40001863 V 4.4429286"
+         fill="none"
+         style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+         id="path420" />
+      <path
+         id="path421"
+         style="stroke:#000000;stroke-width:0.246944;stroke-miterlimit:10;stroke-dasharray:none"
+         d="m 6.26281,4.4429286 h 4.20002 M 6.96285,5.3714523 H 9.76279 M 7.48783,6.2999759 h 1.74998" />
+      <title
+         id="title421">ground</title>
+    </symbol>
     <symbol
        id="circuitikz_0.5mm_grid.svg:supply1">
       <title
@@ -569,7 +570,23 @@
      id="layer1"
      transform="translate(-103.88041,-45.037554)">
     <g
-       id="g200">
+       id="use1-6-7-0"
+       transform="translate(113.98472,-155.97907)">
+      <title
+         id="title53">mos: pmos analog</title>
+      <title
+         id="title58">mos: pmos analog</title>
+    </g>
+    <g
+       id="use1-7"
+       transform="translate(-307.51309,17.531564)">
+      <title
+         id="title190">vdd</title>
+      <title
+         id="title193">vdd</title>
+    </g>
+    <g
+       id="g1">
       <g
          id="use1-8"
          transform="translate(71.484711,-135.96311)">
@@ -691,14 +708,6 @@
         </g>
         <title
            id="title52">mos: pmos analog</title>
-      </g>
-      <g
-         id="use1-6-7-0"
-         transform="translate(113.98472,-155.97907)">
-        <title
-           id="title53">mos: pmos analog</title>
-        <title
-           id="title58">mos: pmos analog</title>
       </g>
       <path
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -844,12 +853,12 @@
              id="text52-6"><tspan
                sodipodi:role="line"
                id="tspan174"
-               x="221.06665"
-               y="-61.473885"><tspan
+               x="0"
+               y="0"><tspan
                  x="221.06665"
                  y="-61.473885"
                  style="font-size:2.46944px;font-family:'Latin Modern Roman';stroke-width:0.264583"
-                 id="tspan52-2"></tspan></tspan><tspan
+                 id="tspan52-2" /></tspan><tspan
                sodipodi:role="line"
                id="tspan175"
                x="221.06665"
@@ -984,69 +993,64 @@
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 140,91.500004 0.13012,2.64e-4"
          id="path184" />
+      <path
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+         d="m 432.5131,28.968435 h 10.00001"
+         id="path190"
+         transform="translate(-307.5131,17.531563)" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 437.51309,28.968435 v 1.999999"
+         id="path191"
+         transform="translate(-307.5131,17.531563)" />
       <g
-         id="use1-7"
-         transform="translate(-307.51309,17.531564)">
+         id="g192"
+         transform="translate(-77.75512,105.19351)">
         <title
-           id="title190">vdd</title>
-        <path
-           style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.705556;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
-           d="m 432.5131,28.968435 h 10.00001"
-           id="path190" />
-        <path
-           style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-           d="m 437.51309,28.968435 v 1.999999"
-           id="path191" />
-        <g
-           id="g192"
-           transform="translate(229.75797,87.661945)">
-          <title
-             id="title191">label2</title>
-          <text
+           id="title191">label2</title>
+        <text
+           x="215.75513"
+           y="-57.746479"
+           style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+           xml:space="preserve"
+           id="text191"><tspan
              x="215.75513"
              y="-57.746479"
-             style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text191"><tspan
-               x="215.75513"
-               y="-57.746479"
-               style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
-               id="tspan191">V</tspan></text>
-          <text
+             style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+             id="tspan191">V</tspan></text>
+        <text
+           x="215.88588"
+           y="-57.231068"
+           style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';text-decoration-color:#000000;letter-spacing:0.0978958px;word-spacing:0px;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+           xml:space="preserve"
+           id="text192"><tspan
              x="215.88588"
              y="-57.231068"
-             style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';text-decoration-color:#000000;letter-spacing:0.0978958px;word-spacing:0px;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
-             xml:space="preserve"
-             id="text192"><tspan
-               x="215.88588"
-               y="-57.231068"
-               style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';letter-spacing:0.0978958px;word-spacing:0px;stroke-width:0.264583"
-               id="tspan192">DD</tspan></text>
-          <title
-             id="title192">label2</title>
-        </g>
+             style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';letter-spacing:0.0978958px;word-spacing:0px;stroke-width:0.264583"
+             id="tspan192">DD</tspan></text>
         <title
-           id="title193">vdd</title>
+           id="title192">label2</title>
       </g>
       <g
          id="use1-5"
-         transform="translate(121.63718,91.078524)"><path
-   d="M 8.36282,0.40001863"
-   fill="none"
-   style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-   id="path187" />
-<path
-   d="M 8.36282,0.40001863 V 4.4429286"
-   fill="none"
-   style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-   id="path188" />
-<path
-   id="path189"
-   style="stroke:#000000;stroke-width:0.246944;stroke-miterlimit:10;stroke-dasharray:none"
-   d="m 6.26281,4.4429286 h 4.20002 M 6.96285,5.3714523 H 9.76279 M 7.48783,6.2999759 h 1.74998" />
-     <title
-   id="title189">ground</title>
-</g>
+         transform="translate(121.63718,91.078524)">
+        <path
+           d="M 8.36282,0.40001863"
+           fill="none"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+           id="path187" />
+        <path
+           d="M 8.36282,0.40001863 V 4.4429286"
+           fill="none"
+           style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+           id="path188" />
+        <path
+           id="path189"
+           style="stroke:#000000;stroke-width:0.246944;stroke-miterlimit:10;stroke-dasharray:none"
+           d="m 6.26281,4.4429286 h 4.20002 M 6.96285,5.3714523 H 9.76279 M 7.48783,6.2999759 h 1.74998" />
+        <title
+           id="title189">ground</title>
+      </g>
       <g
          id="use1-70"
          transform="translate(-108.25512,125.24648)">
