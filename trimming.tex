@@ -10,7 +10,9 @@ makes the converter linearity directly dependent on the effective drive
 strengths of the two device types, and therefore directly exposed to
 fabrication process variability. This section describes the offline trimming
 strategy adopted to correct the resulting deterministic trip-point deviations
-across process corners. The technique builds on the static, bulk-driven
+across process corners.
+
+The technique builds on the static, bulk-driven
 calibration approaches reviewed in Section~\ref{sec:calibration}: it adjusts
 the threshold voltages of the slicer transistors through the body effect, in
 the same spirit as the bulk-driven reference-ladder trimming of
@@ -155,16 +157,7 @@ that each decision threshold can be nudged back toward its nominal position.
 The default condition, used at the typical corner, ties the PMOS wells to
 $V_{DD}=0.8$~V and the NMOS bulks to ground, so that the source-to-bulk voltage
 of every device is zero and no body effect is present. A correction is then a
-deliberate departure from this default on a chosen slicer. Lowering the PMOS
-well of a slicer below $0.8$~V forward-biases its source-well junction, reduces
-$|V_{tp}|$, strengthens the PMOS source and moves that slicer's trip point to a
-lower input voltage. Raising the NMOS bulk of a slicer above ground does the
-complementary thing, it forward-biases the NMOS, reduces $V_{tn}$, strengthens
-the NMOS sink and moves the trip point to a higher input voltage. Both moves
-are forward body bias acting on a single device, so each slicer whose trip
-point drifted too high at a given corner has its PMOS strengthened to pull it
-back down, and each slicer whose trip point drifted too low has its NMOS
-strengthened to push it back up. The trimming is offline in the sense that these
+deliberate departure from this default on a chosen slicer. The trimming is offline in the sense that these
 bulk voltages are determined once, from the identified process corner, and held
 constant during normal operation. No continuous adaptive feedback is involved.
 
@@ -174,7 +167,9 @@ For each of the four non-typical corners, a set of per-slicer bulk voltages
 was determined with the objective of bringing the DNL of the converted
 thermometer code below $0.5$~LSB across the full input range. The degree to
 which each corner meets that target is reported in
-Chapter~\ref{chap:Benchmarking}. The values were obtained by extracting the
+Chapter~\ref{chap:Benchmarking}. 
+
+The values were obtained by extracting the
 trip point of every slicer at the corner, identifying which slicers had moved
 above or below their nominal positions, and forward-biasing the appropriate
 device (PMOS to pull a high trip back down, NMOS to push a low trip back up)
@@ -224,4 +219,6 @@ required in future iterations.
 
 \subsection{Summary}
 
-This section turned the corner problem of the preceding architecture into a correction mechanism. The body effect gives an independent handle on each slicer's trip point. Forward-biasing a slicer's PMOS well lowers its trip point, and forward-biasing its NMOS bulk raises it. Body biasing was preferred over the other techniques of Section~\ref{sec:calibration} because it adds no capacitance to the signal path and no clocked activity to the converter. A per-slicer set of bulk voltages was determined for each process corner (Table~\ref{tab:trimming_vectors}) and applied through the Verilog-A behavioural model of Appendix~\ref{app:veriloga}, which drives the bulk terminals of the slicer bank without touching the transistor-level netlist. The correction targets deterministic inter-corner shifts only, leaving random mismatch outside its reach. The effect of these corrections on the DNL and INL of the converter, together with the rest of the final characterisation, is presented in Chapter~\ref{chap:Benchmarking}.
+This section turned the corner problem of the preceding architecture into a correction mechanism. The body effect gives an independent handle on each slicer's trip point. Forward-biasing a slicer's PMOS well lowers its trip point, and forward-biasing its NMOS bulk raises it. Body biasing was preferred over the other techniques of Section~\ref{sec:calibration} because it adds no capacitance to the signal path and no clocked activity to the converter. 
+
+A per-slicer set of bulk voltages was determined for each process corner (Table~\ref{tab:trimming_vectors}) and applied through the Verilog-A behavioural model of Appendix~\ref{app:veriloga}, which drives the bulk terminals of the slicer bank without touching the transistor-level netlist. The correction targets deterministic inter-corner shifts only, leaving random mismatch outside its reach. The effect of these corrections on the DNL and INL of the converter, together with the rest of the final characterisation, is presented in Chapter~\ref{chap:Benchmarking}.

@@ -25,15 +25,15 @@
      inkscape:deskcolor="#4a4a4a"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="104.29825"
-     inkscape:cy="232.99168"
+     inkscape:zoom="1"
+     inkscape:cx="-38.499999"
+     inkscape:cy="219.49999"
      inkscape:window-width="1920"
      inkscape:window-height="992"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="use1-96">
+     inkscape:current-layer="g379">
     <inkscape:grid
        id="grid1"
        units="mm"
@@ -316,23 +316,24 @@
          id="title143">node port</title>
     </symbol>
     <symbol
-       id="circuitikz_0.5mm_grid.svg:ground1"><path
-   d="M 8.36282,0.40001863"
-   fill="none"
-   style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-   id="path419" />
-<path
-   d="M 8.36282,0.40001863 V 4.4429286"
-   fill="none"
-   style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-   id="path420" />
-<path
-   id="path421"
-   style="stroke:#000000;stroke-width:0.246944;stroke-miterlimit:10;stroke-dasharray:none"
-   d="m 6.26281,4.4429286 h 4.20002 M 6.96285,5.3714523 H 9.76279 M 7.48783,6.2999759 h 1.74998" />
-     <title
-   id="title421">ground</title>
-</symbol>
+       id="circuitikz_0.5mm_grid.svg:ground1">
+      <path
+         d="M 8.36282,0.40001863"
+         fill="none"
+         style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+         id="path419" />
+      <path
+         d="M 8.36282,0.40001863 V 4.4429286"
+         fill="none"
+         style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+         id="path420" />
+      <path
+         id="path421"
+         style="stroke:#000000;stroke-width:0.246944;stroke-miterlimit:10;stroke-dasharray:none"
+         d="m 6.26281,4.4429286 h 4.20002 M 6.96285,5.3714523 H 9.76279 M 7.48783,6.2999759 h 1.74998" />
+      <title
+         id="title421">ground</title>
+    </symbol>
     <symbol
        id="circuitikz_0.5mm_grid.svg:supply1">
       <title
@@ -443,7 +444,7 @@
            id="tspan346"
            style="stroke-width:0.265"
            x="517.8808"
-           y="78.96843"></tspan></text>
+           y="78.96843" /></text>
       <g
          id="use1-94-4"
          transform="translate(467.3814,113.45558)">
@@ -1760,23 +1761,24 @@
              id="tspan187">DD</tspan></text>
         <g
            id="use1-60"
-           transform="translate(415.09775,73.044815)"><path
-   d="M 8.36282,0.40001863"
-   fill="none"
-   style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-   id="path330" />
-<path
-   d="M 8.36282,0.40001863 V 4.4429286"
-   fill="none"
-   style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-   id="path331" />
-<path
-   id="path332"
-   style="stroke:#000000;stroke-width:0.246944;stroke-miterlimit:10;stroke-dasharray:none"
-   d="m 6.26281,4.4429286 h 4.20002 M 6.96285,5.3714523 H 9.76279 M 7.48783,6.2999759 h 1.74998" />
-     <title
-   id="title332">ground</title>
-</g>
+           transform="translate(415.09775,73.044815)">
+          <path
+             d="M 8.36282,0.40001863"
+             fill="none"
+             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+             id="path330" />
+          <path
+             d="M 8.36282,0.40001863 V 4.4429286"
+             fill="none"
+             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+             id="path331" />
+          <path
+             id="path332"
+             style="stroke:#000000;stroke-width:0.246944;stroke-miterlimit:10;stroke-dasharray:none"
+             d="m 6.26281,4.4429286 h 4.20002 M 6.96285,5.3714523 H 9.76279 M 7.48783,6.2999759 h 1.74998" />
+          <title
+             id="title332">ground</title>
+        </g>
         <g
            id="use1-604"
            transform="translate(362.3677,-108.01064)">
@@ -2179,23 +2181,24 @@
            transform="translate(-14.132287,56.499999)" />
         <g
            id="use1-60-6"
-           transform="translate(415.09775,132.65907)"><path
-   d="M 8.36282,0.40001863"
-   fill="none"
-   style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-   id="path285" />
-<path
-   d="M 8.36282,0.40001863 V 4.4429286"
-   fill="none"
-   style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
-   id="path286" />
-<path
-   id="path287"
-   style="stroke:#000000;stroke-width:0.246944;stroke-miterlimit:10;stroke-dasharray:none"
-   d="m 6.26281,4.4429286 h 4.20002 M 6.96285,5.3714523 H 9.76279 M 7.48783,6.2999759 h 1.74998" />
-     <title
-   id="title287">ground</title>
-</g>
+           transform="translate(415.09775,132.65907)">
+          <path
+             d="M 8.36282,0.40001863"
+             fill="none"
+             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+             id="path285" />
+          <path
+             d="M 8.36282,0.40001863 V 4.4429286"
+             fill="none"
+             style="stroke:#000000;stroke-width:0.264649;stroke-miterlimit:10"
+             id="path286" />
+          <path
+             id="path287"
+             style="stroke:#000000;stroke-width:0.246944;stroke-miterlimit:10;stroke-dasharray:none"
+             d="m 6.26281,4.4429286 h 4.20002 M 6.96285,5.3714523 H 9.76279 M 7.48783,6.2999759 h 1.74998" />
+          <title
+             id="title287">ground</title>
+        </g>
         <g
            id="use1-59"
            transform="translate(390.97954,-90.491503)">
@@ -3082,6 +3085,230 @@
            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            d="M 410.96057,32.466288 V 32.333996"
            id="path379" />
+        <g
+           id="use1-3-3"
+           transform="translate(224.62568,116.71491)">
+          <title
+             id="title339-5">label2</title>
+          <text
+             x="215.75513"
+             y="-57.746479"
+             style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+             xml:space="preserve"
+             id="text339-6"><tspan
+               x="215.75513"
+               y="-57.746479"
+               style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+               id="tspan339-2">M</tspan></text>
+          <text
+             x="215.88588"
+             y="-57.231068"
+             style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';text-decoration-color:#000000;letter-spacing:0.0978958px;word-spacing:0px;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+             xml:space="preserve"
+             id="text340-9"><tspan
+               x="215.88588"
+               y="-57.231068"
+               style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';letter-spacing:0.0978958px;word-spacing:0px;stroke-width:0.264583"
+               id="tspan340-1">1</tspan></text>
+          <title
+             id="title340-2">label2</title>
+        </g>
+        <g
+           id="use1-3-6"
+           transform="translate(192.62293,116.63264)">
+          <title
+             id="title339-0">label2</title>
+          <text
+             x="215.75513"
+             y="-57.746479"
+             style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+             xml:space="preserve"
+             id="text339-62"><tspan
+               x="215.75513"
+               y="-57.746479"
+               style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+               id="tspan339-6">M</tspan></text>
+          <text
+             x="215.88588"
+             y="-57.231068"
+             style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';text-decoration-color:#000000;letter-spacing:0.0978958px;word-spacing:0px;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+             xml:space="preserve"
+             id="text340-1"><tspan
+               x="215.88588"
+               y="-57.231068"
+               style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';letter-spacing:0.0978958px;word-spacing:0px;stroke-width:0.264583"
+               id="tspan340-8">0</tspan></text>
+          <title
+             id="title340-7">label2</title>
+        </g>
+        <g
+           id="use1-3-37"
+           transform="translate(203.62568,93.214912)">
+          <title
+             id="title339-59">label2</title>
+          <text
+             x="215.75513"
+             y="-57.746479"
+             style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+             xml:space="preserve"
+             id="text339-2"><tspan
+               x="215.75513"
+               y="-57.746479"
+               style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+               id="tspan339-28">M</tspan></text>
+          <text
+             x="215.88588"
+             y="-57.231068"
+             style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';text-decoration-color:#000000;letter-spacing:0.0978958px;word-spacing:0px;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+             xml:space="preserve"
+             id="text340-97"><tspan
+               x="215.88588"
+               y="-57.231068"
+               style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';letter-spacing:0.0978958px;word-spacing:0px;stroke-width:0.264583"
+               id="tspan340-3">2</tspan></text>
+          <title
+             id="title340-6">label2</title>
+        </g>
+        <g
+           id="use1-3-1"
+           transform="translate(213.0833,93.18816)">
+          <title
+             id="title339-9">label2</title>
+          <text
+             x="215.75513"
+             y="-57.746479"
+             style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+             xml:space="preserve"
+             id="text339-4"><tspan
+               x="215.75513"
+               y="-57.746479"
+               style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+               id="tspan339-7">M</tspan></text>
+          <text
+             x="215.88588"
+             y="-57.231068"
+             style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';text-decoration-color:#000000;letter-spacing:0.0978958px;word-spacing:0px;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+             xml:space="preserve"
+             id="text340-8"><tspan
+               x="215.88588"
+               y="-57.231068"
+               style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';letter-spacing:0.0978958px;word-spacing:0px;stroke-width:0.264583"
+               id="tspan340-4">3</tspan></text>
+          <title
+             id="title340-5">label2</title>
+        </g>
+        <g
+           id="use1-3-06"
+           transform="translate(223.30064,160.71491)">
+          <title
+             id="title339-3">label2</title>
+          <text
+             x="215.75513"
+             y="-57.746479"
+             style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+             xml:space="preserve"
+             id="text339-20"><tspan
+               x="215.75513"
+               y="-57.746479"
+               style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+               id="tspan339-61">M</tspan></text>
+          <text
+             x="215.88588"
+             y="-57.231068"
+             style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';text-decoration-color:#000000;letter-spacing:0.0978958px;word-spacing:0px;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+             xml:space="preserve"
+             id="text340-5"><tspan
+               x="215.88588"
+               y="-57.231068"
+               style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';letter-spacing:0.0978958px;word-spacing:0px;stroke-width:0.264583"
+               id="tspan340-5">5</tspan></text>
+          <title
+             id="title340-4">label2</title>
+        </g>
+        <g
+           id="use1-3-9"
+           transform="translate(191.45072,160.71491)">
+          <title
+             id="title339-37">label2</title>
+          <text
+             x="215.75513"
+             y="-57.746479"
+             style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+             xml:space="preserve"
+             id="text339-45"><tspan
+               x="215.75513"
+               y="-57.746479"
+               style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+               id="tspan339-25">M</tspan></text>
+          <text
+             x="215.88588"
+             y="-57.231068"
+             style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';text-decoration-color:#000000;letter-spacing:0.0978958px;word-spacing:0px;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+             xml:space="preserve"
+             id="text340-4"><tspan
+               x="215.88588"
+               y="-57.231068"
+               style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';letter-spacing:0.0978958px;word-spacing:0px;stroke-width:0.264583"
+               id="tspan340-7">4</tspan></text>
+          <title
+             id="title340-44">label2</title>
+        </g>
+        <g
+           id="use1-3-68"
+           transform="translate(203.543,187.58457)">
+          <title
+             id="title339-8">label2</title>
+          <text
+             x="215.75513"
+             y="-57.746479"
+             style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+             xml:space="preserve"
+             id="text339-43"><tspan
+               x="215.75513"
+               y="-57.746479"
+               style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+               id="tspan339-1">M</tspan></text>
+          <text
+             x="215.88588"
+             y="-57.231068"
+             style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';text-decoration-color:#000000;letter-spacing:0.0978958px;word-spacing:0px;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+             xml:space="preserve"
+             id="text340-49"><tspan
+               x="215.88588"
+               y="-57.231068"
+               style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';letter-spacing:0.0978958px;word-spacing:0px;stroke-width:0.264583"
+               id="tspan340-2">6</tspan></text>
+          <title
+             id="title340-0">label2</title>
+        </g>
+        <g
+           id="use1-3-66"
+           transform="translate(212.60466,187.61706)">
+          <title
+             id="title339-4">label2</title>
+          <text
+             x="215.75513"
+             y="-57.746479"
+             style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+             xml:space="preserve"
+             id="text339-9"><tspan
+               x="215.75513"
+               y="-57.746479"
+               style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
+               id="tspan339-5">M</tspan></text>
+          <text
+             x="215.88588"
+             y="-57.231068"
+             style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';text-decoration-color:#000000;letter-spacing:0.0978958px;word-spacing:0px;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
+             xml:space="preserve"
+             id="text340-0"><tspan
+               x="215.88588"
+               y="-57.231068"
+               style="font-size:2.46944px;line-height:0;font-family:'Latin Modern Roman';letter-spacing:0.0978958px;word-spacing:0px;stroke-width:0.264583"
+               id="tspan340-48">7</tspan></text>
+          <title
+             id="title340-71">label2</title>
+        </g>
       </g>
     </g>
   </g>

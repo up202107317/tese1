@@ -2,12 +2,12 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="135.43532mm"
-   height="47.725742mm"
-   viewBox="0 0 135.43532 47.725742"
+   width="132.88489mm"
+   height="47.711147mm"
+   viewBox="0 0 132.88489 47.711147"
    version="1.1"
    id="svg1"
-   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    sodipodi:docname="SAR.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -25,20 +25,20 @@
      inkscape:deskcolor="#4a4a4a"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="2.8934906"
-     inkscape:cx="230.17182"
-     inkscape:cy="94.868117"
+     inkscape:zoom="1.0230034"
+     inkscape:cx="291.29914"
+     inkscape:cy="216.03057"
      inkscape:window-width="1920"
-     inkscape:window-height="991"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:window-height="992"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="use1-05-0">
+     inkscape:current-layer="layer1">
     <inkscape:grid
        id="grid1"
        units="mm"
-       originx="2.1903898"
-       originy="-12.367502"
+       originx="0.082952234"
+       originy="-12.367501"
        spacingx="0.5"
        spacingy="0.5"
        empcolor="#0099e5"
@@ -259,7 +259,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(2.1903898,-12.3675)">
+     transform="translate(0.08295223,-12.3675)">
     <g
        id="g28">
       <g
@@ -387,23 +387,23 @@
              style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
              id="tspan21-9">Timing</tspan></text>
         <text
-           x="251.48918"
-           y="-60.023907"
+           x="248.92883"
+           y="-60.298229"
            style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
            xml:space="preserve"
            id="text21-7-4"><tspan
-             x="251.48918"
-             y="-60.023907"
+             x="248.92883"
+             y="-60.298229"
              style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
              id="tspan21-9-6">Convert Start</tspan></text>
         <text
-           x="251.7709"
-           y="-55.535255"
+           x="251.03938"
+           y="-55.443813"
            style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
            xml:space="preserve"
            id="text21-7-4-3"><tspan
-             x="251.7709"
-             y="-55.535255"
+             x="251.03938"
+             y="-55.443813"
              style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
              id="tspan21-9-6-0">DRDY or Busy</tspan></text>
         <text
@@ -420,12 +420,12 @@
            id="title22-3">label2</title>
       </g>
       <rect
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.281573;stroke-dasharray:none"
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.264999;stroke-dasharray:none"
          id="rect9"
-         width="19.769447"
-         height="27.483421"
-         x="85.008286"
-         y="27.508284" />
+         width="17.5"
+         height="27.499996"
+         x="85"
+         y="27.499996" />
       <text
          x="101.46172"
          y="41.259674"
@@ -437,39 +437,39 @@
            style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
            id="tspan21-9-65-3" /></text>
       <text
-         x="110.59427"
-         y="34.339069"
+         x="107.96838"
+         y="34.76894"
          style="font-size:2.76926px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.207694;-inkscape-stroke:none;stop-color:#000000"
          xml:space="preserve"
          id="text21-7-49"
-         transform="scale(0.94022103,1.0635797)"><tspan
+         transform="scale(0.94022105,1.0635797)"><tspan
            sodipodi:role="line"
            id="tspan23"
-           x="0"
-           y="0"
+           x="107.96838"
+           y="34.76894"
            style="stroke-width:0.207694"><tspan
-             x="110.59427"
-             y="34.339069"
+             x="107.96838"
+             y="34.76894"
              style="font-size:2.76926px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.207694"
-             id="tspan21-9-9" /></tspan><tspan
+             id="tspan21-9-9"></tspan></tspan><tspan
            sodipodi:role="line"
-           x="0"
-           y="3.461575"
+           x="107.96838"
+           y="38.230515"
            id="tspan25"
            style="stroke-width:0.207694" /><tspan
            sodipodi:role="line"
-           x="110.59427"
-           y="34.339069"
+           x="107.96838"
+           y="34.76894"
            id="tspan27"
            style="stroke-width:0.207694"><tspan
-             x="110.59427"
-             y="34.339069"
+             x="107.96838"
+             y="34.76894"
              style="font-size:2.76926px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.207694"
              id="tspan28">Control Logic:</tspan></tspan><tspan
            sodipodi:role="line"
            id="tspan24"
-           x="0"
-           y="37.800644"
+           x="107.96838"
+           y="38.230515"
            style="stroke-width:0.207694" /></text>
       <path
          style="fill:none;stroke:#000000;stroke-width:0.257677px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker20)"
@@ -533,12 +533,12 @@
            id="title22">label2</title>
       </g>
       <text
-         x="98.647911"
+         x="97.367737"
          y="42.474133"
          style="font-size:3.52778px;line-height:1.25;font-family:'Latin Modern Roman';text-decoration-color:#000000;fill:#000000;stroke-width:0.264583;-inkscape-stroke:none;stop-color:#000000"
          xml:space="preserve"
          id="text21-7-0"><tspan
-           x="98.647911"
+           x="97.367737"
            y="42.474133"
            style="font-size:3.52778px;font-family:'Latin Modern Roman Slanted';text-align:end;text-anchor:end;stroke-width:0.264583"
            id="tspan21-9-65">SAR</tspan></text>
