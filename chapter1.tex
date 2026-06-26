@@ -22,7 +22,7 @@
 
 This chapter introduces the topic of the dissertation. It presents the context, the research question and the motivation for the work, states the objectives and the scope, and ends with the structure of the document.
 
-Smart devices are now everywhere, a development usually grouped under the name Internet of Things (IoT). The processing and storage of information are digital and have benefited from the scaling described by Moore's law, but the physical world is analog, temperature, sound and pressure are continuous in both time and amplitude. The Analog-to-Digital Converter (ADC) is the interface between the two domains, and every digital system that measures the real world depends on one \cite{johns_martin_2012}.
+Smart sensors are now everywhere, from wearable health monitors to distributed environmental and industrial nodes. The processing and storage of information are digital and have benefited from the scaling described by Moore's law, but the physical world is analog, temperature, sound and pressure are continuous in both time and amplitude. The Analog-to-Digital Converter (ADC) is the interface between the two domains, and every digital system that measures the real world depends on one \cite{johns_martin_2012}.
 
 Energy efficiency has moved from a secondary performance metric to a primary design constraint. Many sensors run on small batteries or on harvested energy, so every joule dissipated shortens the autonomy of the system. The data conversion block is frequently the largest consumer in these interfaces, particularly when the digital transmission is duty-cycled and the radio spends most of its time off.
 
@@ -40,7 +40,7 @@ Traditional data conversion, based on uniform sampling at the rate dictated by t
 Figure~\ref{fig:Sparse-time} shows an example of such a signal, a quasi-sinusoidal waveform whose cycles vary in length and never settle into a fixed period. Its information lies in these slow, irregular variations rather than at a fixed rate, so a converter that reacts to the signal's own changes matches it far better than one sampling uniformly at the Nyquist rate.
 \section{Motivation and Problem Statement} \label{sec:motivation}
 
-The energy wasted in large IoT deployments, together with the poor match between synchronous architectures and sparse data, motivates converters that activate only when the input actually produces an event.
+The energy wasted in large smart-sensor deployments, together with the poor match between synchronous architectures and sparse data, motivates converters that activate only when the input actually produces an event.
 
 \subsection{Inefficiency of Synchronous Sampling}
 
@@ -64,7 +64,7 @@ where:
 
 % Even in low-power, synchronous designs, the dynamic power of the comparator switching is the dominant factor in the power budget.
 
-% Therefore, combining the high speed of the Flash architecture with the high power efficiency required for IoT demands a radical shift away from the synchronous clocking scheme.
+% Therefore, combining the high speed of the Flash architecture with the high power efficiency required for smart sensors demands a radical shift away from the synchronous clocking scheme.
 
 % \subsection{Device Limitation: The Mismatch Problem}
 
@@ -92,7 +92,7 @@ This overall goal breaks down into three specific objectives:
 
   \item Trimming Implementation. To implement a trimming approach for the proposed schematic, which may be based on a hardware-description-language model.
 
-  \item Complete System Validation. To validate the complete ADC system, the schematic together with the trimming, through analog and mixed-signal co-simulation.
+  \item Complete System Validation. To validate the complete ADC system, the schematic together with the trimming was simulated, through analog and mixed-signal co-simulation.
 \end{enumerate}
 \section{Document Structure} \label{sec:document_structure}
 

@@ -1,16 +1,16 @@
  
 \chapter{Simulation Results and Performance Benchmarking} \label{chap:Benchmarking}
 
-The previous chapters left two claims to settle. One is that the trimming of Section~\ref{chap:trimming} restores the linearity lost at the process corners. The other is that removing the clock pays off in power against the synchronous reference of Section~\ref{chap:synchronous}. This chapter settles both. It describes the simulation and reconstruction methodology, characterises the asynchronous converter statically and dynamically, measures the effect of the trimming, quantifies the impact of random mismatch, and closes with the power measurements and the comparison between the two converters under a matched workload.
+The previous chapters left two claims to settle. One is that the trimming of Section~\ref{chap:trimming} restores the linearity lost at the process corners. The other is that removing the clock pays off in power against the synchronous reference of Section~\ref{chap:synchronous}. This chapter settles both. It describes the simulation and reconstruction methodology, characterises the asynchronous converter statically and dynamically, measures the effect of the trimming, quantifies the impact of random mismatch, and closes with the power figures and the comparison between the two converters under a matched workload.
 
 \section{Simulation Setup and Input Test Signals}
 \label{sec:simulation_setup}
 
 To validate the theoretical framework of Chapter~\ref{chap:async} and evaluate the physical performance of the proposed asynchronous Flash ADC, transistor-level simulations were run in a 16-nm CMOS process at a nominal supply of 0.8~V. This section describes the simulation environment, the reconstruction methodology required for non-uniform asynchronous data, and the input test stimuli.
 
-Two families of stimuli were used. Static linearity was measured with a trapezoidal pulse spanning $0.1$~V to $0.7$~V, with equal rise and fall ramps swept from $35$~ns down to $5$~ns and a fixed $20$~ns hold between them. Dynamic performance was measured with a sinusoid at $f_{in} = 9$~MHz, swinging rail to rail across the full $0$--$0.8$~V supply (amplitude $0.4$~V around a $0.4$~V common mode). The converter quantises the central $0.1$--$0.7$~V band defined by the fifteen slicer thresholds (Section~\ref{subsec:static_ramp}), with the end codes absorbing the portion of the swing beyond it. The simulation ran for $200$~\textmu s with transient noise enabled.
+Two families of stimuli were used. Static linearity was measured with a trapezoidal pulse spanning $0.1$~V to $0.7$~V, with equal rise and fall ramps swept from $35$~ns down to $5$~ns and a fixed $20$~ns hold between them. Dynamic performance was measured with a sinusoid at $f_{in} = 9$~MHz, swinging rail to rail across the full $0$-$0.8$~V supply (amplitude $0.4$~V around a $0.4$~V common mode). The converter quantises the central $0.1$-$0.7$~V band defined by the fifteen slicer thresholds (Section~\ref{subsec:static_ramp}), with the end codes absorbing the portion of the swing beyond it. The simulation ran for $200$~\textmu s with transient noise enabled.
 
-In a synchronous converter the output samples sit on a periodic clock grid. The asynchronous level-crossing Flash ADC instead produces output transitions only when a quantisation threshold is crossed, so a standard Fast Fourier Transform (FFT), which requires uniformly sampled records, cannot be applied directly to the raw output. The reconstruction used here is deliberately simple. The fifteen digital outputs and the input are linearly interpolated onto a uniform analysis grid of $180$~MHz, each interpolated output is compared against the logic threshold of $0.4$~V to recover the thermometer bits, the output code is the count of asserted bits, and the equivalent analog value follows from mapping that code back onto the $0.1$--$0.7$~V quantisation range of the fifteen slicer thresholds, the end codes absorbing the part of the rail-to-rail swing that falls outside that band. 
+In a synchronous converter the output samples sit on a periodic clock grid. The asynchronous level-crossing Flash ADC instead produces output transitions only when a quantisation threshold is crossed, so a standard Fast Fourier Transform (FFT), which requires uniformly sampled records, cannot be applied directly to the raw output. The reconstruction used here is deliberately simple. The fifteen digital outputs and the input are linearly interpolated onto a uniform analysis grid of $180$~MHz, each interpolated output is compared against the logic threshold of $0.4$~V to recover the thermometer bits, the output code is the count of asserted bits, and the equivalent analog value follows from mapping that code back onto the $0.1$-$0.7$~V quantisation range of the fifteen slicer thresholds, the end codes absorbing the part of the rail-to-rail swing that falls outside that band. 
 
 The analysis grid is twenty times the input frequency and coherent with it ($N = 36000$ samples place the fundamental exactly on bin $1800$), so the FFT uses a rectangular window and no spectral leakage correction is needed. The Signal-to-Noise Ratio (SNR), the Signal-to-Noise-and-Distortion Ratio (SINAD), the Effective Number of Bits (ENOB), the Total Harmonic Distortion (THD, first seven harmonics, aliased into the first Nyquist zone where necessary) and the Spurious-Free Dynamic Range (SFDR) are extracted from this spectrum.
 
@@ -23,7 +23,14 @@ The same resampled record defines the bubble error rate used throughout this cha
     \label{fig:reconstruction_time}
 \end{figure}
 
-Figure~\ref{fig:reconstruction_time} shows the input sinusoid against the reconstructed output over a representative interval of the test, and Figure~\ref{fig:fft_spectrum} shows the spectrum of the reconstructed output, with the fundamental signal bin, the noise floor and the harmonic distortion components.
+Figure~\ref{fig:reconstruction_time} shows the input sinusoid against the reconstructed output over a representative interval of the test, and Figure~\ref{fig:fft_spectrum} shows the spectrum of the reconstructed output, with the fundamental signal bin, the noise floor and the harmonic distortion components. Figure~\ref{fig:reconstruction_pulse} applies the same reconstruction to the trapezoidal pulse stimulus, where the staircase output follows the ramps of the input and confirms that the converter tracks the slow static-linearity excitation as well as the fast sinusoid.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/input_vs_adc_reconstruction_110ns_.pdf}
+    \caption{Trapezoidal pulse input (Vin) and reconstructed converter output (ADC) during the static-linearity test.}
+    \label{fig:reconstruction_pulse}
+\end{figure}
 
 \begin{figure}[H]
     \centering
@@ -67,7 +74,14 @@ The static linearity metrics, Differential Non-Linearity (DNL) and Integral Non-
 \subsection{Threshold Extraction and Linearity Versus Conversion Rate}
 \label{subsec:static_ramp}
 
-The fifteen decision thresholds were measured with the trapezoidal pulse described in Section~\ref{sec:simulation_setup}. For each slicer, the input voltage at which its digital output crosses the $0.4$~V logic threshold is recorded by linear interpolation, once on the rising ramp and once on the falling ramp. The difference between the two readings is the input-referred hysteresis of that slicer, and their average is taken as its decision threshold. The DNL of each of the sixteen codes follows from the widths between consecutive sorted thresholds relative to the ideal LSB of $37.5$~mV, the INL of each transition from the deviation of its threshold from the ideal uniform level, and the offset from the mean of those deviations. Since the widths of the two end codes depend directly on the chosen range limits, the DNL figures reported below exclude them and cover codes 1 to 14.
+The fifteen decision thresholds were measured with the trapezoidal pulse described in Section~\ref{sec:simulation_setup}. Figure~\ref{fig:slices_vin} shows the fifteen slicer outputs against the input ramp, where each output toggles as the input sweeps past the trip point of that slicer, so the thermometer code fills in one bit at a time from the highest-ratio slicer down. Because each output belongs to a slicer sized with a different PMOS-to-NMOS ratio (Table~\ref{tab:slicer_ratios}), the ordered crossing voltages read directly off this figure are the trip point as a function of the ratio $r$. They fall monotonically as $r$ grows, the highest-ratio slicer switching first at the lowest input voltage, which is exactly the dependence predicted by Equation~\eqref{eq:trip_point}. For each slicer, the input voltage at which its digital output crosses the $0.4$~V logic threshold is recorded by linear interpolation, once on the rising ramp and once on the falling ramp.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/slices_and_vin_110ns_.pdf}
+    \caption{The fifteen slicer outputs and the input voltage (Vin) during the ramp. Each output switches as the input crosses the trip point of its slicer, the ordered transitions forming the asynchronous thermometer code. Since every slicer carries a distinct PMOS-to-NMOS ratio, the spread of crossing voltages is the trip point as a function of the ratio $r$, decreasing monotonically as $r$ increases.}
+    \label{fig:slices_vin}
+\end{figure} The difference between the two readings is the input-referred hysteresis of that slicer, and their average is taken as its decision threshold. The DNL of each of the sixteen codes follows from the widths between consecutive sorted thresholds relative to the ideal LSB of $37.5$~mV, the INL of each transition from the deviation of its threshold from the ideal uniform level, and the offset from the mean of those deviations. Since the widths of the two end codes depend directly on the chosen range limits, the DNL figures reported below exclude them and cover codes 1 to 14.
 
 The hysteresis is not a designed property of the slicers. It is the input-referred signature of the conversion delay $\tau_{conv}$ modelled in Section~\ref{subsec:slope_overload}. While the input ramps, every delay in the follower and the slicer translates into a voltage error proportional to the ramp rate, so the rising and falling readings separate as the ramp gets steeper. A measurement is considered valid when the worst-case hysteresis stays below $1$~LSB. Table~\ref{tab:static_ramp} reports the static metrics for ramp times from $35$~ns down to $5$~ns, with the equivalent conversion rate computed from the active ramp time (and, in parentheses in the discussion below, with the $20$~ns hold included).
 
@@ -138,7 +152,7 @@ The spacing is used in place of a mean DNL because it maps directly onto the hea
         \toprule
         \textbf{Quantity} & \textbf{Value} & \textbf{Unit} \\
         \midrule
-        Monte Carlo runs                                  & 300       & --   \\
+        Monte Carlo runs                                  & 300       & -   \\
         Threshold spacing standard deviation              & 215.6     & mV   \\
         Threshold spacing standard deviation (in LSB)      & 5.75      & LSB  \\
         Largest spacing deviation (ordering inversion)    & 15.18     & LSB  \\
@@ -179,7 +193,7 @@ A defining feature of the asynchronous Flash ADC is its signal-dependent power p
 \subsection{Power Measurement Methodology}
 \label{sec:power_methodology}
 
-To keep the comparison between the two converters fair, the power figures reported here cover only the core conversion path of each design. The encoder, that is, the digital logic that translates the thermometer code into the final binary word, was excluded from all power measurements on both sides of the comparison.
+To keep the comparison between the two converters fair, the power figures reported here cover only the core conversion path of each design. The encoder, that is, the digital logic that translates the thermometer code into the final binary word, was excluded from the power figures on both sides of the comparison.
 
 The reasoning is straightforward, both designs require some form of thermometer-to-binary conversion at their outputs, and this encoding logic is largely independent of whether the preceding conversion is synchronous or asynchronous. Including it on one side of the comparison but not the other would artificially inflate one power budget and lead to a conclusion that does not fairly reflect the underlying architectural trade-off. The most defensible approach is therefore to exclude it from both and compare only the converter cores.
 
@@ -187,7 +201,7 @@ Under this methodology, the power reported for the synchronous reference in Tabl
 
 \subsection{Signal-Dependent Power Scaling}
 
-Driven by the full-scale $9$~MHz sinusoid swinging rail to rail across the $0$--$0.8$~V supply, the converter draws an average of $99.5$~\textmu W, the instantaneous consumption peaking at $108$~\textmu W around the mid-scale crossing, where the level-crossing rate is highest. With the input idle, it draws $94.8$~\textmu W. The idle figure is the static floor anticipated in Section~\ref{subsec:resolution_power}: the complementary follower is continuously biased, so its input pairs conduct a residual class-A bias current even when no threshold is being crossed. The difference between the active average and the idle floor, $4.7$~\textmu W, is the activity-dependent component of the consumption.
+Driven by the full-scale $9$~MHz sinusoid swinging rail to rail across the $0$-$0.8$~V supply, the converter draws an average of $99.5$~\textmu W, the instantaneous consumption peaking at $108$~\textmu W around the mid-scale crossing, where the level-crossing rate is highest. With the input idle, it draws $94.8$~\textmu W. The idle figure is the static floor anticipated in Section~\ref{subsec:resolution_power}: the complementary follower is continuously biased, so its input pairs conduct a residual class-A bias current even when no threshold is being crossed. The difference between the active average and the idle floor, $4.7$~\textmu W, is the activity-dependent component of the consumption.
 
 Energy efficiency is assessed with the standard Walden Figure of Merit, applied as in the level-crossing literature of Chapter~\ref{chap:lit_review}, with the rate taken as twice the signal bandwidth $B$:
 \begin{equation}
@@ -197,11 +211,11 @@ Energy efficiency is assessed with the standard Walden Figure of Merit, applied 
 
 where $P$ is the average power drawn by the converter, ENOB its effective number of bits and $B$ the signal bandwidth. The signal bandwidth of the proposed converter is its full-scale sinusoidal tracking limit, $B = 9$~MHz (Section~\ref{sec:simulation_setup}). At that operating point, with $P = 99.5$~\textmu W and an ENOB of $4.11$, equation~\eqref{eq:fomw} gives $\mathrm{FoM}_W \approx 320$~fJ/conv.-step. As in the level-crossing references, the figure of merit improves for sparse inputs, not through the denominator but through the power term, as the converter approaches its $94.8$~\textmu W idle floor.
 
-The measured power figures are summarised in Table~\ref{tab:power_metrics_empty}.
+The simulated power figures are summarised in Table~\ref{tab:power_metrics_empty}.
 
 \begin{table}[htbp]
     \centering
-    \caption{Measured power consumption and energy efficiency of the asynchronous converter.}
+    \caption{Simulated power consumption and energy efficiency of the asynchronous converter.}
     \label{tab:power_metrics_empty}
     \renewcommand{\arraystretch}{1.4}
     \begin{tabular}{lcc}
@@ -251,14 +265,16 @@ The synchronous reference, described in Section~\ref{chap:synchronous}, was simu
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/adc_transfer_sync.pdf}\\
+    \includegraphics[width=0.49\textwidth]{figures/adc_transfer_sync.pdf}\\
     \includegraphics[width=0.49\textwidth]{figures/dnl_sync.pdf}
     \includegraphics[width=0.49\textwidth]{figures/inl_sync.pdf}
-    \caption{Static characterisation of the synchronous reference: (top) measured transfer function against the ideal staircase, (bottom left) DNL per code and (bottom right) INL per transition.}
+    \caption{Static characterisation of the synchronous reference: (top) simulated transfer function against the ideal staircase, (bottom left) DNL per code and (bottom right) INL per transition.}
     \label{fig:sync_linearity}
 \end{figure}
 
-Neither operating point comes from the original publication. The design of \cite{flashadc_ref} was demonstrated at $20$~MS/s with a $332$~kHz input in 65~nm, and reproducing that point here would compare the two converters in a regime unrelated to the one the asynchronous design targets. The matched point follows instead from the activity model of Section~\ref{subsec:resolution_power} and from the slew rate envelope of Section~\ref{sec:simulation_setup}. The fastest full-scale sinusoid the asynchronous converter tracks cleanly is $9$~MHz, and at that input a 4-bit level-crossing converter generates $f_{s,avg} = 2^{N+1} f_{in} = 32 \times 9~\mathrm{MHz} = 288$~M crossings per second, which is the full-activity rate $f_{cross,max}$ of the activity factor in Section~\ref{subsec:activity_power}. Clocked at $288$~MS/s with the same $9$~MHz stimulus, the synchronous reference performs the same number of conversions per second, on the same input, as the asynchronous converter in the test of Section~\ref{sec:simulation_setup}. The power figures of the two converters therefore describe the same workload. The performance summary is presented in Table~\ref{tab:sync_results}, and the power is separated into its components in Table~\ref{tab:sync_power_breakdown}. Together they form the baseline for the comparison of the following section.
+Neither operating point comes from the original publication. The design of \cite{flashadc_ref} was demonstrated at $20$~MS/s with a $332$~kHz input in 65~nm, and reproducing that point here would compare the two converters in a regime unrelated to the one the asynchronous design targets. The matched point follows instead from the activity model of Section~\ref{subsec:resolution_power} and from the slew rate envelope of Section~\ref{sec:simulation_setup}. 
+
+The fastest full-scale sinusoid the asynchronous converter tracks cleanly is $9$~MHz, and at that input a 4-bit level-crossing converter generates $f_{s,avg} = 2^{N+1} f_{in} = 32 \times 9~\mathrm{MHz} = 288$~M crossings per second, which is the full-activity rate $f_{cross,max}$ of the activity factor in Section~\ref{subsec:activity_power}. Clocked at $288$~MS/s with the same $9$~MHz stimulus, the synchronous reference performs the same number of conversions per second, on the same input, as the asynchronous converter in the test of Section~\ref{sec:simulation_setup}. The power figures of the two converters therefore describe the same workload. The performance summary is presented in Table~\ref{tab:sync_results}, and the power is separated into its components in Table~\ref{tab:sync_power_breakdown}. Together they form the baseline for the comparison of the following section.
 
 
 The power consumption of the synchronous reference is not a single block. In any clocked Flash converter the clock must physically reach all fifteen comparators, so a converter of this kind always carries a clock generator and a distribution network between the generator and the array. That routing belongs to the architecture itself, and any honest power figure for a synchronous Flash has to include it. As described in Section~\ref{chap:synchronous}, the distribution was modelled with a tapered buffer chain whose final $\times 24$ fanout stage represents the load of a normal, physically compact route to the comparator bank. Table~\ref{tab:sync_power_breakdown} separates the measured consumption into the converter core, the ring oscillator and the clock routing. The complete set draws $886$~\textmu W, of which the ring oscillator and the clock routing account for $447$~\textmu W. That $447$~\textmu W is the clock overhead the asynchronous design removes entirely, and on its own it exceeds the full $99.5$~\textmu W of the asynchronous core by more than four times.
@@ -295,7 +311,7 @@ The routing term depends on the modelled load, so the headline ratio carries a c
         Supply Voltage                           & 0.8            & V                     \\
         Resolution                               & 4              & bit                   \\
         Sampling Frequency                       & 288            & MS/s                  \\
-        Input Range                              & 0--0.8         & V                     \\
+        Input Range                              & 0-0.8         & V                     \\
         Power Consumption                        & 886            & $\mu$W                \\
         \midrule
         \multicolumn{3}{l}{Dynamic Performance ($f_{in} = 9$~MHz, full-scale)}    \\
@@ -314,45 +330,46 @@ The routing term depends on the modelled load, so the headline ratio carries a c
 \section{Comparative Analysis and Discussion}
 \label{sec:comparative_analysis}
 
-Table~\ref{tab:state_of_the_art} puts the developed design in context. It compares the core performance metrics of the synchronous reference Flash ADC of Section~\ref{chap:synchronous}, the proposed asynchronous Flash ADC, and recent state-of-the-art architectures from the literature.
+Table~\ref{tab:state_of_the_art} puts the developed design in context. It compares the core performance metrics of the synchronous reference Flash ADC of Section~\ref{chap:synchronous}, the proposed asynchronous Flash ADC, and recent state-of-the-art architectures from the literature. The closest peer in design space is added alongside the higher-resolution, low-bandwidth converters. The 4-bit folding-flash of \cite{nasri2016} shares the resolution and the Flash family and reaches a comparable SNDR of about $22$~dB at a $65$~fJ figure of merit.
 
 \begin{table}[htbp]
     \centering
     \caption{Performance comparison with the synchronous baseline and state-of-the-art literature.}
     \label{tab:state_of_the_art}
     \renewcommand{\arraystretch}{1.3}
-    \small
-    \begin{tabular}{lccccc}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{lccccccc}
         \toprule
-        \textbf{Parameter} & \textbf{Sync.} & \textbf{This} & \textbf{\cite{schell2008}} & \textbf{\cite{weltin2013}} & \textbf{\cite{timmermans2024}} \\
-                           & \textbf{base.} & \textbf{Work} & & & \\
+        \textbf{Parameter} & \textbf{Sync.} & \textbf{This} & \textbf{\cite{schell2008}} & \textbf{\cite{weltin2013}} & \textbf{\cite{timmermans2024}} & \textbf{\cite{nasri2016}} \\
+                           & \textbf{base.} & \textbf{Work} & & & & \\
         \midrule
-        Technology (nm)    & 16     & 16          & 90          & 130       & 65          \\
-        Supply (V)         & 0.8    & 0.8         & 1.0         & 0.8       & 1.2         \\
-        Resolution (bit)   & 4      & 4           & 8           & 8         & 10          \\
-        Signal BW (MHz)    & 9      & 9           & 0.02        & 0.02      & 0.02        \\
-        $f_s$ (MS/s)       & 288    & event       & event       & event     & event       \\
-        SNDR (dB)          & 24.98  & 26.50       & 47--62       & 47--54    & 64          \\
-        ENOB (bit)         & 3.86   & 4.11        & 7.51--10.01        & 7.5--8.7  & 10.3        \\
-        Power ($\mu$W)     & 886    & 99.5        & 250--800 & 3--9 & 0.066--2.8 \\
-        $\mathrm{FoM}_W$ (fJ/c.s.) & 3390  & 320       & 193986--6858200 & 180--1240\textsuperscript{$2$} & 1.8--65 \\
-        Architecture       & Sync. Flash & Async. LC Flash & CT system & LC-ADC & CT LC-ADC \\
+        Technology (nm)    & 16     & 16          & 90          & 130       & 65          & 65            \\
+        Supply (V)         & 0.8    & 0.8         & 1.0         & 0.8       & 1.2         & 1.0           \\
+        Resolution (bit)   & 4      & 4           & 8           & 8         & 10          & 4             \\
+        Signal BW (MHz)    & 9      & 9           & 0.02        & 0.02      & 0.02        & 500           \\
+        $f_s$ (MS/s)       & 288    & event       & event       & event     & event       & 1000          \\
+        SNDR (dB)          & 24.98  & 26.50       & 47-62       & 47-54    & 64          & 21.8-22.3     \\
+        ENOB (bit)         & 3.86   & 4.11        & 7.51-10.01        & 7.5-8.7  & 10.3        & 3.3-3.4\textsuperscript{$3$} \\
+        Power ($\mu$W)     & 886    & 99.5        & 250-800 & 3-9 & 0.066-2.8 & 700           \\
+        $\mathrm{FoM}_W$ (fJ/c.s.) & 3390  & 320       & 193986-6858200 & 180-1240\textsuperscript{$2$} & 1.8-65 & 65 \\
+        Architecture       & Sync. Flash & Async. LC Flash & CT system & LC-ADC & CT LC-ADC & Folding-Flash \\
         \bottomrule
-    \end{tabular}
+    \end{tabular}%
+    }
 
     \vspace{2mm}
-    {\footnotesize \textsuperscript{$1$}~Reference~\cite{schell2008} is a complete continuous-time ADC/DSP/DAC system. \textsuperscript{$2$}~Figure of merit not reported in the original work, computed here from the reported power, ENOB and signal bandwidth.}
+    {\footnotesize \textsuperscript{$1$}~Reference~\cite{schell2008} is a complete continuous-time ADC/DSP/DAC system. \textsuperscript{$2$}~Figure of merit not reported in the original work, computed here from the reported power, ENOB and signal bandwidth. \textsuperscript{$3$}~ENOB of \cite{nasri2016} computed here from its reported SNDR. The signal bandwidth of \cite{nasri2016} is taken as the Nyquist bandwidth of its $1$~GS/s rate.}
 \end{table}
 
-The comparison makes the trade-off concrete. On the same $9$~MHz full-scale stimulus and at a matched conversions-per-second workload (Section~\ref{sec:sync_results}), the complete synchronous converter draws $886$~\textmu W against $99.5$~\textmu W for the active asynchronous core, a factor of nearly nine. A substantial part of the synchronous budget goes to clock generation and distribution, blocks that do not exist in the asynchronous design.
+The comparison makes the trade-off concrete. On the same $9$~MHz full-scale stimulus and at a matched conversions-per-second workload (Section~\ref{sec:sync_results}), the synchronous converter core draws $886$~\textmu W against $99.5$~\textmu W for the active asynchronous core, a factor of nearly nine. A substantial part of the synchronous budget goes to clock generation and distribution, blocks that do not exist in the asynchronous design.
 
-The two converters are close on dynamic performance, the asynchronous reaching $26.50$~dB SINAD against $24.98$~dB for the synchronous reference, a difference of about $1.5$~dB that is best read as near-parity at the 4-bit level rather than as a decisive advantage for either. One asymmetry deserves comment, since the two converters do not digitise the same band. The synchronous ladder spans the full $0$--$0.8$~V rail to rail, whereas the asynchronous converter quantises the central $0.1$--$0.7$~V band, with the two end codes absorbing the portion of the rail-to-rail swing that falls outside it (Section~\ref{sec:simulation_setup}). Those end codes are wide quantisation bins of about $0.1$~V each, mapped on reconstruction to a representative level, so the part of the sinusoid beyond the active band is coarsely quantised rather than hard-clipped against a rail, the resulting distortion is bounded and shows up in the THD and SFDR of Table~\ref{tab:dynamic_results} without collapsing the SINAD. Inside the active band the asynchronous LSB is finer than the synchronous one ($37.5$~mV against $50$~mV), which lowers the quantisation error over the central part of the swing and offsets the coarser end regions. The net effect is the rough dynamic parity observed, and the case for the asynchronous design rests on power rather than on any dynamic-range superiority.
+The two converters are close in dynamic performance, the asynchronous reaching $26.50$~dB SINAD against $24.98$~dB for the synchronous reference, a difference of about $1.5$~dB that is best read as near-parity at the 4-bit level rather than as a decisive advantage for either. One asymmetry deserves comment, since the two converters do not digitise the same band. The synchronous ladder spans the full $0$-$0.8$~V rail to rail, whereas the asynchronous converter quantises the central $0.1$-$0.7$~V band, with the two end codes absorbing the portion of the rail-to-rail swing that falls outside it (Section~\ref{sec:simulation_setup}). Those end codes are wide quantisation bins of about $0.1$~V each, mapped on reconstruction to a representative level, so the part of the sinusoid beyond the active band is coarsely quantised rather than hard-clipped against a rail, the resulting distortion is bounded and shows up in the THD and SFDR of Table~\ref{tab:dynamic_results} without collapsing the SINAD. Inside the active band the asynchronous LSB is finer than the synchronous one ($37.5$~mV against $50$~mV), which lowers the quantisation error over the central part of the swing and offsets the coarser end regions. The net effect is the rough dynamic parity observed, and the case for the asynchronous design rests on power rather than on any dynamic-range superiority.
 
 Two cautions keep this comparison honest. First, two efficiency figures tell the same story for the synchronous baseline. On the standard Walden FoM with the rate at twice the bandwidth, the reference reaches $3390$~fJ/conv.-step against $320$~fJ for the proposed converter, around ten times worse. A per-conversion FoM referenced instead to the actual $288$~MS/s clock would reward the oversampling rather than penalise the wasted clock energy, which is why the matched-workload power, $886$ against $99.5$~\textmu W, remains the most direct efficiency figure for the comparison. Second, the $320$~fJ/conv.-step of the proposed converter is well above the best dedicated level-crossing ADCs in the literature (single-digit to tens of fJ for the dedicated low-bandwidth designs of Chapter~\ref{chap:lit_review}). This is expected, since those are high-resolution, kilohertz-bandwidth converters optimised for energy, whereas this work is a medium-resolution, megahertz-range Flash converter benchmarked against a synchronous Flash of the same family. The energy argument of this work rests on the matched-workload power saving against that synchronous baseline and on the drop towards the $94.8$~\textmu W idle floor for sparse inputs, not on a record FoM.
 
-A note on the fairness of the power comparison is warranted, since it could be suspected of favouring the asynchronous design by construction. Three observations bound that concern. First, both converters have the same 4-bit resolution and their cores are measured under the same exclusions (Section~\ref{sec:power_methodology}), so the structural terms are symmetric. Second, the comparison does not depend on choosing a favourable, sparse operating point. The matched-workload point used here is already full activity, the fastest full-scale input the converter tracks, and even there the asynchronous core draws $99.5$~\textmu W against $886$~\textmu W, a factor of $8.9$. As the input becomes sparse the ratio only widens, to $9.3$. The advantage therefore holds across the whole activity range. Because the dynamic component of the asynchronous power is small next to its static floor, this saving comes mainly from the lower absolute consumption of the clockless core, with the activity-dependent scaling adding only a secondary contribution. Third, the one structural asymmetry that remains, the reduced linearity of the complementary follower near the supply rails, runs against the asynchronous design rather than in its favour.
+A note on the fairness of the power comparison is warranted, since it could be suspected of favouring the asynchronous design by construction. Three observations bound that concern. First, both converters have the same 4-bit resolution and their cores are evaluated under the same exclusions (Section~\ref{sec:power_methodology}), so the structural terms are symmetric. Second, the comparison does not depend on choosing a favourable, sparse operating point. The matched-workload point used here is already full activity, the fastest full-scale input the converter tracks, and even there the asynchronous core draws $99.5$~\textmu W against $886$~\textmu W, a factor of $8.9$. As the input becomes sparse the ratio only widens, to $9.3$. The advantage therefore holds across the whole activity range. Because the dynamic component of the asynchronous power is small next to its static floor, this saving comes mainly from the lower absolute consumption of the clockless core, with the activity-dependent scaling adding only a secondary contribution. Third, the one structural asymmetry that remains, the reduced linearity of the complementary follower near the supply rails, runs against the asynchronous design rather than in its favour.
 
 \section{Chapter Summary}
 
-The measurements of this chapter close the loop opened in Chapter~\ref{chap:intro}. Two distinct speed limits bound the converter and should not be conflated. The first is a ramp-rate limit of $14.3$~MHz equivalent conversion rate, the fastest trapezoidal ramp whose input-referred hysteresis stays within $1$~LSB, bounded by hysteresis rather than by linearity. The second is the full-scale sinusoidal bandwidth of $9$~MHz, set by the slew-rate envelope, which the converter digitises with an ENOB of $4.11$~bits and no bubble errors. The sinusoidal bandwidth is the lower of the two because a sinusoid reaches a higher peak slope than the linear ramp of the same period. The body bias trimming improves the worst-case DNL at all four process corners and the worst-case INL at three of them, with the SF corner exposing the limit of a corner-indexed, forward-bias-only per-slicer correction. The Monte Carlo analysis confirms that random mismatch, outside the scope of the corner-indexed trimming, remains the dominant linearity hazard. On power, the comparison under a matched workload gives $99.5$~\textmu W against $886$~\textmu W for the synchronous reference, and the gap widens for sparse inputs, where the asynchronous converter falls to its $94.8$~\textmu W idle floor while the clocked reference keeps paying for every cycle. The final chapter weighs these results against the objectives of the dissertation.
+The simulation results of this chapter close the loop opened in Chapter~\ref{chap:intro}. Two distinct speed limits bound the converter and should not be conflated. The first is a ramp-rate limit of $14.3$~MHz equivalent conversion rate, the fastest trapezoidal ramp whose input-referred hysteresis stays within $1$~LSB, bounded by hysteresis rather than by linearity. The second is the full-scale sinusoidal bandwidth of $9$~MHz, set by the slew-rate envelope, which the converter digitises with an ENOB of $4.11$~bits and no bubble errors. The sinusoidal bandwidth is the lower of the two because a sinusoid reaches a higher peak slope than the linear ramp of the same period. The body bias trimming improves the worst-case DNL at all four process corners and the worst-case INL at three of them, with the SF corner exposing the limit of a corner-indexed, forward-bias-only per-slicer correction. The Monte Carlo analysis confirms that random mismatch, outside the scope of the corner-indexed trimming, remains the dominant linearity hazard. On power, the comparison under a matched workload gives $99.5$~\textmu W against $886$~\textmu W for the synchronous reference, and the gap widens for sparse inputs, where the asynchronous converter falls to its $94.8$~\textmu W idle floor while the clocked reference keeps paying for every cycle. The final chapter weighs these results against the objectives of the dissertation.
 

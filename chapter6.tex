@@ -4,8 +4,8 @@
 \section{Summary of the Work Developed}
 
 This dissertation addressed the design and validation of an asynchronous Flash
-ADC intended for low-power, event-driven applications such as Internet
-of Things sensor nodes and other sources of non-periodic signals. The central motivation for
+ADC intended for low-power, event-driven applications such as smart-sensor
+nodes and other sources of non-periodic signals. The central motivation for
 this work stems from the fundamental inefficiency of conventional synchronous ADC
 architectures when dealing with time-sparse signals. A global clock forces continuous switching
 activity across the comparator bank and clock distribution network, dissipating dynamic power
@@ -32,24 +32,30 @@ converts the differential input voltage into an error current, and a current-to-
 that current to a thermometer-coded output by exploiting asymmetric PMOS and NMOS mirror
 ratios at each comparison node. This topology operates in continuous time and requires no
 external clock, which made it a natural fit for the event-driven approach. The decision element of
-this stage, the current comparator, was not assumed. Six published current comparator topologies
+this stage, the current comparator was not assumed. Six published current comparator topologies
 (current-mirror, Traff, Lu Chen, hysteresis, Min and Kim and CC-II) were redrawn at transistor
 level and simulated in a common testbench, and the current-mirror cell was selected for having the
 lowest propagation delay and the second-lowest average power of the six. The power and delay
-figures reported for these comparators therefore come from direct simulation, not from estimates. The second architecture
+figures reported for these comparators therefore come from direct simulation, not from estimates. 
+
+The second architecture
 investigated a complementary dual-input topology aimed at extending the input common-mode
 range toward rail-to-rail operation by combining an NMOS and a PMOS differential pair with
-cross-coupled output branches. Although conceptually attractive, this implementation could not be made
-to work within the 0.8\,V supply budget of the target 16\,nm process. The mirror loads and the
-cross-coupling stacked additional transistors in every signal path, the accumulated overdrive
-requirements exceeded the available voltage headroom, and no feasible bias point could be found
-that kept all devices in saturation simultaneously. A bulk-driven amplifier was then evaluated as a
+cross-coupled output branches. Although conceptually attractive, this implementation did not function
+at the 0.8\,V supply of the target 16\,nm process, its complementary outputs failing to reach the
+rails in the DC response. Its cross-coupled current-mirror structure also stacked a large number of
+devices without easing the headroom over a simpler stage. 
+
+A bulk-driven amplifier was then evaluated as a
 low-voltage route to the same rail-to-rail input, but its positive-feedback transconductance boost
-proved too sensitive to process corners and was discarded. The final architecture kept the
+proved too sensitive to process corners and was discarded. 
+
+The final architecture kept the
 complementary rail-to-rail input but rebuilt it with two five-transistor OTAs, one with an NMOS
 and one with a PMOS input pair, each loaded by a single active current mirror and biased through
-the low-voltage tail mirror retained from the second architecture. With far fewer stacked devices, this
-arrangement fits the available headroom, and the complementary OTA, configured as a unity-gain
+the low-voltage tail mirror retained from the second architecture. This reaches the same headroom
+budget as the dual-input stage with far fewer transistors, lowering the power, and the complementary
+OTA, configured as a unity-gain
 voltage follower, drives a bank of ratioed current-mode slicers through its low-impedance output. Each
 slicer is sized with a distinct PMOS-to-NMOS transistor ratio, which sets its switching threshold
 at a specific voltage level within the supply range. The ensemble of slicers produces an
@@ -81,11 +87,11 @@ Finally, the complete system was validated through transistor-level analog and m
 co-simulation. The dynamic performance of the asynchronous converter was characterised using a
 non-uniform to uniform resampling algorithm applied to the raw level-crossing output, enabling
 standard spectral metrics such as SNDR and ENOB to be extracted and compared against both the
-synchronous reference and representative state-of-the-art designs. The power measurements
-confirmed the key theoretical prediction. Dynamic power consumption scales linearly with input
-signal frequency, and the converter enters a near-zero dynamic consumption state when the input
-is idle. Measured at a matched conversions-per-second workload, the asynchronous core draws
-$99.5$~\textmu W against the $886$~\textmu W of the complete synchronous reference, and the gap
+synchronous reference and representative state-of-the-art designs. The simulated power figures
+support the key theoretical prediction. The dynamic power consumption follows the input activity,
+and the converter enters a near-zero dynamic consumption state when the input
+is idle. In simulation, at a matched conversions-per-second workload, the asynchronous core draws
+$99.5$~\textmu W against the $886$~\textmu W of the synchronous reference core, and the gap
 widens for sparse inputs as the converter falls towards its idle floor. This power saving, rather
 than a record Walden figure of merit, is where the energy advantage of the proposed converter
 lies in the sparse-signal regime targeted by this work.
@@ -147,9 +153,14 @@ work presented in this dissertation.
 The trimming strategy validated in this work relies on the correct identification of the active
 process corner, which in the current implementation is supplied externally to the Verilog-A
 behavioural model and used to select the appropriate pre-computed correction vector. In a
-physical integrated circuit this external identification is not available, the fabricated die has no
-direct means of knowing which combination of NMOS and PMOS device parameters it has been
-assigned by the foundry.
+physical integrated circuit this external identification is not available. The point is not that the
+process corner is unknowable, but that the fabricated die has no way of reading it off directly, since
+nothing on the die records which combination of NMOS and PMOS device parameters it ended up
+with. That combination is not a label set by the foundry but the consequence of unavoidable
+imprecisions in the fabrication process, which is what places a given die nearer the FS or SF
+corner. What the die lacks is a direct readout, not the information itself, because the process type
+can still be inferred from the behaviour of dedicated on-chip sensing circuits, which is precisely
+the route the extension below takes.
 
 A natural extension would therefore be a dedicated on-chip analogue process
 detection circuit that senses the effective transistor characteristics of the fabricated device
@@ -185,8 +196,11 @@ to infer the actual trip point of each slicer. The deviation of each measured tr
 nominal target could then be mapped to the body bias correction required to bring it back into
 specification, using the sensitivity relationship established in Section~\ref{chap:trimming}. Since the NMOS and
 PMOS bulk voltages of each slicer would need to be individually controlled, this approach
-requires the addition of a per-cell bias generator, which increases the area overhead relative to a
-global corner correction. Nevertheless, the achievable linearity improvement and the
-corresponding reduction in post-fabrication yield loss would likely justify this added complexity
-in any application where the converter is produced at volume and must meet tight DNL
-specifications across the full statistical distribution of process variability.
+requires the addition of a per-cell bias generator, along with the measurement and storage
+needed to compute and hold one correction per slicer, which is a substantial increase in area and
+control complexity relative to a global corner correction. The decision is therefore a trade-off
+between that added complexity and the linearity improvement it buys, and where the balance falls
+depends on how demanding the DNL specification is. For a converter with relaxed linearity targets
+the global corner correction is likely enough, whereas for one that must meet tight DNL across the
+full statistical distribution of process variability the per-slicer calibration becomes the more
+sensible choice despite its cost.

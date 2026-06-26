@@ -4634,6 +4634,54 @@
       \field{title}{A 3nW Signal-Acquisition IC Integrating an Amplifier and a 1.5fJ/conv-step ADC}
       \field{year}{2015}
     \endentry
+    \entry{nasri2016}{misc}{}{}
+      \name{author}{5}{}{%
+        {{hash=fc3cc06378db9226b8eb0d7891e40b5c}{%
+           family={Nasri},
+           familyi={N\bibinitperiod},
+           given={Bayan},
+           giveni={B\bibinitperiod}}}%
+        {{hash=bb450789ef034ee05e09fafed1db8204}{%
+           family={Sebastian},
+           familyi={S\bibinitperiod},
+           given={Sunit\bibnamedelima P.},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=290dfa29b129561b67e4f32e1d745ad7}{%
+           family={You},
+           familyi={Y\bibinitperiod},
+           given={Kae-Dyi},
+           giveni={K\bibinithyphendelim D\bibinitperiod}}}%
+        {{hash=9e7f25d25d1d1139735b1748a6764115}{%
+           family={RanjithKumar},
+           familyi={R\bibinitperiod},
+           given={RamKumar},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6c01390d179dfc97e76ef8fb2627a6af}{%
+           family={Shahrjerdi},
+           familyi={S\bibinitperiod},
+           given={Davood},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{dba5de94ea9fe0ad671649aa2f6fda6d}
+      \strng{fullhash}{93465f9a9e5f3290502812ae80e73b64}
+      \strng{fullhashraw}{93465f9a9e5f3290502812ae80e73b64}
+      \strng{bibnamehash}{dba5de94ea9fe0ad671649aa2f6fda6d}
+      \strng{authorbibnamehash}{dba5de94ea9fe0ad671649aa2f6fda6d}
+      \strng{authornamehash}{dba5de94ea9fe0ad671649aa2f6fda6d}
+      \strng{authorfullhash}{93465f9a9e5f3290502812ae80e73b64}
+      \strng{authorfullhashraw}{93465f9a9e5f3290502812ae80e73b64}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.AR}
+      \field{eprinttype}{arXiv}
+      \field{title}{A 700{\textmu}W 1GS/s 4-bit Folding-Flash {ADC} in 65nm {CMOS} for Wideband Wireless Communications}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb 1612.04855
+      \endverb
+    \endentry
     \entry{Ong_1997_112}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=f2e6cec9c75cb09b65a4639831a80fef}{%

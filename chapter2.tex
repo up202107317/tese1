@@ -79,7 +79,7 @@ where lower values indicate better performance. This is the figure of merit used
 
 \subsection{Metrics Adaptation for Asynchronous Systems}
 
-The Walden FoM was developed for Nyquist converters, but it still applies to event-driven converters, provided one point is kept in mind, in a level-crossing architecture, it is the power, not the sampling rate, that depends on the input signal. The denominator thereforem stays fixed at twice the signal bandwidth, as for any converter of that bandwidth, while the power term carries the signal dependence. The efficiency is consequently reported as a range rather than a single number.
+The Walden FoM was developed for Nyquist converters, but it still applies to event-driven converters, provided one point is kept in mind, in a level-crossing architecture, it is the power, not the sampling rate, that depends on the input signal. The denominator therefore stays fixed at twice the signal bandwidth, as for any converter of that bandwidth, while the power term carries the signal dependence. The efficiency is consequently reported as a range rather than a single number.
 
 Level-crossing quantisers, as Weltin-Wu and Tsividis demonstrated, generate a sample only when the input crosses a quantisation threshold \cite{weltin2013}. When the input is sparse, few crossings occur and little power is spent. When the input is active, the crossing rate and the power both rise. The absence of a uniform sampling clock also changes the noise spectrum, the output is free of aliasing and of the usual quantisation noise floor, and under some signal conditions, the SNDR can exceed the theoretical limit of a conventional converter with the same nominal number of bits.
 
@@ -160,7 +160,7 @@ The $\Sigma\Delta$ architecture relies on oversampling, sampling much faster tha
 \paragraph{}
 Oversampling and noise shaping are achieved by the feedback loop formed by summer, integrator, 1-bit quantiser, and digital decimation filter in the first-order sigma-delta architecture, as shown in Fig.~\ref{fig:sigma_delta_arch}. The modulator continuously integrates the difference between the analog input and the 1‑bit DAC feedback, pushing most of the quantisation noise to high frequencies, which are later removed by the digital filter.
 \subsection{Dual-slope}
-This integrating architecture \cite{microelectronics_1998} measures the time a capacitor takes to charge and discharge. In the first phase the capacitor is charged by the input voltage for a fixed period. In the second, it is discharged by a known reference voltage. The time needed to return to zero is proportional to the average value of the input. The technique is accurate and immune to high-frequency noise, but much slower than the other architectures.
+This integrating architecture \cite{microelectronics_1998} measures the time a capacitor takes to charge and discharge. In the first phase, the capacitor is charged by the input voltage for a fixed period. In the second, it is discharged by a known reference voltage. The time needed to return to zero is proportional to the average value of the input. The technique is accurate and immune to high-frequency noise, but much slower than the other architectures.
 
 \begin{figure}[H]
   \centering
@@ -216,7 +216,7 @@ This mechanism turns changes in signal amplitude into discrete temporal events. 
 
 \subsection{Current Comparator Operating Principles}
 
-Current comparators are the fundamental decision elements used in event driven architectures operating in the current domain. Their purpose is to determine whether an input current is greater or smaller than a reference current and to generate a corresponding digital output that signals the occurrence of an event.
+Current comparators are the fundamental decision elements used in event-driven architectures operating in the current domain. Their purpose is to determine whether an input current is greater or smaller than a reference current and to generate a corresponding digital output that signals the occurrence of an event.
 
 Unlike conventional voltage comparators, which rely on charging and discharging internal nodes until a voltage threshold is reached, current comparators process information directly through current differences. This characteristic enables reduced voltage excursions, lower parasitic charging requirements, and potentially faster response times.
 
@@ -383,7 +383,7 @@ The internal resistive loading method involves placing a variable resistive netw
 \subsubsection{Reference Ladder Trimming}
 \label{subsec:ladder_trimming}
 
-The reference ladder trimming technique corrects comparator offset by using the main reference ladder as a calibration source \cite{yao_bulk_2011}. In this architecture, a switching network selects specific voltages from the resistor ladder and applies them to the bulk terminals of the input transistors M1 and M2. The body effect then shifts the threshold voltage ($V_{th}$) of the differential pair and cancels the input-referred offset caused by process mismatch.
+The reference ladder trimming technique corrects the comparator offset by using the main reference ladder as a calibration source \cite{yao_bulk_2011}. In this architecture, a switching network selects specific voltages from the resistor ladder and applies them to the bulk terminals of the input transistors M1 and M2. The body effect then shifts the threshold voltage ($V_{th}$) of the differential pair and cancels the input-referred offset caused by process mismatch.
 
 Simulation results reported in \cite{yao_bulk_2011} show that the threshold voltage of transistors M1 and M2 increases linearly from approximately 356.5~mV to 372~mV as the calibration voltage is adjusted. In contrast, the threshold voltage of transistors M3 and M4 remains constant at approximately 356.5~mV because their bulk terminals are not connected to the tuning network. This targeted adjustment of the bulk potential for the input differential pair provides a tuning range sufficient to compensate for random process variations and ensure the accuracy of the comparator trip points. As the calibration voltage increases, the threshold of M1 and M2 shifts linearly while M3 and M4 remain fixed, providing the tuning range required to compensate comparator offset caused by random process variations \cite{yao_bulk_2011}.
 

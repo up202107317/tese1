@@ -166,37 +166,37 @@
 \contentsline {paragraph}{}{62}{section*.125}%
 \contentsline {paragraph}{}{62}{section*.126}%
 \contentsline {subsection}{\numberline {3.6.4}Ratioed Output Slicers Design}{62}{subsection.3.6.4}%
-\contentsline {subsection}{\numberline {3.6.5}Asynchronous Control Logic and Clockless Event Generation Network}{65}{subsection.3.6.5}%
-\contentsline {subsection}{\numberline {3.6.6}Results at the Typical Corner and Across Process Corners}{65}{subsection.3.6.6}%
-\contentsline {section}{\numberline {3.7}Body Bias Trimming Strategy}{66}{section.3.7}%
+\contentsline {subsection}{\numberline {3.6.5}Asynchronous Control Logic and Clockless Event Generation Network}{64}{subsection.3.6.5}%
+\contentsline {subsection}{\numberline {3.6.6}Results at the Typical Corner and Across Process Corners}{66}{subsection.3.6.6}%
+\contentsline {section}{\numberline {3.7}Body Bias Trimming Strategy}{67}{section.3.7}%
 \contentsline {subsection}{\numberline {3.7.1}Choice of Body Biasing Among the Reviewed Techniques}{67}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Function of NMOS and PMOS Transistors Under Different Body Bias}{67}{subsection.3.7.2}%
-\contentsline {subsection}{\numberline {3.7.3}Process Corner Dependence and Motivation for Trimming}{68}{subsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.7.2}Function of NMOS and PMOS Transistors Under Different Body Bias}{68}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Process Corner Dependence and Motivation for Trimming}{69}{subsection.3.7.3}%
 \contentsline {subsection}{\numberline {3.7.4}Offline Trimming Strategy via Body Bias Adjustment}{69}{subsection.3.7.4}%
-\contentsline {subsubsection}{\numberline {3.7.4.1}Determination of the Per-Slicer Correction Voltages}{69}{subsubsection.3.7.4.1}%
-\contentsline {subsubsection}{\numberline {3.7.4.2}Verilog-A Behavioural Implementation}{70}{subsubsection.3.7.4.2}%
-\contentsline {subsection}{\numberline {3.7.5}Summary}{70}{subsection.3.7.5}%
+\contentsline {subsubsection}{\numberline {3.7.4.1}Determination of the Per-Slicer Correction Voltages}{70}{subsubsection.3.7.4.1}%
+\contentsline {subsubsection}{\numberline {3.7.4.2}Verilog-A Behavioural Implementation}{71}{subsubsection.3.7.4.2}%
+\contentsline {subsection}{\numberline {3.7.5}Summary}{71}{subsection.3.7.5}%
 \contentsline {section}{\numberline {3.8}Analytical Modelling and Design Constraints}{71}{section.3.8}%
 \contentsline {subsection}{\numberline {3.8.1}Maximum Input Wave Frequency and Slope Overload}{71}{subsection.3.8.1}%
-\contentsline {subsection}{\numberline {3.8.2}Resolution and Power Dissipation}{72}{subsection.3.8.2}%
-\contentsline {section}{\numberline {3.9}Chapter Summary}{73}{section.3.9}%
+\contentsline {subsection}{\numberline {3.8.2}Resolution and Power Dissipation}{73}{subsection.3.8.2}%
+\contentsline {section}{\numberline {3.9}Chapter Summary}{74}{section.3.9}%
 \contentsline {chapter}{\numberline {4}Simulation Results and Performance Benchmarking}{75}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Simulation Setup and Input Test Signals}{75}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Static Linearity Results}{78}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Threshold Extraction and Linearity Versus Conversion Rate}{78}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Linearity Across Process Corners and Trimming}{79}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Random Mismatch: Monte Carlo Analysis}{80}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Power Dissipation and Energy Efficiency}{82}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Power Measurement Methodology}{82}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Signal-Dependent Power Scaling}{83}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Average Power Under Duty-Cycled Operation}{83}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}Synchronous Reference Flash ADC Results}{85}{section.4.5}%
+\contentsline {subsection}{\numberline {4.2.1}Threshold Extraction and Linearity Versus Conversion Rate}{79}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Linearity Across Process Corners and Trimming}{80}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Random Mismatch: Monte Carlo Analysis}{81}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Power Dissipation and Energy Efficiency}{83}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Power Measurement Methodology}{83}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Signal-Dependent Power Scaling}{84}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Average Power Under Duty-Cycled Operation}{85}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Synchronous Reference Flash ADC Results}{86}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Comparative Analysis and Discussion}{87}{section.4.6}%
 \contentsline {section}{\numberline {4.7}Chapter Summary}{90}{section.4.7}%
-\contentsline {chapter}{\numberline {5}Conclusions}{91}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Summary of the Work Developed}{91}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Concluded Objectives}{93}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Future Work}{94}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Analogue Process Corner Detection Approach}{94}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Monte Carlo Trimming}{95}{subsection.5.3.2}%
-\contentsline {chapter}{\numberline {A}Verilog-A Body Bias Trimming Model}{111}{appendix.A}%
+\contentsline {chapter}{\numberline {5}Conclusions}{92}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Summary of the Work Developed}{92}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Concluded Objectives}{94}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Future Work}{95}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Analogue Process Corner Detection Approach}{95}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Monte Carlo Trimming}{96}{subsection.5.3.2}%
+\contentsline {chapter}{\numberline {A}Verilog-A Body Bias Trimming Model}{112}{appendix.A}%

@@ -541,45 +541,38 @@ with the mirror load, so the node must clear whichever of the two needs more
 headroom. The budget of the critical path is
 
 \begin{equation}
-    V_{DD} \geq V_{ov,\mathrm{tail}} + V_{ov,\mathrm{in}} + \max\!\left(V_{ov,\mathrm{M9}},\, V_{ov,\mathrm{M12}}\right),
+    V_{DD} \geq V_{ov,\mathrm{tail}} + V_{ov,\mathrm{in}} + V_{GS,\mathrm{M9}},
     \label{eq:headroom_phase2}
 \end{equation}
 
 \noindent
 where $V_{ov,\mathrm{tail}}$ is the saturation voltage of the tail current
-mirror, $V_{ov,\mathrm{in}}$ that of the input device, and the last term is
-the larger of the saturation voltages of the mirror load $M_9$,
-$V_{ov,\mathrm{M9}}$, and of the cross-coupling device $M_{12}$ brought in from the
-complementary OTA, $V_{ov,\mathrm{M12}}$, since the two share the output node
-and the more demanding one sets the limit. Each of these saturation voltages is
-taken out of the supply before any output swing is left over. The basic
-mirror-OTA stack already spends two of them, and the cross-coupling adds the
-third through the maximum term, so at $V_{DD} = 0.8$~V the remaining headroom is
-not enough to hold the output device in saturation while the output swings to
-the rail. No operating point kept all active devices in saturation over the
-intended input range, and the architecture could not function correctly. This
-shows up directly in the DC behaviour of the stage. Figure~\ref{fig:phase2_headroom}
-plots the simulated DC response, and the output cannot reach $V_{DD}$,
-saturating well short of the upper rail. That ceiling is the signature of
-equation~\eqref{eq:headroom_phase2}. With the supply fixed at $0.8$~V, the
-stacked saturation voltages, and in particular the extra one the cross-coupling
-adds through the maximum term, leave no room for the output to reach the rail
-regardless of how the transistors are sized. The argument needs no specific
-device parameters, only the count of stacked saturation voltages against the
-available $0.8$~V.
+mirror, $V_{ov,\mathrm{in}}$ that of the input device, and $V_{GS,\mathrm{M9}}$
+the gate-to-source voltage of the diode-connected mirror device $M_9$. The
+output node sits at the drain of $M_9$, whose voltage is set by the more
+demanding of $M_9$ and $M_{10}$. Being diode-connected, $M_9$ holds its drain at
+a full gate-to-source voltage, $V_{DS,\mathrm{M9}} = V_{GS,\mathrm{M9}}$, while
+$M_{10}$ only needs its drain to clear $V_{th,\mathrm{M12}} - V_{th,\mathrm{M10}}$,
+a much smaller value since its gate sits at the cross-coupling voltage
+$V_{GS,\mathrm{M12}}$. The diode-connected $M_9$ therefore sets the node, and the
+budget carries its full gate-to-source voltage.
+
+At $0.8$~V this complementary dual-input stage did not function correctly.
+Figure~\ref{fig:phase2_headroom} plots its simulated DC response, where the
+complementary outputs and the internal nodes never reach the supply rails and
+the transfer is visibly non-linear.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.95\textwidth]{figures/phase2.pdf}
-    \caption{Simulated DC response of the second-architecture stage. The complementary outputs (out\_nmos, out\_pmos) and the internal node voltages never reach the supply rails and the transfer is visibly non-linear, the headroom shortfall predicted by equation~\eqref{eq:headroom_phase2} at the $0.8$~V supply.}
+    \caption{Simulated DC response of the second-architecture stage at the $0.8$~V supply. The complementary outputs (out\_nmos, out\_pmos) and the internal node voltages never reach the supply rails and the transfer is visibly non-linear, so the stage does not function correctly.}
     \label{fig:phase2_headroom}
 \end{figure}
 
-Part of the lost headroom could be recovered at the tail of the OTAs. The
-conventional tail current source was replaced with the low-voltage current
-mirror described in Razavi's book~\cite{razavi}, which needs less voltage
-across the mirror branch because it removes one stacked gate-to-source drop
-from the path, at the price of a more complex bias network.
+The tail current of the OTAs is supplied by the low-voltage cascode current
+mirror described in Razavi's book~\cite{razavi}, which holds an accurate output
+current while taking the least possible voltage across the mirror branch, one
+stacked gate-to-source drop less than a plain cascode.
 
 Figure~\ref{fig:lv_current_mirror} shows this mirror. The reference current
 $I_1$ flows into the left branch, where $M_1$ is the reference mirror device and
@@ -596,30 +589,39 @@ headroom~\cite{razavi}. The low-voltage version sets $V_b$ about one threshold
 lower, so $A$ and $B$ sit at roughly a single overdrive,
 $V_{DS} \approx V_{GS} - V_{TH}$, the smallest value that still keeps $M_1$ and
 $M_2$ in saturation. The accurate copy survives because $A$ and $B$ stay equal,
-while the headroom taken at the tail drops to about two overdrives and the
-threshold that a plain cascode wastes is recovered~\cite{razavi}. This is the
-saving the second architecture used to claw back part of its lost headroom.
+while the voltage taken by the tail drops to about two overdrives and the
+threshold that a plain cascode wastes is saved.
+
+Following the low-voltage cascode of Razavi~\cite{razavi}, the bias has to be
+$V_b = V_{GS,0} + (V_{GS,1} - V_{TH,1})$, one gate-to-source voltage plus one
+overdrive. This level places the mirror device $M_1$ at the edge of saturation
+while keeping the cascode $M_0$ saturated, which holds only if the overdrive of
+$M_0$ stays below $V_{TH,1}$, so $M_0$ is sized accordingly. The bias is produced
+by the branch of $M_6$ and $M_7$, where the diode-connected $M_7$ supplies the
+gate-to-source voltage and $M_6$ adds the overdrive, giving
+$V_b = V_{GS,\mathrm{M7}} + V_{ov,\mathrm{M6}}$.
+
+The sizing makes the generator track the main mirror. $M_0$ and $M_3$ share the
+same channel length, with widths of $1$ and $20$ units. $M_1$ and $M_2$ share a
+channel length of five times the minimum, and $M_2$ has the same width as $M_3$.
+The generator follows the branch it copies, with $M_7$ taking the channel length
+of $M_0$ and $M_6$ that of $M_1$.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth]{figures/low_voltage_current_mirror.pdf}
-    \caption{Low-voltage cascode current mirror used at the tail of the OTAs, after Razavi~\cite{razavi}. The reference current $I_1$ feeds the $M_0$--$M_1$ branch and the output branch $M_2$--$M_3$ carries $I_\mathrm{out}$. The cascode devices $M_0$ and $M_3$, biased by $V_b$, hold the drains of the mirror devices, nodes $A$ and $B$, at equal voltage, so the current copies accurately while each node sits at only about one overdrive above ground.}
+    \caption{Low-voltage cascode current mirror used at the tail of the OTAs, after Razavi~\cite{razavi}. The reference current $I_1$ feeds the $M_0$-$M_1$ branch and the output branch $M_2$-$M_3$ carries $I_\mathrm{out}$. The cascode devices $M_0$ and $M_3$, biased by $V_b$, hold the drains of the mirror devices, nodes $A$ and $B$, at equal voltage, so the current copies accurately while each node sits at only about one overdrive above ground. The bias $V_b$ is generated by the diode-connected $M_7$ together with $M_6$.}
     \label{fig:lv_current_mirror}
 \end{figure}
 
-The change helped,
-but not enough. The combined voltage requirements of the differential input
-pair, the low-voltage tail mirror, the mirror loads and the cross-coupled
-output stage still exceeded the available supply.
-
-No feasible bias point could be identified that simultaneously maintained all
-transistors within their intended operating regions while preserving the
-desired dynamic-range extension mechanism. What this architecture showed is that the
-current-mirror implementation of the rail-to-rail concept cost too much
-headroom at $0.8~\mathrm{V}$. The concept itself survived, along with the
-low-voltage tail mirror. The search for a rail-to-rail input stage therefore
-continued, first through a bulk-driven amplifier and then through the
-five-transistor OTA that was finally adopted.
+The low-voltage tail mirror works as intended and is kept in the architectures
+that follow. The complementary dual-input stage built around it, however, did
+not function at $0.8$~V, as the DC response of Figure~\ref{fig:phase2_headroom}
+shows. Its cross-coupled current-mirror implementation also carries a large
+device count without buying any headroom over a simpler stage. The rail-to-rail
+concept and the low-voltage tail mirror were therefore kept, while the input
+stage itself was simplified, first through a bulk-driven amplifier and then
+through the five-transistor OTA that was finally adopted.
 
 
 
@@ -675,7 +677,7 @@ where $\alpha$ sets the strength of the positive feedback from the cross-coupled
 \noindent
 where $g_{mb1,2}$ is the bulk transconductance of the input devices $M_1$ and $M_2$. The factor $1/(1-\alpha)$ is the boost provided by the local positive feedback, and it lifts the weak bulk transconductance, which is roughly $60$ to $90\%$ smaller than the gate transconductance for the same bias and sizing~\cite{ballo2022}, back to a useful level. The feedback has to stay below unity, so $\alpha < 1$, and it is kept comfortably under it, around $0.9$, to leave a margin against process mismatch and to keep the stage from latching.
 
-Only the input stage changes here. The part that makes the decision, the bank of ratioed current comparators, stays the same. The bulk-driven amplifier is tried purely as a rail-to-rail replacement for the input follower, and the current comparison behind it is exactly the one used in the first architecture, the same ratioed current comparators with the same dimensions as those of Section~\ref{sec:cmf_characterisation}. Keeping the current comparators fixed makes the comparison fair, since any change in behaviour is then due to the input stage alone. 
+Only the input stage changes here. The part that makes the decision, the bank of ratioed current comparators, stays the same. The bulk-driven amplifier is tried purely as a rail-to-rail replacement for the input follower, and the current comparison behind it is exactly the one used in the first architecture, the same ratioed current comparators with the same dimensions as those of Section~\ref{sec:cmf_characterisation}. Keeping the current comparators fixed makes the comparison fair, since any change in behaviour is then due to the input stage alone. The conversion of the differential output current into the thermometer code is the same current-to-code converter as the first architecture, so each node's threshold follows the mirror ratios of equation~\eqref{eq:vth_cmf} unchanged.
 \paragraph{}
 \paragraph{}
 \paragraph{}
@@ -708,7 +710,7 @@ The same corner sensitivity appears in the time domain. Figure~\ref{fig:hyst_cor
 \paragraph{}
 \paragraph{}
 \paragraph{}
-For that reason the bulk-driven amplifier was set aside despite its attractive nominal behaviour, and the design moved to the more robust five-transistor OTA of the next section, trading some of the rail-to-rail reach of the bulk-driven input for predictable, corner-stable operation.
+For that reason, the bulk-driven amplifier was set aside despite its attractive nominal behaviour, and the design moved to the more robust five-transistor OTA of the next section, trading some of the rail-to-rail reach of the bulk-driven input for predictable, corner-stable operation.
 
 \section{Final Architecture: The Complementary Five-Transistor OTA}
 
@@ -729,15 +731,15 @@ This final architecture kept the rail-to-rail objective of the second architectu
 \paragraph{}
 \paragraph{}
 
-The final architecture keeps a single current-mirror active load per pair, which removes the extra stacked devices of the second architecture. For its PMOS-input OTA the critical-path budget is
+The final architecture keeps a single current-mirror active load per pair. Its critical-path budget is
 
 \begin{equation}
-    V_{DD} \geq V_{ov,\mathrm{tail}} + V_{ov,\mathrm{in}} + \max\!\left(V_{ov,\mathrm{M7}},\, V_{GS,20}\right),
+    V_{DD} \geq V_{ov,\mathrm{tail}} + V_{ov,\mathrm{in}} + V_{GS,20},
     \label{eq:headroom_phase3}
 \end{equation}
 
 \noindent
-where $V_{ov,\mathrm{tail}}$ is the tail saturation voltage, $V_{ov,\mathrm{in}}$ that of the input device, $V_{ov,\mathrm{M7}}$ the saturation voltage of $M_7$, and $V_{GS,20}$ the gate-to-source voltage of the mirror device of multiplicity $20$. This last device dominates the maximum and sets the output-node requirement. This budget and that of the second architecture in equation~\eqref{eq:headroom_phase2} share the tail and input-device terms and differ only in the device that sets the output-node voltage.
+where $V_{ov,\mathrm{tail}}$ is the tail saturation voltage, $V_{ov,\mathrm{in}}$ that of the input device, and $V_{GS,20}$ the gate-to-source voltage of the mirror device of multiplicity $20$, which sets the output node just as the diode-connected $M_9$ did in the second architecture. This budget is identical in form to equation~\eqref{eq:headroom_phase2}, so the two architectures demand the same headroom. The move to the five-transistor OTA was therefore not made to gain headroom. It was made to simplify the current-mirror OTA into the smallest single-stage topology that meets the same budget, cutting the transistor count and with it the static power, while removing the cross-coupling and the extra mirror loads of the second architecture.
 
 The tail bias carries over a result from the earlier architectures. Both OTAs draw their tail current through the low-voltage current mirror from Razavi's book~\cite{razavi}, the same structure tested in the second architecture, because even this reduced topology operates close to the headroom limit in contrast to a conventional tail mirror which requires higher voltage headroom.
 
@@ -829,7 +831,7 @@ A five-transistor OTA has a single high-impedance node, its output, so in unity-
     \includegraphics[width=0.85\textwidth]{figures/bode_plot.pdf}
     \caption{Open-loop magnitude and phase response of the complementary five-transistor OTA, showing the single dominant pole and the wide phase margin.}
     \label{fig:bode_async}
-\end{figure} That high-margin band is the same $0.1$--$0.7$~V window over which the input stage is most linear in Section~\ref{subsec:5t_ota}. On either side of that band, one of the two complementary input pairs always keeps conducting, so the follower stays stable and the converter resolves crossings all the way to both rails. The cost is only a milder loss of follower linearity in the outer margins of the swing, not a loss of operation.
+\end{figure} That high-margin band is the same $0.1$-$0.7$~V window over which the input stage is most linear in Section~\ref{subsec:5t_ota}. On either side of that band, one of the two complementary input pairs always keeps conducting, so the follower stays stable and the converter resolves crossings all the way to both rails. The cost is only a milder loss of follower linearity in the outer margins of the swing, not a loss of operation.
 \paragraph{}
 \paragraph{}
 \paragraph{}
@@ -855,7 +857,7 @@ r=\frac{(W/L)_p}{(W/L)_n}
 
 is the ratio between the widths of the two competing output devices, the equal channel lengths cancelling.
 
-The form follows from the balance condition itself. At $V_M$ the gate and the output sit at the same voltage and both devices are in saturation carrying equal current, so the square-law current of the NMOS sink, with gate-source voltage $V_M$, equals that of the PMOS source, with source-gate voltage $V_\mathrm{DD}-V_M$,
+The form follows from the balance condition itself. At $V_M$ the gate and the output sit at the same voltage and both devices are in saturation carrying equal current. The NMOS source is grounded and the PMOS source is at $V_\mathrm{DD}$, so the common gate voltage $V_M$ is the gate-source voltage of the NMOS, $V_{GS,n} = V_M$, while the PMOS sees $V_{SG,p} = V_\mathrm{DD} - V_M$. Equating the two square-law currents with these voltages,
 
 \[
 \beta_n\,(V_M - V_{Tn})^2 = \beta_p\,(V_\mathrm{DD} - V_M - |V_{Tp}|)^2,
@@ -875,7 +877,7 @@ The sizing strategy is illustrated here with the reduced five-slicer bank introd
 
 As the input voltage increases from ground toward $V_\mathrm{DD}$, the slicers cross their trip points one by one, the highest-ratio slicer first. At $V_\mathrm{in}=0.4$~V the high-ratio slicers (out$_4$, out$_3$) have already switched while the low-ratio ones (out$_1$, out$_0$) have not, and the slicer with the central ratio $r=1$ sits exactly at its trip point. The resulting thermometer code becomes $11?00$, reproducing the same behaviour previously observed in the CMF ADC architecture.
 
-The implemented converter applies the same strategy to its full bank of fifteen slicers. Each slicer receives a distinct ratio, listed in Table~\ref{tab:slicer_ratios}. The fifteen ratios increase monotonically from $3/5$ for out$_0$ to $23/14$ for out$_{14}$, and their numerators and denominators each sum to $166$. Since the numerator of each ratio is the PMOS width of that slicer and the denominator its NMOS width, the equal channel lengths cancelling, this equality means the bank uses the same total PMOS and NMOS width, keeping its sizing balanced. The ratios are tuned on the DC response of the follower-plus-slicer chain, exercised across the full $0$--$0.8$~V rail, so that each output crosses the $0.4$~V logic level at a distinct input voltage, the fifteen crossings spreading from $0.75$~V for out$_0$ down to $0.05$~V for out$_{14}$, symmetric about the $0.4$~V mid-level. In transient operation the usable input window narrows to the $0.1$--$0.7$~V range of the follower (Section~\ref{subsec:5t_ota}), within which the two extreme crossings move to $0.15$~V and $0.65$~V and the bank delivers the 4-bit quantisation used throughout the results. All the static-linearity and dynamic results reported in Chapter~\ref{chap:Benchmarking} use this $0.1$--$0.7$~V transient window and the $37.5$~mV LSB it implies, the $0.05$--$0.75$~V figures describing only the DC sizing. Table~\ref{tab:bands} summarises the two conditions side by side.
+The implemented converter applies the same strategy to its full bank of fifteen slicers. Each slicer receives a distinct ratio, listed in Table~\ref{tab:slicer_ratios}. The fifteen ratios increase monotonically from $3/5$ for out$_0$ to $23/14$ for out$_{14}$, and their numerators and denominators each sum to $166$. Since the numerator of each ratio is the PMOS width of that slicer and the denominator its NMOS width, the equal channel lengths cancelling, this equality means the bank uses the same total PMOS and NMOS width, keeping its sizing balanced. The ratios are tuned on the DC response of the follower-plus-slicer chain, exercised across the full $0$-$0.8$~V rail, so that each output crosses the $0.4$~V logic level at a distinct input voltage, the fifteen crossings spreading from $0.75$~V for out$_0$ down to $0.05$~V for out$_{14}$, symmetric about the $0.4$~V mid-level. In transient operation the usable input window narrows to the $0.1$-$0.7$~V range of the follower (Section~\ref{subsec:5t_ota}), within which the two extreme crossings move to $0.15$~V and $0.65$~V and the bank delivers the 4-bit quantisation used throughout the results. All the static-linearity and dynamic results reported in Chapter~\ref{chap:Benchmarking} use this $0.1$-$0.7$~V transient window and the $37.5$~mV LSB it implies, the $0.05$-$0.75$~V figures describing only the DC sizing. Table~\ref{tab:bands} summarises the two conditions side by side.
 
 \begin{table}[htbp]
     \centering
@@ -886,11 +888,11 @@ The implemented converter applies the same strategy to its full bank of fifteen 
         \toprule
         \textbf{Quantity} & \textbf{DC sizing} & \textbf{Transient operation} \\
         \midrule
-        Usable input window            & $0$--$0.8$~V  & $0.1$--$0.7$~V \\
+        Usable input window            & $0$-$0.8$~V  & $0.1$-$0.7$~V \\
         Lowest trip point (out$_{14}$) & $0.05$~V      & $0.15$~V \\
         Highest trip point (out$_0$)   & $0.75$~V      & $0.65$~V \\
         Logic reference level          & $0.4$~V       & $0.4$~V \\
-        LSB used for results           & ---           & $37.5$~mV \\
+        LSB used for results           & -           & $37.5$~mV \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -926,9 +928,9 @@ The OTA configured as a voltage follower continuously tracks the input signal an
 The collection of slicer outputs forms an asynchronous thermometer code whose transitions directly represent input activity. Whenever one or more thresholds are crossed, a digital event is naturally generated without requiring any external timing reference.
 
 
-This event driven operation establishes a direct relationship between signal activity and switching activity inside the converter. During intervals where the input remains constant, the slicers remain static and dynamic power consumption approaches zero. Conversely, periods of rapid input variation automatically increase event generation frequency and conversion activity.
+This event-driven operation establishes a direct relationship between signal activity and switching activity inside the converter. During intervals where the input remains constant, the slicers remain static and dynamic power consumption approaches zero. Conversely, periods of rapid input variation automatically increase event generation frequency and conversion activity.
 
-Compared with previous current mirror based implementations, this architecture introduces a clear separation between input buffering and threshold generation. The OTA is responsible only for reproducing the input voltage, while threshold definition is achieved entirely through transistor sizing in the slicer stage.
+Compared with previous current mirror-based implementations, this architecture introduces a clear separation between input buffering and threshold generation. The OTA is responsible only for reproducing the input voltage, while threshold definition is achieved entirely through transistor sizing in the slicer stage.
 
 This separation simplifies the design procedure, makes the circuit robust against saturation and removes the extra voltage headroom requirements. The result is a compact, scalable architecture suited to low-voltage asynchronous Flash conversion.
 
@@ -1062,7 +1064,7 @@ This chapter established the architecture of the proposed asynchronous Flash ADC
 
 The structural development progressed through a sequence of architectures. A current-mirror Flash configuration adopted from the literature came first. A current-mirror implementation of the complementary dual-input extension followed, rejected for exceeding the voltage headroom available at $0.8$~V. A bulk-driven amplifier was then tried for its rail-to-rail reach at low voltage but discarded as too sensitive to process corners. The final voltage-mode solution uses a complementary pair of five-transistor OTAs configured as a unity-gain follower, driving a bank of ratioed CMOS slicers whose switching thresholds are set purely by transistor sizing. The event-generation network described in Section~\ref{sec:async_logic} completes the conversion chain, detecting the transitions of the thermometer outputs and encoding them combinationally into the binary output word, with no clock involved at any point in the signal path.
 
-The results presented along the way told a consistent story. The first approach validated the conversion principle but not the input range. The second could not be biased within the supply. The third recovers the headroom (equation~\eqref{eq:headroom_phase3}), is linear at the typical corner, and loses its linearity at all four non-typical process corners (Table~\ref{tab:untrimmed_corners}). That last result is the brief for Section~\ref{chap:trimming}.
+The results presented along the way told a consistent story. The first approach validated the conversion principle but not the input range. The second did not function at the supply. The final, simpler five-transistor OTA reaches the same headroom with fewer transistors (equation~\eqref{eq:headroom_phase3}), is linear at the typical corner, and loses its linearity at all four non-typical process corners (Table~\ref{tab:untrimmed_corners}). That last result is the brief for Section~\ref{chap:trimming}.
 
 Finally, the analytical models bounded the design space. The maximum input frequency is set not by a Nyquist limit but by the slew rate constraint $SR_{ADC}$, in which the propagation delay $\tau_{conv}$ determines the onset of slope overload. The power analysis showed that dynamic consumption grows linearly with the input frequency $f_{in}$ but exponentially with the nominal resolution $N$. The same models quantify the cost of transient noise, degraded $SNR$ and $SNDR$, bubble errors, and redundant conversion cycles that raise the power while the effective resolution ($ENOB$) falls, to the detriment of the $FoM_W$. These results are the baseline for the simulation setup and the performance evaluation of the following chapters.
 
