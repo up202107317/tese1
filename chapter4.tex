@@ -143,8 +143,3 @@ A $\times$24 final buffer is a reasonable and representative choice for modellin
 
 The complete clock path used in simulation is therefore the ring oscillator, followed by the buffer chain ($\times$2 fanout per stage), the $\times$24 output buffer and, finally, the comparator array.
 
-%                      -
-\subsection{Summary}
-%                      -
-
-This section fixed the reference against which the proposed converter will be judged, a 4-bit synchronous Flash ADC from \cite{flashadc_ref}, re-implemented in 16~nm at $0.8$~V. The reference shares the Flash topology, the resolution (fifteen comparison elements) and the low-power orientation of the asynchronous design, and differs from it in the property under study, the global clock, plus one declared asymmetry in the input range. Its comparators are StrongARM latches, clocked through a ring oscillator and a tapered buffer chain whose $\times 24$ output stage models a realistic clock route. The power measurement methodology applied to this reference, together with its simulated performance figures, is presented alongside the results of the proposed asynchronous design in Chapter~\ref{chap:Benchmarking}, so that the two converters are characterised and compared within a single framework. The asynchronous converter it benchmarks is developed in Chapter~\ref{chap:async}.

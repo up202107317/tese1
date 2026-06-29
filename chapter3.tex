@@ -718,18 +718,14 @@ For that reason, the bulk-driven amplifier was set aside despite its attractive 
 \label{subsec:5t_ota}
 
 This final architecture kept the rail-to-rail objective of the second architecture and rebuilt its implementation around the classical five-transistor OTA. The complementary input is preserved. Two five-transistor OTAs operate in parallel on the same input, one built around an NMOS differential pair and the other around a PMOS differential pair, so the usable input range is extended in the same way as before. The load structure is what changes. Each pair is loaded by a single active current mirror, in which one device operates in diode connection and sets the gate voltage of the mirrored branch. This is the conventional active load that defines the five-transistor OTA~\cite{razavi}. Figure~\ref{fig:phase3_circuit} shows the circuit with the role of each transistor annotated.
-\paragraph{}
-\paragraph{}
-\paragraph{}
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.65\textwidth]{figures/ota_cm_4_architecture.pdf}
     \caption{Final architecture, a complementary pair of five-transistor OTAs with the function of each transistor annotated, including the low-voltage tail mirrors and the current-mirror active loads.}
     \label{fig:phase3_circuit}
 \end{figure}
-\paragraph{}
-\paragraph{}
-\paragraph{}
+
 
 The final architecture keeps a single current-mirror active load per pair. Its critical-path budget is
 

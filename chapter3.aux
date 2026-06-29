@@ -1,160 +1,154 @@
 \relax 
 \providecommand{\transparent@use}[1]{}
 \providecommand\hyper@newdestlabel[2]{}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Proposed Asynchronous Flash ADC Design}{39}{chapter.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Proposed Asynchronous Flash ADC Design}{36}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap:async}{{3}{39}{Proposed Asynchronous Flash ADC Design}{chapter.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Design Specifications and Terminology}{39}{section.3.1}\protected@file@percent }
-\newlabel{sec:design_specs}{{3.1}{39}{Design Specifications and Terminology}{section.3.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Architectural Evolution and Methodology}{40}{section.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}First Architecture: The Baseline Current-Mirror OTA Flash Configuration}{40}{section.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Operating Principle and Core Topology}{40}{subsection.3.3.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Operating principle of the current-mirror Flash ADC (CMF-ADC): (a) equilibrium operation, (b) signal operation, and (c) current-to-code conversion with asymmetric mirror ratios.}}{41}{figure.caption.87}\protected@file@percent }
-\newlabel{fig:cmf_adc_op}{{3.1}{41}{Operating principle of the current-mirror Flash ADC (CMF-ADC): (a) equilibrium operation, (b) signal operation, and (c) current-to-code conversion with asymmetric mirror ratios}{figure.caption.87}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1.1}Transconductance Cell}{41}{subsubsection.3.3.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Equilibrium operation.}{41}{section*.88}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Signal operation.}{41}{section*.89}\protected@file@percent }
-\newlabel{eq:branch_currents}{{3.1}{42}{Signal operation}{equation.3.1}{}}
-\newlabel{eq:Gm_cmf}{{3.2}{42}{Signal operation}{equation.3.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1.2}Current-to-Code Converter and Threshold Generation}{42}{subsubsection.3.3.1.2}\protected@file@percent }
-\newlabel{eq:vth_cmf}{{3.3}{42}{Current-to-Code Converter and Threshold Generation}{equation.3.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1.3}Adaptation to an Asynchronous Flash ADC}{42}{subsubsection.3.3.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Reference Implementation and Mirror Ratio Assignment}{43}{subsection.3.3.2}\protected@file@percent }
-\newlabel{sec:cmf_characterisation}{{3.3.2}{43}{Reference Implementation and Mirror Ratio Assignment}{subsection.3.3.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Transistor-level schematic of the first architecture, the current-mirror Flash ADC, showing the differential input pair driven by $V_\mathrm  {ref}$ and $V_\mathrm  {in}$, the tail current source $I_B$ and the five current-mirror output branches whose PMOS and NMOS width ratios set the thermometer thresholds $C[4]$ down to $C[0]$.}}{44}{figure.caption.90}\protected@file@percent }
-\newlabel{fig:cmf_schematic}{{3.2}{44}{Transistor-level schematic of the first architecture, the current-mirror Flash ADC, showing the differential input pair driven by $V_\mathrm {ref}$ and $V_\mathrm {in}$, the tail current source $I_B$ and the five current-mirror output branches whose PMOS and NMOS width ratios set the thermometer thresholds $C[4]$ down to $C[0]$}{figure.caption.90}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Small-Signal Behaviour of the Current-Mirror OTA}{44}{subsection.3.3.3}\protected@file@percent }
-\newlabel{subsec:cm_ota_analysis}{{3.3.3}{44}{Small-Signal Behaviour of the Current-Mirror OTA}{subsection.3.3.3}{}}
-\newlabel{eq:gm_cm}{{3.4}{44}{Small-Signal Behaviour of the Current-Mirror OTA}{equation.3.4}{}}
-\newlabel{eq:rout_cm}{{3.5}{45}{Small-Signal Behaviour of the Current-Mirror OTA}{equation.3.5}{}}
-\newlabel{eq:freq_cm}{{3.6}{45}{Small-Signal Behaviour of the Current-Mirror OTA}{equation.3.6}{}}
-\newlabel{eq:sr_cm}{{3.7}{45}{Small-Signal Behaviour of the Current-Mirror OTA}{equation.3.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.4}Current Comparator Selection}{45}{subsection.3.3.4}\protected@file@percent }
-\newlabel{subsec:comp_selection}{{3.3.4}{45}{Current Comparator Selection}{subsection.3.3.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Comparison of the simulated current comparator topologies.}}{46}{table.caption.91}\protected@file@percent }
-\newlabel{tab:comp_comparison}{{3.1}{46}{Comparison of the simulated current comparator topologies}{table.caption.91}{}}
-\newlabel{fig:current_mirror}{{3.3a}{47}{Current-mirror}{figure.caption.92}{}}
-\newlabel{sub@fig:current_mirror}{{a}{47}{Current-mirror}{figure.caption.92}{}}
-\newlabel{fig:traff}{{3.3b}{47}{Traff}{figure.caption.92}{}}
-\newlabel{sub@fig:traff}{{b}{47}{Traff}{figure.caption.92}{}}
-\newlabel{fig:lu_chen}{{3.3c}{47}{Lu Chen}{figure.caption.92}{}}
-\newlabel{sub@fig:lu_chen}{{c}{47}{Lu Chen}{figure.caption.92}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Transient response of the simulated current comparators to the same input current step, showing the output voltage together with the input and reference currents against time, from which the propagation delay is measured: (a) current-mirror, (b) Traff, (c) Lu Chen. The remaining three topologies are shown in Figure~\ref {fig:comp_operation_b}.}}{47}{figure.caption.92}\protected@file@percent }
-\newlabel{fig:comp_operation}{{3.3}{47}{Transient response of the simulated current comparators to the same input current step, showing the output voltage together with the input and reference currents against time, from which the propagation delay is measured: (a) current-mirror, (b) Traff, (c) Lu Chen. The remaining three topologies are shown in Figure~\ref {fig:comp_operation_b}}{figure.caption.92}{}}
-\newlabel{fig:hysteresis}{{3.4a}{48}{Hysteresis}{figure.caption.93}{}}
-\newlabel{sub@fig:hysteresis}{{a}{48}{Hysteresis}{figure.caption.93}{}}
-\newlabel{fig:min_kim}{{3.4b}{48}{Min and Kim}{figure.caption.93}{}}
-\newlabel{sub@fig:min_kim}{{b}{48}{Min and Kim}{figure.caption.93}{}}
-\newlabel{fig:cc_ii}{{3.4c}{48}{CC-II based}{figure.caption.93}{}}
-\newlabel{sub@fig:cc_ii}{{c}{48}{CC-II based}{figure.caption.93}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Transient response of the simulated current comparators, continued from Figure~\ref {fig:comp_operation}: (d) hysteresis, (e) Min and Kim, (f) CC-II based.}}{48}{figure.caption.93}\protected@file@percent }
-\newlabel{fig:comp_operation_b}{{3.4}{48}{Transient response of the simulated current comparators, continued from Figure~\ref {fig:comp_operation}: (d) hysteresis, (e) Min and Kim, (f) CC-II based}{figure.caption.93}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.5}Results of the First Approach}{49}{subsection.3.3.5}\protected@file@percent }
-\newlabel{subsec:phase1_results}{{3.3.5}{49}{Results of the First Approach}{subsection.3.3.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Simulated operation of the first architecture. The five comparator outputs (top) follow a trapezoidal input crossing the $0.4$~V reference (bottom). The rising crossing is tracked sharply, but the falling transition lags well behind the input crossing, the slow-recovery asymmetry of the high-impedance current-mirror node.}}{49}{figure.caption.94}\protected@file@percent }
-\newlabel{fig:phase1_results}{{3.5}{49}{Simulated operation of the first architecture. The five comparator outputs (top) follow a trapezoidal input crossing the $0.4$~V reference (bottom). The rising crossing is tracked sharply, but the falling transition lags well behind the input crossing, the slow-recovery asymmetry of the high-impedance current-mirror node}{figure.caption.94}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Second Architecture: The Complementary Dual-Input Flash Configuration}{50}{section.3.4}\protected@file@percent }
-\newlabel{sec:second_arch}{{3.4}{50}{Second Architecture: The Complementary Dual-Input Flash Configuration}{section.3.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Motivation for Wide Input Common-Mode Range Extension}{50}{subsection.3.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Rail-to-Rail Architecture Evaluation and Voltage Headroom Limitations}{50}{subsection.3.4.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Complementary dual-input current-mirror OTA of the second approach, with the function of each transistor annotated: NMOS and PMOS input pairs, tail sources, mirror loads and cross-coupled output branches.}}{51}{figure.caption.95}\protected@file@percent }
-\newlabel{fig:phase2_circuit}{{3.6}{51}{Complementary dual-input current-mirror OTA of the second approach, with the function of each transistor annotated: NMOS and PMOS input pairs, tail sources, mirror loads and cross-coupled output branches}{figure.caption.95}{}}
-\newlabel{eq:headroom_phase2}{{3.8}{52}{Rail-to-Rail Architecture Evaluation and Voltage Headroom Limitations}{equation.3.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Simulated DC response of the second-architecture stage at the $0.8$~V supply. The complementary outputs (out\_nmos, out\_pmos) and the internal node voltages never reach the supply rails and the transfer is visibly non-linear, so the stage does not function correctly.}}{53}{figure.caption.96}\protected@file@percent }
-\newlabel{fig:phase2_headroom}{{3.7}{53}{Simulated DC response of the second-architecture stage at the $0.8$~V supply. The complementary outputs (out\_nmos, out\_pmos) and the internal node voltages never reach the supply rails and the transfer is visibly non-linear, so the stage does not function correctly}{figure.caption.96}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Low-voltage cascode current mirror used at the tail of the OTAs, after Razavi~\blx@tocontentsinit {0}\cite {razavi}. The reference current $I_1$ feeds the $M_0$-$M_1$ branch and the output branch $M_2$-$M_3$ carries $I_\mathrm  {out}$. The cascode devices $M_0$ and $M_3$, biased by $V_b$, hold the drains of the mirror devices, nodes $A$ and $B$, at equal voltage, so the current copies accurately while each node sits at only about one overdrive above ground. The bias $V_b$ is generated by the diode-connected $M_7$ together with $M_6$.}}{54}{figure.caption.97}\protected@file@percent }
-\newlabel{fig:lv_current_mirror}{{3.8}{54}{Low-voltage cascode current mirror used at the tail of the OTAs, after Razavi~\cite {razavi}. The reference current $I_1$ feeds the $M_0$-$M_1$ branch and the output branch $M_2$-$M_3$ carries $I_\mathrm {out}$. The cascode devices $M_0$ and $M_3$, biased by $V_b$, hold the drains of the mirror devices, nodes $A$ and $B$, at equal voltage, so the current copies accurately while each node sits at only about one overdrive above ground. The bias $V_b$ is generated by the diode-connected $M_7$ together with $M_6$}{figure.caption.97}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}A Bulk-Driven Alternative}{54}{section.3.5}\protected@file@percent }
-\newlabel{sec:bulk_driven}{{3.5}{54}{A Bulk-Driven Alternative}{section.3.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Bulk-driven OTA of the third architecture~\blx@tocontentsinit {0}\cite {ballo2022}, with the function of each transistor annotated, the non-tailed bulk-driven input pair $M_1$, $M_2$, the current-mirror loads and the cross-coupled load $M_7$, $M_8$ that provides the local positive feedback. The circled points 1 and 2 mark the two differential output nodes and point 3 the supply-side node of the input pair.}}{55}{figure.caption.98}\protected@file@percent }
-\newlabel{fig:bulk_driven_schematic}{{3.9}{55}{Bulk-driven OTA of the third architecture~\cite {ballo2022}, with the function of each transistor annotated, the non-tailed bulk-driven input pair $M_1$, $M_2$, the current-mirror loads and the cross-coupled load $M_7$, $M_8$ that provides the local positive feedback. The circled points 1 and 2 mark the two differential output nodes and point 3 the supply-side node of the input pair}{figure.caption.98}{}}
-\newlabel{eq:bulk_alpha_beta}{{3.9}{55}{A Bulk-Driven Alternative}{equation.3.9}{}}
-\newlabel{eq:bulk_gm}{{3.10}{55}{A Bulk-Driven Alternative}{equation.3.10}{}}
-\@writefile{toc}{\contentsline {paragraph}{}{56}{section*.99}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{56}{section*.100}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Response of the bulk-driven OTA follower across the four process corners (FF, FS, SF, SS). The output waveform diverges markedly between corners, most of all near the lower rail, the sensitivity that led to discarding the architecture.}}{56}{figure.caption.102}\protected@file@percent }
-\newlabel{fig:bulk_driven_response}{{3.10}{56}{Response of the bulk-driven OTA follower across the four process corners (FF, FS, SF, SS). The output waveform diverges markedly between corners, most of all near the lower rail, the sensitivity that led to discarding the architecture}{figure.caption.102}{}}
-\@writefile{toc}{\contentsline {paragraph}{}{56}{figure.caption.102}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{56}{section*.103}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{56}{section*.104}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{57}{section*.105}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{57}{section*.106}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{57}{section*.107}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Input-referred hysteresis of the bulk-driven OTA follower at the four process corners, measured under the $9$~MHz full-scale sinusoid, with the worst case marked at the slow SS corner.}}{57}{figure.caption.109}\protected@file@percent }
-\newlabel{fig:hyst_corner}{{3.11}{57}{Input-referred hysteresis of the bulk-driven OTA follower at the four process corners, measured under the $9$~MHz full-scale sinusoid, with the worst case marked at the slow SS corner}{figure.caption.109}{}}
-\@writefile{toc}{\contentsline {paragraph}{}{57}{figure.caption.109}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{58}{section*.110}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{58}{section*.111}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{58}{section*.112}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}Final Architecture: The Complementary Five-Transistor OTA}{58}{section.3.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.1}Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{58}{subsection.3.6.1}\protected@file@percent }
-\newlabel{subsec:5t_ota}{{3.6.1}{58}{Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{subsection.3.6.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{}{58}{section*.113}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{58}{section*.114}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces Final architecture, a complementary pair of five-transistor OTAs with the function of each transistor annotated, including the low-voltage tail mirrors and the current-mirror active loads.}}{59}{figure.caption.116}\protected@file@percent }
-\newlabel{fig:phase3_circuit}{{3.12}{59}{Final architecture, a complementary pair of five-transistor OTAs with the function of each transistor annotated, including the low-voltage tail mirrors and the current-mirror active loads}{figure.caption.116}{}}
-\@writefile{toc}{\contentsline {paragraph}{}{59}{figure.caption.116}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{59}{section*.117}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{59}{section*.118}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{59}{section*.119}\protected@file@percent }
-\newlabel{eq:headroom_phase3}{{3.11}{59}{}{equation.3.11}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.2}Small-Signal Analysis of the Five-Transistor OTA}{60}{subsection.3.6.2}\protected@file@percent }
-\newlabel{subsec:5t_analysis}{{3.6.2}{60}{Small-Signal Analysis of the Five-Transistor OTA}{subsection.3.6.2}{}}
-\newlabel{eq:gm_5t}{{3.12}{60}{Small-Signal Analysis of the Five-Transistor OTA}{equation.3.12}{}}
-\newlabel{eq:freq_5t}{{3.13}{60}{Small-Signal Analysis of the Five-Transistor OTA}{equation.3.13}{}}
-\newlabel{eq:sr_5t}{{3.14}{60}{Small-Signal Analysis of the Five-Transistor OTA}{equation.3.14}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.3}Stability Without Frequency Compensation}{61}{subsection.3.6.3}\protected@file@percent }
-\newlabel{subsec:no_compensation}{{3.6.3}{61}{Stability Without Frequency Compensation}{subsection.3.6.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{}{61}{section*.120}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{61}{section*.121}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.13}{\ignorespaces Open-loop magnitude and phase response of the complementary five-transistor OTA, showing the single dominant pole and the wide phase margin.}}{62}{figure.caption.123}\protected@file@percent }
-\newlabel{fig:bode_async}{{3.13}{62}{Open-loop magnitude and phase response of the complementary five-transistor OTA, showing the single dominant pole and the wide phase margin}{figure.caption.123}{}}
-\@writefile{toc}{\contentsline {paragraph}{}{62}{figure.caption.123}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{62}{section*.124}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{62}{section*.125}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{62}{section*.126}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.4}Ratioed Output Slicers Design}{62}{subsection.3.6.4}\protected@file@percent }
-\newlabel{subsec:ratioed_slicers}{{3.6.4}{62}{Ratioed Output Slicers Design}{subsection.3.6.4}{}}
-\newlabel{eq:trip_point}{{3.15}{63}{Ratioed Output Slicers Design}{equation.3.15}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.5}Asynchronous Control Logic and Clockless Event Generation Network}{64}{subsection.3.6.5}\protected@file@percent }
-\newlabel{sec:async_logic}{{3.6.5}{64}{Asynchronous Control Logic and Clockless Event Generation Network}{subsection.3.6.5}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Decision thresholds of the slicer bank under the two operating conditions. The DC figures describe the sizing of the bank, while the transient figures describe operation and are used for all results.}}{65}{table.caption.127}\protected@file@percent }
-\newlabel{tab:bands}{{3.2}{65}{Decision thresholds of the slicer bank under the two operating conditions. The DC figures describe the sizing of the bank, while the transient figures describe operation and are used for all results}{table.caption.127}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces PMOS-to-NMOS sizing ratio $r$ of each of the fifteen slicers. The numerators and the denominators each sum to $166$.}}{65}{table.caption.128}\protected@file@percent }
-\newlabel{tab:slicer_ratios}{{3.3}{65}{PMOS-to-NMOS sizing ratio $r$ of each of the fifteen slicers. The numerators and the denominators each sum to $166$}{table.caption.128}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.6}Results at the Typical Corner and Across Process Corners}{66}{subsection.3.6.6}\protected@file@percent }
-\newlabel{subsec:phase3_results}{{3.6.6}{66}{Results at the Typical Corner and Across Process Corners}{subsection.3.6.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.14}{\ignorespaces DNL per code (left) and INL per transition (right) of the final architecture at the typical (TT) corner.}}{66}{figure.caption.129}\protected@file@percent }
-\newlabel{fig:dnl_inl_comparison}{{3.14}{66}{DNL per code (left) and INL per transition (right) of the final architecture at the typical (TT) corner}{figure.caption.129}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces Worst-case static linearity of the final architecture at the typical and the non-typical process corners, without trimming (values in LSB, measured on rising and falling ramps). The TT figures are read from the per-code DNL and INL of Figure~\ref {fig:dnl_inl_comparison}.}}{67}{table.caption.130}\protected@file@percent }
-\newlabel{tab:untrimmed_corners}{{3.4}{67}{Worst-case static linearity of the final architecture at the typical and the non-typical process corners, without trimming (values in LSB, measured on rising and falling ramps). The TT figures are read from the per-code DNL and INL of Figure~\ref {fig:dnl_inl_comparison}}{table.caption.130}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.7}Body Bias Trimming Strategy}{67}{section.3.7}\protected@file@percent }
-\newlabel{chap:trimming}{{3.7}{67}{Body Bias Trimming Strategy}{section.3.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.1}Choice of Body Biasing Among the Reviewed Techniques}{67}{subsection.3.7.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.2}Function of NMOS and PMOS Transistors Under Different Body Bias}{68}{subsection.3.7.2}\protected@file@percent }
-\newlabel{eq:body_effect_nmos}{{3.16}{68}{Function of NMOS and PMOS Transistors Under Different Body Bias}{equation.3.16}{}}
-\newlabel{eq:body_effect_pmos}{{3.17}{68}{Function of NMOS and PMOS Transistors Under Different Body Bias}{equation.3.17}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.3}Process Corner Dependence and Motivation for Trimming}{69}{subsection.3.7.3}\protected@file@percent }
-\newlabel{sec:corner_dependence}{{3.7.3}{69}{Process Corner Dependence and Motivation for Trimming}{subsection.3.7.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.4}Offline Trimming Strategy via Body Bias Adjustment}{69}{subsection.3.7.4}\protected@file@percent }
-\newlabel{sec:offline_strategy}{{3.7.4}{69}{Offline Trimming Strategy via Body Bias Adjustment}{subsection.3.7.4}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.4.1}Determination of the Per-Slicer Correction Voltages}{70}{subsubsection.3.7.4.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.5}{\ignorespaces Per-slicer body bias trim voltages applied at each process corner. A value in the PMOS column is the N-well voltage of that slicer, which forward-biases its PMOS and lowers its trip point. A value in the NMOS column is the bulk voltage of that slicer, which forward-biases its NMOS and raises its trip point. Each trimmed slicer is adjusted on one device only, so a given slicer index appears in at most one column. Slicers not listed keep the default PMOS well voltage of $0.8$~V and NMOS bulk voltage of $0$~V. The typical corner uses no trimming. The notation $k\!:\!V$ denotes slicer index $k$ set to voltage $V$.}}{70}{table.caption.131}\protected@file@percent }
-\newlabel{tab:trimming_vectors}{{3.5}{70}{Per-slicer body bias trim voltages applied at each process corner. A value in the PMOS column is the N-well voltage of that slicer, which forward-biases its PMOS and lowers its trip point. A value in the NMOS column is the bulk voltage of that slicer, which forward-biases its NMOS and raises its trip point. Each trimmed slicer is adjusted on one device only, so a given slicer index appears in at most one column. Slicers not listed keep the default PMOS well voltage of $0.8$~V and NMOS bulk voltage of $0$~V. The typical corner uses no trimming. The notation $k\!:\!V$ denotes slicer index $k$ set to voltage $V$}{table.caption.131}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.4.2}Verilog-A Behavioural Implementation}{71}{subsubsection.3.7.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.5}Summary}{71}{subsection.3.7.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.8}Analytical Modelling and Design Constraints}{71}{section.3.8}\protected@file@percent }
-\newlabel{sec:analytical_modeling}{{3.8}{71}{Analytical Modelling and Design Constraints}{section.3.8}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.8.1}Maximum Input Wave Frequency and Slope Overload}{71}{subsection.3.8.1}\protected@file@percent }
-\newlabel{subsec:slope_overload}{{3.8.1}{71}{Maximum Input Wave Frequency and Slope Overload}{subsection.3.8.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.8.2}Resolution and Power Dissipation}{73}{subsection.3.8.2}\protected@file@percent }
-\newlabel{subsec:resolution_power}{{3.8.2}{73}{Resolution and Power Dissipation}{subsection.3.8.2}{}}
-\newlabel{eq:p_total_model}{{3.27}{73}{Resolution and Power Dissipation}{equation.3.27}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.9}Chapter Summary}{74}{section.3.9}\protected@file@percent }
-\newlabel{subsec:chapter_summary}{{3.9}{74}{Chapter Summary}{section.3.9}{}}
+\newlabel{chap:async}{{3}{36}{Proposed Asynchronous Flash ADC Design}{chapter.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Design Specifications and Terminology}{36}{section.3.1}\protected@file@percent }
+\newlabel{sec:design_specs}{{3.1}{36}{Design Specifications and Terminology}{section.3.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Architectural Evolution and Methodology}{37}{section.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}First Architecture: The Baseline Current-Mirror OTA Flash Configuration}{37}{section.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Operating Principle and Core Topology}{37}{subsection.3.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Operating principle of the current-mirror Flash ADC (CMF-ADC): (a) equilibrium operation, (b) signal operation, and (c) current-to-code conversion with asymmetric mirror ratios.}}{38}{figure.caption.51}\protected@file@percent }
+\newlabel{fig:cmf_adc_op}{{3.1}{38}{Operating principle of the current-mirror Flash ADC (CMF-ADC): (a) equilibrium operation, (b) signal operation, and (c) current-to-code conversion with asymmetric mirror ratios}{figure.caption.51}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1.1}Transconductance Cell}{38}{subsubsection.3.3.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Equilibrium operation.}{38}{section*.52}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Signal operation.}{38}{section*.53}\protected@file@percent }
+\newlabel{eq:branch_currents}{{3.1}{39}{Signal operation}{equation.3.1}{}}
+\newlabel{eq:Gm_cmf}{{3.2}{39}{Signal operation}{equation.3.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1.2}Current-to-Code Converter and Threshold Generation}{39}{subsubsection.3.3.1.2}\protected@file@percent }
+\newlabel{eq:vth_cmf}{{3.3}{39}{Current-to-Code Converter and Threshold Generation}{equation.3.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1.3}Adaptation to an Asynchronous Flash ADC}{39}{subsubsection.3.3.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Reference Implementation and Mirror Ratio Assignment}{40}{subsection.3.3.2}\protected@file@percent }
+\newlabel{sec:cmf_characterisation}{{3.3.2}{40}{Reference Implementation and Mirror Ratio Assignment}{subsection.3.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Transistor-level schematic of the first architecture, the current-mirror Flash ADC, showing the differential input pair driven by $V_\mathrm  {ref}$ and $V_\mathrm  {in}$, the tail current source $I_B$ and the five current-mirror output branches whose PMOS and NMOS width ratios set the thermometer thresholds $C[4]$ down to $C[0]$.}}{41}{figure.caption.54}\protected@file@percent }
+\newlabel{fig:cmf_schematic}{{3.2}{41}{Transistor-level schematic of the first architecture, the current-mirror Flash ADC, showing the differential input pair driven by $V_\mathrm {ref}$ and $V_\mathrm {in}$, the tail current source $I_B$ and the five current-mirror output branches whose PMOS and NMOS width ratios set the thermometer thresholds $C[4]$ down to $C[0]$}{figure.caption.54}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Small-Signal Behaviour of the Current-Mirror OTA}{41}{subsection.3.3.3}\protected@file@percent }
+\newlabel{subsec:cm_ota_analysis}{{3.3.3}{41}{Small-Signal Behaviour of the Current-Mirror OTA}{subsection.3.3.3}{}}
+\newlabel{eq:gm_cm}{{3.4}{41}{Small-Signal Behaviour of the Current-Mirror OTA}{equation.3.4}{}}
+\newlabel{eq:rout_cm}{{3.5}{42}{Small-Signal Behaviour of the Current-Mirror OTA}{equation.3.5}{}}
+\newlabel{eq:freq_cm}{{3.6}{42}{Small-Signal Behaviour of the Current-Mirror OTA}{equation.3.6}{}}
+\newlabel{eq:sr_cm}{{3.7}{42}{Small-Signal Behaviour of the Current-Mirror OTA}{equation.3.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.4}Current Comparator Selection}{42}{subsection.3.3.4}\protected@file@percent }
+\newlabel{subsec:comp_selection}{{3.3.4}{42}{Current Comparator Selection}{subsection.3.3.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Comparison of the simulated current comparator topologies.}}{43}{table.caption.55}\protected@file@percent }
+\newlabel{tab:comp_comparison}{{3.1}{43}{Comparison of the simulated current comparator topologies}{table.caption.55}{}}
+\newlabel{fig:current_mirror}{{3.3a}{44}{Current-mirror}{figure.caption.56}{}}
+\newlabel{sub@fig:current_mirror}{{a}{44}{Current-mirror}{figure.caption.56}{}}
+\newlabel{fig:traff}{{3.3b}{44}{Traff}{figure.caption.56}{}}
+\newlabel{sub@fig:traff}{{b}{44}{Traff}{figure.caption.56}{}}
+\newlabel{fig:lu_chen}{{3.3c}{44}{Lu Chen}{figure.caption.56}{}}
+\newlabel{sub@fig:lu_chen}{{c}{44}{Lu Chen}{figure.caption.56}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Transient response of the simulated current comparators to the same input current step, showing the output voltage together with the input and reference currents against time, from which the propagation delay is measured: (a) current-mirror, (b) Traff, (c) Lu Chen. The remaining three topologies are shown in Figure~\ref {fig:comp_operation_b}.}}{44}{figure.caption.56}\protected@file@percent }
+\newlabel{fig:comp_operation}{{3.3}{44}{Transient response of the simulated current comparators to the same input current step, showing the output voltage together with the input and reference currents against time, from which the propagation delay is measured: (a) current-mirror, (b) Traff, (c) Lu Chen. The remaining three topologies are shown in Figure~\ref {fig:comp_operation_b}}{figure.caption.56}{}}
+\newlabel{fig:hysteresis}{{3.4a}{45}{Hysteresis}{figure.caption.57}{}}
+\newlabel{sub@fig:hysteresis}{{a}{45}{Hysteresis}{figure.caption.57}{}}
+\newlabel{fig:min_kim}{{3.4b}{45}{Min and Kim}{figure.caption.57}{}}
+\newlabel{sub@fig:min_kim}{{b}{45}{Min and Kim}{figure.caption.57}{}}
+\newlabel{fig:cc_ii}{{3.4c}{45}{CC-II based}{figure.caption.57}{}}
+\newlabel{sub@fig:cc_ii}{{c}{45}{CC-II based}{figure.caption.57}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Transient response of the simulated current comparators, continued from Figure~\ref {fig:comp_operation}: (d) hysteresis, (e) Min and Kim, (f) CC-II based.}}{45}{figure.caption.57}\protected@file@percent }
+\newlabel{fig:comp_operation_b}{{3.4}{45}{Transient response of the simulated current comparators, continued from Figure~\ref {fig:comp_operation}: (d) hysteresis, (e) Min and Kim, (f) CC-II based}{figure.caption.57}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.5}Results of the First Approach}{46}{subsection.3.3.5}\protected@file@percent }
+\newlabel{subsec:phase1_results}{{3.3.5}{46}{Results of the First Approach}{subsection.3.3.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Simulated operation of the first architecture. The five comparator outputs (top) follow a trapezoidal input crossing the $0.4$~V reference (bottom). The rising crossing is tracked sharply, but the falling transition lags well behind the input crossing, the slow-recovery asymmetry of the high-impedance current-mirror node.}}{46}{figure.caption.58}\protected@file@percent }
+\newlabel{fig:phase1_results}{{3.5}{46}{Simulated operation of the first architecture. The five comparator outputs (top) follow a trapezoidal input crossing the $0.4$~V reference (bottom). The rising crossing is tracked sharply, but the falling transition lags well behind the input crossing, the slow-recovery asymmetry of the high-impedance current-mirror node}{figure.caption.58}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Second Architecture: The Complementary Dual-Input Flash Configuration}{47}{section.3.4}\protected@file@percent }
+\newlabel{sec:second_arch}{{3.4}{47}{Second Architecture: The Complementary Dual-Input Flash Configuration}{section.3.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Motivation for Wide Input Common-Mode Range Extension}{47}{subsection.3.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Rail-to-Rail Architecture Evaluation and Voltage Headroom Limitations}{47}{subsection.3.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Complementary dual-input current-mirror OTA of the second approach, with the function of each transistor annotated: NMOS and PMOS input pairs, tail sources, mirror loads and cross-coupled output branches.}}{48}{figure.caption.59}\protected@file@percent }
+\newlabel{fig:phase2_circuit}{{3.6}{48}{Complementary dual-input current-mirror OTA of the second approach, with the function of each transistor annotated: NMOS and PMOS input pairs, tail sources, mirror loads and cross-coupled output branches}{figure.caption.59}{}}
+\newlabel{eq:headroom_phase2}{{3.8}{49}{Rail-to-Rail Architecture Evaluation and Voltage Headroom Limitations}{equation.3.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Simulated DC response of the second-architecture stage at the $0.8$~V supply. The complementary outputs (out\_nmos, out\_pmos) and the internal node voltages never reach the supply rails and the transfer is visibly non-linear, so the stage does not function correctly.}}{50}{figure.caption.60}\protected@file@percent }
+\newlabel{fig:phase2_headroom}{{3.7}{50}{Simulated DC response of the second-architecture stage at the $0.8$~V supply. The complementary outputs (out\_nmos, out\_pmos) and the internal node voltages never reach the supply rails and the transfer is visibly non-linear, so the stage does not function correctly}{figure.caption.60}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Low-voltage cascode current mirror used at the tail of the OTAs, after Razavi~\blx@tocontentsinit {0}\cite {razavi}. The reference current $I_1$ feeds the $M_0$-$M_1$ branch and the output branch $M_2$-$M_3$ carries $I_\mathrm  {out}$. The cascode devices $M_0$ and $M_3$, biased by $V_b$, hold the drains of the mirror devices, nodes $A$ and $B$, at equal voltage, so the current copies accurately while each node sits at only about one overdrive above ground. The bias $V_b$ is generated by the diode-connected $M_7$ together with $M_6$.}}{51}{figure.caption.61}\protected@file@percent }
+\newlabel{fig:lv_current_mirror}{{3.8}{51}{Low-voltage cascode current mirror used at the tail of the OTAs, after Razavi~\cite {razavi}. The reference current $I_1$ feeds the $M_0$-$M_1$ branch and the output branch $M_2$-$M_3$ carries $I_\mathrm {out}$. The cascode devices $M_0$ and $M_3$, biased by $V_b$, hold the drains of the mirror devices, nodes $A$ and $B$, at equal voltage, so the current copies accurately while each node sits at only about one overdrive above ground. The bias $V_b$ is generated by the diode-connected $M_7$ together with $M_6$}{figure.caption.61}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}A Bulk-Driven Alternative}{51}{section.3.5}\protected@file@percent }
+\newlabel{sec:bulk_driven}{{3.5}{51}{A Bulk-Driven Alternative}{section.3.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Bulk-driven OTA of the third architecture~\blx@tocontentsinit {0}\cite {ballo2022}, with the function of each transistor annotated, the non-tailed bulk-driven input pair $M_1$, $M_2$, the current-mirror loads and the cross-coupled load $M_7$, $M_8$ that provides the local positive feedback. The circled points 1 and 2 mark the two differential output nodes and point 3 the supply-side node of the input pair.}}{52}{figure.caption.62}\protected@file@percent }
+\newlabel{fig:bulk_driven_schematic}{{3.9}{52}{Bulk-driven OTA of the third architecture~\cite {ballo2022}, with the function of each transistor annotated, the non-tailed bulk-driven input pair $M_1$, $M_2$, the current-mirror loads and the cross-coupled load $M_7$, $M_8$ that provides the local positive feedback. The circled points 1 and 2 mark the two differential output nodes and point 3 the supply-side node of the input pair}{figure.caption.62}{}}
+\newlabel{eq:bulk_alpha_beta}{{3.9}{52}{A Bulk-Driven Alternative}{equation.3.9}{}}
+\newlabel{eq:bulk_gm}{{3.10}{52}{A Bulk-Driven Alternative}{equation.3.10}{}}
+\@writefile{toc}{\contentsline {paragraph}{}{53}{section*.63}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{53}{section*.64}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Response of the bulk-driven OTA follower across the four process corners (FF, FS, SF, SS). The output waveform diverges markedly between corners, most of all near the lower rail, the sensitivity that led to discarding the architecture.}}{53}{figure.caption.66}\protected@file@percent }
+\newlabel{fig:bulk_driven_response}{{3.10}{53}{Response of the bulk-driven OTA follower across the four process corners (FF, FS, SF, SS). The output waveform diverges markedly between corners, most of all near the lower rail, the sensitivity that led to discarding the architecture}{figure.caption.66}{}}
+\@writefile{toc}{\contentsline {paragraph}{}{53}{figure.caption.66}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{53}{section*.67}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{53}{section*.68}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{54}{section*.69}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{54}{section*.70}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{54}{section*.71}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Input-referred hysteresis of the bulk-driven OTA follower at the four process corners, measured under the $9$~MHz full-scale sinusoid, with the worst case marked at the slow SS corner.}}{54}{figure.caption.73}\protected@file@percent }
+\newlabel{fig:hyst_corner}{{3.11}{54}{Input-referred hysteresis of the bulk-driven OTA follower at the four process corners, measured under the $9$~MHz full-scale sinusoid, with the worst case marked at the slow SS corner}{figure.caption.73}{}}
+\@writefile{toc}{\contentsline {paragraph}{}{54}{figure.caption.73}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{55}{section*.74}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{55}{section*.75}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{55}{section*.76}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Final Architecture: The Complementary Five-Transistor OTA}{55}{section.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.1}Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{55}{subsection.3.6.1}\protected@file@percent }
+\newlabel{subsec:5t_ota}{{3.6.1}{55}{Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{subsection.3.6.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces Final architecture, a complementary pair of five-transistor OTAs with the function of each transistor annotated, including the low-voltage tail mirrors and the current-mirror active loads.}}{55}{figure.caption.77}\protected@file@percent }
+\newlabel{fig:phase3_circuit}{{3.12}{55}{Final architecture, a complementary pair of five-transistor OTAs with the function of each transistor annotated, including the low-voltage tail mirrors and the current-mirror active loads}{figure.caption.77}{}}
+\newlabel{eq:headroom_phase3}{{3.11}{56}{Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{equation.3.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.2}Small-Signal Analysis of the Five-Transistor OTA}{56}{subsection.3.6.2}\protected@file@percent }
+\newlabel{subsec:5t_analysis}{{3.6.2}{56}{Small-Signal Analysis of the Five-Transistor OTA}{subsection.3.6.2}{}}
+\newlabel{eq:gm_5t}{{3.12}{57}{Small-Signal Analysis of the Five-Transistor OTA}{equation.3.12}{}}
+\newlabel{eq:freq_5t}{{3.13}{57}{Small-Signal Analysis of the Five-Transistor OTA}{equation.3.13}{}}
+\newlabel{eq:sr_5t}{{3.14}{57}{Small-Signal Analysis of the Five-Transistor OTA}{equation.3.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.3}Stability Without Frequency Compensation}{57}{subsection.3.6.3}\protected@file@percent }
+\newlabel{subsec:no_compensation}{{3.6.3}{57}{Stability Without Frequency Compensation}{subsection.3.6.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{}{58}{section*.78}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{58}{section*.79}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.13}{\ignorespaces Open-loop magnitude and phase response of the complementary five-transistor OTA, showing the single dominant pole and the wide phase margin.}}{58}{figure.caption.81}\protected@file@percent }
+\newlabel{fig:bode_async}{{3.13}{58}{Open-loop magnitude and phase response of the complementary five-transistor OTA, showing the single dominant pole and the wide phase margin}{figure.caption.81}{}}
+\@writefile{toc}{\contentsline {paragraph}{}{58}{figure.caption.81}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{58}{section*.82}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{59}{section*.83}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{59}{section*.84}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.4}Ratioed Output Slicers Design}{59}{subsection.3.6.4}\protected@file@percent }
+\newlabel{subsec:ratioed_slicers}{{3.6.4}{59}{Ratioed Output Slicers Design}{subsection.3.6.4}{}}
+\newlabel{eq:trip_point}{{3.15}{59}{Ratioed Output Slicers Design}{equation.3.15}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Decision thresholds of the slicer bank under the two operating conditions. The DC figures describe the sizing of the bank, while the transient figures describe operation and are used for all results.}}{61}{table.caption.85}\protected@file@percent }
+\newlabel{tab:bands}{{3.2}{61}{Decision thresholds of the slicer bank under the two operating conditions. The DC figures describe the sizing of the bank, while the transient figures describe operation and are used for all results}{table.caption.85}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces PMOS-to-NMOS sizing ratio $r$ of each of the fifteen slicers. The numerators and the denominators each sum to $166$.}}{61}{table.caption.86}\protected@file@percent }
+\newlabel{tab:slicer_ratios}{{3.3}{61}{PMOS-to-NMOS sizing ratio $r$ of each of the fifteen slicers. The numerators and the denominators each sum to $166$}{table.caption.86}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.5}Asynchronous Control Logic and Clockless Event Generation Network}{62}{subsection.3.6.5}\protected@file@percent }
+\newlabel{sec:async_logic}{{3.6.5}{62}{Asynchronous Control Logic and Clockless Event Generation Network}{subsection.3.6.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.6}Results at the Typical Corner and Across Process Corners}{62}{subsection.3.6.6}\protected@file@percent }
+\newlabel{subsec:phase3_results}{{3.6.6}{62}{Results at the Typical Corner and Across Process Corners}{subsection.3.6.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.14}{\ignorespaces DNL per code (left) and INL per transition (right) of the final architecture at the typical (TT) corner.}}{63}{figure.caption.87}\protected@file@percent }
+\newlabel{fig:dnl_inl_comparison}{{3.14}{63}{DNL per code (left) and INL per transition (right) of the final architecture at the typical (TT) corner}{figure.caption.87}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces Worst-case static linearity of the final architecture at the typical and the non-typical process corners, without trimming (values in LSB, measured on rising and falling ramps). The TT figures are read from the per-code DNL and INL of Figure~\ref {fig:dnl_inl_comparison}.}}{63}{table.caption.88}\protected@file@percent }
+\newlabel{tab:untrimmed_corners}{{3.4}{63}{Worst-case static linearity of the final architecture at the typical and the non-typical process corners, without trimming (values in LSB, measured on rising and falling ramps). The TT figures are read from the per-code DNL and INL of Figure~\ref {fig:dnl_inl_comparison}}{table.caption.88}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.7}Body Bias Trimming Strategy}{63}{section.3.7}\protected@file@percent }
+\newlabel{chap:trimming}{{3.7}{63}{Body Bias Trimming Strategy}{section.3.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.1}Choice of Body Biasing Among the Reviewed Techniques}{64}{subsection.3.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.2}Function of NMOS and PMOS Transistors Under Different Body Bias}{64}{subsection.3.7.2}\protected@file@percent }
+\newlabel{eq:body_effect_nmos}{{3.16}{64}{Function of NMOS and PMOS Transistors Under Different Body Bias}{equation.3.16}{}}
+\newlabel{eq:body_effect_pmos}{{3.17}{65}{Function of NMOS and PMOS Transistors Under Different Body Bias}{equation.3.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.3}Process Corner Dependence and Motivation for Trimming}{65}{subsection.3.7.3}\protected@file@percent }
+\newlabel{sec:corner_dependence}{{3.7.3}{65}{Process Corner Dependence and Motivation for Trimming}{subsection.3.7.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.4}Offline Trimming Strategy via Body Bias Adjustment}{66}{subsection.3.7.4}\protected@file@percent }
+\newlabel{sec:offline_strategy}{{3.7.4}{66}{Offline Trimming Strategy via Body Bias Adjustment}{subsection.3.7.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.4.1}Determination of the Per-Slicer Correction Voltages}{66}{subsubsection.3.7.4.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.5}{\ignorespaces Per-slicer body bias trim voltages applied at each process corner. A value in the PMOS column is the N-well voltage of that slicer, which forward-biases its PMOS and lowers its trip point. A value in the NMOS column is the bulk voltage of that slicer, which forward-biases its NMOS and raises its trip point. Each trimmed slicer is adjusted on one device only, so a given slicer index appears in at most one column. Slicers not listed keep the default PMOS well voltage of $0.8$~V and NMOS bulk voltage of $0$~V. The typical corner uses no trimming. The notation $k\!:\!V$ denotes slicer index $k$ set to voltage $V$.}}{67}{table.caption.89}\protected@file@percent }
+\newlabel{tab:trimming_vectors}{{3.5}{67}{Per-slicer body bias trim voltages applied at each process corner. A value in the PMOS column is the N-well voltage of that slicer, which forward-biases its PMOS and lowers its trip point. A value in the NMOS column is the bulk voltage of that slicer, which forward-biases its NMOS and raises its trip point. Each trimmed slicer is adjusted on one device only, so a given slicer index appears in at most one column. Slicers not listed keep the default PMOS well voltage of $0.8$~V and NMOS bulk voltage of $0$~V. The typical corner uses no trimming. The notation $k\!:\!V$ denotes slicer index $k$ set to voltage $V$}{table.caption.89}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.4.2}Verilog-A Behavioural Implementation}{67}{subsubsection.3.7.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.5}Summary}{67}{subsection.3.7.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.8}Analytical Modelling and Design Constraints}{68}{section.3.8}\protected@file@percent }
+\newlabel{sec:analytical_modeling}{{3.8}{68}{Analytical Modelling and Design Constraints}{section.3.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8.1}Maximum Input Wave Frequency and Slope Overload}{68}{subsection.3.8.1}\protected@file@percent }
+\newlabel{subsec:slope_overload}{{3.8.1}{68}{Maximum Input Wave Frequency and Slope Overload}{subsection.3.8.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8.2}Resolution and Power Dissipation}{69}{subsection.3.8.2}\protected@file@percent }
+\newlabel{subsec:resolution_power}{{3.8.2}{69}{Resolution and Power Dissipation}{subsection.3.8.2}{}}
+\newlabel{eq:p_total_model}{{3.27}{70}{Resolution and Power Dissipation}{equation.3.27}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.9}Chapter Summary}{70}{section.3.9}\protected@file@percent }
+\newlabel{subsec:chapter_summary}{{3.9}{70}{Chapter Summary}{section.3.9}{}}
 \@setckpt{chapter3}{
-\setcounter{page}{75}
+\setcounter{page}{72}
 \setcounter{equation}{27}
 \setcounter{enumi}{3}
 \setcounter{enumii}{0}
@@ -181,7 +175,7 @@
 \setcounter{subtable}{0}
 \setcounter{float@type}{8}
 \setcounter{linenumber}{0}
-\setcounter{LN@truepage}{91}
+\setcounter{LN@truepage}{88}
 \setcounter{tabx@nest}{0}
 \setcounter{listtotal}{0}
 \setcounter{listcount}{0}
@@ -191,7 +185,7 @@
 \setcounter{citetotal}{0}
 \setcounter{multicitecount}{0}
 \setcounter{multicitetotal}{0}
-\setcounter{instcount}{235}
+\setcounter{instcount}{234}
 \setcounter{maxnames}{3}
 \setcounter{minnames}{1}
 \setcounter{maxitems}{3}
@@ -303,6 +297,6 @@
 \setcounter{section@level}{1}
 \setcounter{Item}{3}
 \setcounter{Hfootnote}{0}
-\setcounter{bookmark@seq@number}{77}
+\setcounter{bookmark@seq@number}{76}
 \setcounter{lstlisting}{0}
 }
