@@ -75,7 +75,7 @@ variation. Since the threshold of each slicer is determined by the ratio of PMOS
 strength, any departure from the nominal device parameters shifts the trip points in a
 bit-dependent manner, degrading the differential and integral non-linearity of the converter. To
 address this, an offline body bias trimming strategy was designed and implemented using a
-Verilog-A behavioural model. By applying distinct bulk voltages to the NMOS and PMOS
+Verilog-A behavioral model. By applying distinct bulk voltages to the NMOS and PMOS
 transistors of the slicer stage, the threshold voltage of each device type can be shifted through the
 body effect, so the trip points can be steered back toward their nominal positions after
 fabrication. Correction vectors were determined for the four standard process corners (SS, FF,
@@ -84,7 +84,7 @@ the worst-case INL at three of them, with the largest gains at the symmetric cor
 corner proved the hardest to correct with a single global bias pair.
 
 Finally, the complete system was validated through transistor-level analog and mixed-signal
-co-simulation. The dynamic performance of the asynchronous converter was characterised using a
+co-simulation. The dynamic performance of the asynchronous converter was characterized using a
 non-uniform to uniform resampling algorithm applied to the raw level-crossing output, enabling
 standard spectral metrics such as SNDR and ENOB to be extracted and compared against both the
 synchronous reference and representative state-of-the-art designs. The simulated power figures
@@ -97,7 +97,7 @@ than a record Walden figure of merit, is where the energy advantage of the propo
 lies in the sparse-signal regime targeted by this work.
 
 The contribution of this work lies less in any single block than in their combination,
-ratioed-slicer quantisation, corner-indexed body bias trimming and clockless event generation,
+ratioed-slicer quantization, corner-indexed body bias trimming and clockless event generation,
 brought together at $0.8$~V in a 16~nm process and benchmarked against a synchronous reference
 of equal resolution and technology.
 
@@ -116,7 +116,7 @@ intervals, validating the intended activity-dependent power profile.
 
 The second objective was to implement a trimming approach for the proposed schematic. This
 was fulfilled through the body bias trimming strategy of Section~\ref{chap:trimming}, implemented
-as a hardware-description-language behavioural model in Verilog-A that applies pre-computed NMOS
+as a hardware-description-language behavioral model in Verilog-A that applies pre-computed NMOS
 and PMOS bulk voltages to the slicer bank to restore the intended trip-point positions. The
 approach was validated across the SS, FF, FS and SF process corners, reducing the worst-case DNL
 at all corners and the worst-case INL at three of the four, as reported in
@@ -148,21 +148,21 @@ motivation for the first suggestion for future work described in the following s
 Two directions for future development are identified as the most impactful extensions of the
 work presented in this dissertation.
 
-\subsection{Analogue Process Corner Detection Approach}
+\subsection{Analog Process Corner Detection Approach}
 
 The trimming strategy validated in this work relies on the correct identification of the active
 process corner, which in the current implementation is supplied externally to the Verilog-A
-behavioural model and used to select the appropriate pre-computed correction vector. In a
+behavioral model and used to select the appropriate pre-computed correction vector. In a
 physical integrated circuit this external identification is not available. The point is not that the
 process corner is unknowable, but that the fabricated die has no way of reading it off directly, since
 nothing on the die records which combination of NMOS and PMOS device parameters it ended up
 with. That combination is not a label set by the foundry but the consequence of unavoidable
 imprecisions in the fabrication process, which is what places a given die nearer the FS or SF
 corner. What the die lacks is a direct readout, not the information itself, because the process type
-can still be inferred from the behaviour of dedicated on-chip sensing circuits, which is precisely
+can still be inferred from the behavior of dedicated on-chip sensing circuits, which is precisely
 the route the extension below takes.
 
-A natural extension would therefore be a dedicated on-chip analogue process
+A natural extension would therefore be a dedicated on-chip analog process
 detection circuit that senses the effective transistor characteristics of the fabricated device
 and communicates the inferred process corner directly to the trimming logic. Such a circuit could
 be implemented as a small reference cell, for example, a pair of matched inverter-based ring
@@ -170,11 +170,11 @@ oscillators, one biased toward NMOS-dominated operation and the other toward PMO
 operation, whose relative oscillation frequencies or propagation delays encode the current
 process corner. The ratio between the two delay measurements maps unambiguously onto the
 NMOS/PMOS balance of the process and distinguishes SS from FF and FS from SF corners. The
-resulting analogue measurement would be digitised by a simple comparator and used to address a
+resulting analog measurement would be digitized by a simple comparator and used to address a
 lookup table of pre-computed body bias correction values, replacing the external corner
 identification currently provided by the Verilog-A model. This approach would make the
 trimming procedure fully self-contained and autonomous, removing the need for any external
-process characterisation while preserving the static, low-overhead nature of the offline correction
+process characterization while preserving the static, low-overhead nature of the offline correction
 strategy.
 
 \subsection{Monte Carlo Trimming}
@@ -182,7 +182,7 @@ strategy.
 A more fundamental limitation of the current trimming approach is that it corrects deterministic
 inter-corner shifts but leaves intra-die stochastic mismatch unaddressed. In practice, even at the
 nominal process corner, individual transistors within the slicer bank will exhibit random threshold
-voltage variations whose statistical distribution is characterised by Pelgrom's law \cite{pelgrom_1989}. These
+voltage variations whose statistical distribution is characterized by Pelgrom's law \cite{pelgrom_1989}. These
 variations are not captured by the four-corner trimming table, and their cumulative effect on DNL
 and INL can be significant in a Flash converter where each comparator threshold must be
 individually accurate.

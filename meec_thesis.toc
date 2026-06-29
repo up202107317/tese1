@@ -9,7 +9,7 @@
 \contentsline {subsection}{\numberline {2.1.1}The Data Conversion Process}{4}{subsection.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.1.1.1}Ideal Data Conversion}{4}{subsubsection.2.1.1.1}%
 \contentsline {subsubsection}{\numberline {2.1.1.2}The Sampling Operation}{4}{subsubsection.2.1.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.1.3}The Quantisation Operation}{5}{subsubsection.2.1.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.1.3}The Quantization Operation}{5}{subsubsection.2.1.1.3}%
 \contentsline {subsubsection}{\numberline {2.1.1.4}Coding}{5}{subsubsection.2.1.1.4}%
 \contentsline {subsection}{\numberline {2.1.2}Classical Performance Metrics}{5}{subsection.2.1.2}%
 \contentsline {subsubsection}{\numberline {2.1.2.1}Resolution and Sampling Rate}{5}{subsubsection.2.1.2.1}%
@@ -93,7 +93,7 @@
 \contentsline {subsubsection}{\numberline {3.3.1.2}Current-to-Code Converter and Threshold Generation}{39}{subsubsection.3.3.1.2}%
 \contentsline {subsubsection}{\numberline {3.3.1.3}Adaptation to an Asynchronous Flash ADC}{39}{subsubsection.3.3.1.3}%
 \contentsline {subsection}{\numberline {3.3.2}Reference Implementation and Mirror Ratio Assignment}{40}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Small-Signal Behaviour of the Current-Mirror OTA}{41}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.3}Small-Signal Behavior of the Current-Mirror OTA}{41}{subsection.3.3.3}%
 \contentsline {subsection}{\numberline {3.3.4}Current Comparator Selection}{42}{subsection.3.3.4}%
 \contentsline {subsection}{\numberline {3.3.5}Results of the First Approach}{46}{subsection.3.3.5}%
 \contentsline {section}{\numberline {3.4}Second Architecture: The Complementary Dual-Input Flash Configuration}{47}{section.3.4}%
@@ -104,36 +104,33 @@
 \contentsline {paragraph}{}{53}{section*.64}%
 \contentsline {paragraph}{}{53}{figure.caption.66}%
 \contentsline {paragraph}{}{53}{section*.67}%
-\contentsline {paragraph}{}{53}{section*.68}%
+\contentsline {paragraph}{}{54}{section*.68}%
 \contentsline {paragraph}{}{54}{section*.69}%
 \contentsline {paragraph}{}{54}{section*.70}%
 \contentsline {paragraph}{}{54}{section*.71}%
-\contentsline {paragraph}{}{54}{figure.caption.73}%
+\contentsline {paragraph}{}{55}{figure.caption.73}%
 \contentsline {paragraph}{}{55}{section*.74}%
 \contentsline {paragraph}{}{55}{section*.75}%
 \contentsline {paragraph}{}{55}{section*.76}%
 \contentsline {section}{\numberline {3.6}Final Architecture: The Complementary Five-Transistor OTA}{55}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Complementary Five-Transistor OTA Core and Optimised Transistor Sizing}{55}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Small-Signal Analysis of the Five-Transistor OTA}{56}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}Stability Without Frequency Compensation}{57}{subsection.3.6.3}%
-\contentsline {paragraph}{}{58}{section*.78}%
-\contentsline {paragraph}{}{58}{section*.79}%
-\contentsline {paragraph}{}{58}{figure.caption.81}%
-\contentsline {paragraph}{}{58}{section*.82}%
-\contentsline {paragraph}{}{59}{section*.83}%
-\contentsline {paragraph}{}{59}{section*.84}%
+\contentsline {subsection}{\numberline {3.6.1}Complementary Five-Transistor OTA Core and Optimized Transistor Sizing}{55}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Small-Signal Analysis of the Five-Transistor OTA}{57}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Stability Without Frequency Compensation}{58}{subsection.3.6.3}%
 \contentsline {subsection}{\numberline {3.6.4}Ratioed Output Slicers Design}{59}{subsection.3.6.4}%
+\contentsline {paragraph}{}{62}{section*.81}%
+\contentsline {paragraph}{}{62}{section*.82}%
+\contentsline {paragraph}{}{62}{section*.83}%
 \contentsline {subsection}{\numberline {3.6.5}Asynchronous Control Logic and Clockless Event Generation Network}{62}{subsection.3.6.5}%
-\contentsline {subsection}{\numberline {3.6.6}Results at the Typical Corner and Across Process Corners}{62}{subsection.3.6.6}%
-\contentsline {section}{\numberline {3.7}Body Bias Trimming Strategy}{63}{section.3.7}%
+\contentsline {subsection}{\numberline {3.6.6}Results at the Typical Corner and Across Process Corners}{63}{subsection.3.6.6}%
+\contentsline {section}{\numberline {3.7}Body Bias Trimming Strategy}{64}{section.3.7}%
 \contentsline {subsection}{\numberline {3.7.1}Choice of Body Biasing Among the Reviewed Techniques}{64}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Function of NMOS and PMOS Transistors Under Different Body Bias}{64}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.2}Function of NMOS and PMOS Transistors Under Different Body Bias}{65}{subsection.3.7.2}%
 \contentsline {subsection}{\numberline {3.7.3}Process Corner Dependence and Motivation for Trimming}{65}{subsection.3.7.3}%
 \contentsline {subsection}{\numberline {3.7.4}Offline Trimming Strategy via Body Bias Adjustment}{66}{subsection.3.7.4}%
 \contentsline {subsubsection}{\numberline {3.7.4.1}Determination of the Per-Slicer Correction Voltages}{66}{subsubsection.3.7.4.1}%
-\contentsline {subsubsection}{\numberline {3.7.4.2}Verilog-A Behavioural Implementation}{67}{subsubsection.3.7.4.2}%
-\contentsline {subsection}{\numberline {3.7.5}Summary}{67}{subsection.3.7.5}%
-\contentsline {section}{\numberline {3.8}Analytical Modelling and Design Constraints}{68}{section.3.8}%
+\contentsline {subsubsection}{\numberline {3.7.4.2}Verilog-A Behavioral Implementation}{67}{subsubsection.3.7.4.2}%
+\contentsline {subsection}{\numberline {3.7.5}Summary}{68}{subsection.3.7.5}%
+\contentsline {section}{\numberline {3.8}Analytical Modeling and Design Constraints}{68}{section.3.8}%
 \contentsline {subsection}{\numberline {3.8.1}Maximum Input Wave Frequency and Slope Overload}{68}{subsection.3.8.1}%
 \contentsline {subsection}{\numberline {3.8.2}Resolution and Power Dissipation}{69}{subsection.3.8.2}%
 \contentsline {section}{\numberline {3.9}Chapter Summary}{70}{section.3.9}%
@@ -154,6 +151,6 @@
 \contentsline {section}{\numberline {5.1}Summary of the Work Developed}{89}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Concluded Objectives}{91}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Future Work}{92}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Analogue Process Corner Detection Approach}{92}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.1}Analog Process Corner Detection Approach}{92}{subsection.5.3.1}%
 \contentsline {subsection}{\numberline {5.3.2}Monte Carlo Trimming}{93}{subsection.5.3.2}%
 \contentsline {chapter}{\numberline {A}Verilog-A Body Bias Trimming Model}{109}{appendix.A}%

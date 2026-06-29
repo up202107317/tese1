@@ -3,7 +3,7 @@
 
 The preceding section ended with a converter that is linear at the typical corner and out of specification at every non-typical one. This section develops the correction.
 
-The slicer-based quantisation stage introduced earlier in this chapter
+The slicer-based quantization stage introduced earlier in this chapter
 defines each decision threshold exclusively through the PMOS-to-NMOS sizing
 ratio of the slicer, as expressed by equation~(\ref{eq:trip_point}). This
 makes the converter linearity directly dependent on the effective drive
@@ -44,11 +44,11 @@ event-driven operation simultaneously. The bulk terminals of the slicer
 transistors are not part of the signal path, so driving them from a static
 bias source adds no capacitance to the switching nodes and consumes no dynamic
 power. Once the correction voltages are set, they are held by purely DC
-conduction paths, preserving the idle behaviour of the converter when the
+conduction paths, preserving the idle behavior of the converter when the
 input is inactive. Finally, because the NMOS and PMOS bulk potentials act on
 the pull-down and pull-up networks independently, they provide exactly the two
 degrees of freedom needed to counteract both the symmetric (SS, FF) and the
-asymmetric (FS, SF) corner perturbations characterised in
+asymmetric (FS, SF) corner perturbations characterized in
 Section~\ref{sec:corner_dependence}.
 
 \subsection{Function of NMOS and PMOS Transistors Under Different Body Bias}
@@ -109,7 +109,7 @@ voltages and carrier mobilities of the NMOS and PMOS devices to deviate from
 their nominal (typical-typical, TT) values. The standard process corners used
 to bound this variability, namely slow-slow (SS), fast-fast (FF), fast-NMOS
 slow-PMOS (FS) and slow-NMOS fast-PMOS (SF), capture the four extreme
-combinations of NMOS and PMOS behaviour and represent the conditions under
+combinations of NMOS and PMOS behavior and represent the conditions under
 which circuit performance is most likely to degrade.
 
 For the slicer-based thermometer coder described in Chapter~\ref{chap:async},
@@ -201,9 +201,9 @@ outcome reported in Chapter~\ref{chap:Benchmarking}.
     \end{tabular}
 \end{table}
 
-\subsubsection{Verilog-A Behavioural Implementation}
+\subsubsection{Verilog-A Behavioral Implementation}
 
-The trimming was implemented in simulation using a Verilog-A behavioural
+The trimming was implemented in simulation using a Verilog-A behavioral
 model, listed in full in Appendix~\ref{app:veriloga}. The model takes the
 process corner as a string parameter and, for the selected corner, drives the
 thirty bulk terminals of the slicer bank, fifteen PMOS wells and fifteen NMOS
@@ -221,4 +221,4 @@ required in future iterations.
 
 This section turned the corner problem of the preceding architecture into a correction mechanism. The body effect gives an independent handle on each slicer's trip point. Forward-biasing a slicer's PMOS well lowers its trip point, and forward-biasing its NMOS bulk raises it. Body biasing was preferred over the other techniques of Section~\ref{sec:calibration} because it adds no capacitance to the signal path and no clocked activity to the converter. 
 
-A per-slicer set of bulk voltages was determined for each process corner (Table~\ref{tab:trimming_vectors}) and applied through the Verilog-A behavioural model of Appendix~\ref{app:veriloga}, which drives the bulk terminals of the slicer bank without touching the transistor-level netlist. The correction targets deterministic inter-corner shifts only, leaving random mismatch outside its reach. The effect of these corrections on the DNL and INL of the converter, together with the rest of the final characterisation, is presented in Chapter~\ref{chap:Benchmarking}.
+A per-slicer set of bulk voltages was determined for each process corner (Table~\ref{tab:trimming_vectors}) and applied through the Verilog-A behavioral model of Appendix~\ref{app:veriloga}, which drives the bulk terminals of the slicer bank without touching the transistor-level netlist. The correction targets deterministic inter-corner shifts only, leaving random mismatch outside its reach. The effect of these corrections on the DNL and INL of the converter, together with the rest of the final characterization, is presented in Chapter~\ref{chap:Benchmarking}.

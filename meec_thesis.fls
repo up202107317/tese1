@@ -555,6 +555,13 @@ OUTPUT ethics.aux
 INPUT .\ethics.tex
 INPUT .\ethics.tex
 INPUT ethics.tex
+INPUT .\figures\assinatura.png
+INPUT .\figures\assinatura.png
+INPUT .\figures\assinatura.png
+INPUT .\figures\assinatura.png
+INPUT .\figures\assinatura.png
+INPUT .\figures\assinatura.png
+INPUT .\figures\assinatura.png
 INPUT .\meec_thesis.toc
 INPUT .\meec_thesis.toc
 INPUT meec_thesis.toc
@@ -888,6 +895,10 @@ INPUT .\figures\bode_plot.pdf
 INPUT .\figures\bode_plot.pdf
 INPUT .\figures\bode_plot.pdf
 INPUT .\figures\bode_plot.pdf
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7v.vf
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\symbol\psyr.tfm
 INPUT .\figures\dnl_typical.png
 INPUT .\figures\dnl_typical.png
 INPUT .\figures\dnl_typical.png
@@ -907,10 +918,6 @@ INPUT .\trimming.tex
 INPUT .\trimming.tex
 INPUT .\trimming.tex
 INPUT trimming.tex
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7v.vf
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\symbol\psyr.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\zptmcm7t.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\zptmcm7t.tfm
 INPUT C:\Users\gonca\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\zptmcm7m.tfm
