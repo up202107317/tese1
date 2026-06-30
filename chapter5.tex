@@ -265,11 +265,23 @@ The synchronous reference, described in Section~\ref{chap:synchronous}, was simu
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.49\textwidth]{figures/adc_transfer_sync.pdf}\\
-    \includegraphics[width=0.49\textwidth]{figures/dnl_sync.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/inl_sync.pdf}
-    \caption{Static characterization of the synchronous reference: (top) simulated transfer function against the ideal staircase, (bottom left) DNL per code and (bottom right) INL per transition.}
-    \label{fig:sync_linearity}
+    \includegraphics[width=0.75\textwidth]{figures/adc_transfer_sync.pdf}
+    \caption{Simulated transfer function of the synchronous reference against the ideal staircase.}
+    \label{fig:adc_transfer_sync}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/dnl_sync.pdf}
+    \caption{DNL per code of the synchronous reference.}
+    \label{fig:dnl_sync}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/inl_sync.pdf}
+    \caption{INL per transition of the synchronous reference.}
+    \label{fig:inl_sync}
 \end{figure}
 
 Neither operating point comes from the original publication. The design of \cite{flashadc_ref} was demonstrated at $20$~MS/s with a $332$~kHz input in 65~nm, and reproducing that point here would compare the two converters in a regime unrelated to the one the asynchronous design targets. The matched point follows instead from the activity model of Section~\ref{subsec:resolution_power} and from the slew rate envelope of Section~\ref{sec:simulation_setup}. 
@@ -351,7 +363,7 @@ Table~\ref{tab:state_of_the_art} puts the developed design in context. It compar
         SNDR (dB)          & 24.98  & 26.50       & 47-62       & 47-54    & 64          & 21.8-22.3     \\
         ENOB (bit)         & 3.86   & 4.11        & 7.51-10.01        & 7.5-8.7  & 10.3        & 3.3-3.4\textsuperscript{$3$} \\
         Power ($\mu$W)     & 886    & 99.5        & 250-800 & 3-9 & 0.066-2.8 & 700           \\
-        $\mathrm{FoM}_W$ (fJ/c.s.) & 3390  & 320       & 193986-6858200 & 180-1240\textsuperscript{$2$} & 1.8-65 & 65 \\
+        $\mathrm{FoM}_W$ (fJ/c.s.) & 3390  & 320       & 193986-6858200\textsuperscript{$2$} & 180-1240\textsuperscript{$2$} & 1.8-65 & 65 \\
         Architecture       & Sync. Flash & Async. LC Flash & CT system & LC-ADC & CT LC-ADC & Folding-Flash \\
         \bottomrule
     \end{tabular}%

@@ -22,9 +22,9 @@
 
 This chapter introduces the topic of the dissertation. It presents the context, the research question and the motivation for the work, states the objectives and the scope, and ends with the structure of the document.
 
-Smart sensors are now everywhere, from wearable health monitors to distributed environmental and industrial nodes. The processing and storage of information are digital and have benefited from the scaling described by Moore's law, but the physical world is analog, temperature, sound and pressure are continuous in both time and amplitude. The Analog-to-Digital Converter (ADC) is the interface between the two domains, and every digital system that measures the real world depends on one \cite{johns_martin_2012}.
+Smart sensors are now everywhere, from wearable health monitors to distributed environmental and industrial nodes. The processing and storage of information are digital and have benefited from the scaling described by Moore's law, but the physical world is analog, temperature, sound and pressure are continuous in both time and amplitude. The Analog-to-Digital Converter (ADC) is the interface between the two domains, and every digital system that measures the real world depends on it \cite{johns_martin_2012}.
 
-Energy efficiency has moved from a secondary performance metric to a primary design constraint. Many sensors run on small batteries or on harvested energy, so every joule dissipated shortens the autonomy of the system. The data conversion block is frequently the largest consumer in these interfaces, particularly when the digital transmission is duty-cycled and the radio spends most of its time off.
+Energy efficiency has moved from a secondary performance metric to a primary design constraint. Many sensors run on small batteries or on harvested energy, so every joule dissipated shortens the autonomy of the system.
 
 Many real-world signals are also sparse and non-periodic. Voice activity, machine vibration and environmental monitoring data arrive in bursts, short periods of high information content followed by long intervals in which nothing changes.
 
@@ -58,7 +58,7 @@ where:
   \item $C_L$ is the load capacitance being switched (e.g., in the clock tree).
   \item $V_{DD}$ is the supply voltage.
 \end{itemize}
- In a uniformly clocked ADC, $f$ is fixed by the Nyquist criterion and the clock network toggles every cycle, so $\alpha$ stays high even when the input is almost static. The converter keeps charging and discharging the clock and comparator capacitances at every period to produce samples that carry no new information. If a sensor signal is active only 10\% of the time and the ADC samples continuously, 90\% of the switching events are spent on intervals where the input is essentially constant.
+ In a uniformly clocked ADC, $f$ is fixed by the Nyquist criterion and the clock network toggles every cycle, so $\alpha$ stays high even when the input is almost static. The converter keeps charging and discharging the clock and comparator capacitances at every period to produce samples that carry no new information. If a sensor signal is active only 10\% of the time and the ADC samples continuously, 90\% of the switching events are spent on intervals where the input is essentially constant, therefore dissipating more power.
 % \subsection{Architectural Problem: Flash ADCs}
 % While the Flash ADC architecture is highly attractive due to its single-cycle, high-speed conversion capability \cite{johns_martin_2012}, it suffers from severe limitations regarding power and area, particularly when reaching higher resolutions. The number of required comparators scales exponentially with resolution ($2^N$). This exponential scaling leads directly to an increase in input capacitance and static power dissipation.
 

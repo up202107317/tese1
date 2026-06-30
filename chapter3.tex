@@ -9,9 +9,9 @@ The previous chapter reviewed the field and fixed the benchmark, this one develo
 
 Before describing the architectural exploration, the specifications that constrained every design decision in this chapter are stated explicitly. The converter is designed in a 16~nm CMOS technology node, operating from a nominal supply voltage of $V_{DD} = 0.8$~V. The target application is the acquisition of time-sparse signals, as motivated in Chapter~\ref{chap:intro}, which dictates the central architectural requirement, fully clockless, event-driven operation, with dynamic power dissipated only when the input crosses a decision level.
 
-A point of terminology must also be fixed, since it is a recurring source of ambiguity in Flash converter descriptions. A Flash quantizer with a binary resolution of $N$ bits requires $2^N - 1$ parallel comparison elements, whose collective outputs form a thermometer code of $2^N - 1$ levels. The number of thermometer outputs is therefore always distinct from, and larger than, the number of binary resolution bits. Throughout this chapter, the term thermometer outputs refers to the individual comparator or slicer outputs, while resolution bits refers exclusively to the binary word produced after encoding.
+A point of terminology must also be fixed, since it is a recurring source of ambiguity in Flash converter descriptions. A Flash quantizer with a binary resolution of $ N $ bits requires $2^N - 1$ parallel comparison elements, whose collective outputs form a thermometer code of $2^N - 1$ levels. The number of thermometer outputs is therefore always distinct from, and larger than, the number of binary resolution bits. Throughout this chapter, the term thermometer outputs refers to the individual comparator or slicer outputs, while resolution bits refers exclusively to the binary word produced after encoding.
 
-The converter implemented in this work has a resolution of 4 bits. A bank of $2^4 - 1 = 15$ slicers produces a fifteen-level thermometer code that the encoder maps to sixteen quantization levels. This matches the resolution of the synchronous reference converter used for benchmarking (Section~\ref{chap:synchronous}), which also uses fifteen comparators, so the two designs are compared at equal resolution. A presentational convention applies throughout the chapter. Whenever the operating principle of the comparison stage is explained step by step, a reduced bank of five slicers (outputs out$_4$ to out$_0$) stands in for the full fifteen, purely to keep the figures and the code examples readable. The five-slicer bank is an explanatory device, not the implemented circuit. Everything said about it extends directly to the fifteen-slicer bank of the actual design.
+The converter implemented in this work has a resolution of 4 bits. A bank of $2^4 - 1 = 15$ comparators produces a fifteen-level thermometer code that the encoder maps to sixteen quantization levels. This matches the resolution of the synchronous reference converter used for benchmarking (Section~\ref{chap:synchronous}), which also uses fifteen comparators, so the two designs are compared at equal resolution. A presentational convention applies throughout the chapter. Whenever the operating principle of the comparison stage is explained step by step, a reduced bank of five slicers (outputs out$_4$ to out$_0$) stands in for the full fifteen, purely to keep the figures and the code examples readable. The five-slicer bank is an explanatory device, not the implemented circuit. Everything said about it extends directly to the fifteen-slicer bank of the actual design.
 
 \section{Architectural Evolution and Methodology}
 The design of the voltage comparator responsible for generating the digital
@@ -48,16 +48,17 @@ The CMF-ADC topology is structured
 around two cascaded functional stages, a transconductance cell, which converts a
 differential input voltage into a proportional error current, and a
 current-to-code converter, which maps that current into a parallel thermometer-coded
-output without requiring a sampling clock. The complete circuit, annotated with the
+output without requiring a sampling clock. The transconductance cell, annotated with the
 current-flow conventions used throughout this analysis, is shown in
-Figure~\ref{fig:cmf_adc_op}.
+Figure~\ref{fig:cmf_adc_op}, while the complete five-output circuit is shown in
+Figure~\ref{fig:cmf_schematic}.
 
 \begin{figure}[H]
     \centering
     %  - Replace the placeholder box below with the actual figure  -
     \includegraphics[width=0.7\textwidth]{figures/Current_mirror_ota_operation_at_equilibrium.pdf}
     %
-    \caption{Operating principle of the current-mirror Flash ADC (CMF-ADC): (a) equilibrium operation, (b) signal operation, and (c) current-to-code conversion with asymmetric mirror ratios.}
+    \caption{Transconductance cell of the current-mirror Flash ADC at equilibrium, showing the differential pair $M_1$, $M_2$, the mirror loads $M_3$, $M_4$ and the $K$-scaled output copies $KI_{D1}$, $KI_{D2}$.}
     \label{fig:cmf_adc_op}
 \end{figure}
 
@@ -67,27 +68,26 @@ Figure~\ref{fig:cmf_adc_op}.
 The transconductance cell is a differential pair formed by transistors M$_1$ and M$_2$,
 both biased by a common tail current source of magnitude $I_B$. The non-inverting input of
 the pair receives the analog signal $V_{in}$, while the inverting input is driven by an
-adjustable reference voltage $V_{ref,c}$. An active current mirror, composed of
+adjustable reference voltage $V_{in-}$. An active current mirror, composed of
 diode-connected M$_3$ and mirroring transistor M$_4$, constitutes the load of the
 differential pair and steers the drain current of M$_1$ toward the output. An additional
 NMOS mirror generates a third current branch $I_3$ as a replica of $I_1$, which is then
 distributed to the conversion stage.
 
 \paragraph{Equilibrium operation.}
-See Figure~\ref{fig:cmf_adc_op}(a) for the operation at equilibrium. When
-$V_{in} = V_{ref,c}$, M$_1$ and M$_2$ conduct equal quiescent currents of magnitude
-$I_B/2$. Because M$_3$ is diode-connected, its gate-to-source voltage adjusts to carry
-exactly $I_B/2$, and M$_4$, sharing this gate voltage, mirrors the same current to the
+See Figure~\ref{fig:cmf_adc_op} for the operation at equilibrium. When
+$V_{in} = V_{in - }$, M$_1$ and M$_2$ conduct equal quiescent currents of magnitude
+$I_B$. Because M$_3$ is diode-connected, its gate-to-source voltage adjusts to carry
+exactly $I_B$, and M$_4$, sharing this gate voltage, mirrors the same current to the
 output branch. The mirrored current from M$_4$ and the drain current of M$_2$ are
 therefore equal in magnitude, so their contributions cancel at the output node of the
 transconductance cell and the net error current is zero: $I_{err} = 0$.
-Under this condition, as indicated in Figure~\ref{fig:cmf_adc_op}(a), both branches carry
-identical currents in the same direction, resulting in no differential current available to
+Under this condition, as the equal current arrows of Figure~\ref{fig:cmf_adc_op} indicate, both branches carry
+identical currents, resulting in no differential current available to
 drive the downstream converter.
 
 \paragraph{Signal operation.}
-See Figure~\ref{fig:cmf_adc_op}(b) for the differential signal analysis.
-When a differential voltage $v_{id} = V_{in} - V_{ref,c}$ is applied at the input, the
+When a differential voltage $v_{id} = V_{in} - V_{in-}$ is applied at the input, the
 symmetry of the pair is broken. Assuming matched transconductances $g_m = g_{m1} = g_{m2}$,
 the two transistors steer the tail current unequally, producing branch currents:
 %
@@ -96,10 +96,9 @@ the two transistors steer the tail current unequally, producing branch currents:
     \label{eq:branch_currents}
 \end{equation}
 %
-where $I_{err} = g_m \cdot v_{id} / 2$ is the error current. As annotated in
-Figure~\ref{fig:cmf_adc_op}(b), when $V_{in} > V_{ref,c}$, M$_1$ carries the excess
-current (indicated by the thickened arrow on the M$_1$ branch), while the current in the
-M$_2$ branch is correspondingly reduced (indicated by the crossed symbol). The mirror
+where $I_{err} = g_m \cdot v_{id} / 2$ is the error current. When $V_{in} > V_{in-}$, M$_1$ carries the excess
+current while the current in the
+M$_2$ branch is correspondingly reduced. The mirror
 formed by M$_3$ and M$_4$ copies $I_1$ toward the output, and the resulting imbalance
 between this mirrored current and $I_2$ constitutes the differential output signal
 $2I_{err}$ that drives the code converter. The effective transconductance of the cell is
@@ -109,7 +108,12 @@ therefore:
     G_m = g_{m1} = g_{m2} = g_m.
     \label{eq:Gm_cmf}
 \end{equation}
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figures/ota_cm.pdf}
+    \caption{Transistor-level schematic of the first architecture, the current-mirror Flash ADC, showing the differential input pair driven by $V_\mathrm{ref}$ and $V_\mathrm{in}$, the tail current source $I_B$ and the five current-mirror output branches whose PMOS and NMOS width ratios set the thermometer thresholds $C[4]$ down to $C[0]$.}
+    \label{fig:cmf_schematic}
+\end{figure}
 % ─── Current-to-code converter ───────────────────────────────────────────────
 \subsubsection{Current-to-Code Converter and Threshold Generation}
 
@@ -119,7 +123,7 @@ output. Each node is loaded simultaneously by a PMOS current mirror, which repli
 $I_2$ with a multiplication factor $\alpha_k$, and an NMOS current mirror, which
 replicates $I_3$ with a complementary factor $\beta_k$. The two factors are chosen such
 that $\alpha_k$ decreases monotonically with the node index $k$ while $\beta_k$ increases
-correspondingly, as illustrated schematically in Figure~\ref{fig:cmf_adc_op}(c).
+correspondingly, as the complete circuit of Figure~\ref{fig:cmf_schematic} shows.
 
 The binary output at node $k$ is resolved by a simple current competition. If the PMOS
 sourcing current $\alpha_k I_2$ exceeds the NMOS sinking current $\beta_k I_3$, the node
@@ -136,10 +140,10 @@ voltage at which the two competing currents are in equilibrium:
 Because the PMOS ratio $\alpha_k$ decreases monotonically with $k$, the
 thresholds $v_{id}^{(k)}$ also decrease monotonically, guaranteeing a valid thermometer
 code by construction. Nodes with a dominant PMOS mirror transition to high first as
-$V_{in}$ rises above $V_{ref,c}$, followed progressively by nodes with higher NMOS ratios
+$V_{in}$ rises above $V_{in-}$, followed progressively by nodes with higher NMOS ratios
 as the input continues to increase.
 
-At the reference condition $V_{in} = V_{ref,c}$, the error current vanishes, $I_2 = I_3 = I_B/2$,
+At the reference condition $V_{in} = V_{in-}$, the error current vanishes, $I_2 = I_3 = I_B/2$,
 and the state of each node reduces to comparing $\alpha_k$ against $\beta_k$ directly.
 For an odd number of output bits with symmetric, evenly spaced ratio assignments, the
 central node satisfies $\alpha_k = \beta_k$ and is therefore at its decision boundary,
@@ -190,18 +194,13 @@ from $\times 6$ to $\times 14$. The odd
 number of output nodes provides a well-defined, symmetric midpoint. The
 central node $C_\mathrm{LPT}[2]$ carries equal PMOS and NMOS ratios
 ($\times 10$), so its decision threshold aligns exactly with the condition
-$V_\mathrm{in} = V_\mathrm{ref,c}$. Figure~\ref{fig:cmf_schematic} shows the transistor-level schematic of this five-output reference implementation, with the PMOS and NMOS mirror ratios annotated on each branch.
+$V_\mathrm{in} = V_\mathrm{in-}$. Figure~\ref{fig:cmf_schematic} shows the transistor-level schematic of this five-output reference implementation, with the PMOS and NMOS mirror ratios annotated on each branch.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.85\textwidth]{figures/ota_cm.pdf}
-    \caption{Transistor-level schematic of the first architecture, the current-mirror Flash ADC, showing the differential input pair driven by $V_\mathrm{ref}$ and $V_\mathrm{in}$, the tail current source $I_B$ and the five current-mirror output branches whose PMOS and NMOS width ratios set the thermometer thresholds $C[4]$ down to $C[0]$.}
-    \label{fig:cmf_schematic}
-\end{figure}
+
 
 Applying Equation~\eqref{eq:vth_cmf} to these ratio assignments confirms the
 expected behavior at the reference condition, with
-$V_\mathrm{in} = V_\mathrm{ref,c}$, the two outermost node pairs resolve to
+$V_\mathrm{in} = V_\mathrm{in-}$, the two outermost node pairs resolve to
 high ($C_\mathrm{LPT}[4]$, $C_\mathrm{LPT}[3]$) and low
 ($C_\mathrm{LPT}[1]$, $C_\mathrm{LPT}[0]$) respectively, while the balanced
 central node sits at its decision boundary, yielding the thermometer code
@@ -679,7 +678,7 @@ where $\alpha$ sets the strength of the positive feedback from the cross-coupled
 \noindent
 where $g_{mb1,2}$ is the bulk transconductance of the input devices $M_1$ and $M_2$. The factor $1/(1-\alpha)$ is the boost provided by the local positive feedback, and it lifts the weak bulk transconductance, which is roughly $60$ to $90\%$ smaller than the gate transconductance for the same bias and sizing~\cite{ballo2022}, back to a useful level. The feedback has to stay below unity, so $\alpha < 1$, and it is kept comfortably under it, around $0.9$, to leave a margin against process mismatch and to keep the stage from latching.
 
-Only the input stage changes here. The part that makes the decision, the bank of ratioed current comparators, stays the same. The bulk-driven amplifier is tried purely as a rail-to-rail replacement for the input follower, and the current comparison behind it is exactly the one used in the first architecture, the same ratioed current comparators with the same dimensions as those of Section~\ref{sec:cmf_characterisation}. Keeping the current comparators fixed makes the comparison fair, since any change in behavior is then due to the input stage alone. The conversion of the differential output current into the thermometer code is the same current-to-code converter as the first architecture, so each node's threshold follows the mirror ratios of equation~\eqref{eq:vth_cmf} unchanged.
+Only the input stage changes here. The part that makes the decision, the bank of ratioed current comparators, stays the same. The bulk-driven amplifier is tried purely as an OTA replacement for the input follower, and the current comparison behind it is exactly the one used in the first architecture, the same ratioed current comparators with the same dimensions as those of Section~\ref{sec:cmf_characterisation}. Keeping the current comparators fixed makes the comparison fair, since any change in behavior is then due to the input stage alone. The conversion of the differential output current into the thermometer code is the same current-to-code converter as the first architecture, so each node's threshold follows the mirror ratios of equation~\eqref{eq:vth_cmf} unchanged.
 \paragraph{}
 \paragraph{}
 \paragraph{}
@@ -833,7 +832,7 @@ An OTA placed in feedback is normally frequency-compensated to keep the loop sta
 
 Compensation moves the dominant pole to a lower frequency, trading bandwidth for phase margin. The follower has to settle inside the conversion window before the next threshold is crossed, so a slower amplifier would lengthen the conversion delay $\tau_{conv}$ of Section~\ref{subsec:slope_overload} and tighten the slew-rate limit on the input frequency. Trading bandwidth for a phase margin the amplifier already has would only slow the converter.
 
-A five-transistor OTA has a single high-impedance node, its output, so in unity-gain feedback the loop is dominated by one pole and stays stable by construction. Open-loop simulation of the complementary OTA confirmed this, as the magnitude and phase response of Figure~\ref{fig:bode_async} shows. The phase margin is $55.5^\circ$ at the unity-gain frequency, just below the $60^\circ$ usually taken as a comfortable target but still well clear of instability, and it narrows only for inputs under $0.1$~V or above $0.7$~V, where one of the input pairs runs out of overdrive near the rail.
+A five-transistor OTA has a single high-impedance node, its output, so in unity-gain feedback the loop is dominated by one pole and stays stable by construction. Open-loop simulation of the complementary OTA confirmed this, as the magnitude and phase response of Figure~\ref{fig:bode_async} shows. The phase margin is $55.5^\circ$ at the unity-gain frequency and it narrows only for inputs under $0.1$~V or above $0.7$~V, where one of the input pairs runs out of overdrive near the rail.
 
 
 \begin{figure}[H]
